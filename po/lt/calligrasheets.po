@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tables\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2015-12-29 21:19+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -135,8 +135,13 @@ msgstr "Antraštė"
 msgid "Header1"
 msgstr "Antraštė"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Numatytas"
@@ -168,7 +173,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Tekstas"
@@ -239,7 +245,8 @@ msgstr "savaitės pradžia"
 msgid "Syntax"
 msgstr "Sintaksė"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Parametrai"
@@ -834,14 +841,15 @@ msgstr "Nuorodos"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Skaičius"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Formatas"
@@ -895,6 +903,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "Reikšmė"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Duombazė"
@@ -1168,6 +1178,7 @@ msgstr "Data ir laikas"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1233,7 +1244,8 @@ msgstr ""
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Laikas"
@@ -4593,6 +4605,7 @@ msgid "Regular payments"
 msgstr "Įprastoji išraiška"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Tipas"
@@ -4879,12 +4892,19 @@ msgstr "Rankinis"
 msgid "Automatic"
 msgstr "Automatinis"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Informacija"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Klaida"
@@ -5636,7 +5656,7 @@ msgstr ""
 msgid "Math"
 msgstr "Matematika"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Funkcija"
@@ -6105,6 +6125,7 @@ msgid "Range"
 msgstr "Intervalas"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Kriterijai"
@@ -7651,6 +7672,7 @@ msgid "Row"
 msgstr "Eilutė"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Stulpelis"
@@ -11945,7 +11967,7 @@ msgid "&Go"
 msgstr "&Eiti"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, fuzzy, kde-format
 msgid "&Insert"
 msgstr "Į&terpti"
@@ -11963,7 +11985,7 @@ msgid "F&ormat"
 msgstr "F&ormatas"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Apjungti langelius"
@@ -12043,8 +12065,8 @@ msgstr "Aktyvuoti"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Šriftas"
@@ -12442,14 +12464,16 @@ msgstr "Apribojimas"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Horizontaliai"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Vertikaliai"
@@ -12476,13 +12500,15 @@ msgid "Up"
 msgstr "Aukštyn"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Dešinėje"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Kairėje"
@@ -12496,36 +12522,50 @@ msgstr "Įterpti stulpelius"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Nieko"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Suma"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Min"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Maks"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Vidutinis"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Kiekis"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "Skaičius A"
@@ -12897,7 +12937,8 @@ msgstr "Išvalyti pažymėjimą"
 msgid "Move selected sheet to the bottom"
 msgstr "Apsaugoti lakštą"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Skirti raidžių dydį"
@@ -13101,6 +13142,7 @@ msgid "Anchor"
 msgstr "Prieraišas"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Laukelis"
@@ -13121,7 +13163,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "Įterpti lakštą"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 msgid "Next"
 msgstr "Kitas"
@@ -13136,7 +13178,7 @@ msgstr "Pašalinti sąrašą"
 msgid "Previous Sheet"
 msgstr "Ankstesnis"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 msgid "Previous"
 msgstr "Ankstesnis"
@@ -13343,7 +13385,7 @@ msgid ""
 "Do you want to continue?"
 msgstr ""
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Įveskite pavadinimą:"
@@ -13404,23 +13446,3166 @@ msgstr "Skaičius A"
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Keisti &teksto spalvą:"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "Keisti fono spalvą"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Kapo Verdė"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Įterpti stulpelius"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Įterpti eilutes"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Remove Columns"
+msgstr "Stulpeliai"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+#| msgid "Remove List"
+msgid "Remove Rows"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+msgid "Hide Columns"
+msgstr "Slėpti stulpelius"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+msgid "Hide Rows"
+msgstr "Paslėpti eilutes"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Rodomi stulpeliai"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, fuzzy, kde-format
+msgid "Show Rows"
+msgstr "Rodyti eilutes"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+#| msgid "Hide Column"
+msgid "Equalize Column"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+#| msgid "Resize"
+msgid "Equalize Row"
+msgstr "Keisti dydį"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Column"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Row"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Row && Column"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+msgid "Show Columns..."
+msgstr "Rodomi stulpeliai"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+msgid "Show Rows..."
+msgstr "Rodyti eilutes"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Stulpelis: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Eilutė: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+#| msgid "Hide Column"
+msgid "Resize Column..."
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+#| msgid "Resize"
+msgid "Resize Row..."
+msgstr "Keisti dydį"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Lygiuoti kairėje"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Horizontaliai"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Lygiuoti dešinėje"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Lygiuoti centre"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "Pašalinti sąrašą"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Centre"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Lygiuoti į viršų"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Pašalinti sąrašą"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Viršus"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Horizontaliai"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Lygiuoti į apačią"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Pašalinti sąrašą"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Apačia"
+
+#: ui/actions/Align.cpp:185
+#, fuzzy, kde-format
+#| msgid "Middle"
+msgid "Align Middle"
+msgstr "Vidutinis"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Pašalinti sąrašą"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Vidutinis"
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+#| msgid "Change Value"
+msgid "Change Angle..."
+msgstr "Keisti vertę"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr ""
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Kampas"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Value"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Keisti vertę"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+msgid "&Auto-Filter"
+msgstr "Automatinis filtras"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Automatinis filtras"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Auto-Format..."
+msgstr "Automatinis formatavimas"
+
+#: ui/actions/AutoFormat.cpp:78
+#, fuzzy, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Nepavyko rasti paveikslėlio %1"
+
+#: ui/actions/AutoFormat.cpp:91
+#, fuzzy, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Nepavyko rasti paveikslėlio %1"
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Automatinis formatavimas"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Autosum"
+msgstr "Automatinis"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Automatic"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Automatinis"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Border Left"
+msgstr "Riba"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Border Right"
+msgstr "Riba"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Border Top"
+msgstr "Riba"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Border Bottom"
+msgstr "Rėmelio spalva:"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Visi rėmeliai"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Visi"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "No Borders"
+msgstr "Be rėmelių"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Border.cpp:213
+#, fuzzy, kde-format
+msgid "Border Outline"
+msgstr "Kontūras"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+msgid "Outline"
+msgstr "Apibrėžti"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Border Color"
+msgstr "Rėmelio spalva:"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "Fono spalva:"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Kapo Verdė"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, fuzzy, kde-format
+msgid "Insert Cells..."
+msgstr "Įterpti langelius"
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, fuzzy, kde-format
+msgid "Remove Cells..."
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Valyti viską"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Šalinti turinį"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Išvalyti tekstą"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+msgid "Comment..."
+msgstr "Komentaras"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr ""
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Clear Comment"
+msgstr "Komentaras"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Comment.cpp:60
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Remove Comment"
+msgstr "Komentaras"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Komentaras"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Pridėti komentarą"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+msgid "Conditional Styles..."
+msgstr "Sąlyginiai stiliai"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Sąlyginiai stiliai"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+#| msgid "Conditional Styles"
+msgid "Remove Conditional Styles"
+msgstr "Sąlyginiai stiliai"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Panaikinti sąlyginį formatavimą"
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Conditional Formatting"
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Panaikinti sąlyginį formatavimą"
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "&Consolidate..."
+msgstr "Suderinti"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Mongolia"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Sujungti"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "Text File"
+msgid "Insert From &Text File..."
+msgstr "Teksto failas"
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Teksto failas"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Nepavyko atverti įvesties failo."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+msgid "Inserting Text File"
+msgstr "Teksto spalva"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Teksto spalva"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+msgid "Insert From &Clipboard..."
+msgstr "Iš iškarpinės"
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+msgid "Clipboard"
+msgstr "Laikina talpyklė"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:155
+#, fuzzy, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Iš iškarpinės"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Iš iškarpinės"
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "&Text to Columns..."
+msgstr "Tekstas į stulpelius"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Tekstas į stulpelius"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Tekstas į stulpelius"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+msgid "Custom Lists..."
+msgstr "Pasirinktas..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Add Named Area"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, fuzzy, kde-format
+#| msgid "Enter name:"
+msgid "Enter the area name:"
+msgstr "Įveskite pavadinimą:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Change Value"
+msgid "Change Angle"
+msgstr "Keisti vertę"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Kampas:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "Automatinis formatavimas"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Parinkti rašmenį"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Langelio komentaras"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<nėra>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "yra lygi"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "didesnis už"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "mažesnis nei"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, fuzzy, kde-format
+#| msgid "greater than"
+msgid "equal to or greater than"
+msgstr "didesnis už"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "less than"
+msgid "equal to or less than"
+msgstr "mažesnis nei"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "yra tarp"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "Reikšmės"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Pirmoji sąlyga"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Antroji sąlyga"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Trečioji sąlyga"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, fuzzy, kde-format
+#| msgid "Cells:"
+msgid "Cell is"
+msgstr "Langeliai:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, fuzzy, kde-format
+msgid "Cell style"
+msgstr "Langelio stilius"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Consolidate"
+msgstr "Sujungti"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Produktas"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Standartinis nuokrypis"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Dispersija"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "Funkcija"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, fuzzy, kde-format
+msgid "Insert Data From Database"
+msgstr "Iš duomenų bazės"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Tipas:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Duomenų bazės pavadinimas: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Mazgas:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, fuzzy, kde-format
+msgid "Select tables:"
+msgstr "Pažymėti visus lakštus"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Lentelės"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Pažymėti stulpelius:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Lentelė"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Stulpeliai"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "sutampa"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "nelygu"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "col."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "ne laikotarpiu"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "panašu"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "daugiau nei"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, fuzzy, kde-format
+#| msgid "greater than"
+msgid "greater or equal"
+msgstr "didesnis už"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "not equal"
+msgid "less or equal"
+msgstr "nelygu"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, fuzzy, kde-format
+#| msgid "Sort"
+msgid "Sorted by"
+msgstr "Rikiuoti"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Didėjančiai"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Mažėjančiai"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Atstumas"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, fuzzy, kde-format
+#| msgid "Fewer Options"
+msgid "Query Options"
+msgstr "Mažiau pasirinkčių"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL užklausa:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, fuzzy, kde-format
+#| msgid "Insert function"
+msgid "Insert in region"
+msgstr "Įterpti funkciją"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Rezultatas"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+msgid "You cannot specify a table here."
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, fuzzy, kde-format
+msgid "You have to specify a valid region."
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, fuzzy, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Iš duomenų bazės"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Pakeisti"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Dokumento nuostatos"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+msgid "Calculation"
+msgstr "Skaičiavimo veiksena:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Case Insensitive"
+msgid "Case sensitive"
+msgstr "Nepaisyti raidžių dydžio"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Tikslumas"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Automatinis"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "Įprastoji išraiška"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Kalba: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Numatytasis skaičiaus formatas: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Ilgas datos formatas: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Trumpas datos formatas: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Laiko formatas: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+msgid "Currency format: %1"
+msgstr "Valiuta"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Daugiau parinkčių"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Search entire sheet"
+msgstr "Pasirinkti šriftą..."
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Ieškoti:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Laukelio reikšmės"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Komentarai"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Paieškos kryptis:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Mažiau pasirinkčių"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "Funkcija"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Įterpti funkciją"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Pagalba"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr ""
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+msgid "Description is not available."
+msgstr "Funkcija"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Parametrų parinkimas"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, fuzzy, kde-format
+#| msgid "Cell"
+msgid "Goto Cell"
+msgstr "Laukelis"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "Enter name:"
+msgid "Enter cell:"
+msgstr "Įveskite pavadinimą:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Įterpti"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, fuzzy, kde-format
+msgid "Move towards right"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, fuzzy, kde-format
+msgid "Move towards bottom"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Įterpti eilutes"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Įterpti stulpelius"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Įterpti langelius"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Pašalinti"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Move towards left"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, fuzzy, kde-format
+msgid "Move towards top"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, fuzzy, kde-format
+#| msgid "Remove List"
+msgid "Remove rows"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, fuzzy, kde-format
+msgid "Remove columns"
+msgstr "Stulpeliai"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Remove Cells"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, fuzzy, kde-format
+msgid "Insert Link"
+msgstr "Įterpti saitą"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internetas"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+msgid "Link to Internet Address"
+msgstr "Interneto adresas"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, fuzzy, kde-format
+msgid "Text to display:"
+msgstr "Rodomas tekstas"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, fuzzy, kde-format
+msgid "Internet address:"
+msgstr "Interneto adresas"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "El. paštas"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Email address:"
+msgid "Link to Email Address"
+msgstr "El. pašto adresas:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "El. pašto adresas:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+msgid "Subject:"
+msgstr "Tema:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, fuzzy, kde-format
+msgid "File"
+msgstr "Failas"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+msgid "Link to File"
+msgstr "Nuoroda į failą"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, fuzzy, kde-format
+msgid "File location:"
+msgstr "Failo vietą"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Recent file:"
+msgstr "Paskutinis atvertas failas"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Nėra įrašų"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+msgid "Link to Cell"
+msgstr "Nuoroda į failą"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+msgid "Cell or Named Area:"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, fuzzy, kde-format
+#| msgid "Custom Styles"
+msgid "Custom Lists"
+msgstr "Saviti stiliai"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "Keisti raidžių lygį"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Sąrašas:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Įrašas:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Pridėti"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Naujas"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Keisti"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Kopijuoti"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr ""
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+msgid "Named Areas"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Plotas: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Langeliai:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Lapas:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, fuzzy, kde-format
+#| msgid "Enter name:"
+msgid "Area name:"
+msgstr "Įveskite pavadinimą:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Pašalinti"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+msgid "Save"
+msgstr "Atverti-įrašyti"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+msgid "Remove Named Area"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, kde-format
+msgid "The provided region is not valid."
+msgstr ""
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Cells"
+msgid "Paste Inserting Cells"
+msgstr "Įterpti langelius"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "Select Character"
+msgid "Select Source"
+msgstr "Parinkti rašmenį"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "Add Filter"
+msgstr "Filtras"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+msgid "Pivot Options"
+msgstr "Operacija"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Resize"
+msgid "Resize Row"
+msgstr "Keisti dydį"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Aukštis:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, fuzzy, kde-format
+#| msgid "Hide Column"
+msgid "Resize Column"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Plotis:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Serialas"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "Įterpti seką"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Columns"
+msgid "Insert Values"
+msgstr "Įterpti stulpelius"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, fuzzy, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Tiesinis"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Geometrinis"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, fuzzy, kde-format
+msgid "Start value:"
+msgstr "Pradinė reikšmė"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, fuzzy, kde-format
+msgid "Stop value:"
+msgstr "Reikšmė"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, fuzzy, kde-format
+msgid "Step value:"
+msgstr "Pradinė reikšmė"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+msgid "End and start value must be positive."
+msgstr "Parametrai"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, fuzzy, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Paslėpti stulpelį"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+#| msgid "Select columns:"
+msgid "Select hidden columns to show:"
+msgstr "Pažymėti stulpelius:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Stulpelis %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Eilutė %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "&Pirmasis stulpelis kaip etiketė"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "&Pirmasis stulpelis kaip etiketė"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Rikiuoti"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Nepaisyti raidžių dydžio"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, fuzzy, kde-format
+msgid "Special Paste"
+msgstr "Ypatingi &simboliai"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Stilius"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Visi stiliai"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Saviti stiliai"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Stilių hierarchija"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Naujas..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Keisti..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Trinti..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "stilius%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Daliniai rezultatai"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Pašalinti viską"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Stulpelis „%1“ "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "Standartinis nuokrypis"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, fuzzy, kde-format
+msgid "StDevP"
+msgstr "STDEVP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Dispersija"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, fuzzy, kde-format
+msgid "VarP"
+msgstr "VARP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Galiojimas"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Valyti viską"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Leisti:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Sveikas"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Teksto ilgis"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Sąrašas"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Duomenys:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr ":Minimumas"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Maksimumas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Data:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, fuzzy, kde-format
+#| msgid "Minimum:"
+msgid "Date minimum:"
+msgstr ":Minimumas"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, fuzzy, kde-format
+#| msgid "Maximum:"
+msgid "Date maximum:"
+msgstr "Maksimumas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Laikas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, fuzzy, kde-format
+#| msgid "Minimum:"
+msgid "Time minimum:"
+msgstr ":Minimumas"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, fuzzy, kde-format
+#| msgid "Maximum:"
+msgid "Time maximum:"
+msgstr "Maksimumas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Numeris:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Įrašai:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "Klaidos pranešimas"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, fuzzy, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Įvedus neteisingą reikšmę rodyti pranešimą apie klaidą"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Veiksmas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Stabdyti"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Perspėjimas"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Pavadinimas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Užrašas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Įvesties informacija"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, fuzzy, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Pažymėjus langelį rodyti įvesties informaciją"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, fuzzy, kde-format
+msgid "This is not a valid value."
+msgstr "Funkcija"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, fuzzy, kde-format
+msgid "This is not a valid time."
+msgstr "Funkcija"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, fuzzy, kde-format
+msgid "This is not a valid date."
+msgstr "Funkcija"
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "Dokumento nuostatos"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+#| msgid "Document Settings"
+msgid "Show document settings dialog"
+msgstr "Dokumento nuostatos"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Modify Cell"
+msgstr "Keisti langelį"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "Apsauga"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Žemyn"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Kairėje"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Dešinėje"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Pasirinkti šriftą..."
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Pakeisti"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Pasirinkti šriftą..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "Reikšmės"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Keisti šriftą"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Select Font..."
+msgid "Select Font Size"
+msgstr "Pasirinkti šriftą..."
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "Reikšmės"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Šrifto dydis"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Set the text color"
+msgstr "Fono spalva:"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Teksto spalva"
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "&Function..."
+msgstr "Funkcija"
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "Insert math expression"
+msgstr "Įprastoji išraiška"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, fuzzy, kde-format
+msgid "Formula Selection"
+msgstr "Pasirinkti šriftą..."
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+msgid "Insert a function"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, fuzzy, kde-format
+msgid "Others..."
+msgstr "Kiti"
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+msgid "&Goal Seek..."
+msgstr "Parametrų parinkimas"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, fuzzy, kde-format
+msgid "Goto Cell..."
+msgstr "Langeliai"
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr ""
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Eiti į"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+msgid "That is not a valid cell."
+msgstr "Funkcija"
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Decrease Indent"
+msgstr "Sumažinti atitraukimą"
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Increase Indent"
+msgstr "Didinti atitraukimą"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "Sumažinti atitraukimą"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "Didinti atitraukimą"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Didinti atitraukimą"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Sumažinti atitraukimą"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "From &Database..."
+msgstr "Iš duomenų bazės"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Iš duomenų bazės"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "&Series..."
+msgstr "Serijos %1"
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Įterpti seką"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, fuzzy, kde-format
+msgid "S&pecial Character..."
+msgstr "Ypatingi &simboliai"
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "&Link..."
+msgstr "Nuoroda"
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+#| msgid "Insert a new sheet"
+msgid "Insert an Internet hyperlink"
+msgstr "Įterpti naują lakštą"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Link"
+msgstr "Nuoroda"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Remove a link"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Pašalinti saitą"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Pašalinti saitą"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Įterpti saitą"
+
+#: ui/actions/ListChoose.cpp:28
+#, fuzzy, kde-format
+msgid "Selection List..."
+msgstr "Rinkinių sąrašas"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+#| msgid "Center horizontally"
+msgid "Merge Cells Horizontally"
+msgstr "Centruoti horizontaliai"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Merge Cells Vertically"
+msgstr "Apjungti langelius"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr ""
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+#| msgid "Enter name:"
+msgid "Area Name..."
+msgstr "Įveskite pavadinimą:"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgid "Replace Named Area"
+msgstr "Pakeitimas"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+#| msgid "Replacement"
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Pakeitimas"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Edit or select named areas"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Named Areas..."
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+msgid "Break Before Row"
+msgstr "Stulpeliai"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+msgid "Row Break"
+msgstr "Eilutės lūžis"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+msgid "Break Before Column"
+msgstr "Stulpeliai"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+msgid "Column Break"
+msgstr "Skilties lūžis"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Paste.cpp:94
+#, fuzzy, kde-format
+msgid "Special Paste..."
+msgstr "Ypatingi &simboliai"
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Paste.cpp:153
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Cells"
+msgid "Paste with Insertion"
+msgstr "Įterpti langelius"
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Įterpti lakštą"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "&Pivot Tables..."
+msgstr "Daliniai rezultatai"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "Create Pivot Tables"
+msgstr "Daliniai rezultatai"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Būtina pasirinkti keletą laukelių."
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Pasirinkti šriftą..."
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+msgid "Show QTableView..."
+msgstr "Rodyti lakštą"
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+msgid "&Sort..."
+msgstr "Rikiuoti"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr ""
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Rikiuoti"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr ""
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr ""
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Cell Format..."
+msgstr "Reikšmės"
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "Reikšmės"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Pusjuodis"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Kursyvas"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Pabrauktas"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Perbrauktas"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Wrap Text"
+msgstr "Pasirinkti šriftą..."
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Laužyti"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Pasirinkti šriftą..."
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+#| msgid "Center vertically"
+msgid "Print cell contents vertically"
+msgstr "Horizontaliai"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Vertikalus tekstas"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Vertikalus tekstas"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Skaičiaus formatas"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "Reikšmės"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Pradėti nuo eilutės:"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Scientific Format"
+msgstr "Formatas"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "Reikšmės"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Mokslinė"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Mokslinė"
+
+#: ui/actions/Style.cpp:342
+#, fuzzy, kde-format
+msgid "Percent Format"
+msgstr "Formatas"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Reikšmės"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Procentas"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Procentas"
+
+#: ui/actions/Style.cpp:379
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Format"
+msgid "Money Format"
+msgstr "Pakeisti formatą"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Reikšmės"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Pinigai"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Formatas"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Datos formatas"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "Reikšmės"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Formatas"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "Reikšmės"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Laiko formatas"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Formatas"
+
+#: ui/actions/Style.cpp:480
+#, fuzzy, kde-format
+msgid "Increase Font Size"
+msgstr "Padidinti šrifto dydį"
+
+#: ui/actions/Style.cpp:504
+#, fuzzy, kde-format
+msgid "Decrease Font Size"
+msgstr "Sumažinti šrifto dydį"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Padidinti tikslumą"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Sumažinti tikslumą"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Padidinti tikslumą"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Sumažinti tikslumą"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "Reikšmės"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Stilius"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Fono spalva"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Set the background color"
+msgstr "Fono spalva:"
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create Style From Cell..."
+msgstr "Sukurti šabloną iš dokumento..."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Style From Cell"
+msgstr "Langelio dydis"
+
+#: ui/actions/Styles.cpp:53
+#, fuzzy, kde-format
+msgid "Create Style From Cell"
+msgstr "Sukurti šabloną iš dokumento..."
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr ""
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr ""
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Apsaugoti lakštą"
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "&Subtotals..."
+msgstr "Daliniai rezultatai"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Daliniai rezultatai"
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+msgid "Upper"
+msgstr "Aukščiausias"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+msgid "Lower"
+msgstr "Žemesnis"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "First letter uppercase"
+msgid "First Letter Upper"
+msgstr "Pirma raidė – didžioji"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "First letter uppercase"
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Pirma raidė – didžioji"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "First letter uppercase"
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Pirma raidė – didžioji"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Pirma raidė – didžioji"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Didžiąsias raides"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Mažąsias raides"
+
+#: ui/actions/TextCase.cpp:99
+#, fuzzy, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Pradėti nuo eilutės:"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Pradėti nuo eilutės:"
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Pradėti nuo eilutės:"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Keisti raidžių lygį"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr ""
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+msgid "Validity..."
+msgstr "Galiojimas"
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Pašalinti sąrašą"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Pašalinti sąrašą"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -13669,11 +16854,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Pašalinti sąrašą"
 
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Ištrinti"
-
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
 #| msgid "Center horizontally"
@@ -13915,12 +17095,6 @@ msgstr "Perspėjimas (nėra pakeitimų)"
 msgid "Roman"
 msgstr "Stačias"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Kursyvas"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -13938,12 +17112,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Normalus"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Pusjuodis"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -13956,12 +17124,6 @@ msgstr "Spalva:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Pabrauktas"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14100,11 +17262,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Procentas"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14117,11 +17274,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Pinigai"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14132,11 +17284,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Mokslinė"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14343,11 +17490,6 @@ msgstr "Trys skaitmenys"
 msgid "Dolor Ipse"
 msgstr "Spalvos"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Stilius"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -14358,11 +17500,6 @@ msgstr "Pavadinimas:"
 #, fuzzy, kde-format
 msgid "Inherit style:"
 msgstr "Stilius"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr ""
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -14409,12 +17546,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Standartinis"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Centre"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -14446,24 +17577,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Viršus"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Vidutinis"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Apačia"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -14624,20 +17737,10 @@ msgstr "Pritaikyti"
 msgid "Apply changes"
 msgstr "Pritaikyti pakeitimus"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Atšaukti"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Atmesti pakeitimus"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Visi"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -14706,265 +17809,9 @@ msgstr ""
 #~ msgstr "hh:mm"
 
 #, fuzzy
-#~ msgid "&Function..."
-#~ msgstr "Funkcija"
-
-#, fuzzy
-#~ msgid "Insert math expression"
-#~ msgstr "Įprastoji išraiška"
-
-#, fuzzy
-#~ msgid "From &Database..."
-#~ msgstr "Iš duomenų bazės"
-
-#, fuzzy
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Iš duomenų bazės"
-
-#, fuzzy
-#~ msgid "Formula Selection"
-#~ msgstr "Pasirinkti šriftą..."
-
-#, fuzzy
-#~ msgid "Insert a function"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~ msgid "Others..."
-#~ msgstr "Kiti"
-
-#, fuzzy
-#~ msgid "Modify Cell"
-#~ msgstr "Keisti langelį"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Show QTableView..."
-#~ msgstr "Rodyti lakštą"
-
-#, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "Apsauga"
-
-#, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "Apsauga"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Insert Data From Database"
-#~ msgstr "Iš duomenų bazės"
-
-#~ msgid "Type:"
-#~ msgstr "Tipas:"
-
-#~ msgid "Host:"
-#~ msgstr "Mazgas:"
-
-#~ msgid "Database name: "
-#~ msgstr "Duomenų bazės pavadinimas: "
-
-#, fuzzy
-#~ msgid "Select tables:"
-#~ msgstr "Pažymėti visus lakštus"
-
-#~ msgid "Tables"
-#~ msgstr "Lentelės"
-
-#~ msgid "Select columns:"
-#~ msgstr "Pažymėti stulpelius:"
-
-#~ msgid "Table"
-#~ msgstr "Lentelė"
-
-#~ msgid "Columns"
-#~ msgstr "Stulpeliai"
-
-#~ msgid "equals"
-#~ msgstr "sutampa"
-
-#~ msgid "not equal"
-#~ msgstr "nelygu"
-
-#~ msgid "in"
-#~ msgstr "col."
-
-#~ msgid "not in"
-#~ msgstr "ne laikotarpiu"
-
-#~ msgid "like"
-#~ msgstr "panašu"
-
-#~ msgid "greater"
-#~ msgstr "daugiau nei"
-
-#, fuzzy
-#~| msgid "greater than"
-#~ msgid "greater or equal"
-#~ msgstr "didesnis už"
-
-#, fuzzy
-#~| msgid "not equal"
-#~ msgid "less or equal"
-#~ msgstr "nelygu"
-
-#, fuzzy
-#~| msgid "Sort"
-#~ msgid "Sorted by"
-#~ msgstr "Rikiuoti"
-
-#~ msgid "Ascending"
-#~ msgstr "Didėjančiai"
-
-#~ msgid "Descending"
-#~ msgstr "Mažėjančiai"
-
-#~ msgid "Distinct"
-#~ msgstr "Atstumas"
-
-#, fuzzy
-#~| msgid "Fewer Options"
-#~ msgid "Query Options"
-#~ msgstr "Mažiau pasirinkčių"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL užklausa:"
-
-#, fuzzy
-#~| msgid "Insert function"
-#~ msgid "Insert in region"
-#~ msgstr "Įterpti funkciją"
-
-#~ msgid "Result"
-#~ msgstr "Rezultatas"
-
-#, fuzzy
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Iš duomenų bazės"
-
-#~ msgid "Insert function"
-#~ msgstr "Įterpti funkciją"
-
-#~ msgid "Help"
-#~ msgstr "Pagalba"
-
-#, fuzzy
-#~ msgid "Description is not available."
-#~ msgstr "Funkcija"
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "Dokumento nuostatos"
-
-#, fuzzy
-#~| msgid "Document Settings"
-#~ msgid "Show document settings dialog"
-#~ msgstr "Dokumento nuostatos"
-
-#~ msgid "Document Settings"
-#~ msgstr "Dokumento nuostatos"
-
-#, fuzzy
-#~ msgid "Calculation"
-#~ msgstr "Skaičiavimo veiksena:"
-
-#, fuzzy
-#~| msgid "Case Insensitive"
-#~ msgid "Case sensitive"
-#~ msgstr "Nepaisyti raidžių dydžio"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Tikslumas"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Automatinis"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "Įprastoji išraiška"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Kalba: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Numatytasis skaičiaus formatas: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Ilgas datos formatas: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Trumpas datos formatas: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Laiko formatas: %1"
-
-#, fuzzy
-#~ msgid "Currency format: %1"
-#~ msgstr "Valiuta"
-
-#, fuzzy
-#~ msgid "Custom Lists..."
-#~ msgstr "Pasirinktas..."
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Pasirinkti šriftą..."
-
-#, fuzzy
-#~| msgid "Custom Styles"
-#~ msgid "Custom Lists"
-#~ msgstr "Saviti stiliai"
-
-#~ msgid "List:"
-#~ msgstr "Sąrašas:"
-
-#~ msgid "Entry:"
-#~ msgstr "Įrašas:"
-
-#~ msgid "Add"
-#~ msgstr "Pridėti"
-
-#~ msgid "New"
-#~ msgstr "Naujas"
-
-#~ msgid "Remove"
-#~ msgstr "Pašalinti"
-
-#~ msgid "Modify"
-#~ msgstr "Keisti"
-
-#~ msgid "Copy"
-#~ msgstr "Kopijuoti"
-
-#~ msgid "Remove List"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "&Goal Seek..."
-#~ msgstr "Parametrų parinkimas"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Parametrų parinkimas"
 
 #~ msgid "Starting..."
 #~ msgstr "Paleidžiama..."
@@ -14987,96 +17834,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Current value:"
 #~ msgstr "Dabartinė vertė"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Pakeisti"
-
-#, fuzzy
-#~ msgid "Selection List..."
-#~ msgstr "Rinkinių sąrašas"
-
-#~ msgid "More Options"
-#~ msgstr "Daugiau parinkčių"
-
-#, fuzzy
-#~ msgid "Search entire sheet"
-#~ msgstr "Pasirinkti šriftą..."
-
-#~ msgid "Search in:"
-#~ msgstr "Ieškoti:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Laukelio reikšmės"
-
-#~ msgid "Comments"
-#~ msgstr "Komentarai"
-
-#~ msgid "Search direction:"
-#~ msgstr "Paieškos kryptis:"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Mažiau pasirinkčių"
-
-#, fuzzy
-#~ msgid "Cell Format..."
-#~ msgstr "Reikšmės"
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "Reikšmės"
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Special Paste..."
-#~ msgstr "Ypatingi &simboliai"
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "Insert Cells"
-#~ msgid "Paste with Insertion"
-#~ msgstr "Įterpti langelius"
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "Insert Cells"
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Įterpti langelius"
-
-#~ msgid "Insert"
-#~ msgstr "Įterpti"
-
-#, fuzzy
-#~ msgid "Move towards right"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Move towards bottom"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Special Paste"
-#~ msgstr "Ypatingi &simboliai"
 
 #~ msgid "Content"
 #~ msgstr "Turinys"
@@ -15106,24 +17863,8 @@ msgstr ""
 #~ msgstr "Dalyba"
 
 #, fuzzy
-#~ msgid "Auto-Format..."
-#~ msgstr "Automatinis formatavimas"
-
-#, fuzzy
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Reikšmės"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Automatinis formatavimas"
-
-#, fuzzy
-#~ msgid "Sheet Style"
-#~ msgstr "Stilius"
-
-#, fuzzy
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Apsaugoti lakštą"
 
 #, fuzzy
 #~ msgid "Could not find image %1."
@@ -15133,99 +17874,8 @@ msgstr ""
 #~ msgid "Could not load image %1."
 #~ msgstr "Nepavyko įkelti paveikslėlio."
 
-#, fuzzy
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Nepavyko rasti paveikslėlio %1"
-
-#, fuzzy
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Nepavyko rasti paveikslėlio %1"
-
-#, fuzzy
-#~ msgid "&Auto-Filter"
-#~ msgstr "Automatinis filtras"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Automatinis filtras"
-
-#~ msgid "Clear All"
-#~ msgstr "Valyti viską"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Pašalinti sąrašą"
-
 #~ msgid "Contents"
 #~ msgstr "Turinys"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Šalinti turinį"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Išvalyti tekstą"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Panaikinti sąlyginį formatavimą"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "Remove Conditional Formatting"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Panaikinti sąlyginį formatavimą"
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "Fono spalva:"
-
-#, fuzzy
-#~ msgid "Border Color"
-#~ msgstr "Rėmelio spalva:"
-
-#, fuzzy
-#~ msgid "Set the background color"
-#~ msgstr "Fono spalva:"
-
-#~ msgid "Background Color"
-#~ msgstr "Fono spalva"
-
-#, fuzzy
-#~ msgid "Conditional Styles..."
-#~ msgstr "Sąlyginiai stiliai"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Sąlyginiai stiliai"
-
-#, fuzzy
-#~| msgid "Conditional Styles"
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Sąlyginiai stiliai"
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "&Pivot Tables..."
-#~ msgstr "Daliniai rezultatai"
-
-#, fuzzy
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Daliniai rezultatai"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Būtina pasirinkti keletą laukelių."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Skaičiaus formatas"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -15236,76 +17886,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Formatas"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Laiko formatas"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Datos formatas"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Formatas"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Kapo Verdė"
-
-#~ msgid "<none>"
-#~ msgstr "<nėra>"
-
-#~ msgid "equal to"
-#~ msgstr "yra lygi"
-
-#~ msgid "greater than"
-#~ msgstr "didesnis už"
-
-#~ msgid "less than"
-#~ msgstr "mažesnis nei"
-
-#, fuzzy
-#~| msgid "greater than"
-#~ msgid "equal to or greater than"
-#~ msgstr "didesnis už"
-
-#, fuzzy
-#~| msgid "less than"
-#~ msgid "equal to or less than"
-#~ msgstr "mažesnis nei"
-
-#~ msgid "between"
-#~ msgstr "yra tarp"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "Reikšmės"
-
-#~ msgid "First Condition"
-#~ msgstr "Pirmoji sąlyga"
-
-#~ msgid "Second Condition"
-#~ msgstr "Antroji sąlyga"
-
-#~ msgid "Third Condition"
-#~ msgstr "Trečioji sąlyga"
-
-#, fuzzy
-#~| msgid "Cells:"
-#~ msgid "Cell is"
-#~ msgstr "Langeliai:"
-
-#, fuzzy
-#~ msgid "Cell style"
-#~ msgstr "Langelio stilius"
-
-#, fuzzy
-#~| msgid "Select Character"
-#~ msgid "Select Source"
-#~ msgstr "Parinkti rašmenį"
 
 #, fuzzy
 #~| msgid "Clear Selection"
@@ -15329,11 +17909,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Field"
 #~ msgstr "pajamos"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Add Filter"
-#~ msgstr "Filtras"
 
 #, fuzzy
 #~ msgid "Select Option"
@@ -15378,10 +17953,6 @@ msgstr ""
 #~ msgstr "Eilutės"
 
 #, fuzzy
-#~ msgid "Pivot Options"
-#~ msgstr "Operacija"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Reikšmė"
@@ -15399,163 +17970,22 @@ msgstr ""
 #~ msgid "Manual Selection"
 #~ msgstr "Pasirinkti šriftą..."
 
-#~ msgid "Product"
-#~ msgstr "Produktas"
-
 #, fuzzy
 #~| msgid "Sort"
 #~ msgid "Sort By"
 #~ msgstr "Rikiuoti"
-
-#~ msgid "Select Font..."
-#~ msgstr "Pasirinkti šriftą..."
-
-#, fuzzy
-#~| msgid "Select Font..."
-#~ msgid "Select Font Size"
-#~ msgstr "Pasirinkti šriftą..."
-
-#~ msgid "Font Size"
-#~ msgstr "Šrifto dydis"
-
-#~ msgid "Text Color"
-#~ msgstr "Teksto spalva"
-
-#, fuzzy
-#~ msgid "Set the text color"
-#~ msgstr "Fono spalva:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Keisti šriftą"
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Sukurti šabloną iš dokumento..."
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Style From Cell"
-#~ msgstr "Langelio dydis"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgid "Create Style From Cell"
-#~ msgstr "Sukurti šabloną iš dokumento..."
-
-#~ msgid "All Styles"
-#~ msgstr "Visi stiliai"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Saviti stiliai"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Stilių hierarchija"
-
-#~ msgid "&New..."
-#~ msgstr "&Naujas..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Keisti..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Trinti..."
-
-#~ msgid "style%1"
-#~ msgstr "stilius%1"
 
 #, fuzzy
 #~ msgid "Cells..."
 #~ msgstr "Langeliai"
 
 #, fuzzy
-#~ msgid "Insert Cells..."
-#~ msgstr "Įterpti langelius"
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~ msgid "Remove Cells..."
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
 #~| msgid "&Delete..."
 #~ msgid "Delete Cells..."
 #~ msgstr "Langelių šalinimas"
 
-#~ msgid "Insert rows"
-#~ msgstr "Įterpti eilutes"
-
-#~ msgid "Insert columns"
-#~ msgstr "Įterpti stulpelius"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Įterpti langelius"
-
-#, fuzzy
-#~ msgid "Move towards left"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Move towards top"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~| msgid "Remove List"
-#~ msgid "Remove rows"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Remove columns"
-#~ msgstr "Stulpeliai"
-
-#, fuzzy
-#~ msgid "Remove Cells"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "&Subtotals..."
-#~ msgstr "Daliniai rezultatai"
-
-#~ msgid "Subtotals"
-#~ msgstr "Daliniai rezultatai"
-
-#~ msgid "Remove All"
-#~ msgstr "Pašalinti viską"
-
 #~ msgid "Grand Total"
 #~ msgstr "VISO"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Stulpelis „%1“ "
-
-#~ msgid "StDev"
-#~ msgstr "Standartinis nuokrypis"
-
-#, fuzzy
-#~ msgid "StDevP"
-#~ msgstr "STDEVP"
-
-#~ msgid "Var"
-#~ msgstr "Dispersija"
-
-#, fuzzy
-#~ msgid "VarP"
-#~ msgstr "VARP"
 
 #, fuzzy
 #~ msgid "&Page break between groups"
@@ -15570,43 +18000,6 @@ msgstr ""
 #~ msgstr "Daliniai rezultatai"
 
 #, fuzzy
-#~ msgid "Goto Cell..."
-#~ msgstr "Langeliai"
-
-#~ msgid "Goto"
-#~ msgstr "Eiti į"
-
-#, fuzzy
-#~ msgid "Break Before Column"
-#~ msgstr "Stulpeliai"
-
-#, fuzzy
-#~ msgid "Column Break"
-#~ msgstr "Skilties lūžis"
-
-#, fuzzy
-#~ msgid "Break Before Row"
-#~ msgstr "Stulpeliai"
-
-#, fuzzy
-#~ msgid "Row Break"
-#~ msgstr "Eilutės lūžis"
-
-#, fuzzy
-#~| msgid "Cell"
-#~ msgid "Goto Cell"
-#~ msgstr "Laukelis"
-
-#, fuzzy
-#~| msgid "Enter name:"
-#~ msgid "Enter cell:"
-#~ msgstr "Įveskite pavadinimą:"
-
-#, fuzzy
-#~ msgid "&Consolidate..."
-#~ msgstr "Suderinti"
-
-#, fuzzy
 #~ msgid "Description in rows"
 #~ msgstr "Funkcija"
 
@@ -15616,22 +18009,6 @@ msgstr ""
 
 #~ msgid "Copy data"
 #~ msgstr "Kopijuoti duomenis"
-
-#, fuzzy
-#~ msgid "Consolidate"
-#~ msgstr "Sujungti"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Standartinis nuokrypis"
-
-#~ msgid "Variance"
-#~ msgstr "Dispersija"
-
-#, fuzzy
-#~| msgid "Mongolia"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Sujungti"
 
 #~ msgid "Function:"
 #~ msgstr "Funkcija:"
@@ -15643,226 +18020,15 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "Nuorodos"
 
-#, fuzzy
-#~| msgid "Change Value"
-#~ msgid "Change Angle..."
-#~ msgstr "Keisti vertę"
-
-#~ msgid "Angle"
-#~ msgstr "Kampas"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Padidinti tikslumą"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Sumažinti tikslumą"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Padidinti tikslumą"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Sumažinti tikslumą"
-
-#, fuzzy
-#~| msgid "Change Value"
-#~ msgid "Change Angle"
-#~ msgstr "Keisti vertę"
-
-#~ msgid "Angle:"
-#~ msgstr "Kampas:"
-
-#, fuzzy
-#~| msgid "Change Value"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Keisti vertę"
-
-#, fuzzy
-#~| msgid "Enter name:"
-#~ msgid "Area Name..."
-#~ msgstr "Įveskite pavadinimą:"
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~ msgid "Named Areas..."
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Named Areas"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Add Named Area"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~| msgid "Enter name:"
-#~ msgid "Enter the area name:"
-#~ msgstr "Įveskite pavadinimą:"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgid "Replace Named Area"
-#~ msgstr "Pakeitimas"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Pakeitimas"
-
 #~ msgid "&Select"
 #~ msgstr "&Pažymėti"
-
-#~ msgid "Area: %1"
-#~ msgstr "Plotas: %1"
 
 #~ msgid "&Edit..."
 #~ msgstr "&Keisti..."
 
-#~ msgid "&Remove"
-#~ msgstr "&Pašalinti"
-
 #, fuzzy
 #~ msgid "New Named Area"
 #~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Edit Named Area"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Remove Named Area"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Cells:"
-#~ msgstr "Langeliai:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Lapas:"
-
-#, fuzzy
-#~| msgid "Enter name:"
-#~ msgid "Area name:"
-#~ msgstr "Įveskite pavadinimą:"
-
-#~ msgid "Align Left"
-#~ msgstr "Lygiuoti kairėje"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Align Center"
-#~ msgstr "Lygiuoti centre"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Align Right"
-#~ msgstr "Lygiuoti dešinėje"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Align Top"
-#~ msgstr "Lygiuoti į viršų"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~| msgid "Middle"
-#~ msgid "Align Middle"
-#~ msgstr "Vidutinis"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Lygiuoti į apačią"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Border Left"
-#~ msgstr "Riba"
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgid "Border Right"
-#~ msgstr "Riba"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgid "Border Top"
-#~ msgstr "Riba"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgid "Border Bottom"
-#~ msgstr "Rėmelio spalva:"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Apsaugoti lakštą"
-
-#~ msgid "All Borders"
-#~ msgstr "Visi rėmeliai"
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgid "No Borders"
-#~ msgstr "Be rėmelių"
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgid "Border Outline"
-#~ msgstr "Kontūras"
-
-#, fuzzy
-#~ msgid "Outline"
-#~ msgstr "Apibrėžti"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Horizontaliai"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Horizontaliai"
 
 #~ msgid "Australia"
 #~ msgstr "Australija"
@@ -17571,71 +19737,6 @@ msgstr ""
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Zimbabvės doleris"
 
-#, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "Reikšmės"
-
-#~ msgid "Strike Out"
-#~ msgstr "Perbrauktas"
-
-#, fuzzy
-#~ msgid "Increase Font Size"
-#~ msgstr "Padidinti šrifto dydį"
-
-#, fuzzy
-#~ msgid "Decrease Font Size"
-#~ msgstr "Sumažinti šrifto dydį"
-
-#, fuzzy
-#~ msgid "Wrap Text"
-#~ msgstr "Pasirinkti šriftą..."
-
-#~ msgid "Wrap"
-#~ msgstr "Laužyti"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Vertikalus tekstas"
-
-#, fuzzy
-#~| msgid "Center vertically"
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Horizontaliai"
-
-#, fuzzy
-#~ msgid "Percent Format"
-#~ msgstr "Formatas"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Reikšmės"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "Change Format"
-#~ msgid "Money Format"
-#~ msgstr "Pakeisti formatą"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Pasirinkti šriftą..."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Vertikalus tekstas"
-
-#, fuzzy
-#~| msgid "Percent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Procentas"
-
-#, fuzzy
-#~| msgid "Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Formatas"
-
 #~ msgid "&Data Format"
 #~ msgstr "&Duomenų formatas"
 
@@ -17669,9 +19770,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "Numatytas aukštis (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Aukštis:"
-
 #, fuzzy
 #~ msgid "Set the height of the cell."
 #~ msgstr "Pašalinti sąrašą"
@@ -17679,499 +19777,26 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "Numatytas plotis (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Plotis:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Pridėti komentarą"
-
-#, fuzzy
-#~ msgid "Increase Indent"
-#~ msgstr "Didinti atitraukimą"
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "Didinti atitraukimą"
-
-#, fuzzy
-#~ msgid "Decrease Indent"
-#~ msgstr "Sumažinti atitraukimą"
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "Sumažinti atitraukimą"
-
-#~ msgid "Upper Case"
-#~ msgstr "Didžiąsias raides"
-
-#, fuzzy
-#~ msgid "Upper"
-#~ msgstr "Aukščiausias"
-
-#, fuzzy
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Pradėti nuo eilutės:"
-
-#~ msgid "Lower Case"
-#~ msgstr "Mažąsias raides"
-
-#, fuzzy
-#~ msgid "Lower"
-#~ msgstr "Žemesnis"
-
-#, fuzzy
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Pradėti nuo eilutės:"
-
-#, fuzzy
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Pradėti nuo eilutės:"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "First letter uppercase"
-#~ msgid "First Letter Upper"
-#~ msgstr "Pirma raidė – didžioji"
-
-#, fuzzy
-#~ msgid "Comment..."
-#~ msgstr "Komentaras"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Remove Comment"
-#~ msgstr "Komentaras"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "First letter uppercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Pirma raidė – didžioji"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Pirma raidė – didžioji"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Komentaras"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Clear Comment"
-#~ msgstr "Komentaras"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Keisti raidžių lygį"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Didinti atitraukimą"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Sumažinti atitraukimą"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Langelio komentaras"
-
-#~ msgid "&Left"
-#~ msgstr "&Kairėje"
-
-#~ msgid "&Right"
-#~ msgstr "&Dešinėje"
-
 #~ msgid "&Up"
 #~ msgstr "&Aukštyn"
-
-#~ msgid "&Down"
-#~ msgstr "&Žemyn"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Autosum"
-#~ msgstr "Automatinis"
-
-#, fuzzy
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Pasirinkti šriftą..."
-
-#, fuzzy
-#~| msgid "Text File"
-#~ msgid "From &Text File..."
-#~ msgstr "Teksto failas"
-
-#~ msgid "Text File"
-#~ msgstr "Teksto failas"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "Įterpti lakštą"
 
 #, fuzzy
 #~ msgid "From &Clipboard..."
 #~ msgstr "Iš iškarpinės"
 
-#, fuzzy
-#~ msgid "Clipboard"
-#~ msgstr "Laikina talpyklė"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~ msgid "&Text to Columns..."
-#~ msgstr "Tekstas į stulpelius"
-
-#, fuzzy
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Iš iškarpinės"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Tekstas į stulpelius"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Nepavyko atverti įvesties failo."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Iš iškarpinės"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Teksto spalva"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Tekstas į stulpelius"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~| msgid "Center horizontally"
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Centruoti horizontaliai"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~| msgid "Merge Cells"
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Apjungti langelius"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Apsaugoti lakštą"
-
-#, fuzzy
-#~| msgid "Hide Column"
-#~ msgid "Resize Column..."
-#~ msgstr "Paslėpti stulpelį"
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Įterpti stulpelius"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~ msgid "Remove Columns"
-#~ msgstr "Stulpeliai"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Hide Columns"
-#~ msgstr "Slėpti stulpelius"
-
-#, fuzzy
-#~ msgid "Show Columns..."
-#~ msgstr "Rodomi stulpeliai"
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "Paslėpti stulpelį"
-
-#, fuzzy
-#~| msgid "Hide Column"
-#~ msgid "Equalize Column"
-#~ msgstr "Paslėpti stulpelį"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Show Columns"
-#~ msgstr "Rodomi stulpeliai"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Paslėpti stulpelį"
-
-#, fuzzy
-#~| msgid "Resize"
-#~ msgid "Resize Row..."
-#~ msgstr "Keisti dydį"
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Įterpti eilutes"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~| msgid "Remove List"
-#~ msgid "Remove Rows"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Įterpti lakštą"
-
-#, fuzzy
-#~ msgid "Hide Rows"
-#~ msgstr "Paslėpti eilutes"
-
-#, fuzzy
-#~ msgid "Show Rows..."
-#~ msgstr "Rodyti eilutes"
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "Paslėpti stulpelį"
-
-#, fuzzy
-#~| msgid "Resize"
-#~ msgid "Equalize Row"
-#~ msgstr "Keisti dydį"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Show Rows"
-#~ msgstr "Rodyti eilutes"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Paslėpti stulpelį"
-
-#, fuzzy
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Paslėpti stulpelį"
-
-#, fuzzy
-#~ msgid "Adjust Column"
-#~ msgstr "Paslėpti stulpelį"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Šalinti stulpelius"
 
-#, fuzzy
-#~ msgid "Adjust Row"
-#~ msgstr "Paslėpti stulpelį"
-
 #~ msgid "Delete Rows"
 #~ msgstr "Šalinti eilutes"
-
-#, fuzzy
-#~| msgid "Resize"
-#~ msgid "Resize Row"
-#~ msgstr "Keisti dydį"
-
-#, fuzzy
-#~| msgid "Hide Column"
-#~ msgid "Resize Column"
-#~ msgstr "Paslėpti stulpelį"
-
-#, fuzzy
-#~| msgid "Select columns:"
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Pažymėti stulpelius:"
-
-#, fuzzy
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Paslėpti stulpelį"
-
-#~ msgid "Column: %1"
-#~ msgstr "Stulpelis: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Eilutė: %1"
-
-#, fuzzy
-#~ msgid "&Link..."
-#~ msgstr "Nuoroda"
-
-#, fuzzy
-#~| msgid "Insert a new sheet"
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Įterpti naują lakštą"
-
-#, fuzzy
-#~ msgid "Link"
-#~ msgstr "Nuoroda"
-
-#~ msgid "Remove Link"
-#~ msgstr "Pašalinti saitą"
-
-#, fuzzy
-#~ msgid "Remove a link"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Insert Link"
-#~ msgstr "Įterpti saitą"
 
 #~ msgid "Edit Link"
 #~ msgstr "Taisyti saitą"
 
 #, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Pašalinti saitą"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Įterpti saitą"
-
-#~ msgid "Internet"
-#~ msgstr "Internetas"
-
-#, fuzzy
-#~ msgid "Link to Internet Address"
-#~ msgstr "Interneto adresas"
-
-#, fuzzy
-#~ msgid "Text to display:"
-#~ msgstr "Rodomas tekstas"
-
-#, fuzzy
-#~ msgid "Internet address:"
-#~ msgstr "Interneto adresas"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "El. paštas"
-
-#, fuzzy
-#~| msgid "Email address:"
-#~ msgid "Link to Email Address"
-#~ msgstr "El. pašto adresas:"
-
-#~ msgid "Email address:"
-#~ msgstr "El. pašto adresas:"
-
-#, fuzzy
-#~ msgid "Subject:"
-#~ msgstr "Tema:"
-
-#, fuzzy
-#~ msgid "File"
-#~ msgstr "Failas"
-
-#, fuzzy
-#~ msgid "Link to File"
-#~ msgstr "Nuoroda į failą"
-
-#, fuzzy
-#~ msgid "File location:"
-#~ msgstr "Failo vietą"
-
-#, fuzzy
-#~ msgid "Recent file:"
-#~ msgstr "Paskutinis atvertas failas"
-
-#~ msgid "No Entries"
-#~ msgstr "Nėra įrašų"
-
-#, fuzzy
-#~ msgid "Link to Cell"
-#~ msgstr "Nuoroda į failą"
-
-#, fuzzy
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "&Sort..."
-#~ msgstr "Rikiuoti"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Rikiuoti"
-
-#, fuzzy
 #~| msgid "Custom Styles"
 #~ msgid "Use custom list"
 #~ msgstr "Saviti stiliai"
-
-#~ msgid "Column %1"
-#~ msgstr "Stulpelis %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Eilutė %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Pirmasis stulpelis kaip etiketė"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Pirmasis stulpelis kaip etiketė"
-
-#~ msgid "Sort"
-#~ msgstr "Rikiuoti"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Nepaisyti raidžių dydžio"
 
 #~ msgid "Move Up"
 #~ msgstr "Perkelti aukštyn"
@@ -18197,179 +19822,8 @@ msgstr ""
 #~ msgid "Direction"
 #~ msgstr "Kryptis"
 
-#, fuzzy
-#~ msgid "Validity..."
-#~ msgstr "Galiojimas"
-
-#~ msgid "Validity"
-#~ msgstr "Galiojimas"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Pašalinti sąrašą"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Pašalinti sąrašą"
-
-#~ msgid "Clear &All"
-#~ msgstr "Valyti viską"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Kriterijai"
-
-#~ msgid "Allow:"
-#~ msgstr "Leisti:"
-
-#~ msgid "Integer"
-#~ msgstr "Sveikas"
-
-#~ msgid "Text Length"
-#~ msgstr "Teksto ilgis"
-
-#~ msgid "List"
-#~ msgstr "Sąrašas"
-
-#~ msgid "Data:"
-#~ msgstr "Duomenys:"
-
-#~ msgid "Minimum:"
-#~ msgstr ":Minimumas"
-
-#~ msgid "Maximum:"
-#~ msgstr "Maksimumas:"
-
-#~ msgid "Date:"
-#~ msgstr "Data:"
-
-#, fuzzy
-#~| msgid "Minimum:"
-#~ msgid "Date minimum:"
-#~ msgstr ":Minimumas"
-
-#, fuzzy
-#~| msgid "Maximum:"
-#~ msgid "Date maximum:"
-#~ msgstr "Maksimumas:"
-
-#~ msgid "Time:"
-#~ msgstr "Laikas:"
-
-#, fuzzy
-#~| msgid "Minimum:"
-#~ msgid "Time minimum:"
-#~ msgstr ":Minimumas"
-
-#, fuzzy
-#~| msgid "Maximum:"
-#~ msgid "Time maximum:"
-#~ msgstr "Maksimumas:"
-
-#~ msgid "Number:"
-#~ msgstr "Numeris:"
-
-#~ msgid "Entries:"
-#~ msgstr "Įrašai:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "Klaidos pranešimas"
-
-#, fuzzy
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Įvedus neteisingą reikšmę rodyti pranešimą apie klaidą"
-
-#~ msgid "Action:"
-#~ msgstr "Veiksmas:"
-
-#~ msgid "Stop"
-#~ msgstr "Stabdyti"
-
-#~ msgid "Warning"
-#~ msgstr "Perspėjimas"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Pavadinimas:"
-
-#~ msgid "Message:"
-#~ msgstr "Užrašas:"
-
-#~ msgid "Input Help"
-#~ msgstr "Įvesties informacija"
-
-#, fuzzy
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Pažymėjus langelį rodyti įvesties informaciją"
-
-#, fuzzy
-#~ msgid "This is not a valid value."
-#~ msgstr "Funkcija"
-
-#, fuzzy
-#~ msgid "&Series..."
-#~ msgstr "Serijos %1"
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "Įterpti lakštą"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Įterpti seką"
-
-#~ msgid "Select Character"
-#~ msgstr "Parinkti rašmenį"
-
-#, fuzzy
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Apsaugoti lakštą"
-
-#~ msgid "Series"
-#~ msgstr "Serialas"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "Insert Columns"
-#~ msgid "Insert Values"
-#~ msgstr "Įterpti stulpelius"
-
-#, fuzzy
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Tiesinis"
-
-#, fuzzy
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Geometrinis"
-
-#, fuzzy
-#~ msgid "Start value:"
-#~ msgstr "Pradinė reikšmė"
-
-#, fuzzy
-#~ msgid "Stop value:"
-#~ msgstr "Reikšmė"
-
-#, fuzzy
-#~ msgid "Step value:"
-#~ msgstr "Pradinė reikšmė"
-
-#, fuzzy
-#~ msgid "End and start value must be positive."
-#~ msgstr "Parametrai"
-
-#, fuzzy
-#~ msgid "S&pecial Character..."
-#~ msgstr "Ypatingi &simboliai"
 
 #, fuzzy
 #~ msgid "Internet address is empty"
@@ -23560,12 +25014,6 @@ msgstr ""
 #~ msgstr "stilius%1"
 
 #, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Daliniai rezultatai"
-
-#, fuzzy
 #~| msgid "Remove All"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Remove All"
@@ -28627,10 +30075,6 @@ msgstr ""
 
 #~ msgid "File to open"
 #~ msgstr "Atverti failą"
-
-#, fuzzy
-#~ msgid "Inserting Text File"
-#~ msgstr "Teksto spalva"
 
 #, fuzzy
 #~ msgid "y (array)"

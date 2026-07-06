@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2013-10-17 04:56+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -145,8 +145,13 @@ msgstr "Айдар"
 msgid "Header1"
 msgstr "Айдар1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Әдетті"
@@ -178,7 +183,8 @@ msgstr "сек"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Мәтін"
@@ -249,7 +255,8 @@ msgstr "<p><b>Қайтаратын түрі:</b> %1</p>"
 msgid "Syntax"
 msgstr "Синтаксисі"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Параметрлері"
@@ -887,14 +894,15 @@ msgstr "CARY(12;0) қайтаратыны 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Сан"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Пішін"
@@ -951,6 +959,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") қайтаратыны 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Деректер қоры"
@@ -1242,6 +1252,7 @@ msgstr "Күн мен уақыт"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1315,7 +1326,8 @@ msgstr "DAYS360(\"22.02.2002\"; \"21.04.2002\"; FALSE) қайтаратыны 59
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Уақыт"
@@ -4958,6 +4970,7 @@ msgid "Regular payments"
 msgstr "Мезгілді төлемдер"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Түрі"
@@ -5298,12 +5311,19 @@ msgstr "Қолмен"
 msgid "Automatic"
 msgstr "Авто"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Мәліметі"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Қате"
@@ -6128,7 +6148,7 @@ msgstr ""
 msgid "Math"
 msgstr "Математикалық"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Функция"
@@ -6630,6 +6650,7 @@ msgid "Range"
 msgstr "Аумағы"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Шарт"
@@ -8250,6 +8271,7 @@ msgid "Row"
 msgstr "Жол"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Баған"
@@ -12821,7 +12843,7 @@ msgid "&Go"
 msgstr "&Өту"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "&Ендіру"
@@ -12839,7 +12861,7 @@ msgid "F&ormat"
 msgstr "&Пішім"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Ұяшықтарды біріктіру"
@@ -12918,8 +12940,8 @@ msgstr "Белсендету"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Қаріп"
@@ -13332,14 +13354,16 @@ msgstr "Парақ шектері:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Көлденеңінен"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Тігінен"
@@ -13366,13 +13390,15 @@ msgid "Up"
 msgstr "Жоғары"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Оңға"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Солға"
@@ -13384,36 +13410,50 @@ msgstr "Төмен, бірінші бағанына"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Жоқ"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Қосындысы"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Ең кішісі"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Ең үлкені"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Орташасы"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Санағы"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -13819,7 +13859,8 @@ msgstr "Таңдаудан айну"
 msgid "Move selected sheet to the bottom"
 msgstr "Таңдалған беттерді төмендету"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Үлкен-кішілігін ескеріп"
@@ -14020,6 +14061,7 @@ msgid "Anchor"
 msgstr "Бекіткіш"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Ұяшық"
@@ -14039,7 +14081,7 @@ msgstr "Қалыптың бекітуін ауыстыру"
 msgid "Next Sheet"
 msgstr "Келесі бет"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Келесі"
@@ -14054,7 +14096,7 @@ msgstr "Келесі бетке ауысу"
 msgid "Previous Sheet"
 msgstr "Алдыңғы бет"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Алдыңғысы"
@@ -14257,7 +14299,7 @@ msgid ""
 "Do you want to continue?"
 msgstr "Назардағы бетті алып тастамақсыз ба?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Атауы:"
@@ -14317,21 +14359,3139 @@ msgstr "Санағы: "
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Мәтіннің түсін өзгерту"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "Аясының түсін өзгерту"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Шегін өзгерту"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Бағандады ендіру"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Жолды ендіру"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Бағанды жою"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Бағандарды жою"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Кестеге жаңа жол ендіру"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Кестеден жолды өшіру"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Кестеге жаңа баған ендіру"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Таңдалған бағандарды кесте бетінен кетіру"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Бағандарды жасыру"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Жолдарды жасыру"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Бағандарды көрсету"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Жолдарды көрсету"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Таңдағандағы жасырылған жолдарын көрсету"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "Таңдалған аумақты біріктіру"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Таңдағандағы жасырылған бағандарын көрсету"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "Таңдалған аумақты біріктіру"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Бағандарды теңестіру"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Жолдарды теңестіру"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Таңдалған жолдарды бір өлшемге келтіру"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Таңдалған бағандарды бір өлшемге келтіру"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Бағанды шақтау"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Жолды шақтау"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Жол && Бағанды шақтау"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "Жол/бағанның өлшемін мазмұнына шақтау"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "Жол/бағанның өлшемін мазмұнына шақтау"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "Жол/бағанның өлшемін мазмұнына шақтау"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Бағандарды көрсету..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Жолдарды көрсету..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Жасырылған бағандарды көрсету"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Жасырылған жолдарды көрсету"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Баған: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Жол: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Баған өлшемін өзгерту..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Жол өлшемін өзгерту..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Жолдың биіктігін өзгерту"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Бағанның енін өзгерту"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Солға туралау"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Ұяшықтағыны сол жағына туралау"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Көлденең туралауын өзгерту"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Оңға туралау"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Ұяшықтағыны оң жағына туралау"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Ортаға туралау"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Ұяшықтағыны ортасына туралау"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Ортаға"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Жоғарға туралау"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Ұяшықтағыны жоғарына туралау"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Жоғарға"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Тігінен туралауын өзгерту"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Төменге туралау"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Ұяшықтағыны төменіне туралау"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Төменге"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Ортаға туралау"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Ұяшықтағыны ортасына туралау"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Ортаға"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Бұрышын өзгерту..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Ұяшық мазмұны қисайтып жазылу бұрышы"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Бұрыш"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Бұрышын өзгерту"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Авто-сүзгі"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Ұяшық аумағына авто-сүзгіні қосу"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Авто-Сүзгі"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Таңдалған ұяшықтарды бар бір стиліне келтіру"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Авто-Пішім..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "'%1' деген бет-стилінің XML файлы табылмады."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "'%1' бет-стилінің XML файлды талдау қатесі."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Авто-Пішім"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Автоқосынды"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "'sum' функциясын ендіру"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Автоқосынды"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Сол жақ шегі"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Таңдалған аумақтың сол жақ шегін сызу"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Оң жақ шегі"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Таңдалған аумақтың оң жақ шегін сызу"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Жоғарғы шегі"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Таңдалған аумақтың жоғарғы шегін сызу"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Астыңғы шегі"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Таңдалған аумақтың астыңғы шегін сызу"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Барлық шектері"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Таңдалған аумақтағы барлық ұяшықтарының айнала шегін сызу"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Барлық"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Шектері сызылмасын"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Таңдалған аумақтың барлық сызылған шектерін өшіру"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Шегін айнала сызу"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Таңдалған аумақтың айнала шегін сызу"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Айнала сызық"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Шегінің түсі"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Жаңа шегінің түсін таңдау"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Шегінің түсін өзгерту"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Ұяшықтарды ендіру..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Кестеге таза ұяшықты ендіру"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Ұяшықтарды кетіру..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Ұяшықтарды кесте бетінен кетіру"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Барлығын тазалау"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Назардағы ұяшықтың бүкіл мазмұны мен пішімдеуін кетіру"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Мазмұнын тазалау"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Назардағы ұяшықтың мазмұнын өшіру"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Мәтінді тазалау"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Өшіру"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Түсініктеме..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Осы ұяшқтың түсініктемесін өзгерту"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Түсініктемесін тазалау"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Осы ұяшқтың түсініктемесін өшіру"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Түсініктемені өшіру"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Түсініктемені өшіру"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Түсініктемені беру"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Шартты стильдер..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Шарттарға тәуелді ұяшық стилін орнату"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Шартты стильдер"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Шартты ұяшық стильдерін өшіру"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Шартты стильдерін өшіру"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Шартты пішімдеуді өшіру"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Шартты пішімдеуді қосу"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Біріктіру..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Бірнеше ұқсас аумақтарды қосындысын есептейтін аумақ қылу"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Біріктіру"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Ұяшықтағыны алмасу буферіне көшірмелеу"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Ұяшықтағыны алмасу буферіне алу"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "&Мәтін файлынан..."
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "Мәтін файл деректерін меңзер көрсеткен/таңдалған орына ендіру"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Мәтін файлы"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "CVS ерек файлды импорттау"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "СSV дерек файлдары (*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Ендіретін файл ашылмайды."
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "Мәтін файлды ендіру"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Мәтін файлды ендіру"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Алмасу буферінен ендіру"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"CSV деректерін алмасу буферінен меңзер көрсеткен/таңдалған орына ендіру"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Алмасу буфері"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Алмасу буферінде деректер жоқ."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Алмасу буферінде керек деректер жоқ."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Алмасу буферінен ендіру"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Алмасу буферінен ендіру"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Мәтінді бағандарға..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Ұяшықтардың мазмұнын бірнеше бағандарға созу"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Мәтінді бағандарға"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Мәтінді бағандарға"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Реттеу не автотолтыру үшін өзінің тізімдерін құру"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Өзінің тізімдері..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Аталған аумағын қосу"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Аумақтың атауы:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Бұрышын өзгерту"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Бұрышы:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "Авто-Пішім"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Қолданатын бет стилі:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Таңбаны таңдау"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Таңдалған таңбаны мәтінге енгізу"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Ұяшықтың түсініктемесі"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<жоқ>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "келесіге тең"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "келесіден артық"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "келесіден кем"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "келесіге тең не одан артық"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "келесіге тең не одан кем"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "келесі аралықта"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "келесі аумақтан тыс"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "келесіге дейін"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Бірінші шарт"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Екінші шарт"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Үшінші шарт"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Ұяшық"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Ұяшықтың стилі"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "келесіден бастап"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "Біріншісі сан болса, екіншісі де сан болуы тиіс."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr "Біріншісі мәтін жолы болса, екіншісі де мәтін болуы тиіс."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Біріктіру"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Көбейтінді"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Стандартты ауытқу"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Дисперсия"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Кемінде бір көз ауқымын анықтау керек."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 дұрыс ұяшықтар ауқымы емес."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"%1\n"
+"ауқымы\n"
+"тым тар"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"%1\n"
+"ауқымы\n"
+"тым кең"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "Көз және мақсатты ауқымдар қиылысады."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"%1\n"
+"ауқымы\n"
+"жарамсыз"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Деректер қорынан деректі ендіру"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Түрі:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Деректер қорының атауы: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Хосты:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Порты:\n"
+"(қажет болса)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Пайдаланушысы:\n"
+"(қажет болса)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Паролі:\n"
+"(қажет болса)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Кестелерді таңдаңыз:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Кестелер"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Бағандарды таңдаңыз:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Кесте"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Бағандарда"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Барлық келесілерге сәйкес келеді (ЖӘНЕ)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Кемінде бір келесіге сәйкес келеді (НЕМЕСЕ)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "келесіге тең"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "келесіге тең емес"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "келесінің ішінде"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "келесінің ішінде емес"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "келесідей"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "келесіден артық"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "келесіден кем"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "келесіден артық не оған тең"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "келесіден кем не оған тең"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Реттеу тәртібі"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Өсу"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Кему"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Өзгеше"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Сұраныс параметрлері"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL сұранысы:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Аумаққа ендіру"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Бастайтын ұяшығы"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Нәтижесін"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Мұнда кестені келтіруге болмайды."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Аумақты дұрыс келтіру керек."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Ұяшықты дұрыс келтіру керек."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Сұранысты орныдау жаңылды."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Сұраныс ешбір нәтиже бермеді."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Деректер қорынан деректі ендіру"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Порт деген сан болуы тиіс"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Деректер қорымен байланысу..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Байланыс құрылды. Кесте мәліметі алынуда..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Бұл деректер қорында кесте жоқ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Драйвері жүктелмеді"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Кестенің метадеректерін алу..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Кемінде бір кестені таңдау керек еді."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Кемінде бір бағанды таңдау керек еді."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' мен '?' үлгі қалқалары SQL-де істемейді. Бұнда оның орнында '%' мен '_'. "
+"қолданылады. Ауыстып берейік пе?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Алмастыру"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Құжат параметрлері"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "Есептеу тәсілі"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Case Insensitive"
+msgid "Case sensitive"
+msgstr "Үлкен-кішілігін ескермей"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Дәлдігі"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Авто"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "String to compare with"
+msgid "String comparison:"
+msgstr "Салыстыратын жол"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "Үлгі өрнегі"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Жалпы жүйелік жергілікті стандарттар қолданылсын"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Тілі: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Санның әдетті пішімі: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Күннің ұзын пішімі: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Күннің қысқа пішімі: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Уақыттың пішімі: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Ақшаның пішімі: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Параметрлерін көрсету"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Бүкіл бетте іздеу"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Қайсысында іздеу:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Ұяшықтағы мәндерде"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Түсініктемелерде"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Іздеу бағыты:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Жол бойы сосын төмен"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Төменге сосын жол бойы"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Параметрлерін тығу"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Text Functions"
+msgid "Set Function"
+msgstr "Мәтіндік функциялары"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Функцияны ендіру"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Анықтама"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Бұл функцияда параметрлері жоқ."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Сипаттамасы табылмады."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Нәтижесін табу"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Керек ұяшыққа өту"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Қай ұяшыққа:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Ендіру"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Оң жаққа ығыстырып"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Төмен жаққа ығыстырып"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Жолдарды ендіру"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Бағандарды ендіру"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Ұяшықтарды ендіру"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Жою"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Сол жаққа ығыстырып"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Жоғары жаққа ығыстырып"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Жолдарды жою"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Бағандарды жою"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Ұяшықтарды жою"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Сілтемені ендіру"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Интернет"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Интернет адресіне сілтеме"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Жазуы:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Интернет адресі:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "Эл.пошта"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "Эл.пошта адресіне сілтеме"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "Эл.пошта адресі:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Тақырыбы:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Файл"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Файлға сілтеме"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Файлдың орны:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Соңғы файл:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Жоқ"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Ұяшық сілтемесі"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Ұяшық не Аталған аумағы:"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Өзіндік тізімдері"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "Үлкен-кішілігін ауыстыру"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Тізім:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Жазу:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Қосу"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Қайту"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Жаңа"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Өзгерту"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Көшіріп алу"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Шынымен бұл тізімді өшірмексіз бе?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Тізімді өшіру"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Аумақта бірдеме бар.\n"
+"Жалғастра берейік пе?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Аталған аумақтар"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Аумағы: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Ұяшықтар:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Бет:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Аумақтың атауы:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "Ө&шіру"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Ашу/Сақтау"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Шынымен бұл аталған аумақты жойғыңыз келеді ме?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Аталған аумағын жою"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Ұяшық сілтемесі дұрыс емес."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Ұяшықтарды ығыстырып орналастыру"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "Select Character"
+msgid "Select Source"
+msgstr "Таңбаны таңдау"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "Add Filter"
+msgstr "Сүзгі"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Bit Operations"
+msgid "Pivot Options"
+msgstr "Биттік амалдар"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Жолды өзгерту"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Биіктігі:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Бағанды өзгерту"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Ені:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Қатарлар"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "Тізбекті ендру"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Мәндерін келтіру тәртібі"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Тігінен, бір-бірінің астында"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Көлденеңінен, сол жақтан оңға"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Сызықты (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"'Бастаудан' 'аяқтауға' дейін келтірілген қадамымен қатарды құру. Әрбір "
+"қатардың мәні алдыңғысына 'қадамын' қосумен табылады."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Геометриялық (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"'Бастаудан' 'аяқтауға' дейін келтірілген мәнге көбейтіп қатарды құру. Әрбір "
+"қатардың мәні алдыңғысын 'қадамына' көбейтумен табылады. Қадамы 5 қатардың "
+"мысалы: 5; 25;125;625."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Бастауы:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Аяқтауы:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Қадамы:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Бастау мен аяқтау мәні оң сан болуға тиіс."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Аяқтау мәні бастау мәнінен артық болу керек, әйтпесе қадамы 1-ден кем болуы "
+"тиіс."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "Бастау, Аяқтау, Қадам мәндерінің біреуі де нөл болмауы керек."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "Қадам мәні '1' болмау керек"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "Қадам мәні теріс."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Қадам мәні нөлден артық болу керек, әйтпесе сызықты қатар ақырсыз болмақ."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Егер бастау мәні аяқтау мәнінен артық болса, қадамы нөлден кем болуы тиіс."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Егер қадамы теріс сан болса, бастау мәні аяқтау мәнінен артық болу тиіс."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Көрсететін жасырын жолдар:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Көрсететін жасырын бағандар:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "%1-бағаны"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "%1-жолы"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "&Бірінші бағаны атаулардан тұрады"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "&Бірінші жолы атаулардан тұрады"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Реттеу"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Үлкен-кішілігін ескермей"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Арнаулы орналастыру"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr "Орналастыру"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Стиль менеджері"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Стилі"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Барлық стильдер"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Құрастырған стильдер"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Иерархиялық"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Жаңа..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Өзгерту..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Өшіру..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "стиль%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Қорытындылары"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Барлығын өшіру"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "'%1' бағаны"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Қорытындыларды қосу үшін кемінде бір бағанды таңдау керек."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Дұрыстығы"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "&Барлығын тазалау"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Рұқсатты:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Бүтін сан"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Мәтін ұзындығы"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Тізім"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Бостарын рұқсат ету"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Дерегі:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Минимумі:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Максимумі:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Күні:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Ең ертесі:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Ең соңғысы:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Уақыты:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Ең ертесі:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Ең соңғысы:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Саны:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Жазулары:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "Қ&ате туралы ескертілсін"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Қате мәндер келтірілгенде ескертуді шығару"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Әрекеті:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Тоқтату"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Ескерту"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Айңдары:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Хабарламасы:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Ендіру көмегі"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Таңдалған ұяшыққа келтіруге рұқсатты мәндер туралы анықтамасын көрсету"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Мәні қате."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Уақыты қате."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Күні қате."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Құжаттың параметрлері..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "Құжаттың параметрлер диалогын шығару"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Бояуланған ұяшықты өңдеу"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Ұяшықты өзгерту"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "Бекітуін өзгерту"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Мәтін меңзер орналасқан ұяшық сілтемесінің бекітуін өзгерту"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Төменге"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Солға"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Оңға"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Толтыруды таңдау"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Алмастыру"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Қаріпті таңдау..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Ұяшықты пішімдеу"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Қаріпті ауыстыру"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Қаріп өлшемін таңдау"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Ұяшықты пішімдеу"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Қаріп өлшемі"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Мәтінің түсін орнату"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Мәтіннің түсі"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Функция..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Математикалық өрнегін ендіру"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Формуланы таңдау"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Функцияны ендіру"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Басқа..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&Керегін іздеу..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Керек мәнін табу үшін есептеуді қайталау"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Ұяшық сілтемесі дұрыс емес."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Мақсатты мән дұрыс емес."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Көз ұяшығында сан болуға тиіс."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Мақсатты ұяшықта формула болуға тиіс."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "%1 ұяшығы үшін табылған нәтижесі:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "%1 ұяшығы үшін нәтиже табылған ЖОҚ."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Ұяшыққа өту..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Керек бір ұяшыққа ауысу"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Өту"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Уақыты қате."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Шегінісін азайту"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Шегінісін үлкейту"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Шегінісін азайту"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Шегінісін үлкейту"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Шегінуді үлкейту"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Шегінуді кішірейту"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "&Деректер қорынан..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "SQL деректер қорынан деректерді ендіру"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+#| msgid ""
+#| "No database drivers available.  To use this feature you need to install "
+#| "the necessary Qt 3 database drivers."
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Деректер қорларының драйверлері жоқ.  Бұны қолдану үшін қажетті Qt 3 "
+"деректер қорларының драйверлерін орнату керек."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Тізбектер..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Тізбектерді ендіру"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Тізбекті ендру"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "А&рнаулы таңба..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr "Пернетақтада жоқ таңба не әріптерді ендіру"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Инспекторды жегу..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Сілтеме..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Интернет гиперсілтемені ендіру"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Сілтемесі"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Сілтемені өшіру"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Сілтімені өшіру"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Сілтімені өшіру"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Set Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Сілтемені орнату"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Таңдау тізімі..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Ұяшықтарды жатығынан біріктіру"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Ұяшықтарды тігінен біріктіру"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Таңдалған аумақты жатығынан біріктіру"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Таңдалған аумақты тігінен біріктіру"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "Таңдалған аумақты біріктіру"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Ұяларды ыдырату"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "Таңдалған аумақтағы біріктірілгендерді ыдырату"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Аумақтың атауы..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Кесте бетіндегі аумағының атауын беріңіз"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"'%1' деп аталған аумақ бар ғой.\n"
+"Оны өзгертейік пе?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "Аталған аумақты алмастыру"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Аталған аумақты ауыстыру"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Аталған аумақты таңдау не өзгерту"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Аталған аумақтар..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Жол алдында үзілім"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Жол алдында үзілімді қолмен енгізу"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Жол үзілмі"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Баған алдында үзілім"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Баған алдында үзілімді қолмен енгізу"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Баған үзілімі"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Алмасу буферіндегіні меңзер көрсеткенге орналастыру"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Арнаулы орналастыру..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Алмасу буферіндегіні түрлі әдістерімен орналастыру"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Ығыстырып орналастыру"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Ұяшықты алмасу буферінен кестеге ендіру"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "Қ&ортындылар..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "Қ&ортындылар..."
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Бірнеше ұяшықты таңдау керек."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Назардағы беттің барлық ұяшықтарын таңдау"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "QTableView-ді көрсету..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Реттеу..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Ұяшық тобын реттеу"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Ө&су ретімен"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Ұяшық тобын өсу (біріншісі басында) тәртібімен реттеу"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "&Кему ретімен"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "Ұяшық тобын кему (соңғысы басында) тәртібімен реттеу"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Деректерді реттеу"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Келесі беттің емлесін тексересіз бе?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Келесі бетке ауысу"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Емлесін тексеру"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Ұяшық пішімі..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Ұяшықты пішімдеу"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Қалың"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Көлбеу"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Асты сызық"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Сызып тастау"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Ұяшықтағы мәтінді бірнеше жолға тасымалдау"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Мәтінді тасымалдау"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Тасымалдау"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Мәтін жолдарын тасымалдау"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Ұяшықтың мазмұнын тігінен жазу"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Тігінен жазу"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Тігінен жазу"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Сан пішімі"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Ұяшықты пішімдеу"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Бірінші сан"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "Ғылыми пішімі"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "Ұяшықты пайыз пішіміне келтіру"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Ғылыми"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Ғылыми"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Пайыз пішімі"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Ұяшықты пайыз пішіміне келтіру"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Пайыз"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Пайыздық пішімі"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Ақша пішімі"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Ұяшықты жергілікті ақша пішіміне келтіру"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Ақша"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Ақшалық пішімі"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Күн пішімі"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Ұяшықты пішімдеу"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Пішін"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Ұяшықты пішімдеу"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Уақыт пішімі"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Пішін"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Қаріп өлшемін үлкейту"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Қаріп өлшемін кішірейту"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Дәлдігін арттыру"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Үтірден кейнгі ондық бөлшек таңбалар санын үлкейту"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Дәлдігін төмендету"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Үтірден кейнгі ондық бөлшек таңбалар санын азайту"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Дәлдігін арттыру"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Дәлдігін төмендету"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Әдетті пішіміне ысыру"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Беттің стилі"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Ая түсі"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Ая түсін орнату"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Ұяшықтың негізінде стилді құру..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Таңдалған ұяшықты негіздеп жаңа стилді құру"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Ұяшығының стилін алу"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Ұяшығынан стилін жасау"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Стилінің атауы бос бола алмайды."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Былай аталған стиль бар ғой."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Ұяшық стилін ұйымдастыру"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Стиль менеджері..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Таңдалған ұяшықтарды бар бір стиліне келтіру"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "Қ&ортындылар..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Тізім не деректер қоры үшін түрлі қортындыларды құру"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Қорытындылары"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Үлкен қылу"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "Кіші қылу"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Алғашқы әрпі үлкен"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Үлкен әріпке ауысу"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Кіші әріпке ауысу"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Алғашқы әріп үлкен"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Үлкен әріпке ауыстыру"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Кіші әріпке ауыстыру"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Бірінші әрібін үлкен қылу"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Барлық әріптерін үлкен қылу"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Барлық әріптерін кіші қылу"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "Бірінші әрібін үлкен қылу"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Үлкен-кішілігін ауыстыру"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Ұяшық дерегінің дұрыстығын тексеруін орнату"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Тексеріс..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Ұяшық дерегінің дұрыстығын тексеруін өшіру"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Тексерісін өшіру"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Тексерісін алып тастау"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Тексерісін қосу"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14577,11 +17737,6 @@ msgstr "Ұяшықтарды ендіру"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Ұяшықтарды жою"
-
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Өшіру"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -14829,12 +17984,6 @@ msgstr "Өзгертпей қалдыру"
 msgid "Roman"
 msgstr "Roman"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Көлбеу"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14857,12 +18006,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Кәдімгі"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Қалың"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14875,12 +18018,6 @@ msgstr "Түсі:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "Белгісі қойылса, назардағы ұяшықтағы мәтіннің асты сызық болады."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Асты сызық"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15031,11 +18168,6 @@ msgstr ""
 "тәртібі -> Жергілікті стандарттар -> Ел/өлке және тіл -> Сандар қойындысында "
 "орнатылады. Әдетте сандар ұяшығының оң жағына тураланады."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Пайыз"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15054,11 +18186,6 @@ msgstr ""
 "қайтарылса, ол қайтадан 12 болады.\n"
 "Бұны Пішім құралдар панеліндегі Пайыз таңбашасы арқылы ауыстыруға да болады."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Ақша"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15073,11 +18200,6 @@ msgstr ""
 "көрінісі мен тәртібі -> Жергілікті стандарттар -> Ел/өлке және тіл -> Ақша "
 "қойындысында орнатылған пішіміне ауыстырады.\n"
 "Бұны Пішім құралдар панеліндегі Ақша таңбашасы арқылы ауыстыруға да болады."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Ғылыми"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15334,11 +18456,6 @@ msgstr "Үш таңбалы 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Стилі"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15349,11 +18466,6 @@ msgstr "Атауы:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Мұра ететін стилі:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Былай аталған стиль бар ғой."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15404,12 +18516,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Стандартты"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Ортаға"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15447,24 +18553,6 @@ msgstr ""
 "<b>Жоғарға</b> деген ұяшықтың мазмұның жоғары жағына туралап көрсетеді.\n"
 "<b>Ортаға</b> деген ұяшықтың мазмұның тігінен ортасына туралап көрсетеді.\n"
 "<b>Төменге</b> деген ұяшықтың мазмұның төмен жағына туралап көрсетеді.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Жоғарға"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Ортаға"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Төменге"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15655,20 +18743,10 @@ msgstr "Іске асыру"
 msgid "Apply changes"
 msgstr "Өзгерістерді іске асыру"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Қайту"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Өзгерістерді ысырып тастау"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Барлық"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15767,360 +18845,11 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[hh]:mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Функция..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "Математикалық өрнегін ендіру"
-
-#~ msgid "From &Database..."
-#~ msgstr "&Деректер қорынан..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "SQL деректер қорынан деректерді ендіру"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Формуланы таңдау"
-
-#~ msgid "Insert a function"
-#~ msgstr "Функцияны ендіру"
-
-#~ msgid "Others..."
-#~ msgstr "Басқа..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Ұяшықты өзгерту"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Бояуланған ұяшықты өңдеу"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Инспекторды жегу..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "QTableView-ді көрсету..."
-
 #~ msgid "Permute reference fixation"
 #~ msgstr "Сілтеме бекітуін өзгерту"
 
-#~ msgid "Permute fixation"
-#~ msgstr "Бекітуін өзгерту"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Мәтін меңзер орналасқан ұяшық сілтемесінің бекітуін өзгерту"
-
-#, fuzzy
-#~| msgid ""
-#~| "No database drivers available.  To use this feature you need to install "
-#~| "the necessary Qt 3 database drivers."
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Деректер қорларының драйверлері жоқ.  Бұны қолдану үшін қажетті Qt 3 "
-#~ "деректер қорларының драйверлерін орнату керек."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Деректер қорынан деректі ендіру"
-
-#~ msgid "Type:"
-#~ msgstr "Түрі:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Пайдаланушысы:\n"
-#~ "(қажет болса)"
-
-#~ msgid "Host:"
-#~ msgstr "Хосты:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Порты:\n"
-#~ "(қажет болса)"
-
-#~ msgid "Database name: "
-#~ msgstr "Деректер қорының атауы: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Паролі:\n"
-#~ "(қажет болса)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Кестелерді таңдаңыз:"
-
-#~ msgid "Tables"
-#~ msgstr "Кестелер"
-
-#~ msgid "Select columns:"
-#~ msgstr "Бағандарды таңдаңыз:"
-
-#~ msgid "Table"
-#~ msgstr "Кесте"
-
-#~ msgid "Columns"
-#~ msgstr "Бағандарда"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Барлық келесілерге сәйкес келеді (ЖӘНЕ)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Кемінде бір келесіге сәйкес келеді (НЕМЕСЕ)"
-
-#~ msgid "equals"
-#~ msgstr "келесіге тең"
-
-#~ msgid "not equal"
-#~ msgstr "келесіге тең емес"
-
-#~ msgid "in"
-#~ msgstr "келесінің ішінде"
-
-#~ msgid "not in"
-#~ msgstr "келесінің ішінде емес"
-
-#~ msgid "like"
-#~ msgstr "келесідей"
-
-#~ msgid "greater"
-#~ msgstr "келесіден артық"
-
-#~ msgid "lesser"
-#~ msgstr "келесіден кем"
-
-#~ msgid "greater or equal"
-#~ msgstr "келесіден артық не оған тең"
-
-#~ msgid "less or equal"
-#~ msgstr "келесіден кем не оған тең"
-
-#~ msgid "Sorted by"
-#~ msgstr "Реттеу тәртібі"
-
-#~ msgid "Ascending"
-#~ msgstr "Өсу"
-
-#~ msgid "Descending"
-#~ msgstr "Кему"
-
-#~ msgid "Distinct"
-#~ msgstr "Өзгеше"
-
-#~ msgid "Query Options"
-#~ msgstr "Сұраныс параметрлері"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL сұранысы:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Аумаққа ендіру"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Бастайтын ұяшығы"
-
-#~ msgid "Result"
-#~ msgstr "Нәтижесін"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Мұнда кестені келтіруге болмайды."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Аумақты дұрыс келтіру керек."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Ұяшықты дұрыс келтіру керек."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Деректер қорындағы деректі өзгертуге рұқсатыңыз жоқ."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Сұранысты орныдау жаңылды."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Сұраныс ешбір нәтиже бермеді."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Деректер қорынан деректі ендіру"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Порт деген сан болуы тиіс"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Деректер қорымен байланысу..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Байланыс құрылды. Кесте мәліметі алынуда..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Бұл деректер қорында кесте жоқ"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Драйвері жүктелмеді"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Кестенің метадеректерін алу..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Кемінде бір кестені таңдау керек еді."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Кемінде бір бағанды таңдау керек еді."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' мен '?' үлгі қалқалары SQL-де істемейді. Бұнда оның орнында '%' мен "
-#~ "'_'. қолданылады. Ауыстып берейік пе?"
-
-#~ msgid "Insert function"
-#~ msgstr "Функцияны ендіру"
-
-#~ msgid "Help"
-#~ msgstr "Анықтама"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Бұл функцияда параметрлері жоқ."
-
-#~ msgid "Description is not available."
-#~ msgstr "Сипаттамасы табылмады."
-
-#~ msgid "Document Settings..."
-#~ msgstr "Құжаттың параметрлері..."
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "Құжаттың параметрлер диалогын шығару"
-
-#~ msgid "Document Settings"
-#~ msgstr "Құжат параметрлері"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "Есептеу тәсілі"
-
-#, fuzzy
-#~| msgid "Case Insensitive"
-#~ msgid "Case sensitive"
-#~ msgstr "Үлкен-кішілігін ескермей"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Дәлдігі"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Авто"
-
-#, fuzzy
-#~| msgid "String to compare with"
-#~ msgid "String comparison:"
-#~ msgstr "Салыстыратын жол"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "Үлгі өрнегі"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Жалпы жүйелік жергілікті стандарттар қолданылсын"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Тілі: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Санның әдетті пішімі: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Күннің ұзын пішімі: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Күннің қысқа пішімі: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Уақыттың пішімі: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Ақшаның пішімі: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Өзінің тізімдері..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "Реттеу не автотолтыру үшін өзінің тізімдерін құру"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Назардағы беттің барлық ұяшықтарын таңдау"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Өзіндік тізімдері"
-
-#~ msgid "List:"
-#~ msgstr "Тізім:"
-
-#~ msgid "Entry:"
-#~ msgstr "Жазу:"
-
-#~ msgid "Add"
-#~ msgstr "Қосу"
-
-#~ msgid "New"
-#~ msgstr "Жаңа"
-
-#~ msgid "Remove"
-#~ msgstr "Жою"
-
-#~ msgid "Modify"
-#~ msgstr "Өзгерту"
-
-#~ msgid "Copy"
-#~ msgstr "Көшіріп алу"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Шынымен бұл тізімді өшірмексіз бе?"
-
-#~ msgid "Remove List"
-#~ msgstr "Тізімді өшіру"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Аумақта бірдеме бар.\n"
-#~ "Жалғастра берейік пе?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Керегін іздеу..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Керек мәнін табу үшін есептеуді қайталау"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Нәтижесін табу"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Ұяшық сілтемесі дұрыс емес."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Мақсатты мән дұрыс емес."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Көз ұяшығында сан болуға тиіс."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Мақсатты ұяшықта формула болуға тиіс."
 
 #~ msgid "Starting..."
 #~ msgstr "Бастау..."
@@ -16130,12 +18859,6 @@ msgstr "%1 сілтемесі белсендірілді"
 
 #~ msgid "New value:"
 #~ msgstr "Жаңа мәні:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "%1 ұяшығы үшін табылған нәтижесі:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "%1 ұяшығы үшін нәтиже табылған ЖОҚ."
 
 #~ msgid "Set cell:"
 #~ msgstr "Формулалы ұяшық:"
@@ -16151,82 +18874,6 @@ msgstr "%1 сілтемесі белсендірілді"
 
 #~ msgid "Current value:"
 #~ msgstr "Қазіргі мәні:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Алмастыру"
-
-#~ msgid "Selection List..."
-#~ msgstr "Таңдау тізімі..."
-
-#~ msgid "More Options"
-#~ msgstr "Параметрлерін көрсету"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Бүкіл бетте іздеу"
-
-#~ msgid "Search in:"
-#~ msgstr "Қайсысында іздеу:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Ұяшықтағы мәндерде"
-
-#~ msgid "Comments"
-#~ msgstr "Түсініктемелерде"
-
-#~ msgid "Search direction:"
-#~ msgstr "Іздеу бағыты:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Жол бойы сосын төмен"
-
-#~ msgid "Down then Across"
-#~ msgstr "Төменге сосын жол бойы"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Параметрлерін тығу"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Ұяшық пішімі..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Ұяшықты пішімдеу"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Ұяшықтағыны алмасу буферіне алу"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Ұяшықтағыны алмасу буферіне көшірмелеу"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Алмасу буферіндегіні меңзер көрсеткенге орналастыру"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Арнаулы орналастыру..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Алмасу буферіндегіні түрлі әдістерімен орналастыру"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Ығыстырып орналастыру"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Ұяшықты алмасу буферінен кестеге ендіру"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Ұяшықтарды ығыстырып орналастыру"
-
-#~ msgid "Insert"
-#~ msgstr "Ендіру"
-
-#~ msgid "Move towards right"
-#~ msgstr "Оң жаққа ығыстырып"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Төмен жаққа ығыстырып"
-
-#~ msgid "Special Paste"
-#~ msgstr "Арнаулы орналастыру"
 
 #~ msgid "Content"
 #~ msgstr "Мазмұнын"
@@ -16258,31 +18905,12 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Division"
 #~ msgstr "Бөлу"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Емлесін тексеру"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Келесі беттің емлесін тексересіз бе?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Емлесі қате сөзді түзеу"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Авто-Пішім..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Беттің пішімін орнату"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Авто-Пішім"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Беттің стилі"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Қолданатын бет стилі:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "%1 деген кескін табылмады."
@@ -16290,92 +18918,8 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Could not load image %1."
 #~ msgstr "%1 деген кескін жүктелмеді."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "'%1' деген бет-стилінің XML файлы табылмады."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "'%1' бет-стилінің XML файлды талдау қатесі."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Авто-сүзгі"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Ұяшық аумағына авто-сүзгіні қосу"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Авто-Сүзгі"
-
-#~ msgid "Clear All"
-#~ msgstr "Барлығын тазалау"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Назардағы ұяшықтың бүкіл мазмұны мен пішімдеуін кетіру"
-
 #~ msgid "Contents"
 #~ msgstr "Мазмұны"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Мазмұнын тазалау"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Назардағы ұяшықтың мазмұнын өшіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Мәтінді тазалау"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Шартты пішімдеуді өшіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Шартты пішімдеуді қосу"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Жаңа шегінің түсін таңдау"
-
-#~ msgid "Border Color"
-#~ msgstr "Шегінің түсі"
-
-#~ msgid "Set the background color"
-#~ msgstr "Ая түсін орнату"
-
-#~ msgid "Background Color"
-#~ msgstr "Ая түсі"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Шартты стильдер..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Шарттарға тәуелді ұяшық стилін орнату"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Шартты стильдер"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Шартты стильдерін өшіру"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Шартты ұяшық стильдерін өшіру"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "Қ&ортындылар..."
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Қ&ортындылар..."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Бірнеше ұяшықты таңдау керек."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Сан пішімі"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16384,80 +18928,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Пайыз пішімі"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Уақыт пішімі"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Күн пішімі"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Ғылыми пішімі"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Шегінің түсін өзгерту"
-
-#~ msgid "<none>"
-#~ msgstr "<жоқ>"
-
-#~ msgid "equal to"
-#~ msgstr "келесіге тең"
-
-#~ msgid "greater than"
-#~ msgstr "келесіден артық"
-
-#~ msgid "less than"
-#~ msgstr "келесіден кем"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "келесіге тең не одан артық"
-
-#~ msgid "equal to or less than"
-#~ msgstr "келесіге тең не одан кем"
-
-#~ msgid "between"
-#~ msgstr "келесі аралықта"
-
-#~ msgid "outside range"
-#~ msgstr "келесі аумақтан тыс"
-
-#~ msgid "different to"
-#~ msgstr "келесіге дейін"
-
-#~ msgid "First Condition"
-#~ msgstr "Бірінші шарт"
-
-#~ msgid "Second Condition"
-#~ msgstr "Екінші шарт"
-
-#~ msgid "Third Condition"
-#~ msgstr "Үшінші шарт"
-
-#~ msgid "Cell is"
-#~ msgstr "Ұяшық"
-
-#~ msgid "Cell style"
-#~ msgstr "Ұяшықтың стилі"
-
-#~ msgid "different from"
-#~ msgstr "келесіден бастап"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr "Біріншісі сан болса, екіншісі де сан болуы тиіс."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr "Біріншісі мәтін жолы болса, екіншісі де мәтін болуы тиіс."
-
-#, fuzzy
-#~| msgid "Select Character"
-#~ msgid "Select Source"
-#~ msgstr "Таңбаны таңдау"
 
 #, fuzzy
 #~| msgid "Clear Selection"
@@ -16483,11 +18953,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~| msgid "Yield"
 #~ msgid "Field"
 #~ msgstr "Табыс"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Add Filter"
-#~ msgstr "Сүзгі"
 
 #, fuzzy
 #~| msgid "Text Option"
@@ -16534,11 +18999,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgstr "Жолдар"
 
 #, fuzzy
-#~| msgid "Bit Operations"
-#~ msgid "Pivot Options"
-#~ msgstr "Биттік амалдар"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Мәні"
@@ -16559,153 +19019,17 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Manual Selection"
 #~ msgstr "Толтыруды таңдау"
 
-#~ msgid "Product"
-#~ msgstr "Көбейтінді"
-
 #~ msgid "Sort By"
 #~ msgstr "Келесі бойынша"
-
-#~ msgid "Select Font..."
-#~ msgstr "Қаріпті таңдау..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Қаріп өлшемін таңдау"
-
-#~ msgid "Font Size"
-#~ msgstr "Қаріп өлшемі"
-
-#~ msgid "Text Color"
-#~ msgstr "Мәтіннің түсі"
-
-#~ msgid "Set the text color"
-#~ msgstr "Мәтінің түсін орнату"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Қаріпті ауыстыру"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Стиль менеджері..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Ұяшық стилін ұйымдастыру"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Таңдалған ұяшықтарды бар бір стиліне келтіру"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Ұяшықтың негізінде стилді құру..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "Ұяшығының стилін алу"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Таңдалған ұяшықты негіздеп жаңа стилді құру"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Ұяшығынан стилін жасау"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Стилінің атауы бос бола алмайды."
-
-#~ msgid "Style Manager"
-#~ msgstr "Стиль менеджері"
-
-#~ msgid "All Styles"
-#~ msgstr "Барлық стильдер"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Құрастырған стильдер"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Иерархиялық"
-
-#~ msgid "&New..."
-#~ msgstr "&Жаңа..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Өзгерту..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Өшіру..."
-
-#~ msgid "style%1"
-#~ msgstr "стиль%1"
 
 #~ msgid "Cells..."
 #~ msgstr "Ұяшықтар..."
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Ұяшықтарды ендіру..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Кестеге таза ұяшықты ендіру"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Ұяшықтарды кетіру..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Ұяшықтарды кесте бетінен кетіру"
-
 #~ msgid "Delete Cells..."
 #~ msgstr "Ұяшықтарды кетіру."
 
-#~ msgid "Insert rows"
-#~ msgstr "Жолдарды ендіру"
-
-#~ msgid "Insert columns"
-#~ msgstr "Бағандарды ендіру"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Ұяшықтарды ендіру"
-
-#~ msgid "Move towards left"
-#~ msgstr "Сол жаққа ығыстырып"
-
-#~ msgid "Move towards top"
-#~ msgstr "Жоғары жаққа ығыстырып"
-
-#~ msgid "Remove rows"
-#~ msgstr "Жолдарды жою"
-
-#~ msgid "Remove columns"
-#~ msgstr "Бағандарды жою"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Ұяшықтарды жою"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "Қ&ортындылар..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Тізім не деректер қоры үшін түрлі қортындыларды құру"
-
-#~ msgid "Subtotals"
-#~ msgstr "Қорытындылары"
-
-#~ msgid "Remove All"
-#~ msgstr "Барлығын өшіру"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Қорытындыларды қосу үшін кемінде бір бағанды таңдау керек."
-
 #~ msgid "Grand Total"
 #~ msgstr "Ақырғы қорытындысы"
-
-#~ msgid "Column '%1' "
-#~ msgstr "'%1' бағаны"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "Кезектегі қортыдыны &ауыстыру"
@@ -16731,45 +19055,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Қортындыны келесіге қосу:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Ұяшыққа өту..."
-
-#~ msgid "Goto"
-#~ msgstr "Өту"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Керек бір ұяшыққа ауысу"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Баған алдында үзілім"
-
-#~ msgid "Column Break"
-#~ msgstr "Баған үзілімі"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Баған алдында үзілімді қолмен енгізу"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Жол алдында үзілім"
-
-#~ msgid "Row Break"
-#~ msgstr "Жол үзілмі"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Жол алдында үзілімді қолмен енгізу"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Керек ұяшыққа өту"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Қай ұяшыққа:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Біріктіру..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "Бірнеше ұқсас аумақтарды қосындысын есептейтін аумақ қылу"
-
 #~ msgid "Description in rows"
 #~ msgstr "Сипаттамасы жолында"
 
@@ -16778,39 +19063,6 @@ msgstr "%1 сілтемесі белсендірілді"
 
 #~ msgid "Copy data"
 #~ msgstr "Деректерді көшіріп алу"
-
-#~ msgid "Consolidate"
-#~ msgstr "Біріктіру"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Стандартты ауытқу"
-
-#~ msgid "Variance"
-#~ msgstr "Дисперсия"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Кемінде бір көз ауқымын анықтау керек."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 дұрыс ұяшықтар ауқымы емес."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "%1\n"
-#~ "ауқымы\n"
-#~ "тым тар"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "%1\n"
-#~ "ауқымы\n"
-#~ "тым кең"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16825,22 +19077,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ "ауқымдарының\n"
 #~ "өлшемдері бірдей емес"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Біріктіру"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Көз және мақсатты ауқымдар қиылысады."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "%1\n"
-#~ "ауқымы\n"
-#~ "жарамсыз"
-
 #~ msgid "Function:"
 #~ msgstr "Функция:"
 
@@ -16850,201 +19086,17 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Entered references:"
 #~ msgstr "Келтірілген сілтемелер:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Бұрышын өзгерту..."
-
-#~ msgid "Angle"
-#~ msgstr "Бұрыш"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Ұяшық мазмұны қисайтып жазылу бұрышы"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Дәлдігін арттыру"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Үтірден кейнгі ондық бөлшек таңбалар санын үлкейту"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Дәлдігін төмендету"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Үтірден кейнгі ондық бөлшек таңбалар санын азайту"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Дәлдігін арттыру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Дәлдігін төмендету"
-
-#~ msgid "Change Angle"
-#~ msgstr "Бұрышын өзгерту"
-
-#~ msgid "Angle:"
-#~ msgstr "Бұрышы:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Бұрышын өзгерту"
-
-#~ msgid "Area Name..."
-#~ msgstr "Аумақтың атауы..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Кесте бетіндегі аумағының атауын беріңіз"
-
-#~ msgid "Named Areas..."
-#~ msgstr "Аталған аумақтар..."
-
-#~ msgid "Named Areas"
-#~ msgstr "Аталған аумақтар"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Аталған аумақты таңдау не өзгерту"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Аталған аумағын қосу"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Аумақтың атауы:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "'%1' деп аталған аумақ бар ғой.\n"
-#~ "Оны өзгертейік пе?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "Аталған аумақты алмастыру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Аталған аумақты ауыстыру"
-
 #~ msgid "&Select"
 #~ msgstr "&Таңдау"
 
-#~ msgid "Area: %1"
-#~ msgstr "Аумағы: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Өңдеу..."
-
-#~ msgid "&Remove"
-#~ msgstr "Ө&шіру"
 
 #~ msgid "New Named Area"
 #~ msgstr "Жаңа аталған аумақ"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Аталған аумақты өзгерту"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Шынымен бұл аталған аумақты жойғыңыз келеді ме?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Аталған аумағын жою"
-
-#~ msgid "Cells:"
-#~ msgstr "Ұяшықтар:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Бет:"
-
-#~ msgid "Area name:"
-#~ msgstr "Аумақтың атауы:"
-
-#~ msgid "Align Left"
-#~ msgstr "Солға туралау"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Ұяшықтағыны сол жағына туралау"
-
-#~ msgid "Align Center"
-#~ msgstr "Ортаға туралау"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Ұяшықтағыны ортасына туралау"
-
-#~ msgid "Align Right"
-#~ msgstr "Оңға туралау"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Ұяшықтағыны оң жағына туралау"
-
-#~ msgid "Align Top"
-#~ msgstr "Жоғарға туралау"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Ұяшықтағыны жоғарына туралау"
-
-#~ msgid "Align Middle"
-#~ msgstr "Ортаға туралау"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Ұяшықтағыны ортасына туралау"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Төменге туралау"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Ұяшықтағыны төменіне туралау"
-
-#~ msgid "Border Left"
-#~ msgstr "Сол жақ шегі"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Таңдалған аумақтың сол жақ шегін сызу"
-
-#~ msgid "Border Right"
-#~ msgstr "Оң жақ шегі"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Таңдалған аумақтың оң жақ шегін сызу"
-
-#~ msgid "Border Top"
-#~ msgstr "Жоғарғы шегі"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Таңдалған аумақтың жоғарғы шегін сызу"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Астыңғы шегі"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Таңдалған аумақтың астыңғы шегін сызу"
-
-#~ msgid "All Borders"
-#~ msgstr "Барлық шектері"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Таңдалған аумақтағы барлық ұяшықтарының айнала шегін сызу"
-
-#~ msgid "No Borders"
-#~ msgstr "Шектері сызылмасын"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Таңдалған аумақтың барлық сызылған шектерін өшіру"
-
-#~ msgid "Border Outline"
-#~ msgstr "Шегін айнала сызу"
-
-#~ msgid "Outline"
-#~ msgstr "Айнала сызық"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Таңдалған аумақтың айнала шегін сызу"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Көлденең туралауын өзгерту"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Тігінен туралауын өзгерту"
 
 #~ msgid "Australia"
 #~ msgstr "Аустралия"
@@ -18859,61 +20911,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Зимбабве доллары"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Әдетті пішіміне ысыру"
-
-#~ msgid "Strike Out"
-#~ msgstr "Сызып тастау"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Қаріп өлшемін үлкейту"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Қаріп өлшемін кішірейту"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Мәтінді тасымалдау"
-
-#~ msgid "Wrap"
-#~ msgstr "Тасымалдау"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Ұяшықтағы мәтінді бірнеше жолға тасымалдау"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Тігінен жазу"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Ұяшықтың мазмұнын тігінен жазу"
-
-#~ msgid "Percent Format"
-#~ msgstr "Пайыз пішімі"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Ұяшықты пайыз пішіміне келтіру"
-
-#~ msgid "Money Format"
-#~ msgstr "Ақша пішімі"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Ұяшықты жергілікті ақша пішіміне келтіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Мәтін жолдарын тасымалдау"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Тігінен жазу"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Пайыздық пішімі"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Ақшалық пішімі"
-
 #~ msgid "&Data Format"
 #~ msgstr "&Деректің пішімі"
 
@@ -18969,9 +20966,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Default height (%1)"
 #~ msgstr "Әдетті биіктігі (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Биіктігі:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Ұяшықтың биіктігін орнату."
 
@@ -18984,445 +20978,32 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Default width (%1)"
 #~ msgstr "Әдетті ені (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Ені:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Түсініктемені беру"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Шегінісін үлкейту"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Шегінісін үлкейту"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Шегінісін азайту"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Шегінісін азайту"
-
-#~ msgid "Upper Case"
-#~ msgstr "Үлкен әріпке ауыстыру"
-
-#~ msgid "Upper"
-#~ msgstr "Үлкен қылу"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Барлық әріптерін үлкен қылу"
-
-#~ msgid "Lower Case"
-#~ msgstr "Кіші әріпке ауыстыру"
-
-#~ msgid "Lower"
-#~ msgstr "Кіші қылу"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Барлық әріптерін кіші қылу"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Бірінші әрібін үлкен қылу"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Алғашқы әрпі үлкен"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Бірінші әрібін үлкен қылу"
-
-#~ msgid "Comment..."
-#~ msgstr "Түсініктеме..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Осы ұяшқтың түсініктемесін өзгерту"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Түсініктемені өшіру"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Осы ұяшқтың түсініктемесін өшіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Үлкен әріпке ауысу"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Кіші әріпке ауысу"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Алғашқы әріп үлкен"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Түсініктемені өшіру"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Түсініктемесін тазалау"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Үлкен-кішілігін ауыстыру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Шегінуді үлкейту"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Шегінуді кішірейту"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Ұяшықтың түсініктемесі"
-
-#~ msgid "&Left"
-#~ msgstr "&Солға"
-
-#~ msgid "&Right"
-#~ msgstr "&Оңға"
-
 #~ msgid "&Up"
 #~ msgstr "&Жоғарға"
-
-#~ msgid "&Down"
-#~ msgstr "&Төменге"
-
-#~ msgid "Autosum"
-#~ msgstr "Автоқосынды"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "'sum' функциясын ендіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Толтыруды таңдау"
-
-#~ msgid "From &Text File..."
-#~ msgstr "&Мәтін файлынан..."
-
-#~ msgid "Text File"
-#~ msgstr "Мәтін файлы"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "Мәтін файл деректерін меңзер көрсеткен/таңдалған орына ендіру"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "Алмасу &буферінен..."
 
-#~ msgid "Clipboard"
-#~ msgstr "Алмасу буфері"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "CSV деректерін алмасу буферінен меңзер көрсеткен/таңдалған орына ендіру"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Мәтінді бағандарға..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Ұяшықтардың мазмұнын бірнеше бағандарға созу"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Алмасу буферінен ендіру"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Алмасу буферінде деректер жоқ."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Алмасу буферінде керек деректер жоқ."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "CVS ерек файлды импорттау"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "СSV дерек файлдары (*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Мәтінді бағандарға"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Ендіретін файл ашылмайды."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Алмасу буферінен ендіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Мәтін файлды ендіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Мәтінді бағандарға"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "Таңдалған аумақты біріктіру"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Ұяшықтарды жатығынан біріктіру"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Таңдалған аумақты жатығынан біріктіру"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Ұяшықтарды тігінен біріктіру"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Таңдалған аумақты тігінен біріктіру"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Ұяларды ыдырату"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Таңдалған аумақтағы біріктірілгендерді ыдырату"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Баған өлшемін өзгерту..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Бағанның енін өзгерту"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Бағандады ендіру"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Кестеге жаңа баған ендіру"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Бағанды жою"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Таңдалған бағандарды кесте бетінен кетіру"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Бағандарды жасыру"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Мынадан бағанды жасыру"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Бағандарды көрсету..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Жасырылған бағандарды көрсету"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Бағандарды теңестіру"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Таңдалған бағандарды бір өлшемге келтіру"
-
-#~ msgid "Show Columns"
-#~ msgstr "Бағандарды көрсету"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Таңдағандағы жасырылған бағандарын көрсету"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Жол өлшемін өзгерту..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Жолдың биіктігін өзгерту"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Жолды ендіру"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Кестеге жаңа жол ендіру"
-
-#~ msgid "Remove Rows"
-#~ msgstr "Бағандарды жою"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Кестеден жолды өшіру"
-
-#~ msgid "Hide Rows"
-#~ msgstr "Жолдарды жасыру"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Мынадан жолды жасыру"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Жолдарды көрсету..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Жасырылған жолдарды көрсету"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Жолдарды теңестіру"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Таңдалған жолдарды бір өлшемге келтіру"
-
-#~ msgid "Show Rows"
-#~ msgstr "Жолдарды көрсету"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Таңдағандағы жасырылған жолдарын көрсету"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Жол && Бағанды шақтау"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "Жол/бағанның өлшемін мазмұнына шақтау"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Бағанды шақтау"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Бағандарды кетіру"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Жолды шақтау"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Жолдарды кетіру"
 
-#~ msgid "Resize Row"
-#~ msgstr "Жолды өзгерту"
-
-#~ msgid "Resize Column"
-#~ msgstr "Бағанды өзгерту"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Көрсететін жасырын бағандар:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Көрсететін жасырын жолдар:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Баған: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Жол: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Сілтеме..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Интернет гиперсілтемені ендіру"
-
-#~ msgid "Link"
-#~ msgstr "Сілтемесі"
-
-#~ msgid "Remove Link"
-#~ msgstr "Сілтімені өшіру"
-
-#~ msgid "Remove a link"
-#~ msgstr "Сілтемені өшіру"
-
-#~ msgid "Insert Link"
-#~ msgstr "Сілтемені ендіру"
-
 #~ msgid "Edit Link"
 #~ msgstr "Сілтемені өңдеу"
-
-#, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Сілтімені өшіру"
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Сілтемені орнату"
-
-#~ msgid "Internet"
-#~ msgstr "Интернет"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Интернет адресіне сілтеме"
-
-#~ msgid "Text to display:"
-#~ msgstr "Жазуы:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Интернет адресі:"
-
-#~ msgid "Email"
-#~ msgstr "Эл.пошта"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "Эл.пошта адресіне сілтеме"
-
-#~ msgid "Email address:"
-#~ msgstr "Эл.пошта адресі:"
-
-#~ msgid "Subject:"
-#~ msgstr "Тақырыбы:"
-
-#~ msgid "File"
-#~ msgstr "Файл"
-
-#~ msgid "Link to File"
-#~ msgstr "Файлға сілтеме"
-
-#~ msgid "File location:"
-#~ msgstr "Файлдың орны:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Соңғы файл:"
-
-#~ msgid "No Entries"
-#~ msgstr "Жоқ"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Ұяшық сілтемесі"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Ұяшық не Аталған аумағы:"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Реттеу..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Ұяшық тобын реттеу"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "&Кему ретімен"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "Ұяшық тобын кему (соңғысы басында) тәртібімен реттеу"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Ө&су ретімен"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "Ұяшық тобын өсу (біріншісі басында) тәртібімен реттеу"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Деректерді реттеу"
 
 #~ msgid "Use custom list"
 #~ msgstr "Өз тізімі бойынша"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Ұяшық пішімін (шектерін, түстерін, мәтін стилін) көшіріп алу"
-
-#~ msgid "Column %1"
-#~ msgstr "%1-бағаны"
-
-#~ msgid "Row %1"
-#~ msgstr "%1-жолы"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Бірінші бағаны атаулардан тұрады"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Бірінші жолы атаулардан тұрады"
-
-#~ msgid "Sort"
-#~ msgstr "Реттеу"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Үлкен-кішілігін ескермей"
 
 #~ msgid "Move Up"
 #~ msgstr "Жоғарлату"
@@ -19487,225 +21068,8 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Жолдарда ұзыннан топтасқан деректерді реттеу"
 
-#~ msgid "Validity..."
-#~ msgstr "Тексеріс..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Ұяшық дерегінің дұрыстығын тексеруін орнату"
-
-#~ msgid "Validity"
-#~ msgstr "Дұрыстығы"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Тексерісін өшіру"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Ұяшық дерегінің дұрыстығын тексеруін өшіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Тексерісін алып тастау"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Тексерісін қосу"
-
-#~ msgid "Clear &All"
-#~ msgstr "&Барлығын тазалау"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Шарттары"
-
-#~ msgid "Allow:"
-#~ msgstr "Рұқсатты:"
-
-#~ msgid "Integer"
-#~ msgstr "Бүтін сан"
-
-#~ msgid "Text Length"
-#~ msgstr "Мәтін ұзындығы"
-
-#~ msgid "List"
-#~ msgstr "Тізім"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Бостарын рұқсат ету"
-
-#~ msgid "Data:"
-#~ msgstr "Дерегі:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Минимумі:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Максимумі:"
-
-#~ msgid "Date:"
-#~ msgstr "Күні:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Ең ертесі:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Ең соңғысы:"
-
-#~ msgid "Time:"
-#~ msgstr "Уақыты:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Ең ертесі:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Ең соңғысы:"
-
-#~ msgid "Number:"
-#~ msgstr "Саны:"
-
-#~ msgid "Entries:"
-#~ msgstr "Жазулары:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "Қ&ате туралы ескертілсін"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Қате мәндер келтірілгенде ескертуді шығару"
-
-#~ msgid "Action:"
-#~ msgstr "Әрекеті:"
-
-#~ msgid "Stop"
-#~ msgstr "Тоқтату"
-
-#~ msgid "Warning"
-#~ msgstr "Ескерту"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Айңдары:"
-
-#~ msgid "Message:"
-#~ msgstr "Хабарламасы:"
-
-#~ msgid "Input Help"
-#~ msgstr "Ендіру көмегі"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr ""
-#~ "Таңдалған ұяшыққа келтіруге рұқсатты мәндер туралы анықтамасын көрсету"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Мәні қате."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Уақыты қате."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Күні қате."
-
-#~ msgid "&Series..."
-#~ msgstr "&Тізбектер..."
-
-#~ msgid "Insert a series"
-#~ msgstr "Тізбектерді ендіру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Тізбекті ендру"
-
-#~ msgid "Select Character"
-#~ msgstr "Таңбаны таңдау"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Таңдалған таңбаны мәтінге енгізу"
-
-#~ msgid "Series"
-#~ msgstr "Қатарлар"
-
-#~ msgid "Insert Values"
-#~ msgstr "Мәндерін келтіру тәртібі"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Тігінен, бір-бірінің астында"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Көлденеңінен, сол жақтан оңға"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Сызықты (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "'Бастаудан' 'аяқтауға' дейін келтірілген қадамымен қатарды құру. Әрбір "
-#~ "қатардың мәні алдыңғысына 'қадамын' қосумен табылады."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Геометриялық (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "'Бастаудан' 'аяқтауға' дейін келтірілген мәнге көбейтіп қатарды құру. "
-#~ "Әрбір қатардың мәні алдыңғысын 'қадамына' көбейтумен табылады. Қадамы 5 "
-#~ "қатардың мысалы: 5; 25;125;625."
-
-#~ msgid "Start value:"
-#~ msgstr "Бастауы:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Аяқтауы:"
-
-#~ msgid "Step value:"
-#~ msgstr "Қадамы:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Бастау мен аяқтау мәні оң сан болуға тиіс."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Аяқтау мәні бастау мәнінен артық болу керек, әйтпесе қадамы 1-ден кем "
-#~ "болуы тиіс."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "Бастау, Аяқтау, Қадам мәндерінің біреуі де нөл болмауы керек."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "Қадам мәні '1' болмау керек"
-
-#~ msgid "Step is negative."
-#~ msgstr "Қадам мәні теріс."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Қадам мәні нөлден артық болу керек, әйтпесе сызықты қатар ақырсыз болмақ."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Егер бастау мәні аяқтау мәнінен артық болса, қадамы нөлден кем болуы тиіс."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Егер қадамы теріс сан болса, бастау мәні аяқтау мәнінен артық болу тиіс."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "А&рнаулы таңба..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr "Пернетақтада жоқ таңба не әріптерді ендіру"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Интернет адресі жоқ"
@@ -27696,12 +29060,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "стиль%1"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Қорытындылары"
 
 #, fuzzy
 #~| msgid "Remove All"
@@ -45688,9 +47046,6 @@ msgstr "%1 сілтемесі белсендірілді"
 #~ msgid "Document's Locale Settings"
 #~ msgstr "Құжаттың жергілікті стандарттары"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "Мәтін файлды ендіру"
-
 #~ msgid "y (array)"
 #~ msgstr "y (жиым)"
 
@@ -45767,9 +47122,6 @@ msgstr "%1 сілтемесі белсендірілді"
 
 #~ msgid "Remove Cell"
 #~ msgstr "Ұяшықты жою"
-
-#~ msgid "Paste"
-#~ msgstr "Орналастыру"
 
 #~ msgid "Paste & Insert"
 #~ msgstr "Орналастыру & Ендіру"
@@ -45848,9 +47200,6 @@ msgstr "%1 сілтемесі белсендірілді"
 
 #~ msgid "Statistical Functions"
 #~ msgstr "Статистикалық функциялары"
-
-#~ msgid "Text Functions"
-#~ msgstr "Мәтіндік функциялары"
 
 #~ msgid "Trig Functions"
 #~ msgstr "Тригонометриялық функциялары"

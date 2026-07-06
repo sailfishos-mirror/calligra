@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2011-09-26 14:19+0330\n"
 "Last-Translator: Mohamad Reza Mirdamadi <mohi@ubuntu.ir>\n"
 "Language-Team: Farsi (Persian) <>\n"
@@ -148,8 +148,13 @@ msgstr "سرآیند"
 msgid "Header1"
 msgstr "سرآیند۱"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "پیش‌فرض"
@@ -182,7 +187,8 @@ msgstr "چسباندن"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "متن"
@@ -254,7 +260,8 @@ msgstr "نوع بازگشت: "
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "پارامترها"
@@ -911,14 +918,15 @@ msgstr "&مرجع:‌"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "عدد"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "قالب"
@@ -980,6 +988,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "تووالو"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "دادگان"
@@ -1258,6 +1268,7 @@ msgstr "نوع داده"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1331,7 +1342,8 @@ msgstr "&مرجع:‌"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "زمان"
@@ -5032,6 +5044,7 @@ msgid "Regular payments"
 msgstr "درج عبارت ریاضی"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "نوع"
@@ -5324,12 +5337,19 @@ msgstr "راهنما"
 msgid "Automatic"
 msgstr "خودکار"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "اطلاعات"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "خطا"
@@ -6177,7 +6197,7 @@ msgstr ""
 msgid "Math"
 msgstr "مالتا"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "تابع"
@@ -6698,6 +6718,7 @@ msgid "Range"
 msgstr "گستره‌ها"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 #| msgid "&Criteria"
 msgid "Criteria"
@@ -8369,6 +8390,7 @@ msgid "Row"
 msgstr "&سطر‌"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "ستون"
@@ -13022,7 +13044,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "&درج‌"
@@ -13040,7 +13062,7 @@ msgid "F&ormat"
 msgstr "&قالب‌"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "ادغام سلولها"
@@ -13121,8 +13143,8 @@ msgstr "مخفی کردن برگه"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 #| msgid "&Font"
 msgid "Font"
@@ -13582,14 +13604,16 @@ msgstr "بدون حد"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "افقی"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "عمودی"
@@ -13617,13 +13641,15 @@ msgid "Up"
 msgstr "بالا"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "راست"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "چپ"
@@ -13635,36 +13661,50 @@ msgstr "پایین، اولین ستون"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "هيچ‌کدام"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "جمع"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "کمینه"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "بیشینه"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "ميانگین"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "شمارش"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "شمارشA"
@@ -14093,7 +14133,8 @@ msgstr "پاک کردن گزینش"
 msgid "Move selected sheet to the bottom"
 msgstr "برگه برگزیده را به پایین حرکت دهید"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, fuzzy, kde-format
 #| msgid "Case sensitive sort"
 msgid "Case Sensitive"
@@ -14302,6 +14343,7 @@ msgid "Anchor"
 msgstr "آندورا"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "سلول"
@@ -14322,7 +14364,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "برگه بعدی"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Next"
@@ -14338,7 +14380,7 @@ msgstr "حرکت به برگه بعدی"
 msgid "Previous Sheet"
 msgstr "برگه قبلی"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 #| msgid "Previous Sheet"
 msgid "Previous"
@@ -14557,7 +14599,7 @@ msgstr ""
 "در شرف حذف برگه فعال هستید.\n"
 "می‌خواهید ادامه دهید؟"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "وارد کردن نام:"
@@ -14617,14 +14659,14 @@ msgstr "شمارشA: "
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 #| msgid "Change Text Color"
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "تغییر رنگ متن"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 #| msgid "Change Background Color"
 msgctxt "(qtundo-format)"
@@ -14633,11 +14675,3238 @@ msgstr "نغییر رنگ زمینه"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 #| msgid "Change Border"
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "تغيير لبه"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "درج ستونها"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "درج سطرها"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "حذف ستونها"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "حذف سطرها"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "یک سطر جدید در صفحه گسترده درج می‌کند"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "یک سطر از صفحه گسترده حذف می‌کند"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "یک ستون جدید در صفحه گسترده درج می‌کند"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+#| msgid "Removes the cells from the spreadsheet"
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "سلولها را از صفحه گسترده حذف می‌کند"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "مخفی کردن ستونها"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "مخفی کردن سطرها"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "نمايش ستونها"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "نمايش سطرها"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "نمایش سطرهای مخفی در گزینش"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "ادغام منطقه برگزیده"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "نمایش ستونهای مخفی در گزینش"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "ادغام منطقه برگزیده"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "برابر کردن ستون"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "برابر کردن سطر"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "سطرهای برگزیده‌ای که باید به همین اندازه باشد را تغییر اندازه می‌دهد"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "ستونهای برگزیده‌ای که باید به همین اندازه باشد را تغییر اندازه می‌دهد"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "میزان کردن ستون"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "میزان کردن سطر"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "میزان کردن سطر و ستون"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "اندازه سطر/ستون را طوری میزان می‌کند که محتویات متناسب باشد"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "اندازه سطر/ستون را طوری میزان می‌کند که محتویات متناسب باشد"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "اندازه سطر/ستون را طوری میزان می‌کند که محتویات متناسب باشد"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "نمايش ستونها..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "نمايش سطرها..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "نمایش ستونهای مخفی"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "نمایش سطرهای مخفی"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "ستون: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "سطر: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "تغییر اندازه ستون..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "تغيير اندازه سطر..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "تغییر ارتفاع یک سطر"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "تغییر عرض یک ستون"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "تراز چپ"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "هم‌ترازی چپ محتویات سلول"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+#| msgid "Change Horizontal Alignment"
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "تغییر تراز افقی"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "تراز راست"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "هم‌ترازی راست محتویات سلول"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "تراز مرکز"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "مرکزی کردن محتویات سلول"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "مرکز"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "تراز بالا"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "تراز محتویات سلول در امتداد بالای سلول"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "بالا"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+#| msgid "Change Vertical Alignment"
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "تغییر تراز عمودی"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "تراز پایین"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "تراز محتویات سلول در امتداد پایین سلول"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "پایین"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "تراز وسط"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "تراز مرکزی محتویات سلول در سلول"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "وسط"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "تغيير زاويه..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "تغییر زاویه‌ای که محتویات سلول چاپ می‌شوند"
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+#| msgid "Angle:"
+msgid "Angle"
+msgstr "زاویه:"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "تغيير زاویه"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "پالایه &خودکار‌"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "افزودن پالایه خودکار به گستره سلول"
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Auto-Filter"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "پالایه خودکار"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "اعمال یک سبک از پیش تعریف‌شده سلولهای برگزیده"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "قالب‌بندی خودکار..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "نتوانست سبک-برگه XML پرونده »%1« را بیابد."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "خطای تجزیه در سبک-برگه XML پرونده %1."
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+#| msgid "Auto-Format"
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "قالب‌بندی خودکار"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "جمع خودکار"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "درج تابع »جمع«"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "جمع خودکار"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "لبه چپ"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "تنظیم لبه چپ نسبت به ناحیه برگزیده"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "لبه راست"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "تنظیم لبه راست نسبت به ناحیه برگزیده"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "لبه بالا"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "تنظیم لبه بالا نسبت به ناحیه برگزیده"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "لبه پایین"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "تنظیم لبه پایین نسبت به ناحیه برگزیده"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "همه لبه‌ها"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "تنظیم لبه دور همه سلولها در ناحیه برگزیده"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "همه"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "All Borders"
+msgid "No Borders"
+msgstr "همه لبه‌ها"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "حذف همه لبه‌ها در ناحیه برگزیده"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "طرح کلی لبه"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "تنظیم یک لبه برای طرح کلی ناحیه برگزیده"
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+#| msgid "Border Outline"
+msgid "Outline"
+msgstr "طرح کلی لبه"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "رنگ لبه"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "برگزیدن یک رنگ جدید لبه"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+#| msgid "Change Border Color"
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "تغيير رنگ لبه"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "درج سلولها..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "درج یک سلول خالی در صفحه گسترده"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "حذف سلولها..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "سلولها را از صفحه گسترده حذف می‌کند"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "پاک کردن همه"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "حذف همه محتویات و قالب‌بندی سلول جاری"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "پاک کردن محتویات"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "حذف محتویات سلول جاری"
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+#| msgid "Clear Text"
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "پاک کردن متن"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+#| msgid "Delete"
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "حذف"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "توضیح..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "ویرایش یک توضیح برای این سلول"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+#| msgid "Clear Contents"
+msgid "Clear Comment"
+msgstr "پاک کردن محتویات"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "حذف این توضیح سلول"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "حذف توضیح"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Remove Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "حذف توضیح"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "افزودن توضیح"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "سبکهای شرطی..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "تنظیم سبک سلول بر اساس شرایط معین"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "سبکهای شرطی"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "حذف سبکهای شرطی سلول"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "حذف سبکهای شرطی"
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+#| msgid "Remove Conditional Formatting"
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "حذف قالب‌بندی شرطی"
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+#| msgid "Add Conditional Formatting"
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "افزودن قالب‌بندی شرطی"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&تثبیت...‌"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "ایجاد منطقه‌ای از داده‌های خلاصه از گروهی از مناطق مشابه"
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Consolidate"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "تثبیت کردن"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "رونوشت شیء سلول به تخته یادداشت"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "حرکت شیء سلول به تخته یادداشت"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "از پرونده &متن...‌"
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "درج داده از یک پرونده متن به موقعیت/گزینش مکان‌نمای جاری"
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Text File"
+msgstr "از پرونده &متن...‌"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "پرونده ورودی را نمی‌توان باز کرد."
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "درج پرونده متن"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+#| msgid "Inserting Text File"
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "درج پرونده متن"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "درج از تخته یادداشت"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "درج داده CSV از تخته یادداشت به موقعیت/گزینش مکان‌نمای جاری"
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+#| msgid "From &Clipboard..."
+msgid "Clipboard"
+msgstr "از &تخته یادداشت...‌"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "داده‌ای در تخته یادداشت وجود ندارد."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr " داده قابل استفاده‌ای در تخته یادداشت وجود ندارد."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "درج از تخته یادداشت"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+#| msgid "Inserting From Clipboard"
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "درج از تخته یادداشت"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&متن ستونها...‌"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "بسط محتوای سلولها برای ستونهای متعدد"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "متن به ستونها"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgid "Text to Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "متن به ستونها"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "ایجاد فهرستهای سفارشی برای مرتب‌سازی یا پر کردن خودکار"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "فهرستهای سفارشی..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "افزودن ناحیه نام‌دار"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "نام ناحیه را وارد کنید:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "تغيير زاویه"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "زاویه:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "قالب‌بندی خودکار"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "برگزیدن سبک برگه برای اعمال:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Character"
+msgstr "نویسه &ویژه...‌"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "Unmerge the selected region"
+msgid "Insert the selected character in the text"
+msgstr "عدم ادغام منطقه برگزیده"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "توضیح سلول"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr ""
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "برابر با"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "بیشتر از"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "کمتر از"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "برابر یا بیشتر از"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "برابر یا کمتر از"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "میان"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "گستره بیرون"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "متفاوت با"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "اولین شرط"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "دومین شرط"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "سومین شرط"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "سلول هست"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "سبک سلول"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "متفاوت از"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "اگر اولین مقدار یک عدد باشد، دومین مقدار هم باید یک عدد باشد."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr "اگر اولین مقدار یک رشته باشد، دومین مقدار هم باید یک رشته باشد."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "تثبیت کردن"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "محصول"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "انحراف معیار"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "واریانس"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+#| msgid "You have to select at least one column."
+msgid "You have to define at least one source range."
+msgstr "باید حداقل یا ستون برگزینید."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+#| msgid "This is not a valid date."
+msgid "%1 is not a valid cell range."
+msgstr "تاریخ معتبری نیست."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"گستره\n"
+"%1\n"
+"بسیار کوچک است"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"گستره\n"
+"%1\n"
+"بسیار بزرگ است"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, fuzzy, kde-format
+#| msgid "The source tables intersect with the destination table"
+msgid "The source range intersects the destination range."
+msgstr "اشتراک جدولهای مبدأ با جدول مقصد"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"گستره\n"
+"%1\n"
+" بدشکل است"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "درج داده از دادگان"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "نوع:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "نام دادگان:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "میزبان:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"درگاه:\n"
+")در صورت لزوم("
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"نام کاربر:\n"
+")در صورت لزوم("
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"اسم رمز:\n"
+")در صورت لزوم("
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "برگزیدن جدولها:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "جداول"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "برگزیدن ستونها:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "جدول"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "ستونها"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "تطبیق همه موارد زیر )و("
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "تطبیق هر کدام از موارد زیر )یا("
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "برابر"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "نابرابر"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "در"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "نه در"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "مانند"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "بیشتر"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "کمتر"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "بیشتر یا برابر"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "کمتر یا برابر"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "مرتب‌شده بر اساس"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "صعودی"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "نزولی"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "مجزا"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "گزینه‌های پرس‌وجو"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "پرس‌وجوی SQL:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "درج در منطقه"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "آغاز در سلول"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "نتیجه"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "نمی‌توانید جدولی را در اینجا مشخص کنید."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "باید منطقه معتبری را مشخص کنید."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "باید سلول معتبری را مشخص کنید."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "خرابی در اجرای پرس‌و‌جو."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "با این پرس‌وجو به نتیجه نمی‌رسید."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "Insert Data From Database"
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "درج داده از دادگان"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "درگاه باید یک عدد باشد"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "در حال اتصال به دادگان..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "متصل شد. در حال بازیابی اطلاعات جدول..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "این دادگان حاوی جدولی نیست"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "گرداننده نتوانست بار شود"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "در حال بازیابی فراداده جدولها..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "باید حداقل یک جدول برگزینید."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "باید حداقل یا ستون برگزینید."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"»*« یا »؟« در SQL نویسه‌های عام معتبری نیستند. جایگزینیهای مناسب »٪« یا »ـ« "
+"هستند. می‌خواهید آنها را جایگزین کنید؟"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgid "Replace Named Area"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "جایگزینی ناحیه نام‌دار"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "Locale Settings"
+msgid "Document Settings"
+msgstr "تنظیمات محلی"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculate using sum"
+msgid "Calculation"
+msgstr "محاسبه با استفاده از جمع"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Case sensitive sort"
+msgid "Case sensitive"
+msgstr "مرتب‌سازی حساس به حالت"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision:"
+msgid "Precision as shown"
+msgstr "دقت:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "خودکار"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Insert math expression"
+msgid "Regular Expressions"
+msgstr "درج عبارت ریاضی"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+#| msgid "&Update Locale Settings"
+msgid "&Use System's Locale Settings"
+msgstr "&به‌روزرسانی تنظیمات محلی‌"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "زبان: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "قالب عدد پیش‌فرض: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "قالب تاریخ بلند: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "قالب تاریخ کوتاه: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "قالب زمان: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "قالب واحد پول: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "گزینه‌های بیشتر"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "جستجوی برگه کامل"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "جستجو در:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "مقادیر سلول"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "توضیحات"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "جهت جستجو:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "از عرض سپس پایین"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "پایین سپس از عرض"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "گزینه‌های کمتر"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Related Functions"
+msgid "Set Function"
+msgstr "توابع مربوطه"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "درج تابع"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "کمک"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "اين تابع پارامتری ندارد."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "توصیف موجود نیست."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "پیگردی هدف"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "برو به سلول"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "وارد کردن سلول:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "درج"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "حرکت به راست"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "حرکت به پایین"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "درج سطرها"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "درج ستونها"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "درج سلولها"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "حذف"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "حرکت به چپ"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "حرکت به بالا"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "حذف سطرها"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "حذف ستونها"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "حذف سلولها"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "درج پیوند"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "اینترنت"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Internet Address"
+msgstr "نشانی اینترنتی:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "متن برای نمایش:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "نشانی اینترنتی:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "رایانامه:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Email Address"
+msgstr "نشانی اینترنتی:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+#| msgid "Mail address is empty"
+msgid "Email address:"
+msgstr "نشانی نامه خالی است"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+#| msgid "Cut Object"
+msgid "Subject:"
+msgstr "برش شیء"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "پرونده"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to File"
+msgstr "اندازه سلول"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "محل پرونده:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "پرونده اخیر:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "بدون مدخل"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to Cell"
+msgstr "اندازه سلول"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+#| msgid "New Named Area"
+msgid "Cell or Named Area:"
+msgstr "ناحیه نام‌دار جدید"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "فهرستهای سفارشی"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "تغيير حالت"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "فهرست:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "مدخل:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "افزودن"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "لغو"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "جدید"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "تغییر"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "رونوشت"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "واقعاً می‌خواهید این فهرست را حذف کنید؟"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "حذف فهرست"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"ناحیه مدخل خالی نیست.\n"
+"می‌خواهید ادامه دهید؟"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "ناحیه نام‌دار"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "ناحیه: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "سلول:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "برگه:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "نام ناحیه:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&حذف‌"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "واقعاً می‌خواهید این نام ناحیه نام‌دار را حذف کنید؟"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "حذف ناحیه نام‌دار"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "مرجع سلول نامعتبر است."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "چسباندن سلولهای در حال درج"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Source"
+msgstr "نویسه &ویژه...‌"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "Add Filter"
+msgstr "پالایه"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "عمل"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "تغییر اندازه سطر"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "ارتفاع:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "تغییر اندازه ستون"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "عرض:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "مجموعه‌ها"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "درج سریها"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "درج مقادیر"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "درج عمودی مجموعه‌ها، از بالا به پایین"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "درج افقی مجموعه‌ها، از چپ به راست"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "خطی )۲،۴،۶،...("
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"ایجاد مجموعه‌ای از »آغاز« به »پایان« و افزودن مقدار فراهم‌شده در گام برای هر "
+"گام. مجموعه‌ای را فراهم می‌کند که هر مقدار آن، »گام« بزرگتر از مقدار قبل از آن "
+"است."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "هندسی )۲،۴،۸،...("
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"ایجاد مجموعه‌ای از »آغاز« به »پایان« برای هر گام که مقدار را با مقدار "
+"فراهم‌شده در گام ضرب می‌کند. با استفاده از گامی از ۵، فهرستی اینچنین ایجاد "
+"می‌کند: ۵، ۲۵، ۱۲۵، ۶۲۵ چرا که ۵ ضرب در ۵ )گام( مساوی ۲۵، و ۲۵ ضرب در ۵ مساوی "
+"۱۲۵، که ضرب در همان مقدار گام ۵ مساوی است با ۶۲۵."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "مقدار آغاز:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "مقدار ایست:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "مقدار گام:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "مقدار پایان و آغاز باید مثبت باشد."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"مقدار پایان باید از مقدار آغاز بزرگتر باشد يا مقدار گام باید کمتر از »۱« "
+"باشد."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "امکان این که هیچ‌کدام از مقادیر آغاز، ایست یا گام مساوی صفر باشند نیست."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "مقدار گام باید متفاوت از ۱ باشد"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "گام منفی است."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"مقدار گام باید بیشتر از صفر باشد؛ در غیر این صورت، توالیهای خطی نامحدود است."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr "اگر مقدار آغاز بیشتر از مقدار پایان باشد، گام باید کمتر از صفر باشد."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr "اگر گام منفی است، مقدار آغاز باید بیش از مقدار پایان باشد."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "گزینش سطرهای مخفی جهت نمایش:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "گزینش ستونهای مخفی جهت نمایش:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "ستون %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "سطر %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+#| msgid "&First column contains headers"
+msgid "&First column contains row headers"
+msgstr "&اولین ستون حاوی سرآیند است‌"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+#| msgid "&First row contains headers"
+msgid "&First row contains column headers"
+msgstr "&اولین سطر حاوی سرآیند است‌"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "مرتب کردن"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+#| msgid "Case sensitive sort"
+msgid "Case Insensitive"
+msgstr "مرتب‌سازی حساس به حالت"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "چسباندن ویژه"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr "چسباندن"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "مدیر سبک"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "سبک"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "همه سبکها"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "سبکهای سفارشی"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "سلسله مراتبی"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&جدید..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&تغییر..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&حذف‌"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "سبک %1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "زيرمجموعها"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "حذف همه"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "ستون »%1« "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, fuzzy, kde-format
+#| msgid "Mar"
+msgid "Var"
+msgstr "مارس"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "لازم است که برای افزودن زیرمجموعها، حداقل یک ستون برگزینید."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "اعتبار"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "پاک کردن &همه‌"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "اجازه:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "عدد صحیح"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "طول متن"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "فهرست"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "فاصله‌های مجاز"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "داده:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "کمینه:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "بیشینه:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "تاریخ:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "تاریخ کمینه:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "تاریخ بیشینه:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "زمان:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "زمان کمینه:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "زمان بیشینه:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "شماره:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "مدخل:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "اعلام &خطا‌"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "نمایش پیام خطا هنگامی که مقادیر نامعتبر وارد می‌شوند"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "کنش:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "ایست"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "اخطار"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "عنوان:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "پیام:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "کمک ورودی"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "نمایش کمک ورودی هنگامی که سلول برگزیده می‌شود"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "مقدار معتبری نیست."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "زمان معتبری نیست."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "تاریخ معتبری نیست."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+#| msgid "Locale Settings"
+msgid "Document Settings..."
+msgstr "تنظیمات محلی"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+#| msgid "Show c&omment indicator"
+msgid "Show document settings dialog"
+msgstr "نمایش شاخص &توضیح‌"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "ویرایش سلول مشخص‌شده"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "تغییر سلول"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "حفاظت"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Paste the contents of the clipboard at the cursor"
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "چسباندن محتویات تخته یادداشت در مکان‌نما"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&پایین‌"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&چپ‌"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&راست‌"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+#| msgid "Fill Selection"
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "پر کردن گزینش"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+#| msgid "Replace Named Area"
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "جایگزینی ناحیه نام‌دار"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "برگزیدن قلم..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "تنظیم قالب‌بندی سلول"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+#| msgid "Change Font"
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "تغيير قلم"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "برگزیدن اندازه قلم"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "تنظیم قالب‌بندی سلول"
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+#| msgid "Select Font Size"
+msgid "Font Size"
+msgstr "برگزیدن اندازه قلم"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+#| msgid "Set the background color"
+msgid "Set the text color"
+msgstr "تنظیم رنگ زمینه"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "رنگ متن"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&تابع...‌"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "درج عبارت ریاضی"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "گزینش فرمول"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "درج یک تابع"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "غیره..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "پیگردی &هدف...‌"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "تکرار محاسبه برای یافتن مقدار مشخص"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "مرجع سلول نامعتبر است."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "مقدار هدف نامعتبر است."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "سلول متن باید حاوی يک مقدار عددی باشد."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "سلول هدف باید حاوی يک فرمول باشد."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "پیگردی هدف با سلول %1 یک راه‌حل یافت:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "پیگردی هدف با سلول %1 راه‌حلی نیافته است."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "برو به سلول..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "حرکت به یک سلول ویژه"
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+#| msgid "Goto Cell"
+msgid "Goto"
+msgstr "برو به سلول"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "زمان معتبری نیست."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "کاهش تورفتگی"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "افزايش تورفتگی"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "کاهش تورفتگی"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "افزایش تورفتگی"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+#| msgid "Increase Indentation"
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "افزايش تورفتگی"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+#| msgid "Decrease Indentation"
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "کاهش تورفتگی"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "از &دادگان...‌"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "درج داده از دادگان SQL"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+#| msgid ""
+#| "No database drivers available.  To use this feature you need to install "
+#| "the necessary Qt 3 database drivers."
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"گردانندگان دادگان موجود نیست.  برای استفاده از این ویژگی، لازم است "
+"گردانندگان دادگان Qt 3 لازم را نصب کنید."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&سری‌...‌"
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "درج یک سری"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+#| msgid "Insert Series"
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "درج سریها"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "نویسه &ویژه...‌"
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr "درج یک یا چند نماد یا حرف که در صفحه کلید یافت نمی‌شود"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "اجرای بازرس..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&پیوند...‌"
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "درج یک فوق‌پیوند اینترنتی"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "پیوند"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "حذف یک پیوند"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "حذف پیوند"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "حذف پیوند"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Set Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "تنظیم پیوند"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "فهرست گزینش..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "ادغام سلولها به طور افقی"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "ادغام سلولها به طور عمودی"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+#| msgid "Merge the selected Region.horizontally"
+msgid "Merge the selected region horizontally"
+msgstr "ادغام منطقه برگزیده به طور افقی"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "ادغام منطقه برگزیده به طور عمودی"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "ادغام منطقه برگزیده"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "جدا کردن سلولها"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "عدم ادغام منطقه برگزیده"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "نام ناحیه..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "تنظیم یک نام برای منطقه‌ای از صفحه گسترده"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "جایگزینی ناحیه نام‌دار"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+#| msgid "Replace Named Area"
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "جایگزینی ناحیه نام‌دار"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "ویرایش یا گزینش نواحی نام‌دار"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "نواحی نام‌دار..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Row"
+msgstr "حذف ستونها"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+#| msgid "Header"
+msgid "Row Break"
+msgstr "سرآیند"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Column"
+msgstr "حذف ستونها"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+#| msgid "Show column as &numbers"
+msgid "Column Break"
+msgstr "نمایش ستون به صورت &شماره‌"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "چسباندن محتویات تخته یادداشت در مکان‌نما"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "چسباندن ویژه..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "چسباندن محتویات تخته یادداشت با گزینه‌های ویژه"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "چسباندن با درج"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "سلولی را از تخته یادداشت در صفحه گسترده درج می‌کند"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "&جمعهای جزئی...‌"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "&جمعهای جزئی...‌"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "باید سلولهای متعددی برگزینید."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "همه سلولها را در کاربرگ جاری برمی‌گزیند"
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet..."
+msgid "Show QTableView..."
+msgstr "نمایش برگه..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&مرتب کردن...‌"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "مرتب کردن گروهی از سلولها"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "مرتب کردن &افزایشی‌"
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+#| msgid "Sort a group of cells in ascending (first to last) order"
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "مرتب کردن گروهی از سلولها به ترتیب صعودی )از اول به آخر("
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "مرتب کردن &کاهشی‌"
+
+#: ui/actions/Sort.cpp:145
+#, fuzzy, kde-format
+#| msgid "Sort a group of cells in decreasing (last to first) order"
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "مرتب کردن گروهی از سلولها به ترتیب کاهشی )از آخر به اول("
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+#| msgid "Sort Data"
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "مرتب‌سازی داده"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "می‌خواهید هجی را در برگه جدید بررسی کنید؟"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "حرکت به برگه بعدی"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "بررسی هجی"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "قالب سلول..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "تنظیم قالب‌بندی سلول"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "توپر"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "کج"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "زیرخط"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "حذف کردن"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "سطربندی کردن متن سلول در خطوط متعدد"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "سطربندی متن"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+#| msgid "Wrap text"
+msgid "Wrap"
+msgstr "سطربندی متن"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+#| msgid "Wrap Text"
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "سطربندی متن"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "چاپ عمودی محتویات سلول"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "متن عمودی"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "متن عمودی"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "قالب عدد"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "تنظیم قالب‌بندی سلول"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First Key"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "اولین کلید"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "قالب علمی"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "تنظیم قالب‌بندی سلول برای مشابه بودن به درصد"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "علمی"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "علمی"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "قالب درصد"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "تنظیم قالب‌بندی سلول برای مشابه بودن به درصد"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "درصد"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Format Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "قالب‌بندی درصد"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "قالب پول"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "تنظیم قالب‌بندی سلول برای مشابه بودن با پول رایج محلیتان"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "پول"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format Money"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "قالب‌بندی پول رایج"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "قالب تاریخ"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "تنظیم قالب‌بندی سلول"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "قالب"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "تنظیم قالب‌بندی سلول"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "قالب زمان"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "قالب"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "افزایش اندازه قلم"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "کاهش اندازه قلم"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "افزایش دقت"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "افزایش دقت ده‌دهی نمایش داده‌شده روی پرده"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "کاهش دقت"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "کاهش دقت ده‌دهی نمایش داده‌شده روی پرده"
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Increase Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "افزایش دقت"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Decrease Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "کاهش دقت"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "به قالب پیش‌فرض بازنشانی می‌کند"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "سبک برگه"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "رنگ زمینه"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "تنظیم رنگ زمینه"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "ایجاد سبک از سلول..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "ایجاد یک سبک جدید بر اساس سلولی که اخیراً برگزیده‌شده"
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "Style of Cell"
+msgid "Style From Cell"
+msgstr "سبک سلول"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "ایجاد سبک از سلول"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "نام سبک نمی‌تواند خالی باشد."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "يک سبک با اين نام از قبل موجود است."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "ویرایش و سازماندهی سبکهای سلول"
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+#| msgid "Style Manager"
+msgid "Style Manager..."
+msgstr "مدیر سبک"
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "اعمال یک سبک از پیش تعریف‌شده سلولهای برگزیده"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&جمعهای جزئی...‌"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "ایجاد نوع متفاوتی از جمعهای جزئی برای یک فهرست یا دادگان"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "زيرمجموعها"
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+#| msgid "Upper Case"
+msgid "Upper"
+msgstr "حروف بزرگ"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+#| msgid "Peru"
+msgid "Lower"
+msgstr "پرو"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+#| msgid "First letter uppercase"
+msgid "First Letter Upper"
+msgstr "اولین حرف به حرف بزرگ"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+#| msgid "Switch to uppercase"
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "سودهی به حروف بزرگ"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+#| msgid "Switch to lowercase"
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "سودهی به حروف کوچک"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+#| msgid "First letter uppercase"
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "اولین حرف به حرف بزرگ"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "حروف بزرگ"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "حروف کوچک"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "تبديل اولين حرف به حرف بزرگ"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "تبديل همه حروف به حروف‌ بزرگ"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "تبديل همه حروف به حروف‌ کوچک"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "بزرگ‌نویسی اولین حرف"
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+#| msgid "Change Case"
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "تغيير حالت"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "تنظیم آزمونها برای تأیید داده سلول، معتبر است"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "اعتبارسنجی..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "حذف آزمونهای اعتبار در این سلول"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "حذف اعتبار"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+#| msgid "Remove Validity Check"
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "حذف بررسی اعتبار"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+#| msgid "Add Validity Check"
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "افزودن بررسی اعتبار"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14897,13 +18166,6 @@ msgstr "درج سلولها"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "حذف سلولها"
-
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-#| msgid "Delete"
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "حذف"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -15191,12 +18453,6 @@ msgstr "تغییر )بدون تغییر("
 msgid "Roman"
 msgstr "رومانی"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "کج"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -15219,12 +18475,6 @@ msgstr ""
 msgid "Normal"
 msgstr "عادی"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "توپر"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -15238,12 +18488,6 @@ msgstr "رنگ:"
 #| msgid "If this is checked, the current cell text wil be underlined."
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "اگر این علامت زده شود، متن سلول جاری زیر خط‌دار می‌شود."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "زیرخط"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15401,11 +18645,6 @@ msgstr ""
 "دستیابی‌پذیری -< تب اعداد انتخاب می‌کنید، استفاده می‌کند. اعداد به صورت پیش‌فرض "
 "در راست هم‌تراز می‌شوند."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "درصد"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15422,11 +18661,6 @@ msgstr ""
 "مثلاً، اگر ۱۲ را وارد کنید و قالب سلول را به درصدتنظیم کنید، عدد ۱،۲۰۰ ٪ "
 "می‌شود. با سودهی به قالب سلول عمومی، به ۱۲ برمی‌گردد.\n"
 "همچنین، می‌توانید از شمایل درصد میله ابزار قالب استفاده کنید."
-
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "پول"
 
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, fuzzy, kde-format
@@ -15450,11 +18684,6 @@ msgstr ""
 "نمایش داده می‌شود و دقت در KControl تنظیم می‌شود.\n"
 "همچنین، می‌توانید از شمایل پول جاری در میله ابزار قالب برای تنظیم قالب‌بندی "
 "سلول استفاده کنید تا شبیه پول جاریتان گردد."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "علمی"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15724,11 +18953,6 @@ msgstr "سه‌رقمی ۱۵۳/۶۵۲"
 msgid "Dolor Ipse"
 msgstr "رنگ"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "سبک"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 #| msgid "Name:"
@@ -15740,11 +18964,6 @@ msgstr "نام:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "سبک وراثت:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "يک سبک با اين نام از قبل موجود است."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15795,12 +19014,6 @@ msgstr ""
 msgid "Standard"
 msgstr "استاندارد"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "مرکز"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15839,24 +19052,6 @@ msgstr ""
 "<b>بالا</b> یعنی محتوا در بالای سلول نمایش داده می‌شود.\n"
 "<b>وسط</b> یعنی محتوا به طور عمودی در وسط سلول نمایش داده می‌شود.\n"
 "<b>پایین</b> یعنی محتوای سلول در پایین سلول نمایش داده می‌شود.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "بالا"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "وسط"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "پایین"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -16072,20 +19267,10 @@ msgstr "اعمال"
 msgid "Apply changes"
 msgstr "اعمال سبکها"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "لغو"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "همه"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -16182,373 +19367,13 @@ msgstr ""
 #~ msgid "System: "
 #~ msgstr "سیستم:"
 
-#~ msgid "&Function..."
-#~ msgstr "&تابع...‌"
-
-#~ msgid "Insert math expression"
-#~ msgstr "درج عبارت ریاضی"
-
-#~ msgid "From &Database..."
-#~ msgstr "از &دادگان...‌"
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "درج داده از دادگان SQL"
-
-#~ msgid "Formula Selection"
-#~ msgstr "گزینش فرمول"
-
-#~ msgid "Insert a function"
-#~ msgstr "درج یک تابع"
-
-#~ msgid "Others..."
-#~ msgstr "غیره..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "تغییر سلول"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "ویرایش سلول مشخص‌شده"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "اجرای بازرس..."
-
-#, fuzzy
-#~| msgid "Show Sheet..."
-#~ msgid "Show QTableView..."
-#~ msgstr "نمایش برگه..."
-
 #, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "حفاظت"
 
-#, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "حفاظت"
-
-#, fuzzy
-#~| msgid "Paste the contents of the clipboard at the cursor"
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "چسباندن محتویات تخته یادداشت در مکان‌نما"
-
-#, fuzzy
-#~| msgid ""
-#~| "No database drivers available.  To use this feature you need to install "
-#~| "the necessary Qt 3 database drivers."
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "گردانندگان دادگان موجود نیست.  برای استفاده از این ویژگی، لازم است "
-#~ "گردانندگان دادگان Qt 3 لازم را نصب کنید."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "درج داده از دادگان"
-
-#~ msgid "Type:"
-#~ msgstr "نوع:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "نام کاربر:\n"
-#~ ")در صورت لزوم("
-
-#~ msgid "Host:"
-#~ msgstr "میزبان:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "درگاه:\n"
-#~ ")در صورت لزوم("
-
-#~ msgid "Database name: "
-#~ msgstr "نام دادگان:"
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "اسم رمز:\n"
-#~ ")در صورت لزوم("
-
-#~ msgid "Select tables:"
-#~ msgstr "برگزیدن جدولها:"
-
-#~ msgid "Tables"
-#~ msgstr "جداول"
-
-#~ msgid "Select columns:"
-#~ msgstr "برگزیدن ستونها:"
-
-#~ msgid "Table"
-#~ msgstr "جدول"
-
-#~ msgid "Columns"
-#~ msgstr "ستونها"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "تطبیق همه موارد زیر )و("
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "تطبیق هر کدام از موارد زیر )یا("
-
-#~ msgid "equals"
-#~ msgstr "برابر"
-
-#~ msgid "not equal"
-#~ msgstr "نابرابر"
-
-#~ msgid "in"
-#~ msgstr "در"
-
-#~ msgid "not in"
-#~ msgstr "نه در"
-
-#~ msgid "like"
-#~ msgstr "مانند"
-
-#~ msgid "greater"
-#~ msgstr "بیشتر"
-
-#~ msgid "lesser"
-#~ msgstr "کمتر"
-
-#~ msgid "greater or equal"
-#~ msgstr "بیشتر یا برابر"
-
-#~ msgid "less or equal"
-#~ msgstr "کمتر یا برابر"
-
-#~ msgid "Sorted by"
-#~ msgstr "مرتب‌شده بر اساس"
-
-#~ msgid "Ascending"
-#~ msgstr "صعودی"
-
-#~ msgid "Descending"
-#~ msgstr "نزولی"
-
-#~ msgid "Distinct"
-#~ msgstr "مجزا"
-
-#~ msgid "Query Options"
-#~ msgstr "گزینه‌های پرس‌وجو"
-
-#~ msgid "SQL query:"
-#~ msgstr "پرس‌وجوی SQL:"
-
-#~ msgid "Insert in region"
-#~ msgstr "درج در منطقه"
-
-#~ msgid "Starting in cell"
-#~ msgstr "آغاز در سلول"
-
-#~ msgid "Result"
-#~ msgstr "نتیجه"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "نمی‌توانید جدولی را در اینجا مشخص کنید."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "باید منطقه معتبری را مشخص کنید."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "باید سلول معتبری را مشخص کنید."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "اجازه ندارید که داده را در دادگان تغییر دهید."
-
-#~ msgid "Executing query failed."
-#~ msgstr "خرابی در اجرای پرس‌و‌جو."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "با این پرس‌وجو به نتیجه نمی‌رسید."
-
-#, fuzzy
-#~| msgid "Insert Data From Database"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "درج داده از دادگان"
-
-#~ msgid "The port must be a number"
-#~ msgstr "درگاه باید یک عدد باشد"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "در حال اتصال به دادگان..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "متصل شد. در حال بازیابی اطلاعات جدول..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "این دادگان حاوی جدولی نیست"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "گرداننده نتوانست بار شود"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "در حال بازیابی فراداده جدولها..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "باید حداقل یک جدول برگزینید."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "باید حداقل یا ستون برگزینید."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "»*« یا »؟« در SQL نویسه‌های عام معتبری نیستند. جایگزینیهای مناسب »٪« یا "
-#~ "»ـ« هستند. می‌خواهید آنها را جایگزین کنید؟"
-
-#~ msgid "Insert function"
-#~ msgstr "درج تابع"
-
-#~ msgid "Help"
-#~ msgstr "کمک"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "اين تابع پارامتری ندارد."
-
-#~ msgid "Description is not available."
-#~ msgstr "توصیف موجود نیست."
-
-#, fuzzy
-#~| msgid "Locale Settings"
-#~ msgid "Document Settings..."
-#~ msgstr "تنظیمات محلی"
-
-#, fuzzy
-#~| msgid "Show c&omment indicator"
-#~ msgid "Show document settings dialog"
-#~ msgstr "نمایش شاخص &توضیح‌"
-
-#, fuzzy
-#~| msgid "Locale Settings"
-#~ msgid "Document Settings"
-#~ msgstr "تنظیمات محلی"
-
-#, fuzzy
-#~| msgid "Calculate using sum"
-#~ msgid "Calculation"
-#~ msgstr "محاسبه با استفاده از جمع"
-
-#, fuzzy
-#~| msgid "Case sensitive sort"
-#~ msgid "Case sensitive"
-#~ msgstr "مرتب‌سازی حساس به حالت"
-
-#, fuzzy
-#~| msgid "Precision:"
-#~ msgid "Precision as shown"
-#~ msgstr "دقت:"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "خودکار"
-
-#, fuzzy
-#~| msgid "Insert math expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "درج عبارت ریاضی"
-
-#, fuzzy
-#~| msgid "&Update Locale Settings"
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&به‌روزرسانی تنظیمات محلی‌"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "زبان: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "قالب عدد پیش‌فرض: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "قالب تاریخ بلند: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "قالب تاریخ کوتاه: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "قالب زمان: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "قالب واحد پول: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "فهرستهای سفارشی..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "ایجاد فهرستهای سفارشی برای مرتب‌سازی یا پر کردن خودکار"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "همه سلولها را در کاربرگ جاری برمی‌گزیند"
-
-#~ msgid "Custom Lists"
-#~ msgstr "فهرستهای سفارشی"
-
-#~ msgid "List:"
-#~ msgstr "فهرست:"
-
-#~ msgid "Entry:"
-#~ msgstr "مدخل:"
-
-#~ msgid "Add"
-#~ msgstr "افزودن"
-
-#~ msgid "New"
-#~ msgstr "جدید"
-
-#~ msgid "Remove"
-#~ msgstr "حذف"
-
-#~ msgid "Modify"
-#~ msgstr "تغییر"
-
-#~ msgid "Copy"
-#~ msgstr "رونوشت"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "واقعاً می‌خواهید این فهرست را حذف کنید؟"
-
-#~ msgid "Remove List"
-#~ msgstr "حذف فهرست"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "ناحیه مدخل خالی نیست.\n"
-#~ "می‌خواهید ادامه دهید؟"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "پیگردی &هدف...‌"
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "تکرار محاسبه برای یافتن مقدار مشخص"
-
-#~ msgid "Goal Seek"
-#~ msgstr "پیگردی هدف"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "مرجع سلول نامعتبر است."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "مقدار هدف نامعتبر است."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "سلول متن باید حاوی يک مقدار عددی باشد."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "سلول هدف باید حاوی يک فرمول باشد."
 
 #~ msgid "Starting..."
 #~ msgstr "در حال آغاز..."
@@ -16558,12 +19383,6 @@ msgstr ""
 
 #~ msgid "New value:"
 #~ msgstr "مقدار جدید:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "پیگردی هدف با سلول %1 یک راه‌حل یافت:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "پیگردی هدف با سلول %1 راه‌حلی نیافته است."
 
 #~ msgid "Set cell:"
 #~ msgstr "تنظیم سلول:"
@@ -16581,84 +19400,6 @@ msgstr ""
 
 #~ msgid "Current value:"
 #~ msgstr "مقدار جاری:"
-
-#, fuzzy
-#~| msgid "Replace Named Area"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "جایگزینی ناحیه نام‌دار"
-
-#~ msgid "Selection List..."
-#~ msgstr "فهرست گزینش..."
-
-#~ msgid "More Options"
-#~ msgstr "گزینه‌های بیشتر"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "جستجوی برگه کامل"
-
-#~ msgid "Search in:"
-#~ msgstr "جستجو در:"
-
-#~ msgid "Cell Values"
-#~ msgstr "مقادیر سلول"
-
-#~ msgid "Comments"
-#~ msgstr "توضیحات"
-
-#~ msgid "Search direction:"
-#~ msgstr "جهت جستجو:"
-
-#~ msgid "Across then Down"
-#~ msgstr "از عرض سپس پایین"
-
-#~ msgid "Down then Across"
-#~ msgstr "پایین سپس از عرض"
-
-#~ msgid "Fewer Options"
-#~ msgstr "گزینه‌های کمتر"
-
-#~ msgid "Cell Format..."
-#~ msgstr "قالب سلول..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "تنظیم قالب‌بندی سلول"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "حرکت شیء سلول به تخته یادداشت"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "رونوشت شیء سلول به تخته یادداشت"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "چسباندن محتویات تخته یادداشت در مکان‌نما"
-
-#~ msgid "Special Paste..."
-#~ msgstr "چسباندن ویژه..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "چسباندن محتویات تخته یادداشت با گزینه‌های ویژه"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "چسباندن با درج"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "سلولی را از تخته یادداشت در صفحه گسترده درج می‌کند"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "چسباندن سلولهای در حال درج"
-
-#~ msgid "Insert"
-#~ msgstr "درج"
-
-#~ msgid "Move towards right"
-#~ msgstr "حرکت به راست"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "حرکت به پایین"
-
-#~ msgid "Special Paste"
-#~ msgstr "چسباندن ویژه"
 
 #~ msgid "Content"
 #~ msgstr "محتوا"
@@ -16692,35 +19433,14 @@ msgstr ""
 #~ msgid "Division"
 #~ msgstr "تقسیم"
 
-#~ msgid "Check the spelling"
-#~ msgstr "بررسی هجی"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "می‌خواهید هجی را در برگه جدید بررسی کنید؟"
-
 #, fuzzy
 #~| msgid "Correct Misspelled Word"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "اصلاح واژه بد هجی‌شده"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "قالب‌بندی خودکار..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "تنظیم قالب‌بندی کاربرگ"
-
-#, fuzzy
-#~| msgid "Auto-Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "قالب‌بندی خودکار"
-
-#~ msgid "Sheet Style"
-#~ msgstr "سبک برگه"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "برگزیدن سبک برگه برای اعمال:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "نتوانست تصویر %1 را بیابد."
@@ -16728,102 +19448,8 @@ msgstr ""
 #~ msgid "Could not load image %1."
 #~ msgstr "نتوانست تصویر %1 را بار کند."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "نتوانست سبک-برگه XML پرونده »%1« را بیابد."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "خطای تجزیه در سبک-برگه XML پرونده %1."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "پالایه &خودکار‌"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "افزودن پالایه خودکار به گستره سلول"
-
-#, fuzzy
-#~| msgid "Auto-Filter"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "پالایه خودکار"
-
-#~ msgid "Clear All"
-#~ msgstr "پاک کردن همه"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "حذف همه محتویات و قالب‌بندی سلول جاری"
-
 #~ msgid "Contents"
 #~ msgstr "محتویات"
-
-#~ msgid "Clear Contents"
-#~ msgstr "پاک کردن محتویات"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "حذف محتویات سلول جاری"
-
-#, fuzzy
-#~| msgid "Clear Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "پاک کردن متن"
-
-#, fuzzy
-#~| msgid "Remove Conditional Formatting"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "حذف قالب‌بندی شرطی"
-
-#, fuzzy
-#~| msgid "Add Conditional Formatting"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "افزودن قالب‌بندی شرطی"
-
-#~ msgid "Select a new border color"
-#~ msgstr "برگزیدن یک رنگ جدید لبه"
-
-#~ msgid "Border Color"
-#~ msgstr "رنگ لبه"
-
-#~ msgid "Set the background color"
-#~ msgstr "تنظیم رنگ زمینه"
-
-#~ msgid "Background Color"
-#~ msgstr "رنگ زمینه"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "سبکهای شرطی..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "تنظیم سبک سلول بر اساس شرایط معین"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "سبکهای شرطی"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "حذف سبکهای شرطی"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "حذف سبکهای شرطی سلول"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&جمعهای جزئی...‌"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "&جمعهای جزئی...‌"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "باید سلولهای متعددی برگزینید."
-
-#, fuzzy
-#~| msgid "Number Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "قالب عدد"
 
 #, fuzzy
 #~| msgid "Currency Format"
@@ -16836,85 +19462,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "قالب درصد"
-
-#, fuzzy
-#~| msgid "Time Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "قالب زمان"
-
-#, fuzzy
-#~| msgid "Date Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "قالب تاریخ"
-
-#, fuzzy
-#~| msgid "Scientific Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "قالب علمی"
-
-#, fuzzy
-#~| msgid "Change Border Color"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "تغيير رنگ لبه"
-
-#~ msgid "equal to"
-#~ msgstr "برابر با"
-
-#~ msgid "greater than"
-#~ msgstr "بیشتر از"
-
-#~ msgid "less than"
-#~ msgstr "کمتر از"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "برابر یا بیشتر از"
-
-#~ msgid "equal to or less than"
-#~ msgstr "برابر یا کمتر از"
-
-#~ msgid "between"
-#~ msgstr "میان"
-
-#~ msgid "outside range"
-#~ msgstr "گستره بیرون"
-
-#~ msgid "different to"
-#~ msgstr "متفاوت با"
-
-#~ msgid "First Condition"
-#~ msgstr "اولین شرط"
-
-#~ msgid "Second Condition"
-#~ msgstr "دومین شرط"
-
-#~ msgid "Third Condition"
-#~ msgstr "سومین شرط"
-
-#~ msgid "Cell is"
-#~ msgstr "سلول هست"
-
-#~ msgid "Cell style"
-#~ msgstr "سبک سلول"
-
-#~ msgid "different from"
-#~ msgstr "متفاوت از"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr "اگر اولین مقدار یک عدد باشد، دومین مقدار هم باید یک عدد باشد."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr "اگر اولین مقدار یک رشته باشد، دومین مقدار هم باید یک رشته باشد."
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Source"
-#~ msgstr "نویسه &ویژه...‌"
 
 #, fuzzy
 #~| msgid "Sheet Selection"
@@ -16940,11 +19487,6 @@ msgstr ""
 #~| msgid "Riel"
 #~ msgid "Field"
 #~ msgstr "ریل"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Add Filter"
-#~ msgstr "پالایه"
 
 #, fuzzy
 #~| msgid "Text Option"
@@ -16991,11 +19533,6 @@ msgstr ""
 #~ msgstr "سطر"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "عمل"
-
-#, fuzzy
 #~| msgid "Set Values"
 #~ msgid "Value Type"
 #~ msgstr "تنظیم مقادیر"
@@ -17015,158 +19552,19 @@ msgstr ""
 #~ msgid "Manual Selection"
 #~ msgstr "پر کردن گزینش"
 
-#~ msgid "Product"
-#~ msgstr "محصول"
-
 #~ msgid "Sort By"
 #~ msgstr "مرتب‌سازی بر اساس"
 
-#~ msgid "Select Font..."
-#~ msgstr "برگزیدن قلم..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "برگزیدن اندازه قلم"
-
-#, fuzzy
-#~| msgid "Select Font Size"
-#~ msgid "Font Size"
-#~ msgstr "برگزیدن اندازه قلم"
-
-#~ msgid "Text Color"
-#~ msgstr "رنگ متن"
-
-#, fuzzy
-#~| msgid "Set the background color"
-#~ msgid "Set the text color"
-#~ msgstr "تنظیم رنگ زمینه"
-
-#, fuzzy
-#~| msgid "Change Font"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "تغيير قلم"
-
-#, fuzzy
-#~| msgid "Style Manager"
-#~ msgid "Style Manager..."
-#~ msgstr "مدیر سبک"
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "ویرایش و سازماندهی سبکهای سلول"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "اعمال یک سبک از پیش تعریف‌شده سلولهای برگزیده"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "ایجاد سبک از سلول..."
-
-#, fuzzy
-#~| msgid "Style of Cell"
-#~ msgid "Style From Cell"
-#~ msgstr "سبک سلول"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "ایجاد یک سبک جدید بر اساس سلولی که اخیراً برگزیده‌شده"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "ایجاد سبک از سلول"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "نام سبک نمی‌تواند خالی باشد."
-
-#~ msgid "Style Manager"
-#~ msgstr "مدیر سبک"
-
-#~ msgid "All Styles"
-#~ msgstr "همه سبکها"
-
-#~ msgid "Custom Styles"
-#~ msgstr "سبکهای سفارشی"
-
-#~ msgid "Hierarchical"
-#~ msgstr "سلسله مراتبی"
-
-#~ msgid "&New..."
-#~ msgstr "&جدید..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&تغییر..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&حذف‌"
-
-#~ msgid "style%1"
-#~ msgstr "سبک %1"
-
 #~ msgid "Cells..."
 #~ msgstr "سلولها..."
-
-#~ msgid "Insert Cells..."
-#~ msgstr "درج سلولها..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "درج یک سلول خالی در صفحه گسترده"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "حذف سلولها..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "سلولها را از صفحه گسترده حذف می‌کند"
 
 #, fuzzy
 #~| msgid "Insert Cells..."
 #~ msgid "Delete Cells..."
 #~ msgstr "درج سلولها..."
 
-#~ msgid "Insert rows"
-#~ msgstr "درج سطرها"
-
-#~ msgid "Insert columns"
-#~ msgstr "درج ستونها"
-
-#~ msgid "Insert Cells"
-#~ msgstr "درج سلولها"
-
-#~ msgid "Move towards left"
-#~ msgstr "حرکت به چپ"
-
-#~ msgid "Move towards top"
-#~ msgstr "حرکت به بالا"
-
-#~ msgid "Remove rows"
-#~ msgstr "حذف سطرها"
-
-#~ msgid "Remove columns"
-#~ msgstr "حذف ستونها"
-
-#~ msgid "Remove Cells"
-#~ msgstr "حذف سلولها"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&جمعهای جزئی...‌"
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "ایجاد نوع متفاوتی از جمعهای جزئی برای یک فهرست یا دادگان"
-
-#~ msgid "Subtotals"
-#~ msgstr "زيرمجموعها"
-
-#~ msgid "Remove All"
-#~ msgstr "حذف همه"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "لازم است که برای افزودن زیرمجموعها، حداقل یک ستون برگزینید."
-
 #~ msgid "Grand Total"
 #~ msgstr "مجموع کل"
-
-#~ msgid "Column '%1' "
-#~ msgstr "ستون »%1« "
-
-#, fuzzy
-#~| msgid "Mar"
-#~ msgid "Var"
-#~ msgstr "مارس"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "&جايگزينی جمعهای جزئی جاری‌"
@@ -17192,49 +19590,6 @@ msgstr ""
 #~ msgid "Add Subtotal to:"
 #~ msgstr "افزودن جمع جزئی به:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "برو به سلول..."
-
-#, fuzzy
-#~| msgid "Goto Cell"
-#~ msgid "Goto"
-#~ msgstr "برو به سلول"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "حرکت به یک سلول ویژه"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Column"
-#~ msgstr "حذف ستونها"
-
-#, fuzzy
-#~| msgid "Show column as &numbers"
-#~ msgid "Column Break"
-#~ msgstr "نمایش ستون به صورت &شماره‌"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Row"
-#~ msgstr "حذف ستونها"
-
-#, fuzzy
-#~| msgid "Header"
-#~ msgid "Row Break"
-#~ msgstr "سرآیند"
-
-#~ msgid "Goto Cell"
-#~ msgstr "برو به سلول"
-
-#~ msgid "Enter cell:"
-#~ msgstr "وارد کردن سلول:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&تثبیت...‌"
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "ایجاد منطقه‌ای از داده‌های خلاصه از گروهی از مناطق مشابه"
-
 #, fuzzy
 #~| msgid "&Description in row"
 #~ msgid "Description in rows"
@@ -17250,43 +19605,6 @@ msgstr ""
 #~ msgid "Copy data"
 #~ msgstr "&رونوشت داده‌"
 
-#~ msgid "Consolidate"
-#~ msgstr "تثبیت کردن"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "انحراف معیار"
-
-#~ msgid "Variance"
-#~ msgstr "واریانس"
-
-#, fuzzy
-#~| msgid "You have to select at least one column."
-#~ msgid "You have to define at least one source range."
-#~ msgstr "باید حداقل یا ستون برگزینید."
-
-#, fuzzy
-#~| msgid "This is not a valid date."
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "تاریخ معتبری نیست."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "گستره\n"
-#~ "%1\n"
-#~ "بسیار کوچک است"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "گستره\n"
-#~ "%1\n"
-#~ "بسیار بزرگ است"
-
 #~ msgid ""
 #~ "The ranges\n"
 #~ "%1\n"
@@ -17299,26 +19617,6 @@ msgstr ""
 #~ "و\n"
 #~ "%2\n"
 #~ "اندازه متفاوتی دارند"
-
-#, fuzzy
-#~| msgid "Consolidate"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "تثبیت کردن"
-
-#, fuzzy
-#~| msgid "The source tables intersect with the destination table"
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "اشتراک جدولهای مبدأ با جدول مقصد"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "گستره\n"
-#~ "%1\n"
-#~ " بدشکل است"
 
 #, fuzzy
 #~| msgid "&Function:"
@@ -17335,212 +19633,17 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "مراجع &واردشده:‌"
 
-#~ msgid "Change Angle..."
-#~ msgstr "تغيير زاويه..."
-
-#, fuzzy
-#~| msgid "Angle:"
-#~ msgid "Angle"
-#~ msgstr "زاویه:"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "تغییر زاویه‌ای که محتویات سلول چاپ می‌شوند"
-
-#~ msgid "Increase Precision"
-#~ msgstr "افزایش دقت"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "افزایش دقت ده‌دهی نمایش داده‌شده روی پرده"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "کاهش دقت"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "کاهش دقت ده‌دهی نمایش داده‌شده روی پرده"
-
-#, fuzzy
-#~| msgid "Increase Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "افزایش دقت"
-
-#, fuzzy
-#~| msgid "Decrease Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "کاهش دقت"
-
-#~ msgid "Change Angle"
-#~ msgstr "تغيير زاویه"
-
-#~ msgid "Angle:"
-#~ msgstr "زاویه:"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "تغيير زاویه"
-
-#~ msgid "Area Name..."
-#~ msgstr "نام ناحیه..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "تنظیم یک نام برای منطقه‌ای از صفحه گسترده"
-
-#~ msgid "Named Areas..."
-#~ msgstr "نواحی نام‌دار..."
-
-#~ msgid "Named Areas"
-#~ msgstr "ناحیه نام‌دار"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "ویرایش یا گزینش نواحی نام‌دار"
-
-#~ msgid "Add Named Area"
-#~ msgstr "افزودن ناحیه نام‌دار"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "نام ناحیه را وارد کنید:"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "جایگزینی ناحیه نام‌دار"
-
-#, fuzzy
-#~| msgid "Replace Named Area"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "جایگزینی ناحیه نام‌دار"
-
 #~ msgid "&Select"
 #~ msgstr "&برگزیدن‌"
 
-#~ msgid "Area: %1"
-#~ msgstr "ناحیه: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&ویرایش..."
-
-#~ msgid "&Remove"
-#~ msgstr "&حذف‌"
 
 #~ msgid "New Named Area"
 #~ msgstr "ناحیه نام‌دار جدید"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "ویرایش ناحیه نام‌دار"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "واقعاً می‌خواهید این نام ناحیه نام‌دار را حذف کنید؟"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "حذف ناحیه نام‌دار"
-
-#~ msgid "Cells:"
-#~ msgstr "سلول:"
-
-#~ msgid "Sheet:"
-#~ msgstr "برگه:"
-
-#~ msgid "Area name:"
-#~ msgstr "نام ناحیه:"
-
-#~ msgid "Align Left"
-#~ msgstr "تراز چپ"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "هم‌ترازی چپ محتویات سلول"
-
-#~ msgid "Align Center"
-#~ msgstr "تراز مرکز"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "مرکزی کردن محتویات سلول"
-
-#~ msgid "Align Right"
-#~ msgstr "تراز راست"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "هم‌ترازی راست محتویات سلول"
-
-#~ msgid "Align Top"
-#~ msgstr "تراز بالا"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "تراز محتویات سلول در امتداد بالای سلول"
-
-#~ msgid "Align Middle"
-#~ msgstr "تراز وسط"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "تراز مرکزی محتویات سلول در سلول"
-
-#~ msgid "Align Bottom"
-#~ msgstr "تراز پایین"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "تراز محتویات سلول در امتداد پایین سلول"
-
-#~ msgid "Border Left"
-#~ msgstr "لبه چپ"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "تنظیم لبه چپ نسبت به ناحیه برگزیده"
-
-#~ msgid "Border Right"
-#~ msgstr "لبه راست"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "تنظیم لبه راست نسبت به ناحیه برگزیده"
-
-#~ msgid "Border Top"
-#~ msgstr "لبه بالا"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "تنظیم لبه بالا نسبت به ناحیه برگزیده"
-
-#~ msgid "Border Bottom"
-#~ msgstr "لبه پایین"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "تنظیم لبه پایین نسبت به ناحیه برگزیده"
-
-#~ msgid "All Borders"
-#~ msgstr "همه لبه‌ها"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "تنظیم لبه دور همه سلولها در ناحیه برگزیده"
-
-#, fuzzy
-#~| msgid "All Borders"
-#~ msgid "No Borders"
-#~ msgstr "همه لبه‌ها"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "حذف همه لبه‌ها در ناحیه برگزیده"
-
-#~ msgid "Border Outline"
-#~ msgstr "طرح کلی لبه"
-
-#, fuzzy
-#~| msgid "Border Outline"
-#~ msgid "Outline"
-#~ msgstr "طرح کلی لبه"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "تنظیم یک لبه برای طرح کلی ناحیه برگزیده"
-
-#, fuzzy
-#~| msgid "Change Horizontal Alignment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "تغییر تراز افقی"
-
-#, fuzzy
-#~| msgid "Change Vertical Alignment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "تغییر تراز عمودی"
 
 #~ msgid "Australia"
 #~ msgstr "استرالیا"
@@ -18948,71 +21051,6 @@ msgstr ""
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "دلار زیمبابوه"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "به قالب پیش‌فرض بازنشانی می‌کند"
-
-#~ msgid "Strike Out"
-#~ msgstr "حذف کردن"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "افزایش اندازه قلم"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "کاهش اندازه قلم"
-
-#~ msgid "Wrap Text"
-#~ msgstr "سطربندی متن"
-
-#, fuzzy
-#~| msgid "Wrap text"
-#~ msgid "Wrap"
-#~ msgstr "سطربندی متن"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "سطربندی کردن متن سلول در خطوط متعدد"
-
-#~ msgid "Vertical Text"
-#~ msgstr "متن عمودی"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "چاپ عمودی محتویات سلول"
-
-#~ msgid "Percent Format"
-#~ msgstr "قالب درصد"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "تنظیم قالب‌بندی سلول برای مشابه بودن به درصد"
-
-#~ msgid "Money Format"
-#~ msgstr "قالب پول"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "تنظیم قالب‌بندی سلول برای مشابه بودن با پول رایج محلیتان"
-
-#, fuzzy
-#~| msgid "Wrap Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "سطربندی متن"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "متن عمودی"
-
-#, fuzzy
-#~| msgid "Format Percent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "قالب‌بندی درصد"
-
-#, fuzzy
-#~| msgid "Format Money"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "قالب‌بندی پول رایج"
-
 #~ msgid "&Data Format"
 #~ msgstr "قالب &داده‌"
 
@@ -19081,9 +21119,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "ارتفاع پیش‌فرض )%1("
 
-#~ msgid "Height:"
-#~ msgstr "ارتفاع:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "تنظیم ارتفاع سلول"
 
@@ -19096,484 +21131,34 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "عرض پیش‌فرض )%1("
 
-#~ msgid "Width:"
-#~ msgstr "عرض:"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "افزودن توضیح"
-
-#~ msgid "Increase Indent"
-#~ msgstr "افزايش تورفتگی"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "افزایش تورفتگی"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "کاهش تورفتگی"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "کاهش تورفتگی"
-
-#~ msgid "Upper Case"
-#~ msgstr "حروف بزرگ"
-
-#, fuzzy
-#~| msgid "Upper Case"
-#~ msgid "Upper"
-#~ msgstr "حروف بزرگ"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "تبديل همه حروف به حروف‌ بزرگ"
-
-#~ msgid "Lower Case"
-#~ msgstr "حروف کوچک"
-
-#, fuzzy
-#~| msgid "Peru"
-#~ msgid "Lower"
-#~ msgstr "پرو"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "تبديل همه حروف به حروف‌ کوچک"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "تبديل اولين حرف به حرف بزرگ"
-
-#, fuzzy
-#~| msgid "First letter uppercase"
-#~ msgid "First Letter Upper"
-#~ msgstr "اولین حرف به حرف بزرگ"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "بزرگ‌نویسی اولین حرف"
-
-#~ msgid "Comment..."
-#~ msgstr "توضیح..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "ویرایش یک توضیح برای این سلول"
-
-#~ msgid "Remove Comment"
-#~ msgstr "حذف توضیح"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "حذف این توضیح سلول"
-
-#, fuzzy
-#~| msgid "Switch to uppercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "سودهی به حروف بزرگ"
-
-#, fuzzy
-#~| msgid "Switch to lowercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "سودهی به حروف کوچک"
-
-#, fuzzy
-#~| msgid "First letter uppercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "اولین حرف به حرف بزرگ"
-
-#, fuzzy
-#~| msgid "Remove Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "حذف توضیح"
-
-#, fuzzy
-#~| msgid "Clear Contents"
-#~ msgid "Clear Comment"
-#~ msgstr "پاک کردن محتویات"
-
-#, fuzzy
-#~| msgid "Change Case"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "تغيير حالت"
-
-#, fuzzy
-#~| msgid "Increase Indentation"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "افزايش تورفتگی"
-
-#, fuzzy
-#~| msgid "Decrease Indentation"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "کاهش تورفتگی"
-
-#~ msgid "Cell Comment"
-#~ msgstr "توضیح سلول"
-
-#~ msgid "&Left"
-#~ msgstr "&چپ‌"
-
-#~ msgid "&Right"
-#~ msgstr "&راست‌"
-
 #~ msgid "&Up"
 #~ msgstr "&بالا‌"
 
-#~ msgid "&Down"
-#~ msgstr "&پایین‌"
-
-#~ msgid "Autosum"
-#~ msgstr "جمع خودکار"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "درج تابع »جمع«"
-
-#, fuzzy
-#~| msgid "Fill Selection"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "پر کردن گزینش"
-
-#~ msgid "From &Text File..."
-#~ msgstr "از پرونده &متن...‌"
-
-#, fuzzy
-#~| msgid "From &Text File..."
-#~ msgid "Text File"
-#~ msgstr "از پرونده &متن...‌"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "درج داده از یک پرونده متن به موقعیت/گزینش مکان‌نمای جاری"
-
 #~ msgid "From &Clipboard..."
 #~ msgstr "از &تخته یادداشت...‌"
-
-#, fuzzy
-#~| msgid "From &Clipboard..."
-#~ msgid "Clipboard"
-#~ msgstr "از &تخته یادداشت...‌"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "درج داده CSV از تخته یادداشت به موقعیت/گزینش مکان‌نمای جاری"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&متن ستونها...‌"
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "بسط محتوای سلولها برای ستونهای متعدد"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "درج از تخته یادداشت"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "داده‌ای در تخته یادداشت وجود ندارد."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr " داده قابل استفاده‌ای در تخته یادداشت وجود ندارد."
-
-#~ msgid "Text to Columns"
-#~ msgstr "متن به ستونها"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "پرونده ورودی را نمی‌توان باز کرد."
-
-#, fuzzy
-#~| msgid "Inserting From Clipboard"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "درج از تخته یادداشت"
-
-#, fuzzy
-#~| msgid "Inserting Text File"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "درج پرونده متن"
-
-#, fuzzy
-#~| msgid "Text to Columns"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "متن به ستونها"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "ادغام منطقه برگزیده"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "ادغام سلولها به طور افقی"
-
-#, fuzzy
-#~| msgid "Merge the selected Region.horizontally"
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "ادغام منطقه برگزیده به طور افقی"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "ادغام سلولها به طور عمودی"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "ادغام منطقه برگزیده به طور عمودی"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "جدا کردن سلولها"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "عدم ادغام منطقه برگزیده"
-
-#~ msgid "Resize Column..."
-#~ msgstr "تغییر اندازه ستون..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "تغییر عرض یک ستون"
-
-#~ msgid "Insert Columns"
-#~ msgstr "درج ستونها"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "یک ستون جدید در صفحه گسترده درج می‌کند"
-
-#~ msgid "Remove Columns"
-#~ msgstr "حذف ستونها"
-
-#, fuzzy
-#~| msgid "Removes the cells from the spreadsheet"
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "سلولها را از صفحه گسترده حذف می‌کند"
-
-#~ msgid "Hide Columns"
-#~ msgstr "مخفی کردن ستونها"
 
 #, fuzzy
 #~| msgid "Hide the column from view"
 #~ msgid "Hide the column from this"
 #~ msgstr "مخفی کردن ستون از نما"
 
-#~ msgid "Show Columns..."
-#~ msgstr "نمايش ستونها..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "نمایش ستونهای مخفی"
-
-#~ msgid "Equalize Column"
-#~ msgstr "برابر کردن ستون"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "ستونهای برگزیده‌ای که باید به همین اندازه باشد را تغییر اندازه می‌دهد"
-
-#~ msgid "Show Columns"
-#~ msgstr "نمايش ستونها"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "نمایش ستونهای مخفی در گزینش"
-
-#~ msgid "Resize Row..."
-#~ msgstr "تغيير اندازه سطر..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "تغییر ارتفاع یک سطر"
-
-#~ msgid "Insert Rows"
-#~ msgstr "درج سطرها"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "یک سطر جدید در صفحه گسترده درج می‌کند"
-
-#~ msgid "Remove Rows"
-#~ msgstr "حذف سطرها"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "یک سطر از صفحه گسترده حذف می‌کند"
-
-#~ msgid "Hide Rows"
-#~ msgstr "مخفی کردن سطرها"
-
 #, fuzzy
 #~| msgid "Hide a row from view"
 #~ msgid "Hide a row from this"
 #~ msgstr "مخفی کردن یک سطر از نما"
-
-#~ msgid "Show Rows..."
-#~ msgstr "نمايش سطرها..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "نمایش سطرهای مخفی"
-
-#~ msgid "Equalize Row"
-#~ msgstr "برابر کردن سطر"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "سطرهای برگزیده‌ای که باید به همین اندازه باشد را تغییر اندازه می‌دهد"
-
-#~ msgid "Show Rows"
-#~ msgstr "نمايش سطرها"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "نمایش سطرهای مخفی در گزینش"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "میزان کردن سطر و ستون"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "اندازه سطر/ستون را طوری میزان می‌کند که محتویات متناسب باشد"
-
-#~ msgid "Adjust Column"
-#~ msgstr "میزان کردن ستون"
 
 #, fuzzy
 #~| msgid "Select columns:"
 #~ msgid "Delete Columns"
 #~ msgstr "برگزیدن ستونها:"
 
-#~ msgid "Adjust Row"
-#~ msgstr "میزان کردن سطر"
-
 #, fuzzy
 #~| msgid "Delete"
 #~ msgid "Delete Rows"
 #~ msgstr "حذف"
 
-#~ msgid "Resize Row"
-#~ msgstr "تغییر اندازه سطر"
-
-#~ msgid "Resize Column"
-#~ msgstr "تغییر اندازه ستون"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "گزینش ستونهای مخفی جهت نمایش:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "گزینش سطرهای مخفی جهت نمایش:"
-
-#~ msgid "Column: %1"
-#~ msgstr "ستون: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "سطر: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&پیوند...‌"
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "درج یک فوق‌پیوند اینترنتی"
-
-#~ msgid "Link"
-#~ msgstr "پیوند"
-
-#~ msgid "Remove Link"
-#~ msgstr "حذف پیوند"
-
-#~ msgid "Remove a link"
-#~ msgstr "حذف یک پیوند"
-
-#~ msgid "Insert Link"
-#~ msgstr "درج پیوند"
-
 #~ msgid "Edit Link"
 #~ msgstr "ویرایش پیوند"
-
-#, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "حذف پیوند"
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "تنظیم پیوند"
-
-#~ msgid "Internet"
-#~ msgstr "اینترنت"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Internet Address"
-#~ msgstr "نشانی اینترنتی:"
-
-#~ msgid "Text to display:"
-#~ msgstr "متن برای نمایش:"
-
-#~ msgid "Internet address:"
-#~ msgstr "نشانی اینترنتی:"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "رایانامه:"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Email Address"
-#~ msgstr "نشانی اینترنتی:"
-
-#, fuzzy
-#~| msgid "Mail address is empty"
-#~ msgid "Email address:"
-#~ msgstr "نشانی نامه خالی است"
-
-#, fuzzy
-#~| msgid "Cut Object"
-#~ msgid "Subject:"
-#~ msgstr "برش شیء"
-
-#~ msgid "File"
-#~ msgstr "پرونده"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to File"
-#~ msgstr "اندازه سلول"
-
-#~ msgid "File location:"
-#~ msgstr "محل پرونده:"
-
-#~ msgid "Recent file:"
-#~ msgstr "پرونده اخیر:"
-
-#~ msgid "No Entries"
-#~ msgstr "بدون مدخل"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to Cell"
-#~ msgstr "اندازه سلول"
-
-#, fuzzy
-#~| msgid "New Named Area"
-#~ msgid "Cell or Named Area:"
-#~ msgstr "ناحیه نام‌دار جدید"
-
-#~ msgid "&Sort..."
-#~ msgstr "&مرتب کردن...‌"
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "مرتب کردن گروهی از سلولها"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "مرتب کردن &کاهشی‌"
-
-#, fuzzy
-#~| msgid "Sort a group of cells in decreasing (last to first) order"
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "مرتب کردن گروهی از سلولها به ترتیب کاهشی )از آخر به اول("
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "مرتب کردن &افزایشی‌"
-
-#, fuzzy
-#~| msgid "Sort a group of cells in ascending (first to last) order"
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "مرتب کردن گروهی از سلولها به ترتیب صعودی )از اول به آخر("
-
-#, fuzzy
-#~| msgid "Sort Data"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "مرتب‌سازی داده"
 
 #, fuzzy
 #~| msgid "&Use custom list"
@@ -19584,30 +21169,6 @@ msgstr ""
 #~| msgid "Copy cell &formatting (Borders, Colors, Text Style)"
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "رونوشت &قالب‌بندی سلول )لبه‌ها، رنگها، سبک متن("
-
-#~ msgid "Column %1"
-#~ msgstr "ستون %1"
-
-#~ msgid "Row %1"
-#~ msgstr "سطر %1"
-
-#, fuzzy
-#~| msgid "&First column contains headers"
-#~ msgid "&First column contains row headers"
-#~ msgstr "&اولین ستون حاوی سرآیند است‌"
-
-#, fuzzy
-#~| msgid "&First row contains headers"
-#~ msgid "&First row contains column headers"
-#~ msgstr "&اولین سطر حاوی سرآیند است‌"
-
-#~ msgid "Sort"
-#~ msgstr "مرتب کردن"
-
-#, fuzzy
-#~| msgid "Case sensitive sort"
-#~ msgid "Case Insensitive"
-#~ msgstr "مرتب‌سازی حساس به حالت"
 
 #, fuzzy
 #~| msgid "Down"
@@ -19654,239 +21215,8 @@ msgstr ""
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "مرتب کردن گروهی از سلولها"
 
-#~ msgid "Validity..."
-#~ msgstr "اعتبارسنجی..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "تنظیم آزمونها برای تأیید داده سلول، معتبر است"
-
-#~ msgid "Validity"
-#~ msgstr "اعتبار"
-
-#~ msgid "Remove Validity"
-#~ msgstr "حذف اعتبار"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "حذف آزمونهای اعتبار در این سلول"
-
-#, fuzzy
-#~| msgid "Remove Validity Check"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "حذف بررسی اعتبار"
-
-#, fuzzy
-#~| msgid "Add Validity Check"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "افزودن بررسی اعتبار"
-
-#~ msgid "Clear &All"
-#~ msgstr "پاک کردن &همه‌"
-
 #~ msgid "&Criteria"
 #~ msgstr "&معیار‌"
-
-#~ msgid "Allow:"
-#~ msgstr "اجازه:"
-
-#~ msgid "Integer"
-#~ msgstr "عدد صحیح"
-
-#~ msgid "Text Length"
-#~ msgstr "طول متن"
-
-#~ msgid "List"
-#~ msgstr "فهرست"
-
-#~ msgid "Allow blanks"
-#~ msgstr "فاصله‌های مجاز"
-
-#~ msgid "Data:"
-#~ msgstr "داده:"
-
-#~ msgid "Minimum:"
-#~ msgstr "کمینه:"
-
-#~ msgid "Maximum:"
-#~ msgstr "بیشینه:"
-
-#~ msgid "Date:"
-#~ msgstr "تاریخ:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "تاریخ کمینه:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "تاریخ بیشینه:"
-
-#~ msgid "Time:"
-#~ msgstr "زمان:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "زمان کمینه:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "زمان بیشینه:"
-
-#~ msgid "Number:"
-#~ msgstr "شماره:"
-
-#~ msgid "Entries:"
-#~ msgstr "مدخل:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "اعلام &خطا‌"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "نمایش پیام خطا هنگامی که مقادیر نامعتبر وارد می‌شوند"
-
-#~ msgid "Action:"
-#~ msgstr "کنش:"
-
-#~ msgid "Stop"
-#~ msgstr "ایست"
-
-#~ msgid "Warning"
-#~ msgstr "اخطار"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "عنوان:"
-
-#~ msgid "Message:"
-#~ msgstr "پیام:"
-
-#~ msgid "Input Help"
-#~ msgstr "کمک ورودی"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "نمایش کمک ورودی هنگامی که سلول برگزیده می‌شود"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "مقدار معتبری نیست."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "زمان معتبری نیست."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "تاریخ معتبری نیست."
-
-#~ msgid "&Series..."
-#~ msgstr "&سری‌...‌"
-
-#~ msgid "Insert a series"
-#~ msgstr "درج یک سری"
-
-#, fuzzy
-#~| msgid "Insert Series"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "درج سریها"
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Character"
-#~ msgstr "نویسه &ویژه...‌"
-
-#, fuzzy
-#~| msgid "Unmerge the selected region"
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "عدم ادغام منطقه برگزیده"
-
-#~ msgid "Series"
-#~ msgstr "مجموعه‌ها"
-
-#~ msgid "Insert Values"
-#~ msgstr "درج مقادیر"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "درج عمودی مجموعه‌ها، از بالا به پایین"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "درج افقی مجموعه‌ها، از چپ به راست"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "خطی )۲،۴،۶،...("
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "ایجاد مجموعه‌ای از »آغاز« به »پایان« و افزودن مقدار فراهم‌شده در گام برای "
-#~ "هر گام. مجموعه‌ای را فراهم می‌کند که هر مقدار آن، »گام« بزرگتر از مقدار قبل "
-#~ "از آن است."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "هندسی )۲،۴،۸،...("
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "ایجاد مجموعه‌ای از »آغاز« به »پایان« برای هر گام که مقدار را با مقدار "
-#~ "فراهم‌شده در گام ضرب می‌کند. با استفاده از گامی از ۵، فهرستی اینچنین ایجاد "
-#~ "می‌کند: ۵، ۲۵، ۱۲۵، ۶۲۵ چرا که ۵ ضرب در ۵ )گام( مساوی ۲۵، و ۲۵ ضرب در ۵ "
-#~ "مساوی ۱۲۵، که ضرب در همان مقدار گام ۵ مساوی است با ۶۲۵."
-
-#~ msgid "Start value:"
-#~ msgstr "مقدار آغاز:"
-
-#~ msgid "Stop value:"
-#~ msgstr "مقدار ایست:"
-
-#~ msgid "Step value:"
-#~ msgstr "مقدار گام:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "مقدار پایان و آغاز باید مثبت باشد."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "مقدار پایان باید از مقدار آغاز بزرگتر باشد يا مقدار گام باید کمتر از »۱« "
-#~ "باشد."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr ""
-#~ "امکان این که هیچ‌کدام از مقادیر آغاز، ایست یا گام مساوی صفر باشند نیست."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "مقدار گام باید متفاوت از ۱ باشد"
-
-#~ msgid "Step is negative."
-#~ msgstr "گام منفی است."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "مقدار گام باید بیشتر از صفر باشد؛ در غیر این صورت، توالیهای خطی نامحدود "
-#~ "است."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "اگر مقدار آغاز بیشتر از مقدار پایان باشد، گام باید کمتر از صفر باشد."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr "اگر گام منفی است، مقدار آغاز باید بیش از مقدار پایان باشد."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "نویسه &ویژه...‌"
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr "درج یک یا چند نماد یا حرف که در صفحه کلید یافت نمی‌شود"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "نشانی اینترنتی خالی است"
@@ -26516,12 +27846,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "سبک %1"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "زيرمجموعها"
 
 #, fuzzy
 #~| msgid "Remove All"
@@ -33687,9 +35011,6 @@ msgstr ""
 #~ msgid "Document's Locale Settings"
 #~ msgstr "تنظیمات محلی"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "درج پرونده متن"
-
 #, fuzzy
 #~| msgid "Database"
 #~ msgid "y (array)"
@@ -33763,9 +35084,6 @@ msgstr ""
 
 #~ msgid "Remove Cell"
 #~ msgstr "حذف سلول"
-
-#~ msgid "Paste"
-#~ msgstr "چسباندن"
 
 #~ msgid "Paste & Insert"
 #~ msgstr "چسباندن و درج"
@@ -33859,11 +35177,6 @@ msgstr ""
 #, fuzzy
 #~| msgid "Related Functions"
 #~ msgid "Statistical Functions"
-#~ msgstr "توابع مربوطه"
-
-#, fuzzy
-#~| msgid "Related Functions"
-#~ msgid "Text Functions"
 #~ msgstr "توابع مربوطه"
 
 #, fuzzy

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2004-09-09 12:35+0100\n"
 "Last-Translator: Kyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -145,8 +145,13 @@ msgstr "Pennawd"
 msgid "Header1"
 msgstr "Pennawd1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, fuzzy, kde-format
 msgid "Default"
 msgstr "Canlyniad"
@@ -178,7 +183,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Testun"
@@ -250,7 +256,8 @@ msgstr "<p><b>Math dychwelyd: </b>"
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Paramedrau"
@@ -909,14 +916,15 @@ msgstr "Mae CARY(12;0) yn dychwelyd 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Rhif"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Fformat"
@@ -975,6 +983,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "Mae ARABIC(\"XCIX\") yn dychwelyd 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Cronfa Ddata"
@@ -1280,6 +1290,7 @@ msgstr "Dyddiad ac Amser"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1354,7 +1365,8 @@ msgstr "Mae DAYS360(\"2/22/2002\", \"4/21/2002\", FALSE) yn dychwelyd 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Amser"
@@ -5175,6 +5187,7 @@ msgid "Regular payments"
 msgstr "Mynegiad rheolaidd"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Math"
@@ -5515,12 +5528,19 @@ msgstr "Â llaw"
 msgid "Automatic"
 msgstr "Ymysgogol"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, fuzzy, kde-format
 msgid "Information"
 msgstr "Math gwybodaeth"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, fuzzy, kde-format
 msgid "Error"
 msgstr "Euro"
@@ -6366,7 +6386,7 @@ msgstr ""
 msgid "Math"
 msgstr "Maths"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Ffwythiant"
@@ -6873,6 +6893,7 @@ msgid "Range"
 msgstr "Amrediad"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 #| msgid "Criteria"
 msgid "Criteria"
@@ -8490,6 +8511,7 @@ msgid "Row"
 msgstr "&Rhes"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Colofn"
@@ -13181,7 +13203,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, fuzzy, kde-format
 msgid "&Insert"
 msgstr "Mewnosod Rhesi"
@@ -13199,7 +13221,7 @@ msgid "F&ormat"
 msgstr "&Fformat"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Uno Celloedd"
@@ -13280,8 +13302,8 @@ msgstr "Cuddio Dalen"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 #| msgid "&Font"
 msgid "Font"
@@ -13708,14 +13730,16 @@ msgstr "Terfyn is"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, fuzzy, kde-format
 msgid "Horizontal"
 msgstr "Forint"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, fuzzy, kde-format
 msgid "Vertical"
 msgstr "Metical"
@@ -13743,13 +13767,15 @@ msgid "Up"
 msgstr "I fyny"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, fuzzy, kde-format
 msgid "Right"
 msgstr "&De"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, fuzzy, kde-format
 msgid "Left"
 msgstr "&Chwith"
@@ -13761,36 +13787,50 @@ msgstr "Mewnosod Colofnau"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Dim"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Swm"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Lleiafswm"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Uchafswm"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Cyfartaledd"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Cyfrif"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -14163,7 +14203,8 @@ msgstr "Gwagu Dewisiad."
 msgid "Move selected sheet to the bottom"
 msgstr "Symud y gwrthrych cell i'r gludfwrdd."
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, fuzzy, kde-format
 #| msgid "Paste & Insert"
 msgid "Case Sensitive"
@@ -14370,6 +14411,7 @@ msgid "Anchor"
 msgstr "Andora"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Cell"
@@ -14390,7 +14432,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "Llen Nesaf"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Next"
@@ -14406,7 +14448,7 @@ msgstr "Symud i'r len nesaf."
 msgid "Previous Sheet"
 msgstr "Llen Flaenorol"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 #| msgid "Previous Sheet"
 msgid "Previous"
@@ -14626,7 +14668,7 @@ msgstr ""
 "Rydych ar fin gwaredu'r ddalen gyfredol.\n"
 "Ydych am barhau?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Rhowch enw:"
@@ -14686,13 +14728,13 @@ msgstr "CountA : "
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Newid Testun"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
@@ -14700,10 +14742,3204 @@ msgstr "Lliw Cefndir"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Newid Lliw'r Ffin"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Mewnosod Colofnau"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Mewnosod Rhesi"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Gwaredu Colofnau"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Gwaredu Rhesi"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Mewnosod rhes newydd yn y daenlen."
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Dileu rhes o'r daenlen."
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Mewnosod colofn newydd yn y daenlen."
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Gwaredu'r gell gyfredol o'r daenlen."
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Cuddio Colofnau"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Cuddio Rhesi"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Dangos Colofnau"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Dangos Rhesi"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Dangos rhesi cudd yn y detholiad."
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Dangos colofnau cudd yn y detholiad."
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Hafalu Colofn"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Hafalu Rhes"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Newid maint y rhesi detholedig i fod yr un maint."
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Newid maint y colofnau detholedig i fod yr un maint."
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Addasu Colofn"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Addasu Rhes"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Addasu Rhes a Cholofn"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, fuzzy, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "Addasu maint y rhes/colofn er mwyn i'r cynnwys ffitio."
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr "Addasu maint y rhes/colofn er mwyn i'r cynnwys ffitio."
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr "Addasu maint y rhes/colofn er mwyn i'r cynnwys ffitio."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Dangos Colofnau..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Dangos Rhesi..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "Dangos colofnau cudd."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "Dangos rhesi cudd."
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Colofn: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Rhes: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Newid Maint Colofn..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Newid Maint Rhes..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "Newid uchder rhes."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "Newid lled colofn."
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Alinio i'r Chwith"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "Alinio cynnwys y gell i'r chwith."
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Cyfuno Celloedd %1"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Alinio i'r Dde"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "Alinio cynnwys y gell i'r dde."
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Alinio i'r Canol"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "Alinio cynnwys y gell i'r canol."
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, fuzzy, kde-format
+msgid "Center"
+msgstr "Alinio i'r Canol"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Alinio i'r Pen"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Alinio cynnwys y gell ar hyd pen y gell."
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr ""
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Cyfuno Celloedd %1"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Alinio i'r Gwaelod"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Alinio cynnwys y gell ar hyd gwaelod y gell."
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, fuzzy, kde-format
+msgid "Bottom"
+msgstr "Alinio i'r Gwaelod"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Alinio i'r Canol"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Alinio cynnwys y gell yng nghanol y gell."
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Canol"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Newid Ongl"
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Newid yr ongl a ddefnyddir i argraffu cynnwys y gell"
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+#| msgid "Angle:"
+msgid "Angle"
+msgstr "Ongl:"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Newid Ongl"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+#| msgid "Autofill"
+msgid "&Auto-Filter"
+msgstr "Hunan-lenwi"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Autofill"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Hunan-lenwi"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Gweithredu arddull rhag-ddiffiniedig i'r celloedd detholedig."
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "AutoFormat..."
+msgid "Auto-Format..."
+msgstr "HunanFformatio..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, fuzzy, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Methwyd canfod y ffeil XML '%1' efo'r arddull tabl."
+
+#: ui/actions/AutoFormat.cpp:91
+#, fuzzy, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Gwall dosrannu yn y ffeil XML '%1' efo'r arddull tabl."
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+#| msgid "AutoFormat..."
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "HunanFformatio..."
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Hunan-swm"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Mewnosod y ffwythiant 'swm'"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Hunan-swm"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Ffin Chwith"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Gosod ffin chwith i'r ardal ddetholedig."
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Ffin Dde"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Gosod ffin de i'r ardal ddetholedig."
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Ffin Pen"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Gosod ffin pen i'r ardal ddetholedig."
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "FFin Gwaelod"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Gosod ffin gwaelod i'r ardal ddetholedig."
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Pob Ffin"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Gosod ffin o gwmpas pob cylch yn yr ardal ddetholedig."
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Popeth"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "All Borders"
+msgid "No Borders"
+msgstr "Pob Ffin"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Gwaredu pob ffin yn yr ardal ddetholedig."
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Amlinell Ffin"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Gosod ffin i amlinell o'r ardal ddetholedig."
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+#| msgid "Border Outline"
+msgid "Outline"
+msgstr "Amlinell Ffin"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Lliw Ffin"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "Gosod lliw newydd i'r ffin."
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Newid Lliw'r Ffin"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Mewnosod Celloedd..."
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Mewnosod cell wag yn y daenlen."
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Gwaredu Celloedd..."
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Gwaredu'r gell gyfredol o'r daenlen."
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+#| msgid "Clear &All"
+msgid "Clear All"
+msgstr "Gwagu'r Cwbl"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Dileu cynnwys a fformatio y gell gyfredol."
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Clear Contents"
+msgstr "Sylwadau"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Dileu cynnwys y gell gyfredol."
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Newid Testun"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Dileu Rhesi"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "Sylwad"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Golygu sylwad ar gyfer y gell hon."
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Clear Comment"
+msgstr "Sylwadau"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "Gwaredu'r sylwad o'r gell hon."
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Gwaredu Sylwad"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Remove Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Gwaredu Sylwad"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Ychwanegu Sylwad"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Conditional Cell Attributes..."
+msgid "Conditional Styles..."
+msgstr "Priodoleddau Cell Amodol ..."
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Gosod fformat y gell wedi'i seilio ar rai amodau."
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "Conditional Cell Attributes"
+msgid "Conditional Styles"
+msgstr "Priodoleddau Cell Amodol"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Gwaredu'r fformatio amodol y gell."
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Gwaredu'r fformatio amodol y gell."
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Gwaredu'r fformatio amodol y gell."
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Gwaredu'r fformatio amodol y gell."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Cyfnerthu..."
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Creu ardal o ddata crynodeb oddi wrth grŵp o ardalau tebyg."
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Consolidate"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Cyfnerthu"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Copïo'r gwrthrych cell i'r gludfwrdd."
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Symud y gwrthrych cell i'r gludfwrdd."
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "O &Ffeil Testun..."
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Mewnosod data o ffeil testun i leoliad cyfredol y cyrchydd neu i'r detholiad "
+"cyfredol."
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Text File"
+msgstr "O &Ffeil Testun..."
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, fuzzy, kde-format
+msgid "Cannot open input file."
+msgstr "Methu agor y ffeil mewnbwn!"
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "Mewnosod Ffeil Testun"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+#| msgid "Inserting Text File"
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Mewnosod Ffeil Testun"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Mewnosod o'r Gludfwrdd"
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"Mewnosod data CSV o'r gludfwrdd i leoliad cyfredol y cyrchydd neu i'r "
+"detholiad cyfredol."
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+#| msgid "From &Clipboard..."
+msgid "Clipboard"
+msgstr "O'r &Gludfwrdd..."
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Nid oes data ar y gludfwrdd."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Nid oes data defnyddiadwy ar y gludfwrdd."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Mewnosod o'r Gludfwrdd"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+#| msgid "Inserting From Clipboard"
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Mewnosod o'r Gludfwrdd"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Testun i Golofnau..."
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Ehangu cynnwys y celloedd i golofnau lluosog."
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Testun i Golofnau"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgid "Text to Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Testun i Golofnau"
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Creu rhestri addasiedig i drefnu neu hunan-lenwi. "
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Rhestr Addasiedig..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Edit Area"
+msgid "Add Named Area"
+msgstr "Golygu Ardal"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Rhowch enw'r ardal:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Newid Ongl"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Ongl:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "AutoFormat..."
+msgid "Automatic Format"
+msgstr "HunanFformatio..."
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Dewiswch yr arddull dalen i weithredu:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Character"
+msgstr "N&od Arbennig..."
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "The text that will replace characters in old text"
+msgid "Insert the selected character in the text"
+msgstr "Y testun bydd yn amnewid nodau yn yr hen destun"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Sylwad Cell"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<dim>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "yn hafal i"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "yn fwy na"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "yn llai na"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "yn hafal i neu yn fwy na"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "yn hafal i neu yn llai na"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "rhwng"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "Amrediad"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, fuzzy, kde-format
+msgid "different to"
+msgstr "yn wahanol i"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Amod Cyntaf"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Ail Amod"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Trydydd Amod"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Mae'r gell"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Arddull cell"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "yn wahanol i"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "Os yw'r gwerth cyntaf yn rhif, rhaid i'r ail werth fod yn rhif hefyd."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Os yw'r gwerth cyntaf yn llinyn, rhaid i'r ail werth fod yn llinyn hefyd."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Cyfnerthu"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Cynnyrch"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Gwyriad Safonol"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Amrywiant"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+msgid "You have to define at least one source range."
+msgstr "Rhaid i chi ddewis o leiaf un golofn!"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+msgid "%1 is not a valid cell range."
+msgstr ""
+"Dyw'r URL \n"
+" %1 \n"
+" ddim yn dilys."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Mae'r amrediad\n"
+"%1\n"
+"yn rhy fach"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Mae'r amrediad\n"
+"%1\n"
+"yn rhy fawr"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, fuzzy, kde-format
+#| msgid "The source tables intersect with the destination table"
+msgid "The source range intersects the destination range."
+msgstr "Mae'r tablau tarddiad yn croestorri â'r tabl cyrchfan"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Mae'r amrediad\n"
+"%1\n"
+"wedi'i gamffurfio"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Mewnosod Data o Gronfa Ddata"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Math:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Enw'r gronfa ddata:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Gwesteiwr:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Porth:\n"
+"(os bo angen)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Enw Defnyddiwr:\n"
+"(os bo angen)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Cyfrinair:\n"
+"(os bo angen)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Dewis Tablau:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+#| msgid "Values"
+msgid "Tables"
+msgstr "Gwerthoedd"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Dewis colofnau:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+#| msgid "Tala"
+msgid "Table"
+msgstr "Tala"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Colofnau"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Cydweddu â phob un o'r dilynnol (AND)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Cydwedduag unrhyw un o'r dilynnol (OR)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "yn hafal"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "dim yn hafal"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "yn "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "dim yn "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "megis"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "yn fwy"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "yn llai"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "yn fwy neu yn hafal"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "yn llai neu yn hafal"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Trefnir gan"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Esgynnol"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Disgynnol"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Gwahanadwy"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Dewisiadau Ymholiad"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "Ymholiad SQL:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Mewnosod mewn ardal"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Dechrau yng nghell"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Canlyniad"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+msgid "You cannot specify a table here."
+msgstr "Ni ellir penodi tabl yma!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, fuzzy, kde-format
+msgid "You have to specify a valid region."
+msgstr "Rhaid i chi benodi ardal dilys!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, fuzzy, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Rhaid i chi benodi cell ddilys!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, fuzzy, kde-format
+msgid "Executing query failed."
+msgstr "Methodd gweithredu'r ymholiad!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, fuzzy, kde-format
+msgid "You did not get any results with this query."
+msgstr "Ni chafwyd canlyniadau â'r ymholiad yma."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "Insert Data From Database"
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Mewnosod Data o Gronfa Ddata"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Rhaid i'r borth fod yn rhif"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Cysylltu â'r gronfa ddata..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Cysylltir.  Nôl gwybodaeth tabl..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Nid yw'r gronfa ddata yma yn cynnwys tablau"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Methwyd llwytho'r gyrrydd"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Nôl meta-data y tablau..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, fuzzy, kde-format
+msgid "You have to select at least one table."
+msgstr "Rhaid i chi ddewis o leiaf un tabl!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, fuzzy, kde-format
+msgid "You have to select at least one column."
+msgstr "Rhaid i chi ddewis o leiaf un golofn!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"Nid nod-chwilyddion dilys yn SQL yw '*' neu '?'.  '%' eu '_' yw'r "
+"amnewidiadau addas.  Ydych am eu hamnewid?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Amnewidiad"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Document Settings"
+msgstr "Paramedrau Bro"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "Modd cyfrifo "
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Case sensitive"
+msgstr "Gludo a Mewnosod"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Trachywiredd"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Ymysgogol"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "String to compare with"
+msgid "String comparison:"
+msgstr "Llinyn i gymharu"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "Mynegiad rheolaidd"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "Diweddaru i'r Fro ar y Cysa&wd"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Iaith: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+msgid "Default number format: %1"
+msgstr "Fformat dyddiad"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+msgid "Long date format: %1"
+msgstr "Fformat dyddiad"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Fformat dyddiad byr: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Fformat amser : %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+msgid "Currency format: %1"
+msgstr "Arian:"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Mwy o ddewisiadau"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Search entire sheet"
+msgstr "Testun fertigol"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Chwilio Mewn :"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Cell Values"
+msgstr "Gwerthoedd"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Sylwadau"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Search direction:"
+msgstr "Ail Amod"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "Dangos rhesi cudd."
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Llai o ddewisiadau"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Set Function"
+msgstr "<h2>Paramedrau</h2><ul>"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Mewnosod Ffwythiant"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr ""
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Nid oes paramedrau gan y ffwythiant hwn."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+msgid "Description is not available."
+msgstr "Disgrifiad yn y &golofn"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Ymofyn Cyrchnod"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Ewch i Gell"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Mynd i mewn i gell:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Insert"
+msgstr "Rhyngrwyd"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Symud i'r dde"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Symud i'r gwaelod"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Mewnosod rhesi"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Mewnosod colofnau"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Mewnosod Celloedd"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "Gwaredu Popeth"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Symud i'r chwith"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Symud i'r pen"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Gwaredu rhesi"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Gwaredu colofnau"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Gwaredu Celloedd"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Mewnosod Cyswllt"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Rhyngrwyd"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Internet Address"
+msgstr "Cyfeiriad Rhyngrwyd:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Testun i'w ddangos :"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Cyfeiriad Rhyngrwyd:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "Ebost:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Email Address"
+msgstr "Cyfeiriad Rhyngrwyd:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+msgid "Email address:"
+msgstr "Nae'r testun ardal yn wag!"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+msgid "Subject:"
+msgstr "&Gwrthrych"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, fuzzy, kde-format
+msgid "File"
+msgstr "ffeil"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to File"
+msgstr "Maint y Gell"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Lleoliad y ffeil:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Ffeil diweddar:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Dim Cofnodion"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to Cell"
+msgstr "Maint y Gell"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+msgid "Cell or Named Area:"
+msgstr "Gwaredu Popeth"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Rhestrau Addasiedig"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Save Changes"
+msgstr "Newid Gwerth"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Rhestr:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Cofnod:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "&Add"
+msgid "Add"
+msgstr "&Ychwanegu"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, fuzzy, kde-format
+msgid "Cancel"
+msgstr "Ffrainc"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, fuzzy, kde-format
+#| msgid "&New"
+msgid "New"
+msgstr "&Newydd"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, fuzzy, kde-format
+msgid "Modify"
+msgstr "&Addasu..."
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, fuzzy, kde-format
+#| msgid "Co&py"
+msgid "Copy"
+msgstr "Co&pïo"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Ydych wir eisiau dileu'r rhestr yma?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Diddymu Rhestr"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Nid yw'r ardal wag yn wag.\n"
+"Ydych am barhau?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+msgid "Named Areas"
+msgstr "Gwaredu Popeth"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Ardal: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Celloedd"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Dalen:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Enw ardal:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, fuzzy, kde-format
+msgid "&Remove"
+msgstr "&Gwaredu Cyswllt"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+#| msgid "Do you really want to remove this area name?"
+msgid "Do you really want to remove this named area?"
+msgstr "Ydych wir eisiau gwaredu'r enw ardal yma?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+msgid "Remove Named Area"
+msgstr "Gwaredu Popeth"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+msgid "The provided region is not valid."
+msgstr "Mae'r cyfeirnod cell yn annilys!"
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Gludo gan Fewnosod Celloedd"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Source"
+msgstr "N&od Arbennig..."
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+msgid "Add Filter"
+msgstr "ffeil"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "Gweithrediad"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Newid Maint Rhes"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Uchder:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Newid Maint Colofn"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Lled:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Cyfres"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Series"
+msgstr "Mewnosod cyfres."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Mewnosod Gwerthoedd"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Mewnosod y gyfres yn fertigol, un islaw y llall"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Mewnosod y gyfres yn llorweddol, o'r chwith i'r dde"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Llinynnol (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Creu cyfres o 'ddechrau' i 'ddiwedd' ac ar gyfer pob cam ychwanegu'r gwerth "
+"a roddir yn y cam.  Mae hyn yn creu cyfres lle mae pob gwerth yn 'gam' mwy "
+"na'r gwerth o'i flaen."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Geometreg (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Creu cyfres o 'ddechrau' i 'ddiwedd' ac ar gyfer pob cam lluosi'r gwerth â'r "
+"gwerth a roddir yn y cam.  Mae defnyddio cam o 5 yn cynhyrchu rhestr megis: "
+"5, 25, 125, 625, oherwydd mae 5 lluosi 5 (yn y cam) yn gwneud 25, ac mae hyn "
+"lluosi 5 yn gwneud 125, ac mae 125 lluosi yr un gwerth cam o 5 yn gwneud 625."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Gwerth dechrau:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Gwerth diwedd:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Gwerth cam:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+#| msgid "The lambda parameter must be positive."
+msgid "End and start value must be positive."
+msgstr "Rhaid i'r paramedr lamda fod yn bositif."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, fuzzy, kde-format
+#| msgid ""
+#| "If the first value is a number, the second value also has to be a number."
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr "Os yw'r gwerth cyntaf yn rhif, rhaid i'r ail werth fod yn rhif hefyd."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, fuzzy, kde-format
+msgid "Step is negative."
+msgstr "Mynegai arae negyddol %1"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, fuzzy, kde-format
+#| msgid ""
+#| "If the first value is a number, the second value also has to be a number."
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr "Os yw'r gwerth cyntaf yn rhif, rhaid i'r ail werth fod yn rhif hefyd."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Dewis rhesi cudd i'w dangos:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Dewis colofnau cudd i'w dangos:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Colofn %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Rhes %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "Mae'r rhes &gyntaf yn cynnwys pennawd"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "Mae'r rhes &gyntaf yn cynnwys pennawd"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Trefnu"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Case Insensitive"
+msgstr "Gludo a Mewnosod"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Gludo Arbennig"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, fuzzy, kde-format
+msgid "Paste"
+msgstr "Dosrannu"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Rheoydd Arddull"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Arddull"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Pob Arddull"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Arddulliau Addasiedig"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, fuzzy, kde-format
+msgid "Hierarchical"
+msgstr "Cyllidol"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Newydd..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Addasu..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, fuzzy, kde-format
+msgid "&Delete..."
+msgstr "&Ymofyn Cyrchnod..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "arddull %1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Is-gyfansymiau"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Gwaredu Popeth"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Colofn '%1'"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Rhaid i chi ddewis o leiaf un golofn i adio is-gyfansymiau."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Dilysrwydd"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Gwagu'r Cwbl"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Caniatáu:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Cyfanrif"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Hyd Testun"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Rhestr"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Data:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Lleiafswm:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Uchafswm:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Dyddiad:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Dyddiad lleiaf:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Dyddiad mywaf:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Amser:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Amser lleiaf:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Amser mwyaf:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Rhif:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Cofnodion:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "&Rhybudd Gwall"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, fuzzy, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Dangos n&eges wall"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Gweithred:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, fuzzy, kde-format
+msgid "Warning"
+msgstr "Argraffu"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Teitl:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Neges:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, fuzzy, kde-format
+msgid "This is not a valid value."
+msgstr ""
+"Dyw'r URL \n"
+" %1 \n"
+" ddim yn dilys."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, fuzzy, kde-format
+msgid "This is not a valid time."
+msgstr "Mae'r amser a phenodwyd yn annilys."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, fuzzy, kde-format
+msgid "This is not a valid date."
+msgstr ""
+"Dyw'r URL \n"
+" %1 \n"
+" ddim yn dilys."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "Paramedrau Bro"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+#| msgid "Show c&omment indicator"
+msgid "Show document settings dialog"
+msgstr "D&angos dangosydd sylwad"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Golygu'r gell amlygedig."
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Addasu Cell"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "Gwarchodaeth"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Mewnosod cynnwys y gludfwrdd wrth leoliad cyfredol y cyrchydd."
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "I &Lawr"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Chwith"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&De"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Dewis Fformiwla"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+#| msgid "Replacement"
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Amnewidiad"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Dewis Wynebfath..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "Gosod fformatio'r gell."
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Newid Fformat"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Dewis Maint Wynebfath"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "Gosod fformatio'r gell."
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+#| msgid "Select Font Size"
+msgid "Font Size"
+msgstr "Dewis Maint Wynebfath"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Set the text color"
+msgstr "Gosod lliw'r cefndir"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Lliw Testun"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Ffwythiant..."
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "Insert math expression"
+msgstr "Mewnosod mynegiad mathemateg"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Dewis Fformiwla"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+msgid "Insert a function"
+msgstr "Mewnosod ffwythiant."
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Eraill..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&Ymofyn Cyrchnod..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Ailadrodd cyfrifiad i ganfod gwerth penodol."
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, fuzzy, kde-format
+msgid "Cell reference is invalid."
+msgstr "Mae'r cyfeirnod cell yn annilys!"
+
+#: ui/actions/GoalSeek.cpp:75
+#, fuzzy, kde-format
+msgid "Target value is invalid."
+msgstr "Mae'r gwerth cyrchfan yn annilys!"
+
+#: ui/actions/GoalSeek.cpp:84
+#, fuzzy, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Rhaid i'r gell darddiad gynnwys gwerth rhifol!"
+
+#: ui/actions/GoalSeek.cpp:90
+#, fuzzy, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Rhaid i'r gell gyrchfan gynnwys fformiwla!"
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Mi wnaeth ymofyn cyrchnod efo cell %1 ganfod datrysiad:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Ni wnaeth ymofyn cyrchnod efo cell %1 DDIM canfod datrysiad:"
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Mynd i Gell..."
+
+#: ui/actions/Goto.cpp:25
+#, fuzzy, kde-format
+msgid "Move to a particular cell"
+msgstr "Mynd i gell benodol."
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+#| msgid "Goto Cell"
+msgid "Goto"
+msgstr "Ewch i Gell"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+msgid "That is not a valid cell."
+msgstr "Mae'r amser a phenodwyd yn annilys."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Lleihau Mewnoliad"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Cynyddu Mewnoliad"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "Lleihau'r mewnoliad."
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "Cynyddu'r mewnoliad."
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Cynyddu Mewnoliad"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Lleihau Mewnoliad"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "O Gronfa &Ddata..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Mewnosod data o gronfa ddata SQL."
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Dim gyrryddion cronfa ddata ar gael!  Rhaid i chi grynhoi Qt efo'r "
+"gyrryddion angenrheidiol."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Cyfres..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "Mewnosod cyfres."
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Mewnosod cyfres."
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "N&od Arbennig..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, fuzzy, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+"Mewnosod un neu fwy o symbolau neu lythrennau ni chanfyddir ar y bysellfwrdd."
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "C&yswllt..."
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Mewnosod cyswllt Rhyngrwyd."
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Link"
+msgstr "Mewnosod Cyswllt"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Remove a link"
+msgstr "Dileu &Pob Gwesteiwr"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Gwaredu Cyswllt"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Gwaredu Cyswllt"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Mewnosod Cyswllt"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Rhestr Dewisiadau..."
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Cyfuno Celloedd %1"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Cyfuno Celloedd %1"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Daduno Celloedd"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Enw Ardal..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Gosod enw ar gyfer ardal yn y daenlen."
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+msgid "Replace Named Area"
+msgstr "Dangos ardal a enwir."
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Dangos ardal a enwir."
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Edit or select named areas"
+msgstr "Dangos ardal a enwir."
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Show Area..."
+msgid "Named Areas..."
+msgstr "Dangos Ardal..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Row"
+msgstr "Gwaredu Colofnau"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+#| msgid "Header"
+msgid "Row Break"
+msgstr "Pennawd"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Column"
+msgstr "Gwaredu Colofnau"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+#| msgid "Column number"
+msgid "Column Break"
+msgstr "Rhif y golofn"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Mewnosod cynnwys y gludfwrdd wrth leoliad cyfredol y cyrchydd."
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Gludo Arbennig..."
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Gludo cynnwys y gludfwrdd efo dewisiadau arbennig."
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Gludo wrth Fewnosod"
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Mewnosod cell o'r gludfwrdd yn y daenlen."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "&Is-gyfansymiau..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "&Is-gyfansymiau..."
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Rhaid dewis cellau lluosol."
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Ail-gyfrifo gwerth pob cell yn y weithlen gyfredol."
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet..."
+msgid "Show QTableView..."
+msgstr "Dangos Dalen..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Trefnu..."
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+msgid "Sort a group of cells"
+msgstr "Trefnu grŵp o gelloedd."
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Trefnu &Esgynnol"
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Trefnu grŵp o gelloedd mewn trefn esgynnol (cyntaf i olaf)."
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "Trefnu &Disgynnol"
+
+#: ui/actions/Sort.cpp:145
+#, fuzzy, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "Trefnu grŵp o gelloedd mewn trefn ddisgynnol (olaf i gyntaf)."
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Meini Prawf Trefnu"
+
+#: ui/actions/SpellCheck.cpp:84
+#, fuzzy, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Hoffech gywiro'r sillafu yn y tabl nesaf?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Symud i'r len nesaf."
+
+#: ui/actions/SpellCheck.cpp:237
+#, fuzzy, kde-format
+msgid "Check the spelling"
+msgstr "Cywiro sillafu."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Fformat Cell..."
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "Gosod fformatio'r gell."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Trwm"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, fuzzy, kde-format
+msgid "Italic"
+msgstr "Yr Eidal"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Tanlinellu"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Trwylinellu"
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Gwneud i destun y gell lapio ar linellau lluosol."
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Lapio Testun"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+#| msgid "Wrap text"
+msgid "Wrap"
+msgstr "Lapio Testun"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+#| msgid "Wrap Text"
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Lapio Testun"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Print cell contents vertically"
+msgstr "Argraffu cynnwys y gell yn fertigol."
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Testun Fertigol"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Testun Fertigol"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Number Format"
+msgstr "Nifer o arbrofion"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "Gosod fformatio'r gell."
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Rhif cyntaf"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Scientific Format"
+msgstr "Gwyddonol"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "Gosod fformat y gell i edrych fel canran."
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Gwyddonol"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Gwyddonol"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Fformat Canran"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Gosod fformat y gell i edrych fel canran."
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Canran"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Format Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Fformatio Canran"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Fformat Arian"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Gosod fformat y gell i edrych fel eich arian lleol."
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Arian"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format Money"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Fformatio Arian"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Date Format"
+msgstr "Fformat dyddiad"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "Gosod fformatio'r gell."
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Fformat"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "Gosod fformatio'r gell."
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Time Format"
+msgstr "Fformat amser"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Fformat"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Cynyddu Maint Wynebfath"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Lleihau Maint Wynebfath"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Cynyddu Trachywiredd"
+
+#: ui/actions/Style.cpp:532
+#, fuzzy, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Cynyddu'r trachywiredd degol a ddangosir ar y sgrin."
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Lleihau Trachywiredd"
+
+#: ui/actions/Style.cpp:551
+#, fuzzy, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Lleihau'r trachywiredd degol a ddangosir ar y sgrin."
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Increase Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Cynyddu Trachywiredd"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Decrease Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Lleihau Trachywiredd"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "Ailosod i'r fformat rhagosodol."
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Arddull Dalen"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Lliw Cefndir"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Set the background color"
+msgstr "Gosod lliw'r cefndir"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Creu Arddull o Gell..."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Creu arddull newydd a seilir ar y gell ddetholedig."
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "Style of Cell"
+msgid "Style From Cell"
+msgstr "Arddull Cell"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Creu Arddull o Gell "
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Ni all enw arddull fod yn wag."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Mae arddull â'r enw yma yn bodoli eisioes."
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Golygu a threfnu arddulliau cell."
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+#| msgid "Style Manager"
+msgid "Style Manager..."
+msgstr "Rheoydd Arddull"
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Gweithredu arddull rhag-ddiffiniedig i'r celloedd detholedig."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&Is-gyfansymiau..."
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Creu gwahanol mathau o is-gyfansymiau mewn rhestr neu gronfa ddata."
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Is-gyfansymiau"
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+#| msgid "Upper Case"
+msgid "Upper"
+msgstr "Priflythrennau"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+#| msgid "Power"
+msgid "Lower"
+msgstr "Pŵer"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+msgid "First Letter Upper"
+msgstr "Trosi'r Llythyren &Gyntaf ym Mhriflythyren"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Hepgor pob gair mewn PRIFLYTHRENNAU"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Hepgor pob gair mewn PRIFLYTHRENNAU"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Trosi'r Llythyren &Gyntaf ym Mhriflythyren"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Priflythrennau"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Is-lythrennau"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Trosi'r Llythyren Gyntaf i Briflythyren"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Trosi pob llythyren i briflythyren."
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Trosi pob llythyren i is-lythyren."
+
+#: ui/actions/TextCase.cpp:112
+#, fuzzy, kde-format
+msgid "Capitalize the first letter"
+msgstr "Priflythrennu'r llythyren gyntaf."
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Newid Gwerth"
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Gosod profion i gadarnhau bod data'r gell yn ddilys."
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Dilysrwydd..."
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Gwaredu'r profion dilysrwydd ar y gell yma."
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "Dileu &Pob Gwesteiwr"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Dileu &Pob Gwesteiwr"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Meini Prawf Dilysrwydd"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14960,12 +18196,6 @@ msgstr "Mewnosod Celloedd"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Gwaredu Celloedd"
-
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Dileu Rhesi"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -15227,12 +18457,6 @@ msgstr "Amrywio (Dim Newid)"
 msgid "Roman"
 msgstr "Romania"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, fuzzy, kde-format
-msgid "Italic"
-msgstr "Yr Eidal"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -15250,12 +18474,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Arferol"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Trwm"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -15268,12 +18486,6 @@ msgstr "Lliw:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Tanlinellu"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15413,11 +18625,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Canran"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15430,11 +18637,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Arian"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15445,11 +18647,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Gwyddonol"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15655,11 +18852,6 @@ msgstr "Tri digid 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Arddull"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 #| msgid "Name:"
@@ -15671,11 +18863,6 @@ msgstr "Enw:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Etifeddu arddull:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Mae arddull â'r enw yma yn bodoli eisioes."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -15722,12 +18909,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Safonol"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, fuzzy, kde-format
-msgid "Center"
-msgstr "Alinio i'r Canol"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15759,24 +18940,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Canol"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, fuzzy, kde-format
-msgid "Bottom"
-msgstr "Alinio i'r Gwaelod"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15939,20 +19102,10 @@ msgstr "Ebrill"
 msgid "Apply changes"
 msgstr "Gweithredu Arddull"
 
-#: ui/ExternalEditor.cpp:60
-#, fuzzy, kde-format
-msgid "Cancel"
-msgstr "Ffrainc"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Popeth"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -16029,400 +19182,14 @@ msgstr ""
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[aa]::mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Ffwythiant..."
-
-#, fuzzy
-#~ msgid "Insert math expression"
-#~ msgstr "Mewnosod mynegiad mathemateg"
-
-#~ msgid "From &Database..."
-#~ msgstr "O Gronfa &Ddata..."
-
-#, fuzzy
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Mewnosod data o gronfa ddata SQL."
-
-#~ msgid "Formula Selection"
-#~ msgstr "Dewis Fformiwla"
-
-#, fuzzy
-#~ msgid "Insert a function"
-#~ msgstr "Mewnosod ffwythiant."
-
-#~ msgid "Others..."
-#~ msgstr "Eraill..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Addasu Cell"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Golygu'r gell amlygedig."
-
-#, fuzzy
-#~| msgid "Show Sheet..."
-#~ msgid "Show QTableView..."
-#~ msgstr "Dangos Dalen..."
-
 #, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "Gwarchodaeth"
 
 #, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "Gwarchodaeth"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Mewnosod cynnwys y gludfwrdd wrth leoliad cyfredol y cyrchydd."
-
-#, fuzzy
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Dim gyrryddion cronfa ddata ar gael!  Rhaid i chi grynhoi Qt efo'r "
-#~ "gyrryddion angenrheidiol."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Mewnosod Data o Gronfa Ddata"
-
-#~ msgid "Type:"
-#~ msgstr "Math:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Enw Defnyddiwr:\n"
-#~ "(os bo angen)"
-
-#~ msgid "Host:"
-#~ msgstr "Gwesteiwr:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Porth:\n"
-#~ "(os bo angen)"
-
-#~ msgid "Database name: "
-#~ msgstr "Enw'r gronfa ddata:"
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Cyfrinair:\n"
-#~ "(os bo angen)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Dewis Tablau:"
-
-#, fuzzy
-#~| msgid "Values"
-#~ msgid "Tables"
-#~ msgstr "Gwerthoedd"
-
-#~ msgid "Select columns:"
-#~ msgstr "Dewis colofnau:"
-
-#, fuzzy
-#~| msgid "Tala"
-#~ msgid "Table"
-#~ msgstr "Tala"
-
-#~ msgid "Columns"
-#~ msgstr "Colofnau"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Cydweddu â phob un o'r dilynnol (AND)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Cydwedduag unrhyw un o'r dilynnol (OR)"
-
-#~ msgid "equals"
-#~ msgstr "yn hafal"
-
-#~ msgid "not equal"
-#~ msgstr "dim yn hafal"
-
-#~ msgid "in"
-#~ msgstr "yn "
-
-#~ msgid "not in"
-#~ msgstr "dim yn "
-
-#~ msgid "like"
-#~ msgstr "megis"
-
-#~ msgid "greater"
-#~ msgstr "yn fwy"
-
-#~ msgid "lesser"
-#~ msgstr "yn llai"
-
-#~ msgid "greater or equal"
-#~ msgstr "yn fwy neu yn hafal"
-
-#~ msgid "less or equal"
-#~ msgstr "yn llai neu yn hafal"
-
-#~ msgid "Sorted by"
-#~ msgstr "Trefnir gan"
-
-#~ msgid "Ascending"
-#~ msgstr "Esgynnol"
-
-#~ msgid "Descending"
-#~ msgstr "Disgynnol"
-
-#~ msgid "Distinct"
-#~ msgstr "Gwahanadwy"
-
-#~ msgid "Query Options"
-#~ msgstr "Dewisiadau Ymholiad"
-
-#~ msgid "SQL query:"
-#~ msgstr "Ymholiad SQL:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Mewnosod mewn ardal"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Dechrau yng nghell"
-
-#~ msgid "Result"
-#~ msgstr "Canlyniad"
-
-#, fuzzy
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Ni ellir penodi tabl yma!"
-
-#, fuzzy
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Rhaid i chi benodi ardal dilys!"
-
-#, fuzzy
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Rhaid i chi benodi cell ddilys!"
-
-#, fuzzy
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Ni chaniateir newid data yn y gronfa ddata!"
-
-#, fuzzy
-#~ msgid "Executing query failed."
-#~ msgstr "Methodd gweithredu'r ymholiad!"
-
-#, fuzzy
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Ni chafwyd canlyniadau â'r ymholiad yma."
-
-#, fuzzy
-#~| msgid "Insert Data From Database"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Mewnosod Data o Gronfa Ddata"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Rhaid i'r borth fod yn rhif"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Cysylltu â'r gronfa ddata..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Cysylltir.  Nôl gwybodaeth tabl..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Nid yw'r gronfa ddata yma yn cynnwys tablau"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Methwyd llwytho'r gyrrydd"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Nôl meta-data y tablau..."
-
-#, fuzzy
-#~ msgid "You have to select at least one table."
-#~ msgstr "Rhaid i chi ddewis o leiaf un tabl!"
-
-#, fuzzy
-#~ msgid "You have to select at least one column."
-#~ msgstr "Rhaid i chi ddewis o leiaf un golofn!"
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "Nid nod-chwilyddion dilys yn SQL yw '*' neu '?'.  '%' eu '_' yw'r "
-#~ "amnewidiadau addas.  Ydych am eu hamnewid?"
-
-#~ msgid "Insert function"
-#~ msgstr "Mewnosod Ffwythiant"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Nid oes paramedrau gan y ffwythiant hwn."
-
-#, fuzzy
-#~ msgid "Description is not available."
-#~ msgstr "Disgrifiad yn y &golofn"
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "Paramedrau Bro"
-
-#, fuzzy
-#~| msgid "Show c&omment indicator"
-#~ msgid "Show document settings dialog"
-#~ msgstr "D&angos dangosydd sylwad"
-
-#, fuzzy
-#~ msgid "Document Settings"
-#~ msgstr "Paramedrau Bro"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "Modd cyfrifo "
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Case sensitive"
-#~ msgstr "Gludo a Mewnosod"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Trachywiredd"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Ymysgogol"
-
-#, fuzzy
-#~| msgid "String to compare with"
-#~ msgid "String comparison:"
-#~ msgstr "Llinyn i gymharu"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "Mynegiad rheolaidd"
-
-#, fuzzy
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "Diweddaru i'r Fro ar y Cysa&wd"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Iaith: %1"
-
-#, fuzzy
-#~ msgid "Default number format: %1"
-#~ msgstr "Fformat dyddiad"
-
-#, fuzzy
-#~ msgid "Long date format: %1"
-#~ msgstr "Fformat dyddiad"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Fformat dyddiad byr: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Fformat amser : %1"
-
-#, fuzzy
-#~ msgid "Currency format: %1"
-#~ msgstr "Arian:"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Rhestr Addasiedig..."
-
-#, fuzzy
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "Creu rhestri addasiedig i drefnu neu hunan-lenwi. "
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Ail-gyfrifo gwerth pob cell yn y weithlen gyfredol."
-
-#~ msgid "Custom Lists"
-#~ msgstr "Rhestrau Addasiedig"
-
-#~ msgid "List:"
-#~ msgstr "Rhestr:"
-
-#~ msgid "Entry:"
-#~ msgstr "Cofnod:"
-
-#, fuzzy
-#~| msgid "&Add"
-#~ msgid "Add"
-#~ msgstr "&Ychwanegu"
-
-#, fuzzy
-#~| msgid "&New"
-#~ msgid "New"
-#~ msgstr "&Newydd"
-
-#, fuzzy
-#~ msgid "Remove"
-#~ msgstr "Gwaredu Popeth"
-
-#, fuzzy
-#~ msgid "Modify"
-#~ msgstr "&Addasu..."
-
-#, fuzzy
-#~| msgid "Co&py"
-#~ msgid "Copy"
-#~ msgstr "Co&pïo"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Ydych wir eisiau dileu'r rhestr yma?"
-
-#~ msgid "Remove List"
-#~ msgstr "Diddymu Rhestr"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Nid yw'r ardal wag yn wag.\n"
-#~ "Ydych am barhau?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Ymofyn Cyrchnod..."
-
-#, fuzzy
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Ailadrodd cyfrifiad i ganfod gwerth penodol."
-
-#~ msgid "Goal Seek"
-#~ msgstr "Ymofyn Cyrchnod"
-
-#, fuzzy
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Mae'r cyfeirnod cell yn annilys!"
-
-#, fuzzy
-#~ msgid "Target value is invalid."
-#~ msgstr "Mae'r gwerth cyrchfan yn annilys!"
-
-#, fuzzy
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Rhaid i'r gell darddiad gynnwys gwerth rhifol!"
-
-#, fuzzy
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Rhaid i'r gell gyrchfan gynnwys fformiwla!"
 
 #~ msgid "Starting..."
 #~ msgstr "Cychwyn..."
@@ -16432,12 +19199,6 @@ msgstr ""
 
 #~ msgid "New value:"
 #~ msgstr "Gwerth newydd:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Mi wnaeth ymofyn cyrchnod efo cell %1 ganfod datrysiad:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Ni wnaeth ymofyn cyrchnod efo cell %1 DDIM canfod datrysiad:"
 
 #~ msgid "Set cell:"
 #~ msgstr "Gosod cell:"
@@ -16455,92 +19216,6 @@ msgstr ""
 
 #~ msgid "Current value:"
 #~ msgstr "Gwerth cyfredol:"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Amnewidiad"
-
-#~ msgid "Selection List..."
-#~ msgstr "Rhestr Dewisiadau..."
-
-#~ msgid "More Options"
-#~ msgstr "Mwy o ddewisiadau"
-
-#, fuzzy
-#~ msgid "Search entire sheet"
-#~ msgstr "Testun fertigol"
-
-#~ msgid "Search in:"
-#~ msgstr "Chwilio Mewn :"
-
-#, fuzzy
-#~ msgid "Cell Values"
-#~ msgstr "Gwerthoedd"
-
-#~ msgid "Comments"
-#~ msgstr "Sylwadau"
-
-#, fuzzy
-#~ msgid "Search direction:"
-#~ msgstr "Ail Amod"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "Dangos rhesi cudd."
-
-#~ msgid "Fewer Options"
-#~ msgstr "Llai o ddewisiadau"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Fformat Cell..."
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "Gosod fformatio'r gell."
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Symud y gwrthrych cell i'r gludfwrdd."
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Copïo'r gwrthrych cell i'r gludfwrdd."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Mewnosod cynnwys y gludfwrdd wrth leoliad cyfredol y cyrchydd."
-
-#~ msgid "Special Paste..."
-#~ msgstr "Gludo Arbennig..."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Gludo cynnwys y gludfwrdd efo dewisiadau arbennig."
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Gludo wrth Fewnosod"
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Mewnosod cell o'r gludfwrdd yn y daenlen."
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Gludo gan Fewnosod Celloedd"
-
-#, fuzzy
-#~ msgid "Insert"
-#~ msgstr "Rhyngrwyd"
-
-#~ msgid "Move towards right"
-#~ msgstr "Symud i'r dde"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Symud i'r gwaelod"
-
-#~ msgid "Special Paste"
-#~ msgstr "Gludo Arbennig"
 
 #, fuzzy
 #~ msgid "Content"
@@ -16575,39 +19250,14 @@ msgstr ""
 #~ msgstr "Rhannu"
 
 #, fuzzy
-#~ msgid "Check the spelling"
-#~ msgstr "Cywiro sillafu."
-
-#, fuzzy
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Hoffech gywiro'r sillafu yn y tabl nesaf?"
-
-#, fuzzy
 #~| msgid "Correct Misspelled Word"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Cywiro Gair a Gamsillafwyd?"
 
 #, fuzzy
-#~| msgid "AutoFormat..."
-#~ msgid "Auto-Format..."
-#~ msgstr "HunanFformatio..."
-
-#, fuzzy
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Gosod fformatio'r weithlen."
-
-#, fuzzy
-#~| msgid "AutoFormat..."
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "HunanFformatio..."
-
-#~ msgid "Sheet Style"
-#~ msgstr "Arddull Dalen"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Dewiswch yr arddull dalen i weithredu:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Methwyd canfod y ddelwedd %1."
@@ -16616,113 +19266,8 @@ msgstr ""
 #~ msgstr "Methwyd llwytho'r ddelwedd %1."
 
 #, fuzzy
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Methwyd canfod y ffeil XML '%1' efo'r arddull tabl."
-
-#, fuzzy
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Gwall dosrannu yn y ffeil XML '%1' efo'r arddull tabl."
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgid "&Auto-Filter"
-#~ msgstr "Hunan-lenwi"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Hunan-lenwi"
-
-#, fuzzy
-#~| msgid "Clear &All"
-#~ msgid "Clear All"
-#~ msgstr "Gwagu'r Cwbl"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Dileu cynnwys a fformatio y gell gyfredol."
-
-#, fuzzy
 #~ msgid "Contents"
 #~ msgstr "Sylwadau"
-
-#, fuzzy
-#~ msgid "Clear Contents"
-#~ msgstr "Sylwadau"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Dileu cynnwys y gell gyfredol."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Newid Testun"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Gwaredu'r fformatio amodol y gell."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Gwaredu'r fformatio amodol y gell."
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "Gosod lliw newydd i'r ffin."
-
-#~ msgid "Border Color"
-#~ msgstr "Lliw Ffin"
-
-#, fuzzy
-#~ msgid "Set the background color"
-#~ msgstr "Gosod lliw'r cefndir"
-
-#~ msgid "Background Color"
-#~ msgstr "Lliw Cefndir"
-
-#, fuzzy
-#~| msgid "Conditional Cell Attributes..."
-#~ msgid "Conditional Styles..."
-#~ msgstr "Priodoleddau Cell Amodol ..."
-
-#, fuzzy
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Gosod fformat y gell wedi'i seilio ar rai amodau."
-
-#, fuzzy
-#~| msgid "Conditional Cell Attributes"
-#~ msgid "Conditional Styles"
-#~ msgstr "Priodoleddau Cell Amodol"
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Gwaredu'r fformatio amodol y gell."
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Gwaredu'r fformatio amodol y gell."
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&Is-gyfansymiau..."
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "&Is-gyfansymiau..."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Rhaid dewis cellau lluosol."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Nifer o arbrofion"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -16733,88 +19278,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Fformat Canran"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Fformat amser"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Fformat dyddiad"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Gwyddonol"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Newid Lliw'r Ffin"
-
-#~ msgid "<none>"
-#~ msgstr "<dim>"
-
-#~ msgid "equal to"
-#~ msgstr "yn hafal i"
-
-#~ msgid "greater than"
-#~ msgstr "yn fwy na"
-
-#~ msgid "less than"
-#~ msgstr "yn llai na"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "yn hafal i neu yn fwy na"
-
-#~ msgid "equal to or less than"
-#~ msgstr "yn hafal i neu yn llai na"
-
-#~ msgid "between"
-#~ msgstr "rhwng"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "Amrediad"
-
-#, fuzzy
-#~ msgid "different to"
-#~ msgstr "yn wahanol i"
-
-#~ msgid "First Condition"
-#~ msgstr "Amod Cyntaf"
-
-#~ msgid "Second Condition"
-#~ msgstr "Ail Amod"
-
-#~ msgid "Third Condition"
-#~ msgstr "Trydydd Amod"
-
-#~ msgid "Cell is"
-#~ msgstr "Mae'r gell"
-
-#~ msgid "Cell style"
-#~ msgstr "Arddull cell"
-
-#~ msgid "different from"
-#~ msgstr "yn wahanol i"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Os yw'r gwerth cyntaf yn rhif, rhaid i'r ail werth fod yn rhif hefyd."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Os yw'r gwerth cyntaf yn llinyn, rhaid i'r ail werth fod yn llinyn hefyd."
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Source"
-#~ msgstr "N&od Arbennig..."
 
 #, fuzzy
 #~ msgid "Current Selection"
@@ -16839,10 +19302,6 @@ msgstr ""
 #~| msgid "Riel"
 #~ msgid "Field"
 #~ msgstr "Riel"
-
-#, fuzzy
-#~ msgid "Add Filter"
-#~ msgstr "ffeil"
 
 #, fuzzy
 #~ msgid "Labels"
@@ -16893,11 +19352,6 @@ msgstr ""
 #~ msgstr "Rhes"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "Gweithrediad"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Gwerth"
@@ -16916,173 +19370,21 @@ msgstr ""
 #~ msgid "Manual Selection"
 #~ msgstr "Dewis Fformiwla"
 
-#~ msgid "Product"
-#~ msgstr "Cynnyrch"
-
 #~ msgid "Sort By"
 #~ msgstr "Trefnu Gan"
-
-#~ msgid "Select Font..."
-#~ msgstr "Dewis Wynebfath..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Dewis Maint Wynebfath"
-
-#, fuzzy
-#~| msgid "Select Font Size"
-#~ msgid "Font Size"
-#~ msgstr "Dewis Maint Wynebfath"
-
-#~ msgid "Text Color"
-#~ msgstr "Lliw Testun"
-
-#, fuzzy
-#~ msgid "Set the text color"
-#~ msgstr "Gosod lliw'r cefndir"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Newid Fformat"
-
-#, fuzzy
-#~| msgid "Style Manager"
-#~ msgid "Style Manager..."
-#~ msgstr "Rheoydd Arddull"
-
-#, fuzzy
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Golygu a threfnu arddulliau cell."
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Gweithredu arddull rhag-ddiffiniedig i'r celloedd detholedig."
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Creu Arddull o Gell..."
-
-#, fuzzy
-#~| msgid "Style of Cell"
-#~ msgid "Style From Cell"
-#~ msgstr "Arddull Cell"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Creu arddull newydd a seilir ar y gell ddetholedig."
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Creu Arddull o Gell "
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Ni all enw arddull fod yn wag."
-
-#~ msgid "Style Manager"
-#~ msgstr "Rheoydd Arddull"
-
-#~ msgid "All Styles"
-#~ msgstr "Pob Arddull"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Arddulliau Addasiedig"
-
-#, fuzzy
-#~ msgid "Hierarchical"
-#~ msgstr "Cyllidol"
-
-#~ msgid "&New..."
-#~ msgstr "&Newydd..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Addasu..."
-
-#, fuzzy
-#~ msgid "&Delete..."
-#~ msgstr "&Ymofyn Cyrchnod..."
-
-#~ msgid "style%1"
-#~ msgstr "arddull %1"
 
 #, fuzzy
 #~| msgid "Cells:"
 #~ msgid "Cells..."
 #~ msgstr "Celloedd"
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Mewnosod Celloedd..."
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Mewnosod cell wag yn y daenlen."
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Gwaredu Celloedd..."
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Gwaredu'r gell gyfredol o'r daenlen."
-
 #, fuzzy
 #~| msgid "Insert Cells..."
 #~ msgid "Delete Cells..."
 #~ msgstr "Mewnosod Celloedd..."
 
-#~ msgid "Insert rows"
-#~ msgstr "Mewnosod rhesi"
-
-#~ msgid "Insert columns"
-#~ msgstr "Mewnosod colofnau"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Mewnosod Celloedd"
-
-#~ msgid "Move towards left"
-#~ msgstr "Symud i'r chwith"
-
-#~ msgid "Move towards top"
-#~ msgstr "Symud i'r pen"
-
-#~ msgid "Remove rows"
-#~ msgstr "Gwaredu rhesi"
-
-#~ msgid "Remove columns"
-#~ msgstr "Gwaredu colofnau"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Gwaredu Celloedd"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&Is-gyfansymiau..."
-
-#, fuzzy
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Creu gwahanol mathau o is-gyfansymiau mewn rhestr neu gronfa ddata."
-
-#~ msgid "Subtotals"
-#~ msgstr "Is-gyfansymiau"
-
-#~ msgid "Remove All"
-#~ msgstr "Gwaredu Popeth"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Rhaid i chi ddewis o leiaf un golofn i adio is-gyfansymiau."
-
 #~ msgid "Grand Total"
 #~ msgstr "Cyfanswm Terfynol"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Colofn '%1'"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "Di&sodli is-gyfansymiau cyfredol"
@@ -17108,51 +19410,6 @@ msgstr ""
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Ychwanegu'r is-gyfanswm at:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Mynd i Gell..."
-
-#, fuzzy
-#~| msgid "Goto Cell"
-#~ msgid "Goto"
-#~ msgstr "Ewch i Gell"
-
-#, fuzzy
-#~ msgid "Move to a particular cell"
-#~ msgstr "Mynd i gell benodol."
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Column"
-#~ msgstr "Gwaredu Colofnau"
-
-#, fuzzy
-#~| msgid "Column number"
-#~ msgid "Column Break"
-#~ msgstr "Rhif y golofn"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Row"
-#~ msgstr "Gwaredu Colofnau"
-
-#, fuzzy
-#~| msgid "Header"
-#~ msgid "Row Break"
-#~ msgstr "Pennawd"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Ewch i Gell"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Mynd i mewn i gell:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Cyfnerthu..."
-
-#, fuzzy
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "Creu ardal o ddata crynodeb oddi wrth grŵp o ardalau tebyg."
-
 #, fuzzy
 #~| msgid "&Description in row"
 #~ msgid "Description in rows"
@@ -17168,44 +19425,6 @@ msgstr ""
 #~ msgid "Copy data"
 #~ msgstr "C&opïo data"
 
-#~ msgid "Consolidate"
-#~ msgstr "Cyfnerthu"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Gwyriad Safonol"
-
-#~ msgid "Variance"
-#~ msgstr "Amrywiant"
-
-#, fuzzy
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Rhaid i chi ddewis o leiaf un golofn!"
-
-#, fuzzy
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr ""
-#~ "Dyw'r URL \n"
-#~ " %1 \n"
-#~ " ddim yn dilys."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Mae'r amrediad\n"
-#~ "%1\n"
-#~ "yn rhy fach"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Mae'r amrediad\n"
-#~ "%1\n"
-#~ "yn rhy fawr"
-
 #~ msgid ""
 #~ "The ranges\n"
 #~ "%1\n"
@@ -17217,26 +19436,6 @@ msgstr ""
 #~ "%1\n"
 #~ "a %2\n"
 #~ "o faint gwahanol"
-
-#, fuzzy
-#~| msgid "Consolidate"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Cyfnerthu"
-
-#, fuzzy
-#~| msgid "The source tables intersect with the destination table"
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Mae'r tablau tarddiad yn croestorri â'r tabl cyrchfan"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Mae'r amrediad\n"
-#~ "%1\n"
-#~ "wedi'i gamffurfio"
 
 #, fuzzy
 #~| msgid "&Function:"
@@ -17253,107 +19452,13 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "C&yfeirnodau a roddwyd:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Newid Ongl"
-
-#, fuzzy
-#~| msgid "Angle:"
-#~ msgid "Angle"
-#~ msgstr "Ongl:"
-
-#, fuzzy
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Newid yr ongl a ddefnyddir i argraffu cynnwys y gell"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Cynyddu Trachywiredd"
-
-#, fuzzy
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Cynyddu'r trachywiredd degol a ddangosir ar y sgrin."
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Lleihau Trachywiredd"
-
-#, fuzzy
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Lleihau'r trachywiredd degol a ddangosir ar y sgrin."
-
-#, fuzzy
-#~| msgid "Increase Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Cynyddu Trachywiredd"
-
-#, fuzzy
-#~| msgid "Decrease Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Lleihau Trachywiredd"
-
-#~ msgid "Change Angle"
-#~ msgstr "Newid Ongl"
-
-#~ msgid "Angle:"
-#~ msgstr "Ongl:"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Newid Ongl"
-
-#~ msgid "Area Name..."
-#~ msgstr "Enw Ardal..."
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Gosod enw ar gyfer ardal yn y daenlen."
-
-#, fuzzy
-#~| msgid "Show Area..."
-#~ msgid "Named Areas..."
-#~ msgstr "Dangos Ardal..."
-
-#, fuzzy
-#~ msgid "Named Areas"
-#~ msgstr "Gwaredu Popeth"
-
-#, fuzzy
-#~ msgid "Edit or select named areas"
-#~ msgstr "Dangos ardal a enwir."
-
-#, fuzzy
-#~| msgid "Edit Area"
-#~ msgid "Add Named Area"
-#~ msgstr "Golygu Ardal"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Rhowch enw'r ardal:"
-
-#, fuzzy
-#~ msgid "Replace Named Area"
-#~ msgstr "Dangos ardal a enwir."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Dangos ardal a enwir."
-
 #, fuzzy
 #~| msgid "&Sheet"
 #~ msgid "&Select"
 #~ msgstr "Dal&en"
 
-#~ msgid "Area: %1"
-#~ msgstr "Ardal: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Golygu..."
-
-#, fuzzy
-#~ msgid "&Remove"
-#~ msgstr "&Gwaredu Cyswllt"
 
 #, fuzzy
 #~ msgid "New Named Area"
@@ -17363,132 +19468,6 @@ msgstr ""
 #~| msgid "Edit Area"
 #~ msgid "Edit Named Area"
 #~ msgstr "Golygu Ardal"
-
-#, fuzzy
-#~| msgid "Do you really want to remove this area name?"
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Ydych wir eisiau gwaredu'r enw ardal yma?"
-
-#, fuzzy
-#~ msgid "Remove Named Area"
-#~ msgstr "Gwaredu Popeth"
-
-#~ msgid "Cells:"
-#~ msgstr "Celloedd"
-
-#~ msgid "Sheet:"
-#~ msgstr "Dalen:"
-
-#~ msgid "Area name:"
-#~ msgstr "Enw ardal:"
-
-#~ msgid "Align Left"
-#~ msgstr "Alinio i'r Chwith"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Alinio cynnwys y gell i'r chwith."
-
-#~ msgid "Align Center"
-#~ msgstr "Alinio i'r Canol"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "Alinio cynnwys y gell i'r canol."
-
-#~ msgid "Align Right"
-#~ msgstr "Alinio i'r Dde"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Alinio cynnwys y gell i'r dde."
-
-#~ msgid "Align Top"
-#~ msgstr "Alinio i'r Pen"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Alinio cynnwys y gell ar hyd pen y gell."
-
-#~ msgid "Align Middle"
-#~ msgstr "Alinio i'r Canol"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Alinio cynnwys y gell yng nghanol y gell."
-
-#~ msgid "Align Bottom"
-#~ msgstr "Alinio i'r Gwaelod"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Alinio cynnwys y gell ar hyd gwaelod y gell."
-
-#~ msgid "Border Left"
-#~ msgstr "Ffin Chwith"
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Gosod ffin chwith i'r ardal ddetholedig."
-
-#~ msgid "Border Right"
-#~ msgstr "Ffin Dde"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Gosod ffin de i'r ardal ddetholedig."
-
-#~ msgid "Border Top"
-#~ msgstr "Ffin Pen"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Gosod ffin pen i'r ardal ddetholedig."
-
-#~ msgid "Border Bottom"
-#~ msgstr "FFin Gwaelod"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Gosod ffin gwaelod i'r ardal ddetholedig."
-
-#~ msgid "All Borders"
-#~ msgstr "Pob Ffin"
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Gosod ffin o gwmpas pob cylch yn yr ardal ddetholedig."
-
-#, fuzzy
-#~| msgid "All Borders"
-#~ msgid "No Borders"
-#~ msgstr "Pob Ffin"
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Gwaredu pob ffin yn yr ardal ddetholedig."
-
-#~ msgid "Border Outline"
-#~ msgstr "Amlinell Ffin"
-
-#, fuzzy
-#~| msgid "Border Outline"
-#~ msgid "Outline"
-#~ msgstr "Amlinell Ffin"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Gosod ffin i amlinell o'r ardal ddetholedig."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Cyfuno Celloedd %1"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Cyfuno Celloedd %1"
 
 #~ msgid "Australia"
 #~ msgstr "Awstralia"
@@ -19318,76 +21297,6 @@ msgstr ""
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Doler Simbabwe"
 
-#, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "Ailosod i'r fformat rhagosodol."
-
-#~ msgid "Strike Out"
-#~ msgstr "Trwylinellu"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Cynyddu Maint Wynebfath"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Lleihau Maint Wynebfath"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Lapio Testun"
-
-#, fuzzy
-#~| msgid "Wrap text"
-#~ msgid "Wrap"
-#~ msgstr "Lapio Testun"
-
-#, fuzzy
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Gwneud i destun y gell lapio ar linellau lluosol."
-
-#~ msgid "Vertical Text"
-#~ msgstr "Testun Fertigol"
-
-#, fuzzy
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Argraffu cynnwys y gell yn fertigol."
-
-#~ msgid "Percent Format"
-#~ msgstr "Fformat Canran"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Gosod fformat y gell i edrych fel canran."
-
-#~ msgid "Money Format"
-#~ msgstr "Fformat Arian"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Gosod fformat y gell i edrych fel eich arian lleol."
-
-#, fuzzy
-#~| msgid "Wrap Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Lapio Testun"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Testun Fertigol"
-
-#, fuzzy
-#~| msgid "Format Percent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Fformatio Canran"
-
-#, fuzzy
-#~| msgid "Format Money"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Fformatio Arian"
-
 #~ msgid "&Data Format"
 #~ msgstr "Fformat &Data"
 
@@ -19422,9 +21331,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "Uchder rhagosodol (%1 %2)"
 
-#~ msgid "Height:"
-#~ msgstr "Uchder:"
-
 #, fuzzy
 #~ msgid "Set the height of the cell."
 #~ msgstr "Cylchdroi cynnwys y gell."
@@ -19433,527 +21339,34 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "Lled rhagosodol (%1 %2)"
 
-#~ msgid "Width:"
-#~ msgstr "Lled:"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Ychwanegu Sylwad"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Cynyddu Mewnoliad"
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "Cynyddu'r mewnoliad."
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Lleihau Mewnoliad"
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "Lleihau'r mewnoliad."
-
-#~ msgid "Upper Case"
-#~ msgstr "Priflythrennau"
-
-#, fuzzy
-#~| msgid "Upper Case"
-#~ msgid "Upper"
-#~ msgstr "Priflythrennau"
-
-#, fuzzy
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Trosi pob llythyren i briflythyren."
-
-#~ msgid "Lower Case"
-#~ msgstr "Is-lythrennau"
-
-#, fuzzy
-#~| msgid "Power"
-#~ msgid "Lower"
-#~ msgstr "Pŵer"
-
-#, fuzzy
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Trosi pob llythyren i is-lythyren."
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Trosi'r Llythyren Gyntaf i Briflythyren"
-
-#, fuzzy
-#~ msgid "First Letter Upper"
-#~ msgstr "Trosi'r Llythyren &Gyntaf ym Mhriflythyren"
-
-#, fuzzy
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Priflythrennu'r llythyren gyntaf."
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Comment..."
-#~ msgstr "Sylwad"
-
-#, fuzzy
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Golygu sylwad ar gyfer y gell hon."
-
-#~ msgid "Remove Comment"
-#~ msgstr "Gwaredu Sylwad"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Gwaredu'r sylwad o'r gell hon."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Hepgor pob gair mewn PRIFLYTHRENNAU"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Hepgor pob gair mewn PRIFLYTHRENNAU"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Trosi'r Llythyren &Gyntaf ym Mhriflythyren"
-
-#, fuzzy
-#~| msgid "Remove Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Gwaredu Sylwad"
-
-#, fuzzy
-#~ msgid "Clear Comment"
-#~ msgstr "Sylwadau"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Newid Gwerth"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Cynyddu Mewnoliad"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Lleihau Mewnoliad"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Sylwad Cell"
-
-#~ msgid "&Left"
-#~ msgstr "&Chwith"
-
-#~ msgid "&Right"
-#~ msgstr "&De"
-
 #~ msgid "&Up"
 #~ msgstr "I &Fyny"
-
-#~ msgid "&Down"
-#~ msgstr "I &Lawr"
-
-#~ msgid "Autosum"
-#~ msgstr "Hunan-swm"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Mewnosod y ffwythiant 'swm'"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Dewis Fformiwla"
-
-#~ msgid "From &Text File..."
-#~ msgstr "O &Ffeil Testun..."
-
-#, fuzzy
-#~| msgid "From &Text File..."
-#~ msgid "Text File"
-#~ msgstr "O &Ffeil Testun..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Mewnosod data o ffeil testun i leoliad cyfredol y cyrchydd neu i'r "
-#~ "detholiad cyfredol."
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "O'r &Gludfwrdd..."
 
 #, fuzzy
-#~| msgid "From &Clipboard..."
-#~ msgid "Clipboard"
-#~ msgstr "O'r &Gludfwrdd..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Mewnosod data CSV o'r gludfwrdd i leoliad cyfredol y cyrchydd neu i'r "
-#~ "detholiad cyfredol."
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Testun i Golofnau..."
-
-#, fuzzy
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Ehangu cynnwys y celloedd i golofnau lluosog."
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Mewnosod o'r Gludfwrdd"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Nid oes data ar y gludfwrdd."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Nid oes data defnyddiadwy ar y gludfwrdd."
-
-#~ msgid "Text to Columns"
-#~ msgstr "Testun i Golofnau"
-
-#, fuzzy
-#~ msgid "Cannot open input file."
-#~ msgstr "Methu agor y ffeil mewnbwn!"
-
-#, fuzzy
-#~| msgid "Inserting From Clipboard"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Mewnosod o'r Gludfwrdd"
-
-#, fuzzy
-#~| msgid "Inserting Text File"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Mewnosod Ffeil Testun"
-
-#, fuzzy
-#~| msgid "Text to Columns"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Testun i Golofnau"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
-
-#, fuzzy
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Cyfuno Celloedd %1"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
-
-#, fuzzy
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Cyfuno Celloedd %1"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Daduno Celloedd"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Uno'r ardal ddetholedig mewn un gell fawr."
-
-#~ msgid "Resize Column..."
-#~ msgstr "Newid Maint Colofn..."
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "Newid lled colofn."
-
-#~ msgid "Insert Columns"
-#~ msgstr "Mewnosod Colofnau"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Mewnosod colofn newydd yn y daenlen."
-
-#~ msgid "Remove Columns"
-#~ msgstr "Gwaredu Colofnau"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Gwaredu'r gell gyfredol o'r daenlen."
-
-#~ msgid "Hide Columns"
-#~ msgstr "Cuddio Colofnau"
-
-#, fuzzy
 #~ msgid "Hide the column from this"
 #~ msgstr "Cuddio'r golofn."
-
-#~ msgid "Show Columns..."
-#~ msgstr "Dangos Colofnau..."
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "Dangos colofnau cudd."
-
-#~ msgid "Equalize Column"
-#~ msgstr "Hafalu Colofn"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Newid maint y colofnau detholedig i fod yr un maint."
-
-#~ msgid "Show Columns"
-#~ msgstr "Dangos Colofnau"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Dangos colofnau cudd yn y detholiad."
-
-#~ msgid "Resize Row..."
-#~ msgstr "Newid Maint Rhes..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "Newid uchder rhes."
-
-#~ msgid "Insert Rows"
-#~ msgstr "Mewnosod Rhesi"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Mewnosod rhes newydd yn y daenlen."
-
-#~ msgid "Remove Rows"
-#~ msgstr "Gwaredu Rhesi"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Dileu rhes o'r daenlen."
-
-#~ msgid "Hide Rows"
-#~ msgstr "Cuddio Rhesi"
 
 #, fuzzy
 #~ msgid "Hide a row from this"
 #~ msgstr "Cuddio rhes."
 
-#~ msgid "Show Rows..."
-#~ msgstr "Dangos Rhesi..."
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "Dangos rhesi cudd."
-
-#~ msgid "Equalize Row"
-#~ msgstr "Hafalu Rhes"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Newid maint y rhesi detholedig i fod yr un maint."
-
-#~ msgid "Show Rows"
-#~ msgstr "Dangos Rhesi"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Dangos rhesi cudd yn y detholiad."
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Addasu Rhes a Cholofn"
-
-#, fuzzy
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "Addasu maint y rhes/colofn er mwyn i'r cynnwys ffitio."
-
-#~ msgid "Adjust Column"
-#~ msgstr "Addasu Colofn"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Dileu Colofnau"
 
-#~ msgid "Adjust Row"
-#~ msgstr "Addasu Rhes"
-
 #~ msgid "Delete Rows"
 #~ msgstr "Dileu Rhesi"
-
-#~ msgid "Resize Row"
-#~ msgstr "Newid Maint Rhes"
-
-#~ msgid "Resize Column"
-#~ msgstr "Newid Maint Colofn"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Dewis colofnau cudd i'w dangos:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Dewis rhesi cudd i'w dangos:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Colofn: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Rhes: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "C&yswllt..."
-
-#, fuzzy
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Mewnosod cyswllt Rhyngrwyd."
-
-#, fuzzy
-#~ msgid "Link"
-#~ msgstr "Mewnosod Cyswllt"
-
-#~ msgid "Remove Link"
-#~ msgstr "Gwaredu Cyswllt"
-
-#, fuzzy
-#~ msgid "Remove a link"
-#~ msgstr "Dileu &Pob Gwesteiwr"
-
-#~ msgid "Insert Link"
-#~ msgstr "Mewnosod Cyswllt"
 
 #, fuzzy
 #~ msgid "Edit Link"
 #~ msgstr "Mewnosod Cyswllt"
 
 #, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Gwaredu Cyswllt"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Mewnosod Cyswllt"
-
-#~ msgid "Internet"
-#~ msgstr "Rhyngrwyd"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Internet Address"
-#~ msgstr "Cyfeiriad Rhyngrwyd:"
-
-#~ msgid "Text to display:"
-#~ msgstr "Testun i'w ddangos :"
-
-#~ msgid "Internet address:"
-#~ msgstr "Cyfeiriad Rhyngrwyd:"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "Ebost:"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Email Address"
-#~ msgstr "Cyfeiriad Rhyngrwyd:"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "Nae'r testun ardal yn wag!"
-
-#, fuzzy
-#~ msgid "Subject:"
-#~ msgstr "&Gwrthrych"
-
-#, fuzzy
-#~ msgid "File"
-#~ msgstr "ffeil"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to File"
-#~ msgstr "Maint y Gell"
-
-#~ msgid "File location:"
-#~ msgstr "Lleoliad y ffeil:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Ffeil diweddar:"
-
-#~ msgid "No Entries"
-#~ msgstr "Dim Cofnodion"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to Cell"
-#~ msgstr "Maint y Gell"
-
-#, fuzzy
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Gwaredu Popeth"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Trefnu..."
-
-#, fuzzy
-#~ msgid "Sort a group of cells"
-#~ msgstr "Trefnu grŵp o gelloedd."
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Trefnu &Disgynnol"
-
-#, fuzzy
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "Trefnu grŵp o gelloedd mewn trefn ddisgynnol (olaf i gyntaf)."
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Trefnu &Esgynnol"
-
-#, fuzzy
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "Trefnu grŵp o gelloedd mewn trefn esgynnol (cyntaf i olaf)."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Meini Prawf Trefnu"
-
-#, fuzzy
 #~| msgid "&Use custom list"
 #~ msgid "Use custom list"
 #~ msgstr "D&efnyddio rhestr addasiedig"
-
-#~ msgid "Column %1"
-#~ msgstr "Colofn %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Rhes %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "Mae'r rhes &gyntaf yn cynnwys pennawd"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "Mae'r rhes &gyntaf yn cynnwys pennawd"
-
-#~ msgid "Sort"
-#~ msgstr "Trefnu"
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Case Insensitive"
-#~ msgstr "Gludo a Mewnosod"
 
 #, fuzzy
 #~| msgid "Down"
@@ -19997,234 +21410,10 @@ msgstr ""
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Trefnu grŵp o gelloedd."
 
-#~ msgid "Validity..."
-#~ msgstr "Dilysrwydd..."
-
-#, fuzzy
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Gosod profion i gadarnhau bod data'r gell yn ddilys."
-
-#~ msgid "Validity"
-#~ msgstr "Dilysrwydd"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "Dileu &Pob Gwesteiwr"
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Gwaredu'r profion dilysrwydd ar y gell yma."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Dileu &Pob Gwesteiwr"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Meini Prawf Dilysrwydd"
-
-#~ msgid "Clear &All"
-#~ msgstr "Gwagu'r Cwbl"
-
 #, fuzzy
 #~| msgid "Criteria"
 #~ msgid "&Criteria"
 #~ msgstr "Meini prawf"
-
-#~ msgid "Allow:"
-#~ msgstr "Caniatáu:"
-
-#~ msgid "Integer"
-#~ msgstr "Cyfanrif"
-
-#~ msgid "Text Length"
-#~ msgstr "Hyd Testun"
-
-#~ msgid "List"
-#~ msgstr "Rhestr"
-
-#~ msgid "Data:"
-#~ msgstr "Data:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Lleiafswm:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Uchafswm:"
-
-#~ msgid "Date:"
-#~ msgstr "Dyddiad:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Dyddiad lleiaf:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Dyddiad mywaf:"
-
-#~ msgid "Time:"
-#~ msgstr "Amser:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Amser lleiaf:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Amser mwyaf:"
-
-#~ msgid "Number:"
-#~ msgstr "Rhif:"
-
-#~ msgid "Entries:"
-#~ msgstr "Cofnodion:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "&Rhybudd Gwall"
-
-#, fuzzy
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Dangos n&eges wall"
-
-#~ msgid "Action:"
-#~ msgstr "Gweithred:"
-
-#, fuzzy
-#~ msgid "Warning"
-#~ msgstr "Argraffu"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Teitl:"
-
-#~ msgid "Message:"
-#~ msgstr "Neges:"
-
-#, fuzzy
-#~ msgid "This is not a valid value."
-#~ msgstr ""
-#~ "Dyw'r URL \n"
-#~ " %1 \n"
-#~ " ddim yn dilys."
-
-#, fuzzy
-#~ msgid "This is not a valid time."
-#~ msgstr "Mae'r amser a phenodwyd yn annilys."
-
-#, fuzzy
-#~ msgid "This is not a valid date."
-#~ msgstr ""
-#~ "Dyw'r URL \n"
-#~ " %1 \n"
-#~ " ddim yn dilys."
-
-#~ msgid "&Series..."
-#~ msgstr "&Cyfres..."
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "Mewnosod cyfres."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Mewnosod cyfres."
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Character"
-#~ msgstr "N&od Arbennig..."
-
-#, fuzzy
-#~| msgid "The text that will replace characters in old text"
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Y testun bydd yn amnewid nodau yn yr hen destun"
-
-#~ msgid "Series"
-#~ msgstr "Cyfres"
-
-#~ msgid "Insert Values"
-#~ msgstr "Mewnosod Gwerthoedd"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Mewnosod y gyfres yn fertigol, un islaw y llall"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Mewnosod y gyfres yn llorweddol, o'r chwith i'r dde"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Llinynnol (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Creu cyfres o 'ddechrau' i 'ddiwedd' ac ar gyfer pob cam ychwanegu'r "
-#~ "gwerth a roddir yn y cam.  Mae hyn yn creu cyfres lle mae pob gwerth yn "
-#~ "'gam' mwy na'r gwerth o'i flaen."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Geometreg (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Creu cyfres o 'ddechrau' i 'ddiwedd' ac ar gyfer pob cam lluosi'r gwerth "
-#~ "â'r gwerth a roddir yn y cam.  Mae defnyddio cam o 5 yn cynhyrchu rhestr "
-#~ "megis: 5, 25, 125, 625, oherwydd mae 5 lluosi 5 (yn y cam) yn gwneud 25, "
-#~ "ac mae hyn lluosi 5 yn gwneud 125, ac mae 125 lluosi yr un gwerth cam o 5 "
-#~ "yn gwneud 625."
-
-#~ msgid "Start value:"
-#~ msgstr "Gwerth dechrau:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Gwerth diwedd:"
-
-#~ msgid "Step value:"
-#~ msgstr "Gwerth cam:"
-
-#, fuzzy
-#~| msgid "The lambda parameter must be positive."
-#~ msgid "End and start value must be positive."
-#~ msgstr "Rhaid i'r paramedr lamda fod yn bositif."
-
-#, fuzzy
-#~| msgid ""
-#~| "If the first value is a number, the second value also has to be a number."
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Os yw'r gwerth cyntaf yn rhif, rhaid i'r ail werth fod yn rhif hefyd."
-
-#, fuzzy
-#~ msgid "Step is negative."
-#~ msgstr "Mynegai arae negyddol %1"
-
-#, fuzzy
-#~| msgid ""
-#~| "If the first value is a number, the second value also has to be a number."
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Os yw'r gwerth cyntaf yn rhif, rhaid i'r ail werth fod yn rhif hefyd."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "N&od Arbennig..."
-
-#, fuzzy
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr ""
-#~ "Mewnosod un neu fwy o symbolau neu lythrennau ni chanfyddir ar y "
-#~ "bysellfwrdd."
 
 #, fuzzy
 #~ msgid "Internet address is empty"
@@ -26854,12 +28043,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "arddull %1"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Is-gyfansymiau"
 
 #, fuzzy
 #~| msgid "Remove All"
@@ -42557,9 +43740,6 @@ msgstr ""
 #~ msgid "Document's Locale Settings"
 #~ msgstr "Paramedrau Bro"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "Mewnosod Ffeil Testun"
-
 #, fuzzy
 #~| msgid "Value (array)"
 #~ msgid "y (array)"
@@ -42632,10 +43812,6 @@ msgstr ""
 
 #~ msgid "Remove Cell"
 #~ msgstr "Gwaredu Cell"
-
-#, fuzzy
-#~ msgid "Paste"
-#~ msgstr "Dosrannu"
 
 #~ msgid "Paste & Insert"
 #~ msgstr "Gludo a Mewnosod"
@@ -42733,10 +43909,6 @@ msgstr ""
 #~| msgid "Statistical"
 #~ msgid "Statistical Functions"
 #~ msgstr "Ystadegol"
-
-#, fuzzy
-#~ msgid "Text Functions"
-#~ msgstr "<h2>Paramedrau</h2><ul>"
 
 #, fuzzy
 #~| msgid "Function"

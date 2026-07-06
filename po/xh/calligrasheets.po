@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2002-10-10 12:25+0200\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team:  <xh@li.org>\n"
@@ -151,8 +151,13 @@ msgstr "inkulu kune"
 msgid "Header1"
 msgstr "inkulu kune"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, fuzzy, kde-format
 msgid "Default"
 msgstr "Isiphumo"
@@ -184,7 +189,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Okubhaliweyo"
@@ -257,7 +263,8 @@ msgstr "<p><b>Udidi lobuyiselo: </b>"
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Parameters"
@@ -912,14 +919,15 @@ msgstr "CARY(12;0) ibuyisela 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Inani"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Formati"
@@ -978,6 +986,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") ibuyisela 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Isiseko sedata"
@@ -1251,6 +1261,7 @@ msgstr "Ixesha Nomhla"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1321,7 +1332,8 @@ msgstr "DAYS(\"2002-02-22\"; \"2002-02-26\") ibuyisa 4"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Ixesha"
@@ -4925,6 +4937,7 @@ msgid "Regular payments"
 msgstr "Uchazo lwe Math"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Udidi"
@@ -5228,12 +5241,19 @@ msgstr "Incwadi yesandla"
 msgid "Automatic"
 msgstr "Ngokuzenzekela"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, fuzzy, kde-format
 msgid "Information"
 msgstr "Udidi lolwazi"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr ""
@@ -6080,7 +6100,7 @@ msgstr ""
 msgid "Math"
 msgstr "Imathematika"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Umsebenzi"
@@ -6576,6 +6596,7 @@ msgid "Range"
 msgstr "Umqolo"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 #| msgid "Criteria"
 msgid "Criteria"
@@ -8149,6 +8170,7 @@ msgid "Row"
 msgstr "&Umqolo"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Umhlathi"
@@ -12780,7 +12802,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, fuzzy, kde-format
 msgid "&Insert"
 msgstr "Faka Imiqolo"
@@ -12798,7 +12820,7 @@ msgid "F&ormat"
 msgstr "F&omati"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Dibanisa Iiseli"
@@ -12879,8 +12901,8 @@ msgstr "Fihla Ikhasi"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 msgid "Font"
 msgstr "Formati"
@@ -13294,14 +13316,16 @@ msgstr "Ongenzi siphelo"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, fuzzy, kde-format
 msgid "Horizontal"
 msgstr "Formati"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, fuzzy, kde-format
 msgid "Vertical"
 msgstr "Okubhaliweyo Okuthe nkqo"
@@ -13329,13 +13353,15 @@ msgid "Up"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, fuzzy, kde-format
 msgid "Right"
 msgstr "Umlinganiselo:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, fuzzy, kde-format
 msgid "Left"
 msgstr "&OKubhaliweyo"
@@ -13347,36 +13373,50 @@ msgstr "Faka Imihlathi"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Akukho nanye"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Isiphumo sokudibanisa"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Encinane"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Enkulu"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Umndilili"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Bala"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, fuzzy, kde-format
 msgid "CountA"
 msgstr "Bala"
@@ -13748,7 +13788,8 @@ msgstr "Ukhetho Lwefomula"
 msgid "Move selected sheet to the bottom"
 msgstr "Hambisa iseli yenjongo kwibhodi eqhotyoshwayo."
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, fuzzy, kde-format
 msgid "Case Sensitive"
 msgstr "Cola kwaye Ufake"
@@ -13954,6 +13995,7 @@ msgid "Anchor"
 msgstr "e-Andora"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Iseli"
@@ -13974,7 +14016,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "Ikhasi Elilandelayo"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Next"
@@ -13990,7 +14032,7 @@ msgstr "Yisa kwikhasi elilandelayo."
 msgid "Previous Sheet"
 msgstr "Ikhasi Elidlulileyo"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 #| msgid "Previous Sheet"
 msgid "Previous"
@@ -14205,7 +14247,7 @@ msgstr ""
 "Ulungiselela ukususa ikhasi elisebenzayo.\n"
 "Ufuna ukuqubeka?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Ngenisa igama:"
@@ -14265,13 +14307,13 @@ msgstr "Bala: %1"
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Tshintsha Okubhaliweyo"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
@@ -14279,10 +14321,3179 @@ msgstr "Umbala Wesiqalo"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Tshintsha Umbala Womda"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Faka Imihlathi"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Faka Imiqolo"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Susa Imihlathi"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Susa Imiqolo"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Faka umqolo omtsha kwiphepha elandisekayo."
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Isusa umqolo kwiphepha elandisekayo."
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Ifaka umqolo omtsha kwiphepha elandisekayo."
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Susa kwiphepha elandisekayo iseli yangoku."
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Fihla Imihlathi"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Fihla Imiqolo"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Bonisa Imiqolo"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Bonisa Imiqolo"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Ibonisa imiqolo efihlakeleyo kukhetho."
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Bonisa umhlathi ofihlakeleyo kukhetho."
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Linganisa Umhlathi"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Linganisa Umqolo"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Yenza ubungakanani kwakhona bemiqolo ekhetiweyo ilingane."
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Yenza ubungakanani kwakhona bemiihlathi ekhetiweyo ilingane."
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Nyenyisa Umhlathi"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Nyenyisa Umqolo"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Row && Column"
+msgstr "Nyenyisa Umqolo kunye Nomhlathi"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, fuzzy, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "Nyenyisa umqolo/umhlathi ukwenzela umxholo akwazi ukungena."
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr "Nyenyisa umqolo/umhlathi ukwenzela umxholo akwazi ukungena."
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr "Nyenyisa umqolo/umhlathi ukwenzela umxholo akwazi ukungena."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Bonisa Imihlathi..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Bonisa Imiqolo..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "Bonisa umhlathi(imi) ofihlakeleyo."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "Ibonisa imiqolo efihlakeleyo."
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Umhlathi: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Umqolo: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Yenza kwakhona Ubungakanani bomhlathi..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Yenza kwakhona ubungakanani Bomqolo..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "Tshintsha ubude bomqolo."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "Tshintsha ubude bomhlathi."
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Qala Ngasekhohlo"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "Yenza kubesembindini umxholo weseli."
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Dibanisa Iiseli"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Yenza umgca Ngasekunene"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "Yenza umxholo weseli abesembindini osekunene."
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Yenza umgca Abesembindini"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "Yenza umxholo weseli abesembindini."
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, fuzzy, kde-format
+msgid "Center"
+msgstr "Yenza umgca Abesembindini"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Yenza Umgca ngasentla"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Yenza imixholo yeseli ngaphezulu kweseli."
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr ""
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Dibanisa Iiseli"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Yenza umgca Ngasezantsi"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Yenza imixholo yeseli ngpaha komzantsi weseli."
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, fuzzy, kde-format
+msgid "Bottom"
+msgstr "Yenza umgca Ngasezantsi"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Yenza umgca Phakathi"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Yenza iseli yemixholo esembindini kwiseli."
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Ephakathi"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Tshintsha Ikona..."
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Tshintsha ikona eshicilewlwe kuyo imixholo yeseli."
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+#| msgid "Angle:"
+msgid "Angle"
+msgstr "Ikona:"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Tshintsha Ikona"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+#| msgid "Autofill"
+msgid "&Auto-Filter"
+msgstr "Gcwalisa ngokuzenzekela ugcwaliso"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Autofill"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Gcwalisa ngokuzenzekela ugcwaliso"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Cwangcisa umphezulu womda kwi ariya ekhethiweyo."
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Auto-Format..."
+msgstr "Ifomati Yeseli..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, fuzzy, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Ayinakuyifumana indlela yemigca-uhlobo XML ifayile '%1'"
+
+#: ui/actions/AutoFormat.cpp:91
+#, fuzzy, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Imposiso yenkcaza ikwindlela yemigca-uhlobo XML ifayile %1"
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Ifomati Yeseli..."
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Udibaniso oluzenzekelayo"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Faka ;isiphumo sokudibanisa' umsebenzi "
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Udibaniso oluzenzekelayo"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Umda Ekhohlo"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Cwangcisa umda wasekohlo kwi ariya ekhetiweyo."
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Umda Osekunene"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Cwangcisa umda ekunene kwi ariya ekhetiweyo."
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Umda Phezulu"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Cwangcisa umphezulu womda kwi ariya ekhethiweyo."
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Umda Ezantsi"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Cwangcisa umda osezantsi kwi ariya ekhethiweyo."
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Yonke Imida"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Cwangcisa umda macala onke eseli kwi ariya ekhetiweyo."
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Onke"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "All Borders"
+msgid "No Borders"
+msgstr "Yonke Imida"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Susa yonke imida kwi ariya ekhetiweyo."
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Amagqabantshintshi Omda"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Cwangcisa umda wamagqabantshintshi e ariya ekhetiweyo."
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+#| msgid "Border Outline"
+msgid "Outline"
+msgstr "Amagqabantshintshi Omda"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Umbala Womda"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "Khetha umda wesiqalo omtsha."
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Tshintsha Umbala Womda"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Faka Iiseli..."
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Faka iseli engananto kwiphepha iphepha elandisekayo."
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Susa Iiseli..."
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Susa kwiphepha elandisekayo iseli yangoku."
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+#| msgid "Clear &All"
+msgid "Clear All"
+msgstr "Cacisa &Konke"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Cima umxholo nokuformata kweseli yangoku."
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Clear Contents"
+msgstr "Gqabaza"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Susa iimixholo yeseli yangoku."
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Tshintsha Okubhaliweyo"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Cima Imiqolo"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "Gqabaza"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Hlela ugqabazo laleseli."
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Clear Comment"
+msgstr "Gqabaza"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "Susa ugqabazo lweseli."
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Susa Ugqabazo"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Remove Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Susa Ugqabazo"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Dibanisa Ugqabazo"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Conditional Cell Attributes..."
+msgid "Conditional Styles..."
+msgstr "Iziphumo Zeseli Esendaweni..."
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Cwangcisa i fomati eyenziwe isiseko seseli kwizixhomekeko ezithile."
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "Conditional Cell Attributes"
+msgid "Conditional Styles"
+msgstr "Iziphumo Zeseli Ezisendaweni"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Susa ukufomata kweseli esendaweni."
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Susa ukufomata kweseli esendaweni."
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Susa ukufomata kweseli esendaweni."
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Susa ukufomata kweseli esendaweni."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Yomeleza..."
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+"Yenza ushwankathelo lwammandla e data ukusuka kwiqela lwammandla afanayo."
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Consolidate"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Yomeleza /Qinisa"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Khuphela injongo yeseli kwibhodi eqhotyoshwayo."
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Hambisa iseli yenjongo kwibhodi eqhotyoshwayo."
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "Ukusuka &Kwifayile Yokubhaliweyo..."
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Faka i data esuka kwifayile yokubhaliweyo kwisalathisi sangoku indawo/ukhetho"
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Text File"
+msgstr "Ukusuka &Kwifayile Yokubhaliweyo..."
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, fuzzy, kde-format
+msgid "Cannot open input file."
+msgstr "Ayikwazi ukuvula igalelo lefayile!"
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "Ukusuka Kwifayile Yokubhaliweyo"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+#| msgid "Inserting Text File"
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Ukusuka Kwifayile Yokubhaliweyo"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Ukusuka Kwibhodi Eqhotyoshiweyo"
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"Faka i data ye cvs esuka kwibhodi eqhotyoshwayo kwisalathisi sangoku indawo/"
+"ukhetho"
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+#| msgid "From &Clipboard..."
+msgid "Clipboard"
+msgstr "Ukusuka &Kwibhodi eqhotyoshwayo..."
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Akukho data kwibhodi eqhotyoshiweyo."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Akukho data esebnzisekayo kwibhodi eqhotyoshwayo."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Ukusuka Kwibhodi Eqhotyoshiweyo"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+#| msgid "Inserting From Clipboard"
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Ukusuka Kwibhodi Eqhotyoshiweyo"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Okubhaliweyo Kwimihlathi..."
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Yandisa umxholo weseli kwimihlathi eminintsi"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Okubhaliweyo Kwimihlathi"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgid "Text to Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Okubhaliweyo Kwimihlathi"
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Yenza uluhlu lwesiko lokukhetha okanye ukugcwalisa ngokuzenzekelayo"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Lungisa ngendlela Uluhlu..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Edit Area"
+msgid "Add Named Area"
+msgstr "Hlela i Ariya"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, fuzzy, kde-format
+msgid "Enter the area name:"
+msgstr "Ngenisa igama:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Tshintsha Ikona"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Ikona:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+msgid "Automatic Format"
+msgstr "Ifomati Yeseli..."
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Khetha Ufihlo Kumqolo Ukubonisa"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Select Character"
+msgstr "Ucolo Oluthile..."
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "The text that will replace characters in old text"
+msgid "Insert the selected character in the text"
+msgstr "okubhaliweyo okuzakubuyisela abasebenzisi kokubhaliweyo okudala"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Ugqabazo Lweseli"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<akukho nanye>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "ilingana no"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "inkulu kune"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "incinane kune"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "ilingana no okanye inkulu kuna"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "ilingana no okanye incinane kuna"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "phakathi"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "Umqolo"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, fuzzy, kde-format
+msgid "different to"
+msgstr "yahlukile ku"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Imeko Yokuqala"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Imeko Yesibini"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Imeko Yesithathu"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Iseli yi"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, fuzzy, kde-format
+msgid "Cell style"
+msgstr "Iseli yi"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "yahlukile ku"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, fuzzy, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Ukuba ixabiso lokuqala lingaphezulu kunexabiso lokuphela inqwanqwa kufuneka "
+"libengaphantsi kunonothi!"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, fuzzy, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Ukuba ixabiso lokuqala lingaphezulu kunexabiso lokuphela inqwanqwa kufuneka "
+"libengaphantsi kunonothi!"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Yomeleza /Qinisa"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Amathuba"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, fuzzy, kde-format
+msgid "Standard Deviation"
+msgstr "Deviation Esezantsi"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Eyahlukileyo"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+msgid "You have to define at least one source range."
+msgstr "Kufuneka ukhethe umhlathi omnye!"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "Lona asingomhla osebenzayo!"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Ulungiso\n"
+"%1\n"
+"luncinane kakhulu"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Ulungiso\n"
+"%1\n"
+"lukhulu kakhulu"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, fuzzy, kde-format
+#| msgid "The source tables intersect with the destination table"
+msgid "The source range intersects the destination range."
+msgstr ""
+"Imvelaphi yendlela yokwenza imigca iwela ngokwahlukile kwindawo engqongileyo"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Ulungiso\n"
+"%1\n"
+"lwenziwe kwakhona"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Faka i Data Ukusuka Kwisiseko sedata"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Udidi:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Igama lesiseko sedata: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Inginginya:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Izibuko:\n"
+"(Ukuba iyafuneka)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Igama lomsebenzi:\n"
+"(ukuba iyafunwa)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Igama eligqithisiweyo:\n"
+"(ukuba iyafuneka)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Khetha indlela yokwenza imigca(ii):"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+msgid "Tables"
+msgstr "Amaxabiso"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Khetha umhlathi(imi):"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Table"
+msgstr "Indlela yokwenza imigca"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Imihlathi"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Telekisa zonke ezilandelayo (NE)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Telekisa naziphi na ezilandelayo (OR)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "ilingana no"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "ayilingani"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "kwi"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "ayingenanga"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "njenge"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "inkulu kune"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "encincane"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "inkulu okanye iyalingana kune"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "incincane okane ilingana no"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Ikhetwe ngu"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Iyehlela"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Enciphisayo"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Ecacileyo"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, fuzzy, kde-format
+msgid "Query Options"
+msgstr "Funa iinketho"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "Ukufuna kwe SQL:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Faka kwindawo ethile"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Umtya kwiseli"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Isiphumo"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+msgid "You cannot specify a table here."
+msgstr "Awukwazi ukuchaza indlela yokwenza imigca apha!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, fuzzy, kde-format
+msgid "You have to specify a valid region."
+msgstr "Kufuneka uchaze apha ummandla osebenzayo!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, fuzzy, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Kufuneka uchaze iseli elisebenzayo!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, fuzzy, kde-format
+msgid "Executing query failed."
+msgstr "Uphumezo lokufuna aluphumelelanga!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "Insert Data From Database"
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Faka i Data Ukusuka Kwisiseko sedata"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Isibuko kufuneka ibelinani"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Idibana nesiseko sedata..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Idityanisiwe. Ikhangela ulawzi lendlela yokwenza imigca..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Esisiseko sedata asiqulathanga iindlela zokwenza imigca"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Umqhubi akakwazanga ukulayishwa"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Ukufumana i meta ye data yendlela zokwenza imigca..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, fuzzy, kde-format
+msgid "You have to select at least one table."
+msgstr "Kufuneka ukhkethe indlela yokwenza umgca enye!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, fuzzy, kde-format
+msgid "You have to select at least one column."
+msgstr "Kufuneka ukhethe umhlathi omnye!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' or '?' ayizo wildcards ezisebenzayo kwi SQL. Ubuyiselo olulo zi '%' or "
+"'_'. Ungathanda ukuzibuyisela?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Septemba"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Document Settings"
+msgstr "Iparameters ze Locale"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "Ubalo lwendlela"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+msgid "Case sensitive"
+msgstr "Cola kwaye Ufake"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Ugqolo"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Ngokuzenzekela"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "String to compare with"
+msgid "String comparison:"
+msgstr "Umtya wokutelekisa nayo"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Regular Expressions"
+msgstr "Uchazo lwe Math"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Gqibezela Kwindlela ye Locale"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Ulwimi: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+msgid "Default number format: %1"
+msgstr "Ifomati yomhla"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+msgid "Long date format: %1"
+msgstr "Ifomati yomhla"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Short date format: %1"
+msgstr "Umhla omfutshane: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, fuzzy, kde-format
+msgid "Time format: %1"
+msgstr "Fomati yexesha"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+msgid "Currency format: %1"
+msgstr "Imali yeloo lizwe"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, fuzzy, kde-format
+msgid "More Options"
+msgstr "Funa iinketho"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Search entire sheet"
+msgstr "Okubhaliweyo okuthe nkqo"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Search in:"
+msgstr "Okubhaliweyo okuthe nkqo"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Cell Values"
+msgstr "Amaxabiso"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Comments"
+msgstr "Gqabaza"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Search direction:"
+msgstr "Imeko Yesibini"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "Ibonisa imiqolo efihlakeleyo."
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Fewer Options"
+msgstr "Funa iinketho"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Set Function"
+msgstr "<h2>Ngokwesivakalisi</h2><ul>u"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Faka umsebenzi"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr ""
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Lo msebenzi awuna parameters."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+msgid "Description is not available."
+msgstr "In&kcazelo kumhlathi"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Ukufuna Igowuli"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Yiya Kwiseli"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Enter cell:"
+msgstr "Ngenisa igama:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Insert"
+msgstr "Internet"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Yiya ngasekunene"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Yiya ngasezantsi"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Faka imiqolo"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Faka imihlathi"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Faka Iiseli"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "Susa Iseli"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Yiya ngasekhohlo"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Yiya ngasentla"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Susa imiqolo"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Susa imihlathi"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Susa Iiseli"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Faka Ikhonkco"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Internet Address"
+msgstr "Idilesi ye internet:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Idilesi ye internet:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "Email:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Email Address"
+msgstr "Idilesi ye internet:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+msgid "Email address:"
+msgstr "Okubhaliweyo kwe ariya akunanto!"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+msgid "Subject:"
+msgstr "&Injongo..."
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, fuzzy, kde-format
+msgid "File"
+msgstr "ifayile"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to File"
+msgstr "Ubungakanani Beseli"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Indawo ekuyo ifayile:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Recent file:"
+msgstr "&Inani leefayile ezisandukubakho:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, fuzzy, kde-format
+msgid "No Entries"
+msgstr "Ungeno:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to Cell"
+msgstr "Ubungakanani Beseli"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+msgid "Cell or Named Area:"
+msgstr "Susa Iseli"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, fuzzy, kde-format
+msgid "Custom Lists"
+msgstr "Lungisa ngendlela Uluhlu..."
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Save Changes"
+msgstr "Tshintsha Ikona"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Uluhlu:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Ungeno:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "&Add"
+msgid "Add"
+msgstr "&Yongeza"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, fuzzy, kde-format
+msgid "Cancel"
+msgstr "France"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, fuzzy, kde-format
+#| msgid "&New"
+msgid "New"
+msgstr "&Entsha"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, fuzzy, kde-format
+msgid "Modify"
+msgstr "&Dibanisa/Guqula kancinane ugqabazo..."
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, fuzzy, kde-format
+#| msgid "Co&py"
+msgid "Copy"
+msgstr "Co&la"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Ufuna okwenene ukususa olu luhlu?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+msgid "Remove List"
+msgstr "Susa Iseli"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"I ariya yongeno inento.\n"
+"Ufuna ukuqhubekeka?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+msgid "Named Areas"
+msgstr "Susa Iseli"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Ariya: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Iiseli:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Iphepha:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Igama le ariya:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, fuzzy, kde-format
+msgid "&Remove"
+msgstr "&Susa Ugqabazo"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+#| msgid "Do you really want to remove this area name?"
+msgid "Do you really want to remove this named area?"
+msgstr "Ufuna okwenene ukususa eli gama le ariya?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+msgid "Remove Named Area"
+msgstr "Susa Iseli"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+msgid "The provided region is not valid."
+msgstr "Ubhekiso lweseli alisebenzi!"
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Cola Ufakelo Lweeseli"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+msgid "Select Source"
+msgstr "Ucolo Oluthile..."
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+msgid "Add Filter"
+msgstr "ifayile"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "Iyasebenza"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Yenza ubungakanani kwakhona Bomqolo"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Ubude:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Yenza ubungakanani kwakhona Bomhlathi"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Ububanzi:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Uphawu"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Series"
+msgstr "Faka uphawu."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Faka Amaxabiso"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Faka uphawu nkqo, enye ezantsi kwenye"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Faka uphawu nkqo, ukusuka ekohlo ukuya ekunene"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Eyelayini (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Yenza iimphawu' ukusuka 'ekuqaleni' ukuya 'ekupheleni' kwayelo kulo naluphi "
+"unyatheloyongeza eloxabiso elinikiwyo kwinqwanqwa. Oku kwenza uphawu apho "
+"ixabiso ngalinye 'inqwanqwa' elikhulu kunexabiso langaphambili kwayo."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Ulwazi lwezibalo (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Yenza uphawu ukusuka  'uqalo' ukuya 'kwisiphelo ngalolonke ixesha phinda "
+"phinda ixabiso ngexabiso elinikiweyo kwindlela yokwenza izinto enikiweyo. "
+"Usebenziso lwenyathelo lika 5 lenza uluhlu njenge: 5, 25, 125, 625 kuba 5 xa "
+"ephinda phindiweyo ngo 5 (inqwanqwa) lilingana 25, xa iphinda phindiweyo ngo "
+"5 ilingana 125, xa iphinda phindwe linyathelo lexabiso elifanayo no 5 "
+"lilingana no 625."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Qala ixabiso:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Yima ixabiso:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Qala ixabiso:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+msgid "End and start value must be positive."
+msgstr "Ixabiso lokuqala nelesiphelo kefuneka libenesiphumelo!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, fuzzy, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Ixabiso lesiphelo kufuneka libelikulu kunexabiso loqaliso okanye inqwanqwa "
+"kumele libengaphantsi kune '1'!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, fuzzy, kde-format
+msgid "Step is negative."
+msgstr "Inqwanqwa liyakhatywa!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, fuzzy, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Ixabiso lenqwanqwa kufuneka libengaphezulu kunonothi. Kungenjalo uphawu "
+"lwelayine alizukuphela!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, fuzzy, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Ukuba ixabiso lokuqala lingaphezulu kunexabiso lokuphela inqwanqwa kufuneka "
+"libengaphantsi kunonothi!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, fuzzy, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Ukuba inqwanqwa alinasiphumelo, ixabiso lokuqala kufuneka libengaphezulu "
+"ixabiso lokuphela!"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, fuzzy, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Khetha Ufihlo Kumqolo Ukubonisa"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Khetha Umhlathi Ofihliweyo Ukubonisa"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Umhlathi %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Umqolo %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "&Umqolo wokuqala uqulathe okubhaliweyo okuphezulu"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "&Umqolo wokuqala uqulathe okubhaliweyo okuphezulu"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Khetha"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+msgid "Case Insensitive"
+msgstr "Cola kwaye Ufake"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Ucolo Oluthile"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, fuzzy, kde-format
+msgid "Paste"
+msgstr "Isakhelo"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, fuzzy, kde-format
+msgid "Style"
+msgstr "Uhlobo:"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, fuzzy, kde-format
+msgid "All Styles"
+msgstr "Uhlobo:"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Custom Styles"
+msgstr "Lungisa ngendlela Uluhlu..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, fuzzy, kde-format
+msgid "Hierarchical"
+msgstr "Ngokwezimali"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, fuzzy, kde-format
+msgid "&New..."
+msgstr "&Entsha"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, fuzzy, kde-format
+msgid "&Modify..."
+msgstr "&Dibanisa/Guqula kancinane ugqabazo..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, fuzzy, kde-format
+msgid "&Delete..."
+msgstr "&Ukhangelo Lwesiphumo..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, fuzzy, kde-format
+msgid "style%1"
+msgstr "Uhlobo:"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Subtotals"
+msgstr "&Khetha..."
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, fuzzy, kde-format
+msgid "Remove All"
+msgstr "Susa Iseli"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, fuzzy, kde-format
+msgid "Column '%1' "
+msgstr "Umhlathi %1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, fuzzy, kde-format
+msgid "StDev"
+msgstr "Inqwanqwa"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, fuzzy, kde-format
+msgid "StDevP"
+msgstr "Inqwanqwa"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, fuzzy, kde-format
+msgid "Var"
+msgstr "Matshi"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, fuzzy, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Kufuneka ukhethe umhlathi omnye!"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Usebenzo"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Cacisa &Konke"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Vumela:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Inani elipheleleyo"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Ubude Bokubhaliweyo"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, fuzzy, kde-format
+msgid "List"
+msgstr "Uluhlu:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Idata:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, fuzzy, kde-format
+msgid "Minimum:"
+msgstr "Encinane: "
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, fuzzy, kde-format
+msgid "Maximum:"
+msgstr "Enkulu: "
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Umhla: "
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, fuzzy, kde-format
+msgid "Date minimum:"
+msgstr "Ubuncinane bomhla"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, fuzzy, kde-format
+msgid "Date maximum:"
+msgstr "Ubukhulu bomhla"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Ixesha:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, fuzzy, kde-format
+msgid "Time minimum:"
+msgstr "Ubuncinane bexesha"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, fuzzy, kde-format
+msgid "Time maximum:"
+msgstr "Ubukhulu bexesha"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Inani:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, fuzzy, kde-format
+msgid "Entries:"
+msgstr "Ungeno:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "&Ulumkiso Lwemposiso"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, fuzzy, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "&Bonisa umyalezo wemposiso"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Intshukumo:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, fuzzy, kde-format
+msgid "Warning"
+msgstr "Shicilela umqolo:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Iwonga:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Umyalezo:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, fuzzy, kde-format
+msgid "This is not a valid value."
+msgstr "Eli ayiloxabiso elisebenzayo!"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, fuzzy, kde-format
+msgid "This is not a valid time."
+msgstr "Eli asiloxesha elisebenzayo!"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, fuzzy, kde-format
+msgid "This is not a valid date."
+msgstr "Lona asingomhla osebenzayo!"
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "Iparameters ze Locale"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+msgid "Show document settings dialog"
+msgstr "Bonisa isalathiso &sogqabazo"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Hlela iseli ephawulweyo."
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Guqula kancinane Iseli"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute fixation"
+msgstr "Ugqolo"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Cola umxholo webhodi eqhotyoshwayo kwisalathisi"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+msgid "Fill &Down"
+msgstr "&Umqolo"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+msgid "Fill &Left"
+msgstr "&OKubhaliweyo"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+msgid "Fill &Right"
+msgstr "Umlinganiselo:"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Ukhetho Lwefomula"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Septemba"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Select Font..."
+msgstr "Khetha Ubungakanani begama..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "Cwangcisa ufomato lweseli."
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Tshintsha Ubungakanani bamagama"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Khetha Ubungakanani Bomgca"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "Cwangcisa ufomato lweseli."
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+#| msgid "Select Font Size"
+msgid "Font Size"
+msgstr "Khetha Ubungakanani Bomgca"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Set the text color"
+msgstr "Cwangcisa umbala wesiqalo."
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Umbala Wokubhaliweyo"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Umsebenzi..."
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "Insert math expression"
+msgstr "Faka uchazo lwe math."
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Ukhetho Lwefomula"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+msgid "Insert a function"
+msgstr "Faka umsebenzi."
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Ezinye..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&Ukhangelo Lwesiphumo..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Uphindo lobalo ukufumana ixabiso elikhankanyiweyo"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, fuzzy, kde-format
+msgid "Cell reference is invalid."
+msgstr "Ubhekiso lweseli alisebenzi!"
+
+#: ui/actions/GoalSeek.cpp:75
+#, fuzzy, kde-format
+msgid "Target value is invalid."
+msgstr "Eli asiloxesha elisebenzayo!"
+
+#: ui/actions/GoalSeek.cpp:84
+#, fuzzy, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Imvelaphi yeseli kufuneka iqulathe ixabiso lenani!"
+
+#: ui/actions/GoalSeek.cpp:90
+#, fuzzy, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Itekeni leseli kufeka liqulathe i fomula!"
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Ukhangelo lwesiphumo nge seli %1 ifumane impendulo:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Ukhangelo lwesiphumo nge seli %1 AYIFUMANANGA mpendulo."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Iseli ye Yegoto..."
+
+#: ui/actions/Goto.cpp:25
+#, fuzzy, kde-format
+msgid "Move to a particular cell"
+msgstr "Hambisa iseli elithile."
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+#| msgid "Goto Cell"
+msgid "Goto"
+msgstr "Yiya Kwiseli"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+msgid "That is not a valid cell."
+msgstr "Eli asiloxesha elisebenzayo!"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Nciphisa Ulwenzo lwamathanda"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Yandisa Ulwenziwo lwamathanda"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "Nciphisa uphawu."
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "Yandisa ukwenziwa kwamathanda."
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Yandisa Ulwenziwo lwamathanda"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Nciphisa Ulwenzo lwamathanda"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "Ukusuka &Kwisiseko sedata..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Faka i data esuka kwisiseko sedata ye SQL"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Akukho mqhubi wesiseko sedata esikhoyo! Kufuneka uqokolele nabaqhubi "
+"abafunwayo."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Uphawu..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "Faka uphawu."
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Faka uphawu."
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, fuzzy, kde-format
+msgid "S&pecial Character..."
+msgstr "Ucolo Oluthile..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Ikhonkco..."
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Faka ikhonkco eliphezulu le internet."
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Link"
+msgstr "Faka Ikhonkco"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Remove a link"
+msgstr "Susa indlela yemigca"
+
+#: ui/actions/Link.cpp:74
+#, fuzzy, kde-format
+msgid "Remove Link"
+msgstr "Susa Iseli"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Susa Iseli"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Faka Ikhonkco"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Uluhlu Lokhetho..."
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Dibanisa Iiseli"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Dibanisa Iiseli"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Suku zoyamanisa Iiseli"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Igama Le ariya..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Cwangcisa igama yommandla iphepha elongezelekayo"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+msgid "Replace Named Area"
+msgstr "Bonisa i ariya enikwe igama"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Bonisa i ariya enikwe igama"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Edit or select named areas"
+msgstr "Bonisa i ariya enikwe igama"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Show Area..."
+msgid "Named Areas..."
+msgstr "Bonisa i Ariya..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Row"
+msgstr "Susa Imihlathi"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+msgid "Row Break"
+msgstr "inkulu kune"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Column"
+msgstr "Susa Imihlathi"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+msgid "Column Break"
+msgstr "Inani Lesibini"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Cola umxholo webhodi eqhotyoshwayo kwisalathisi"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Ucolo Oluthile..."
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Cola umxholo webhodi eqhotyoshiweyo ngenkhetho ezikhethekileyo."
+
+#: ui/actions/Paste.cpp:153
+#, fuzzy, kde-format
+msgid "Paste with Insertion"
+msgstr "Cola Ngofako..."
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Ifakelela iseli ukusuka kwibodi eqhotyoshwayo kwiphepha elongezekayo."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "&Pivot Tables..."
+msgstr "&Khetha..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "Create Pivot Tables"
+msgstr "&Khetha..."
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Kufuneka ukhethe iiseli ezininzi."
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Bala kwakhona ixabiso leseli nganye kwiphepha "
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet..."
+msgid "Show QTableView..."
+msgstr "Bonisa Ikhasi..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Khetha..."
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+msgid "Sort a group of cells"
+msgstr "Khetha iqela leseli."
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Khetha &Ngokwandisa"
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+"Khetha iqela leseli ngokunyuka eyokuqala ukuya kweyokugqibela) ngendlela."
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "Khetha &Ngokunciphisa"
+
+#: ui/actions/Sort.cpp:145
+#, fuzzy, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+"Khetha iqela leeseli ngokunciphisa (eyokugqibela kweyokuqala) ngendlela."
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Khetha Indlela yokwahlukanisa xa ukhetha"
+
+#: ui/actions/SpellCheck.cpp:84
+#, fuzzy, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Ingaba uyafuna ukukhangela upelo kwindlela yokwenza umgca olandelayo?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Yisa kwikhasi elilandelayo."
+
+#: ui/actions/SpellCheck.cpp:237
+#, fuzzy, kde-format
+msgid "Check the spelling"
+msgstr "Khangela upelo."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Ifomati Yeseli..."
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "Cwangcisa ufomato lweseli."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Amagama amakhulu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, fuzzy, kde-format
+msgid "Italic"
+msgstr "Italy"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Faka umgca ngaphantsi"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Khupha Ngaphandle"
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Yenza iseli okubhaliweyo kusongeleke kwiilayini eziphanda-phindiweyo."
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Wrap Text"
+msgstr "Okubhaliweyo okuthe nkqo"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+msgid "Wrap"
+msgstr "Okubhaliweyo okuthe nkqo"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Okubhaliweyo okuthe nkqo"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Print cell contents vertically"
+msgstr "Shicilela imixholo yeseli ngokuthe nkqo."
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Okubhaliweyo Okuthe nkqo"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Okubhaliweyo Okuthe nkqo"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Number Format"
+msgstr "Inani lovavanyo"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "Cwangcisa ufomato lweseli."
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Inani lokuqala"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Scientific Format"
+msgstr "Enobunzulu lwazi"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "Cwangcisa ufomato lweseli lubonakale njenge pesenti."
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Enobunzulu lwazi"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Enobunzulu lwazi"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Ifomati Yepesenti"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Cwangcisa ufomato lweseli lubonakale njenge pesenti."
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Ipesenti"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Format Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Ipesenti ye Fomati"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Ifomati Yemali"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Cwangcisa i fomati yeseli ikhangeleke njengemali yeloo lizwe."
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Imali"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format Money"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Imali Yefomati"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Date Format"
+msgstr "Ifomati yomhla"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "Cwangcisa ufomato lweseli."
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Formati"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "Cwangcisa ufomato lweseli."
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Time Format"
+msgstr "Fomati yexesha"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Formati"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Yandisa Ubungakanani Bomgca"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Nciphisa Ubungakanani Bomgca"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Yandisa Okuyilelwe umsebenzi ongundoqo"
+
+#: ui/actions/Style.cpp:532
+#, fuzzy, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Yandisa ugqolo lwenani leshumi eliboniswe ekhusini."
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Nciphisa Okuyilelwe umsebenzi ongundoqo"
+
+#: ui/actions/Style.cpp:551
+#, fuzzy, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Nciphisa ugqolo lwenani leshumi ezantsi kwekhusi eliphezulu."
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Increase Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Yandisa Okuyilelwe umsebenzi ongundoqo"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Decrease Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Nciphisa Okuyilelwe umsebenzi ongundoqo"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "Icwangcisa kokungagqibekanga kwe formati."
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Uhlobo Lwephetshana"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Umbala Wesiqalo"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Set the background color"
+msgstr "Cwangcisa umbala wesiqalo."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create Style From Cell..."
+msgstr "&Yenza i Template Ukusuka Kuxwebhu..."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Cwangcisa umphezulu womda kwi ariya ekhethiweyo."
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "Style of Cell"
+msgid "Style From Cell"
+msgstr "Uhlobo Lweseli"
+
+#: ui/actions/Styles.cpp:53
+#, fuzzy, kde-format
+msgid "Create Style From Cell"
+msgstr "&Yenza i Template Ukusuka Kuxwebhu..."
+
+#: ui/actions/Styles.cpp:61
+#, fuzzy, kde-format
+msgid "The style name cannot be empty."
+msgstr "Igama lephepha alikwazi ukungabinanto."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, fuzzy, kde-format
+msgid "A style with this name already exists."
+msgstr "Ifayile sele ikhona"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr ""
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Cwangcisa umphezulu womda kwi ariya ekhethiweyo."
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "&Subtotals..."
+msgstr "&Khetha..."
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Yenza ku a okanye."
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "&Khetha..."
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+#| msgid "Upper Case"
+msgid "Upper"
+msgstr "Umzekelo Ongasentla"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+#| msgid "Power"
+msgid "Lower"
+msgstr "Amandla"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+msgid "First Letter Upper"
+msgstr "Guqulela unobumba wokuqala &kumzekelo ongentla"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Guqulela unobumba wokuqala &kumzekelo ongentla"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Guqulela unobumba wokuqala &kumzekelo ongentla"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Guqulela unobumba wokuqala &kumzekelo ongentla"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Umzekelo Ongasentla"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Umzekelo Ongezantsi"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Guqulela Unobumba Wokuqala Kumzekelo Ongentla"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Guqulela unobumba wokuqala kumzekelo ongentla."
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Guqulela unobumba wokuqala kumzekelo ongentla"
+
+#: ui/actions/TextCase.cpp:112
+#, fuzzy, kde-format
+msgid "Capitalize the first letter"
+msgstr "Yenza unobumba wokuqala abeligama elikhulu."
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Tshintsha Ikona"
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Cwangcisa uvavanyo ukuqinisekisa ukuba iseli ye data iyasebenza."
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Usebenzo..."
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Susa uvavanyo loqinisekiso kwiseli."
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "Susa indlela yemigca"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Susa indlela yemigca"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Ugwebo Olusebenzayo"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14540,12 +17751,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Susa Iiseli"
 
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Cima Imiqolo"
-
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
 msgctxt "(qtundo-format)"
@@ -14802,12 +18007,6 @@ msgstr ""
 msgid "Roman"
 msgstr "eRomania"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, fuzzy, kde-format
-msgid "Italic"
-msgstr "Italy"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14825,12 +18024,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Eqhelekileyo"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Amagama amakhulu"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14843,12 +18036,6 @@ msgstr "Umbala:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Faka umgca ngaphantsi"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14986,11 +18173,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Ipesenti"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15003,11 +18185,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Imali"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15018,11 +18195,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Enobunzulu lwazi"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15227,11 +18399,6 @@ msgstr "Amasuntswana amathathu 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, fuzzy, kde-format
-msgid "Style"
-msgstr "Uhlobo:"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 msgctxt "Name of the style"
@@ -15242,11 +18409,6 @@ msgstr "igama"
 #, fuzzy, kde-format
 msgid "Inherit style:"
 msgstr "Uhlobo Lwephetshana"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, fuzzy, kde-format
-msgid "A style with this name already exists."
-msgstr "Ifayile sele ikhona"
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -15292,12 +18454,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Esezantsi"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, fuzzy, kde-format
-msgid "Center"
-msgstr "Yenza umgca Abesembindini"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15329,24 +18485,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Ephakathi"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, fuzzy, kde-format
-msgid "Bottom"
-msgstr "Yenza umgca Ngasezantsi"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15509,20 +18647,10 @@ msgstr "Apreli"
 msgid "Apply changes"
 msgstr "Uhlobo:"
 
-#: ui/ExternalEditor.cpp:60
-#, fuzzy, kde-format
-msgid "Cancel"
-msgstr "France"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Onke"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -15592,394 +18720,13 @@ msgstr ""
 #~ msgid " (=[hh]:mm)"
 #~ msgstr "mm"
 
-#~ msgid "&Function..."
-#~ msgstr "&Umsebenzi..."
-
-#, fuzzy
-#~ msgid "Insert math expression"
-#~ msgstr "Faka uchazo lwe math."
-
-#~ msgid "From &Database..."
-#~ msgstr "Ukusuka &Kwisiseko sedata..."
-
-#, fuzzy
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Faka i data esuka kwisiseko sedata ye SQL"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Ukhetho Lwefomula"
-
-#, fuzzy
-#~ msgid "Insert a function"
-#~ msgstr "Faka umsebenzi."
-
-#~ msgid "Others..."
-#~ msgstr "Ezinye..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Guqula kancinane Iseli"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Hlela iseli ephawulweyo."
-
-#, fuzzy
-#~| msgid "Show Sheet..."
-#~ msgid "Show QTableView..."
-#~ msgstr "Bonisa Ikhasi..."
-
 #, fuzzy
 #~ msgid "Permute reference fixation"
 #~ msgstr "Ugqolo"
 
 #, fuzzy
-#~ msgid "Permute fixation"
-#~ msgstr "Ugqolo"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Cola umxholo webhodi eqhotyoshwayo kwisalathisi"
-
-#, fuzzy
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Akukho mqhubi wesiseko sedata esikhoyo! Kufuneka uqokolele nabaqhubi "
-#~ "abafunwayo."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Faka i Data Ukusuka Kwisiseko sedata"
-
-#~ msgid "Type:"
-#~ msgstr "Udidi:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Igama lomsebenzi:\n"
-#~ "(ukuba iyafunwa)"
-
-#~ msgid "Host:"
-#~ msgstr "Inginginya:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Izibuko:\n"
-#~ "(Ukuba iyafuneka)"
-
-#~ msgid "Database name: "
-#~ msgstr "Igama lesiseko sedata: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Igama eligqithisiweyo:\n"
-#~ "(ukuba iyafuneka)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Khetha indlela yokwenza imigca(ii):"
-
-#, fuzzy
-#~ msgid "Tables"
-#~ msgstr "Amaxabiso"
-
-#~ msgid "Select columns:"
-#~ msgstr "Khetha umhlathi(imi):"
-
-#, fuzzy
-#~ msgid "Table"
-#~ msgstr "Indlela yokwenza imigca"
-
-#~ msgid "Columns"
-#~ msgstr "Imihlathi"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Telekisa zonke ezilandelayo (NE)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Telekisa naziphi na ezilandelayo (OR)"
-
-#~ msgid "equals"
-#~ msgstr "ilingana no"
-
-#~ msgid "not equal"
-#~ msgstr "ayilingani"
-
-#~ msgid "in"
-#~ msgstr "kwi"
-
-#~ msgid "not in"
-#~ msgstr "ayingenanga"
-
-#~ msgid "like"
-#~ msgstr "njenge"
-
-#~ msgid "greater"
-#~ msgstr "inkulu kune"
-
-#~ msgid "lesser"
-#~ msgstr "encincane"
-
-#~ msgid "greater or equal"
-#~ msgstr "inkulu okanye iyalingana kune"
-
-#~ msgid "less or equal"
-#~ msgstr "incincane okane ilingana no"
-
-#~ msgid "Sorted by"
-#~ msgstr "Ikhetwe ngu"
-
-#~ msgid "Ascending"
-#~ msgstr "Iyehlela"
-
-#~ msgid "Descending"
-#~ msgstr "Enciphisayo"
-
-#~ msgid "Distinct"
-#~ msgstr "Ecacileyo"
-
-#, fuzzy
-#~ msgid "Query Options"
-#~ msgstr "Funa iinketho"
-
-#~ msgid "SQL query:"
-#~ msgstr "Ukufuna kwe SQL:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Faka kwindawo ethile"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Umtya kwiseli"
-
-#~ msgid "Result"
-#~ msgstr "Isiphumo"
-
-#, fuzzy
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Awukwazi ukuchaza indlela yokwenza imigca apha!"
-
-#, fuzzy
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Kufuneka uchaze apha ummandla osebenzayo!"
-
-#, fuzzy
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Kufuneka uchaze iseli elisebenzayo!"
-
-#, fuzzy
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Awuvumelekanga utshintshe i data kwisiseko sedata!"
-
-#, fuzzy
-#~ msgid "Executing query failed."
-#~ msgstr "Uphumezo lokufuna aluphumelelanga!"
-
-#, fuzzy
-#~| msgid "Insert Data From Database"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Faka i Data Ukusuka Kwisiseko sedata"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Isibuko kufuneka ibelinani"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Idibana nesiseko sedata..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Idityanisiwe. Ikhangela ulawzi lendlela yokwenza imigca..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Esisiseko sedata asiqulathanga iindlela zokwenza imigca"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Umqhubi akakwazanga ukulayishwa"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Ukufumana i meta ye data yendlela zokwenza imigca..."
-
-#, fuzzy
-#~ msgid "You have to select at least one table."
-#~ msgstr "Kufuneka ukhkethe indlela yokwenza umgca enye!"
-
-#, fuzzy
-#~ msgid "You have to select at least one column."
-#~ msgstr "Kufuneka ukhethe umhlathi omnye!"
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' or '?' ayizo wildcards ezisebenzayo kwi SQL. Ubuyiselo olulo zi '%' "
-#~ "or '_'. Ungathanda ukuzibuyisela?"
-
-#~ msgid "Insert function"
-#~ msgstr "Faka umsebenzi"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Lo msebenzi awuna parameters."
-
-#, fuzzy
-#~ msgid "Description is not available."
-#~ msgstr "In&kcazelo kumhlathi"
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "Iparameters ze Locale"
-
-#, fuzzy
-#~ msgid "Show document settings dialog"
-#~ msgstr "Bonisa isalathiso &sogqabazo"
-
-#, fuzzy
-#~ msgid "Document Settings"
-#~ msgstr "Iparameters ze Locale"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "Ubalo lwendlela"
-
-#, fuzzy
-#~ msgid "Case sensitive"
-#~ msgstr "Cola kwaye Ufake"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Ugqolo"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Ngokuzenzekela"
-
-#, fuzzy
-#~| msgid "String to compare with"
-#~ msgid "String comparison:"
-#~ msgstr "Umtya wokutelekisa nayo"
-
-#, fuzzy
-#~ msgid "Regular Expressions"
-#~ msgstr "Uchazo lwe Math"
-
-#, fuzzy
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Gqibezela Kwindlela ye Locale"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Ulwimi: %1"
-
-#, fuzzy
-#~ msgid "Default number format: %1"
-#~ msgstr "Ifomati yomhla"
-
-#, fuzzy
-#~ msgid "Long date format: %1"
-#~ msgstr "Ifomati yomhla"
-
-#, fuzzy
-#~ msgid "Short date format: %1"
-#~ msgstr "Umhla omfutshane: %1"
-
-#, fuzzy
-#~ msgid "Time format: %1"
-#~ msgstr "Fomati yexesha"
-
-#, fuzzy
-#~ msgid "Currency format: %1"
-#~ msgstr "Imali yeloo lizwe"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Lungisa ngendlela Uluhlu..."
-
-#, fuzzy
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "Yenza uluhlu lwesiko lokukhetha okanye ukugcwalisa ngokuzenzekelayo"
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Bala kwakhona ixabiso leseli nganye kwiphepha "
-
-#, fuzzy
-#~ msgid "Custom Lists"
-#~ msgstr "Lungisa ngendlela Uluhlu..."
-
-#~ msgid "List:"
-#~ msgstr "Uluhlu:"
-
-#~ msgid "Entry:"
-#~ msgstr "Ungeno:"
-
-#, fuzzy
-#~| msgid "&Add"
-#~ msgid "Add"
-#~ msgstr "&Yongeza"
-
-#, fuzzy
-#~| msgid "&New"
-#~ msgid "New"
-#~ msgstr "&Entsha"
-
-#, fuzzy
-#~ msgid "Remove"
-#~ msgstr "Susa Iseli"
-
-#, fuzzy
-#~ msgid "Modify"
-#~ msgstr "&Dibanisa/Guqula kancinane ugqabazo..."
-
-#, fuzzy
-#~| msgid "Co&py"
-#~ msgid "Copy"
-#~ msgstr "Co&la"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Ufuna okwenene ukususa olu luhlu?"
-
-#, fuzzy
-#~ msgid "Remove List"
-#~ msgstr "Susa Iseli"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "I ariya yongeno inento.\n"
-#~ "Ufuna ukuqhubekeka?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Ukhangelo Lwesiphumo..."
-
-#, fuzzy
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Uphindo lobalo ukufumana ixabiso elikhankanyiweyo"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Ukufuna Igowuli"
-
-#, fuzzy
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Ubhekiso lweseli alisebenzi!"
-
-#, fuzzy
-#~ msgid "Target value is invalid."
-#~ msgstr "Eli asiloxesha elisebenzayo!"
-
-#, fuzzy
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Imvelaphi yeseli kufuneka iqulathe ixabiso lenani!"
-
-#, fuzzy
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Itekeni leseli kufeka liqulathe i fomula!"
 
 #~ msgid "Starting..."
 #~ msgstr "Iqala..."
@@ -15989,12 +18736,6 @@ msgstr ""
 
 #~ msgid "New value:"
 #~ msgstr "Ixabiso elitsha:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Ukhangelo lwesiphumo nge seli %1 ifumane impendulo:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Ukhangelo lwesiphumo nge seli %1 AYIFUMANANGA mpendulo."
 
 #~ msgid "Set cell:"
 #~ msgstr "Cwangcisa iseli:"
@@ -16012,97 +18753,6 @@ msgstr ""
 
 #~ msgid "Current value:"
 #~ msgstr "Ixabiso elikhoyo:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Septemba"
-
-#~ msgid "Selection List..."
-#~ msgstr "Uluhlu Lokhetho..."
-
-#, fuzzy
-#~ msgid "More Options"
-#~ msgstr "Funa iinketho"
-
-#, fuzzy
-#~ msgid "Search entire sheet"
-#~ msgstr "Okubhaliweyo okuthe nkqo"
-
-#, fuzzy
-#~ msgid "Search in:"
-#~ msgstr "Okubhaliweyo okuthe nkqo"
-
-#, fuzzy
-#~ msgid "Cell Values"
-#~ msgstr "Amaxabiso"
-
-#, fuzzy
-#~ msgid "Comments"
-#~ msgstr "Gqabaza"
-
-#, fuzzy
-#~ msgid "Search direction:"
-#~ msgstr "Imeko Yesibini"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "Ibonisa imiqolo efihlakeleyo."
-
-#, fuzzy
-#~ msgid "Fewer Options"
-#~ msgstr "Funa iinketho"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Ifomati Yeseli..."
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "Cwangcisa ufomato lweseli."
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Hambisa iseli yenjongo kwibhodi eqhotyoshwayo."
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Khuphela injongo yeseli kwibhodi eqhotyoshwayo."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Cola umxholo webhodi eqhotyoshwayo kwisalathisi"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Ucolo Oluthile..."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Cola umxholo webhodi eqhotyoshiweyo ngenkhetho ezikhethekileyo."
-
-#, fuzzy
-#~ msgid "Paste with Insertion"
-#~ msgstr "Cola Ngofako..."
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr ""
-#~ "Ifakelela iseli ukusuka kwibodi eqhotyoshwayo kwiphepha elongezekayo."
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Cola Ufakelo Lweeseli"
-
-#, fuzzy
-#~ msgid "Insert"
-#~ msgstr "Internet"
-
-#~ msgid "Move towards right"
-#~ msgstr "Yiya ngasekunene"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Yiya ngasezantsi"
-
-#~ msgid "Special Paste"
-#~ msgstr "Ucolo Oluthile"
 
 #, fuzzy
 #~ msgid "Content"
@@ -16137,39 +18787,14 @@ msgstr ""
 #~ msgstr "Ulwahlulo"
 
 #, fuzzy
-#~ msgid "Check the spelling"
-#~ msgstr "Khangela upelo."
-
-#, fuzzy
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr ""
-#~ "Ingaba uyafuna ukukhangela upelo kwindlela yokwenza umgca olandelayo?"
-
-#, fuzzy
 #~| msgid "Correct Misspelled Word"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Lungisa Igama Elipelwe kakubi"
 
 #, fuzzy
-#~ msgid "Auto-Format..."
-#~ msgstr "Ifomati Yeseli..."
-
-#, fuzzy
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Cwangcisa ufomato lwekhasi lomsebenzi."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Ifomati Yeseli..."
-
-#~ msgid "Sheet Style"
-#~ msgstr "Uhlobo Lwephetshana"
-
-#, fuzzy
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Khetha Ufihlo Kumqolo Ukubonisa"
 
 #, fuzzy
 #~ msgid "Could not find image %1."
@@ -16180,111 +18805,8 @@ msgstr ""
 #~ msgstr "Ayinakuwulayisha umfanekiso %1"
 
 #, fuzzy
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Ayinakuyifumana indlela yemigca-uhlobo XML ifayile '%1'"
-
-#, fuzzy
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Imposiso yenkcaza ikwindlela yemigca-uhlobo XML ifayile %1"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgid "&Auto-Filter"
-#~ msgstr "Gcwalisa ngokuzenzekela ugcwaliso"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Gcwalisa ngokuzenzekela ugcwaliso"
-
-#, fuzzy
-#~| msgid "Clear &All"
-#~ msgid "Clear All"
-#~ msgstr "Cacisa &Konke"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Cima umxholo nokuformata kweseli yangoku."
-
-#, fuzzy
 #~ msgid "Contents"
 #~ msgstr "Gqabaza"
-
-#, fuzzy
-#~ msgid "Clear Contents"
-#~ msgstr "Gqabaza"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Susa iimixholo yeseli yangoku."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Tshintsha Okubhaliweyo"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Susa ukufomata kweseli esendaweni."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Susa ukufomata kweseli esendaweni."
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "Khetha umda wesiqalo omtsha."
-
-#~ msgid "Border Color"
-#~ msgstr "Umbala Womda"
-
-#, fuzzy
-#~ msgid "Set the background color"
-#~ msgstr "Cwangcisa umbala wesiqalo."
-
-#~ msgid "Background Color"
-#~ msgstr "Umbala Wesiqalo"
-
-#, fuzzy
-#~| msgid "Conditional Cell Attributes..."
-#~ msgid "Conditional Styles..."
-#~ msgstr "Iziphumo Zeseli Esendaweni..."
-
-#, fuzzy
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Cwangcisa i fomati eyenziwe isiseko seseli kwizixhomekeko ezithile."
-
-#, fuzzy
-#~| msgid "Conditional Cell Attributes"
-#~ msgid "Conditional Styles"
-#~ msgstr "Iziphumo Zeseli Ezisendaweni"
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Susa ukufomata kweseli esendaweni."
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Susa ukufomata kweseli esendaweni."
-
-#, fuzzy
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&Khetha..."
-
-#, fuzzy
-#~ msgid "Create Pivot Tables"
-#~ msgstr "&Khetha..."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Kufuneka ukhethe iiseli ezininzi."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Inani lovavanyo"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -16295,92 +18817,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Ifomati Yepesenti"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Fomati yexesha"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Ifomati yomhla"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Enobunzulu lwazi"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Tshintsha Umbala Womda"
-
-#~ msgid "<none>"
-#~ msgstr "<akukho nanye>"
-
-#~ msgid "equal to"
-#~ msgstr "ilingana no"
-
-#~ msgid "greater than"
-#~ msgstr "inkulu kune"
-
-#~ msgid "less than"
-#~ msgstr "incinane kune"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "ilingana no okanye inkulu kuna"
-
-#~ msgid "equal to or less than"
-#~ msgstr "ilingana no okanye incinane kuna"
-
-#~ msgid "between"
-#~ msgstr "phakathi"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "Umqolo"
-
-#, fuzzy
-#~ msgid "different to"
-#~ msgstr "yahlukile ku"
-
-#~ msgid "First Condition"
-#~ msgstr "Imeko Yokuqala"
-
-#~ msgid "Second Condition"
-#~ msgstr "Imeko Yesibini"
-
-#~ msgid "Third Condition"
-#~ msgstr "Imeko Yesithathu"
-
-#~ msgid "Cell is"
-#~ msgstr "Iseli yi"
-
-#, fuzzy
-#~ msgid "Cell style"
-#~ msgstr "Iseli yi"
-
-#~ msgid "different from"
-#~ msgstr "yahlukile ku"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Ukuba ixabiso lokuqala lingaphezulu kunexabiso lokuphela inqwanqwa "
-#~ "kufuneka libengaphantsi kunonothi!"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Ukuba ixabiso lokuqala lingaphezulu kunexabiso lokuphela inqwanqwa "
-#~ "kufuneka libengaphantsi kunonothi!"
-
-#, fuzzy
-#~ msgid "Select Source"
-#~ msgstr "Ucolo Oluthile..."
 
 #, fuzzy
 #~ msgid "Current Selection"
@@ -16404,10 +18840,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Field"
 #~ msgstr "Yenza ubungakanani kwakhona"
-
-#, fuzzy
-#~ msgid "Add Filter"
-#~ msgstr "ifayile"
 
 #, fuzzy
 #~ msgid "Labels"
@@ -16458,11 +18890,6 @@ msgstr ""
 #~ msgstr "Umqolo"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "Iyasebenza"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Ixabiso"
@@ -16479,172 +18906,18 @@ msgstr ""
 #~ msgid "Manual Selection"
 #~ msgstr "Ukhetho Lwefomula"
 
-#~ msgid "Product"
-#~ msgstr "Amathuba"
-
 #~ msgid "Sort By"
 #~ msgstr "Khetha Ngo"
-
-#, fuzzy
-#~ msgid "Select Font..."
-#~ msgstr "Khetha Ubungakanani begama..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Khetha Ubungakanani Bomgca"
-
-#, fuzzy
-#~| msgid "Select Font Size"
-#~ msgid "Font Size"
-#~ msgstr "Khetha Ubungakanani Bomgca"
-
-#~ msgid "Text Color"
-#~ msgstr "Umbala Wokubhaliweyo"
-
-#, fuzzy
-#~ msgid "Set the text color"
-#~ msgstr "Cwangcisa umbala wesiqalo."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Tshintsha Ubungakanani bamagama"
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Cwangcisa umphezulu womda kwi ariya ekhethiweyo."
-
-#, fuzzy
-#~ msgid "Create Style From Cell..."
-#~ msgstr "&Yenza i Template Ukusuka Kuxwebhu..."
-
-#, fuzzy
-#~| msgid "Style of Cell"
-#~ msgid "Style From Cell"
-#~ msgstr "Uhlobo Lweseli"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Cwangcisa umphezulu womda kwi ariya ekhethiweyo."
-
-#, fuzzy
-#~ msgid "Create Style From Cell"
-#~ msgstr "&Yenza i Template Ukusuka Kuxwebhu..."
-
-#, fuzzy
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Igama lephepha alikwazi ukungabinanto."
-
-#, fuzzy
-#~ msgid "All Styles"
-#~ msgstr "Uhlobo:"
-
-#, fuzzy
-#~ msgid "Custom Styles"
-#~ msgstr "Lungisa ngendlela Uluhlu..."
-
-#, fuzzy
-#~ msgid "Hierarchical"
-#~ msgstr "Ngokwezimali"
-
-#, fuzzy
-#~ msgid "&New..."
-#~ msgstr "&Entsha"
-
-#, fuzzy
-#~ msgid "&Modify..."
-#~ msgstr "&Dibanisa/Guqula kancinane ugqabazo..."
-
-#, fuzzy
-#~ msgid "&Delete..."
-#~ msgstr "&Ukhangelo Lwesiphumo..."
-
-#, fuzzy
-#~ msgid "style%1"
-#~ msgstr "Uhlobo:"
 
 #, fuzzy
 #~| msgid "Cells:"
 #~ msgid "Cells..."
 #~ msgstr "Iiseli:"
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Faka Iiseli..."
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Faka iseli engananto kwiphepha iphepha elandisekayo."
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Susa Iiseli..."
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Susa kwiphepha elandisekayo iseli yangoku."
-
 #, fuzzy
 #~| msgid "Insert Cells..."
 #~ msgid "Delete Cells..."
 #~ msgstr "Faka Iiseli..."
-
-#~ msgid "Insert rows"
-#~ msgstr "Faka imiqolo"
-
-#~ msgid "Insert columns"
-#~ msgstr "Faka imihlathi"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Faka Iiseli"
-
-#~ msgid "Move towards left"
-#~ msgstr "Yiya ngasekhohlo"
-
-#~ msgid "Move towards top"
-#~ msgstr "Yiya ngasentla"
-
-#~ msgid "Remove rows"
-#~ msgstr "Susa imiqolo"
-
-#~ msgid "Remove columns"
-#~ msgstr "Susa imihlathi"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Susa Iiseli"
-
-#, fuzzy
-#~ msgid "&Subtotals..."
-#~ msgstr "&Khetha..."
-
-#, fuzzy
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Yenza ku a okanye."
-
-#, fuzzy
-#~ msgid "Subtotals"
-#~ msgstr "&Khetha..."
-
-#, fuzzy
-#~ msgid "Remove All"
-#~ msgstr "Susa Iseli"
-
-#, fuzzy
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Kufuneka ukhethe umhlathi omnye!"
-
-#, fuzzy
-#~ msgid "Column '%1' "
-#~ msgstr "Umhlathi %1"
-
-#, fuzzy
-#~ msgid "StDev"
-#~ msgstr "Inqwanqwa"
-
-#, fuzzy
-#~ msgid "StDevP"
-#~ msgstr "Inqwanqwa"
-
-#, fuzzy
-#~ msgid "Var"
-#~ msgstr "Matshi"
 
 #, fuzzy
 #~ msgid "&Replace current Subtotals"
@@ -16673,51 +18946,6 @@ msgstr ""
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Dibanisa ku:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Iseli ye Yegoto..."
-
-#, fuzzy
-#~| msgid "Goto Cell"
-#~ msgid "Goto"
-#~ msgstr "Yiya Kwiseli"
-
-#, fuzzy
-#~ msgid "Move to a particular cell"
-#~ msgstr "Hambisa iseli elithile."
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Column"
-#~ msgstr "Susa Imihlathi"
-
-#, fuzzy
-#~ msgid "Column Break"
-#~ msgstr "Inani Lesibini"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Row"
-#~ msgstr "Susa Imihlathi"
-
-#, fuzzy
-#~ msgid "Row Break"
-#~ msgstr "inkulu kune"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Yiya Kwiseli"
-
-#, fuzzy
-#~ msgid "Enter cell:"
-#~ msgstr "Ngenisa igama:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Yomeleza..."
-
-#, fuzzy
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr ""
-#~ "Yenza ushwankathelo lwammandla e data ukusuka kwiqela lwammandla afanayo."
-
 #, fuzzy
 #~| msgid "&Description in row"
 #~ msgid "Description in rows"
@@ -16733,42 +18961,6 @@ msgstr ""
 #~ msgid "Copy data"
 #~ msgstr "Kh&uphela i data"
 
-#~ msgid "Consolidate"
-#~ msgstr "Yomeleza /Qinisa"
-
-#, fuzzy
-#~ msgid "Standard Deviation"
-#~ msgstr "Deviation Esezantsi"
-
-#~ msgid "Variance"
-#~ msgstr "Eyahlukileyo"
-
-#, fuzzy
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Kufuneka ukhethe umhlathi omnye!"
-
-#, fuzzy
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "Lona asingomhla osebenzayo!"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Ulungiso\n"
-#~ "%1\n"
-#~ "luncinane kakhulu"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Ulungiso\n"
-#~ "%1\n"
-#~ "lukhulu kakhulu"
-
 #~ msgid ""
 #~ "The ranges\n"
 #~ "%1\n"
@@ -16781,28 +18973,6 @@ msgstr ""
 #~ "kunye\n"
 #~ "%2\n"
 #~ "linobungakanani obahlukileyo"
-
-#, fuzzy
-#~| msgid "Consolidate"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Yomeleza /Qinisa"
-
-#, fuzzy
-#~| msgid "The source tables intersect with the destination table"
-#~ msgid "The source range intersects the destination range."
-#~ msgstr ""
-#~ "Imvelaphi yendlela yokwenza imigca iwela ngokwahlukile kwindawo "
-#~ "engqongileyo"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Ulungiso\n"
-#~ "%1\n"
-#~ "lwenziwe kwakhona"
 
 #, fuzzy
 #~| msgid "&Function:"
@@ -16819,109 +18989,14 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "&Ubhekiso olungenisiweyo:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Tshintsha Ikona..."
-
-#, fuzzy
-#~| msgid "Angle:"
-#~ msgid "Angle"
-#~ msgstr "Ikona:"
-
-#, fuzzy
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Tshintsha ikona eshicilewlwe kuyo imixholo yeseli."
-
-#~ msgid "Increase Precision"
-#~ msgstr "Yandisa Okuyilelwe umsebenzi ongundoqo"
-
-#, fuzzy
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Yandisa ugqolo lwenani leshumi eliboniswe ekhusini."
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Nciphisa Okuyilelwe umsebenzi ongundoqo"
-
-#, fuzzy
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Nciphisa ugqolo lwenani leshumi ezantsi kwekhusi eliphezulu."
-
-#, fuzzy
-#~| msgid "Increase Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Yandisa Okuyilelwe umsebenzi ongundoqo"
-
-#, fuzzy
-#~| msgid "Decrease Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Nciphisa Okuyilelwe umsebenzi ongundoqo"
-
-#~ msgid "Change Angle"
-#~ msgstr "Tshintsha Ikona"
-
-#~ msgid "Angle:"
-#~ msgstr "Ikona:"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Tshintsha Ikona"
-
-#~ msgid "Area Name..."
-#~ msgstr "Igama Le ariya..."
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Cwangcisa igama yommandla iphepha elongezelekayo"
-
-#, fuzzy
-#~| msgid "Show Area..."
-#~ msgid "Named Areas..."
-#~ msgstr "Bonisa i Ariya..."
-
-#, fuzzy
-#~ msgid "Named Areas"
-#~ msgstr "Susa Iseli"
-
-#, fuzzy
-#~ msgid "Edit or select named areas"
-#~ msgstr "Bonisa i ariya enikwe igama"
-
-#, fuzzy
-#~| msgid "Edit Area"
-#~ msgid "Add Named Area"
-#~ msgstr "Hlela i Ariya"
-
-#, fuzzy
-#~ msgid "Enter the area name:"
-#~ msgstr "Ngenisa igama:"
-
-#, fuzzy
-#~ msgid "Replace Named Area"
-#~ msgstr "Bonisa i ariya enikwe igama"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Bonisa i ariya enikwe igama"
-
 #, fuzzy
 #~| msgid "&Sheet"
 #~ msgid "&Select"
 #~ msgstr "&Iphethsana"
 
-#~ msgid "Area: %1"
-#~ msgstr "Ariya: %1"
-
 #, fuzzy
 #~ msgid "&Edit..."
 #~ msgstr "Usebenzo..."
-
-#, fuzzy
-#~ msgid "&Remove"
-#~ msgstr "&Susa Ugqabazo"
 
 #, fuzzy
 #~ msgid "New Named Area"
@@ -16931,132 +19006,6 @@ msgstr ""
 #~| msgid "Edit Area"
 #~ msgid "Edit Named Area"
 #~ msgstr "Hlela i Ariya"
-
-#, fuzzy
-#~| msgid "Do you really want to remove this area name?"
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Ufuna okwenene ukususa eli gama le ariya?"
-
-#, fuzzy
-#~ msgid "Remove Named Area"
-#~ msgstr "Susa Iseli"
-
-#~ msgid "Cells:"
-#~ msgstr "Iiseli:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Iphepha:"
-
-#~ msgid "Area name:"
-#~ msgstr "Igama le ariya:"
-
-#~ msgid "Align Left"
-#~ msgstr "Qala Ngasekhohlo"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Yenza kubesembindini umxholo weseli."
-
-#~ msgid "Align Center"
-#~ msgstr "Yenza umgca Abesembindini"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "Yenza umxholo weseli abesembindini."
-
-#~ msgid "Align Right"
-#~ msgstr "Yenza umgca Ngasekunene"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Yenza umxholo weseli abesembindini osekunene."
-
-#~ msgid "Align Top"
-#~ msgstr "Yenza Umgca ngasentla"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Yenza imixholo yeseli ngaphezulu kweseli."
-
-#~ msgid "Align Middle"
-#~ msgstr "Yenza umgca Phakathi"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Yenza iseli yemixholo esembindini kwiseli."
-
-#~ msgid "Align Bottom"
-#~ msgstr "Yenza umgca Ngasezantsi"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Yenza imixholo yeseli ngpaha komzantsi weseli."
-
-#~ msgid "Border Left"
-#~ msgstr "Umda Ekhohlo"
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Cwangcisa umda wasekohlo kwi ariya ekhetiweyo."
-
-#~ msgid "Border Right"
-#~ msgstr "Umda Osekunene"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Cwangcisa umda ekunene kwi ariya ekhetiweyo."
-
-#~ msgid "Border Top"
-#~ msgstr "Umda Phezulu"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Cwangcisa umphezulu womda kwi ariya ekhethiweyo."
-
-#~ msgid "Border Bottom"
-#~ msgstr "Umda Ezantsi"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Cwangcisa umda osezantsi kwi ariya ekhethiweyo."
-
-#~ msgid "All Borders"
-#~ msgstr "Yonke Imida"
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Cwangcisa umda macala onke eseli kwi ariya ekhetiweyo."
-
-#, fuzzy
-#~| msgid "All Borders"
-#~ msgid "No Borders"
-#~ msgstr "Yonke Imida"
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Susa yonke imida kwi ariya ekhetiweyo."
-
-#~ msgid "Border Outline"
-#~ msgstr "Amagqabantshintshi Omda"
-
-#, fuzzy
-#~| msgid "Border Outline"
-#~ msgid "Outline"
-#~ msgstr "Amagqabantshintshi Omda"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Cwangcisa umda wamagqabantshintshi e ariya ekhetiweyo."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Dibanisa Iiseli"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Dibanisa Iiseli"
 
 #, fuzzy
 #~ msgid "Australia"
@@ -18762,76 +20711,6 @@ msgstr ""
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "eZimbabwe"
 
-#, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "Icwangcisa kokungagqibekanga kwe formati."
-
-#~ msgid "Strike Out"
-#~ msgstr "Khupha Ngaphandle"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Yandisa Ubungakanani Bomgca"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Nciphisa Ubungakanani Bomgca"
-
-#, fuzzy
-#~ msgid "Wrap Text"
-#~ msgstr "Okubhaliweyo okuthe nkqo"
-
-#, fuzzy
-#~ msgid "Wrap"
-#~ msgstr "Okubhaliweyo okuthe nkqo"
-
-#, fuzzy
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr ""
-#~ "Yenza iseli okubhaliweyo kusongeleke kwiilayini eziphanda-phindiweyo."
-
-#~ msgid "Vertical Text"
-#~ msgstr "Okubhaliweyo Okuthe nkqo"
-
-#, fuzzy
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Shicilela imixholo yeseli ngokuthe nkqo."
-
-#~ msgid "Percent Format"
-#~ msgstr "Ifomati Yepesenti"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Cwangcisa ufomato lweseli lubonakale njenge pesenti."
-
-#~ msgid "Money Format"
-#~ msgstr "Ifomati Yemali"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Cwangcisa i fomati yeseli ikhangeleke njengemali yeloo lizwe."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Okubhaliweyo okuthe nkqo"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Okubhaliweyo Okuthe nkqo"
-
-#, fuzzy
-#~| msgid "Format Percent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Ipesenti ye Fomati"
-
-#, fuzzy
-#~| msgid "Format Money"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Imali Yefomati"
-
 #~ msgid "&Data Format"
 #~ msgstr "&Ifomati Yedata"
 
@@ -18866,9 +20745,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "Ubude obungagqibekanga (%1 %2)"
 
-#~ msgid "Height:"
-#~ msgstr "Ubude:"
-
 #, fuzzy
 #~ msgid "Set the height of the cell."
 #~ msgstr "Jikelezisa umxholo weseli."
@@ -18877,530 +20753,31 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "Ububanzi obungagqibekanga (%1 %2)"
 
-#~ msgid "Width:"
-#~ msgstr "Ububanzi:"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Dibanisa Ugqabazo"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Yandisa Ulwenziwo lwamathanda"
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "Yandisa ukwenziwa kwamathanda."
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Nciphisa Ulwenzo lwamathanda"
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "Nciphisa uphawu."
-
-#~ msgid "Upper Case"
-#~ msgstr "Umzekelo Ongasentla"
-
-#, fuzzy
-#~| msgid "Upper Case"
-#~ msgid "Upper"
-#~ msgstr "Umzekelo Ongasentla"
-
-#, fuzzy
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Guqulela unobumba wokuqala kumzekelo ongentla."
-
-#~ msgid "Lower Case"
-#~ msgstr "Umzekelo Ongezantsi"
-
-#, fuzzy
-#~| msgid "Power"
-#~ msgid "Lower"
-#~ msgstr "Amandla"
-
-#, fuzzy
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Guqulela unobumba wokuqala kumzekelo ongentla"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Guqulela Unobumba Wokuqala Kumzekelo Ongentla"
-
-#, fuzzy
-#~ msgid "First Letter Upper"
-#~ msgstr "Guqulela unobumba wokuqala &kumzekelo ongentla"
-
-#, fuzzy
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Yenza unobumba wokuqala abeligama elikhulu."
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Comment..."
-#~ msgstr "Gqabaza"
-
-#, fuzzy
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Hlela ugqabazo laleseli."
-
-#~ msgid "Remove Comment"
-#~ msgstr "Susa Ugqabazo"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Susa ugqabazo lweseli."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Guqulela unobumba wokuqala &kumzekelo ongentla"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Guqulela unobumba wokuqala &kumzekelo ongentla"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Guqulela unobumba wokuqala &kumzekelo ongentla"
-
-#, fuzzy
-#~| msgid "Remove Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Susa Ugqabazo"
-
-#, fuzzy
-#~ msgid "Clear Comment"
-#~ msgstr "Gqabaza"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Tshintsha Ikona"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Yandisa Ulwenziwo lwamathanda"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Nciphisa Ulwenzo lwamathanda"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Ugqabazo Lweseli"
-
-#, fuzzy
-#~ msgid "&Left"
-#~ msgstr "&OKubhaliweyo"
-
-#, fuzzy
-#~ msgid "&Right"
-#~ msgstr "Umlinganiselo:"
-
-#, fuzzy
-#~ msgid "&Down"
-#~ msgstr "&Umqolo"
-
-#~ msgid "Autosum"
-#~ msgstr "Udibaniso oluzenzekelayo"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Faka ;isiphumo sokudibanisa' umsebenzi "
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Ukhetho Lwefomula"
-
-#~ msgid "From &Text File..."
-#~ msgstr "Ukusuka &Kwifayile Yokubhaliweyo..."
-
-#, fuzzy
-#~| msgid "From &Text File..."
-#~ msgid "Text File"
-#~ msgstr "Ukusuka &Kwifayile Yokubhaliweyo..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Faka i data esuka kwifayile yokubhaliweyo kwisalathisi sangoku indawo/"
-#~ "ukhetho"
-
 #~ msgid "From &Clipboard..."
 #~ msgstr "Ukusuka &Kwibhodi eqhotyoshwayo..."
-
-#, fuzzy
-#~| msgid "From &Clipboard..."
-#~ msgid "Clipboard"
-#~ msgstr "Ukusuka &Kwibhodi eqhotyoshwayo..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Faka i data ye cvs esuka kwibhodi eqhotyoshwayo kwisalathisi sangoku "
-#~ "indawo/ukhetho"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Okubhaliweyo Kwimihlathi..."
-
-#, fuzzy
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Yandisa umxholo weseli kwimihlathi eminintsi"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Ukusuka Kwibhodi Eqhotyoshiweyo"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Akukho data kwibhodi eqhotyoshiweyo."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Akukho data esebnzisekayo kwibhodi eqhotyoshwayo."
-
-#~ msgid "Text to Columns"
-#~ msgstr "Okubhaliweyo Kwimihlathi"
-
-#, fuzzy
-#~ msgid "Cannot open input file."
-#~ msgstr "Ayikwazi ukuvula igalelo lefayile!"
-
-#, fuzzy
-#~| msgid "Inserting From Clipboard"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Ukusuka Kwibhodi Eqhotyoshiweyo"
-
-#, fuzzy
-#~| msgid "Inserting Text File"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Ukusuka Kwifayile Yokubhaliweyo"
-
-#, fuzzy
-#~| msgid "Text to Columns"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Okubhaliweyo Kwimihlathi"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
-
-#, fuzzy
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Dibanisa Iiseli"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
-
-#, fuzzy
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Dibanisa Iiseli"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Suku zoyamanisa Iiseli"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Lungisa ngendlela ummandla okhetiweyo kwiseli enye enkulu."
-
-#~ msgid "Resize Column..."
-#~ msgstr "Yenza kwakhona Ubungakanani bomhlathi..."
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "Tshintsha ubude bomhlathi."
-
-#~ msgid "Insert Columns"
-#~ msgstr "Faka Imihlathi"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Ifaka umqolo omtsha kwiphepha elandisekayo."
-
-#~ msgid "Remove Columns"
-#~ msgstr "Susa Imihlathi"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Susa kwiphepha elandisekayo iseli yangoku."
-
-#~ msgid "Hide Columns"
-#~ msgstr "Fihla Imihlathi"
 
 #, fuzzy
 #~ msgid "Hide the column from this"
 #~ msgstr "Fihla umhlathi osuka kwimboniselo."
 
-#~ msgid "Show Columns..."
-#~ msgstr "Bonisa Imihlathi..."
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "Bonisa umhlathi(imi) ofihlakeleyo."
-
-#~ msgid "Equalize Column"
-#~ msgstr "Linganisa Umhlathi"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Yenza ubungakanani kwakhona bemiihlathi ekhetiweyo ilingane."
-
-#~ msgid "Show Columns"
-#~ msgstr "Bonisa Imiqolo"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Bonisa umhlathi ofihlakeleyo kukhetho."
-
-#~ msgid "Resize Row..."
-#~ msgstr "Yenza kwakhona ubungakanani Bomqolo..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "Tshintsha ubude bomqolo."
-
-#~ msgid "Insert Rows"
-#~ msgstr "Faka Imiqolo"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Faka umqolo omtsha kwiphepha elandisekayo."
-
-#~ msgid "Remove Rows"
-#~ msgstr "Susa Imiqolo"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Isusa umqolo kwiphepha elandisekayo."
-
-#~ msgid "Hide Rows"
-#~ msgstr "Fihla Imiqolo"
-
 #, fuzzy
 #~ msgid "Hide a row from this"
 #~ msgstr "Fihla umqolo osuka kwimboniso."
 
-#~ msgid "Show Rows..."
-#~ msgstr "Bonisa Imiqolo..."
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "Ibonisa imiqolo efihlakeleyo."
-
-#~ msgid "Equalize Row"
-#~ msgstr "Linganisa Umqolo"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Yenza ubungakanani kwakhona bemiqolo ekhetiweyo ilingane."
-
-#~ msgid "Show Rows"
-#~ msgstr "Bonisa Imiqolo"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Ibonisa imiqolo efihlakeleyo kukhetho."
-
-#, fuzzy
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Nyenyisa Umqolo kunye Nomhlathi"
-
-#, fuzzy
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "Nyenyisa umqolo/umhlathi ukwenzela umxholo akwazi ukungena."
-
-#~ msgid "Adjust Column"
-#~ msgstr "Nyenyisa Umhlathi"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Cima Imihlathi"
 
-#~ msgid "Adjust Row"
-#~ msgstr "Nyenyisa Umqolo"
-
 #~ msgid "Delete Rows"
 #~ msgstr "Cima Imiqolo"
-
-#~ msgid "Resize Row"
-#~ msgstr "Yenza ubungakanani kwakhona Bomqolo"
-
-#~ msgid "Resize Column"
-#~ msgstr "Yenza ubungakanani kwakhona Bomhlathi"
-
-#, fuzzy
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Khetha Umhlathi Ofihliweyo Ukubonisa"
-
-#, fuzzy
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Khetha Ufihlo Kumqolo Ukubonisa"
-
-#~ msgid "Column: %1"
-#~ msgstr "Umhlathi: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Umqolo: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Ikhonkco..."
-
-#, fuzzy
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Faka ikhonkco eliphezulu le internet."
-
-#, fuzzy
-#~ msgid "Link"
-#~ msgstr "Faka Ikhonkco"
-
-#, fuzzy
-#~ msgid "Remove Link"
-#~ msgstr "Susa Iseli"
-
-#, fuzzy
-#~ msgid "Remove a link"
-#~ msgstr "Susa indlela yemigca"
-
-#~ msgid "Insert Link"
-#~ msgstr "Faka Ikhonkco"
 
 #, fuzzy
 #~ msgid "Edit Link"
 #~ msgstr "Faka Ikhonkco"
 
 #, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Susa Iseli"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Faka Ikhonkco"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Internet Address"
-#~ msgstr "Idilesi ye internet:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Idilesi ye internet:"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "Email:"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Email Address"
-#~ msgstr "Idilesi ye internet:"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "Okubhaliweyo kwe ariya akunanto!"
-
-#, fuzzy
-#~ msgid "Subject:"
-#~ msgstr "&Injongo..."
-
-#, fuzzy
-#~ msgid "File"
-#~ msgstr "ifayile"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to File"
-#~ msgstr "Ubungakanani Beseli"
-
-#~ msgid "File location:"
-#~ msgstr "Indawo ekuyo ifayile:"
-
-#, fuzzy
-#~ msgid "Recent file:"
-#~ msgstr "&Inani leefayile ezisandukubakho:"
-
-#, fuzzy
-#~ msgid "No Entries"
-#~ msgstr "Ungeno:"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to Cell"
-#~ msgstr "Ubungakanani Beseli"
-
-#, fuzzy
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Susa Iseli"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Khetha..."
-
-#, fuzzy
-#~ msgid "Sort a group of cells"
-#~ msgstr "Khetha iqela leseli."
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Khetha &Ngokunciphisa"
-
-#, fuzzy
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr ""
-#~ "Khetha iqela leeseli ngokunciphisa (eyokugqibela kweyokuqala) ngendlela."
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Khetha &Ngokwandisa"
-
-#, fuzzy
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr ""
-#~ "Khetha iqela leseli ngokunyuka eyokuqala ukuya kweyokugqibela) ngendlela."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Khetha Indlela yokwahlukanisa xa ukhetha"
-
-#, fuzzy
 #~| msgid "&Use custom list"
 #~ msgid "Use custom list"
 #~ msgstr "&Sebenzisa uluhlu lwesiko"
-
-#~ msgid "Column %1"
-#~ msgstr "Umhlathi %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Umqolo %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Umqolo wokuqala uqulathe okubhaliweyo okuphezulu"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Umqolo wokuqala uqulathe okubhaliweyo okuphezulu"
-
-#~ msgid "Sort"
-#~ msgstr "Khetha"
-
-#, fuzzy
-#~ msgid "Case Insensitive"
-#~ msgstr "Cola kwaye Ufake"
 
 #, fuzzy
 #~ msgid "Move Up"
@@ -19439,245 +20816,10 @@ msgstr ""
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Khetha iqela leseli."
 
-#~ msgid "Validity..."
-#~ msgstr "Usebenzo..."
-
-#, fuzzy
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Cwangcisa uvavanyo ukuqinisekisa ukuba iseli ye data iyasebenza."
-
-#~ msgid "Validity"
-#~ msgstr "Usebenzo"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "Susa indlela yemigca"
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Susa uvavanyo loqinisekiso kwiseli."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Susa indlela yemigca"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Ugwebo Olusebenzayo"
-
-#~ msgid "Clear &All"
-#~ msgstr "Cacisa &Konke"
-
 #, fuzzy
 #~| msgid "Criteria"
 #~ msgid "&Criteria"
 #~ msgstr "Indlela yokwahlukanisa xa ukhetha"
-
-#~ msgid "Allow:"
-#~ msgstr "Vumela:"
-
-#~ msgid "Integer"
-#~ msgstr "Inani elipheleleyo"
-
-#~ msgid "Text Length"
-#~ msgstr "Ubude Bokubhaliweyo"
-
-#, fuzzy
-#~ msgid "List"
-#~ msgstr "Uluhlu:"
-
-#~ msgid "Data:"
-#~ msgstr "Idata:"
-
-#, fuzzy
-#~ msgid "Minimum:"
-#~ msgstr "Encinane: "
-
-#, fuzzy
-#~ msgid "Maximum:"
-#~ msgstr "Enkulu: "
-
-#~ msgid "Date:"
-#~ msgstr "Umhla: "
-
-#, fuzzy
-#~ msgid "Date minimum:"
-#~ msgstr "Ubuncinane bomhla"
-
-#, fuzzy
-#~ msgid "Date maximum:"
-#~ msgstr "Ubukhulu bomhla"
-
-#~ msgid "Time:"
-#~ msgstr "Ixesha:"
-
-#, fuzzy
-#~ msgid "Time minimum:"
-#~ msgstr "Ubuncinane bexesha"
-
-#, fuzzy
-#~ msgid "Time maximum:"
-#~ msgstr "Ubukhulu bexesha"
-
-#~ msgid "Number:"
-#~ msgstr "Inani:"
-
-#, fuzzy
-#~ msgid "Entries:"
-#~ msgstr "Ungeno:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "&Ulumkiso Lwemposiso"
-
-#, fuzzy
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "&Bonisa umyalezo wemposiso"
-
-#~ msgid "Action:"
-#~ msgstr "Intshukumo:"
-
-#, fuzzy
-#~ msgid "Warning"
-#~ msgstr "Shicilela umqolo:"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Iwonga:"
-
-#~ msgid "Message:"
-#~ msgstr "Umyalezo:"
-
-#, fuzzy
-#~ msgid "This is not a valid value."
-#~ msgstr "Eli ayiloxabiso elisebenzayo!"
-
-#, fuzzy
-#~ msgid "This is not a valid time."
-#~ msgstr "Eli asiloxesha elisebenzayo!"
-
-#, fuzzy
-#~ msgid "This is not a valid date."
-#~ msgstr "Lona asingomhla osebenzayo!"
-
-#~ msgid "&Series..."
-#~ msgstr "&Uphawu..."
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "Faka uphawu."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Faka uphawu."
-
-#, fuzzy
-#~ msgid "Select Character"
-#~ msgstr "Ucolo Oluthile..."
-
-#, fuzzy
-#~| msgid "The text that will replace characters in old text"
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "okubhaliweyo okuzakubuyisela abasebenzisi kokubhaliweyo okudala"
-
-#~ msgid "Series"
-#~ msgstr "Uphawu"
-
-#~ msgid "Insert Values"
-#~ msgstr "Faka Amaxabiso"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Faka uphawu nkqo, enye ezantsi kwenye"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Faka uphawu nkqo, ukusuka ekohlo ukuya ekunene"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Eyelayini (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Yenza iimphawu' ukusuka 'ekuqaleni' ukuya 'ekupheleni' kwayelo kulo "
-#~ "naluphi unyatheloyongeza eloxabiso elinikiwyo kwinqwanqwa. Oku kwenza "
-#~ "uphawu apho ixabiso ngalinye 'inqwanqwa' elikhulu kunexabiso "
-#~ "langaphambili kwayo."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Ulwazi lwezibalo (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Yenza uphawu ukusuka  'uqalo' ukuya 'kwisiphelo ngalolonke ixesha phinda "
-#~ "phinda ixabiso ngexabiso elinikiweyo kwindlela yokwenza izinto enikiweyo. "
-#~ "Usebenziso lwenyathelo lika 5 lenza uluhlu njenge: 5, 25, 125, 625 kuba 5 "
-#~ "xa ephinda phindiweyo ngo 5 (inqwanqwa) lilingana 25, xa iphinda "
-#~ "phindiweyo ngo 5 ilingana 125, xa iphinda phindwe linyathelo lexabiso "
-#~ "elifanayo no 5 lilingana no 625."
-
-#~ msgid "Start value:"
-#~ msgstr "Qala ixabiso:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Yima ixabiso:"
-
-#~ msgid "Step value:"
-#~ msgstr "Qala ixabiso:"
-
-#, fuzzy
-#~ msgid "End and start value must be positive."
-#~ msgstr "Ixabiso lokuqala nelesiphelo kefuneka libenesiphumelo!"
-
-#, fuzzy
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Ixabiso lesiphelo kufuneka libelikulu kunexabiso loqaliso okanye "
-#~ "inqwanqwa kumele libengaphantsi kune '1'!"
-
-#, fuzzy
-#~ msgid "Step is negative."
-#~ msgstr "Inqwanqwa liyakhatywa!"
-
-#, fuzzy
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Ixabiso lenqwanqwa kufuneka libengaphezulu kunonothi. Kungenjalo uphawu "
-#~ "lwelayine alizukuphela!"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Ukuba ixabiso lokuqala lingaphezulu kunexabiso lokuphela inqwanqwa "
-#~ "kufuneka libengaphantsi kunonothi!"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Ukuba inqwanqwa alinasiphumelo, ixabiso lokuqala kufuneka libengaphezulu "
-#~ "ixabiso lokuphela!"
-
-#, fuzzy
-#~ msgid "S&pecial Character..."
-#~ msgstr "Ucolo Oluthile..."
 
 #, fuzzy
 #~ msgid "Internet address is empty"
@@ -24024,11 +25166,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "Uhlobo:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "&Khetha..."
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -37847,9 +38984,6 @@ msgstr ""
 #~ msgid "Document's Locale Settings"
 #~ msgstr "Iparameters ze Locale"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "Ukusuka Kwifayile Yokubhaliweyo"
-
 #, fuzzy
 #~| msgid "Value (array)"
 #~ msgid "y (array)"
@@ -37916,10 +39050,6 @@ msgstr ""
 
 #~ msgid "Remove Cell"
 #~ msgstr "Susa Iseli"
-
-#, fuzzy
-#~ msgid "Paste"
-#~ msgstr "Isakhelo"
 
 #, fuzzy
 #~ msgid "Paste & Insert"
@@ -38014,10 +39144,6 @@ msgstr ""
 #~| msgid "Statistical"
 #~ msgid "Statistical Functions"
 #~ msgstr "Izitatistiki"
-
-#, fuzzy
-#~ msgid "Text Functions"
-#~ msgstr "<h2>Ngokwesivakalisi</h2><ul>u"
 
 #, fuzzy
 #~| msgid "Function"

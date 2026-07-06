@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2026-06-18 21:46+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -140,8 +140,13 @@ msgstr "Fejléc"
 msgid "Header1"
 msgstr "Fejléc1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Alapértelmezett"
@@ -173,7 +178,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Szöveg"
@@ -245,7 +251,8 @@ msgstr "<p><b>A visszatérés típusa:</b> %1</p>"
 msgid "Syntax"
 msgstr "Szintaxis"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Paraméterek"
@@ -893,14 +900,15 @@ msgstr "CARY(12;0) értéke 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Szám"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Formázás"
@@ -959,6 +967,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") értéke 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Adatbázis"
@@ -1261,6 +1271,7 @@ msgstr "Dátum és idő"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1334,7 +1345,8 @@ msgstr "DAYS360(\"2/22/2002\"; \"4/21/2002\", FALSE) értéke 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Idő"
@@ -4981,6 +4993,7 @@ msgid "Regular payments"
 msgstr "Reguláris kifejezés"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Típus"
@@ -5297,12 +5310,19 @@ msgstr "kézi"
 msgid "Automatic"
 msgstr "Automatikus"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Információk"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Hiba"
@@ -6124,7 +6144,7 @@ msgstr ""
 msgid "Math"
 msgstr "Matematikai"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Függvény"
@@ -6621,6 +6641,7 @@ msgid "Range"
 msgstr "Tartomány"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Feltétel"
@@ -8195,6 +8216,7 @@ msgid "Row"
 msgstr "Sor"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "oszlop"
@@ -12684,7 +12706,7 @@ msgid "&Go"
 msgstr "&Ugrás"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "Beszú&rás"
@@ -12702,7 +12724,7 @@ msgid "F&ormat"
 msgstr "F&ormátum"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Cellák egyesítése"
@@ -12781,8 +12803,8 @@ msgstr "Aktiválás"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Betűtípus"
@@ -13206,14 +13228,16 @@ msgstr "Oldal korlátozások:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Vízszintes"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Függőleges"
@@ -13240,13 +13264,15 @@ msgid "Up"
 msgstr "Fel"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Jobbra"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Balra"
@@ -13258,36 +13284,50 @@ msgstr "Lent, első oszlop"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "nincs"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "összeg"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "minimum"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "maximum"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "átlag"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "darabszám"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -13656,7 +13696,8 @@ msgstr "Kijelölés megszüntetése"
 msgid "Move selected sheet to the bottom"
 msgstr "Legalulra viszi a kijelölt munkalapot"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Kis- és nagybetűk megkülönböztetése"
@@ -13857,6 +13898,7 @@ msgid "Anchor"
 msgstr "Horgony"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Cella"
@@ -13876,7 +13918,7 @@ msgstr "Alakzat horgony váltása"
 msgid "Next Sheet"
 msgstr "A következő munkalap"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Következő"
@@ -13891,7 +13933,7 @@ msgstr "Ugrás a következő munkalapra"
 msgid "Previous Sheet"
 msgstr "Az előző munkalap"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Előző"
@@ -14096,7 +14138,7 @@ msgstr ""
 "El lesz távolítva az aktív munkalap.\n"
 "Biztosan ezt szeretné?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Név:"
@@ -14156,21 +14198,3152 @@ msgstr "CountA: "
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Szövegszín módosítása"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "Háttérszín módosítása"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Szegély módosítása"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Oszlop(ok) beszúrása"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Sor(ok) beszúrása"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Az oszlopok törlése"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "A sorok törlése"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Beszúr egy új sort a munkalapba"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Törli a kijelölt sorokat a munkalapról"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Beszúr egy új oszlopot a munkalapba"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Eltávolítja a kijelölt oszlopokat a munkafüzetből"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Oszlopok elrejtése"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Sorok elrejtése"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Oszlopok megjelenítése"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Sorok megjelenítése"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Felfedi a rejtett sorokat a kijelölt részen"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "A kijelölt tartomány összevonása"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Felfedi a rejtett oszlopokat a kijelölt részen"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "A kijelölt tartomány összevonása"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Oszlopkiegyenlítés"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Sorkiegyenlítés"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Azonos méretűre állítja a kijelölt sorokat"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Azonos méretűre állítja a kijelölt oszlopokat"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Az oszlop igazítása"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "A sor igazítása"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "A sorok és oszlopok eligazítása"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "A tartalomhoz igazítja a sor- és oszlopméretet"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "A tartalomhoz igazítja a sor- és oszlopméretet"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "A tartalomhoz igazítja a sor- és oszlopméretet"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Oszlopok felfedése..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Sorok felfedése..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Felfedi a rejtett oszlopokat"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Felfedi a rejtett sorokat"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Oszlop: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Sor: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Az oszlop átméretezése..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "A sor átméretezése..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Módosítja a sor magasságát"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Módosítja az oszlop szélességét"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Balra igazítás"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Balra igazítja a cella tartalmát"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Vízszintes igazítás módosítása"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Jobbra igazítás"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Jobbra igazítja a cella tartalmát"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Középre igazítás"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Középre igazítja a cella tartalmát"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Középre"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Felülre igazítás"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "A cella tetejéhez igazítja a cella tartalmát"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Fent"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Függőleges igazítás módosítása"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Alulra igazítás"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "A cella aljához igazítja a cella tartalmát"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Lent"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Középre igazítás"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "A cella középvonalához igazítja a cella tartalmát"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Középen"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "A szög módosítása..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Módosítja a cellatartalom nyomtatási szögét"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Szög"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "A szög módosítása"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Automatikus szűrés"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Automatikus szűrést ad egy cellatartományhoz"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Automatikus szűrés"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Alkalmaz egy megadott stílust a kijelölt cellákra"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Automatikus formázás..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Nem sikerült megtalálni ezt a táblastílus-leíró XML-fájlt: '%1'."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Feldolgozási hiba történt ebben a táblastílus-leíró XML-fájlban: %1."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Automatikus formázás"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Automatikus összegzés"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Az összegzési függvény beszúrása"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Automatikus összegzés"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Bal szegély"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Beállítja a kijelölt terület bal szegélyét"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Jobb szegély"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Beállítja a kijelölt terület jobb szegélyét"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Felső szegély"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Beállítja a kijelölt terület felső szegélyét"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Alsó szegély"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Beállítja a kijelölt terület alsó szegélyét"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Teljes szegély"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Teljes szegélyt húz a kijelölt terület köré"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "minden"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Nincs szegély"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Megszünteti a szegélyt a kijelölt terület körül"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Szegélyvonal"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Szegélyt tesz a kijelölt terület körvonalára"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Körvonal"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Szegélyszín"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Beállítja a szegély színét"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Szegélyszín módosítása"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Cella beszúrása..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Üres cellát szúr a munkalapba"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Cella törlése..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Törli a cellákat a munkalapról"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Minden törlése"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Törli az aktuális cella tartalmát és formázását"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Tartalom törlése"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Törli az aktuális cella adattartalmát"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Szöveg törlése"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Törlés"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Megjegyzés..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "A cellamegjegyzés szerkesztése"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Megjegyzés törlése"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Törli a megjegyzést a cellából"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "A megjegyzés törlése"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "A megjegyzés törlése"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Megjegyzés hozzáadása"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Feltételes cellatulajdonságok..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Beállítja a cellaformátumot megadott feltételek alapján"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Feltételes stílusok"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Törli a feltételes cellatulajdonságokat"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Feltételes tulajdonságok törlése"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Feltételes formázások eltávolítása"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Feltételes formázások hozzáadása"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "Konsz&olidálás..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Összegző tartományt hoz létre egy csoport hasonló tartományból"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Összesítés"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "A cellaobjektum másolása a vágólapra"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "A cellaobjektum áthelyezése a vágólapra"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "Szö&veges fájlból..."
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Adatokat szúr be szöveges fájlból az aktuális kurzorpozíciónál vagy "
+"kijelölésnél"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Szöveges fájl"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "A bemeneti fájlt nem sikerült megnyitni."
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "Szövegfájl beszúrása"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Szövegfájl beszúrása"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Beillesztés a vágólapról"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"CSV adatokat szúr be a vágólapról az aktuális kurzorpozícióhoz vagy "
+"kijelöléshez"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Vágólap"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Nincs adat a vágólapon."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Nincs beilleszthető adat a vágólapon."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Beillesztés a vágólapról"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Beillesztés a vágólapról"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "Szöveg oszlo&pokba bontása..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Szétbontja a cellatartalmat több oszlopba"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "A szöveg oszlopokba rendezése"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Szöveget oszlopokba"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Egyéni listák létrehozása rendezéshez, automatikus kitöltéshez"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Egyéni listák..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Megnevezett terület hozzáadása"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Adja meg a terület nevét:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "A szög módosítása"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Szög:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "Automatikus formázás"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Válassza ki az alkalmazni kívánt stíluslapot:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Karakterválasztás"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "A kiválasztott karakter beszúrása a szövegbe"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Cellamegjegyzés"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<nincs>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "egyenlő"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "nagyobb"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "kisebb"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "nagyobb vagy egyenlő"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "kisebb vagy egyenlő"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "között"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "tartományon kívül"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "nem egyenlő"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Első feltétel"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Második feltétel"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Harmadik feltétel"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "A cella"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Cellastílus"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "nem egyenlő"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Ha az első érték szám, akkor a második értéknek is számnak kell lennie."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Ha az első érték szöveg, akkor a második értéknek is szövegnek kell lennie."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Konszolidálás"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "szorzat"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "szórás"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "variancia"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Legalább egy forrástartományt meg kell adni."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 nem érvényes cellatartomány."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Az alábbi tartomány:\n"
+"%1\n"
+"túl kicsi."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Az alábbi tartomány:\n"
+"%1\n"
+"túl nagy."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "A forrástartomány metszi a céltartományt."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Az alábbi tartomány:\n"
+"%1\n"
+" hibás."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Adatok beszúrása adatbázisból"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Típus:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Az adatbázis neve: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Gépnév:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Port:\n"
+"(ha szükséges)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Felhasználónév:\n"
+"(ha szükséges)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Jelszó:\n"
+"(ha szükséges)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Táblaválasztás:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Táblázatok"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Oszlop(ok) kiválasztása:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Táblázat"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Oszlopok"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Az összes feltételnek eleget tegyen (ÉS)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Legalább egy feltételnek eleget tegyen (VAGY)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "egyenlő"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "nem egyenlő"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "benne van"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "nincs benne"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "hasonlít"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "nagyobb mint"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "kisebb mint"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "nagyobb vagy egyenlő"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "kisebb vagy egyenlő"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "A sorbarendezés kulcsa"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "növekvő"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "csökkenő"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Különböző"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Lekérdezési bellítások"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL lekérdezés:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Beszúrás ebbe a tartományba"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Kezdőcella"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Eredmény"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Itt nem lehet táblát megadni."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Érvényes tartományt kell megadni."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Érvényes cellát kell megadni."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "A lekérdezés végrehajtása nem sikerült."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Ezzel a lekérdezéssel nem kapott eredményt."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Adatok beszúrása adatbázisból"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "A portnak számnak kell lennie"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Csatlakozás az adatbázishoz..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr ""
+"A csatlakozás sikeresen megtörtént. A táblajellemzők lekérdezése folyik..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Az adatbázis egy táblát sem tartalmaz"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "A meghajtó betöltése nem sikerült"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "A táblák metaadatainak letöltése folyik..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Legalább egy táblát ki kell választani."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Legalább egy oszlopot ki kell választani."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"A '*' és a '?' keresőkarakter nem használható SQL lekérdezésekben, helyettük "
+"'%' ill. '_' írható. Ki szeretné cserélni a karaktereket?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Csere"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Dokumentumbeállítások"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "Számolási mód"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Case Insensitive"
+msgid "Case sensitive"
+msgstr "Kis- és nagybetű nincs megkülönböztetve"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Pontosság"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Automatikus"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "String to compare with"
+msgid "String comparison:"
+msgstr "Az összehasonlítandó szöveg"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "Reguláris kifejezés"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "A &rendszer területi beállításainak használata"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Nyelv: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Alapértelmezett számformátum: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Hosszú dátumformátum: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Rövid dátumformátum: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Időformátum: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Pénznem formátum: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "További bellítások"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Keresés a teljes munkalapon"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Keresés itt:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Cellaértékek"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Megjegyzések"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Keresési irány:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Keresztben, majd lefelé"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Lefelé, majd keresztben"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Kevesebb beállítás"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "Függvény"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Függvény beszúrása"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Súgó"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Ennek a függvénynek nincsenek paraméterei."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "A leírás nem érhető el."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Célértékkeresés"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Ugrás megadott cellára"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Adja meg a cellát:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Beszúrás"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "jobbra tolás"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "lefelé tolás"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Sorok beszúrása"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Oszlopok beszúrása"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Cellák beszúrása"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Lépés balra"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Lépés felfelé"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "A sorok törlése"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Az oszlopok törlése"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "A cellák törlése"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Link beszúrása"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Internetes címre mutató hivatkozás"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Megjelenítendő szöveg:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Internet-cím:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "E-mail"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "E-mail címre mutató hivatkozás"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "E-mail cím:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Tárgy:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Fájl"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Fájlra mutató hivatkozás"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "A fájl helye:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Nemrég használt fájl:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Nincs bejegyzés"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Cellára mutató hivatkozás"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Cella vagy megnevezett terület"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Egyéni listák"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "Kis- és nagybetűk változtatása"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Lista:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Bejegyzés:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Mégse"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Új"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Módosítás"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Másolás"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Biztosan el szeretné távolítani ezt a listát?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "A lista eltávolítása"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"A beviteli terület nem üres.\n"
+"Folytassam a műveletet?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Megnevezett területek"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Terület: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Cellák:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Munkalap"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Területnév:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Eltávolítás"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Megnyitás/mentés"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Biztosan törölni szeretné ezt a területet?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Megnevezett terület eltávolítása"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Érvénytelen cellahivatkozás."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Beillesztés cella/cellák beszúrásával"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "Select Character"
+msgid "Select Source"
+msgstr "Karakterválasztás"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "Add Filter"
+msgstr "Szűrő"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Bit Operations"
+msgid "Pivot Options"
+msgstr "Bitműveletek"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Sor átméretezése"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Magasság:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Oszlop átméretezése"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Szélesség:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Sorozatok"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "Sorozat beszúrása"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Értékek beszúrása"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "A sorozat fentről lefelé haladjon"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "A sorozat balról jobbra haladjon"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "számtani (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Számtani sorozat létrehozása a megadott kezdő- és végértékkel, illetve "
+"lépésközzel. Tehát a sorozat minden egyes tagja a lépésközzel nagyobb a "
+"megelőzőnél."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "mértani (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Mértani sorozat létrehozása a megadott kezdő- és végértékkel, illetve "
+"szorzótényezővel. Ha a szorzótényező értéke 5, akkor a sorozat lehet "
+"például: 5, 25, 125, 625 - mert 5*5=25, 25*5=125, 125*5=625 és így tovább. "
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Kezdőérték:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Záróérték:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Lépésköz:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Mind a kezdő-, mind a záróértéknek pozitívnak kell lennie."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"A záróértéknek nagyobbnak kell lennie a kezdőértéknél, vagy a lépésköznek "
+"kisebbnek kell lennie 1-nél."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "Sem a kezdő- és záróérték, sem a lépésköz nem lehet nulla."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "A lépésköz nem lehet 1."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "A lépésköz negatív."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"A lépésköznek pozitívnak kell lennie, különben a számtani sorozat végtelen "
+"lesz!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Ha a kezdőérték nagyobb a záróértéknél, akkor a lépésköznek negatívnak kell "
+"lennie."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Ha a lépésköz negatív, a kezdőértéknek nagyobbnak kell lennie a záróértéknél."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Válassza ki a felfedni kívánt rejtett sorokat:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Válassza ki a felfedni kívánt rejtett oszlopokat:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "%1. oszlop"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "%1. sor"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "&Az első oszlop tartalmazza a sor fejléceit"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "&Az első sor tartalmazza az oszlop fejléceit"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Sorbarendezés"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Kis- és nagybetű nincs megkülönböztetve"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Különleges beillesztés"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Stíluskezelő"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Stílus"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Minden stílus"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Egyéni stílusok"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Hierarchikus"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "Ú&j..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "Mó&dosítás..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Törlés..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "%1. stílus"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Részösszegek"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Az összes eltávolítása"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "%1. oszlop "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Legalább egy oszlopot ki kell választani részösszegek hozzáadásához."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Érvényesség"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Minden tö&rlése"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Érvényes:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "egész"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "szöveghossz"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Lista"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Üresek engedélyezése"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Adat:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Minimum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Maximum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Dátum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Minimális dátum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Maximális dátum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Idő:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Minimális idő:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Maximális idő:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Szám:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Bejegyzések:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "Hi&bajelzés"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Hibajelzés jelenjen meg, ha egy bevitt érték érvénytelen"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Esemény:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Leállítás"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Figyelem"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Cím:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Üzenet:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Beviteli segítség"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Cella kiválasztásakor beviteli segítség megjelenítése"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Ez ez érték nem érvényes."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Ez az időérték érvénytelen."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Ez a dátumérték érvénytelen."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Dokumentumbeállítások..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "A dokumentumbeállítások megjelenítése"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "A kijelölt cella szerkesztése"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Az aktuális cella módosítása"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "Védelem"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Paste the contents of the clipboard at the cursor"
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Beilleszti a vágólap tartalmát a kurzornál"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Lent"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Balról"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Jobbról"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Kijelölés kitöltése"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Csere"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Betűtípus-választás..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Beállítja a cellaformátumot"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Betűtípus módosítása"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Betűméret-választás"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Beállítja a cellaformátumot"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Betűméret"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Szövegszín beállítása"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Szövegszín"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Függvény..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Beszúr egy matematikai kifejezést"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Képlet kiválasztás"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Beszúr egy függvényt"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Egyéb..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "Célé&rtékkeresés..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Ciklikus számítást végez egy adott érték megkereséséhez"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Érvénytelen cellahivatkozás."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "A célérték érvénytelen."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "A forráscellának számértéket kell tartalmaznia."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "A célként megadott cellának képletet kell tartalmaznia."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "A célértékkeresés (a(z) %1 cellával) a következő megoldást találta:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "A célértékkeresés (a(z) %1 cellával) nem talált megoldást."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Ugrás egy megadott cellára..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Ugrás a megadott cellára"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Ugrás"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Ez az időérték érvénytelen."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "A behúzás csökkentése"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "A behúzás növelése"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Lecsökkenti a behúzást"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Megnöveli a behúzást"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Behúzás növelése"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Behúzás csökkentése"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "A&datbázisból..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Adatokat szúr be egy SQL adatbázisból"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+#| msgid ""
+#| "No database drivers available.  To use this feature you need to install "
+#| "the necessary Qt 3 database drivers."
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Nem áll rendelkezésre adatbázis-meghajtó. A Qt lefordításánál ki kell "
+"jelölni a használni kívánt meghajtókat"
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Sorozat..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Beszúr egy sorozatot"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Sorozat beszúrása"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "Spe&ciális karakter..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+"Olyan karaktereket szúr be, amelyek nem érhető el közvetlenül a "
+"billentyűzeten"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Megfigyelő futtatása..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "Internetes &link..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Beszúr egy internetes linket"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Hivatkozás"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Hivatkozás törlése"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "A link eltávolítása"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "A link eltávolítása"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Set Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Link beállítása"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Listaelem kiválasztása..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "A cellák összevonása vízszintesen"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "A cellák összevonása függőlegsen"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "A kijelölt tartomány vízszintes összevonása"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "A kijelölt tartomány függőleges összevonása"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "A kijelölt tartomány összevonása"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "A cellák szétválasztása"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "A kijelölt tartomány összevonásának megszüntetése"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "A terület neve..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Nevet rendel a munkafüzet egy tartományához"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"A(z) '%1' terület már létezik.\n"
+"Le szeretné cserélni?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "A megadott nevű területet cseréje"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "A megadott nevű területet cseréje"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Megnevezett területek szerkesztése vagy kiválasztása"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Megnevezett területek..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Törés a sor előtt"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Manuális oldaltörés beállítása a sor előtt"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Sortörés"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Törés az oszlop előtt"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Manuális oldaltörés beállítása az oszlop előtt"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Oszloptörés"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Beilleszti a vágólap tartalmát a kurzornál"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Különleges beillesztés..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Beilleszti a vágólap tartalmát speciális beállításokkal"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Beillesztés beszúrással"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Beilleszt egy cellát a vágólapról az aktuális munkalapba"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "Részössze&gek..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "Részössze&gek..."
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Egynél több cellát kell kiválasztani."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Az aktuális munkalap minden cellájának kijelölése"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "QTableView megjelenítése..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "Ren&dezés..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Rendezést hajt végre egy cellacsoporton"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Rendezés nö&vekvő sorrendben"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Növekvő sorrendben rendez egy cellacsoportot"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "Rendezés &csökkenő sorrendben"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "Csökkenő sorrendben rendez egy cellacsoportot"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Adatok rendezése"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Ellenőrizni szeretné a helyesírást a következő munkalapon?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Ugrás a következő munkalapra"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Helyesírás ellenőrzése"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Cellaformátum..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Beállítja a cellaformátumot"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Félkövér"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Dőlt"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Aláhúzott"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "áthúzott"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Több szövegsort engedélyez a cellában"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Szövegtördelés"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Tördelés"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Szövegtördelés"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Függőlegesen írja ki a cella tartalmát"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Függőleges szöveg"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Függőleges szöveg"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Számformátum"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Beállítja a cellaformátumot"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Az első szám"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "Tudományos formátum"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "A cellatartalom megjelenését százalékosra állítja"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Tudományos"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Tudományos"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Százalékformátum"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "A cellatartalom megjelenését százalékosra állítja"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Százalék"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Százalékformátum"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Pénzformátum"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "A cellatartalom megjelenését a helyi pénz formátumára állítja"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Pénz"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Pénzformátum"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Dátumformátum"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Beállítja a cellaformátumot"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Formázás"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Beállítja a cellaformátumot"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Időformátum"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Formázás"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "A betűméret növelése"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "A betűméret csökkentése"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "A pontosság növelése"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Megnöveli a kiírt tizedesjegyek számát"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "A pontosság csökkentése"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Lecsökkenti a kiírt tizedesjegyek számát"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "A pontosság növelése"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "A pontosság csökkentése"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Visszaállítja az alapértelmezett formátumot"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Munkalapstílus"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Háttérszín"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Háttérszín beállítása"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Stílus létrehozása cella alapján..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Új stílust hoz létre a kijelölt cella stílusa alapján"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Stílus cella alapján"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Stílus létrehozása cella alapján"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "A stílus neve nem lehet üres."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Már létezik ilyen nevű stílus."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "A cellastílusok szerkesztését és áttekintése"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Stíluskezelő..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Alkalmaz egy megadott stílust a kijelölt cellákra"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "Részössze&gek..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Különféle részösszegeket hoz létre listához vagy adatbázishoz"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Részösszegek"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Nagybetűs"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "Kisbetűs"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Nagy kezdőbetű"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Váltás nagybetűsre"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Váltás kisbetűsre"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Nagy kezdőbetű"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Nagybetűk"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Kisbetűk"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "A kezdőbetű legyen nagybetű"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Az összes betűt nagybetűvé alakítja"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Az összes betűt kisbetűvé alakítja"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "A kezdőbetűt nagybetűvé alakítja"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Kis- és nagybetűk változtatása"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "A cellaadat érvényességének ellenőrzése"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Érvényesség..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Törli a cellából az érvényességi ellenőrzéseket"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Érvényesség eltávolítása"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Érvényesség ellenőrzés eltávolítása"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Érvényesség ellenőrzés hozzáadása"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14417,11 +17590,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "A cellák törlése"
 
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Törlés"
-
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
 msgid "Merge Cells Horizontally"
@@ -14639,12 +17807,6 @@ msgstr "Változó (nincs változás)"
 msgid "Roman"
 msgstr "Római"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Dőlt"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14667,12 +17829,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Normál"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Félkövér"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14685,12 +17841,6 @@ msgstr "Szín:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "Ha be van jelölve, az aktuális cella szövege aláhúzott lesz."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Aláhúzott"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14833,11 +17983,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Százalék"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14850,11 +17995,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Pénz"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14865,11 +18005,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Tudományos"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15075,11 +18210,6 @@ msgstr "Háromszámjegyű 153/652"
 msgid "Dolor Ipse"
 msgstr "Árvíztűrő tükörfúrógép"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Stílus"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15090,11 +18220,6 @@ msgstr "Név:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Stílus öröklése:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Már létezik ilyen nevű stílus."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15147,12 +18272,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Standard"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Középre"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15191,24 +18310,6 @@ msgstr ""
 "<b>Fent</b> - a tartalmat felülre rendezi a cellában.\n"
 "<b>Középen</b> - a tartalmat középre rendezi a cellában.\n"
 "<b>Lent</b> - a tartalmat alulra rendezi a cellában.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Fent"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Középen"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Lent"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15400,20 +18501,10 @@ msgstr "Alkalmazás"
 msgid "Apply changes"
 msgstr "Változások alkalmazása"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Mégse"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Változások eldobása"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "minden"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15494,367 +18585,13 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[óó]:pp)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Függvény..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "Beszúr egy matematikai kifejezést"
-
-#~ msgid "From &Database..."
-#~ msgstr "A&datbázisból..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Adatokat szúr be egy SQL adatbázisból"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Képlet kiválasztás"
-
-#~ msgid "Insert a function"
-#~ msgstr "Beszúr egy függvényt"
-
-#~ msgid "Others..."
-#~ msgstr "Egyéb..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Az aktuális cella módosítása"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "A kijelölt cella szerkesztése"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Megfigyelő futtatása..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "QTableView megjelenítése..."
-
 #, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "Védelem"
 
-#, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "Védelem"
-
-#, fuzzy
-#~| msgid "Paste the contents of the clipboard at the cursor"
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Beilleszti a vágólap tartalmát a kurzornál"
-
-#, fuzzy
-#~| msgid ""
-#~| "No database drivers available.  To use this feature you need to install "
-#~| "the necessary Qt 3 database drivers."
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Nem áll rendelkezésre adatbázis-meghajtó. A Qt lefordításánál ki kell "
-#~ "jelölni a használni kívánt meghajtókat"
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Adatok beszúrása adatbázisból"
-
-#~ msgid "Type:"
-#~ msgstr "Típus:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Felhasználónév:\n"
-#~ "(ha szükséges)"
-
-#~ msgid "Host:"
-#~ msgstr "Gépnév:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Port:\n"
-#~ "(ha szükséges)"
-
-#~ msgid "Database name: "
-#~ msgstr "Az adatbázis neve: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Jelszó:\n"
-#~ "(ha szükséges)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Táblaválasztás:"
-
-#~ msgid "Tables"
-#~ msgstr "Táblázatok"
-
-#~ msgid "Select columns:"
-#~ msgstr "Oszlop(ok) kiválasztása:"
-
-#~ msgid "Table"
-#~ msgstr "Táblázat"
-
-#~ msgid "Columns"
-#~ msgstr "Oszlopok"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Az összes feltételnek eleget tegyen (ÉS)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Legalább egy feltételnek eleget tegyen (VAGY)"
-
-#~ msgid "equals"
-#~ msgstr "egyenlő"
-
-#~ msgid "not equal"
-#~ msgstr "nem egyenlő"
-
-#~ msgid "in"
-#~ msgstr "benne van"
-
-#~ msgid "not in"
-#~ msgstr "nincs benne"
-
-#~ msgid "like"
-#~ msgstr "hasonlít"
-
-#~ msgid "greater"
-#~ msgstr "nagyobb mint"
-
-#~ msgid "lesser"
-#~ msgstr "kisebb mint"
-
-#~ msgid "greater or equal"
-#~ msgstr "nagyobb vagy egyenlő"
-
-#~ msgid "less or equal"
-#~ msgstr "kisebb vagy egyenlő"
-
-#~ msgid "Sorted by"
-#~ msgstr "A sorbarendezés kulcsa"
-
-#~ msgid "Ascending"
-#~ msgstr "növekvő"
-
-#~ msgid "Descending"
-#~ msgstr "csökkenő"
-
-#~ msgid "Distinct"
-#~ msgstr "Különböző"
-
-#~ msgid "Query Options"
-#~ msgstr "Lekérdezési bellítások"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL lekérdezés:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Beszúrás ebbe a tartományba"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Kezdőcella"
-
-#~ msgid "Result"
-#~ msgstr "Eredmény"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Itt nem lehet táblát megadni."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Érvényes tartományt kell megadni."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Érvényes cellát kell megadni."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Nincs jogosultsága adat módosításához az adatbázisban."
-
-#~ msgid "Executing query failed."
-#~ msgstr "A lekérdezés végrehajtása nem sikerült."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Ezzel a lekérdezéssel nem kapott eredményt."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Adatok beszúrása adatbázisból"
-
-#~ msgid "The port must be a number"
-#~ msgstr "A portnak számnak kell lennie"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Csatlakozás az adatbázishoz..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr ""
-#~ "A csatlakozás sikeresen megtörtént. A táblajellemzők lekérdezése folyik..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Az adatbázis egy táblát sem tartalmaz"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "A meghajtó betöltése nem sikerült"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "A táblák metaadatainak letöltése folyik..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Legalább egy táblát ki kell választani."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Legalább egy oszlopot ki kell választani."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "A '*' és a '?' keresőkarakter nem használható SQL lekérdezésekben, "
-#~ "helyettük '%' ill. '_' írható. Ki szeretné cserélni a karaktereket?"
-
-#~ msgid "Insert function"
-#~ msgstr "Függvény beszúrása"
-
-#~ msgid "Help"
-#~ msgstr "Súgó"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Ennek a függvénynek nincsenek paraméterei."
-
-#~ msgid "Description is not available."
-#~ msgstr "A leírás nem érhető el."
-
-#~ msgid "Document Settings..."
-#~ msgstr "Dokumentumbeállítások..."
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "A dokumentumbeállítások megjelenítése"
-
-#~ msgid "Document Settings"
-#~ msgstr "Dokumentumbeállítások"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "Számolási mód"
-
-#, fuzzy
-#~| msgid "Case Insensitive"
-#~ msgid "Case sensitive"
-#~ msgstr "Kis- és nagybetű nincs megkülönböztetve"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Pontosság"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Automatikus"
-
-#, fuzzy
-#~| msgid "String to compare with"
-#~ msgid "String comparison:"
-#~ msgstr "Az összehasonlítandó szöveg"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "Reguláris kifejezés"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "A &rendszer területi beállításainak használata"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Nyelv: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Alapértelmezett számformátum: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Hosszú dátumformátum: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Rövid dátumformátum: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Időformátum: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Pénznem formátum: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Egyéni listák..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "Egyéni listák létrehozása rendezéshez, automatikus kitöltéshez"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Az aktuális munkalap minden cellájának kijelölése"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Egyéni listák"
-
-#~ msgid "List:"
-#~ msgstr "Lista:"
-
-#~ msgid "Entry:"
-#~ msgstr "Bejegyzés:"
-
-#~ msgid "Add"
-#~ msgstr "Hozzáadás"
-
-#~ msgid "New"
-#~ msgstr "Új"
-
-#~ msgid "Remove"
-#~ msgstr "Eltávolítás"
-
-#~ msgid "Modify"
-#~ msgstr "Módosítás"
-
-#~ msgid "Copy"
-#~ msgstr "Másolás"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Biztosan el szeretné távolítani ezt a listát?"
-
-#~ msgid "Remove List"
-#~ msgstr "A lista eltávolítása"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "A beviteli terület nem üres.\n"
-#~ "Folytassam a műveletet?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "Célé&rtékkeresés..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Ciklikus számítást végez egy adott érték megkereséséhez"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Célértékkeresés"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Érvénytelen cellahivatkozás."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "A célérték érvénytelen."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "A forráscellának számértéket kell tartalmaznia."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "A célként megadott cellának képletet kell tartalmaznia."
 
 #~ msgid "Starting..."
 #~ msgstr "Kezdés..."
@@ -15864,12 +18601,6 @@ msgstr "%1 hivatkozás aktiválva"
 
 #~ msgid "New value:"
 #~ msgstr "Az új érték:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "A célértékkeresés (a(z) %1 cellával) a következő megoldást találta:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "A célértékkeresés (a(z) %1 cellával) nem talált megoldást."
 
 #~ msgid "Set cell:"
 #~ msgstr "Az eredménycella:"
@@ -15885,82 +18616,6 @@ msgstr "%1 hivatkozás aktiválva"
 
 #~ msgid "Current value:"
 #~ msgstr "A jelenlegi érték:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Csere"
-
-#~ msgid "Selection List..."
-#~ msgstr "Listaelem kiválasztása..."
-
-#~ msgid "More Options"
-#~ msgstr "További bellítások"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Keresés a teljes munkalapon"
-
-#~ msgid "Search in:"
-#~ msgstr "Keresés itt:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Cellaértékek"
-
-#~ msgid "Comments"
-#~ msgstr "Megjegyzések"
-
-#~ msgid "Search direction:"
-#~ msgstr "Keresési irány:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Keresztben, majd lefelé"
-
-#~ msgid "Down then Across"
-#~ msgstr "Lefelé, majd keresztben"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Kevesebb beállítás"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Cellaformátum..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Beállítja a cellaformátumot"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "A cellaobjektum áthelyezése a vágólapra"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "A cellaobjektum másolása a vágólapra"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Beilleszti a vágólap tartalmát a kurzornál"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Különleges beillesztés..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Beilleszti a vágólap tartalmát speciális beállításokkal"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Beillesztés beszúrással"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Beilleszt egy cellát a vágólapról az aktuális munkalapba"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Beillesztés cella/cellák beszúrásával"
-
-#~ msgid "Insert"
-#~ msgstr "Beszúrás"
-
-#~ msgid "Move towards right"
-#~ msgstr "jobbra tolás"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "lefelé tolás"
-
-#~ msgid "Special Paste"
-#~ msgstr "Különleges beillesztés"
 
 #~ msgid "Content"
 #~ msgstr "Tartalom"
@@ -15992,31 +18647,12 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Division"
 #~ msgstr "Osztás"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Helyesírás ellenőrzése"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Ellenőrizni szeretné a helyesírást a következő munkalapon?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Hibásan írt szavak javítása"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Automatikus formázás..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Beállítja a munkalap formátumát"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Automatikus formázás"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Munkalapstílus"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Válassza ki az alkalmazni kívánt stíluslapot:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Nem található ez a kép: %1."
@@ -16024,93 +18660,8 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Could not load image %1."
 #~ msgstr "Nem sikerült betölteni ezt a képet: %1."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Nem sikerült megtalálni ezt a táblastílus-leíró XML-fájlt: '%1'."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr ""
-#~ "Feldolgozási hiba történt ebben a táblastílus-leíró XML-fájlban: %1."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Automatikus szűrés"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Automatikus szűrést ad egy cellatartományhoz"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Automatikus szűrés"
-
-#~ msgid "Clear All"
-#~ msgstr "Minden törlése"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Törli az aktuális cella tartalmát és formázását"
-
 #~ msgid "Contents"
 #~ msgstr "Tartalom"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Tartalom törlése"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Törli az aktuális cella adattartalmát"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Szöveg törlése"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Feltételes formázások eltávolítása"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Feltételes formázások hozzáadása"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Beállítja a szegély színét"
-
-#~ msgid "Border Color"
-#~ msgstr "Szegélyszín"
-
-#~ msgid "Set the background color"
-#~ msgstr "Háttérszín beállítása"
-
-#~ msgid "Background Color"
-#~ msgstr "Háttérszín"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Feltételes cellatulajdonságok..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Beállítja a cellaformátumot megadott feltételek alapján"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Feltételes stílusok"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Feltételes tulajdonságok törlése"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Törli a feltételes cellatulajdonságokat"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "Részössze&gek..."
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Részössze&gek..."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Egynél több cellát kell kiválasztani."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Számformátum"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16119,83 +18670,6 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Százalékformátum"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Időformátum"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Dátumformátum"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Tudományos formátum"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Szegélyszín módosítása"
-
-#~ msgid "<none>"
-#~ msgstr "<nincs>"
-
-#~ msgid "equal to"
-#~ msgstr "egyenlő"
-
-#~ msgid "greater than"
-#~ msgstr "nagyobb"
-
-#~ msgid "less than"
-#~ msgstr "kisebb"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "nagyobb vagy egyenlő"
-
-#~ msgid "equal to or less than"
-#~ msgstr "kisebb vagy egyenlő"
-
-#~ msgid "between"
-#~ msgstr "között"
-
-#~ msgid "outside range"
-#~ msgstr "tartományon kívül"
-
-#~ msgid "different to"
-#~ msgstr "nem egyenlő"
-
-#~ msgid "First Condition"
-#~ msgstr "Első feltétel"
-
-#~ msgid "Second Condition"
-#~ msgstr "Második feltétel"
-
-#~ msgid "Third Condition"
-#~ msgstr "Harmadik feltétel"
-
-#~ msgid "Cell is"
-#~ msgstr "A cella"
-
-#~ msgid "Cell style"
-#~ msgstr "Cellastílus"
-
-#~ msgid "different from"
-#~ msgstr "nem egyenlő"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Ha az első érték szám, akkor a második értéknek is számnak kell lennie."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Ha az első érték szöveg, akkor a második értéknek is szövegnek kell "
-#~ "lennie."
-
-#, fuzzy
-#~| msgid "Select Character"
-#~ msgid "Select Source"
-#~ msgstr "Karakterválasztás"
 
 #, fuzzy
 #~| msgid "Clear Selection"
@@ -16221,11 +18695,6 @@ msgstr "%1 hivatkozás aktiválva"
 #~| msgid "Item"
 #~ msgid "Field"
 #~ msgstr "Elem"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Add Filter"
-#~ msgstr "Szűrő"
 
 #, fuzzy
 #~| msgid "Text Option"
@@ -16272,11 +18741,6 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgstr "Sorok"
 
 #, fuzzy
-#~| msgid "Bit Operations"
-#~ msgid "Pivot Options"
-#~ msgstr "Bitműveletek"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Érték"
@@ -16297,156 +18761,19 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Manual Selection"
 #~ msgstr "Kijelölés kitöltése"
 
-#~ msgid "Product"
-#~ msgstr "szorzat"
-
 #, fuzzy
 #~| msgid "Sorted by"
 #~ msgid "Sort By"
 #~ msgstr "A sorbarendezés kulcsa"
 
-#~ msgid "Select Font..."
-#~ msgstr "Betűtípus-választás..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Betűméret-választás"
-
-#~ msgid "Font Size"
-#~ msgstr "Betűméret"
-
-#~ msgid "Text Color"
-#~ msgstr "Szövegszín"
-
-#~ msgid "Set the text color"
-#~ msgstr "Szövegszín beállítása"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Betűtípus módosítása"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Stíluskezelő..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "A cellastílusok szerkesztését és áttekintése"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Alkalmaz egy megadott stílust a kijelölt cellákra"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Stílus létrehozása cella alapján..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "Stílus cella alapján"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Új stílust hoz létre a kijelölt cella stílusa alapján"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Stílus létrehozása cella alapján"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "A stílus neve nem lehet üres."
-
-#~ msgid "Style Manager"
-#~ msgstr "Stíluskezelő"
-
-#~ msgid "All Styles"
-#~ msgstr "Minden stílus"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Egyéni stílusok"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Hierarchikus"
-
-#~ msgid "&New..."
-#~ msgstr "Ú&j..."
-
-#~ msgid "&Modify..."
-#~ msgstr "Mó&dosítás..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Törlés..."
-
-#~ msgid "style%1"
-#~ msgstr "%1. stílus"
-
 #~ msgid "Cells..."
 #~ msgstr "Cellák..."
-
-#~ msgid "Insert Cells..."
-#~ msgstr "Cella beszúrása..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Üres cellát szúr a munkalapba"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Cella törlése..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Törli a cellákat a munkalapról"
 
 #~ msgid "Delete Cells..."
 #~ msgstr "Cellák törlése..."
 
-#~ msgid "Insert rows"
-#~ msgstr "Sorok beszúrása"
-
-#~ msgid "Insert columns"
-#~ msgstr "Oszlopok beszúrása"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Cellák beszúrása"
-
-#~ msgid "Move towards left"
-#~ msgstr "Lépés balra"
-
-#~ msgid "Move towards top"
-#~ msgstr "Lépés felfelé"
-
-#~ msgid "Remove rows"
-#~ msgstr "A sorok törlése"
-
-#~ msgid "Remove columns"
-#~ msgstr "Az oszlopok törlése"
-
-#~ msgid "Remove Cells"
-#~ msgstr "A cellák törlése"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "Részössze&gek..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Különféle részösszegeket hoz létre listához vagy adatbázishoz"
-
-#~ msgid "Subtotals"
-#~ msgstr "Részösszegek"
-
-#~ msgid "Remove All"
-#~ msgstr "Az összes eltávolítása"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr ""
-#~ "Legalább egy oszlopot ki kell választani részösszegek hozzáadásához."
-
 #~ msgid "Grand Total"
 #~ msgstr "Teljes összegzés"
-
-#~ msgid "Column '%1' "
-#~ msgstr "%1. oszlop "
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "Részösszegek &cseréje"
@@ -16472,45 +18799,6 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Részösszeg hozzáadása:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Ugrás egy megadott cellára..."
-
-#~ msgid "Goto"
-#~ msgstr "Ugrás"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Ugrás a megadott cellára"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Törés az oszlop előtt"
-
-#~ msgid "Column Break"
-#~ msgstr "Oszloptörés"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Manuális oldaltörés beállítása az oszlop előtt"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Törés a sor előtt"
-
-#~ msgid "Row Break"
-#~ msgstr "Sortörés"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Manuális oldaltörés beállítása a sor előtt"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Ugrás megadott cellára"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Adja meg a cellát:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "Konsz&olidálás..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "Összegző tartományt hoz létre egy csoport hasonló tartományból"
-
 #~ msgid "Description in rows"
 #~ msgstr "Leírás sorokban"
 
@@ -16519,39 +18807,6 @@ msgstr "%1 hivatkozás aktiválva"
 
 #~ msgid "Copy data"
 #~ msgstr "Adat másolása"
-
-#~ msgid "Consolidate"
-#~ msgstr "Konszolidálás"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "szórás"
-
-#~ msgid "Variance"
-#~ msgstr "variancia"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Legalább egy forrástartományt meg kell adni."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 nem érvényes cellatartomány."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Az alábbi tartomány:\n"
-#~ "%1\n"
-#~ "túl kicsi."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Az alábbi tartomány:\n"
-#~ "%1\n"
-#~ "túl nagy."
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16565,22 +18820,6 @@ msgstr "%1 hivatkozás aktiválva"
 #~ "a(z) %2\n"
 #~ "tartomány nem egyforma méretű."
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Összesítés"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "A forrástartomány metszi a céltartományt."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Az alábbi tartomány:\n"
-#~ "%1\n"
-#~ " hibás."
-
 #~ msgid "Function:"
 #~ msgstr "Függvény:"
 
@@ -16590,201 +18829,17 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Entered references:"
 #~ msgstr "Megadott hivatkozások:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "A szög módosítása..."
-
-#~ msgid "Angle"
-#~ msgstr "Szög"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Módosítja a cellatartalom nyomtatási szögét"
-
-#~ msgid "Increase Precision"
-#~ msgstr "A pontosság növelése"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Megnöveli a kiírt tizedesjegyek számát"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "A pontosság csökkentése"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Lecsökkenti a kiírt tizedesjegyek számát"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "A pontosság növelése"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "A pontosság csökkentése"
-
-#~ msgid "Change Angle"
-#~ msgstr "A szög módosítása"
-
-#~ msgid "Angle:"
-#~ msgstr "Szög:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "A szög módosítása"
-
-#~ msgid "Area Name..."
-#~ msgstr "A terület neve..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Nevet rendel a munkafüzet egy tartományához"
-
-#~ msgid "Named Areas..."
-#~ msgstr "Megnevezett területek..."
-
-#~ msgid "Named Areas"
-#~ msgstr "Megnevezett területek"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Megnevezett területek szerkesztése vagy kiválasztása"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Megnevezett terület hozzáadása"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Adja meg a terület nevét:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "A(z) '%1' terület már létezik.\n"
-#~ "Le szeretné cserélni?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "A megadott nevű területet cseréje"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "A megadott nevű területet cseréje"
-
 #~ msgid "&Select"
 #~ msgstr "&Kiválasztás"
 
-#~ msgid "Area: %1"
-#~ msgstr "Terület: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "S&zerkesztés..."
-
-#~ msgid "&Remove"
-#~ msgstr "&Eltávolítás"
 
 #~ msgid "New Named Area"
 #~ msgstr "Új megnevezett terület"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Megnevezett terület szerkesztése"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Biztosan törölni szeretné ezt a területet?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Megnevezett terület eltávolítása"
-
-#~ msgid "Cells:"
-#~ msgstr "Cellák:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Munkalap"
-
-#~ msgid "Area name:"
-#~ msgstr "Területnév:"
-
-#~ msgid "Align Left"
-#~ msgstr "Balra igazítás"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Balra igazítja a cella tartalmát"
-
-#~ msgid "Align Center"
-#~ msgstr "Középre igazítás"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Középre igazítja a cella tartalmát"
-
-#~ msgid "Align Right"
-#~ msgstr "Jobbra igazítás"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Jobbra igazítja a cella tartalmát"
-
-#~ msgid "Align Top"
-#~ msgstr "Felülre igazítás"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "A cella tetejéhez igazítja a cella tartalmát"
-
-#~ msgid "Align Middle"
-#~ msgstr "Középre igazítás"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "A cella középvonalához igazítja a cella tartalmát"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Alulra igazítás"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "A cella aljához igazítja a cella tartalmát"
-
-#~ msgid "Border Left"
-#~ msgstr "Bal szegély"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Beállítja a kijelölt terület bal szegélyét"
-
-#~ msgid "Border Right"
-#~ msgstr "Jobb szegély"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Beállítja a kijelölt terület jobb szegélyét"
-
-#~ msgid "Border Top"
-#~ msgstr "Felső szegély"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Beállítja a kijelölt terület felső szegélyét"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Alsó szegély"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Beállítja a kijelölt terület alsó szegélyét"
-
-#~ msgid "All Borders"
-#~ msgstr "Teljes szegély"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Teljes szegélyt húz a kijelölt terület köré"
-
-#~ msgid "No Borders"
-#~ msgstr "Nincs szegély"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Megszünteti a szegélyt a kijelölt terület körül"
-
-#~ msgid "Border Outline"
-#~ msgstr "Szegélyvonal"
-
-#~ msgid "Outline"
-#~ msgstr "Körvonal"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Szegélyt tesz a kijelölt terület körvonalára"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Vízszintes igazítás módosítása"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Függőleges igazítás módosítása"
 
 #~ msgid "Australia"
 #~ msgstr "Ausztrália"
@@ -18599,61 +20654,6 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Zimbabwei dollár"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Visszaállítja az alapértelmezett formátumot"
-
-#~ msgid "Strike Out"
-#~ msgstr "áthúzott"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "A betűméret növelése"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "A betűméret csökkentése"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Szövegtördelés"
-
-#~ msgid "Wrap"
-#~ msgstr "Tördelés"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Több szövegsort engedélyez a cellában"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Függőleges szöveg"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Függőlegesen írja ki a cella tartalmát"
-
-#~ msgid "Percent Format"
-#~ msgstr "Százalékformátum"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "A cellatartalom megjelenését százalékosra állítja"
-
-#~ msgid "Money Format"
-#~ msgstr "Pénzformátum"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "A cellatartalom megjelenését a helyi pénz formátumára állítja"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Szövegtördelés"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Függőleges szöveg"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Százalékformátum"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Pénzformátum"
-
 #~ msgid "&Data Format"
 #~ msgstr "Adat&formátum"
 
@@ -18697,9 +20697,6 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Default height (%1)"
 #~ msgstr "Alapértelmezett magasság (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Magasság:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Beállítja a cellamagasságot."
 
@@ -18713,442 +20710,32 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Default width (%1)"
 #~ msgstr "Alapértelmezett szélesség (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Szélesség:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Megjegyzés hozzáadása"
-
-#~ msgid "Increase Indent"
-#~ msgstr "A behúzás növelése"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Megnöveli a behúzást"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "A behúzás csökkentése"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Lecsökkenti a behúzást"
-
-#~ msgid "Upper Case"
-#~ msgstr "Nagybetűk"
-
-#~ msgid "Upper"
-#~ msgstr "Nagybetűs"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Az összes betűt nagybetűvé alakítja"
-
-#~ msgid "Lower Case"
-#~ msgstr "Kisbetűk"
-
-#~ msgid "Lower"
-#~ msgstr "Kisbetűs"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Az összes betűt kisbetűvé alakítja"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "A kezdőbetű legyen nagybetű"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Nagy kezdőbetű"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "A kezdőbetűt nagybetűvé alakítja"
-
-#~ msgid "Comment..."
-#~ msgstr "Megjegyzés..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "A cellamegjegyzés szerkesztése"
-
-#~ msgid "Remove Comment"
-#~ msgstr "A megjegyzés törlése"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Törli a megjegyzést a cellából"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Váltás nagybetűsre"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Váltás kisbetűsre"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Nagy kezdőbetű"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "A megjegyzés törlése"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Megjegyzés törlése"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Kis- és nagybetűk változtatása"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Behúzás növelése"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Behúzás csökkentése"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Cellamegjegyzés"
-
-#~ msgid "&Left"
-#~ msgstr "&Balról"
-
-#~ msgid "&Right"
-#~ msgstr "&Jobbról"
-
 #~ msgid "&Up"
 #~ msgstr "&Fent"
-
-#~ msgid "&Down"
-#~ msgstr "&Lent"
-
-#~ msgid "Autosum"
-#~ msgstr "Automatikus összegzés"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Az összegzési függvény beszúrása"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Kijelölés kitöltése"
-
-#~ msgid "From &Text File..."
-#~ msgstr "Szö&veges fájlból..."
-
-#~ msgid "Text File"
-#~ msgstr "Szöveges fájl"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Adatokat szúr be szöveges fájlból az aktuális kurzorpozíciónál vagy "
-#~ "kijelölésnél"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "A &vágólapról..."
 
-#~ msgid "Clipboard"
-#~ msgstr "Vágólap"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "CSV adatokat szúr be a vágólapról az aktuális kurzorpozícióhoz vagy "
-#~ "kijelöléshez"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "Szöveg oszlo&pokba bontása..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Szétbontja a cellatartalmat több oszlopba"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Beillesztés a vágólapról"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Nincs adat a vágólapon."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Nincs beilleszthető adat a vágólapon."
-
-#~ msgid "Text to Columns"
-#~ msgstr "A szöveg oszlopokba rendezése"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "A bemeneti fájlt nem sikerült megnyitni."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Beillesztés a vágólapról"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Szövegfájl beszúrása"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Szöveget oszlopokba"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "A kijelölt tartomány összevonása"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "A cellák összevonása vízszintesen"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "A kijelölt tartomány vízszintes összevonása"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "A cellák összevonása függőlegsen"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "A kijelölt tartomány függőleges összevonása"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "A cellák szétválasztása"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "A kijelölt tartomány összevonásának megszüntetése"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Az oszlop átméretezése..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Módosítja az oszlop szélességét"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Oszlop(ok) beszúrása"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Beszúr egy új oszlopot a munkalapba"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Az oszlopok törlése"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Eltávolítja a kijelölt oszlopokat a munkafüzetből"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Oszlopok elrejtése"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Elrejti az oszlopokat"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Oszlopok felfedése..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Felfedi a rejtett oszlopokat"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Oszlopkiegyenlítés"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Azonos méretűre állítja a kijelölt oszlopokat"
-
-#~ msgid "Show Columns"
-#~ msgstr "Oszlopok megjelenítése"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Felfedi a rejtett oszlopokat a kijelölt részen"
-
-#~ msgid "Resize Row..."
-#~ msgstr "A sor átméretezése..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Módosítja a sor magasságát"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Sor(ok) beszúrása"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Beszúr egy új sort a munkalapba"
-
-#~ msgid "Remove Rows"
-#~ msgstr "A sorok törlése"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Törli a kijelölt sorokat a munkalapról"
-
-#~ msgid "Hide Rows"
-#~ msgstr "Sorok elrejtése"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Elrejt egy sort"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Sorok felfedése..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Felfedi a rejtett sorokat"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Sorkiegyenlítés"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Azonos méretűre állítja a kijelölt sorokat"
-
-#~ msgid "Show Rows"
-#~ msgstr "Sorok megjelenítése"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Felfedi a rejtett sorokat a kijelölt részen"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "A sorok és oszlopok eligazítása"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "A tartalomhoz igazítja a sor- és oszlopméretet"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Az oszlop igazítása"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Oszlop(ok) törlése"
-
-#~ msgid "Adjust Row"
-#~ msgstr "A sor igazítása"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Sorok törlése"
 
-#~ msgid "Resize Row"
-#~ msgstr "Sor átméretezése"
-
-#~ msgid "Resize Column"
-#~ msgstr "Oszlop átméretezése"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Válassza ki a felfedni kívánt rejtett oszlopokat:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Válassza ki a felfedni kívánt rejtett sorokat:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Oszlop: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Sor: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "Internetes &link..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Beszúr egy internetes linket"
-
-#~ msgid "Link"
-#~ msgstr "Hivatkozás"
-
-#~ msgid "Remove Link"
-#~ msgstr "A link eltávolítása"
-
-#~ msgid "Remove a link"
-#~ msgstr "Hivatkozás törlése"
-
-#~ msgid "Insert Link"
-#~ msgstr "Link beszúrása"
-
 #~ msgid "Edit Link"
 #~ msgstr "A link szerkesztése"
-
-#, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "A link eltávolítása"
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Link beállítása"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Internetes címre mutató hivatkozás"
-
-#~ msgid "Text to display:"
-#~ msgstr "Megjelenítendő szöveg:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Internet-cím:"
-
-#~ msgid "Email"
-#~ msgstr "E-mail"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "E-mail címre mutató hivatkozás"
-
-#~ msgid "Email address:"
-#~ msgstr "E-mail cím:"
-
-#~ msgid "Subject:"
-#~ msgstr "Tárgy:"
-
-#~ msgid "File"
-#~ msgstr "Fájl"
-
-#~ msgid "Link to File"
-#~ msgstr "Fájlra mutató hivatkozás"
-
-#~ msgid "File location:"
-#~ msgstr "A fájl helye:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Nemrég használt fájl:"
-
-#~ msgid "No Entries"
-#~ msgstr "Nincs bejegyzés"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Cellára mutató hivatkozás"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Cella vagy megnevezett terület"
-
-#~ msgid "&Sort..."
-#~ msgstr "Ren&dezés..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Rendezést hajt végre egy cellacsoporton"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Rendezés &csökkenő sorrendben"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "Csökkenő sorrendben rendez egy cellacsoportot"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Rendezés nö&vekvő sorrendben"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "Növekvő sorrendben rendez egy cellacsoportot"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Adatok rendezése"
 
 #~ msgid "Use custom list"
 #~ msgstr "Egyéni lista használata"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Cellaformázás másolása (keretek, színek, szövegstílus)"
-
-#~ msgid "Column %1"
-#~ msgstr "%1. oszlop"
-
-#~ msgid "Row %1"
-#~ msgstr "%1. sor"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Az első oszlop tartalmazza a sor fejléceit"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Az első sor tartalmazza az oszlop fejléceit"
-
-#~ msgid "Sort"
-#~ msgstr "Sorbarendezés"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Kis- és nagybetű nincs megkülönböztetve"
 
 #~ msgid "Move Up"
 #~ msgstr "Mozgatás fel"
@@ -19213,231 +20800,8 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "A sorokba csoportosított adatok rendezése függőlegesen"
 
-#~ msgid "Validity..."
-#~ msgstr "Érvényesség..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "A cellaadat érvényességének ellenőrzése"
-
-#~ msgid "Validity"
-#~ msgstr "Érvényesség"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Érvényesség eltávolítása"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Törli a cellából az érvényességi ellenőrzéseket"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Érvényesség ellenőrzés eltávolítása"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Érvényesség ellenőrzés hozzáadása"
-
-#~ msgid "Clear &All"
-#~ msgstr "Minden tö&rlése"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Feltételek"
-
-#~ msgid "Allow:"
-#~ msgstr "Érvényes:"
-
-#~ msgid "Integer"
-#~ msgstr "egész"
-
-#~ msgid "Text Length"
-#~ msgstr "szöveghossz"
-
-#~ msgid "List"
-#~ msgstr "Lista"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Üresek engedélyezése"
-
-#~ msgid "Data:"
-#~ msgstr "Adat:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Minimum:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Maximum:"
-
-#~ msgid "Date:"
-#~ msgstr "Dátum:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Minimális dátum:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Maximális dátum:"
-
-#~ msgid "Time:"
-#~ msgstr "Idő:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Minimális idő:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Maximális idő:"
-
-#~ msgid "Number:"
-#~ msgstr "Szám:"
-
-#~ msgid "Entries:"
-#~ msgstr "Bejegyzések:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "Hi&bajelzés"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Hibajelzés jelenjen meg, ha egy bevitt érték érvénytelen"
-
-#~ msgid "Action:"
-#~ msgstr "Esemény:"
-
-#~ msgid "Stop"
-#~ msgstr "Leállítás"
-
-#~ msgid "Warning"
-#~ msgstr "Figyelem"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Cím:"
-
-#~ msgid "Message:"
-#~ msgstr "Üzenet:"
-
-#~ msgid "Input Help"
-#~ msgstr "Beviteli segítség"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Cella kiválasztásakor beviteli segítség megjelenítése"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Ez ez érték nem érvényes."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Ez az időérték érvénytelen."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Ez a dátumérték érvénytelen."
-
-#~ msgid "&Series..."
-#~ msgstr "&Sorozat..."
-
-#~ msgid "Insert a series"
-#~ msgstr "Beszúr egy sorozatot"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Sorozat beszúrása"
-
-#~ msgid "Select Character"
-#~ msgstr "Karakterválasztás"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "A kiválasztott karakter beszúrása a szövegbe"
-
-#~ msgid "Series"
-#~ msgstr "Sorozatok"
-
-#~ msgid "Insert Values"
-#~ msgstr "Értékek beszúrása"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "A sorozat fentről lefelé haladjon"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "A sorozat balról jobbra haladjon"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "számtani (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Számtani sorozat létrehozása a megadott kezdő- és végértékkel, illetve "
-#~ "lépésközzel. Tehát a sorozat minden egyes tagja a lépésközzel nagyobb a "
-#~ "megelőzőnél."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "mértani (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Mértani sorozat létrehozása a megadott kezdő- és végértékkel, illetve "
-#~ "szorzótényezővel. Ha a szorzótényező értéke 5, akkor a sorozat lehet "
-#~ "például: 5, 25, 125, 625 - mert 5*5=25, 25*5=125, 125*5=625 és így "
-#~ "tovább. "
-
-#~ msgid "Start value:"
-#~ msgstr "Kezdőérték:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Záróérték:"
-
-#~ msgid "Step value:"
-#~ msgstr "Lépésköz:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Mind a kezdő-, mind a záróértéknek pozitívnak kell lennie."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "A záróértéknek nagyobbnak kell lennie a kezdőértéknél, vagy a lépésköznek "
-#~ "kisebbnek kell lennie 1-nél."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "Sem a kezdő- és záróérték, sem a lépésköz nem lehet nulla."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "A lépésköz nem lehet 1."
-
-#~ msgid "Step is negative."
-#~ msgstr "A lépésköz negatív."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "A lépésköznek pozitívnak kell lennie, különben a számtani sorozat "
-#~ "végtelen lesz!"
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Ha a kezdőérték nagyobb a záróértéknél, akkor a lépésköznek negatívnak "
-#~ "kell lennie."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Ha a lépésköz negatív, a kezdőértéknek nagyobbnak kell lennie a "
-#~ "záróértéknél."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "Spe&ciális karakter..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr ""
-#~ "Olyan karaktereket szúr be, amelyek nem érhető el közvetlenül a "
-#~ "billentyűzeten"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Az internet-cím üres"
@@ -26910,12 +28274,6 @@ msgstr "%1 hivatkozás aktiválva"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "%1. stílus"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Részösszegek"
 
 #, fuzzy
 #~| msgid "Remove All"
@@ -43651,9 +45009,6 @@ msgstr "%1 hivatkozás aktiválva"
 
 #~ msgid "Document's Locale Settings"
 #~ msgstr "A dokumentum területi beállításai"
-
-#~ msgid "Inserting Text File"
-#~ msgstr "Szövegfájl beszúrása"
 
 #~ msgid "y (array)"
 #~ msgstr "y(tartomány)"

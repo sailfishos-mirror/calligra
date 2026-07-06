@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2006-12-17 13:47+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -134,8 +134,13 @@ msgstr "koʻproq"
 msgid "Header1"
 msgstr "koʻproq"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, fuzzy, kde-format
 msgid "Default"
 msgstr "Natija"
@@ -167,7 +172,8 @@ msgstr "soniya"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Matn"
@@ -238,7 +244,8 @@ msgstr "<br><b>Turi:</b> "
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, fuzzy, kde-format
 msgid "Parameters"
 msgstr "&Parametrlar"
@@ -835,14 +842,15 @@ msgstr "Tuvalu"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Son"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Format"
@@ -896,6 +904,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "Tuvalu"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Maʼlumot bazasi"
@@ -1169,6 +1179,7 @@ msgstr "Sana va vaqt"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1234,7 +1245,8 @@ msgstr "Tuvalu"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, fuzzy, kde-format
 msgid "Time"
 msgstr "Vaqt:"
@@ -4575,6 +4587,7 @@ msgid "Regular payments"
 msgstr "Matematik ifoda qoʻshish."
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Turi"
@@ -4858,12 +4871,19 @@ msgstr "Qoʻlbola"
 msgid "Automatic"
 msgstr "Avtomatik"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, fuzzy, kde-format
 msgid "Information"
 msgstr "Vaqtning koʻrinishi"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, fuzzy, kde-format
 msgid "Error"
 msgstr "Yevro"
@@ -5610,7 +5630,7 @@ msgstr ""
 msgid "Math"
 msgstr "Matematika"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Funksiya"
@@ -6068,6 +6088,7 @@ msgid "Range"
 msgstr "bet"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 msgid "Criteria"
 msgstr "Nigeriya"
@@ -7542,6 +7563,7 @@ msgid "Row"
 msgstr "&Satr"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Ustun"
@@ -11757,7 +11779,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, fuzzy, kde-format
 msgid "&Insert"
 msgstr "Satrlarni qoʻyish"
@@ -11775,7 +11797,7 @@ msgid "F&ormat"
 msgstr "&Format"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Kataklarni birlashtirish"
@@ -11856,8 +11878,8 @@ msgstr "Varaqni bekitish"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 #| msgid "&Font"
 msgid "Font"
@@ -12273,14 +12295,16 @@ msgstr "Ajratuvchi"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, fuzzy, kde-format
 msgid "Horizontal"
 msgstr "Forint"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, fuzzy, kde-format
 msgid "Vertical"
 msgstr "Metikal"
@@ -12308,13 +12332,15 @@ msgid "Up"
 msgstr "Yuqoriga"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, fuzzy, kde-format
 msgid "Right"
 msgstr "Uzunasi:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, fuzzy, kde-format
 msgid "Left"
 msgstr "Lt"
@@ -12326,36 +12352,50 @@ msgstr "&Ustunlarni saralash"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Yoʻq"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Yigʻindi"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Min"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Maks"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Oʻrtacha"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, fuzzy, kde-format
 msgid "Count"
 msgstr "Soni: "
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, fuzzy, kde-format
 msgid "CountA"
 msgstr "CountA: "
@@ -12732,7 +12772,8 @@ msgstr "Tanlashni bekor qilish."
 msgid "Move selected sheet to the bottom"
 msgstr "Tanlangan varaqni eng pastga koʻchirish."
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr ""
@@ -12938,6 +12979,7 @@ msgid "Anchor"
 msgstr "Andorra"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Katak"
@@ -12958,7 +13000,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "Keyingi varaq"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Next"
@@ -12974,7 +13016,7 @@ msgstr "Keyingi varaqqa oʻtish."
 msgid "Previous Sheet"
 msgstr "Oldingi varaq"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 #| msgid "Previous Sheet"
 msgid "Previous"
@@ -13188,7 +13230,7 @@ msgstr ""
 "Aktiv varaqni olib tashlamoqchisiz.\n"
 "Davom etishni istaysizmi?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Nomini kiriting:"
@@ -13248,13 +13290,13 @@ msgstr "CountA: "
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Matnni oʻzgartirish"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
@@ -13262,10 +13304,3141 @@ msgstr "Orqa fon rangi"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Chegara rangini oʻzgartirish"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Ustunlar qoʻshish"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Satrlarni qoʻyish"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Ustunlarni olib tashlash"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Satrlarni olib tashlash"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Elektron jadvalga yangi satr qoʻshish."
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Elektron jadvaldan satrni olib tashlash."
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Elektron jadvalga yangi ustun qoʻshish."
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Joriy katakni elektron jadvaldan olib tashlash."
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Ustunlarni bekitish"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Satrlarni bekitish"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Ustunlarni koʻrsatish"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Satrlarni koʻrsatish"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Tanlangan maydonda bekitilgan ustunlarni koʻrsatish."
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "Tanlangan maydonni birlashtirish."
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Tanlangan maydonda bekitilgan ustunlarni koʻrsatish."
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "Tanlangan maydonni birlashtirish."
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Ustun enini tenglashtirish"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+msgid "Equalize Row"
+msgstr "Ustun enini tenglashtirish"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Tanlangan ustunlarning enini tenglashtirish."
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Tanlangan ustunlarning enini tenglashtirish."
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Column"
+msgstr "Ustunni sozlash"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Row"
+msgstr "Qatorni sozlash"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Satr va ustunni sozlash"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Ustunlarni koʻrsatish..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Satrlarni koʻrsatish..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "Bekitilgan ustunlarni koʻrsatish."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "Bekitilgan satrlarni koʻrsatish."
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Ustun: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Satr: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Ustunning oʻlchamini oʻzgartirish..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Sart oʻlchamini oʻzgartirish..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "Satrning uzunasini oʻzgartirish."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "Ustunning enini oʻzgartirish."
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Chapga tekislash"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "Katak tarkibini chap tomonga tekislash."
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+#| msgid "Merge Cells Horizontally"
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Kataklarni eniga birlashtirish"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Oʻngga tekislash"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "Katak tarkibini oʻng tomonga tekislash."
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Markazda"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "Katak tarkibini markazda tekislash."
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, fuzzy, kde-format
+msgid "Center"
+msgstr "Markazda"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Yuqorida tekislash"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Katak tarkibini yuqoriga tekislash."
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr ""
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+#| msgid "Merge Cells Horizontally"
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Kataklarni eniga birlashtirish"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Pastda tekislash"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Katak tarkibini katak pastida tekislash."
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, fuzzy, kde-format
+msgid "Bottom"
+msgstr "Pastda tekislash"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Oʻrtada tekislash"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Katak tarkibini katak oʻrtasida tekislash."
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Oʻrtacha"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Burchakni oʻzgartirish..."
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Katak tarkibini markazda tekislash."
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+#| msgid "Angle:"
+msgid "Angle"
+msgstr "Burchak:"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Burchakni oʻzgartirish"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+#| msgid "Autofill"
+msgid "&Auto-Filter"
+msgstr "Avto-toʻldirish"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Autofill"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Avto-toʻldirish"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Tanlangan katak uchun oldindan aniqlangan uslubni qoʻllash."
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Auto-Format..."
+msgstr "Katakning formati"
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr ""
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr ""
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Katakning formati"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+msgid "Autosum"
+msgstr "Avtomatik"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Funksiyani qoʻyish"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Avtomatik"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Chap chegara"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Tanlangan maydonning chap chegarasini koʻrsatish."
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Oʻng chegara"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Tanlangan maydonning oʻng chegarasini koʻrsatish."
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Yuqori chegara"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Tanlangan maydonning yuqori chegarasini koʻrsatish."
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Pastgi chegara"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Tanlangan maydonning pastgi chegarasini koʻrsatish."
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Hamma chegaralar"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Tanlangan maydonning hamma chegaralarini koʻrsatish."
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Hammasi"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "All Borders"
+msgid "No Borders"
+msgstr "Hamma chegaralar"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Tanlangan maydonning hamma chegaralarini olib tashlash."
+
+#: ui/actions/Border.cpp:213
+#, fuzzy, kde-format
+msgid "Border Outline"
+msgstr "Chap chegara"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Tanlangan maydonning yuqori chegarasini koʻrsatish."
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+msgid "Outline"
+msgstr "Chap chegara"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Chegara rangi"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "Yangi chegara rangini tanlash."
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Chegara rangini oʻzgartirish"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Kataklarni qoʻyish"
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Elektron jadvalga boʻsh katak qoʻshish."
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Kataklarni olib tashlash"
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Joriy katakni elektron jadvaldan olib tashlash."
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+#| msgid "Clear &All"
+msgid "Clear All"
+msgstr "&Hammasini tozalash"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Joriy katakning formati va tarkibini olib tashlash."
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Clear Contents"
+msgstr "Izohlar"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Joriy katak tarkibini olib tashlash."
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Matnni oʻzgartirish"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Satrlarni olib tashlash"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "Izoh"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Katak uchun izohni tahrirlash."
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Clear Comment"
+msgstr "Izohlar"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "Katak izohini olib tashlash."
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Izohni olib tashlash"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Remove Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Izohni olib tashlash"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Izohni qoʻshish"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Conditional Cell Attributes..."
+msgid "Conditional Styles..."
+msgstr "Katakning shartli atributlari..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+msgid "Conditional Styles"
+msgstr "Katakning shartli atributlari..."
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "&Consolidate..."
+msgstr "Mugʻiliston"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Mugʻiliston"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Tanlangan varaqni eng pastga koʻchirish."
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Tanlangan varaqni eng pastga koʻchirish."
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "&Matn faylidan..."
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "Elektron jadvalga yangi satr qoʻshish."
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Text File"
+msgstr "&Matn faylidan..."
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+msgid "Inserting Text File"
+msgstr "Katakni qoʻyish"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Katakni qoʻyish"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+msgid "Insert From &Clipboard..."
+msgstr "&Xotiradan..."
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "Elektron jadvalga yangi satr qoʻshish."
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+#| msgid "From &Clipboard..."
+msgid "Clipboard"
+msgstr "&Xotiradan..."
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:155
+#, fuzzy, kde-format
+msgid "Inserting From Clipboard"
+msgstr "&Xotiradan..."
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "&Xotiradan..."
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "&Text to Columns..."
+msgstr "Ustunlarni koʻrsatish..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:241
+#, fuzzy, kde-format
+msgid "Text to Columns"
+msgstr "Ustunlar qoʻshish"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Ustunlar qoʻshish"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Boshqa roʻyxatlar..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Edit Area"
+msgid "Add Named Area"
+msgstr "Maydonni tahrirlash"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Maydon nomini kiriting:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Burchakni oʻzgartirish"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Burchak:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+msgid "Automatic Format"
+msgstr "Katakning formati"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Qoʻllash uchun varaq uslubini tanlang:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Character"
+msgstr "Ma&xsus belgi..."
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Tanlangan kataklarni birlashtirishni bekor qilish."
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Katak izohi"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<yoʻq>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "teng"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, fuzzy, kde-format
+msgid "greater than"
+msgstr "koʻproq"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, fuzzy, kde-format
+msgid "less than"
+msgstr "koʻproq"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, fuzzy, kde-format
+msgid "equal to or greater than"
+msgstr "koʻproq"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, fuzzy, kde-format
+msgid "equal to or less than"
+msgstr "koʻproq"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, fuzzy, kde-format
+msgid "between"
+msgstr "Shvetsiya"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "Katakning koʻrinishi"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, fuzzy, kde-format
+msgid "First Condition"
+msgstr "Qoʻshish"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, fuzzy, kde-format
+msgid "Second Condition"
+msgstr "Qidirish yoʻnalishi:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, fuzzy, kde-format
+msgid "Third Condition"
+msgstr "Qoʻshish"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, fuzzy, kde-format
+msgid "Cell is"
+msgstr "Kataklar:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Katak uslubi"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Consolidate"
+msgstr "Mugʻiliston"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, fuzzy, kde-format
+msgid "Standard Deviation"
+msgstr "Andoza"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, fuzzy, kde-format
+msgid "Variance"
+msgstr "Fransiya"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+#| msgid "You have to select at least one column."
+msgid "You have to define at least one source range."
+msgstr "Kamida bitta ustunni tanlash lozim."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+#| msgid "This is not a valid date."
+msgid "%1 is not a valid cell range."
+msgstr "Notoʻgʻri sana."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, fuzzy, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr "Maydon juda katta."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, fuzzy, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr "Maydon juda katta."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, fuzzy, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr "Maydon juda katta."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Maʼlumot bazasidan maʼlumot qoʻyish"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Turi:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Maʼlumot bazasining nomi: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Xost:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Port:\n"
+"(kerak boʻlsa)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Foydalanuvchi:\n"
+"(kerak boʻlsa)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Maxfiy soʻz:\n"
+"(kerak boʻlsa)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Jadvallarni tanlang:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+msgid "Tables"
+msgstr "&Qiymatlar"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Ustunlarni tanlang:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+#| msgid "Tala"
+msgid "Table"
+msgstr "Tala"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Ustunlar"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "teng"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "teng emas"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "da"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "da emas"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, fuzzy, kde-format
+msgid "like"
+msgstr "Beliz"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "koʻproq"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "kamroq"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "koʻp yoki teng"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "kam yoki teng"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, fuzzy, kde-format
+msgid "Sorted by"
+msgstr "Saralash"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Koʻpayish boʻyicha"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Kamayish boʻyicha"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, fuzzy, kde-format
+msgid "Distinct"
+msgstr "Boʻlish"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Soʻrov moslamalari"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL soʻrovi:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, fuzzy, kde-format
+msgid "Insert in region"
+msgstr "Funksiyani qoʻyish"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, fuzzy, kde-format
+msgid "Starting in cell"
+msgstr "Boshlash satri:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Natija"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Bu yerda jadvalni koʻrsatish mumkin emas."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Mavjud maydonni koʻrsatish kerak."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Mavjud katakni koʻrsatish kerak."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Soʻrovni amalga oshirish muvaffaqiyatsiz tugadi."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Ushbu soʻrov hech qanday natija qaytarmadi."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "Insert Data From Database"
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Maʼlumot bazasidan maʼlumot qoʻyish"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Portning qiymati raqam boʻlishi lozim"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Maʼlumot bazasi bilan aloqa oʻrnatilmoqda..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Aloqa oʻrnatildi. Jadval maʼlumotlari olinmoqda..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Maʼlumotlar bazasida jadvallar mavjud emas"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Drayverni yuklab boʻlmaydi"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Kamida bitta jadvalni tanlash lozim."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Kamida bitta ustunni tanlash lozim."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Sentyabr"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Document Settings"
+msgstr "Moslamalar"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "Hisoblash usuli"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Aniqlik"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Avtomatik"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Regular Expressions"
+msgstr "Matematik ifoda qoʻshish."
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "Moslamalar"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Til: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Andoza raqam koʻrinishi: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Sananing toʻliq koʻrinishi: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Sananing qisqa koʻrinishi: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Vaqtning koʻrinishi: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Pulning koʻrinishi: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Qoʻshimcha moslamalar"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Butun varaqda qidirish"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Qaerda qidirish:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Katak qiymatlari"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Izohlar"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Qidirish yoʻnalishi:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "Bekitilgan satrlarni koʻrsatish."
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Fewer Options"
+msgstr "Umumiy moslamalar"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Set Function"
+msgstr "<h2>Parametrlar</h2><ul>"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Funksiyani qoʻyish"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr ""
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Ushbu funksiyada hech qanday parametr yoʻq."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Taʼrif mavjud emas."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Goal Seek"
+msgstr "Varaqni koʻrsatish..."
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Katakka oʻtish"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Enter cell:"
+msgstr "Nomini kiriting:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Insert"
+msgstr "Internet"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Oʻngga koʻchirish"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Pastga koʻchirish"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Satrlar qoʻshish"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Insert columns"
+msgstr "Ustunlar qoʻshish"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, fuzzy, kde-format
+msgid "Insert Cells"
+msgstr "Katakni qoʻyish"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "Hammasini olib tashlash"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Chapga koʻchirish"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Yuqoriga koʻchirish"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Satrlarni olib tashlash"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Ustunlarni olib tashlash"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Kataklarni olib tashlash"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Bogʻni qoʻyish"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Internet Address"
+msgstr "Internet manzili:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Internet manzili:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "Elektron pochta:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Email Address"
+msgstr "Internet manzili:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+#| msgid "Mail address is empty"
+msgid "Email address:"
+msgstr "Elektron pochta manzili koʻrsatilmagan"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+#| msgid "Cut Object"
+msgid "Subject:"
+msgstr "Obʼektni kesish"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, fuzzy, kde-format
+msgid "File"
+msgstr "fayl"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to File"
+msgstr "Katakning oʻlchami"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Fayl manzili:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Yaqinda ochilgan fayl:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Boʻsh"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to Cell"
+msgstr "Katakning oʻlchami"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+#| msgid "Remove Area"
+msgid "Cell or Named Area:"
+msgstr "Maydonni olib tashlash"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Boshqa roʻyxatlar"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Save Changes"
+msgstr "Qiymatni oʻzgartirish"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Roʻyxat:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, fuzzy, kde-format
+msgid "Entry:"
+msgstr "Yozuvlar:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "&Add"
+msgid "Add"
+msgstr "&Qoʻshish"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, fuzzy, kde-format
+msgid "Cancel"
+msgstr "Fransiya"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, fuzzy, kde-format
+#| msgid "&New"
+msgid "New"
+msgstr "&Yangi"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, fuzzy, kde-format
+msgid "Modify"
+msgstr "Oʻzgar&tirish..."
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, fuzzy, kde-format
+#| msgid "Co&py"
+msgid "Copy"
+msgstr "&Nusxa olish"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Rostdan ham ushbu roʻyxatni olib tashlashni istaysizmi?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Roʻyxatni olib tashlash"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, fuzzy, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Aktiv varaqni olib tashlamoqchisiz.\n"
+"Davom etishni istaysizmi?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+#| msgid "Remove Area"
+msgid "Named Areas"
+msgstr "Maydonni olib tashlash"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, fuzzy, kde-format
+#| msgid "Armenia"
+msgid "Area: %1"
+msgstr "Armaniston"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Kataklar:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Varaq:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Maydonning nomi:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, fuzzy, kde-format
+msgid "&Remove"
+msgstr "Bogʻni &olib tashlash"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Rostdan ham ushbu roʻyxatni olib tashlashni istaysizmi?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+#| msgid "Remove Area"
+msgid "Remove Named Area"
+msgstr "Maydonni olib tashlash"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+msgid "The provided region is not valid."
+msgstr "Moʻljal qiymati xato."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Katakni qoʻyish"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Source"
+msgstr "Ma&xsus belgi..."
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+msgid "Add Filter"
+msgstr "fayl"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "Amal"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Satrning oʻlchamini oʻzgartirish"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Uzunasi:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Ustunning oʻlchamini oʻzgartirish"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Eni:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, fuzzy, kde-format
+msgid "Series"
+msgstr "Varaqlar"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Series"
+msgstr "Yangi varaq qoʻshish."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, fuzzy, kde-format
+msgid "Insert Values"
+msgstr "Ustunlar qoʻshish"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Boshlangʻich qiymat:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Oxirgi qiymat:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Orttirma qiymat:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+msgid "End and start value must be positive."
+msgstr "Andoza moslamalar"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Koʻrsatish uchun bekitilgan satrni tanlang:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Koʻrsatish uchun bekitilgan satrni tanlang:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Ustun %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Satr %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "Birinchi varaq"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "&Satr nomini koʻrsatish"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Saralash"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr ""
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Maxsus qoʻyish"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, fuzzy, kde-format
+msgid "Paste"
+msgstr "Yolgʻon"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Uslub boshqaruvchisi"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Uslub"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Hamma uslublar"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Boshqa uslublar"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, fuzzy, kde-format
+msgid "Hierarchical"
+msgstr "Metikal"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "Ya&ngi..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "Oʻzgar&tirish..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, fuzzy, kde-format
+msgid "&Delete..."
+msgstr "Varaqni koʻrsatish..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "uslub%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Subtotals"
+msgstr "S&aralash..."
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Hammasini olib tashlash"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Ustun '%1' "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, fuzzy, kde-format
+msgid "StDev"
+msgstr "Uslub"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, fuzzy, kde-format
+msgid "StDevP"
+msgstr "Uslub"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, fuzzy, kde-format
+msgid "Var"
+msgstr "Mar"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, fuzzy, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Kamida bitta ustunni tanlash lozim."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Tekshirish"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "&Hammasini tozalash"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Ruxsat berish:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Butun son"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Matn uzunligi"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Roʻyxat"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Maʼlumot:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Minimum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Maksimum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Sana:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Minimal sana:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Maksimal sana:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Vaqt:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Minimal vaqt:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Maksimal vaqt:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Raqam:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Yozuvlar:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+msgid "Error Alert"
+msgstr "Yevro"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Amal:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, fuzzy, kde-format
+msgid "Warning"
+msgstr "Bosib chiqarish"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Vaqt:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Xabar:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Notoʻgʻri qiymat."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Notoʻgʻri vaqt."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Notoʻgʻri sana."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "Moslamalar"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+msgid "Show document settings dialog"
+msgstr "Formula panelini koʻrsatish."
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Tanlangan katakni tahrirlash."
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Katakni oʻzgartirish"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "Himoyalash"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Joriy katak tarkibini olib tashlash."
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+msgid "Fill &Down"
+msgstr "Pastga"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+msgid "Fill &Left"
+msgstr "Lt"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+msgid "Fill &Right"
+msgstr "Uzunasi:"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Formula tanlash"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Sentyabr"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Shriftni tanlash"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Formatni oʻzgartirish"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Shrift oʻlchamini tanlash"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+#| msgid "Select Font Size"
+msgid "Font Size"
+msgstr "Shrift oʻlchamini tanlash"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Set the text color"
+msgstr "Orqa fon rangini koʻrsatish."
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Matnning rangi"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Funksiya..."
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "Insert math expression"
+msgstr "Matematik ifoda qoʻshish."
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Formula tanlash"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+msgid "Insert a function"
+msgstr "Funksiyani qoʻyish"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Boshqalar..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+msgid "&Goal Seek..."
+msgstr "Varaqni koʻrsatish..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, fuzzy, kde-format
+msgid "Cell reference is invalid."
+msgstr "Moʻljal qiymati xato."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Moʻljal qiymati xato."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Manba katakda formula boʻlishi lozim."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Moʻljal katakda formula boʻlishi lozim."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Katakga oʻtish"
+
+#: ui/actions/Goto.cpp:25
+#, fuzzy, kde-format
+msgid "Move to a particular cell"
+msgstr "Oldingi varaqqa oʻtish."
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+#| msgid "Goto Cell"
+msgid "Goto"
+msgstr "Katakka oʻtish"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Notoʻgʻri vaqt."
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Decrease Indent"
+msgstr "Aniqlikni kamaytirish"
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Increase Indent"
+msgstr "Aniqlikni oshirish"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "Aniqlikni kamaytirish"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "Aniqlikni oshirish"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Aniqlikni oshirish"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Aniqlikni kamaytirish"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "&Maʼlumot bazasidan..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Maʼlumotni SQL maʼlumotlar bazasidan qoʻyish."
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "&Series..."
+msgstr "S&aralash..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "Yangi varaq qoʻshish."
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Yangi varaq qoʻshish."
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "Ma&xsus belgi..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Bogʻ..."
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Yangi varaq qoʻshish."
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+#| msgid "Set Link"
+msgid "Link"
+msgstr "Bogʻni koʻrsatish"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Remove a link"
+msgstr "Bogʻni olib tashlash."
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Bogʻni olib tashlash"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Bogʻni olib tashlash"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Set Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Bogʻni koʻrsatish"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Tanlanganning roʻyxati"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Kataklarni eniga birlashtirish"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Kataklarni boʻyiga birlashtirish"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Tanlangan kataklarni eniga birlashtirish."
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Tanlangan kataklarni boʻyiga birlashtirish."
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "Tanlangan maydonni birlashtirish."
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Kataklarni ajratish"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "Tanlangan kataklarni birlashtirishni bekor qilish."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Maydonning nomi"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Elektron jadvalga yangi satr qoʻshish."
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+#| msgid "Remove Area"
+msgid "Replace Named Area"
+msgstr "Maydonni olib tashlash"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+#| msgid "Remove Area"
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Maydonni olib tashlash"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Edit Area"
+msgid "Edit or select named areas"
+msgstr "Maydonni tahrirlash"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Show Area..."
+msgid "Named Areas..."
+msgstr "Maydonni koʻrsatish..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Row"
+msgstr "Ustunlarni olib tashlash"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+msgid "Row Break"
+msgstr "koʻproq"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Column"
+msgstr "Ustunlarni olib tashlash"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+msgid "Column Break"
+msgstr "Ustunlarni &raqam sifatida koʻrsatish"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Joriy katak tarkibini olib tashlash."
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Maxsus qoʻyish"
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Joriy katak tarkibini olib tashlash."
+
+#: ui/actions/Paste.cpp:153
+#, fuzzy, kde-format
+msgid "Paste with Insertion"
+msgstr "Katakni qoʻyish"
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Elektron jadvalga yangi satr qoʻshish."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "&Pivot Tables..."
+msgstr "S&aralash..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "Create Pivot Tables"
+msgstr "S&aralash..."
+
+#: ui/actions/Pivot.cpp:29
+#, fuzzy, kde-format
+msgid "You must select multiple cells."
+msgstr "Jadvallarni tanlang:"
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Joriy katak tarkibini olib tashlash."
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet..."
+msgid "Show QTableView..."
+msgstr "Varaqni koʻrsatish..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "S&aralash..."
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+msgid "Sort a group of cells"
+msgstr "Kataklar guruhini saralash."
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "&Koʻpayishi boʻyicha saralash"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "&Kamayishi boʻyicha saralash"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Saralash"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr ""
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Keyingi varaqqa oʻtish."
+
+#: ui/actions/SpellCheck.cpp:237
+#, fuzzy, kde-format
+msgid "Check the spelling"
+msgstr "Imloni tekshirish."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Katakning formati"
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "Katakning koʻrinishini moslash."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Qalin"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, fuzzy, kde-format
+msgid "Italic"
+msgstr "Italiya"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Tagi chizilgan"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Usti chizilgan"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Wrap Text"
+msgstr "Matn"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+msgid "Wrap"
+msgstr "Matn"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Matn"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Print cell contents vertically"
+msgstr "Katak tarkibini katak oʻrtasida tekislash."
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Vertical Text"
+msgstr "Metikal"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Metikal"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Number Format"
+msgstr "Raqam"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Birinchi varaq"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Scientific Format"
+msgstr "Ilmiy"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Ilmiy"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Ilmiy"
+
+#: ui/actions/Style.cpp:342
+#, fuzzy, kde-format
+msgid "Percent Format"
+msgstr "Foiz"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Foiz"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Foiz"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Pul koʻrinishi"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Pul"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format Money"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Pulni koʻrinishi"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Date Format"
+msgstr "Sananing koʻrinishi"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Format"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Time Format"
+msgstr "Vaqtning koʻrinishi"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Format"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Shriftni kattalashtirish"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Shriftni kichiklashtirish"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Aniqlikni oshirish"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Aniqlikni kamaytirish"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Increase Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Aniqlikni oshirish"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Decrease Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Aniqlikni kamaytirish"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "Katakning koʻrinishini moslash."
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Varaqning uslubi"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Orqa fon rangi"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Set the background color"
+msgstr "Orqa fon rangini koʻrsatish."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Uslubni katakdan yaratish..."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Joriy tanlangan katak asosida yangi uslub yaratish."
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "Style of Cell"
+msgid "Style From Cell"
+msgstr "Katakning uslubi"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Uslubni katakdan yaratish"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Uslubning nomi boʻsh boʻlishi mumkin emas."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Ushbu nomli uslub allaqachon mavjud."
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Katak uslublarini oʻzgartirish va boshqarish."
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+#| msgid "Style Manager"
+msgid "Style Manager..."
+msgstr "Uslub boshqaruvchisi"
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Tanlangan katak uchun oldindan aniqlangan uslubni qoʻllash."
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "&Subtotals..."
+msgstr "S&aralash..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "S&aralash..."
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+#| msgid "Upper Case"
+msgid "Upper"
+msgstr "Bosh harf"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+msgid "Lower"
+msgstr "Peru"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+msgid "First Letter Upper"
+msgstr "Birinchi harfni bosh harfga &almashtirish"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Birinchi harfni bosh harfga &almashtirish"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Birinchi harfni bosh harfga &almashtirish"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Birinchi harfni bosh harfga &almashtirish"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Bosh harf"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Kichik harf"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Birinchi harfni bosh harfga aylantirish"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Hamma harflarni bosh harfga aylantirish"
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Hamma harflarni kichik harfga aylantirish."
+
+#: ui/actions/TextCase.cpp:112
+#, fuzzy, kde-format
+msgid "Capitalize the first letter"
+msgstr "Birinchi harfni bosh harf qilish."
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Qiymatni oʻzgartirish"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr ""
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Tekshirish..."
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Joriy katak tarkibini olib tashlash."
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "Bogʻni olib tashlash."
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Bogʻni olib tashlash."
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Tekshirish"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -13521,12 +16694,6 @@ msgstr "Katakni qoʻyish"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Kataklarni olib tashlash"
-
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Satrlarni olib tashlash"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -13792,12 +16959,6 @@ msgstr ""
 msgid "Roman"
 msgstr "Ruminiya"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, fuzzy, kde-format
-msgid "Italic"
-msgstr "Italiya"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -13815,12 +16976,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Oddiy"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Qalin"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -13834,12 +16989,6 @@ msgstr "Rangi:"
 #| msgid "If this is checked, the current cell text wil be underlined."
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "Agar belgilansa, joriy katakdagi matnning tagi chiziladi."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Tagi chizilgan"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -13979,11 +17128,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Foiz"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -13996,11 +17140,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Pul"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14011,11 +17150,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Ilmiy"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14222,11 +17356,6 @@ msgstr "Uchta raqam 153/652"
 msgid "Dolor Ipse"
 msgstr "Rang"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Uslub"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 #| msgid "Name:"
@@ -14238,11 +17367,6 @@ msgstr "Nomi:"
 #, fuzzy, kde-format
 msgid "Inherit style:"
 msgstr "Varaqning uslubi"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Ushbu nomli uslub allaqachon mavjud."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -14289,12 +17413,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Andoza"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, fuzzy, kde-format
-msgid "Center"
-msgstr "Markazda"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -14326,24 +17444,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Oʻrtacha"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, fuzzy, kde-format
-msgid "Bottom"
-msgstr "Pastda tekislash"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -14506,20 +17606,10 @@ msgstr "Aprel"
 msgid "Apply changes"
 msgstr "Uslubni qoʻllash"
 
-#: ui/ExternalEditor.cpp:60
-#, fuzzy, kde-format
-msgid "Cancel"
-msgstr "Fransiya"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Hammasi"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -14580,349 +17670,13 @@ msgstr ""
 #~ msgid "System: "
 #~ msgstr "Tizim: "
 
-#~ msgid "&Function..."
-#~ msgstr "&Funksiya..."
-
-#, fuzzy
-#~ msgid "Insert math expression"
-#~ msgstr "Matematik ifoda qoʻshish."
-
-#~ msgid "From &Database..."
-#~ msgstr "&Maʼlumot bazasidan..."
-
-#, fuzzy
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Maʼlumotni SQL maʼlumotlar bazasidan qoʻyish."
-
-#~ msgid "Formula Selection"
-#~ msgstr "Formula tanlash"
-
-#, fuzzy
-#~ msgid "Insert a function"
-#~ msgstr "Funksiyani qoʻyish"
-
-#~ msgid "Others..."
-#~ msgstr "Boshqalar..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Katakni oʻzgartirish"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Tanlangan katakni tahrirlash."
-
-#, fuzzy
-#~| msgid "Show Sheet..."
-#~ msgid "Show QTableView..."
-#~ msgstr "Varaqni koʻrsatish..."
-
 #, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "Himoyalash"
 
-#, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "Himoyalash"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Joriy katak tarkibini olib tashlash."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Maʼlumot bazasidan maʼlumot qoʻyish"
-
-#~ msgid "Type:"
-#~ msgstr "Turi:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Foydalanuvchi:\n"
-#~ "(kerak boʻlsa)"
-
-#~ msgid "Host:"
-#~ msgstr "Xost:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Port:\n"
-#~ "(kerak boʻlsa)"
-
-#~ msgid "Database name: "
-#~ msgstr "Maʼlumot bazasining nomi: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Maxfiy soʻz:\n"
-#~ "(kerak boʻlsa)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Jadvallarni tanlang:"
-
-#, fuzzy
-#~ msgid "Tables"
-#~ msgstr "&Qiymatlar"
-
-#~ msgid "Select columns:"
-#~ msgstr "Ustunlarni tanlang:"
-
-#, fuzzy
-#~| msgid "Tala"
-#~ msgid "Table"
-#~ msgstr "Tala"
-
-#~ msgid "Columns"
-#~ msgstr "Ustunlar"
-
-#~ msgid "equals"
-#~ msgstr "teng"
-
-#~ msgid "not equal"
-#~ msgstr "teng emas"
-
-#~ msgid "in"
-#~ msgstr "da"
-
-#~ msgid "not in"
-#~ msgstr "da emas"
-
-#, fuzzy
-#~ msgid "like"
-#~ msgstr "Beliz"
-
-#~ msgid "greater"
-#~ msgstr "koʻproq"
-
-#~ msgid "lesser"
-#~ msgstr "kamroq"
-
-#~ msgid "greater or equal"
-#~ msgstr "koʻp yoki teng"
-
-#~ msgid "less or equal"
-#~ msgstr "kam yoki teng"
-
-#, fuzzy
-#~ msgid "Sorted by"
-#~ msgstr "Saralash"
-
-#~ msgid "Ascending"
-#~ msgstr "Koʻpayish boʻyicha"
-
-#~ msgid "Descending"
-#~ msgstr "Kamayish boʻyicha"
-
-#, fuzzy
-#~ msgid "Distinct"
-#~ msgstr "Boʻlish"
-
-#~ msgid "Query Options"
-#~ msgstr "Soʻrov moslamalari"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL soʻrovi:"
-
-#, fuzzy
-#~ msgid "Insert in region"
-#~ msgstr "Funksiyani qoʻyish"
-
-#, fuzzy
-#~ msgid "Starting in cell"
-#~ msgstr "Boshlash satri:"
-
-#~ msgid "Result"
-#~ msgstr "Natija"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Bu yerda jadvalni koʻrsatish mumkin emas."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Mavjud maydonni koʻrsatish kerak."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Mavjud katakni koʻrsatish kerak."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Maʼlumotlar bazasiga oʻzgartirish kiritish mumkin emas."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Soʻrovni amalga oshirish muvaffaqiyatsiz tugadi."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Ushbu soʻrov hech qanday natija qaytarmadi."
-
-#, fuzzy
-#~| msgid "Insert Data From Database"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Maʼlumot bazasidan maʼlumot qoʻyish"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Portning qiymati raqam boʻlishi lozim"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Maʼlumot bazasi bilan aloqa oʻrnatilmoqda..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Aloqa oʻrnatildi. Jadval maʼlumotlari olinmoqda..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Maʼlumotlar bazasida jadvallar mavjud emas"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Drayverni yuklab boʻlmaydi"
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Kamida bitta jadvalni tanlash lozim."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Kamida bitta ustunni tanlash lozim."
-
-#~ msgid "Insert function"
-#~ msgstr "Funksiyani qoʻyish"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Ushbu funksiyada hech qanday parametr yoʻq."
-
-#~ msgid "Description is not available."
-#~ msgstr "Taʼrif mavjud emas."
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "Moslamalar"
-
-#, fuzzy
-#~ msgid "Show document settings dialog"
-#~ msgstr "Formula panelini koʻrsatish."
-
-#, fuzzy
-#~ msgid "Document Settings"
-#~ msgstr "Moslamalar"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "Hisoblash usuli"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Aniqlik"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Avtomatik"
-
-#, fuzzy
-#~ msgid "Regular Expressions"
-#~ msgstr "Matematik ifoda qoʻshish."
-
-#, fuzzy
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "Moslamalar"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Til: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Andoza raqam koʻrinishi: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Sananing toʻliq koʻrinishi: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Sananing qisqa koʻrinishi: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Vaqtning koʻrinishi: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Pulning koʻrinishi: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Boshqa roʻyxatlar..."
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Joriy katak tarkibini olib tashlash."
-
-#~ msgid "Custom Lists"
-#~ msgstr "Boshqa roʻyxatlar"
-
-#~ msgid "List:"
-#~ msgstr "Roʻyxat:"
-
-#, fuzzy
-#~ msgid "Entry:"
-#~ msgstr "Yozuvlar:"
-
-#, fuzzy
-#~| msgid "&Add"
-#~ msgid "Add"
-#~ msgstr "&Qoʻshish"
-
-#, fuzzy
-#~| msgid "&New"
-#~ msgid "New"
-#~ msgstr "&Yangi"
-
-#, fuzzy
-#~ msgid "Remove"
-#~ msgstr "Hammasini olib tashlash"
-
-#, fuzzy
-#~ msgid "Modify"
-#~ msgstr "Oʻzgar&tirish..."
-
-#, fuzzy
-#~| msgid "Co&py"
-#~ msgid "Copy"
-#~ msgstr "&Nusxa olish"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Rostdan ham ushbu roʻyxatni olib tashlashni istaysizmi?"
-
-#~ msgid "Remove List"
-#~ msgstr "Roʻyxatni olib tashlash"
-
-#, fuzzy
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Aktiv varaqni olib tashlamoqchisiz.\n"
-#~ "Davom etishni istaysizmi?"
-
-#, fuzzy
-#~ msgid "&Goal Seek..."
-#~ msgstr "Varaqni koʻrsatish..."
-
-#, fuzzy
-#~ msgid "Goal Seek"
-#~ msgstr "Varaqni koʻrsatish..."
-
-#, fuzzy
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Moʻljal qiymati xato."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Moʻljal qiymati xato."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Manba katakda formula boʻlishi lozim."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Moʻljal katakda formula boʻlishi lozim."
 
 #, fuzzy
 #~ msgid "Starting..."
@@ -14949,91 +17703,6 @@ msgstr ""
 
 #~ msgid "Current value:"
 #~ msgstr "Joriy qiymat:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Sentyabr"
-
-#~ msgid "Selection List..."
-#~ msgstr "Tanlanganning roʻyxati"
-
-#~ msgid "More Options"
-#~ msgstr "Qoʻshimcha moslamalar"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Butun varaqda qidirish"
-
-#~ msgid "Search in:"
-#~ msgstr "Qaerda qidirish:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Katak qiymatlari"
-
-#~ msgid "Comments"
-#~ msgstr "Izohlar"
-
-#~ msgid "Search direction:"
-#~ msgstr "Qidirish yoʻnalishi:"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "Bekitilgan satrlarni koʻrsatish."
-
-#, fuzzy
-#~ msgid "Fewer Options"
-#~ msgstr "Umumiy moslamalar"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Katakning formati"
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "Katakning koʻrinishini moslash."
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Tanlangan varaqni eng pastga koʻchirish."
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Tanlangan varaqni eng pastga koʻchirish."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Joriy katak tarkibini olib tashlash."
-
-#~ msgid "Special Paste..."
-#~ msgstr "Maxsus qoʻyish"
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Joriy katak tarkibini olib tashlash."
-
-#, fuzzy
-#~ msgid "Paste with Insertion"
-#~ msgstr "Katakni qoʻyish"
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Elektron jadvalga yangi satr qoʻshish."
-
-#, fuzzy
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Katakni qoʻyish"
-
-#, fuzzy
-#~ msgid "Insert"
-#~ msgstr "Internet"
-
-#~ msgid "Move towards right"
-#~ msgstr "Oʻngga koʻchirish"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Pastga koʻchirish"
-
-#~ msgid "Special Paste"
-#~ msgstr "Maxsus qoʻyish"
 
 #, fuzzy
 #~ msgid "Content"
@@ -15065,128 +17734,18 @@ msgstr ""
 #~ msgstr "Boʻlish"
 
 #, fuzzy
-#~ msgid "Check the spelling"
-#~ msgstr "Imloni tekshirish."
-
-#, fuzzy
 #~| msgid "Correct Misspelled Word"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Notoʻgʻri yozilgan soʻzni toʻgʻrilash"
 
 #, fuzzy
-#~ msgid "Auto-Format..."
-#~ msgstr "Katakning formati"
-
-#, fuzzy
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Katakning koʻrinishini moslash."
 
 #, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Katakning formati"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Varaqning uslubi"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Qoʻllash uchun varaq uslubini tanlang:"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgid "&Auto-Filter"
-#~ msgstr "Avto-toʻldirish"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Avto-toʻldirish"
-
-#, fuzzy
-#~| msgid "Clear &All"
-#~ msgid "Clear All"
-#~ msgstr "&Hammasini tozalash"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Joriy katakning formati va tarkibini olib tashlash."
-
-#, fuzzy
 #~ msgid "Contents"
 #~ msgstr "Izohlar"
-
-#, fuzzy
-#~ msgid "Clear Contents"
-#~ msgstr "Izohlar"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Joriy katak tarkibini olib tashlash."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Matnni oʻzgartirish"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Katakning koʻrinishini moslash."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Katakning koʻrinishini moslash."
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "Yangi chegara rangini tanlash."
-
-#~ msgid "Border Color"
-#~ msgstr "Chegara rangi"
-
-#, fuzzy
-#~ msgid "Set the background color"
-#~ msgstr "Orqa fon rangini koʻrsatish."
-
-#~ msgid "Background Color"
-#~ msgstr "Orqa fon rangi"
-
-#, fuzzy
-#~| msgid "Conditional Cell Attributes..."
-#~ msgid "Conditional Styles..."
-#~ msgstr "Katakning shartli atributlari..."
-
-#, fuzzy
-#~ msgid "Conditional Styles"
-#~ msgstr "Katakning shartli atributlari..."
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Katakning koʻrinishini moslash."
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Katakning koʻrinishini moslash."
-
-#, fuzzy
-#~ msgid "&Pivot Tables..."
-#~ msgstr "S&aralash..."
-
-#, fuzzy
-#~ msgid "Create Pivot Tables"
-#~ msgstr "S&aralash..."
-
-#, fuzzy
-#~ msgid "You must select multiple cells."
-#~ msgstr "Jadvallarni tanlang:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Raqam"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -15197,76 +17756,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Foiz"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Vaqtning koʻrinishi"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Sananing koʻrinishi"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Ilmiy"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Chegara rangini oʻzgartirish"
-
-#~ msgid "<none>"
-#~ msgstr "<yoʻq>"
-
-#~ msgid "equal to"
-#~ msgstr "teng"
-
-#, fuzzy
-#~ msgid "greater than"
-#~ msgstr "koʻproq"
-
-#, fuzzy
-#~ msgid "equal to or greater than"
-#~ msgstr "koʻproq"
-
-#, fuzzy
-#~ msgid "equal to or less than"
-#~ msgstr "koʻproq"
-
-#, fuzzy
-#~ msgid "between"
-#~ msgstr "Shvetsiya"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "Katakning koʻrinishi"
-
-#, fuzzy
-#~ msgid "First Condition"
-#~ msgstr "Qoʻshish"
-
-#, fuzzy
-#~ msgid "Second Condition"
-#~ msgstr "Qidirish yoʻnalishi:"
-
-#, fuzzy
-#~ msgid "Third Condition"
-#~ msgstr "Qoʻshish"
-
-#, fuzzy
-#~ msgid "Cell is"
-#~ msgstr "Kataklar:"
-
-#~ msgid "Cell style"
-#~ msgstr "Katak uslubi"
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Source"
-#~ msgstr "Ma&xsus belgi..."
 
 #, fuzzy
 #~| msgid "Sheet Selection"
@@ -15292,10 +17781,6 @@ msgstr ""
 #~| msgid "Riel"
 #~ msgid "Field"
 #~ msgstr "Riel"
-
-#, fuzzy
-#~ msgid "Add Filter"
-#~ msgstr "fayl"
 
 #, fuzzy
 #~ msgid "Labels"
@@ -15347,11 +17832,6 @@ msgstr ""
 #~ msgstr "Satr"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "Amal"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Qiymat"
@@ -15374,168 +17854,18 @@ msgstr ""
 #~ msgid "Sort By"
 #~ msgstr "Saralash"
 
-#~ msgid "Select Font..."
-#~ msgstr "Shriftni tanlash"
-
-#~ msgid "Select Font Size"
-#~ msgstr "Shrift oʻlchamini tanlash"
-
-#, fuzzy
-#~| msgid "Select Font Size"
-#~ msgid "Font Size"
-#~ msgstr "Shrift oʻlchamini tanlash"
-
-#~ msgid "Text Color"
-#~ msgstr "Matnning rangi"
-
-#, fuzzy
-#~ msgid "Set the text color"
-#~ msgstr "Orqa fon rangini koʻrsatish."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Formatni oʻzgartirish"
-
-#, fuzzy
-#~| msgid "Style Manager"
-#~ msgid "Style Manager..."
-#~ msgstr "Uslub boshqaruvchisi"
-
-#, fuzzy
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Katak uslublarini oʻzgartirish va boshqarish."
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Tanlangan katak uchun oldindan aniqlangan uslubni qoʻllash."
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Uslubni katakdan yaratish..."
-
-#, fuzzy
-#~| msgid "Style of Cell"
-#~ msgid "Style From Cell"
-#~ msgstr "Katakning uslubi"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Joriy tanlangan katak asosida yangi uslub yaratish."
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Uslubni katakdan yaratish"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Uslubning nomi boʻsh boʻlishi mumkin emas."
-
-#~ msgid "Style Manager"
-#~ msgstr "Uslub boshqaruvchisi"
-
-#~ msgid "All Styles"
-#~ msgstr "Hamma uslublar"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Boshqa uslublar"
-
-#, fuzzy
-#~ msgid "Hierarchical"
-#~ msgstr "Metikal"
-
-#~ msgid "&New..."
-#~ msgstr "Ya&ngi..."
-
-#~ msgid "&Modify..."
-#~ msgstr "Oʻzgar&tirish..."
-
-#, fuzzy
-#~ msgid "&Delete..."
-#~ msgstr "Varaqni koʻrsatish..."
-
-#~ msgid "style%1"
-#~ msgstr "uslub%1"
-
 #, fuzzy
 #~| msgid "Cells:"
 #~ msgid "Cells..."
 #~ msgstr "Kataklar:"
-
-#~ msgid "Insert Cells..."
-#~ msgstr "Kataklarni qoʻyish"
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Elektron jadvalga boʻsh katak qoʻshish."
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Kataklarni olib tashlash"
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Joriy katakni elektron jadvaldan olib tashlash."
 
 #, fuzzy
 #~| msgid "Insert Cells..."
 #~ msgid "Delete Cells..."
 #~ msgstr "Kataklarni qoʻyish"
 
-#~ msgid "Insert rows"
-#~ msgstr "Satrlar qoʻshish"
-
-#, fuzzy
-#~ msgid "Insert columns"
-#~ msgstr "Ustunlar qoʻshish"
-
-#, fuzzy
-#~ msgid "Insert Cells"
-#~ msgstr "Katakni qoʻyish"
-
-#~ msgid "Move towards left"
-#~ msgstr "Chapga koʻchirish"
-
-#~ msgid "Move towards top"
-#~ msgstr "Yuqoriga koʻchirish"
-
-#~ msgid "Remove rows"
-#~ msgstr "Satrlarni olib tashlash"
-
-#~ msgid "Remove columns"
-#~ msgstr "Ustunlarni olib tashlash"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Kataklarni olib tashlash"
-
-#, fuzzy
-#~ msgid "&Subtotals..."
-#~ msgstr "S&aralash..."
-
-#, fuzzy
-#~ msgid "Subtotals"
-#~ msgstr "S&aralash..."
-
-#~ msgid "Remove All"
-#~ msgstr "Hammasini olib tashlash"
-
-#, fuzzy
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Kamida bitta ustunni tanlash lozim."
-
 #~ msgid "Grand Total"
 #~ msgstr "Umumiy natija"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Ustun '%1' "
-
-#, fuzzy
-#~ msgid "StDev"
-#~ msgstr "Uslub"
-
-#, fuzzy
-#~ msgid "StDevP"
-#~ msgstr "Uslub"
-
-#, fuzzy
-#~ msgid "Var"
-#~ msgstr "Mar"
 
 #~ msgid "Summary &only"
 #~ msgstr "&Faqat hisobot"
@@ -15551,47 +17881,6 @@ msgstr ""
 #~ msgid "Add Subtotal to:"
 #~ msgstr "S&aralash..."
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Katakga oʻtish"
-
-#, fuzzy
-#~| msgid "Goto Cell"
-#~ msgid "Goto"
-#~ msgstr "Katakka oʻtish"
-
-#, fuzzy
-#~ msgid "Move to a particular cell"
-#~ msgstr "Oldingi varaqqa oʻtish."
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Column"
-#~ msgstr "Ustunlarni olib tashlash"
-
-#, fuzzy
-#~ msgid "Column Break"
-#~ msgstr "Ustunlarni &raqam sifatida koʻrsatish"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Row"
-#~ msgstr "Ustunlarni olib tashlash"
-
-#, fuzzy
-#~ msgid "Row Break"
-#~ msgstr "koʻproq"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Katakka oʻtish"
-
-#, fuzzy
-#~ msgid "Enter cell:"
-#~ msgstr "Nomini kiriting:"
-
-#, fuzzy
-#~ msgid "&Consolidate..."
-#~ msgstr "Mugʻiliston"
-
 #, fuzzy
 #~ msgid "Description in rows"
 #~ msgstr "Taʼrif mavjud emas."
@@ -15603,54 +17892,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Copy data"
 #~ msgstr "&Nusxa olish"
-
-#, fuzzy
-#~ msgid "Consolidate"
-#~ msgstr "Mugʻiliston"
-
-#, fuzzy
-#~ msgid "Standard Deviation"
-#~ msgstr "Andoza"
-
-#, fuzzy
-#~ msgid "Variance"
-#~ msgstr "Fransiya"
-
-#, fuzzy
-#~| msgid "You have to select at least one column."
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Kamida bitta ustunni tanlash lozim."
-
-#, fuzzy
-#~| msgid "This is not a valid date."
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "Notoʻgʻri sana."
-
-#, fuzzy
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr "Maydon juda katta."
-
-#, fuzzy
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr "Maydon juda katta."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Mugʻiliston"
-
-#, fuzzy
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr "Maydon juda katta."
 
 #, fuzzy
 #~| msgid "&Function:"
@@ -15665,105 +17906,13 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "Maydon nomini kiriting:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Burchakni oʻzgartirish..."
-
-#, fuzzy
-#~| msgid "Angle:"
-#~ msgid "Angle"
-#~ msgstr "Burchak:"
-
-#, fuzzy
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Katak tarkibini markazda tekislash."
-
-#~ msgid "Increase Precision"
-#~ msgstr "Aniqlikni oshirish"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Aniqlikni kamaytirish"
-
-#, fuzzy
-#~| msgid "Increase Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Aniqlikni oshirish"
-
-#, fuzzy
-#~| msgid "Decrease Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Aniqlikni kamaytirish"
-
-#~ msgid "Change Angle"
-#~ msgstr "Burchakni oʻzgartirish"
-
-#~ msgid "Angle:"
-#~ msgstr "Burchak:"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Burchakni oʻzgartirish"
-
-#~ msgid "Area Name..."
-#~ msgstr "Maydonning nomi"
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Elektron jadvalga yangi satr qoʻshish."
-
-#, fuzzy
-#~| msgid "Show Area..."
-#~ msgid "Named Areas..."
-#~ msgstr "Maydonni koʻrsatish..."
-
-#, fuzzy
-#~| msgid "Remove Area"
-#~ msgid "Named Areas"
-#~ msgstr "Maydonni olib tashlash"
-
-#, fuzzy
-#~| msgid "Edit Area"
-#~ msgid "Edit or select named areas"
-#~ msgstr "Maydonni tahrirlash"
-
-#, fuzzy
-#~| msgid "Edit Area"
-#~ msgid "Add Named Area"
-#~ msgstr "Maydonni tahrirlash"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Maydon nomini kiriting:"
-
-#, fuzzy
-#~| msgid "Remove Area"
-#~ msgid "Replace Named Area"
-#~ msgstr "Maydonni olib tashlash"
-
-#, fuzzy
-#~| msgid "Remove Area"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Maydonni olib tashlash"
-
 #, fuzzy
 #~| msgid "&Sheet"
 #~ msgid "&Select"
 #~ msgstr "&Varaq"
 
-#, fuzzy
-#~| msgid "Armenia"
-#~ msgid "Area: %1"
-#~ msgstr "Armaniston"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Tahrirlash..."
-
-#, fuzzy
-#~ msgid "&Remove"
-#~ msgstr "Bogʻni &olib tashlash"
 
 #, fuzzy
 #~| msgid "Remove Area"
@@ -15774,134 +17923,6 @@ msgstr ""
 #~| msgid "Edit Area"
 #~ msgid "Edit Named Area"
 #~ msgstr "Maydonni tahrirlash"
-
-#, fuzzy
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Rostdan ham ushbu roʻyxatni olib tashlashni istaysizmi?"
-
-#, fuzzy
-#~| msgid "Remove Area"
-#~ msgid "Remove Named Area"
-#~ msgstr "Maydonni olib tashlash"
-
-#~ msgid "Cells:"
-#~ msgstr "Kataklar:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Varaq:"
-
-#~ msgid "Area name:"
-#~ msgstr "Maydonning nomi:"
-
-#~ msgid "Align Left"
-#~ msgstr "Chapga tekislash"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Katak tarkibini chap tomonga tekislash."
-
-#~ msgid "Align Center"
-#~ msgstr "Markazda"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "Katak tarkibini markazda tekislash."
-
-#~ msgid "Align Right"
-#~ msgstr "Oʻngga tekislash"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Katak tarkibini oʻng tomonga tekislash."
-
-#~ msgid "Align Top"
-#~ msgstr "Yuqorida tekislash"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Katak tarkibini yuqoriga tekislash."
-
-#~ msgid "Align Middle"
-#~ msgstr "Oʻrtada tekislash"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Katak tarkibini katak oʻrtasida tekislash."
-
-#~ msgid "Align Bottom"
-#~ msgstr "Pastda tekislash"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Katak tarkibini katak pastida tekislash."
-
-#~ msgid "Border Left"
-#~ msgstr "Chap chegara"
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Tanlangan maydonning chap chegarasini koʻrsatish."
-
-#~ msgid "Border Right"
-#~ msgstr "Oʻng chegara"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Tanlangan maydonning oʻng chegarasini koʻrsatish."
-
-#~ msgid "Border Top"
-#~ msgstr "Yuqori chegara"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Tanlangan maydonning yuqori chegarasini koʻrsatish."
-
-#~ msgid "Border Bottom"
-#~ msgstr "Pastgi chegara"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Tanlangan maydonning pastgi chegarasini koʻrsatish."
-
-#~ msgid "All Borders"
-#~ msgstr "Hamma chegaralar"
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Tanlangan maydonning hamma chegaralarini koʻrsatish."
-
-#, fuzzy
-#~| msgid "All Borders"
-#~ msgid "No Borders"
-#~ msgstr "Hamma chegaralar"
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Tanlangan maydonning hamma chegaralarini olib tashlash."
-
-#, fuzzy
-#~ msgid "Border Outline"
-#~ msgstr "Chap chegara"
-
-#, fuzzy
-#~ msgid "Outline"
-#~ msgstr "Chap chegara"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Tanlangan maydonning yuqori chegarasini koʻrsatish."
-
-#, fuzzy
-#~| msgid "Merge Cells Horizontally"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Kataklarni eniga birlashtirish"
-
-#, fuzzy
-#~| msgid "Merge Cells Horizontally"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Kataklarni eniga birlashtirish"
 
 #~ msgid "Australia"
 #~ msgstr "Avstraliya"
@@ -17712,71 +19733,6 @@ msgstr ""
 #~ msgstr "Zimbabve dollari"
 
 #, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "Katakning koʻrinishini moslash."
-
-#~ msgid "Strike Out"
-#~ msgstr "Usti chizilgan"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Shriftni kattalashtirish"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Shriftni kichiklashtirish"
-
-#, fuzzy
-#~ msgid "Wrap Text"
-#~ msgstr "Matn"
-
-#, fuzzy
-#~ msgid "Wrap"
-#~ msgstr "Matn"
-
-#, fuzzy
-#~ msgid "Vertical Text"
-#~ msgstr "Metikal"
-
-#, fuzzy
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Katak tarkibini katak oʻrtasida tekislash."
-
-#, fuzzy
-#~ msgid "Percent Format"
-#~ msgstr "Foiz"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Katakning koʻrinishini moslash."
-
-#~ msgid "Money Format"
-#~ msgstr "Pul koʻrinishi"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Katakning koʻrinishini moslash."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Matn"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Metikal"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Foiz"
-
-#, fuzzy
-#~| msgid "Format Money"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Pulni koʻrinishi"
-
-#, fuzzy
 #~ msgid "&Data Format"
 #~ msgstr "Sananing koʻrinishi"
 
@@ -17817,9 +19773,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "Andoza uzunasi (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Uzunasi:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Katakning uzunasini koʻrsatish."
 
@@ -17833,501 +19786,33 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "Andoza enlik (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Eni:"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Izohni qoʻshish"
-
-#, fuzzy
-#~ msgid "Increase Indent"
-#~ msgstr "Aniqlikni oshirish"
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "Aniqlikni oshirish"
-
-#, fuzzy
-#~ msgid "Decrease Indent"
-#~ msgstr "Aniqlikni kamaytirish"
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "Aniqlikni kamaytirish"
-
-#~ msgid "Upper Case"
-#~ msgstr "Bosh harf"
-
-#, fuzzy
-#~| msgid "Upper Case"
-#~ msgid "Upper"
-#~ msgstr "Bosh harf"
-
-#, fuzzy
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Hamma harflarni bosh harfga aylantirish"
-
-#~ msgid "Lower Case"
-#~ msgstr "Kichik harf"
-
-#, fuzzy
-#~ msgid "Lower"
-#~ msgstr "Peru"
-
-#, fuzzy
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Hamma harflarni kichik harfga aylantirish."
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Birinchi harfni bosh harfga aylantirish"
-
-#, fuzzy
-#~ msgid "First Letter Upper"
-#~ msgstr "Birinchi harfni bosh harfga &almashtirish"
-
-#, fuzzy
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Birinchi harfni bosh harf qilish."
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Comment..."
-#~ msgstr "Izoh"
-
-#, fuzzy
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Katak uchun izohni tahrirlash."
-
-#~ msgid "Remove Comment"
-#~ msgstr "Izohni olib tashlash"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Katak izohini olib tashlash."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Birinchi harfni bosh harfga &almashtirish"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Birinchi harfni bosh harfga &almashtirish"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Birinchi harfni bosh harfga &almashtirish"
-
-#, fuzzy
-#~| msgid "Remove Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Izohni olib tashlash"
-
-#, fuzzy
-#~ msgid "Clear Comment"
-#~ msgstr "Izohlar"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Qiymatni oʻzgartirish"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Aniqlikni oshirish"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Aniqlikni kamaytirish"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Katak izohi"
-
-#, fuzzy
-#~ msgid "&Left"
-#~ msgstr "Lt"
-
-#, fuzzy
-#~ msgid "&Right"
-#~ msgstr "Uzunasi:"
-
 #, fuzzy
 #~ msgid "&Up"
 #~ msgstr "Yuqoriga"
-
-#, fuzzy
-#~ msgid "&Down"
-#~ msgstr "Pastga"
-
-#, fuzzy
-#~ msgid "Autosum"
-#~ msgstr "Avtomatik"
-
-#, fuzzy
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Funksiyani qoʻyish"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Formula tanlash"
-
-#~ msgid "From &Text File..."
-#~ msgstr "&Matn faylidan..."
-
-#, fuzzy
-#~| msgid "From &Text File..."
-#~ msgid "Text File"
-#~ msgstr "&Matn faylidan..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "Elektron jadvalga yangi satr qoʻshish."
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "&Xotiradan..."
 
 #, fuzzy
-#~| msgid "From &Clipboard..."
-#~ msgid "Clipboard"
-#~ msgstr "&Xotiradan..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "Elektron jadvalga yangi satr qoʻshish."
-
-#, fuzzy
-#~ msgid "&Text to Columns..."
-#~ msgstr "Ustunlarni koʻrsatish..."
-
-#, fuzzy
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "&Xotiradan..."
-
-#, fuzzy
-#~ msgid "Text to Columns"
-#~ msgstr "Ustunlar qoʻshish"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "&Xotiradan..."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Katakni qoʻyish"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Ustunlar qoʻshish"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "Tanlangan maydonni birlashtirish."
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Kataklarni eniga birlashtirish"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Tanlangan kataklarni eniga birlashtirish."
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Kataklarni boʻyiga birlashtirish"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Tanlangan kataklarni boʻyiga birlashtirish."
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Kataklarni ajratish"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Tanlangan kataklarni birlashtirishni bekor qilish."
-
-#~ msgid "Resize Column..."
-#~ msgstr "Ustunning oʻlchamini oʻzgartirish..."
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "Ustunning enini oʻzgartirish."
-
-#~ msgid "Insert Columns"
-#~ msgstr "Ustunlar qoʻshish"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Elektron jadvalga yangi ustun qoʻshish."
-
-#~ msgid "Remove Columns"
-#~ msgstr "Ustunlarni olib tashlash"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Joriy katakni elektron jadvaldan olib tashlash."
-
-#~ msgid "Hide Columns"
-#~ msgstr "Ustunlarni bekitish"
-
-#, fuzzy
 #~ msgid "Hide the column from this"
 #~ msgstr "Ustunni joriy koʻrinishdan bekitish."
-
-#~ msgid "Show Columns..."
-#~ msgstr "Ustunlarni koʻrsatish..."
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "Bekitilgan ustunlarni koʻrsatish."
-
-#~ msgid "Equalize Column"
-#~ msgstr "Ustun enini tenglashtirish"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Tanlangan ustunlarning enini tenglashtirish."
-
-#~ msgid "Show Columns"
-#~ msgstr "Ustunlarni koʻrsatish"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Tanlangan maydonda bekitilgan ustunlarni koʻrsatish."
-
-#~ msgid "Resize Row..."
-#~ msgstr "Sart oʻlchamini oʻzgartirish..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "Satrning uzunasini oʻzgartirish."
-
-#~ msgid "Insert Rows"
-#~ msgstr "Satrlarni qoʻyish"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Elektron jadvalga yangi satr qoʻshish."
-
-#~ msgid "Remove Rows"
-#~ msgstr "Satrlarni olib tashlash"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Elektron jadvaldan satrni olib tashlash."
-
-#~ msgid "Hide Rows"
-#~ msgstr "Satrlarni bekitish"
 
 #, fuzzy
 #~ msgid "Hide a row from this"
 #~ msgstr "Satrni joriy koʻrinishdan bekitish."
 
-#~ msgid "Show Rows..."
-#~ msgstr "Satrlarni koʻrsatish..."
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "Bekitilgan satrlarni koʻrsatish."
-
-#, fuzzy
-#~ msgid "Equalize Row"
-#~ msgstr "Ustun enini tenglashtirish"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Tanlangan ustunlarning enini tenglashtirish."
-
-#~ msgid "Show Rows"
-#~ msgstr "Satrlarni koʻrsatish"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Tanlangan maydonda bekitilgan ustunlarni koʻrsatish."
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Satr va ustunni sozlash"
-
-#, fuzzy
-#~ msgid "Adjust Column"
-#~ msgstr "Ustunni sozlash"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Ustunlarni olib tashlash"
 
-#, fuzzy
-#~ msgid "Adjust Row"
-#~ msgstr "Qatorni sozlash"
-
 #~ msgid "Delete Rows"
 #~ msgstr "Satrlarni olib tashlash"
-
-#~ msgid "Resize Row"
-#~ msgstr "Satrning oʻlchamini oʻzgartirish"
-
-#~ msgid "Resize Column"
-#~ msgstr "Ustunning oʻlchamini oʻzgartirish"
-
-#, fuzzy
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Koʻrsatish uchun bekitilgan satrni tanlang:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Koʻrsatish uchun bekitilgan satrni tanlang:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Ustun: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Satr: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Bogʻ..."
-
-#, fuzzy
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Yangi varaq qoʻshish."
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgid "Link"
-#~ msgstr "Bogʻni koʻrsatish"
-
-#~ msgid "Remove Link"
-#~ msgstr "Bogʻni olib tashlash"
-
-#, fuzzy
-#~ msgid "Remove a link"
-#~ msgstr "Bogʻni olib tashlash."
-
-#~ msgid "Insert Link"
-#~ msgstr "Bogʻni qoʻyish"
 
 #~ msgid "Edit Link"
 #~ msgstr "Bogʻni tahrirlash"
 
 #, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Bogʻni olib tashlash"
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Bogʻni koʻrsatish"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Internet Address"
-#~ msgstr "Internet manzili:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Internet manzili:"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "Elektron pochta:"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Email Address"
-#~ msgstr "Internet manzili:"
-
-#, fuzzy
-#~| msgid "Mail address is empty"
-#~ msgid "Email address:"
-#~ msgstr "Elektron pochta manzili koʻrsatilmagan"
-
-#, fuzzy
-#~| msgid "Cut Object"
-#~ msgid "Subject:"
-#~ msgstr "Obʼektni kesish"
-
-#, fuzzy
-#~ msgid "File"
-#~ msgstr "fayl"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to File"
-#~ msgstr "Katakning oʻlchami"
-
-#~ msgid "File location:"
-#~ msgstr "Fayl manzili:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Yaqinda ochilgan fayl:"
-
-#~ msgid "No Entries"
-#~ msgstr "Boʻsh"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to Cell"
-#~ msgstr "Katakning oʻlchami"
-
-#, fuzzy
-#~| msgid "Remove Area"
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Maydonni olib tashlash"
-
-#~ msgid "&Sort..."
-#~ msgstr "S&aralash..."
-
-#, fuzzy
-#~ msgid "Sort a group of cells"
-#~ msgstr "Kataklar guruhini saralash."
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "&Kamayishi boʻyicha saralash"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "&Koʻpayishi boʻyicha saralash"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Saralash"
-
-#, fuzzy
 #~ msgid "Use custom list"
 #~ msgstr "Boshqa roʻyxatlar"
-
-#~ msgid "Column %1"
-#~ msgstr "Ustun %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Satr %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "Birinchi varaq"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Satr nomini koʻrsatish"
-
-#~ msgid "Sort"
-#~ msgstr "Saralash"
 
 #, fuzzy
 #~| msgid "Down"
@@ -18365,151 +19850,9 @@ msgstr ""
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Kataklar guruhini saralash."
 
-#~ msgid "Validity..."
-#~ msgstr "Tekshirish..."
-
-#~ msgid "Validity"
-#~ msgstr "Tekshirish"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "Bogʻni olib tashlash."
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Joriy katak tarkibini olib tashlash."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Bogʻni olib tashlash."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Tekshirish"
-
-#~ msgid "Clear &All"
-#~ msgstr "&Hammasini tozalash"
-
 #, fuzzy
 #~ msgid "&Criteria"
 #~ msgstr "Nigeriya"
-
-#~ msgid "Allow:"
-#~ msgstr "Ruxsat berish:"
-
-#~ msgid "Integer"
-#~ msgstr "Butun son"
-
-#~ msgid "Text Length"
-#~ msgstr "Matn uzunligi"
-
-#~ msgid "List"
-#~ msgstr "Roʻyxat"
-
-#~ msgid "Data:"
-#~ msgstr "Maʼlumot:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Minimum:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Maksimum:"
-
-#~ msgid "Date:"
-#~ msgstr "Sana:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Minimal sana:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Maksimal sana:"
-
-#~ msgid "Time:"
-#~ msgstr "Vaqt:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Minimal vaqt:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Maksimal vaqt:"
-
-#~ msgid "Number:"
-#~ msgstr "Raqam:"
-
-#~ msgid "Entries:"
-#~ msgstr "Yozuvlar:"
-
-#~ msgid "Action:"
-#~ msgstr "Amal:"
-
-#, fuzzy
-#~ msgid "Warning"
-#~ msgstr "Bosib chiqarish"
-
-#, fuzzy
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Vaqt:"
-
-#~ msgid "Message:"
-#~ msgstr "Xabar:"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Notoʻgʻri qiymat."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Notoʻgʻri vaqt."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Notoʻgʻri sana."
-
-#, fuzzy
-#~ msgid "&Series..."
-#~ msgstr "S&aralash..."
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "Yangi varaq qoʻshish."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Yangi varaq qoʻshish."
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Character"
-#~ msgstr "Ma&xsus belgi..."
-
-#, fuzzy
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Tanlangan kataklarni birlashtirishni bekor qilish."
-
-#, fuzzy
-#~ msgid "Series"
-#~ msgstr "Varaqlar"
-
-#, fuzzy
-#~ msgid "Insert Values"
-#~ msgstr "Ustunlar qoʻshish"
-
-#~ msgid "Start value:"
-#~ msgstr "Boshlangʻich qiymat:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Oxirgi qiymat:"
-
-#~ msgid "Step value:"
-#~ msgstr "Orttirma qiymat:"
-
-#, fuzzy
-#~ msgid "End and start value must be positive."
-#~ msgstr "Andoza moslamalar"
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "Ma&xsus belgi..."
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Internet manzili koʻrsatilmagan"
@@ -31652,10 +32995,6 @@ msgstr ""
 #~ msgstr "Moslamalar"
 
 #, fuzzy
-#~ msgid "Inserting Text File"
-#~ msgstr "Katakni qoʻyish"
-
-#, fuzzy
 #~| msgid "Database"
 #~ msgid "y (array)"
 #~ msgstr "Maʼlumot bazasi"
@@ -31716,10 +33055,6 @@ msgstr ""
 
 #~ msgid "Remove Cell"
 #~ msgstr "Katakni olib tashlash"
-
-#, fuzzy
-#~ msgid "Paste"
-#~ msgstr "Yolgʻon"
 
 #~ msgid "Style of Cell"
 #~ msgstr "Katakning uslubi"
@@ -31798,10 +33133,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "Statistical Functions"
-#~ msgstr "<h2>Parametrlar</h2><ul>"
-
-#, fuzzy
-#~ msgid "Text Functions"
 #~ msgstr "<h2>Parametrlar</h2><ul>"
 
 #, fuzzy

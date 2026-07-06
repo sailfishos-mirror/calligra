@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2026-01-16 09:07+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -139,8 +139,13 @@ msgstr "სათაური"
 msgid "Header1"
 msgstr "თავსართი1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "ნაგულისხმევი"
@@ -172,7 +177,8 @@ msgstr "წმ"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "ტექსტი"
@@ -245,7 +251,8 @@ msgstr "<p><b>დაბრუნების ტიპი:</b> %1</p>"
 msgid "Syntax"
 msgstr "სინტაქსი"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "პარამეტრები"
@@ -883,14 +890,15 @@ msgstr "CARY(12;0) 0-ს აბრუნებს"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "რიცხვი"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "ფორმატი"
@@ -947,6 +955,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") აბრუნებს 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "მონაცემთა ბაზა"
@@ -1244,6 +1254,7 @@ msgstr "თარიღი & დრო"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1317,7 +1328,8 @@ msgstr "DAYS360(\"2/22/2002\"; \"4/21/2002\"; FALSE) აბრუნებს 59
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "დრო"
@@ -4876,6 +4888,7 @@ msgid "Regular payments"
 msgstr "რეგულარული გადახდები"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "ტიპი"
@@ -5173,12 +5186,19 @@ msgstr "ხელით"
 msgid "Automatic"
 msgstr "ავტომატური"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "ინფორმაცია"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "შეცდომა"
@@ -5984,7 +6004,7 @@ msgstr ""
 msgid "Math"
 msgstr "მათემატიკა"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "ფუნქცია"
@@ -6453,6 +6473,7 @@ msgid "Range"
 msgstr "დიაპაზონი"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "კრიტერიუმი"
@@ -7968,6 +7989,7 @@ msgid "Row"
 msgstr "მწკრივი"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "სვეტი"
@@ -12227,7 +12249,7 @@ msgid "&Go"
 msgstr "&გადასვლა"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "&ჩასმა"
@@ -12245,7 +12267,7 @@ msgid "F&ormat"
 msgstr "&ფორმატი"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "უჯრედების შერწყმა"
@@ -12324,8 +12346,8 @@ msgstr "აქტივაცია"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "ფონტი"
@@ -12725,14 +12747,16 @@ msgstr "გვერდის შეზღუდვები:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "ჰორიზონტალური"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "ვერტიკალური"
@@ -12759,13 +12783,15 @@ msgid "Up"
 msgstr "მაღლა"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "მარჯვნივ"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "მარცხნივ"
@@ -12777,36 +12803,50 @@ msgstr "დაბლა, პირველი სვეტი"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "არა"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "ჯამი"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "მინ"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "მაქს"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "საშუალო"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "რაოდენობა"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "რაოდენობა2"
@@ -13184,7 +13224,8 @@ msgstr "მონიშნულის გასუფთავება"
 msgid "Move selected sheet to the bottom"
 msgstr "მონიშნული ფურცლის სულ დაბლა ჩამოტანა"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "დიდი ასოს გმრძნობიარე"
@@ -13385,6 +13426,7 @@ msgid "Anchor"
 msgstr "ბმული"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "უჯრედი"
@@ -13404,7 +13446,7 @@ msgstr "მიმაგრების ფორმის გადართვ�
 msgid "Next Sheet"
 msgstr "შემდეგი ფურცელი"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "შემდეგი"
@@ -13419,7 +13461,7 @@ msgstr "გადასვლა შემდეგ ფურცელზე"
 msgid "Previous Sheet"
 msgstr "წინა ფურცელი"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "წინა"
@@ -13624,7 +13666,7 @@ msgstr ""
 "აპირებთ აქტიური ფურცლის წაშლას.\n"
 "გნებავთ, გააგრძელოთ?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "შეიყვანეთ სახელი:"
@@ -13684,21 +13726,3343 @@ msgstr "რაოდენობაA: "
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "ტექსტის ფერის შეცვლა"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "ფონის ფერის შეცვლა"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "საზღვრის შეცვლა"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Columns"
+msgid "Insert Columns"
+msgstr "სვეტების ჩასმა"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Rows"
+msgid "Insert Rows"
+msgstr "მწკრივების ჩასმა"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Columns"
+msgid "Remove Columns"
+msgstr "სვეტების წაშლა"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Rows"
+msgid "Remove Rows"
+msgstr "მწკრივების წაშლა"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+#| msgid "Insert a new sheet"
+msgid "Inserts a new row into the spreadsheet"
+msgstr "ახალი ფურცლის ჩასმა"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+#| msgid "Move to the previous sheet"
+msgid "Removes a row from the spreadsheet"
+msgstr "გადასვლა წინა ფურცელზე"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+#| msgid "Insert a new sheet"
+msgid "Inserts a new column into the spreadsheet"
+msgstr "ახალი ფურცლის ჩასმა"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Hide Columns"
+msgid "Hide Columns"
+msgstr "სვეტების დამალვა"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Hide Rows"
+msgid "Hide Rows"
+msgstr "მწკრივების დამალვა"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Show Columns"
+msgid "Show Columns"
+msgstr "სვეტებს ჩვენება"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Show Rows"
+msgid "Show Rows"
+msgstr "წკრივების ჩვენება"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+#| msgid "Show a hidden sheet"
+msgid "Show hidden rows in the selection"
+msgstr "დამალული ფურცლის ჩვენება"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Duplicate the selected sheet"
+msgid "Hide the selected rows"
+msgstr "მონიშნული ფურცლის დუბლირება"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+#| msgid "Show the column header"
+msgid "Show hidden columns in the selection"
+msgstr "სვეტის სათაურის ჩვენება"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Duplicate the selected sheet"
+msgid "Hide the selected columns"
+msgstr "მონიშნული ფურცლის დუბლირება"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Resize Column"
+msgid "Equalize Column"
+msgstr "სვეტის ზომის შეცვლა"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Resize Row"
+msgid "Equalize Row"
+msgstr "მწკრივის ზომის შეცვლა"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Adjust Columns"
+msgid "Adjust Column"
+msgstr "სვეტები გასწორება"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Adjust Rows"
+msgid "Adjust Row"
+msgstr "მწკრივების გასწორება"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Adjust Columns"
+msgid "Adjust Row && Column"
+msgstr "სვეტები გასწორება"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Show Columns"
+msgid "Show Columns..."
+msgstr "სვეტებს ჩვენება"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Show Rows"
+msgid "Show Rows..."
+msgstr "წკრივების ჩვენება"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Show Columns"
+msgid "Show hidden columns"
+msgstr "სვეტებს ჩვენება"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+#| msgid "Show a hidden sheet"
+msgid "Show hidden rows"
+msgstr "დამალული ფურცლის ჩვენება"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "სვეტი: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Resize Column"
+msgid "Resize Column..."
+msgstr "სვეტის ზომის შეცვლა"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Resize Row"
+msgid "Resize Row..."
+msgstr "მწკრივის ზომის შეცვლა"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+#| msgid "Change Sheet Name"
+msgid "Change the height of a row"
+msgstr "ფურცლის სახელის შეცვლა"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr ""
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "მარცხნივ სწორება"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr ""
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+#| msgid "Center horizontally"
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "ჰორიზონტალურად დაცენტრება"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "მარჯვნივ სწორება"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr ""
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "ცენტრზე სწორება"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "ცენტრი"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "ზემოთ სწორება"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "ზემოთ"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr ""
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "ძირის სწორება"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "ბოლოში"
+
+#: ui/actions/Align.cpp:185
+#, fuzzy, kde-format
+#| msgid "Middle"
+msgid "Align Middle"
+msgstr "შუა"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "შუა"
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Value"
+msgid "Change Angle..."
+msgstr "მნიშვნელობის შეცვლა"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr ""
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "კუთხე"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Value"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "მნიშვნელობის შეცვლა"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&ავტომატური გაფილტვრა"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "ავტომატური-გაფილტვრა"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr ""
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "ავტომატური ფორმატი.."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr ""
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr ""
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "ავტომატური ფორმატი"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Autosum"
+msgstr "ავტომატური"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+#| msgid "Insert a function"
+msgid "Insert the 'sum' function"
+msgstr "ფუნქციის ჩასმა"
+
+#: ui/actions/AutoSum.cpp:62
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr ""
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "Border Left"
+msgstr "საზღვარი"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "Border Right"
+msgstr "საზღვარი"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "Border Top"
+msgstr "საზღვარი"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+#| msgid "Border Color"
+msgid "Border Bottom"
+msgstr "საზღვრის ფერი"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+#| msgid "Borders"
+msgid "All Borders"
+msgstr "საზღვრები"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "ყველა"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "საზღვრების გარეშე"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:213
+#, fuzzy, kde-format
+#| msgid "Page Outline"
+msgid "Border Outline"
+msgstr "გვერდის კონტური"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "კონტური"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "საზღვრის ფერი"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Border Color"
+msgid "Select a new border color"
+msgstr "საზღვრის ფერის შეცვლა"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "საზღვრის ფერის შეცვლა"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Insert Cells..."
+msgstr "უჯრედების ჩასმა"
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr ""
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, fuzzy, kde-format
+#| msgid "Remove Cells"
+msgid "Remove Cells..."
+msgstr "უჯრედების წაშლა"
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+#| msgid "Remove the active sheet"
+msgid "Removes the cells from the spreadsheet"
+msgstr "აქტიური ფურცლის წაშლა"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "ყველას გასუფთავება"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr ""
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "შემცველობის გასუფთავება"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+#| msgid "Reset the print range in the current sheet"
+msgid "Remove the contents of the current cell"
+msgstr "ბეჭდვის შუალედის ჩამოყრა მიმდინარე გვერდში"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "ტექსტის გასუფთავება"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Delete"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "კომენტარი"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr ""
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+#| msgid "Clear Contents"
+msgid "Clear Comment"
+msgstr "შემცველობის გასუფთავება"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+#| msgid "Remove the active sheet"
+msgid "Remove this cell's comment"
+msgstr "აქტიური ფურცლის წაშლა"
+
+#: ui/actions/Comment.cpp:60
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Columns"
+msgid "Remove Comment"
+msgstr "სვეტების წაშლა"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Columns"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "სვეტების წაშლა"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "კომენტარის დამატება"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "Conditional Styles..."
+msgstr "მდგომარეობა"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "Conditional Styles"
+msgstr "მდგომარეობა"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+#| msgid "Remove the active sheet"
+msgid "Remove the conditional cell styles"
+msgstr "აქტიური ფურცლის წაშლა"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr ""
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr ""
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+#| msgid "Move selected sheet to the bottom"
+msgid "Move the cell object to the clipboard"
+msgstr "მონიშნული ფურცლის სულ დაბლა ჩამოტანა"
+
+#: ui/actions/CSVActions.cpp:38
+#, kde-format
+msgid "Insert From &Text File..."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "ტექსტური ფაილი"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "შეტანის ფაილის გახსნის შეცდომა."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgid "Text File"
+msgid "Inserting Text File"
+msgstr "ტექსტური ფაილი"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+#| msgid "Text File"
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "ტექსტური ფაილი"
+
+#: ui/actions/CSVActions.cpp:121
+#, kde-format
+msgid "Insert From &Clipboard..."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "გაცვლის ბაფერი"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Columns"
+msgid "&Text to Columns..."
+msgstr "სვეტების ჩასმა"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:241
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Columns"
+msgid "Text to Columns"
+msgstr "სვეტების ჩასმა"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "სვეტების ჩასმა"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+#| msgid "Custom..."
+msgid "Custom Lists..."
+msgstr "ხელით..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Add Named Area"
+msgid "Add Named Area"
+msgstr "სახელიანი ალაგის დამატება"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, fuzzy, kde-format
+#| msgid "Enter name:"
+msgid "Enter the area name:"
+msgstr "შეიყვანეთ სახელი:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Value"
+msgid "Change Angle"
+msgstr "მნიშვნელობის შეცვლა"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "კუთხე:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "ავტომატური ფორმატი"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "Select hidden sheets to show:"
+msgid "Select the sheet style to apply:"
+msgstr "აირჩიეთ დამალული ფურცლები საჩვენებლად:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "აირჩიეთ სიმბოლო"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "The text that will replace characters in old text"
+msgid "Insert the selected character in the text"
+msgstr "ტექსტი, რომელიც ჩაანაცვლებს სიმბოლოებს ძველ ტექსტში"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Cell Comment"
+msgstr "კომენტარი"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<არცერთი>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, fuzzy, kde-format
+#| msgid "equals"
+msgid "equal to"
+msgstr "უდრის"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "greater"
+msgid "greater than"
+msgstr "მეტი"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "მითითებულ დროის შუალედში"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "Sum range"
+msgid "outside range"
+msgstr "შეჯამების შუალედი"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "First Condition"
+msgstr "მდგომარეობა"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "Second Condition"
+msgstr "მდგომარეობა"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "Third Condition"
+msgstr "მდგომარეობა"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, fuzzy, kde-format
+#| msgid "Cells:"
+msgid "Cell is"
+msgstr "უჯრედები:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, fuzzy, kde-format
+#| msgid "Cell Values"
+msgid "Cell style"
+msgstr "უჯრედის მნიშვნელობა"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "პროდუქტი"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, fuzzy, kde-format
+#| msgid "Standard deviation"
+msgid "Standard Deviation"
+msgstr "სტანდარტული აცდენა"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "ცვალებადობა"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, fuzzy, kde-format
+#| msgid "Area is too large."
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr "არეალი ძალიან დიდია."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "მონაცემების ბაზიდან ჩასმა"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "ტიპი:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Database"
+msgid "Database name: "
+msgstr "მონაცემთა ბაზა"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "ჰოსტი:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, fuzzy, kde-format
+#| msgid "Select all sheets"
+msgid "Select tables:"
+msgstr "ყველა ფურცლის მონიშვნა"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "ცხრილებ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, fuzzy, kde-format
+#| msgid "Select Source"
+msgid "Select columns:"
+msgstr "წყაროს არჩევა"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "ცხრილი"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "სვეტები"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "უდრის"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "არ უდრის"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, fuzzy, kde-format
+#| msgid "min"
+msgid "in"
+msgstr "წთ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "მეტი"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, fuzzy, kde-format
+#| msgid "greater"
+msgid "greater or equal"
+msgstr "მეტი"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "not equal"
+msgid "less or equal"
+msgstr "არ უდრის"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, fuzzy, kde-format
+#| msgid "Sort By"
+msgid "Sorted by"
+msgstr "დახარისხება"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "ზრდის მიხედვით"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Დაღმავალი"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "Query Options"
+msgstr "ფაილის მორგება"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, fuzzy, kde-format
+#| msgid "Insert math expression"
+msgid "Insert in region"
+msgstr "მათემატიკური გამოსახულების ჩასმა"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "შედეგი"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+#| msgid "You cannot hide the last visible sheet."
+msgid "You cannot specify a table here."
+msgstr "უკანასკნელ ხილულ ფურცელს ვერ დამალავთ."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "მონაცემების ბაზიდან ჩასმა"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "პორტი რიცხვი უნდა იყოს"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "ბაზასთან მიერთება..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "მიერთებულია. ცხრილის ინფორმაციის მიღება..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "ეს ბაზა ცხრილებს არ შეიცავს"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "დრაივერის ჩატვირთვის შეცდომა"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "გამოცვლა"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "დოკუმენტის მორგება"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, kde-format
+msgid "Calculation"
+msgstr "გამოთვლა"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr "ენა"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr "დიდი და პატარა ასოების განსხვავება"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "სიზუსტე"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, kde-format
+msgid "Automatic find labels"
+msgstr "ველების ავტომატური პოვნა"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr "სტრიქონების შედარება:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Regular Expressions"
+msgstr "რეგულარული გამოსახულებები"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr "ვაილდკარდები"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, kde-format
+msgid "Language: %1 (%2)"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+#| msgid "Number format"
+msgid "Default number format: %1"
+msgstr "რიცხვის ფორმატი"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+#| msgid "Currency format: %1"
+msgid "Long date format: %1"
+msgstr "ვალუტის ფორმატი: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, fuzzy, kde-format
+#| msgid "Currency format: %1"
+msgid "Short date format: %1"
+msgstr "ვალუტის ფორმატი: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time format: %1"
+msgstr "დროის ფორმატი"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "ვალუტის ფორმატი: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "მეტი პარამეტრები"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Searched text"
+msgid "Search entire sheet"
+msgstr "მოძიებული ტექსტი"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "ძებნა:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "უჯრედის მნიშვნელობა"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "კომენტარები"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "ძებნის მიმართულება:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "Fewer Options"
+msgstr "ფაილის მორგება"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "ფუნქცია"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, fuzzy, kde-format
+#| msgid "Insert a function"
+msgid "Insert function"
+msgstr "ფუნქციის ჩასმა"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "დახმარება"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, fuzzy, kde-format
+#| msgid "This document has no sheets (tables)."
+msgid "This function has no parameters."
+msgstr "ამ დოკუმენტს ფურცლები (ცხრილები) არ გააჩნია)."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr ""
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr ""
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, fuzzy, kde-format
+#| msgid "Cell"
+msgid "Goto Cell"
+msgstr "უჯრედი"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "Enter name:"
+msgid "Enter cell:"
+msgstr "შეიყვანეთ სახელი:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "ჩამატება"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, fuzzy, kde-format
+#| msgid "Move to the last sheet"
+msgid "Move towards right"
+msgstr "გადასვლა ბოლო ფურცელზე"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr ""
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Rows"
+msgid "Insert rows"
+msgstr "მწკრივების ჩასმა"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Columns"
+msgid "Insert columns"
+msgstr "სვეტების ჩასმა"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "უჯრედების ჩასმა"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "მოცილება"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, fuzzy, kde-format
+#| msgid "Move to the last sheet"
+msgid "Move towards left"
+msgstr "გადასვლა ბოლო ფურცელზე"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr ""
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Rows"
+msgid "Remove rows"
+msgstr "მწკრივების წაშლა"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Columns"
+msgid "Remove columns"
+msgstr "სვეტების წაშლა"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "უჯრედების წაშლა"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "ბმულის დამატება"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "ინტერნეტი"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, fuzzy, kde-format
+#| msgid "Interest rate"
+msgid "Internet address:"
+msgstr "საპროცენტო განაკვეთი"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "ელ-ფოსტა"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Email address:"
+msgid "Link to Email Address"
+msgstr "ელფოსტის მისამართი:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "ელფოსტის მისამართი:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "სათაური:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "&File"
+msgid "File"
+msgstr "&ფაილი"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+#| msgid "Shrink to fit"
+msgid "Link to File"
+msgstr "ჩატევამდე დაპატარავება"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "File location:"
+msgstr "ფაილის მორგება"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "ჩანაწერის გარეშე"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Named Area"
+msgid "Cell or Named Area:"
+msgstr "სახელიანი ალაგის წაშლა"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, fuzzy, kde-format
+#| msgid "Customize"
+msgid "Custom Lists"
+msgstr "მორგება"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "რეგისტრის შეცვლა"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "სია:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "ჩანაწერი:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "დამატება"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "გაუქმება"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "ახალი"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "შეცვლა"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "კოპირება"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr ""
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+#| msgid "Remove Link"
+msgid "Remove List"
+msgstr "ბმულის წაშლა"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, fuzzy, kde-format
+#| msgid ""
+#| "You are about to remove the active sheet.\n"
+#| "Do you want to continue?"
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"აპირებთ აქტიური ფურცლის წაშლას.\n"
+"გნებავთ, გააგრძელოთ?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Add Named Area"
+msgid "Named Areas"
+msgstr "სახელიანი ალაგის დამატება"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, fuzzy, kde-format
+#| msgid "Area:"
+msgid "Area: %1"
+msgstr "ფართობი:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "უჯრედები:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "ფურცელი:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, fuzzy, kde-format
+#| msgid "Enter name:"
+msgid "Area name:"
+msgstr "შეიყვანეთ სახელი:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&წაშლა"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "გახსნა/შენახვა"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Named Area"
+msgid "Remove Named Area"
+msgstr "სახელიანი ალაგის წაშლა"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, kde-format
+msgid "The provided region is not valid."
+msgstr ""
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Paste Inserting Cells"
+msgstr "უჯრედების ჩასმა"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, kde-format
+msgid "Select Source"
+msgstr "წყაროს არჩევა"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, kde-format
+msgid "Add Filter"
+msgstr "ფილტრის დამატება"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Bit Operations"
+msgid "Pivot Options"
+msgstr "ბიტური ოპერაციები"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Resize Row"
+msgid "Resize Row"
+msgstr "მწკრივის ზომის შეცვლა"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "სიმაღლე:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Resize Column"
+msgid "Resize Column"
+msgstr "სვეტის ზომის შეცვლა"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "სიგანე:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Insert Sheet"
+msgid "Insert Series"
+msgstr "ფურცლის ჩასმა"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Columns"
+msgid "Insert Values"
+msgstr "სვეტების ჩასმა"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, fuzzy, kde-format
+#| msgid "Par value"
+msgid "Start value:"
+msgstr "ნომინალი"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "Top value"
+msgid "Stop value:"
+msgstr "ზედა მნიშვნელობა"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, fuzzy, kde-format
+#| msgid "Top value"
+msgid "Step value:"
+msgstr "ზედა მნიშვნელობა"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+#| msgid "The lambda parameter must be positive."
+msgid "End and start value must be positive."
+msgstr "ლამბდა პარამეტრი დადებითი უნდა იყოს."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, fuzzy, kde-format
+#| msgid "Select hidden sheets to show:"
+msgid "Select hidden rows to show:"
+msgstr "აირჩიეთ დამალული ფურცლები საჩვენებლად:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+#| msgid "Select hidden sheets to show:"
+msgid "Select hidden columns to show:"
+msgstr "აირჩიეთ დამალული ფურცლები საჩვენებლად:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "სვეტი %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "მწკრივი %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+#| msgid "First column as label"
+msgid "&First column contains row headers"
+msgstr "პირველი სვეტი ჭდის სახით"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+#| msgid "Show the column header"
+msgid "&First row contains column headers"
+msgstr "სვეტის სათაურის ჩვენება"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "სორტი"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+#| msgid "Case sensitive"
+msgid "Case Insensitive"
+msgstr "დიდი და პატარა ასოების განსხვავება"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr ""
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "სტილი"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, fuzzy, kde-format
+#| msgid "All Sheets"
+msgid "All Styles"
+msgstr "ყველა გვერდი"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Reset Style"
+msgid "Custom Styles"
+msgstr "სტილის ჩამოყრა"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, fuzzy, kde-format
+#| msgid "Vertical"
+msgid "Hierarchical"
+msgstr "ვერტიკალური"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&ახალი..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&ჩასწორება..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&წაშლა..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, fuzzy, kde-format
+#| msgid "Style"
+msgid "style%1"
+msgstr "სტილი"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "ყველას გამოერთება"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, fuzzy, kde-format
+#| msgid "Column %1"
+msgid "Column '%1' "
+msgstr "სვეტი %1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "ვარი"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "სისწორე"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "&ყველას გასუფთავება"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "მთელი რიცხვი"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, fuzzy, kde-format
+#| msgid "Byte Length"
+msgid "Text Length"
+msgstr "ბაიტის სიგრძე"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "სია"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "მონაცემები:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "მინიმუმი:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "მაქსიმუმი:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "თარიღი:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, fuzzy, kde-format
+#| msgid "Minimum:"
+msgid "Date minimum:"
+msgstr "მინიმუმი:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, fuzzy, kde-format
+#| msgid "Maximum:"
+msgid "Date maximum:"
+msgstr "მაქსიმუმი:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "დრო:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, fuzzy, kde-format
+#| msgid "Minimum:"
+msgid "Time minimum:"
+msgstr "მინიმუმი:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, fuzzy, kde-format
+#| msgid "Maximum:"
+msgid "Time maximum:"
+msgstr "მაქსიმუმი:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "რიცხვი:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, fuzzy, kde-format
+#| msgid "No Entries"
+msgid "Entries:"
+msgstr "ჩანაწერის გარეშე"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "Error"
+msgid "Error Alert"
+msgstr "შეცდომა"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "ქმედება:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "შეჩერება"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "შეტყობინება"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "სათაური:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "შეტყობინება:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr ""
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "დოკუმენტის მორგება..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+#| msgid "Show c&omment indicator"
+msgid "Show document settings dialog"
+msgstr "&კომენტარის ინდიკატორის ჩვენება"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr ""
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "უჯრედის შეცვლა"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "დაცვა"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr ""
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&ქვემოთ"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&მარცხენა"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "მ&არჯვენა"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+#| msgid "Formula Selection"
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "ფორმულის არჩევა"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "გამოცვლა"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "აირჩიეთ ფონტი..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set Cell Format"
+msgid "Set the cell font"
+msgstr "უჯრედის ფორმატის დაყენება"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "ფონტის შეცვლა"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Select Font..."
+msgid "Select Font Size"
+msgstr "აირჩიეთ ფონტი..."
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Choose the font size."
+msgid "Set the cell font size"
+msgstr "აირჩიეთ ფონტის ზომა."
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "ფონტის ზომა"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Text Color"
+msgid "Set the text color"
+msgstr "ტექსტის ფერის შეცვლა"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "ტექსტის ფერი"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&ფუნქცია..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "მათემატიკური გამოსახულების ჩასმა"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "ფორმულის არჩევა"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "ფუნქციის ჩასმა"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "სხვები..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr ""
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "გადასვლა"
+
+#: ui/actions/Goto.cpp:44
+#, kde-format
+msgid "That is not a valid cell."
+msgstr ""
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+#| msgid "Increase Indent"
+msgid "Decrease Indent"
+msgstr "დაშორების გაზრდა"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "დაშორების გაზრდა"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+#| msgid "Decrease Font Size"
+msgid "Decrease the indentation"
+msgstr "ფონტის ზომის შესრულება"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+#| msgid "Increase Indent"
+msgid "Increase the indentation"
+msgstr "დაშორების გაზრდა"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+#| msgid "Increase Indent"
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "დაშორების გაზრდა"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+#| msgid "Increase Indent"
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "დაშორების გაზრდა"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "&ბაზიდან..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+#| msgid "Insert Data From Database"
+msgid "Insert data from a SQL database"
+msgstr "მონაცემების ბაზიდან ჩასმა"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+#| msgid "Others..."
+msgid "&Series..."
+msgstr "სხვები..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+#| msgid "Insert a new sheet"
+msgid "Insert a series"
+msgstr "ახალი ფურცლის ჩასმა"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+#| msgid "Insert Sheet"
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "ფურცლის ჩასმა"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, fuzzy, kde-format
+#| msgid "Select Character"
+msgid "S&pecial Character..."
+msgstr "აირჩიეთ სიმბოლო"
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+#| msgid "Link"
+msgid "&Link..."
+msgstr "Ბმული"
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+#| msgid "Insert a new sheet"
+msgid "Insert an Internet hyperlink"
+msgstr "ახალი ფურცლის ჩასმა"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Ბმული"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+#| msgid "Remove Link"
+msgid "Remove a link"
+msgstr "ბმულის წაშლა"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "ბმულის წაშლა"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "ბმულის წაშლა"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Insert Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "ბმულის დამატება"
+
+#: ui/actions/ListChoose.cpp:28
+#, fuzzy, kde-format
+#| msgid "Select Font..."
+msgid "Selection List..."
+msgstr "აირჩიეთ ფონტი..."
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Merge Cells Horizontally"
+msgid "Merge Cells Horizontally"
+msgstr "უჯრედების შერწყმა ჰორიზონტალურად"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Merge Cells Vertically"
+msgid "Merge Cells Vertically"
+msgstr "უჯრების შერწყმა ვერტიკალურად"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Merge Cells Horizontally"
+msgid "Merge the selected region horizontally"
+msgstr "უჯრედების შერწყმა ჰორიზონტალურად"
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Merge Cells Vertically"
+msgid "Merge the selected region vertically"
+msgstr "უჯრების შერწყმა ვერტიკალურად"
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+#| msgid "Move selected sheet down"
+msgid "Merge the selected region"
+msgstr "მონიშნული ფურცლის დაბლა ჩამოტანა"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Dissociate Cells"
+msgid "Dissociate Cells"
+msgstr "უჯრედებს ასოცირების გაუქმება"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Named Area"
+msgid "Replace Named Area"
+msgstr "სახელიანი ალაგის წაშლა"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Named Area"
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "სახელიანი ალაგის წაშლა"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Add Named Area"
+msgid "Named Areas..."
+msgstr "სახელიანი ალაგის დამატება"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+#| msgid "Row Header"
+msgid "Row Break"
+msgstr "მწკრივის თავსართი"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Remove Columns"
+msgid "Break Before Column"
+msgstr "სვეტების წაშლა"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+#| msgid "Column Header"
+msgid "Column Break"
+msgstr "სვეტის თავსართი"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr ""
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr ""
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr ""
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr ""
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr ""
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "&Pivot Tables..."
+msgstr ""
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "Create Pivot Tables"
+msgstr ""
+
+#: ui/actions/Pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "Select Multiple Cells"
+msgid "You must select multiple cells."
+msgstr "აირჩიეთ ერთზე მეტი უჯრედი"
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+#| msgid "Reset the print range in the current sheet"
+msgid "Selects all cells in the current sheet"
+msgstr "ბეჭდვის შუალედის ჩამოყრა მიმდინარე გვერდში"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "QTableView-ის ჩვენება..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&დალაგება..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr ""
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+#| msgid "Sort By"
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "დახარისხება"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr ""
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "გადასვლა შემდეგ ფურცელზე"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr ""
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+#| msgid "Cell Format"
+msgid "Cell Format..."
+msgstr "უჯრედის ფორმატი"
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+#| msgid "Cell formatting"
+msgid "Set the cell formatting"
+msgstr "უჯრედის ფორმატირება"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "გასქელება"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "დახრა"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "ხაზგასმული"
+
+#: ui/actions/Style.cpp:184
+#, fuzzy, kde-format
+#| msgid "Strike out"
+msgid "Strike Out"
+msgstr "ხაზის გადასმა"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "ტექსტს გადატანა"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "შემოხვევა"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "ტექსტს გადატანა"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+#| msgid "Center vertically"
+msgid "Print cell contents vertically"
+msgstr "ვერტიკალურად დაცენტრება"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "ვერტიკალური ტექსტი"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "ვერტიკალური ტექსტი"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "რიცხვის ფორმატი"
+
+#: ui/actions/Style.cpp:274
+#, kde-format
+msgid "Set the cell formatting to a number"
+msgstr ""
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "პირველი რიცხვი"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "სამეცნიერო ფორმატი"
+
+#: ui/actions/Style.cpp:307
+#, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr ""
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "სამეცნიერო"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "სამეცნიერო"
+
+#: ui/actions/Style.cpp:342
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Percentage Format"
+msgid "Percent Format"
+msgstr "პროცენტულობის ფორმატი"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr ""
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "პროცენტი"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "პროცენტი"
+
+#: ui/actions/Style.cpp:379
+#, fuzzy, kde-format
+#| msgid "Cell Format"
+msgid "Money Format"
+msgstr "უჯრედის ფორმატი"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr ""
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "ფული"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "ფორმატი"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "თარიღის ფორმატი"
+
+#: ui/actions/Style.cpp:414
+#, kde-format
+msgid "Set the cell formatting to a date"
+msgstr ""
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "ფორმატი"
+
+#: ui/actions/Style.cpp:447
+#, kde-format
+msgid "Set the cell formatting to a time"
+msgstr ""
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "დროის ფორმატი"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "ფორმატი"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "ფონტის ზომის გაზრდა"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "ფონტის ზომის შესრულება"
+
+#: ui/actions/Style.cpp:530
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Increase Precision"
+msgstr "სიზუსტე"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:549
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Decrease Precision"
+msgstr "სიზუსტე"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "სიზუსტე"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "სიზუსტე"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr ""
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgctxt "(qtundo-format)"
+#| msgid "Reset Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "სტილის ჩამოყრა"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "ფონის ფერი"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+#| msgid "Background color:"
+msgid "Set the background color"
+msgstr "ფონის ფერი:"
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+#| msgid "&Create Template From Document..."
+msgid "Create Style From Cell..."
+msgstr "&ნიმუშის შექმნა დოკუმენტიდან..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr ""
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr ""
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr ""
+
+#: ui/actions/Styles.cpp:61
+#, fuzzy, kde-format
+#| msgid "The style name can not be empty."
+msgid "The style name cannot be empty."
+msgstr "სტილის სახელი ცარიელი ვერ იქნება."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "სტილი ამ სახელი თუკვე არსებობს."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr ""
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:118
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+#| msgid "Upper limit"
+msgid "Upper"
+msgstr "ზედა ლიმიტი"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "დაწევა"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+#| msgid "First interest"
+msgid "First Letter Upper"
+msgstr "პირველი ინტერესი"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+#| msgid "&Convert first letter to uppercase"
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "&პირველი ასოს გადიდება"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:97
+#, fuzzy, kde-format
+#| msgid "Lower"
+msgid "Lower Case"
+msgstr "დაწევა"
+
+#: ui/actions/TextCase.cpp:99
+#, fuzzy, kde-format
+#| msgid "&Convert first letter to uppercase"
+msgid "Convert First Letter to Upper Case"
+msgstr "&პირველი ასოს გადიდება"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+#| msgid "&Convert first letter to uppercase"
+msgid "Convert all letters to upper case"
+msgstr "&პირველი ასოს გადიდება"
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+#| msgid "&Convert first letter to uppercase"
+msgid "Convert all letters to lower case"
+msgstr "&პირველი ასოს გადიდება"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "რეგისტრის შეცვლა"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr ""
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+#| msgid "Validity"
+msgid "Validity..."
+msgstr "სისწორე"
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr ""
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+#| msgid "Validity"
+msgid "Remove Validity"
+msgstr "სისწორე"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr ""
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+#| msgid "Validity"
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "სისწორე"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -13945,11 +17309,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "უჯრედების წაშლა"
 
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Delete"
-
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
 msgid "Merge Cells Horizontally"
@@ -14157,12 +17516,6 @@ msgstr "ცვალებადი (ცვლილების გარეშ
 msgid "Roman"
 msgstr "რომანული"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "დახრა"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14180,12 +17533,6 @@ msgstr ""
 msgid "Normal"
 msgstr "ჩვეულებრივი"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "გასქელება"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14198,12 +17545,6 @@ msgstr "ფერი:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "თუ ეს ჩართულია, მიმდინარე უჯრედის ტექსტი ხაზგასმული იქნება."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "ხაზგასმული"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14342,11 +17683,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "პროცენტი"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14359,11 +17695,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "ფული"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14374,11 +17705,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "სამეცნიერო"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14583,11 +17909,6 @@ msgstr "სამი ციფრი 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "სტილი"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -14598,11 +17919,6 @@ msgstr "სახელი:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "სტილი მემკვიდრეობით:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "სტილი ამ სახელი თუკვე არსებობს."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -14649,12 +17965,6 @@ msgstr ""
 msgid "Standard"
 msgstr "სტანდარტული"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "ცენტრი"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -14686,24 +17996,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "ზემოთ"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "შუა"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "ბოლოში"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -14866,20 +18158,10 @@ msgstr "გამოყენება"
 msgid "Apply changes"
 msgstr "ცვლილებების გადატარება"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "გაუქმება"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "ცვლილებების გაუქმება"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "ყველა"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -14918,147 +18200,11 @@ msgstr "ბმული %1 გააქტიურებულია"
 #~ msgid "&Grid:"
 #~ msgstr "&ბადე:"
 
-#~ msgid "Custom..."
-#~ msgstr "ხელით..."
-
 #~ msgid "Date and Time"
 #~ msgstr "თარიღი და დრო"
 
 #~ msgid "System: "
 #~ msgstr "სისტემა: "
-
-#~ msgid "&Function..."
-#~ msgstr "&ფუნქცია..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "მათემატიკური გამოსახულების ჩასმა"
-
-#~ msgid "From &Database..."
-#~ msgstr "&ბაზიდან..."
-
-#~ msgid "Formula Selection"
-#~ msgstr "ფორმულის არჩევა"
-
-#~ msgid "Insert a function"
-#~ msgstr "ფუნქციის ჩასმა"
-
-#~ msgid "Others..."
-#~ msgstr "სხვები..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "უჯრედის შეცვლა"
-
-#~ msgid "Show QTableView..."
-#~ msgstr "QTableView-ის ჩვენება..."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "მონაცემების ბაზიდან ჩასმა"
-
-#~ msgid "Type:"
-#~ msgstr "ტიპი:"
-
-#~ msgid "Host:"
-#~ msgstr "ჰოსტი:"
-
-#~ msgid "Tables"
-#~ msgstr "ცხრილებ"
-
-#~ msgid "Table"
-#~ msgstr "ცხრილი"
-
-#~ msgid "Columns"
-#~ msgstr "სვეტები"
-
-#~ msgid "equals"
-#~ msgstr "უდრის"
-
-#~ msgid "not equal"
-#~ msgstr "არ უდრის"
-
-#~ msgid "greater"
-#~ msgstr "მეტი"
-
-#~ msgid "Ascending"
-#~ msgstr "ზრდის მიხედვით"
-
-#~ msgid "Descending"
-#~ msgstr "Დაღმავალი"
-
-#~ msgid "Result"
-#~ msgstr "შედეგი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "მონაცემების ბაზიდან ჩასმა"
-
-#~ msgid "The port must be a number"
-#~ msgstr "პორტი რიცხვი უნდა იყოს"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "ბაზასთან მიერთება..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "მიერთებულია. ცხრილის ინფორმაციის მიღება..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "ეს ბაზა ცხრილებს არ შეიცავს"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "დრაივერის ჩატვირთვის შეცდომა"
-
-#~ msgid "Help"
-#~ msgstr "დახმარება"
-
-#~ msgid "Document Settings..."
-#~ msgstr "დოკუმენტის მორგება..."
-
-#~ msgid "Document Settings"
-#~ msgstr "დოკუმენტის მორგება"
-
-#~ msgid "Calculation"
-#~ msgstr "გამოთვლა"
-
-#~ msgid "Locale"
-#~ msgstr "ენა"
-
-#~ msgid "Case sensitive"
-#~ msgstr "დიდი და პატარა ასოების განსხვავება"
-
-#~ msgid "Automatic find labels"
-#~ msgstr "ველების ავტომატური პოვნა"
-
-#~ msgid "String comparison:"
-#~ msgstr "სტრიქონების შედარება:"
-
-#~ msgid "Regular Expressions"
-#~ msgstr "რეგულარული გამოსახულებები"
-
-#~ msgid "Wildcards"
-#~ msgstr "ვაილდკარდები"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "ვალუტის ფორმატი: %1"
-
-#~ msgid "List:"
-#~ msgstr "სია:"
-
-#~ msgid "Entry:"
-#~ msgstr "ჩანაწერი:"
-
-#~ msgid "Add"
-#~ msgstr "დამატება"
-
-#~ msgid "New"
-#~ msgstr "ახალი"
-
-#~ msgid "Remove"
-#~ msgstr "მოცილება"
-
-#~ msgid "Modify"
-#~ msgstr "შეცვლა"
-
-#~ msgid "Copy"
-#~ msgstr "კოპირება"
 
 #~ msgid "Starting..."
 #~ msgstr "გაშვება..."
@@ -15066,36 +18212,11 @@ msgstr "ბმული %1 გააქტიურებულია"
 #~ msgid "Iteration:"
 #~ msgstr "იტერაცია:"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "გამოცვლა"
-
-#~ msgid "More Options"
-#~ msgstr "მეტი პარამეტრები"
-
-#~ msgid "Search in:"
-#~ msgstr "ძებნა:"
-
-#~ msgid "Cell Values"
-#~ msgstr "უჯრედის მნიშვნელობა"
-
-#~ msgid "Comments"
-#~ msgstr "კომენტარები"
-
-#~ msgid "Search direction:"
-#~ msgstr "ძებნის მიმართულება:"
-
-#~ msgid "Insert"
-#~ msgstr "ჩამატება"
-
 #~ msgid "Content"
 #~ msgstr "შემცველობა"
 
 #~ msgid "Everything"
 #~ msgstr "ყველაფერი"
-
-#~ msgid "Comment"
-#~ msgstr "კომენტარი"
 
 #~ msgid "Operation"
 #~ msgstr "ოეპრაცია"
@@ -15112,75 +18233,12 @@ msgstr "ბმული %1 გააქტიურებულია"
 #~ msgid "Division"
 #~ msgstr "დანაყოფი"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "ავტომატური ფორმატი.."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "ავტომატური ფორმატი"
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&ავტომატური გაფილტვრა"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "ავტომატური-გაფილტვრა"
-
-#~ msgid "Clear All"
-#~ msgstr "ყველას გასუფთავება"
-
 #~ msgid "Contents"
 #~ msgstr "შიგთავსი"
-
-#~ msgid "Clear Contents"
-#~ msgstr "შემცველობის გასუფთავება"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "ტექსტის გასუფთავება"
-
-#~ msgid "Border Color"
-#~ msgstr "საზღვრის ფერი"
-
-#~ msgid "Background Color"
-#~ msgstr "ფონის ფერი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "რიცხვის ფორმატი"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
 #~ msgstr "ვალუტის ფორმატი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Percentage Format"
-#~ msgstr "პროცენტულობის ფორმატი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "დროის ფორმატი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "თარიღის ფორმატი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "სამეცნიერო ფორმატი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "საზღვრის ფერის შეცვლა"
-
-#~ msgid "<none>"
-#~ msgstr "<არცერთი>"
-
-#~ msgid "between"
-#~ msgstr "მითითებულ დროის შუალედში"
-
-#~ msgid "Select Source"
-#~ msgstr "წყაროს არჩევა"
 
 #~ msgid "Operator"
 #~ msgstr "ოპერატორი"
@@ -15205,9 +18263,6 @@ msgstr "ბმული %1 გააქტიურებულია"
 
 #~ msgid "!="
 #~ msgstr "!="
-
-#~ msgid "Add Filter"
-#~ msgstr "ფილტრის დამატება"
 
 #~ msgid "Labels"
 #~ msgstr "ჭდეები"
@@ -15237,69 +18292,8 @@ msgstr "ბმული %1 გააქტიურებულია"
 #~ msgid "Manual Selection"
 #~ msgstr "ხელით არჩევა"
 
-#~ msgid "Product"
-#~ msgstr "პროდუქტი"
-
-#~ msgid "Sort By"
-#~ msgstr "დახარისხება"
-
-#~ msgid "Select Font..."
-#~ msgstr "აირჩიეთ ფონტი..."
-
-#~ msgid "Font Size"
-#~ msgstr "ფონტის ზომა"
-
-#~ msgid "Text Color"
-#~ msgstr "ტექსტის ფერი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "ფონტის შეცვლა"
-
-#~ msgid "&New..."
-#~ msgstr "&ახალი..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&ჩასწორება..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&წაშლა..."
-
-#~ msgid "Insert Cells"
-#~ msgstr "უჯრედების ჩასმა"
-
-#~ msgid "Remove Cells"
-#~ msgstr "უჯრედების წაშლა"
-
-#~ msgid "Remove All"
-#~ msgstr "ყველას გამოერთება"
-
 #~ msgid "Grand Total"
 #~ msgstr "გრანდ-ჯამი"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "ვარი"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
-
-#~ msgid "Goto"
-#~ msgstr "გადასვლა"
-
-#~ msgid "Angle"
-#~ msgstr "კუთხე"
-
-#~ msgid "Angle:"
-#~ msgstr "კუთხე:"
-
-#~ msgid "Variance"
-#~ msgstr "ცვალებადობა"
 
 #~ msgid "Function:"
 #~ msgstr "ფუნქცია:"
@@ -15312,36 +18306,6 @@ msgstr "ბმული %1 გააქტიურებულია"
 
 #~ msgid "&Edit..."
 #~ msgstr "&ჩასწორება..."
-
-#~ msgid "&Remove"
-#~ msgstr "&წაშლა"
-
-#~ msgid "Cells:"
-#~ msgstr "უჯრედები:"
-
-#~ msgid "Sheet:"
-#~ msgstr "ფურცელი:"
-
-#~ msgid "Align Left"
-#~ msgstr "მარცხნივ სწორება"
-
-#~ msgid "Align Center"
-#~ msgstr "ცენტრზე სწორება"
-
-#~ msgid "Align Right"
-#~ msgstr "მარჯვნივ სწორება"
-
-#~ msgid "Align Top"
-#~ msgstr "ზემოთ სწორება"
-
-#~ msgid "Align Bottom"
-#~ msgstr "ძირის სწორება"
-
-#~ msgid "No Borders"
-#~ msgstr "საზღვრების გარეშე"
-
-#~ msgid "Outline"
-#~ msgstr "კონტური"
 
 #~ msgid "Australia"
 #~ msgstr "ავსტრალია"
@@ -17143,120 +20107,14 @@ msgstr "ბმული %1 გააქტიურებულია"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "ზიმბაბვური დოლარი"
 
-#~ msgid "Increase Font Size"
-#~ msgstr "ფონტის ზომის გაზრდა"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "ფონტის ზომის შესრულება"
-
-#~ msgid "Wrap Text"
-#~ msgstr "ტექსტს გადატანა"
-
-#~ msgid "Wrap"
-#~ msgstr "შემოხვევა"
-
-#~ msgid "Vertical Text"
-#~ msgstr "ვერტიკალური ტექსტი"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "ტექსტს გადატანა"
-
 #~ msgid "&Font"
 #~ msgstr "&ფონტი"
-
-#~ msgid "Height:"
-#~ msgstr "სიმაღლე:"
-
-#~ msgid "Width:"
-#~ msgstr "სიგანე:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "კომენტარის დამატება"
-
-#~ msgid "Increase Indent"
-#~ msgstr "დაშორების გაზრდა"
-
-#~ msgid "Lower"
-#~ msgstr "დაწევა"
-
-#~ msgid "Link"
-#~ msgstr "Ბმული"
-
-#~ msgid "Remove Link"
-#~ msgstr "ბმულის წაშლა"
-
-#~ msgid "Validity"
-#~ msgstr "სისწორე"
-
-#~ msgid "&Sort..."
-#~ msgstr "&დალაგება..."
-
-#~ msgid "&Left"
-#~ msgstr "&მარცხენა"
-
-#~ msgid "&Right"
-#~ msgstr "მ&არჯვენა"
 
 #~ msgid "&Up"
 #~ msgstr "&მაღლა"
 
-#~ msgid "&Down"
-#~ msgstr "&ქვემოთ"
-
-#~ msgid "Text File"
-#~ msgstr "ტექსტური ფაილი"
-
-#~ msgid "Clipboard"
-#~ msgstr "გაცვლის ბაფერი"
-
-#~ msgid "Insert Link"
-#~ msgstr "ბმულის დამატება"
-
 #~ msgid "Edit Link"
 #~ msgstr "ბმულის ჩასწორება"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "რეგისტრის შეცვლა"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "ბმულის წაშლა"
-
-#~ msgid "Select Character"
-#~ msgstr "აირჩიეთ სიმბოლო"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "შეტანის ფაილის გახსნის შეცდომა."
-
-#~ msgid "Internet"
-#~ msgstr "ინტერნეტი"
-
-#~ msgid "Email"
-#~ msgstr "ელ-ფოსტა"
-
-#~ msgid "Email address:"
-#~ msgstr "ელფოსტის მისამართი:"
-
-#~ msgid "Subject:"
-#~ msgstr "სათაური:"
-
-#~ msgid "No Entries"
-#~ msgstr "ჩანაწერის გარეშე"
-
-#~ msgid "Column: %1"
-#~ msgstr "სვეტი: %1"
-
-#~ msgid "Column %1"
-#~ msgstr "სვეტი %1"
-
-#~ msgid "Row %1"
-#~ msgstr "მწკრივი %1"
-
-#~ msgid "Sort"
-#~ msgstr "სორტი"
 
 #~ msgid "Move Up"
 #~ msgstr "აწევა"
@@ -17269,46 +20127,3 @@ msgstr "ბმული %1 გააქტიურებულია"
 
 #~ msgid "Direction"
 #~ msgstr "მიმართულება"
-
-#~ msgid "Clear &All"
-#~ msgstr "&ყველას გასუფთავება"
-
-#~ msgid "Integer"
-#~ msgstr "მთელი რიცხვი"
-
-#~ msgid "List"
-#~ msgstr "სია"
-
-#~ msgid "Data:"
-#~ msgstr "მონაცემები:"
-
-#~ msgid "Minimum:"
-#~ msgstr "მინიმუმი:"
-
-#~ msgid "Maximum:"
-#~ msgstr "მაქსიმუმი:"
-
-#~ msgid "Date:"
-#~ msgstr "თარიღი:"
-
-#~ msgid "Time:"
-#~ msgstr "დრო:"
-
-#~ msgid "Number:"
-#~ msgstr "რიცხვი:"
-
-#~ msgid "Action:"
-#~ msgstr "ქმედება:"
-
-#~ msgid "Stop"
-#~ msgstr "შეჩერება"
-
-#~ msgid "Warning"
-#~ msgstr "შეტყობინება"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "სათაური:"
-
-#~ msgid "Message:"
-#~ msgstr "შეტყობინება:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2007-10-28 14:04+0200\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -139,8 +139,13 @@ msgstr "Загаловак"
 msgid "Header1"
 msgstr "Заголовок1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, fuzzy, kde-format
 msgid "Default"
 msgstr "Прадвызначаны"
@@ -172,7 +177,8 @@ msgstr "с"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, fuzzy, kde-format
 msgid "Text"
 msgstr "Тэкст"
@@ -243,7 +249,8 @@ msgstr "<p><b>Які вяртаецца тып: </b>"
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, fuzzy, kde-format
 msgid "Parameters"
 msgstr "Параметры"
@@ -869,14 +876,15 @@ msgstr "CARY(12;0) верне 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, fuzzy, kde-format
 msgid "Number"
 msgstr "Нумар"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, fuzzy, kde-format
 msgid "Format"
 msgstr "Фармат"
@@ -932,6 +940,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") верне 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, fuzzy, kde-format
 msgid "Database"
 msgstr "База дадзеных"
@@ -1229,6 +1239,7 @@ msgstr "Дата і час"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, fuzzy, kde-format
 msgid "Date"
@@ -1302,7 +1313,8 @@ msgstr "DAYS360(\"2/22/2002\"; \"4/21/2002\"; FALSE) верне 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, fuzzy, kde-format
 msgid "Time"
 msgstr "Час"
@@ -4858,6 +4870,7 @@ msgid "Regular payments"
 msgstr "Рэгулярны выраз"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, fuzzy, kde-format
 msgid "Type"
 msgstr "Тып"
@@ -5172,12 +5185,19 @@ msgstr "Самастойнае"
 msgid "Automatic"
 msgstr "Аўтаматычнае"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Звесткі"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Памылка"
@@ -5988,7 +6008,7 @@ msgstr ""
 msgid "Math"
 msgstr "Матэматычныя"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, fuzzy, kde-format
 msgid "Function"
 msgstr "Функцыя"
@@ -6474,6 +6494,7 @@ msgid "Range"
 msgstr "Дыяпазон"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 msgid "Criteria"
 msgstr "Крытэр"
@@ -8029,6 +8050,7 @@ msgid "Row"
 msgstr "Радок"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, fuzzy, kde-format
 msgid "Column"
 msgstr "Слупок"
@@ -12476,7 +12498,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, fuzzy, kde-format
 msgid "&Insert"
 msgstr "У&ставіць"
@@ -12494,7 +12516,7 @@ msgid "F&ormat"
 msgstr "Ф&армат"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, fuzzy, kde-format
 msgid "Merge Cells"
 msgstr "Аб'яднаць вочкі"
@@ -12573,8 +12595,8 @@ msgstr "Схаваць ліст"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 msgid "Font"
 msgstr "&Шрыфт"
@@ -12983,14 +13005,16 @@ msgstr "Ніжняя мяжа"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, fuzzy, kde-format
 msgid "Horizontal"
 msgstr "Гарызантальна"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, fuzzy, kde-format
 msgid "Vertical"
 msgstr "Вертыкальна"
@@ -13017,13 +13041,15 @@ msgid "Up"
 msgstr "Угору"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, fuzzy, kde-format
 msgid "Right"
 msgstr "Праваруч"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, fuzzy, kde-format
 msgid "Left"
 msgstr "Леваруч"
@@ -13035,36 +13061,50 @@ msgstr "Уніз, першы слупок"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, fuzzy, kde-format
 msgid "None"
 msgstr "Няма"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, fuzzy, kde-format
 msgid "Sum"
 msgstr "Сума"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, fuzzy, kde-format
 msgid "Min"
 msgstr "Мін"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, fuzzy, kde-format
 msgid "Max"
 msgstr "Макс"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, fuzzy, kde-format
 msgid "Average"
 msgstr "Сярэдняе"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, fuzzy, kde-format
 msgid "Count"
 msgstr "Колькасць"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, fuzzy, kde-format
 msgid "CountA"
 msgstr "Колькасць"
@@ -13463,7 +13503,8 @@ msgstr "Адмена выбару лістоў"
 msgid "Move selected sheet to the bottom"
 msgstr "Перамясціць ліст у канец спісу"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, fuzzy, kde-format
 msgid "Case Sensitive"
 msgstr "Сартаванне з улікам рэгістра"
@@ -13664,6 +13705,7 @@ msgid "Anchor"
 msgstr "Андора"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, fuzzy, kde-format
 msgid "Cell"
 msgstr "Вочка"
@@ -13683,7 +13725,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "Наступны ліст"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 msgid "Next"
 msgstr "Тэкст"
@@ -13698,7 +13740,7 @@ msgstr "Перайсці на наступны ліст"
 msgid "Previous Sheet"
 msgstr "Папярэдні ліст"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 msgid "Previous"
 msgstr "Папярэдні ліст"
@@ -13903,7 +13945,7 @@ msgid ""
 "Do you want to continue?"
 msgstr "Выдаліць бягучы ліст?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, fuzzy, kde-format
 msgid "Enter name:"
 msgstr "Увядзіце імя:"
@@ -13963,13 +14005,13 @@ msgstr "Колькасць: "
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Змяніць тэкст"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
@@ -13977,10 +14019,3128 @@ msgstr "Колер фону"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Змяніць колер меж"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Columns"
+msgstr "Уставіць слупкі"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Rows"
+msgstr "Уставіць радкі"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Remove Columns"
+msgstr "Выдаліць слупкі"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Remove Rows"
+msgstr "Выдаліць радкі"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Уставіць новы радок на ліст"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Выдаліць радок з ліста"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Уставіць новы слупок на ліст"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Выдаліць бягучае вочка з ліста"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+msgid "Hide Columns"
+msgstr "Схаваць слупкі"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+msgid "Hide Rows"
+msgstr "Схаваць радкі"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, fuzzy, kde-format
+msgid "Show Columns"
+msgstr "Паказаць слупкі"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, fuzzy, kde-format
+msgid "Show Rows"
+msgstr "Паказаць радкі"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Паказаць утоеныя радкі ў вылучаным дыяпазоне"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "Аб'яднаць вочкі вылучанага дыяпазону ў адно вялікае вочка"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Паказаць утоеныя слупкі ў вылучаным дыяпазоне"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "Аб'яднаць вочкі вылучанага дыяпазону ў адно вялікае вочка"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+msgid "Equalize Column"
+msgstr "Падагнаць шырыню слупка"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+msgid "Equalize Row"
+msgstr "Падагнаць вышыню радка"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Усталяваць для радкоў аднолькавую вышыню"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Усталяваць для слупкоў аднолькавую шырыню"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Column"
+msgstr "Выраўнаваць слупок"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Row"
+msgstr "Выраўнаваць радок"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Row && Column"
+msgstr "Падагнаць памер вочак"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, fuzzy, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+"Падагнаць памеры радкоў і слупкоў для адлюстравання цалкам змесціва вочак"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+"Падагнаць памеры радкоў і слупкоў для адлюстравання цалкам змесціва вочак"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+"Падагнаць памеры радкоў і слупкоў для адлюстравання цалкам змесціва вочак"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+msgid "Show Columns..."
+msgstr "Паказаць слупкі..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+msgid "Show Rows..."
+msgstr "Паказаць радкі..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "Паказаць утоеныя слупкі на лісце"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "Паказаць утоеныя радкі"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, fuzzy, kde-format
+msgid "Column: %1"
+msgstr "Слупок: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, fuzzy, kde-format
+msgid "Row: %1"
+msgstr "Радок: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+msgid "Resize Column..."
+msgstr "Змяніць шырыню слупка..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+msgid "Resize Row..."
+msgstr "Змяніць вышыню радка..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "Змяніць вышыню радка"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "Змяніць шырыню слупка"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Align Left"
+msgstr "Па левым боку"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "Выраўнаванне змесціва вочка па левым боку."
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Аб'яднаць вочкі гарызантальна"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Align Right"
+msgstr "Па правым боку"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "Выраўнаванне змесціва вочка па правым боку."
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Align Center"
+msgstr "Па цэнтры"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "Выраўнаванне змесціва вочка па цэнтры вочка."
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, fuzzy, kde-format
+msgid "Center"
+msgstr "Пасярэдзіне"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align Top"
+msgstr "Па верхнім боку"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Выраўнаванне змесціва вочка па верхнім боку."
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, fuzzy, kde-format
+msgid "Top"
+msgstr "Уверсе"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Аб'яднаць вочкі гарызантальна"
+
+#: ui/actions/Align.cpp:149
+#, fuzzy, kde-format
+msgid "Align Bottom"
+msgstr "Па ніжнім боку"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Выраўнаванне змесціва вочка па ніжнім боку."
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, fuzzy, kde-format
+msgid "Bottom"
+msgstr "Удолу"
+
+#: ui/actions/Align.cpp:185
+#, fuzzy, kde-format
+msgid "Align Middle"
+msgstr "Па сярэдзіне"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Выраўнаванне змесціва вочка па сярэдзіне вочка."
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, fuzzy, kde-format
+msgid "Middle"
+msgstr "Сярэдзіна"
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+msgid "Change Angle..."
+msgstr "Змяніць кут..."
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Змяніць кут паказу тэксту вочка."
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+msgid "Angle"
+msgstr "Кут:"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Змяніць кут"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+msgid "&Auto-Filter"
+msgstr "Аўтазапаўненне"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Аўтазапаўненне"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Дастасаваць да вылучаным вочкам наканаваны стыль"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Auto-Format..."
+msgstr "Аўтафармат..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, fuzzy, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Немагчыма знайсці файл стылю XML '%1'."
+
+#: ui/actions/AutoFormat.cpp:91
+#, fuzzy, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Няслушны фармат файла стылю XML '%1'."
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Аўтафармат..."
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+msgid "Autosum"
+msgstr "Аўтасума"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Уставіць функцыю 'sum'"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Аўтасума"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Border Left"
+msgstr "Мяжа злева"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Мяжа вылучаных вочак злева"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Border Right"
+msgstr "Мяжа справа"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Мяжа вылучаных вочак справа"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Border Top"
+msgstr "Мяжа зверху"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Мяжа вылучаных вочак зверху"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Border Bottom"
+msgstr "Мяжа знізу"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Мяжа вылучаных вочак знізу"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "All Borders"
+msgstr "Усе межы"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Паказаць межы ў усіх вылучаных вочак"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, fuzzy, kde-format
+msgid "All"
+msgstr "Усе"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "No Borders"
+msgstr "Усе межы"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Выдаліць усе межы ў вылучаных вочак"
+
+#: ui/actions/Border.cpp:213
+#, fuzzy, kde-format
+msgid "Border Outline"
+msgstr "Межы вакол дыяпазону"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Маляванне мяжы вакол вылучанага дыяпазону"
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+msgid "Outline"
+msgstr "Межы вакол дыяпазону"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Border Color"
+msgstr "Колер мяжы"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "Змяніць колер мяжы"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Змяніць колер меж"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, fuzzy, kde-format
+msgid "Insert Cells..."
+msgstr "Уставіць вочкі..."
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Уставіць на ліст пустыя вочкі"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, fuzzy, kde-format
+msgid "Remove Cells..."
+msgstr "Выдаліць вочкі..."
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Выдаліць бягучае вочка з ліста"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear All"
+msgstr "Ачысціць усё"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Выдаліць усё змесціва і фарматаванне бягучага вочка"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+#| msgid "Contents"
+msgid "Clear Contents"
+msgstr "Змест"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Выдаліць усё змесціва бягучага вочка"
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Змяніць тэкст"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Выдаліць"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+msgid "Comment..."
+msgstr "Каментар"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Змяніць каментар для вочка"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+#| msgid "Contents"
+msgid "Clear Comment"
+msgstr "Змест"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "Выдаліць каментар вочка"
+
+#: ui/actions/Comment.cpp:60
+#, fuzzy, kde-format
+msgid "Remove Comment"
+msgstr "Выдаліць каментар"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Выдаліць каментар"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Дадаць каментар"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+msgid "Conditional Styles..."
+msgstr "Фарматаванне па ўмове..."
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Усталяваць фарматаванне ў залежнасці ад вызначаных умоў"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+msgid "Conditional Styles"
+msgstr "Фарматаванне па ўмове"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Прыбраць фарматаванне вочка па ўмове"
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Прыбраць фарматаванне вочка па ўмове"
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Прыбраць фарматаванне вочка па ўмове"
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Прыбраць фарматаванне вочка па ўмове"
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "&Consolidate..."
+msgstr "Кансалідаваць..."
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Стварэнне дыяпазону сумаваных дадзеных групы падобных дыяпазонаў"
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Кансалідацыя дадзеных"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Скапіраваць аб'ект табліцы ў буфер абмену"
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Выразаць аб'ект вочка ў буфер абмену"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+msgid "Insert From &Text File..."
+msgstr "З тэкставага файла"
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Уставіць дадзеныя з тэкставага файла ў бягучае вочка або вылучаны дыяпазон"
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+msgid "Text File"
+msgstr "З тэкставага файла"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, fuzzy, kde-format
+msgid "Cannot open input file."
+msgstr "Не атрымоўваецца адкрыць уваходны файл."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+msgid "Inserting Text File"
+msgstr "Устаўка тэкставага файла"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Устаўка тэкставага файла"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+msgid "Insert From &Clipboard..."
+msgstr "Устаўка з буфера абмену"
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"Уставіць дадзеныя ў фармаце CSV з буфера абмену ў бягучае вочка або вылучаны "
+"дыяпазон"
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+msgid "Clipboard"
+msgstr "З буфера абмену..."
+
+#: ui/actions/CSVActions.cpp:146
+#, fuzzy, kde-format
+msgid "There is no data in the clipboard."
+msgstr "У буферы абмену няма дадзеных."
+
+#: ui/actions/CSVActions.cpp:150
+#, fuzzy, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "У буферы абмену няма прыдатных для выкарыстання дадзеных."
+
+#: ui/actions/CSVActions.cpp:155
+#, fuzzy, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Устаўка з буфера абмену"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Устаўка з буфера абмену"
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "&Text to Columns..."
+msgstr "Тэкст па слупках..."
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Размеркаваць змесціва вочак па некалькіх слупках"
+
+#: ui/actions/CSVActions.cpp:241
+#, fuzzy, kde-format
+msgid "Text to Columns"
+msgstr "Тэкст па слупках"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Тэкст па слупках"
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Кіраванне карыстацкімі спісамі для сартавання або аўтазапаўненні"
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+msgid "Custom Lists..."
+msgstr "Спісы карыстача..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Add Named Area"
+msgstr "Змяніць дыяпазон"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, fuzzy, kde-format
+msgid "Enter the area name:"
+msgstr "Імя дыяпазону:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Change Angle"
+msgstr "Змяніць кут"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, fuzzy, kde-format
+msgid "Angle:"
+msgstr "Кут:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+msgid "Automatic Format"
+msgstr "Аўтафармат..."
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Ужыць стыль табліцы:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Select Character"
+msgstr "Адмысловы знак..."
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Новы тэкст"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, fuzzy, kde-format
+msgid "Cell Comment"
+msgstr "Каментар"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, fuzzy, kde-format
+msgid "<none>"
+msgstr "<няма>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, fuzzy, kde-format
+msgid "equal to"
+msgstr "роўна"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, fuzzy, kde-format
+msgid "greater than"
+msgstr "больш чым"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, fuzzy, kde-format
+msgid "less than"
+msgstr "менш чым"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, fuzzy, kde-format
+msgid "equal to or greater than"
+msgstr "роўна або больш чым"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, fuzzy, kde-format
+msgid "equal to or less than"
+msgstr "роўна або менш чым"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, fuzzy, kde-format
+msgid "between"
+msgstr "паміж"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "іншы дыяпазон"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, fuzzy, kde-format
+msgid "different to"
+msgstr "да"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, fuzzy, kde-format
+msgid "First Condition"
+msgstr "Першая ўмова"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, fuzzy, kde-format
+msgid "Second Condition"
+msgstr "Другая ўмова"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, fuzzy, kde-format
+msgid "Third Condition"
+msgstr "Трэцяя ўмова"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, fuzzy, kde-format
+msgid "Cell is"
+msgstr "Вочка"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, fuzzy, kde-format
+msgid "Cell style"
+msgstr "Стыль вочка"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, fuzzy, kde-format
+msgid "different from"
+msgstr "ад"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, fuzzy, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Калі першае значэнне з'яўляецца лікам, другое значэнне таксама павінна быць "
+"лікам."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, fuzzy, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Калі першае значэнне з'яўляецца радком, другое значэнне таксама павінна быць "
+"радком."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Consolidate"
+msgstr "Кансалідацыя дадзеных"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, fuzzy, kde-format
+msgid "Product"
+msgstr "Прадукт"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, fuzzy, kde-format
+msgid "Standard Deviation"
+msgstr "Стандартнае адхіленне"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, fuzzy, kde-format
+msgid "Variance"
+msgstr "Дысперсія"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+msgid "You have to define at least one source range."
+msgstr "Неабходна вылучыць хоць бы адзін слупок."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+#| msgid "This is not a valid date."
+msgid "%1 is not a valid cell range."
+msgstr "Недапушчальная дата."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, fuzzy, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Дыяпазон\n"
+"%1\n"
+"занадта малы"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, fuzzy, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Дыяпазон\n"
+"%1\n"
+"занадта вялікі"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, fuzzy, kde-format
+msgid "The source range intersects the destination range."
+msgstr "Зыходныя лісты перасякаюцца з выніковым лістом"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, fuzzy, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Дыяпазон\n"
+"%1\n"
+" не вызначаны"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, fuzzy, kde-format
+msgid "Insert Data From Database"
+msgstr "Уставіць дадзеныя з базы дадзеных"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, fuzzy, kde-format
+msgid "Type:"
+msgstr "Тып:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, fuzzy, kde-format
+msgid "Database name: "
+msgstr "Імя базы дадзеных: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Host:"
+msgstr "Вузел:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, fuzzy, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Порт:\n"
+"(калі неабходна)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, fuzzy, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Імя карыстача:\n"
+"(калі неабходна)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, fuzzy, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Пароль:\n"
+"(калі неабходна)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, fuzzy, kde-format
+msgid "Select tables:"
+msgstr "Вылучыце табліцы:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+msgid "Tables"
+msgstr "Значэнні"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, fuzzy, kde-format
+msgid "Select columns:"
+msgstr "Вылучыце слупкі:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Table"
+msgstr "Тала"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, fuzzy, kde-format
+msgid "Columns"
+msgstr "Слупкі"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, fuzzy, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Задавальняе ўсім умовам (І)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, fuzzy, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Задавальняе хоць бы аднаму ўмове (АБО)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, fuzzy, kde-format
+msgid "equals"
+msgstr "роўна"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, fuzzy, kde-format
+msgid "not equal"
+msgstr "не роўна"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, fuzzy, kde-format
+msgid "in"
+msgstr "дзюйм(аў)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, fuzzy, kde-format
+msgid "not in"
+msgstr "не ўтрымоўвае"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, fuzzy, kde-format
+msgid "like"
+msgstr "супадае"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, fuzzy, kde-format
+msgid "greater"
+msgstr "больш"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, fuzzy, kde-format
+msgid "lesser"
+msgstr "менш"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, fuzzy, kde-format
+msgid "greater or equal"
+msgstr "больш або роўна"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, fuzzy, kde-format
+msgid "less or equal"
+msgstr "менш або роўна"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, fuzzy, kde-format
+msgid "Sorted by"
+msgstr "Сартаваць"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, fuzzy, kde-format
+msgid "Ascending"
+msgstr "У алфавітным парадку"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, fuzzy, kde-format
+msgid "Descending"
+msgstr "У зваротным парадку"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, fuzzy, kde-format
+msgid "Distinct"
+msgstr "Аддзелены"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, fuzzy, kde-format
+msgid "Query Options"
+msgstr "Параметры запыту"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, fuzzy, kde-format
+msgid "SQL query:"
+msgstr "Запыт SQL:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, fuzzy, kde-format
+msgid "Insert in region"
+msgstr "Уставіць у дыяпазон"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, fuzzy, kde-format
+msgid "Starting in cell"
+msgstr "Пачынальна з вочка"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, fuzzy, kde-format
+msgid "Result"
+msgstr "Вынік"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+msgid "You cannot specify a table here."
+msgstr "Тут нельга паказаць табліцу."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, fuzzy, kde-format
+msgid "You have to specify a valid region."
+msgstr "Неабходна паказаць дапушчальны рэгіён."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, fuzzy, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Неабходна паказаць дапушчальнае вочка."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, fuzzy, kde-format
+msgid "Executing query failed."
+msgstr "Памылка выканання запыту."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, fuzzy, kde-format
+msgid "You did not get any results with this query."
+msgstr "Запыт не вярнуў ні аднаго значэнні."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Уставіць дадзеныя з базы дадзеных"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, fuzzy, kde-format
+msgid "The port must be a number"
+msgstr "Порт павінен быць лікам"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, fuzzy, kde-format
+msgid "Connecting to database..."
+msgstr "Падлучэнне да базы дадзеных..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, fuzzy, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Падлучана. Атрыманне інфармацыі аб табліцах..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, fuzzy, kde-format
+msgid "This database contains no tables"
+msgstr "База дадзеных не ўтрымоўвае табліц"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, fuzzy, kde-format
+msgid "Driver could not be loaded"
+msgstr "Драйвер не можа быць загружаны"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, fuzzy, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Атрыманне метададзеных табліц..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, fuzzy, kde-format
+msgid "You have to select at least one table."
+msgstr "Неабходна вылучыць хоць бы адну табліцу."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, fuzzy, kde-format
+msgid "You have to select at least one column."
+msgstr "Неабходна вылучыць хоць бы адзін слупок."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, fuzzy, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' або '?' не з'яўляюцца дапушчальнымі шаблонамі SQL. Замест іх "
+"выкарыстоўваюцца '%' or '_'. Замяніць?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Тэкст замены"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Document Settings"
+msgstr "Налада лакалі"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+msgid "Calculation"
+msgstr "Рэжым падліку"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+msgid "Case sensitive"
+msgstr "Сартаванне з улікам рэгістра"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+msgid "Precision as shown"
+msgstr "Дакладнасць"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+msgid "Automatic find labels"
+msgstr "Аўтаматычнае"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+msgid "String comparison:"
+msgstr "Радок для параўнання з"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Regular Expressions"
+msgstr "Рэгулярны выраз"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "Абнавіць наладу лакалі"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+msgid "Language: %1 (%2)"
+msgstr "Мова: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+msgid "Default number format: %1"
+msgstr "Фармат лікаў па змаўчанні: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+msgid "Long date format: %1"
+msgstr "Поўны фармат даты: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Short date format: %1"
+msgstr "Кароткі фармат даты: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, fuzzy, kde-format
+msgid "Time format: %1"
+msgstr "Фармат часу: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+msgid "Currency format: %1"
+msgstr "Фармат грашовай сумы: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, fuzzy, kde-format
+msgid "More Options"
+msgstr "Паказаць параметры"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Search entire sheet"
+msgstr "Пошук па ўсім лісце"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Search in:"
+msgstr "Шукаць у:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Cell Values"
+msgstr "Значэннях"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Comments"
+msgstr "Каментары"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Search direction:"
+msgstr "Кірунак:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Across then Down"
+msgstr "Налева, потым уніз"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "Уніз. потым налева"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Fewer Options"
+msgstr "Схаваць параметры"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Set Function"
+msgstr "<h2>Гл. таксама</h2><ul>"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, fuzzy, kde-format
+msgid "Insert function"
+msgstr "Уставіць функцыю"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, fuzzy, kde-format
+msgid "Help"
+msgstr "&Дапамога"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, fuzzy, kde-format
+msgid "This function has no parameters."
+msgstr "У гэтай функцыі няма параметраў."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+msgid "Description is not available."
+msgstr "Апісанне не даступна."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Goal Seek"
+msgstr "Пошук рашэння"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, fuzzy, kde-format
+msgid "Goto Cell"
+msgstr "Перайсці да вочка"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Enter cell:"
+msgstr "Увядзіце імя:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Insert"
+msgstr "Уставіць"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, fuzzy, kde-format
+msgid "Move towards right"
+msgstr "Ссунуць направа"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, fuzzy, kde-format
+msgid "Move towards bottom"
+msgstr "Ссунуць уніз"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Insert rows"
+msgstr "Уставіць радкі"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Insert columns"
+msgstr "Уставіць слупкі"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, fuzzy, kde-format
+msgid "Insert Cells"
+msgstr "Уставіць вочкі"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "Выдаліць"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Move towards left"
+msgstr "Ссунуць налева"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, fuzzy, kde-format
+msgid "Move towards top"
+msgstr "Ссунуць уверх"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, fuzzy, kde-format
+msgid "Remove rows"
+msgstr "Выдаліць радкі"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, fuzzy, kde-format
+msgid "Remove columns"
+msgstr "Выдаліць слупкі"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Remove Cells"
+msgstr "Выдаліць вочкі"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, fuzzy, kde-format
+msgid "Insert Link"
+msgstr "Уставіць спасылку"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, fuzzy, kde-format
+msgid "Internet"
+msgstr "Інтэрнэт"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+msgid "Link to Internet Address"
+msgstr "Адрас у Інтэрнэце:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, fuzzy, kde-format
+msgid "Text to display:"
+msgstr "Тэкст спасылкі:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, fuzzy, kde-format
+msgid "Internet address:"
+msgstr "Адрас у Інтэрнэце:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+msgid "Email"
+msgstr "Электронная пошта:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+msgid "Link to Email Address"
+msgstr "Адрас у Інтэрнэце:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+msgid "Email address:"
+msgstr "Адрас электроннай пошты не паказаны"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+msgid "Subject:"
+msgstr "Выразаць аб'ект"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, fuzzy, kde-format
+msgid "File"
+msgstr "Файл"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+msgid "Link to File"
+msgstr "Памер вочка"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, fuzzy, kde-format
+msgid "File location:"
+msgstr "Размяшчэнне файла:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Recent file:"
+msgstr "Апошні файл:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, fuzzy, kde-format
+msgid "No Entries"
+msgstr "Няма запісаў"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+msgid "Link to Cell"
+msgstr "Памер вочка"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+msgid "Cell or Named Area:"
+msgstr "Выдаліць дыяпазон"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, fuzzy, kde-format
+msgid "Custom Lists"
+msgstr "Спісы карыстача"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Save Changes"
+msgstr "Змяніць значэнне"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, fuzzy, kde-format
+msgid "List:"
+msgstr "Спіс:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, fuzzy, kde-format
+msgid "Entry:"
+msgstr "Элемент:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, fuzzy, kde-format
+msgid "Add"
+msgstr "&Дадаць"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, fuzzy, kde-format
+msgid "Cancel"
+msgstr "&Скасаваць"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, fuzzy, kde-format
+msgid "New"
+msgstr "&Новы"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, fuzzy, kde-format
+msgid "Modify"
+msgstr "З&мяніць"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, fuzzy, kde-format
+msgid "Copy"
+msgstr "Стварыць &копію"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Вы сапраўды жадаеце выдаліць гэты спіс?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+msgid "Remove List"
+msgstr "Выдаліць спіс"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, fuzzy, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Дыяпазон утрымоўвае дадзеныя.\n"
+"Жадаеце працягнуць?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+msgid "Named Areas"
+msgstr "Выдаліць дыяпазон"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, fuzzy, kde-format
+msgid "Area: %1"
+msgstr "Дыяпазон: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, fuzzy, kde-format
+msgid "Cells:"
+msgstr "Вочкі:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, fuzzy, kde-format
+msgid "Sheet:"
+msgstr "Ліст:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, fuzzy, kde-format
+msgid "Area name:"
+msgstr "Імя дыяпазону:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, fuzzy, kde-format
+msgid "&Remove"
+msgstr "&Выдаліць"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Вы сапраўды жадаеце выдаліць імя гэтага дыяпазону?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+msgid "Remove Named Area"
+msgstr "Выдаліць дыяпазон"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+msgid "The provided region is not valid."
+msgstr "Спасылка на вочка няслушная."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Уставіць вочкі са зрухам"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+msgid "Select Source"
+msgstr "Адмысловы знак..."
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+msgid "Add Filter"
+msgstr "Файл"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+msgid "Pivot Options"
+msgstr "Аперацыя"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, fuzzy, kde-format
+msgid "Resize Row"
+msgstr "Змяніць памер радка"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, fuzzy, kde-format
+msgid "Height:"
+msgstr "Вышыня:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, fuzzy, kde-format
+msgid "Resize Column"
+msgstr "Змяніць памер слупка"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, fuzzy, kde-format
+msgid "Width:"
+msgstr "Шырыня:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, fuzzy, kde-format
+msgid "Series"
+msgstr "Налады шэрагу"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Series"
+msgstr "Уставіць шэраг"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, fuzzy, kde-format
+msgid "Insert Values"
+msgstr "Уставіць значэнні"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, fuzzy, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Уставіць шэрагі вертыкальна, сябар пад сябрам"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Уставіць шэрагі гарызантальна, сябар за сябрам"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, fuzzy, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Лінейны (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, fuzzy, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Стварае шэраг з паказаным пачатковым, канчатковым элементам і прырашчэннем. "
+"Кожнае наступнае значэнне ў гэтым шэрагу атрымоўваецца шляхам прыбытку ліку, "
+"паказанага ў кроку да папярэдняга элемента."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Геаметрычны (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, fuzzy, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Стварае шэраг з паказаным пачатковым, канчатковым элементам і "
+"прырашчэннем(крокам) множанні элементаў. Кожнае наступнае значэнне ў гэтым "
+"шэрагу атрымоўваецца шляхам множання ліку, паказанага ў кроку на папярэдняй "
+"элемент. Напрыклад, пры кроку 5 і пачатковым значэнні шэрагу 5 атрымоўваем "
+"шэраг 5, 25, 125, 625..."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, fuzzy, kde-format
+msgid "Start value:"
+msgstr "Пачатковае значэнне:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, fuzzy, kde-format
+msgid "Stop value:"
+msgstr "Канчатковае значэнне:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, fuzzy, kde-format
+msgid "Step value:"
+msgstr "Прырашчэнне:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+msgid "End and start value must be positive."
+msgstr "Пачатковае і канчатковае значэнне павінны быць дадатнымі."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, fuzzy, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Канчатковае значэнне павінна быць больш пачатковага або прырашчэнне павінна "
+"быць менш \"1\"."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, fuzzy, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+"Апушчаныя пачатковае, канчатковае значэнне і значэнне прырашчэння могуць "
+"быць роўныя 0."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, fuzzy, kde-format
+msgid "Step value must be different from 1"
+msgstr "Значэнне прырашчэння не павінна быць роўным 1"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, fuzzy, kde-format
+msgid "Step is negative."
+msgstr "Прырашчэнне адмоўнае."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, fuzzy, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Значэнне прырашчэння павінна быць больш, чым 0. У адваротным выпадку лінейны "
+"шэраг будзе бясконцым."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, fuzzy, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Калі пачатковае значэнне больш, чым канчатковае, прырашчэнне павінна быць "
+"менш 0."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, fuzzy, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Калі прырашчэнне адмоўнае, пачатковае значэнне павінна быць больш "
+"канчатковага."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, fuzzy, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Паказаць утоеныя радкі:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Паказаць утоеныя слупкі:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, fuzzy, kde-format
+msgid "Column %1"
+msgstr "Слупок %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, fuzzy, kde-format
+msgid "Row %1"
+msgstr "Радок %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "Першы слупок утрымоўвае загалоўкі"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "Першы радок утрымоўвае загалоўкі"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, fuzzy, kde-format
+msgid "Sort"
+msgstr "Упарадкаваць"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+msgid "Case Insensitive"
+msgstr "Сартаванне з улікам рэгістра"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, fuzzy, kde-format
+msgid "Special Paste"
+msgstr "Адмысловая ўстаўка"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, fuzzy, kde-format
+msgid "Paste"
+msgstr "Уставіць"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, fuzzy, kde-format
+msgid "Style Manager"
+msgstr "Мэнэджэр стыляў"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, fuzzy, kde-format
+msgid "Style"
+msgstr "Стыль"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, fuzzy, kde-format
+msgid "All Styles"
+msgstr "Усе стылі"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Custom Styles"
+msgstr "Стылі карыстача"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, fuzzy, kde-format
+msgid "Hierarchical"
+msgstr "Іерархічны"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, fuzzy, kde-format
+msgid "&New..."
+msgstr "&Новы..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, fuzzy, kde-format
+msgid "&Modify..."
+msgstr "&Змяніць..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, fuzzy, kde-format
+msgid "&Delete..."
+msgstr "Пошук рашэння..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, fuzzy, kde-format
+msgid "style%1"
+msgstr "стыль%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Subtotals"
+msgstr "Падвынікі"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, fuzzy, kde-format
+msgid "Remove All"
+msgstr "Выдаліць усё"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, fuzzy, kde-format
+msgid "Column '%1' "
+msgstr "Слупок '%1'"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, fuzzy, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, fuzzy, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, fuzzy, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, fuzzy, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, fuzzy, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Неабходна вылучыць хоць бы адзін слупок для дадання падвынікаў."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Validity"
+msgstr "Праверка на карэктнасць"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, fuzzy, kde-format
+msgid "Clear &All"
+msgstr "Ачысціць усё"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, fuzzy, kde-format
+msgid "Allow:"
+msgstr "Дазволіць:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, fuzzy, kde-format
+msgid "Integer"
+msgstr "Цэлы"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, fuzzy, kde-format
+msgid "Text Length"
+msgstr "Даўжыня тэксту"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Спіс"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, fuzzy, kde-format
+msgid "Allow blanks"
+msgstr "Правяраць пустыя вочкі"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, fuzzy, kde-format
+msgid "Data:"
+msgstr "Дадзеныя:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Мінімум:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Максімум:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, fuzzy, kde-format
+msgid "Date minimum:"
+msgstr "Мінімальная дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, fuzzy, kde-format
+msgid "Date maximum:"
+msgstr "Максімальная дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Час:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, fuzzy, kde-format
+msgid "Time minimum:"
+msgstr "Мінімальны час:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, fuzzy, kde-format
+msgid "Time maximum:"
+msgstr "Максімальны час:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Лік:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, fuzzy, kde-format
+msgid "Entries:"
+msgstr "Значэнні:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+msgid "Error Alert"
+msgstr "Абвестка аб памылцы"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, fuzzy, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr ""
+"Паказваць паведамленне аб памылцы, калі ў вочка ўведзеныя няправільныя "
+"дадзеныя"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Дзеянне:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Спыніць"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Папярэджанне"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Назва:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Паведамленне:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Дапамога па ўводзе"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, fuzzy, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Паказваць даведку па значэннях, дазволеным для ўводу ў вылучанае вочка"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Гэтае значэнне няслушна."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Гэтае значэнне часу няслушна."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Недапушчальная дата."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "Налада лакалі"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+msgid "Show document settings dialog"
+msgstr "Паказваць індыкатар каментара"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Змяніць бягучае вочка"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Modify Cell"
+msgstr "Змяніць вочка"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute fixation"
+msgstr "Абарона ад змен"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Уставіць змесціва буфера абмену ў бягучую пазіцыю курсора"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+msgid "Fill &Down"
+msgstr "&Уніз"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+msgid "Fill &Left"
+msgstr "&Леваруч"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+msgid "Fill &Right"
+msgstr "&Праваруч"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Выбар формулы"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Тэкст замены"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Select Font..."
+msgstr "Выбраць шрыфт..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "Усталяваць параметры фарматавання вочка."
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Змяніць фармат"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Select Font Size"
+msgstr "Вылучыце памер шрыфта"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "Усталяваць параметры фарматавання вочка."
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+msgid "Font Size"
+msgstr "Вылучыце памер шрыфта"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Set the text color"
+msgstr "Усталяваць колер фону."
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Text Color"
+msgstr "Колер тэксту"
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "&Function..."
+msgstr "Функцыя..."
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "Insert math expression"
+msgstr "Уставіць матэматычны выраз"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, fuzzy, kde-format
+msgid "Formula Selection"
+msgstr "Выбар формулы"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+msgid "Insert a function"
+msgstr "Уставіць функцыю"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, fuzzy, kde-format
+msgid "Others..."
+msgstr "Іншыя..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+msgid "&Goal Seek..."
+msgstr "Пошук рашэння..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Паўтор вылічэння для пошуку патрэбнага значэння"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, fuzzy, kde-format
+msgid "Cell reference is invalid."
+msgstr "Спасылка на вочка няслушная."
+
+#: ui/actions/GoalSeek.cpp:75
+#, fuzzy, kde-format
+msgid "Target value is invalid."
+msgstr "Мэтавае значэнне няслушна."
+
+#: ui/actions/GoalSeek.cpp:84
+#, fuzzy, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Зыходныя вочкі павінны ўтрымоўваць лікавыя значэнні."
+
+#: ui/actions/GoalSeek.cpp:90
+#, fuzzy, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Мэтавае вочка павінна быць формулай."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Падчас пошуку рашэння ў вочку %1 знойдзена рашэнне:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, fuzzy, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Падчас пошуку рашэння ў вочку %1 НЕ знойдзена рашэнне."
+
+#: ui/actions/Goto.cpp:25
+#, fuzzy, kde-format
+msgid "Goto Cell..."
+msgstr "Перайсці на вочка..."
+
+#: ui/actions/Goto.cpp:25
+#, fuzzy, kde-format
+msgid "Move to a particular cell"
+msgstr "Перайсці на паказанае вочка"
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+msgid "Goto"
+msgstr "Перайсці да вочка"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Гэтае значэнне часу няслушна."
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Decrease Indent"
+msgstr "Паменшыць водступ"
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Increase Indent"
+msgstr "Павялічыць водступ"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "Паменшыць водступ."
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "Павялічыць водступ."
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Павялічыць водступ."
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Паменшыць водступ."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "From &Database..."
+msgstr "З базы дадзеных..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Уставіць дадзеныя з базы дадзеных SQL"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Драйверы баз дадзеных недаступныя. Перазбярыце Qt з неабходнымі драйверамі."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "&Series..."
+msgstr "Шэраг..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "Уставіць шэраг"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Уставіць шэраг"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, fuzzy, kde-format
+msgid "S&pecial Character..."
+msgstr "Адмысловы знак..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, fuzzy, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+"Уставіць адзін або некалькі знакаў або літар, якія адсутнічаюць на клавіятуры"
+
+#: ui/actions/Inspector.cpp:34
+#, fuzzy, kde-format
+msgid "Run Inspector..."
+msgstr "Запуск інспектара..."
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "&Link..."
+msgstr "Спасылка..."
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Уставіць спасылку на рэсурс Інтэрнэту"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Link"
+msgstr "Спасылка"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Remove a link"
+msgstr "Выдаліць спасылку"
+
+#: ui/actions/Link.cpp:74
+#, fuzzy, kde-format
+msgid "Remove Link"
+msgstr "Выдаліць спасылку"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Выдаліць спасылку"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Спасылка"
+
+#: ui/actions/ListChoose.cpp:28
+#, fuzzy, kde-format
+msgid "Selection List..."
+msgstr "Паўтарыць..."
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Аб'яднаць вочкі гарызантальна"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Аб'яднаць вочкі вертыкальна"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Аб'яднаць вочкі вылучанага дыяпазону па радках"
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Аб'яднаць вочкі вылучанага дыяпазону па слупках"
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "Аб'яднаць вочкі вылучанага дыяпазону ў адно вялікае вочка"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Dissociate Cells"
+msgstr "Разбіць вочкі"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "Разбіць вочкі вылучанага дыяпазону"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Area Name..."
+msgstr "Імя дыяпазону..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Прысвоіць імя дыяпазону ліста"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+msgid "Replace Named Area"
+msgstr "Паказаць найменны дыяпазон"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Паказаць найменны дыяпазон"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Edit or select named areas"
+msgstr "Паказаць найменны дыяпазон"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Named Areas..."
+msgstr "Паказаць дыяпазон..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+msgid "Break Before Row"
+msgstr "Выдаліць слупкі"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+msgid "Row Break"
+msgstr "Загаловак"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+msgid "Break Before Column"
+msgstr "Выдаліць слупкі"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+msgid "Column Break"
+msgstr "Нумар слупка"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Уставіць змесціва буфера абмену ў бягучую пазіцыю курсора"
+
+#: ui/actions/Paste.cpp:94
+#, fuzzy, kde-format
+msgid "Special Paste..."
+msgstr "Адмысловая ўстаўка..."
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Уставіць змесціва буфера абмену па адмысловых умовах"
+
+#: ui/actions/Paste.cpp:153
+#, fuzzy, kde-format
+msgid "Paste with Insertion"
+msgstr "Уставіць са зрухам"
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Уставіць вочкі з буфера абмену"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "&Pivot Tables..."
+msgstr "Падвынікі..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "Create Pivot Tables"
+msgstr "Падвынікі..."
+
+#: ui/actions/Pivot.cpp:29
+#, fuzzy, kde-format
+msgid "You must select multiple cells."
+msgstr "Вы павінны вылучыць некалькі вочак."
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Пералічыць значэнне кожнага вочка на бягучым лісце"
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+msgid "Show QTableView..."
+msgstr "Паказаць ліст..."
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+msgid "&Sort..."
+msgstr "Сартаванне..."
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+msgid "Sort a group of cells"
+msgstr "Сартаваць групу вочак"
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+msgid "Sort &Increasing"
+msgstr "Сартаваць па ўзрастанні"
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Сартаваць групу вочак па ўзрастанні"
+
+#: ui/actions/Sort.cpp:143
+#, fuzzy, kde-format
+msgid "Sort &Decreasing"
+msgstr "Сартаваць па змяншэнні"
+
+#: ui/actions/Sort.cpp:145
+#, fuzzy, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "Сартаваць групу вочак па змяншэнні"
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Крытэр сартавання"
+
+#: ui/actions/SpellCheck.cpp:84
+#, fuzzy, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Праверыць арфаграфію на іншых лістах?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Перайсці на наступны ліст"
+
+#: ui/actions/SpellCheck.cpp:237
+#, fuzzy, kde-format
+msgid "Check the spelling"
+msgstr "Праверка арфаграфіі"
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Cell Format..."
+msgstr "Фармат вочак..."
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "Усталяваць параметры фарматавання вочка."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, fuzzy, kde-format
+msgid "Bold"
+msgstr "Цёмны"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, fuzzy, kde-format
+msgid "Italic"
+msgstr "Курсіў"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, fuzzy, kde-format
+msgid "Underline"
+msgstr "Падкрэслены"
+
+#: ui/actions/Style.cpp:184
+#, fuzzy, kde-format
+msgid "Strike Out"
+msgstr "Закрэслены"
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Пераносіць тэкст у вочку на некалькі радкоў."
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Wrap Text"
+msgstr "Пераносіць па словах"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+msgid "Wrap"
+msgstr "Пераносіць па словах"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Пераносіць па словах"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Print cell contents vertically"
+msgstr "Друкаваць тэкст у вочку вертыкальна."
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Vertical Text"
+msgstr "Тэкст па вертыкалі"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Тэкст па вертыкалі"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Фармат лікаў"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "Усталяваць параметры фарматавання вочка."
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Першы лік"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "Навуковы фармат"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "Усталёўка адсоткавага фарматавання."
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, fuzzy, kde-format
+msgid "Scientific"
+msgstr "Навуковы"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Навуковы"
+
+#: ui/actions/Style.cpp:342
+#, fuzzy, kde-format
+msgid "Percent Format"
+msgstr "Адсоткавы фармат"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Усталёўка адсоткавага фарматавання."
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, fuzzy, kde-format
+msgid "Percent"
+msgstr "Адсоткавы"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Адсоткавы фармат"
+
+#: ui/actions/Style.cpp:379
+#, fuzzy, kde-format
+msgid "Money Format"
+msgstr "Грашовы фармат"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Фарматаванне валютнай сумы ў адпаведнасці з усталёўкамі лакалі."
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, fuzzy, kde-format
+msgid "Money"
+msgstr "Грошы"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Грашовы фармат"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Фармат даты"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "Усталяваць параметры фарматавання вочка."
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Фармат"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "Усталяваць параметры фарматавання вочка."
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Фармат часу"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Фармат"
+
+#: ui/actions/Style.cpp:480
+#, fuzzy, kde-format
+msgid "Increase Font Size"
+msgstr "Павялічыць памер шрыфта"
+
+#: ui/actions/Style.cpp:504
+#, fuzzy, kde-format
+msgid "Decrease Font Size"
+msgstr "Паменшыць памер шрыфта"
+
+#: ui/actions/Style.cpp:530
+#, fuzzy, kde-format
+msgid "Increase Precision"
+msgstr "Павялічыць дакладнасць"
+
+#: ui/actions/Style.cpp:532
+#, fuzzy, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Павялічыць колькасць паказваемых знакаў пасля коскі."
+
+#: ui/actions/Style.cpp:549
+#, fuzzy, kde-format
+msgid "Decrease Precision"
+msgstr "Паменшыць дакладнасць"
+
+#: ui/actions/Style.cpp:551
+#, fuzzy, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Паменшыць колькасць паказваемых знакаў пасля коскі."
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Павялічыць дакладнасць"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Паменшыць дакладнасць"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "Ужыць фармат па змаўчанні."
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Стыль ліста"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Background Color"
+msgstr "Колер фону"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Set the background color"
+msgstr "Усталяваць колер фону."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create Style From Cell..."
+msgstr "Стварыць стыль з вочка..."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Стварыць новы стыль на аснове фарматавання бягучага вылучанага вочка"
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+msgid "Style From Cell"
+msgstr "Стыль вочка"
+
+#: ui/actions/Styles.cpp:53
+#, fuzzy, kde-format
+msgid "Create Style From Cell"
+msgstr "Стварыць стыль з вочка"
+
+#: ui/actions/Styles.cpp:61
+#, fuzzy, kde-format
+msgid "The style name cannot be empty."
+msgstr "Імя стылю не можа быць пустым."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, fuzzy, kde-format
+msgid "A style with this name already exists."
+msgstr "Стыль з такім імем ужо існуе."
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Кіраванне стылямі вочак"
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+msgid "Style Manager..."
+msgstr "Мэнэджэр стыляў"
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Дастасаваць да вылучаным вочкам наканаваны стыль"
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "&Subtotals..."
+msgstr "Падвынікі..."
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Стварэнне розных выглядаў падвынікаў для спісу або базы дадзеных"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Падвынікі"
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+msgid "Upper"
+msgstr "Верхні рэгістр"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+msgid "Lower"
+msgstr "Прыступка"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+msgid "First Letter Upper"
+msgstr "Пераўтварыць першую літару ў верхні рэгістр"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Ігнараваць словы ў верхнім рэгістры"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Ігнараваць словы ў верхнім рэгістры"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Пераўтварыць першую літару ў верхні рэгістр"
+
+#: ui/actions/TextCase.cpp:95
+#, fuzzy, kde-format
+msgid "Upper Case"
+msgstr "Верхні рэгістр"
+
+#: ui/actions/TextCase.cpp:97
+#, fuzzy, kde-format
+msgid "Lower Case"
+msgstr "Ніжні рэгістр"
+
+#: ui/actions/TextCase.cpp:99
+#, fuzzy, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Ператвараць першую літару ў верхні рэгістр"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Ператвараць усе літары ў верхні рэгістр."
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Ператвараць усе літары ў ніжні рэгістр."
+
+#: ui/actions/TextCase.cpp:112
+#, fuzzy, kde-format
+msgid "Capitalize the first letter"
+msgstr "Зрабіць першую літару прапісной."
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Змяніць значэнне"
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Усталёўка праверкі значэння ў вочку вызначаным умовам"
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+msgid "Validity..."
+msgstr "Праверка..."
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Прыбраць праверку значэння вочка"
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "Выдаліць спасылку"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Выдаліць спасылку"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Умовы праверкі"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14233,12 +17393,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Выдаліць вочкі"
 
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Выдаліць"
-
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
 msgctxt "(qtundo-format)"
@@ -14483,12 +17637,6 @@ msgstr "Пакінуць"
 msgid "Roman"
 msgstr "Просты"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, fuzzy, kde-format
-msgid "Italic"
-msgstr "Курсіў"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, fuzzy, kde-format
@@ -14510,12 +17658,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Звычайны"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, fuzzy, kde-format
-msgid "Bold"
-msgstr "Цёмны"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14530,12 +17672,6 @@ msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
 "Пры ўключэнні гэтай опцыі тэкст у вылучаных вочках будзе паказаны "
 "падкрэсленым."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, fuzzy, kde-format
-msgid "Underline"
-msgstr "Падкрэслены"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14681,11 +17817,6 @@ msgstr ""
 "адмысловыя магчымасці -> Краіна/вобласць і мова -> Лікі. Па змаўчанні для "
 "лікаў выкарыстоўваецца выраўнаванне па правым боку."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, fuzzy, kde-format
-msgid "Percent"
-msgstr "Адсоткавы"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, fuzzy, kde-format
 msgid ""
@@ -14703,11 +17834,6 @@ msgstr ""
 "Ужыць адсоткавы фармат вы можаце, націснуўшы кнопку са знакам % на панелі "
 "прылад."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, fuzzy, kde-format
-msgid "Money"
-msgstr "Грошы"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, fuzzy, kde-format
 msgid ""
@@ -14722,11 +17848,6 @@ msgstr ""
 "адмысловыя магчымасці -> Краіна/вобласць і мова -> Грашовыя сумы.\n"
 "Ужыць грашовы фармат вы можаце, націснуўшы кнопку са малюнкам грошай на "
 "панелі прылад."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, fuzzy, kde-format
-msgid "Scientific"
-msgstr "Навуковы"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, fuzzy, kde-format
@@ -14964,11 +18085,6 @@ msgstr "Тры лічбы 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, fuzzy, kde-format
-msgid "Style"
-msgstr "Стыль"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 msgctxt "Name of the style"
@@ -14979,11 +18095,6 @@ msgstr "Назва:"
 #, fuzzy, kde-format
 msgid "Inherit style:"
 msgstr "Атрымліваць у спадчыну стыль:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, fuzzy, kde-format
-msgid "A style with this name already exists."
-msgstr "Стыль з такім імем ужо існуе."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -15036,12 +18147,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Стандартны"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, fuzzy, kde-format
-msgid "Center"
-msgstr "Пасярэдзіне"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, fuzzy, kde-format
@@ -15079,24 +18184,6 @@ msgstr ""
 "<b>Зверху</b> - выраўнаванне па верхнім боку.\n"
 "<b>Па сярэдзіне</b> - вертыкальнае выраўнаванне па цэнтры вочка.\n"
 "<b>Знізу</b>- выраўнаванне па ніжнім боку.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, fuzzy, kde-format
-msgid "Top"
-msgstr "Уверсе"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, fuzzy, kde-format
-msgid "Middle"
-msgstr "Сярэдзіна"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, fuzzy, kde-format
-msgid "Bottom"
-msgstr "Удолу"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15280,20 +18367,10 @@ msgstr "Красавік"
 msgid "Apply changes"
 msgstr "Ужыць стыль"
 
-#: ui/ExternalEditor.cpp:60
-#, fuzzy, kde-format
-msgid "Cancel"
-msgstr "&Скасаваць"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, fuzzy, kde-format
-msgid "All"
-msgstr "Усе"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -15389,445 +18466,12 @@ msgstr ""
 #~ msgstr " (=[hh]::mm)"
 
 #, fuzzy
-#~ msgid "&Function..."
-#~ msgstr "Функцыя..."
-
-#, fuzzy
-#~ msgid "Insert math expression"
-#~ msgstr "Уставіць матэматычны выраз"
-
-#, fuzzy
-#~ msgid "From &Database..."
-#~ msgstr "З базы дадзеных..."
-
-#, fuzzy
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Уставіць дадзеныя з базы дадзеных SQL"
-
-#, fuzzy
-#~ msgid "Formula Selection"
-#~ msgstr "Выбар формулы"
-
-#, fuzzy
-#~ msgid "Insert a function"
-#~ msgstr "Уставіць функцыю"
-
-#, fuzzy
-#~ msgid "Others..."
-#~ msgstr "Іншыя..."
-
-#, fuzzy
-#~ msgid "Modify Cell"
-#~ msgstr "Змяніць вочка"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Змяніць бягучае вочка"
-
-#, fuzzy
-#~ msgid "Run Inspector..."
-#~ msgstr "Запуск інспектара..."
-
-#, fuzzy
-#~ msgid "Show QTableView..."
-#~ msgstr "Паказаць ліст..."
-
-#, fuzzy
 #~ msgid "Permute reference fixation"
 #~ msgstr "Абарона ад змен"
 
 #, fuzzy
-#~ msgid "Permute fixation"
-#~ msgstr "Абарона ад змен"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Уставіць змесціва буфера абмену ў бягучую пазіцыю курсора"
-
-#, fuzzy
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Драйверы баз дадзеных недаступныя. Перазбярыце Qt з неабходнымі "
-#~ "драйверамі."
-
-#, fuzzy
-#~ msgid "Insert Data From Database"
-#~ msgstr "Уставіць дадзеныя з базы дадзеных"
-
-#, fuzzy
-#~ msgid "Type:"
-#~ msgstr "Тып:"
-
-#, fuzzy
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Імя карыстача:\n"
-#~ "(калі неабходна)"
-
-#, fuzzy
-#~ msgid "Host:"
-#~ msgstr "Вузел:"
-
-#, fuzzy
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Порт:\n"
-#~ "(калі неабходна)"
-
-#, fuzzy
-#~ msgid "Database name: "
-#~ msgstr "Імя базы дадзеных: "
-
-#, fuzzy
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Пароль:\n"
-#~ "(калі неабходна)"
-
-#, fuzzy
-#~ msgid "Select tables:"
-#~ msgstr "Вылучыце табліцы:"
-
-#, fuzzy
-#~ msgid "Tables"
-#~ msgstr "Значэнні"
-
-#, fuzzy
-#~ msgid "Select columns:"
-#~ msgstr "Вылучыце слупкі:"
-
-#, fuzzy
-#~ msgid "Table"
-#~ msgstr "Тала"
-
-#, fuzzy
-#~ msgid "Columns"
-#~ msgstr "Слупкі"
-
-#, fuzzy
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Задавальняе ўсім умовам (І)"
-
-#, fuzzy
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Задавальняе хоць бы аднаму ўмове (АБО)"
-
-#, fuzzy
-#~ msgid "equals"
-#~ msgstr "роўна"
-
-#, fuzzy
-#~ msgid "not equal"
-#~ msgstr "не роўна"
-
-#, fuzzy
-#~ msgid "in"
-#~ msgstr "дзюйм(аў)"
-
-#, fuzzy
-#~ msgid "not in"
-#~ msgstr "не ўтрымоўвае"
-
-#, fuzzy
-#~ msgid "like"
-#~ msgstr "супадае"
-
-#, fuzzy
-#~ msgid "greater"
-#~ msgstr "больш"
-
-#, fuzzy
-#~ msgid "lesser"
-#~ msgstr "менш"
-
-#, fuzzy
-#~ msgid "greater or equal"
-#~ msgstr "больш або роўна"
-
-#, fuzzy
-#~ msgid "less or equal"
-#~ msgstr "менш або роўна"
-
-#, fuzzy
-#~ msgid "Sorted by"
-#~ msgstr "Сартаваць"
-
-#, fuzzy
-#~ msgid "Ascending"
-#~ msgstr "У алфавітным парадку"
-
-#, fuzzy
-#~ msgid "Descending"
-#~ msgstr "У зваротным парадку"
-
-#, fuzzy
-#~ msgid "Distinct"
-#~ msgstr "Аддзелены"
-
-#, fuzzy
-#~ msgid "Query Options"
-#~ msgstr "Параметры запыту"
-
-#, fuzzy
-#~ msgid "SQL query:"
-#~ msgstr "Запыт SQL:"
-
-#, fuzzy
-#~ msgid "Insert in region"
-#~ msgstr "Уставіць у дыяпазон"
-
-#, fuzzy
-#~ msgid "Starting in cell"
-#~ msgstr "Пачынальна з вочка"
-
-#, fuzzy
-#~ msgid "Result"
-#~ msgstr "Вынік"
-
-#, fuzzy
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Тут нельга паказаць табліцу."
-
-#, fuzzy
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Неабходна паказаць дапушчальны рэгіён."
-
-#, fuzzy
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Неабходна паказаць дапушчальнае вочка."
-
-#, fuzzy
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "У вас нядосыць мае рацыю для змены дадзеных у гэтай базе."
-
-#, fuzzy
-#~ msgid "Executing query failed."
-#~ msgstr "Памылка выканання запыту."
-
-#, fuzzy
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Запыт не вярнуў ні аднаго значэнні."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Уставіць дадзеныя з базы дадзеных"
-
-#, fuzzy
-#~ msgid "The port must be a number"
-#~ msgstr "Порт павінен быць лікам"
-
-#, fuzzy
-#~ msgid "Connecting to database..."
-#~ msgstr "Падлучэнне да базы дадзеных..."
-
-#, fuzzy
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Падлучана. Атрыманне інфармацыі аб табліцах..."
-
-#, fuzzy
-#~ msgid "This database contains no tables"
-#~ msgstr "База дадзеных не ўтрымоўвае табліц"
-
-#, fuzzy
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Драйвер не можа быць загружаны"
-
-#, fuzzy
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Атрыманне метададзеных табліц..."
-
-#, fuzzy
-#~ msgid "You have to select at least one table."
-#~ msgstr "Неабходна вылучыць хоць бы адну табліцу."
-
-#, fuzzy
-#~ msgid "You have to select at least one column."
-#~ msgstr "Неабходна вылучыць хоць бы адзін слупок."
-
-#, fuzzy
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' або '?' не з'яўляюцца дапушчальнымі шаблонамі SQL. Замест іх "
-#~ "выкарыстоўваюцца '%' or '_'. Замяніць?"
-
-#, fuzzy
-#~ msgid "Insert function"
-#~ msgstr "Уставіць функцыю"
-
-#, fuzzy
-#~ msgid "Help"
-#~ msgstr "&Дапамога"
-
-#, fuzzy
-#~ msgid "This function has no parameters."
-#~ msgstr "У гэтай функцыі няма параметраў."
-
-#, fuzzy
-#~ msgid "Description is not available."
-#~ msgstr "Апісанне не даступна."
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "Налада лакалі"
-
-#, fuzzy
-#~ msgid "Show document settings dialog"
-#~ msgstr "Паказваць індыкатар каментара"
-
-#, fuzzy
-#~ msgid "Document Settings"
-#~ msgstr "Налада лакалі"
-
-#, fuzzy
-#~ msgid "Calculation"
-#~ msgstr "Рэжым падліку"
-
-#, fuzzy
-#~ msgid "Case sensitive"
-#~ msgstr "Сартаванне з улікам рэгістра"
-
-#, fuzzy
-#~ msgid "Precision as shown"
-#~ msgstr "Дакладнасць"
-
-#, fuzzy
-#~ msgid "Automatic find labels"
-#~ msgstr "Аўтаматычнае"
-
-#, fuzzy
-#~ msgid "String comparison:"
-#~ msgstr "Радок для параўнання з"
-
-#, fuzzy
-#~ msgid "Regular Expressions"
-#~ msgstr "Рэгулярны выраз"
-
-#, fuzzy
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "Абнавіць наладу лакалі"
-
-#, fuzzy
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Мова: %1"
-
-#, fuzzy
-#~ msgid "Default number format: %1"
-#~ msgstr "Фармат лікаў па змаўчанні: %1"
-
-#, fuzzy
-#~ msgid "Long date format: %1"
-#~ msgstr "Поўны фармат даты: %1"
-
-#, fuzzy
-#~ msgid "Short date format: %1"
-#~ msgstr "Кароткі фармат даты: %1"
-
-#, fuzzy
-#~ msgid "Time format: %1"
-#~ msgstr "Фармат часу: %1"
-
-#, fuzzy
-#~ msgid "Currency format: %1"
-#~ msgstr "Фармат грашовай сумы: %1"
-
-#, fuzzy
-#~ msgid "Custom Lists..."
-#~ msgstr "Спісы карыстача..."
-
-#, fuzzy
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "Кіраванне карыстацкімі спісамі для сартавання або аўтазапаўненні"
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Пералічыць значэнне кожнага вочка на бягучым лісце"
-
-#, fuzzy
-#~ msgid "Custom Lists"
-#~ msgstr "Спісы карыстача"
-
-#, fuzzy
-#~ msgid "List:"
-#~ msgstr "Спіс:"
-
-#, fuzzy
-#~ msgid "Entry:"
-#~ msgstr "Элемент:"
-
-#, fuzzy
-#~ msgid "Add"
-#~ msgstr "&Дадаць"
-
-#, fuzzy
-#~ msgid "New"
-#~ msgstr "&Новы"
-
-#, fuzzy
-#~ msgid "Remove"
-#~ msgstr "Выдаліць"
-
-#, fuzzy
-#~ msgid "Modify"
-#~ msgstr "З&мяніць"
-
-#, fuzzy
-#~ msgid "Copy"
-#~ msgstr "Стварыць &копію"
-
-#, fuzzy
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Вы сапраўды жадаеце выдаліць гэты спіс?"
-
-#, fuzzy
-#~ msgid "Remove List"
-#~ msgstr "Выдаліць спіс"
-
-#, fuzzy
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Дыяпазон утрымоўвае дадзеныя.\n"
-#~ "Жадаеце працягнуць?"
-
-#, fuzzy
-#~ msgid "&Goal Seek..."
-#~ msgstr "Пошук рашэння..."
-
-#, fuzzy
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Паўтор вылічэння для пошуку патрэбнага значэння"
-
-#, fuzzy
-#~ msgid "Goal Seek"
-#~ msgstr "Пошук рашэння"
-
-#, fuzzy
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Спасылка на вочка няслушная."
-
-#, fuzzy
-#~ msgid "Target value is invalid."
-#~ msgstr "Мэтавае значэнне няслушна."
-
-#, fuzzy
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Зыходныя вочкі павінны ўтрымоўваць лікавыя значэнні."
-
-#, fuzzy
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Мэтавае вочка павінна быць формулай."
 
 #, fuzzy
 #~ msgid "Starting..."
@@ -15840,14 +18484,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "New value:"
 #~ msgstr "Новае значэнне:"
-
-#, fuzzy
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Падчас пошуку рашэння ў вочку %1 знойдзена рашэнне:"
-
-#, fuzzy
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Падчас пошуку рашэння ў вочку %1 НЕ знойдзена рашэнне."
 
 #, fuzzy
 #~ msgid "Set cell:"
@@ -15868,107 +18504,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Current value:"
 #~ msgstr "Бягучае значэнне:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Тэкст замены"
-
-#, fuzzy
-#~ msgid "Selection List..."
-#~ msgstr "Паўтарыць..."
-
-#, fuzzy
-#~ msgid "More Options"
-#~ msgstr "Паказаць параметры"
-
-#, fuzzy
-#~ msgid "Search entire sheet"
-#~ msgstr "Пошук па ўсім лісце"
-
-#, fuzzy
-#~ msgid "Search in:"
-#~ msgstr "Шукаць у:"
-
-#, fuzzy
-#~ msgid "Cell Values"
-#~ msgstr "Значэннях"
-
-#, fuzzy
-#~ msgid "Comments"
-#~ msgstr "Каментары"
-
-#, fuzzy
-#~ msgid "Search direction:"
-#~ msgstr "Кірунак:"
-
-#, fuzzy
-#~ msgid "Across then Down"
-#~ msgstr "Налева, потым уніз"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "Уніз. потым налева"
-
-#, fuzzy
-#~ msgid "Fewer Options"
-#~ msgstr "Схаваць параметры"
-
-#, fuzzy
-#~ msgid "Cell Format..."
-#~ msgstr "Фармат вочак..."
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "Усталяваць параметры фарматавання вочка."
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Выразаць аб'ект вочка ў буфер абмену"
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Скапіраваць аб'ект табліцы ў буфер абмену"
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Уставіць змесціва буфера абмену ў бягучую пазіцыю курсора"
-
-#, fuzzy
-#~ msgid "Special Paste..."
-#~ msgstr "Адмысловая ўстаўка..."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Уставіць змесціва буфера абмену па адмысловых умовах"
-
-#, fuzzy
-#~ msgid "Paste with Insertion"
-#~ msgstr "Уставіць са зрухам"
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Уставіць вочкі з буфера абмену"
-
-#, fuzzy
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Уставіць вочкі са зрухам"
-
-#, fuzzy
-#~ msgid "Insert"
-#~ msgstr "Уставіць"
-
-#, fuzzy
-#~ msgid "Move towards right"
-#~ msgstr "Ссунуць направа"
-
-#, fuzzy
-#~ msgid "Move towards bottom"
-#~ msgstr "Ссунуць уніз"
-
-#, fuzzy
-#~ msgid "Special Paste"
-#~ msgstr "Адмысловая ўстаўка"
 
 #~ msgid "Content"
 #~ msgstr "Змест"
@@ -16010,38 +18545,13 @@ msgstr ""
 #~ msgstr "Дзяленне"
 
 #, fuzzy
-#~ msgid "Check the spelling"
-#~ msgstr "Праверка арфаграфіі"
-
-#, fuzzy
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Праверыць арфаграфію на іншых лістах?"
-
-#, fuzzy
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Змяніць слова з памылкай"
 
 #, fuzzy
-#~ msgid "Auto-Format..."
-#~ msgstr "Аўтафармат..."
-
-#, fuzzy
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Налада фарматавання ліста"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Аўтафармат..."
-
-#, fuzzy
-#~ msgid "Sheet Style"
-#~ msgstr "Стыль ліста"
-
-#, fuzzy
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Ужыць стыль табліцы:"
 
 #, fuzzy
 #~ msgid "Could not find image %1."
@@ -16051,111 +18561,8 @@ msgstr ""
 #~ msgid "Could not load image %1."
 #~ msgstr "Немагчыма загрузіць малюнак %1."
 
-#, fuzzy
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Немагчыма знайсці файл стылю XML '%1'."
-
-#, fuzzy
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Няслушны фармат файла стылю XML '%1'."
-
-#, fuzzy
-#~ msgid "&Auto-Filter"
-#~ msgstr "Аўтазапаўненне"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Аўтазапаўненне"
-
-#, fuzzy
-#~ msgid "Clear All"
-#~ msgstr "Ачысціць усё"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Выдаліць усё змесціва і фарматаванне бягучага вочка"
-
 #~ msgid "Contents"
 #~ msgstr "Змест"
-
-#, fuzzy
-#~| msgid "Contents"
-#~ msgid "Clear Contents"
-#~ msgstr "Змест"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Выдаліць усё змесціва бягучага вочка"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Змяніць тэкст"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Прыбраць фарматаванне вочка па ўмове"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Прыбраць фарматаванне вочка па ўмове"
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "Змяніць колер мяжы"
-
-#, fuzzy
-#~ msgid "Border Color"
-#~ msgstr "Колер мяжы"
-
-#, fuzzy
-#~ msgid "Set the background color"
-#~ msgstr "Усталяваць колер фону."
-
-#, fuzzy
-#~ msgid "Background Color"
-#~ msgstr "Колер фону"
-
-#, fuzzy
-#~ msgid "Conditional Styles..."
-#~ msgstr "Фарматаванне па ўмове..."
-
-#, fuzzy
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Усталяваць фарматаванне ў залежнасці ад вызначаных умоў"
-
-#, fuzzy
-#~ msgid "Conditional Styles"
-#~ msgstr "Фарматаванне па ўмове"
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Прыбраць фарматаванне вочка па ўмове"
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Прыбраць фарматаванне вочка па ўмове"
-
-#, fuzzy
-#~ msgid "&Pivot Tables..."
-#~ msgstr "Падвынікі..."
-
-#, fuzzy
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Падвынікі..."
-
-#, fuzzy
-#~ msgid "You must select multiple cells."
-#~ msgstr "Вы павінны вылучыць некалькі вочак."
-
-#, fuzzy
-#~| msgid "Number Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Фармат лікаў"
 
 #, fuzzy
 #~| msgid "Currency Format"
@@ -16168,107 +18575,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Адсоткавы фармат"
-
-#, fuzzy
-#~| msgid "Time Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Фармат часу"
-
-#, fuzzy
-#~| msgid "Date Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Фармат даты"
-
-#, fuzzy
-#~| msgid "Scientific Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Навуковы фармат"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Змяніць колер меж"
-
-#, fuzzy
-#~ msgid "<none>"
-#~ msgstr "<няма>"
-
-#, fuzzy
-#~ msgid "equal to"
-#~ msgstr "роўна"
-
-#, fuzzy
-#~ msgid "greater than"
-#~ msgstr "больш чым"
-
-#, fuzzy
-#~ msgid "less than"
-#~ msgstr "менш чым"
-
-#, fuzzy
-#~ msgid "equal to or greater than"
-#~ msgstr "роўна або больш чым"
-
-#, fuzzy
-#~ msgid "equal to or less than"
-#~ msgstr "роўна або менш чым"
-
-#, fuzzy
-#~ msgid "between"
-#~ msgstr "паміж"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "іншы дыяпазон"
-
-#, fuzzy
-#~ msgid "different to"
-#~ msgstr "да"
-
-#, fuzzy
-#~ msgid "First Condition"
-#~ msgstr "Першая ўмова"
-
-#, fuzzy
-#~ msgid "Second Condition"
-#~ msgstr "Другая ўмова"
-
-#, fuzzy
-#~ msgid "Third Condition"
-#~ msgstr "Трэцяя ўмова"
-
-#, fuzzy
-#~ msgid "Cell is"
-#~ msgstr "Вочка"
-
-#, fuzzy
-#~ msgid "Cell style"
-#~ msgstr "Стыль вочка"
-
-#, fuzzy
-#~ msgid "different from"
-#~ msgstr "ад"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Калі першае значэнне з'яўляецца лікам, другое значэнне таксама павінна "
-#~ "быць лікам."
-
-#, fuzzy
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Калі першае значэнне з'яўляецца радком, другое значэнне таксама павінна "
-#~ "быць радком."
-
-#, fuzzy
-#~ msgid "Select Source"
-#~ msgstr "Адмысловы знак..."
 
 #, fuzzy
 #~ msgid "Current Selection"
@@ -16289,10 +18595,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Field"
 #~ msgstr "Ріэль"
-
-#, fuzzy
-#~ msgid "Add Filter"
-#~ msgstr "Файл"
 
 #, fuzzy
 #~ msgid "Labels"
@@ -16336,10 +18638,6 @@ msgstr ""
 #~ msgstr "Радок"
 
 #, fuzzy
-#~ msgid "Pivot Options"
-#~ msgstr "Аперацыя"
-
-#, fuzzy
 #~ msgid "Value Type"
 #~ msgstr "Значэнне"
 
@@ -16356,202 +18654,20 @@ msgstr ""
 #~ msgstr "Выбар формулы"
 
 #, fuzzy
-#~ msgid "Product"
-#~ msgstr "Прадукт"
-
-#, fuzzy
 #~ msgid "Sort By"
 #~ msgstr "Сартаваць па"
-
-#, fuzzy
-#~ msgid "Select Font..."
-#~ msgstr "Выбраць шрыфт..."
-
-#, fuzzy
-#~ msgid "Select Font Size"
-#~ msgstr "Вылучыце памер шрыфта"
-
-#, fuzzy
-#~ msgid "Font Size"
-#~ msgstr "Вылучыце памер шрыфта"
-
-#, fuzzy
-#~ msgid "Text Color"
-#~ msgstr "Колер тэксту"
-
-#, fuzzy
-#~ msgid "Set the text color"
-#~ msgstr "Усталяваць колер фону."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Змяніць фармат"
-
-#, fuzzy
-#~ msgid "Style Manager..."
-#~ msgstr "Мэнэджэр стыляў"
-
-#, fuzzy
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Кіраванне стылямі вочак"
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Дастасаваць да вылучаным вочкам наканаваны стыль"
-
-#, fuzzy
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Стварыць стыль з вочка..."
-
-#, fuzzy
-#~ msgid "Style From Cell"
-#~ msgstr "Стыль вочка"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr ""
-#~ "Стварыць новы стыль на аснове фарматавання бягучага вылучанага вочка"
-
-#, fuzzy
-#~ msgid "Create Style From Cell"
-#~ msgstr "Стварыць стыль з вочка"
-
-#, fuzzy
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Імя стылю не можа быць пустым."
-
-#, fuzzy
-#~ msgid "Style Manager"
-#~ msgstr "Мэнэджэр стыляў"
-
-#, fuzzy
-#~ msgid "All Styles"
-#~ msgstr "Усе стылі"
-
-#, fuzzy
-#~ msgid "Custom Styles"
-#~ msgstr "Стылі карыстача"
-
-#, fuzzy
-#~ msgid "Hierarchical"
-#~ msgstr "Іерархічны"
-
-#, fuzzy
-#~ msgid "&New..."
-#~ msgstr "&Новы..."
-
-#, fuzzy
-#~ msgid "&Modify..."
-#~ msgstr "&Змяніць..."
-
-#, fuzzy
-#~ msgid "&Delete..."
-#~ msgstr "Пошук рашэння..."
-
-#, fuzzy
-#~ msgid "style%1"
-#~ msgstr "стыль%1"
 
 #, fuzzy
 #~ msgid "Cells..."
 #~ msgstr "Вочкі:"
 
 #, fuzzy
-#~ msgid "Insert Cells..."
-#~ msgstr "Уставіць вочкі..."
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Уставіць на ліст пустыя вочкі"
-
-#, fuzzy
-#~ msgid "Remove Cells..."
-#~ msgstr "Выдаліць вочкі..."
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Выдаліць бягучае вочка з ліста"
-
-#, fuzzy
 #~ msgid "Delete Cells..."
 #~ msgstr "Уставіць вочкі..."
 
 #, fuzzy
-#~ msgid "Insert rows"
-#~ msgstr "Уставіць радкі"
-
-#, fuzzy
-#~ msgid "Insert columns"
-#~ msgstr "Уставіць слупкі"
-
-#, fuzzy
-#~ msgid "Insert Cells"
-#~ msgstr "Уставіць вочкі"
-
-#, fuzzy
-#~ msgid "Move towards left"
-#~ msgstr "Ссунуць налева"
-
-#, fuzzy
-#~ msgid "Move towards top"
-#~ msgstr "Ссунуць уверх"
-
-#, fuzzy
-#~ msgid "Remove rows"
-#~ msgstr "Выдаліць радкі"
-
-#, fuzzy
-#~ msgid "Remove columns"
-#~ msgstr "Выдаліць слупкі"
-
-#, fuzzy
-#~ msgid "Remove Cells"
-#~ msgstr "Выдаліць вочкі"
-
-#, fuzzy
-#~ msgid "&Subtotals..."
-#~ msgstr "Падвынікі..."
-
-#, fuzzy
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Стварэнне розных выглядаў падвынікаў для спісу або базы дадзеных"
-
-#, fuzzy
-#~ msgid "Subtotals"
-#~ msgstr "Падвынікі"
-
-#, fuzzy
-#~ msgid "Remove All"
-#~ msgstr "Выдаліць усё"
-
-#, fuzzy
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Неабходна вылучыць хоць бы адзін слупок для дадання падвынікаў."
-
-#, fuzzy
 #~ msgid "Grand Total"
 #~ msgstr "Агульны падрахунак"
-
-#, fuzzy
-#~ msgid "Column '%1' "
-#~ msgstr "Слупок '%1'"
-
-#, fuzzy
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#, fuzzy
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#, fuzzy
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#, fuzzy
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #, fuzzy
 #~ msgid "&Replace current Subtotals"
@@ -16586,50 +18702,6 @@ msgstr ""
 #~ msgstr "Дадаць падвынікі да:"
 
 #, fuzzy
-#~ msgid "Goto Cell..."
-#~ msgstr "Перайсці на вочка..."
-
-#, fuzzy
-#~ msgid "Goto"
-#~ msgstr "Перайсці да вочка"
-
-#, fuzzy
-#~ msgid "Move to a particular cell"
-#~ msgstr "Перайсці на паказанае вочка"
-
-#, fuzzy
-#~ msgid "Break Before Column"
-#~ msgstr "Выдаліць слупкі"
-
-#, fuzzy
-#~ msgid "Column Break"
-#~ msgstr "Нумар слупка"
-
-#, fuzzy
-#~ msgid "Break Before Row"
-#~ msgstr "Выдаліць слупкі"
-
-#, fuzzy
-#~ msgid "Row Break"
-#~ msgstr "Загаловак"
-
-#, fuzzy
-#~ msgid "Goto Cell"
-#~ msgstr "Перайсці да вочка"
-
-#, fuzzy
-#~ msgid "Enter cell:"
-#~ msgstr "Увядзіце імя:"
-
-#, fuzzy
-#~ msgid "&Consolidate..."
-#~ msgstr "Кансалідаваць..."
-
-#, fuzzy
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "Стварэнне дыяпазону сумаваных дадзеных групы падобных дыяпазонаў"
-
-#, fuzzy
 #~ msgid "Description in rows"
 #~ msgstr "Апісанне ў радку"
 
@@ -16640,47 +18712,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Copy data"
 #~ msgstr "Капіяваць дадзеныя"
-
-#, fuzzy
-#~ msgid "Consolidate"
-#~ msgstr "Кансалідацыя дадзеных"
-
-#, fuzzy
-#~ msgid "Standard Deviation"
-#~ msgstr "Стандартнае адхіленне"
-
-#, fuzzy
-#~ msgid "Variance"
-#~ msgstr "Дысперсія"
-
-#, fuzzy
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Неабходна вылучыць хоць бы адзін слупок."
-
-#, fuzzy
-#~| msgid "This is not a valid date."
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "Недапушчальная дата."
-
-#, fuzzy
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Дыяпазон\n"
-#~ "%1\n"
-#~ "занадта малы"
-
-#, fuzzy
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Дыяпазон\n"
-#~ "%1\n"
-#~ "занадта вялікі"
 
 #, fuzzy
 #~ msgid ""
@@ -16697,25 +18728,6 @@ msgstr ""
 #~ "маюць розны памер"
 
 #, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Кансалідацыя дадзеных"
-
-#, fuzzy
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Зыходныя лісты перасякаюцца з выніковым лістом"
-
-#, fuzzy
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Дыяпазон\n"
-#~ "%1\n"
-#~ " не вызначаны"
-
-#, fuzzy
 #~ msgid "Function:"
 #~ msgstr "Функцыя:"
 
@@ -16728,108 +18740,12 @@ msgstr ""
 #~ msgstr "Уведзеныя спасылкі:"
 
 #, fuzzy
-#~ msgid "Change Angle..."
-#~ msgstr "Змяніць кут..."
-
-#, fuzzy
-#~ msgid "Angle"
-#~ msgstr "Кут:"
-
-#, fuzzy
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Змяніць кут паказу тэксту вочка."
-
-#, fuzzy
-#~ msgid "Increase Precision"
-#~ msgstr "Павялічыць дакладнасць"
-
-#, fuzzy
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Павялічыць колькасць паказваемых знакаў пасля коскі."
-
-#, fuzzy
-#~ msgid "Decrease Precision"
-#~ msgstr "Паменшыць дакладнасць"
-
-#, fuzzy
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Паменшыць колькасць паказваемых знакаў пасля коскі."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Павялічыць дакладнасць"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Паменшыць дакладнасць"
-
-#, fuzzy
-#~ msgid "Change Angle"
-#~ msgstr "Змяніць кут"
-
-#, fuzzy
-#~ msgid "Angle:"
-#~ msgstr "Кут:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Змяніць кут"
-
-#, fuzzy
-#~ msgid "Area Name..."
-#~ msgstr "Імя дыяпазону..."
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Прысвоіць імя дыяпазону ліста"
-
-#, fuzzy
-#~ msgid "Named Areas..."
-#~ msgstr "Паказаць дыяпазон..."
-
-#, fuzzy
-#~ msgid "Named Areas"
-#~ msgstr "Выдаліць дыяпазон"
-
-#, fuzzy
-#~ msgid "Edit or select named areas"
-#~ msgstr "Паказаць найменны дыяпазон"
-
-#, fuzzy
-#~ msgid "Add Named Area"
-#~ msgstr "Змяніць дыяпазон"
-
-#, fuzzy
-#~ msgid "Enter the area name:"
-#~ msgstr "Імя дыяпазону:"
-
-#, fuzzy
-#~ msgid "Replace Named Area"
-#~ msgstr "Паказаць найменны дыяпазон"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Паказаць найменны дыяпазон"
-
-#, fuzzy
 #~ msgid "&Select"
 #~ msgstr "Ліст"
 
 #, fuzzy
-#~ msgid "Area: %1"
-#~ msgstr "Дыяпазон: %1"
-
-#, fuzzy
 #~ msgid "&Edit..."
 #~ msgstr "&Змяніць..."
-
-#, fuzzy
-#~ msgid "&Remove"
-#~ msgstr "&Выдаліць"
 
 #, fuzzy
 #~ msgid "New Named Area"
@@ -16838,144 +18754,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Edit Named Area"
 #~ msgstr "Змяніць дыяпазон"
-
-#, fuzzy
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Вы сапраўды жадаеце выдаліць імя гэтага дыяпазону?"
-
-#, fuzzy
-#~ msgid "Remove Named Area"
-#~ msgstr "Выдаліць дыяпазон"
-
-#, fuzzy
-#~ msgid "Cells:"
-#~ msgstr "Вочкі:"
-
-#, fuzzy
-#~ msgid "Sheet:"
-#~ msgstr "Ліст:"
-
-#, fuzzy
-#~ msgid "Area name:"
-#~ msgstr "Імя дыяпазону:"
-
-#, fuzzy
-#~ msgid "Align Left"
-#~ msgstr "Па левым боку"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Выраўнаванне змесціва вочка па левым боку."
-
-#, fuzzy
-#~ msgid "Align Center"
-#~ msgstr "Па цэнтры"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "Выраўнаванне змесціва вочка па цэнтры вочка."
-
-#, fuzzy
-#~ msgid "Align Right"
-#~ msgstr "Па правым боку"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Выраўнаванне змесціва вочка па правым боку."
-
-#, fuzzy
-#~ msgid "Align Top"
-#~ msgstr "Па верхнім боку"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Выраўнаванне змесціва вочка па верхнім боку."
-
-#, fuzzy
-#~ msgid "Align Middle"
-#~ msgstr "Па сярэдзіне"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Выраўнаванне змесціва вочка па сярэдзіне вочка."
-
-#, fuzzy
-#~ msgid "Align Bottom"
-#~ msgstr "Па ніжнім боку"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Выраўнаванне змесціва вочка па ніжнім боку."
-
-#, fuzzy
-#~ msgid "Border Left"
-#~ msgstr "Мяжа злева"
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Мяжа вылучаных вочак злева"
-
-#, fuzzy
-#~ msgid "Border Right"
-#~ msgstr "Мяжа справа"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Мяжа вылучаных вочак справа"
-
-#, fuzzy
-#~ msgid "Border Top"
-#~ msgstr "Мяжа зверху"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Мяжа вылучаных вочак зверху"
-
-#, fuzzy
-#~ msgid "Border Bottom"
-#~ msgstr "Мяжа знізу"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Мяжа вылучаных вочак знізу"
-
-#, fuzzy
-#~ msgid "All Borders"
-#~ msgstr "Усе межы"
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Паказаць межы ў усіх вылучаных вочак"
-
-#, fuzzy
-#~ msgid "No Borders"
-#~ msgstr "Усе межы"
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Выдаліць усе межы ў вылучаных вочак"
-
-#, fuzzy
-#~ msgid "Border Outline"
-#~ msgstr "Межы вакол дыяпазону"
-
-#, fuzzy
-#~ msgid "Outline"
-#~ msgstr "Межы вакол дыяпазону"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Маляванне мяжы вакол вылучанага дыяпазону"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Аб'яднаць вочкі гарызантальна"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Аб'яднаць вочкі гарызантальна"
 
 #~ msgid "Australia"
 #~ msgstr "Аўстралія"
@@ -19370,78 +21148,6 @@ msgstr ""
 #~ msgstr "Даляр Зімбабвэ"
 
 #, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "Ужыць фармат па змаўчанні."
-
-#, fuzzy
-#~ msgid "Strike Out"
-#~ msgstr "Закрэслены"
-
-#, fuzzy
-#~ msgid "Increase Font Size"
-#~ msgstr "Павялічыць памер шрыфта"
-
-#, fuzzy
-#~ msgid "Decrease Font Size"
-#~ msgstr "Паменшыць памер шрыфта"
-
-#, fuzzy
-#~ msgid "Wrap Text"
-#~ msgstr "Пераносіць па словах"
-
-#, fuzzy
-#~ msgid "Wrap"
-#~ msgstr "Пераносіць па словах"
-
-#, fuzzy
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Пераносіць тэкст у вочку на некалькі радкоў."
-
-#, fuzzy
-#~ msgid "Vertical Text"
-#~ msgstr "Тэкст па вертыкалі"
-
-#, fuzzy
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Друкаваць тэкст у вочку вертыкальна."
-
-#, fuzzy
-#~ msgid "Percent Format"
-#~ msgstr "Адсоткавы фармат"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Усталёўка адсоткавага фарматавання."
-
-#, fuzzy
-#~ msgid "Money Format"
-#~ msgstr "Грашовы фармат"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Фарматаванне валютнай сумы ў адпаведнасці з усталёўкамі лакалі."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Пераносіць па словах"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Тэкст па вертыкалі"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Адсоткавы фармат"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Грашовы фармат"
-
-#, fuzzy
 #~ msgid "&Data Format"
 #~ msgstr "Фармат дадзеных"
 
@@ -19511,10 +21217,6 @@ msgstr ""
 #~ msgstr "Вышыня па змаўчанні (%1)"
 
 #, fuzzy
-#~ msgid "Height:"
-#~ msgstr "Вышыня:"
-
-#, fuzzy
 #~ msgid "Set the height of the cell."
 #~ msgstr "Вышыня вочка."
 
@@ -19530,543 +21232,32 @@ msgstr ""
 #~ msgstr "Шырыня па змаўчанні (%1)"
 
 #, fuzzy
-#~ msgid "Width:"
-#~ msgstr "Шырыня:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Дадаць каментар"
-
-#, fuzzy
-#~ msgid "Increase Indent"
-#~ msgstr "Павялічыць водступ"
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "Павялічыць водступ."
-
-#, fuzzy
-#~ msgid "Decrease Indent"
-#~ msgstr "Паменшыць водступ"
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "Паменшыць водступ."
-
-#, fuzzy
-#~ msgid "Upper Case"
-#~ msgstr "Верхні рэгістр"
-
-#, fuzzy
-#~ msgid "Upper"
-#~ msgstr "Верхні рэгістр"
-
-#, fuzzy
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Ператвараць усе літары ў верхні рэгістр."
-
-#, fuzzy
-#~ msgid "Lower Case"
-#~ msgstr "Ніжні рэгістр"
-
-#, fuzzy
-#~ msgid "Lower"
-#~ msgstr "Прыступка"
-
-#, fuzzy
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Ператвараць усе літары ў ніжні рэгістр."
-
-#, fuzzy
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Ператвараць першую літару ў верхні рэгістр"
-
-#, fuzzy
-#~ msgid "First Letter Upper"
-#~ msgstr "Пераўтварыць першую літару ў верхні рэгістр"
-
-#, fuzzy
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Зрабіць першую літару прапісной."
-
-#, fuzzy
-#~ msgid "Comment..."
-#~ msgstr "Каментар"
-
-#, fuzzy
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Змяніць каментар для вочка"
-
-#, fuzzy
-#~ msgid "Remove Comment"
-#~ msgstr "Выдаліць каментар"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Выдаліць каментар вочка"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Ігнараваць словы ў верхнім рэгістры"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Ігнараваць словы ў верхнім рэгістры"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Пераўтварыць першую літару ў верхні рэгістр"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Выдаліць каментар"
-
-#, fuzzy
-#~| msgid "Contents"
-#~ msgid "Clear Comment"
-#~ msgstr "Змест"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Змяніць значэнне"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Павялічыць водступ."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Паменшыць водступ."
-
-#, fuzzy
-#~ msgid "Cell Comment"
-#~ msgstr "Каментар"
-
-#, fuzzy
-#~ msgid "&Left"
-#~ msgstr "&Леваруч"
-
-#, fuzzy
-#~ msgid "&Right"
-#~ msgstr "&Праваруч"
-
-#, fuzzy
 #~ msgid "&Up"
 #~ msgstr "&Угору"
-
-#, fuzzy
-#~ msgid "&Down"
-#~ msgstr "&Уніз"
-
-#, fuzzy
-#~ msgid "Autosum"
-#~ msgstr "Аўтасума"
-
-#, fuzzy
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Уставіць функцыю 'sum'"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Выбар формулы"
-
-#, fuzzy
-#~ msgid "From &Text File..."
-#~ msgstr "З тэкставага файла"
-
-#, fuzzy
-#~ msgid "Text File"
-#~ msgstr "З тэкставага файла"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Уставіць дадзеныя з тэкставага файла ў бягучае вочка або вылучаны дыяпазон"
 
 #, fuzzy
 #~ msgid "From &Clipboard..."
 #~ msgstr "З буфера абмену..."
 
 #, fuzzy
-#~ msgid "Clipboard"
-#~ msgstr "З буфера абмену..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Уставіць дадзеныя ў фармаце CSV з буфера абмену ў бягучае вочка або "
-#~ "вылучаны дыяпазон"
-
-#, fuzzy
-#~ msgid "&Text to Columns..."
-#~ msgstr "Тэкст па слупках..."
-
-#, fuzzy
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Размеркаваць змесціва вочак па некалькіх слупках"
-
-#, fuzzy
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Устаўка з буфера абмену"
-
-#, fuzzy
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "У буферы абмену няма дадзеных."
-
-#, fuzzy
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "У буферы абмену няма прыдатных для выкарыстання дадзеных."
-
-#, fuzzy
-#~ msgid "Text to Columns"
-#~ msgstr "Тэкст па слупках"
-
-#, fuzzy
-#~ msgid "Cannot open input file."
-#~ msgstr "Не атрымоўваецца адкрыць уваходны файл."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Устаўка з буфера абмену"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Устаўка тэкставага файла"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Тэкст па слупках"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "Аб'яднаць вочкі вылучанага дыяпазону ў адно вялікае вочка"
-
-#, fuzzy
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Аб'яднаць вочкі гарызантальна"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Аб'яднаць вочкі вылучанага дыяпазону па радках"
-
-#, fuzzy
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Аб'яднаць вочкі вертыкальна"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Аб'яднаць вочкі вылучанага дыяпазону па слупках"
-
-#, fuzzy
-#~ msgid "Dissociate Cells"
-#~ msgstr "Разбіць вочкі"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Разбіць вочкі вылучанага дыяпазону"
-
-#, fuzzy
-#~ msgid "Resize Column..."
-#~ msgstr "Змяніць шырыню слупка..."
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "Змяніць шырыню слупка"
-
-#, fuzzy
-#~ msgid "Insert Columns"
-#~ msgstr "Уставіць слупкі"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Уставіць новы слупок на ліст"
-
-#, fuzzy
-#~ msgid "Remove Columns"
-#~ msgstr "Выдаліць слупкі"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Выдаліць бягучае вочка з ліста"
-
-#, fuzzy
-#~ msgid "Hide Columns"
-#~ msgstr "Схаваць слупкі"
-
-#, fuzzy
 #~ msgid "Hide the column from this"
 #~ msgstr "Схаваць вылучаныя слупок на лісце"
-
-#, fuzzy
-#~ msgid "Show Columns..."
-#~ msgstr "Паказаць слупкі..."
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "Паказаць утоеныя слупкі на лісце"
-
-#, fuzzy
-#~ msgid "Equalize Column"
-#~ msgstr "Падагнаць шырыню слупка"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Усталяваць для слупкоў аднолькавую шырыню"
-
-#, fuzzy
-#~ msgid "Show Columns"
-#~ msgstr "Паказаць слупкі"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Паказаць утоеныя слупкі ў вылучаным дыяпазоне"
-
-#, fuzzy
-#~ msgid "Resize Row..."
-#~ msgstr "Змяніць вышыню радка..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "Змяніць вышыню радка"
-
-#, fuzzy
-#~ msgid "Insert Rows"
-#~ msgstr "Уставіць радкі"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Уставіць новы радок на ліст"
-
-#, fuzzy
-#~ msgid "Remove Rows"
-#~ msgstr "Выдаліць радкі"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Выдаліць радок з ліста"
-
-#, fuzzy
-#~ msgid "Hide Rows"
-#~ msgstr "Схаваць радкі"
 
 #, fuzzy
 #~ msgid "Hide a row from this"
 #~ msgstr "Схаваць вылучаныя радкі на лісце"
 
 #, fuzzy
-#~ msgid "Show Rows..."
-#~ msgstr "Паказаць радкі..."
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "Паказаць утоеныя радкі"
-
-#, fuzzy
-#~ msgid "Equalize Row"
-#~ msgstr "Падагнаць вышыню радка"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Усталяваць для радкоў аднолькавую вышыню"
-
-#, fuzzy
-#~ msgid "Show Rows"
-#~ msgstr "Паказаць радкі"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Паказаць утоеныя радкі ў вылучаным дыяпазоне"
-
-#, fuzzy
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Падагнаць памер вочак"
-
-#, fuzzy
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr ""
-#~ "Падагнаць памеры радкоў і слупкоў для адлюстравання цалкам змесціва вочак"
-
-#, fuzzy
-#~ msgid "Adjust Column"
-#~ msgstr "Выраўнаваць слупок"
-
-#, fuzzy
 #~ msgid "Delete Columns"
 #~ msgstr "Выдаліць слупкі"
-
-#, fuzzy
-#~ msgid "Adjust Row"
-#~ msgstr "Выраўнаваць радок"
 
 #, fuzzy
 #~ msgid "Delete Rows"
 #~ msgstr "Выдаліць радкі"
 
 #, fuzzy
-#~ msgid "Resize Row"
-#~ msgstr "Змяніць памер радка"
-
-#, fuzzy
-#~ msgid "Resize Column"
-#~ msgstr "Змяніць памер слупка"
-
-#, fuzzy
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Паказаць утоеныя слупкі:"
-
-#, fuzzy
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Паказаць утоеныя радкі:"
-
-#, fuzzy
-#~ msgid "Column: %1"
-#~ msgstr "Слупок: %1"
-
-#, fuzzy
-#~ msgid "Row: %1"
-#~ msgstr "Радок: %1"
-
-#, fuzzy
-#~ msgid "&Link..."
-#~ msgstr "Спасылка..."
-
-#, fuzzy
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Уставіць спасылку на рэсурс Інтэрнэту"
-
-#, fuzzy
-#~ msgid "Link"
-#~ msgstr "Спасылка"
-
-#, fuzzy
-#~ msgid "Remove Link"
-#~ msgstr "Выдаліць спасылку"
-
-#, fuzzy
-#~ msgid "Remove a link"
-#~ msgstr "Выдаліць спасылку"
-
-#, fuzzy
-#~ msgid "Insert Link"
-#~ msgstr "Уставіць спасылку"
-
-#, fuzzy
 #~ msgid "Edit Link"
 #~ msgstr "Уласцівасці спасылкі"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Выдаліць спасылку"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Спасылка"
-
-#, fuzzy
-#~ msgid "Internet"
-#~ msgstr "Інтэрнэт"
-
-#, fuzzy
-#~ msgid "Link to Internet Address"
-#~ msgstr "Адрас у Інтэрнэце:"
-
-#, fuzzy
-#~ msgid "Text to display:"
-#~ msgstr "Тэкст спасылкі:"
-
-#, fuzzy
-#~ msgid "Internet address:"
-#~ msgstr "Адрас у Інтэрнэце:"
-
-#, fuzzy
-#~ msgid "Email"
-#~ msgstr "Электронная пошта:"
-
-#, fuzzy
-#~ msgid "Link to Email Address"
-#~ msgstr "Адрас у Інтэрнэце:"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "Адрас электроннай пошты не паказаны"
-
-#, fuzzy
-#~ msgid "Subject:"
-#~ msgstr "Выразаць аб'ект"
-
-#, fuzzy
-#~ msgid "File"
-#~ msgstr "Файл"
-
-#, fuzzy
-#~ msgid "Link to File"
-#~ msgstr "Памер вочка"
-
-#, fuzzy
-#~ msgid "File location:"
-#~ msgstr "Размяшчэнне файла:"
-
-#, fuzzy
-#~ msgid "Recent file:"
-#~ msgstr "Апошні файл:"
-
-#, fuzzy
-#~ msgid "No Entries"
-#~ msgstr "Няма запісаў"
-
-#, fuzzy
-#~ msgid "Link to Cell"
-#~ msgstr "Памер вочка"
-
-#, fuzzy
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Выдаліць дыяпазон"
-
-#, fuzzy
-#~ msgid "&Sort..."
-#~ msgstr "Сартаванне..."
-
-#, fuzzy
-#~ msgid "Sort a group of cells"
-#~ msgstr "Сартаваць групу вочак"
-
-#, fuzzy
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Сартаваць па змяншэнні"
-
-#, fuzzy
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "Сартаваць групу вочак па змяншэнні"
-
-#, fuzzy
-#~ msgid "Sort &Increasing"
-#~ msgstr "Сартаваць па ўзрастанні"
-
-#, fuzzy
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "Сартаваць групу вочак па ўзрастанні"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Крытэр сартавання"
 
 #, fuzzy
 #~ msgid "Use custom list"
@@ -20075,30 +21266,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Капіяваць фарматаванне (рамкі, колеры, стылі)"
-
-#, fuzzy
-#~ msgid "Column %1"
-#~ msgstr "Слупок %1"
-
-#, fuzzy
-#~ msgid "Row %1"
-#~ msgstr "Радок %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "Першы слупок утрымоўвае загалоўкі"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "Першы радок утрымоўвае загалоўкі"
-
-#, fuzzy
-#~ msgid "Sort"
-#~ msgstr "Упарадкаваць"
-
-#, fuzzy
-#~ msgid "Case Insensitive"
-#~ msgstr "Сартаванне з улікам рэгістра"
 
 #, fuzzy
 #~ msgid "Move Up"
@@ -20137,286 +21304,8 @@ msgstr ""
 #~ msgstr "Сартаваць групу вочак"
 
 #, fuzzy
-#~ msgid "Validity..."
-#~ msgstr "Праверка..."
-
-#, fuzzy
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Усталёўка праверкі значэння ў вочку вызначаным умовам"
-
-#, fuzzy
-#~ msgid "Validity"
-#~ msgstr "Праверка на карэктнасць"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "Выдаліць спасылку"
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Прыбраць праверку значэння вочка"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Выдаліць спасылку"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Умовы праверкі"
-
-#, fuzzy
-#~ msgid "Clear &All"
-#~ msgstr "Ачысціць усё"
-
-#, fuzzy
 #~ msgid "&Criteria"
 #~ msgstr "Крытэр"
-
-#, fuzzy
-#~ msgid "Allow:"
-#~ msgstr "Дазволіць:"
-
-#, fuzzy
-#~ msgid "Integer"
-#~ msgstr "Цэлы"
-
-#, fuzzy
-#~ msgid "Text Length"
-#~ msgstr "Даўжыня тэксту"
-
-#~ msgid "List"
-#~ msgstr "Спіс"
-
-#, fuzzy
-#~ msgid "Allow blanks"
-#~ msgstr "Правяраць пустыя вочкі"
-
-#, fuzzy
-#~ msgid "Data:"
-#~ msgstr "Дадзеныя:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Мінімум:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Максімум:"
-
-#~ msgid "Date:"
-#~ msgstr "Дата:"
-
-#, fuzzy
-#~ msgid "Date minimum:"
-#~ msgstr "Мінімальная дата:"
-
-#, fuzzy
-#~ msgid "Date maximum:"
-#~ msgstr "Максімальная дата:"
-
-#~ msgid "Time:"
-#~ msgstr "Час:"
-
-#, fuzzy
-#~ msgid "Time minimum:"
-#~ msgstr "Мінімальны час:"
-
-#, fuzzy
-#~ msgid "Time maximum:"
-#~ msgstr "Максімальны час:"
-
-#~ msgid "Number:"
-#~ msgstr "Лік:"
-
-#, fuzzy
-#~ msgid "Entries:"
-#~ msgstr "Значэнні:"
-
-#, fuzzy
-#~ msgid "&Error Alert"
-#~ msgstr "Абвестка аб памылцы"
-
-#, fuzzy
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr ""
-#~ "Паказваць паведамленне аб памылцы, калі ў вочка ўведзеныя няправільныя "
-#~ "дадзеныя"
-
-#~ msgid "Action:"
-#~ msgstr "Дзеянне:"
-
-#~ msgid "Stop"
-#~ msgstr "Спыніць"
-
-#~ msgid "Warning"
-#~ msgstr "Папярэджанне"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Назва:"
-
-#~ msgid "Message:"
-#~ msgstr "Паведамленне:"
-
-#~ msgid "Input Help"
-#~ msgstr "Дапамога па ўводзе"
-
-#, fuzzy
-#~ msgid "Show input help when cell is selected"
-#~ msgstr ""
-#~ "Паказваць даведку па значэннях, дазволеным для ўводу ў вылучанае вочка"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Гэтае значэнне няслушна."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Гэтае значэнне часу няслушна."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Недапушчальная дата."
-
-#, fuzzy
-#~ msgid "&Series..."
-#~ msgstr "Шэраг..."
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "Уставіць шэраг"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Уставіць шэраг"
-
-#, fuzzy
-#~ msgid "Select Character"
-#~ msgstr "Адмысловы знак..."
-
-#, fuzzy
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Новы тэкст"
-
-#, fuzzy
-#~ msgid "Series"
-#~ msgstr "Налады шэрагу"
-
-#, fuzzy
-#~ msgid "Insert Values"
-#~ msgstr "Уставіць значэнні"
-
-#, fuzzy
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Уставіць шэрагі вертыкальна, сябар пад сябрам"
-
-#, fuzzy
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Уставіць шэрагі гарызантальна, сябар за сябрам"
-
-#, fuzzy
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Лінейны (2,4,6,...)"
-
-#, fuzzy
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Стварае шэраг з паказаным пачатковым, канчатковым элементам і "
-#~ "прырашчэннем. Кожнае наступнае значэнне ў гэтым шэрагу атрымоўваецца "
-#~ "шляхам прыбытку ліку, паказанага ў кроку да папярэдняга элемента."
-
-#, fuzzy
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Геаметрычны (2,4,8,...)"
-
-#, fuzzy
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Стварае шэраг з паказаным пачатковым, канчатковым элементам і "
-#~ "прырашчэннем(крокам) множанні элементаў. Кожнае наступнае значэнне ў "
-#~ "гэтым шэрагу атрымоўваецца шляхам множання ліку, паказанага ў кроку на "
-#~ "папярэдняй элемент. Напрыклад, пры кроку 5 і пачатковым значэнні шэрагу 5 "
-#~ "атрымоўваем шэраг 5, 25, 125, 625..."
-
-#, fuzzy
-#~ msgid "Start value:"
-#~ msgstr "Пачатковае значэнне:"
-
-#, fuzzy
-#~ msgid "Stop value:"
-#~ msgstr "Канчатковае значэнне:"
-
-#, fuzzy
-#~ msgid "Step value:"
-#~ msgstr "Прырашчэнне:"
-
-#, fuzzy
-#~ msgid "End and start value must be positive."
-#~ msgstr "Пачатковае і канчатковае значэнне павінны быць дадатнымі."
-
-#, fuzzy
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Канчатковае значэнне павінна быць больш пачатковага або прырашчэнне "
-#~ "павінна быць менш \"1\"."
-
-#, fuzzy
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr ""
-#~ "Апушчаныя пачатковае, канчатковае значэнне і значэнне прырашчэння могуць "
-#~ "быць роўныя 0."
-
-#, fuzzy
-#~ msgid "Step value must be different from 1"
-#~ msgstr "Значэнне прырашчэння не павінна быць роўным 1"
-
-#, fuzzy
-#~ msgid "Step is negative."
-#~ msgstr "Прырашчэнне адмоўнае."
-
-#, fuzzy
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Значэнне прырашчэння павінна быць больш, чым 0. У адваротным выпадку "
-#~ "лінейны шэраг будзе бясконцым."
-
-#, fuzzy
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Калі пачатковае значэнне больш, чым канчатковае, прырашчэнне павінна быць "
-#~ "менш 0."
-
-#, fuzzy
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Калі прырашчэнне адмоўнае, пачатковае значэнне павінна быць больш "
-#~ "канчатковага."
-
-#, fuzzy
-#~ msgid "S&pecial Character..."
-#~ msgstr "Адмысловы знак..."
-
-#, fuzzy
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr ""
-#~ "Уставіць адзін або некалькі знакаў або літар, якія адсутнічаюць на "
-#~ "клавіятуры"
 
 #, fuzzy
 #~ msgid "Internet address is empty"
@@ -26864,11 +27753,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "стыль%1"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Падвынікі"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -40027,10 +40911,6 @@ msgstr ""
 #~ msgstr "Налада лакалі"
 
 #, fuzzy
-#~ msgid "Inserting Text File"
-#~ msgstr "Устаўка тэкставага файла"
-
-#, fuzzy
 #~ msgid "y (array)"
 #~ msgstr "Масіў"
 
@@ -40117,10 +40997,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Remove Cell"
 #~ msgstr "Выдаліць вочка"
-
-#, fuzzy
-#~ msgid "Paste"
-#~ msgstr "Уставіць"
 
 #, fuzzy
 #~ msgid "Paste & Insert"
@@ -40222,10 +41098,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Statistical Functions"
 #~ msgstr "Статыстычныя"
-
-#, fuzzy
-#~ msgid "Text Functions"
-#~ msgstr "<h2>Гл. таксама</h2><ul>"
 
 #, fuzzy
 #~ msgid "Trig Functions"

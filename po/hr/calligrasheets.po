@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2009-09-29 21:08+0200\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -139,8 +139,13 @@ msgstr "Zaglavlje"
 msgid "Header1"
 msgstr "Zaglavlje"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, fuzzy, kde-format
 msgid "Default"
 msgstr "Rezultat"
@@ -172,7 +177,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Tekst"
@@ -247,7 +253,8 @@ msgstr "<br><b>Tip:</b> "
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Parametri"
@@ -848,14 +855,15 @@ msgstr "CARY(12;0) vraća 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Broj"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Oblikovanje"
@@ -909,6 +917,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") vraća 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Baza podataka"
@@ -1186,6 +1196,7 @@ msgstr "Datum i Vrijeme"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1251,7 +1262,8 @@ msgstr "fact(0) vraća 1"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Vrijeme"
@@ -4619,6 +4631,7 @@ msgid "Regular payments"
 msgstr "&Matematički izraz ..."
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Tip"
@@ -4903,12 +4916,19 @@ msgstr "Ručno"
 msgid "Automatic"
 msgstr "Automatski"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, fuzzy, kde-format
 msgid "Information"
 msgstr "Operacije"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, fuzzy, kde-format
 msgid "Error"
 msgstr "Euro"
@@ -5664,7 +5684,7 @@ msgstr ""
 msgid "Math"
 msgstr "Matematika"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Funkcija"
@@ -6124,6 +6144,7 @@ msgid "Range"
 msgstr "Raspon"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 #| msgid "Criteria"
 msgid "Criteria"
@@ -7609,6 +7630,7 @@ msgid "Row"
 msgstr "&Red"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Stupac"
@@ -11852,7 +11874,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, fuzzy, kde-format
 msgid "&Insert"
 msgstr "Umetni redove"
@@ -11870,7 +11892,7 @@ msgid "F&ormat"
 msgstr "F&ormat"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Spoji ćelije"
@@ -11950,8 +11972,8 @@ msgstr "Sakrij tabelu"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 msgid "Font"
 msgstr "Format"
@@ -12366,14 +12388,16 @@ msgstr "Donja granica"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, fuzzy, kde-format
 msgid "Horizontal"
 msgstr "Format"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, fuzzy, kde-format
 msgid "Vertical"
 msgstr "Uspravni tekst"
@@ -12400,13 +12424,15 @@ msgid "Up"
 msgstr "Gore"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Desno"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Lijevo"
@@ -12418,36 +12444,50 @@ msgstr "Umetni _stupce"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Nijedan"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Zbroj"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Min"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Maks"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Prosjek"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Brojanje"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -12819,7 +12859,8 @@ msgstr "Izbornik formule"
 msgid "Move selected sheet to the bottom"
 msgstr "Broj neuspješnih pokušaja"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr ""
@@ -13023,6 +13064,7 @@ msgid "Anchor"
 msgstr "Andora"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Ćelija"
@@ -13043,7 +13085,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "Sakrij tabelu"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Next"
@@ -13059,7 +13101,7 @@ msgstr "Pomakni prema lijevo"
 msgid "Previous Sheet"
 msgstr "Ukloni tabelu"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 msgid "Previous"
 msgstr "Ukloni tabelu"
@@ -13270,7 +13312,7 @@ msgstr ""
 "Ukloniti će te aktivnu tabelu..\n"
 "Da li zbilja želite nastaviti?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Unesite ime:"
@@ -13330,13 +13372,13 @@ msgstr "Stupac %1"
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Promijeni kut"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
@@ -13344,10 +13386,3167 @@ msgstr "Boja pozadine"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Promijeni boju ruba"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Umetni _stupce"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Umetni redove"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Remove Columns"
+msgstr "Ukloni stupac"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Remove Rows"
+msgstr "Ukloni red"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Umetni novi list."
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Umetni novi list."
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Umetni novi list."
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Umetni novi list."
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Sakrij stupce"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Izbriši Red"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Ukloni stupac"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, fuzzy, kde-format
+msgid "Show Rows"
+msgstr "Prikaži tabelu"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Ukloni stupac"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Ukloni stupac"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+msgid "Equalize Column"
+msgstr "Obriši Stupac"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+msgid "Equalize Row"
+msgstr "Jednako"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Umetni novi list."
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Umetni novi list."
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Prilagodi stupac"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Prilagodi red"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Prilagodi stupac && kolona"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Ukloni stupac …"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+msgid "Show Rows..."
+msgstr "Prikaži područje..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "Ukloni stupac"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "Ukloni stupac"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, fuzzy, kde-format
+msgid "Column: %1"
+msgstr "Stupac %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, fuzzy, kde-format
+msgid "Row: %1"
+msgstr "Red %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+msgid "Resize Column..."
+msgstr "Promijeni veličinu stupca..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+msgid "Resize Row..."
+msgstr "Promijeni veličinu reda..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "Promijeni kut"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "Promijeni kut"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Poravnaj lijevo"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Spoji ćelije"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Poravnaj desno"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Centrirano"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "U&kloni komentar"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, fuzzy, kde-format
+msgid "Center"
+msgstr "Centrirano"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Poravnato gore"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Spoji ćelije"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr ""
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Spoji ćelije"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Poravnaj dolje"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Spoji ćelije"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, fuzzy, kde-format
+msgid "Bottom"
+msgstr "Poravnaj dolje"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Poravnaj po sredini"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Spoji ćelije"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Sredina"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Promijeni kut …"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr ""
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+#| msgid "Angle:"
+msgid "Angle"
+msgstr "Kut:"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Promijeni kut"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+#| msgid "Autofill"
+msgid "&Auto-Filter"
+msgstr "samodopunjavanje"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Autofill"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "samodopunjavanje"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "AutoFormat..."
+msgid "Auto-Format..."
+msgstr "SamoOblikovanje..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, fuzzy, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Ne mogu pronaći tabličnu XML stilsku datoteku '%1'"
+
+#: ui/actions/AutoFormat.cpp:91
+#, fuzzy, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Rasčlanjujem greške u tabličnoj datoteci XML stila %1"
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+#| msgid "AutoFormat..."
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "SamoOblikovanje..."
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Auto-zbroj"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Umetni stupac"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Auto-zbroj"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Lijevi rub"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Desni rub"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Gornji rub"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Donji rub"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Svi rubovi"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Sve"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "All Borders"
+msgid "No Borders"
+msgstr "Svi rubovi"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Kontura ruba"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+#| msgid "Border Outline"
+msgid "Outline"
+msgstr "Kontura ruba"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Boja ruba"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "Boja ruba"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Promijeni boju ruba"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Umetni ćelije …"
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Umetni novi list."
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, fuzzy, kde-format
+msgid "Remove Cells..."
+msgstr "Ukloni ćeliju ..."
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Umetni novi list."
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+#| msgid "Clear &All"
+msgid "Clear All"
+msgstr "&Očisti sve"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Clear Contents"
+msgstr "Komentar"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Promijeni kut"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Obriši redove"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "Komentar"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr ""
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Clear Comment"
+msgstr "Komentar"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Ukloni slog"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Remove Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Ukloni slog"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Dodaj komentar"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "Conditional Styles..."
+msgstr "Uvjet"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "Conditional Styles"
+msgstr "Uvjet"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Konsolidiraj …"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Consolidate"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Konsolidiraj"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Ne postoje podaci u spremniku s isječcima."
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Ne postoje podaci u spremniku s isječcima."
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+msgid "Insert From &Text File..."
+msgstr "Umetni stupac"
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "Umetni novi list."
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+msgid "Text File"
+msgstr "Umetni stupac"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, fuzzy, kde-format
+msgid "Cannot open input file."
+msgstr "Ne mogu otvoriti ulaznu datoteku!"
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+msgid "Inserting Text File"
+msgstr "Umetni stupac"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Umetni stupac"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+msgid "Insert From &Clipboard..."
+msgstr "Umetni stupac"
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "Umetni novi list."
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+msgid "Clipboard"
+msgstr "Umetni stupac"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Ne postoje podaci u spremniku s isječcima."
+
+#: ui/actions/CSVActions.cpp:150
+#, fuzzy, kde-format
+#| msgid "There is no data in the clipboard."
+msgid "There is no usable data in the clipboard."
+msgstr "Ne postoje podaci u spremniku s isječcima."
+
+#: ui/actions/CSVActions.cpp:155
+#, fuzzy, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Umetni stupac"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Umetni stupac"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Tekst u stupce …"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Tekst u kolone"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgid "Text to Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Tekst u kolone"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Prilagođeni popisi …"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Add Named Area"
+msgstr "Ukloni sve"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, fuzzy, kde-format
+msgid "Enter the area name:"
+msgstr "Kamatna stopa"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Promijeni kut"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Kut:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "AutoFormat..."
+msgid "Automatic Format"
+msgstr "SamoOblikovanje..."
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Broj neuspješnih pokušaja"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Select Character"
+msgstr "Posebno umetanje..."
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Komentar ćelije"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<nijedno>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "Jednako"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "veće od"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "manje od"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "jednako ili veće od"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "jednako ili manje od"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "između"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "Raspon"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, fuzzy, kde-format
+msgid "different to"
+msgstr "različita od"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, fuzzy, kde-format
+msgid "First Condition"
+msgstr "Prvi uvjet"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, fuzzy, kde-format
+msgid "Second Condition"
+msgstr "Drugi uvjet"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, fuzzy, kde-format
+msgid "Third Condition"
+msgstr "Treći uvjet"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Ćelija je"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Stil ćelija"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "različita od"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, fuzzy, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Ukoliko je početna vrijednost veća od krajnje, vrijednost koraka mora biti "
+"manja od nule!"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, fuzzy, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Ukoliko je početna vrijednost veća od krajnje, vrijednost koraka mora biti "
+"manja od nule!"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Konsolidiraj"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Umnožak"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, fuzzy, kde-format
+msgid "Standard Deviation"
+msgstr "Standardno"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "varijabla"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+msgid "You have to define at least one source range."
+msgstr "Morate odabrati barem jednu kolonu!"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "Izraz %1 nije važeći"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Raspon\n"
+"%1\n"
+"je premal"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Raspon\n"
+"%1\n"
+"je prevelik"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, fuzzy, kde-format
+#| msgid "The source tables intersect with the destination table"
+msgid "The source range intersects the destination range."
+msgstr "Izvorna tablica se presjeca s odredišnom tablicom"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Raspon\n"
+"%1\n"
+" je nepravilan"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, fuzzy, kde-format
+#| msgid "From &Database..."
+msgid "Insert Data From Database"
+msgstr "Iz baze po&dataka …"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Tip:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, fuzzy, kde-format
+msgid "Database name: "
+msgstr "Promijeni ime tabele"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Računalo:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Port:\n"
+"(ukoliko je potrebno)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, fuzzy, kde-format
+#| msgid ""
+#| "Port:\n"
+#| "(if necessary)"
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Port:\n"
+"(ukoliko je potrebno)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Lozinka:\n"
+"(ukoliko je potrebno)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, fuzzy, kde-format
+msgid "Select tables:"
+msgstr "Stil tabele"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+#| msgid "Values"
+msgid "Tables"
+msgstr "Vrijednosti"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, fuzzy, kde-format
+msgid "Select columns:"
+msgstr "Obriši Stupac"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Table"
+msgstr "Tabela"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Stupci"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Pronađi sve što odgovara sljedećem ( I )"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Pronađi sve što odgovara bilo čemu od sljedećeg (ILI)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "jednako"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "nejednako"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "dolazno"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "nije u"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "like"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "veće"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "manje"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "veće ili jednako"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "manje ili jednako"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, fuzzy, kde-format
+msgid "Sorted by"
+msgstr "Sortiraj po"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Rastuće"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Silazno"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, fuzzy, kde-format
+msgid "Distinct"
+msgstr "Posebno"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Mogućnosti upita"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL upit:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, fuzzy, kde-format
+msgid "Insert in region"
+msgstr "Umetni stupac"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, fuzzy, kde-format
+msgid "Starting in cell"
+msgstr "String"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Rezultat"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+msgid "You cannot specify a table here."
+msgstr "NE možete ovdje odrediti tablicu!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, fuzzy, kde-format
+msgid "You have to specify a valid region."
+msgstr "Morate odrediti valjano područje!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, fuzzy, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Morate odrediti valjanu ćeliju!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, fuzzy, kde-format
+msgid "Executing query failed."
+msgstr "Izvršavanje upita nije uspjelo!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "From &Database..."
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Iz baze po&dataka …"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, fuzzy, kde-format
+msgid "The port must be a number"
+msgstr "Morate unijesti ime"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Spajam se na bazu …"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Spojeno. Povlačim informacije o tablici …"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, fuzzy, kde-format
+msgid "This database contains no tables"
+msgstr "Ova funkcija nema niti jedan parametar."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Upravljački program nije mogao biti učitan"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Povlačim meta podatke o tablicama …"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, fuzzy, kde-format
+msgid "You have to select at least one table."
+msgstr "Morate odabrati barem jednu tablicu!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, fuzzy, kde-format
+msgid "You have to select at least one column."
+msgstr "Morate odabrati barem jednu kolonu!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' ili '?' nisu valjani zamjenski znakovi u SQL-u. Pravilne zamjene su '%' "
+"ili '_'. Dali ih želite zamijeniti?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Naselje"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Document Settings"
+msgstr "Parametri"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "Proračunski mod"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Točnost"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Automatski"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+msgid "String comparison:"
+msgstr "Početna vrijednost"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Regular Expressions"
+msgstr "&Matematički izraz ..."
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Osvježi na lokalnom sustavu"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+msgid "Language: %1 (%2)"
+msgstr "prosjek"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+msgid "Default number format: %1"
+msgstr "Oblik datuma"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+msgid "Long date format: %1"
+msgstr "Oblik datuma"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Short date format: %1"
+msgstr "&Podaci"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, fuzzy, kde-format
+msgid "Time format: %1"
+msgstr "Format vremena"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+msgid "Currency format: %1"
+msgstr "Valuta:"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, fuzzy, kde-format
+msgid "More Options"
+msgstr "Mogućnosti upita"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Search entire sheet"
+msgstr "Uspravni tekst"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Search in:"
+msgstr "Uspravni tekst"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Cell Values"
+msgstr "Vrijednosti"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Comments"
+msgstr "Komentar"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Search direction:"
+msgstr "Drugi uvjet"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "Ukloni stupac"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Fewer Options"
+msgstr "Opće Mogućnosti"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Set Function"
+msgstr "<h2>Sintaksa</h2><ul>"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, fuzzy, kde-format
+msgid "Insert function"
+msgstr "Umetni stupac"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr ""
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Ova funkcija nema niti jedan parametar."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+msgid "Description is not available."
+msgstr "Opis u stupcu"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Traženje cilja"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, fuzzy, kde-format
+msgid "Goto Cell"
+msgstr "Idi na ćeliju"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Enter cell:"
+msgstr "Kamatna stopa"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Insert"
+msgstr "Internet"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Pomakni prema desno"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Pomakni prema dolje"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Umetni redove"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Umetni stupace"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Umetni ćeliju"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "Ukloni sve"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Pomakni prema gore"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, fuzzy, kde-format
+msgid "Remove rows"
+msgstr "Ukloni red"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, fuzzy, kde-format
+msgid "Remove columns"
+msgstr "Ukloni stupac"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Remove Cells"
+msgstr "Ukloni ćeliju"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Ubaci vezu"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+msgid "Link to Internet Address"
+msgstr "Kamatna stopa"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, fuzzy, kde-format
+msgid "Internet address:"
+msgstr "Kamatna stopa"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "E-pošta:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+msgid "Link to Email Address"
+msgstr "Kamatna stopa"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+msgid "Email address:"
+msgstr "Tekstualno područje je prazno!"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+msgid "Subject:"
+msgstr "&Objekt ..."
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Datoteka"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+msgid "Link to File"
+msgstr "Veličina ćelije"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Lokacija datoteke:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Recent file:"
+msgstr "Broj neuspješnih pokušaja"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Nijedna stavka"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+msgid "Link to Cell"
+msgstr "Veličina ćelije"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+msgid "Cell or Named Area:"
+msgstr "Ukloni sve"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Prilagođeni popisi"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Save Changes"
+msgstr "Promijeni kut"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Popis:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Stavka:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "&Add"
+msgid "Add"
+msgstr "&Dodaj"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, fuzzy, kde-format
+msgid "Cancel"
+msgstr "Francuska"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, fuzzy, kde-format
+#| msgid "&New"
+msgid "New"
+msgstr "&Novi"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Izmijeni"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Kopiraj"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+msgid "Do you really want to remove this list?"
+msgstr ""
+"Da li zbilja želite obrisati skript\n"
+"%1"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+msgid "Remove List"
+msgstr "Ukloni sve"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, fuzzy, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Ćelija nije prazna.\n"
+"Da ipak nastavim?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+msgid "Named Areas"
+msgstr "Ukloni sve"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, fuzzy, kde-format
+msgid "Area: %1"
+msgstr "&Podaci"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Ćelije:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "List:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Ime područja"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Ukloni"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr ""
+"Da li zbilja želite obrisati skript\n"
+"%1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+msgid "Remove Named Area"
+msgstr "Ukloni sve"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+msgid "The provided region is not valid."
+msgstr "Referenca na ćeliju je pogrešna!"
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Umetni ćeliju"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+msgid "Select Source"
+msgstr "Posebno umetanje..."
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+msgid "Add Filter"
+msgstr "datoteka"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "Operacija"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, fuzzy, kde-format
+msgid "Resize Row"
+msgstr "Promijeni veličinu reda"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Visina:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, fuzzy, kde-format
+msgid "Resize Column"
+msgstr "Promijeni veličinu stupca"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Širina:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Serija"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Series"
+msgstr "Umetni tabelu"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, fuzzy, kde-format
+msgid "Insert Values"
+msgstr "Umetni tabelu"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Linearno (2,4,6,…)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Geometrijski"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, fuzzy, kde-format
+msgid "Start value:"
+msgstr "Početna vrijednost"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Završna vrijednost:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Vrijednost koraka:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+msgid "End and start value must be positive."
+msgstr "Krajnja i početna vrijednost moraju biti pozitivne!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, fuzzy, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Krajnja vrijednost mora biti veća od početne i vrijednost koraka mora biti "
+"manja od '1'!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, fuzzy, kde-format
+msgid "Step is negative."
+msgstr "Korak je negativan !"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, fuzzy, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Vrijednost koraka mora biti veća od nule. Inače je linearna serija bskonačna!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, fuzzy, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Ukoliko je početna vrijednost veća od krajnje, vrijednost koraka mora biti "
+"manja od nule!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, fuzzy, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Ukoliko je vrijednost koraka negativna početna vrijednost mora biti veća od "
+"krajnje!"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, fuzzy, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Broj neuspješnih pokušaja"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Broj neuspješnih pokušaja"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Stupac %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Red %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "&Prvi redak sadrži zaglavlje"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "&Prvi redak sadrži zaglavlje"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Razvrstavanje"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr ""
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Posebno umetanje"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, fuzzy, kde-format
+msgid "Paste"
+msgstr "Parsiranje"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Upravitelj stilom"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Stil"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Svi stilovi"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Korisnički definirani stilovi"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Hijerarhijski"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Novi …"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, fuzzy, kde-format
+msgid "&Modify..."
+msgstr "&Dodaj/promijeni komentar ..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, fuzzy, kde-format
+msgid "&Delete..."
+msgstr "&Traženje cilja..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, fuzzy, kde-format
+msgid "style%1"
+msgstr "Stil:"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Podzbroj"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Ukloni sve"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, fuzzy, kde-format
+msgid "Column '%1' "
+msgstr "Stupac %1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, fuzzy, kde-format
+#| msgid "StDev"
+msgid "StDevP"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, fuzzy, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Morate odabrati barem jednu kolonu!"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Valjanost"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "&Očisti sve"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Dopusti:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Cijeli broj"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Duljina"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, fuzzy, kde-format
+msgid "List"
+msgstr "Popis:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Podaci:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Minimum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Maksimum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Datum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, fuzzy, kde-format
+msgid "Date minimum:"
+msgstr "Format datuma"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, fuzzy, kde-format
+msgid "Date maximum:"
+msgstr "Format datuma"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Vrijeme:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, fuzzy, kde-format
+msgid "Time minimum:"
+msgstr "Format vremena"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, fuzzy, kde-format
+msgid "Time maximum:"
+msgstr "Format vremena"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Broj:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, fuzzy, kde-format
+msgid "Entries:"
+msgstr "Nijedna stavka"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "&Upozorenje na grešku"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, fuzzy, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Prikaži rubove stranice"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Akcija:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, fuzzy, kde-format
+msgid "Warning"
+msgstr "Ispisivanje"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Naslov:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Poruka:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, fuzzy, kde-format
+msgid "This is not a valid value."
+msgstr "Izraz %1 nije važeći"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, fuzzy, kde-format
+msgid "This is not a valid time."
+msgstr "Izraz %1 nije važeći"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, fuzzy, kde-format
+msgid "This is not a valid date."
+msgstr "Izraz %1 nije važeći"
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "Parametri"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+msgid "Show document settings dialog"
+msgstr "Prikaži broj stupca"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Promijeni kut"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Promijeni ćeliju"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "Zaštita"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Dolje"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Lijevo"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Desno"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Izbornik formule"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Naselje"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Izaberi pismo"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Izgled ćelije"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Izaberite veličinu pisma"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+#| msgid "Select Font Size"
+msgid "Font Size"
+msgstr "Izaberite veličinu pisma"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Set the text color"
+msgstr "Boja pozadine"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Boja teksta"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Funkcija …"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Ubaci matematički izraz"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Izbornik formule"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+msgid "Insert a function"
+msgstr "Umetni stupac"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Ostalo …"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&Traženje cilja …"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, fuzzy, kde-format
+msgid "Cell reference is invalid."
+msgstr "Referenca na ćeliju je pogrešna!"
+
+#: ui/actions/GoalSeek.cpp:75
+#, fuzzy, kde-format
+msgid "Target value is invalid."
+msgstr "Izraz %1 nije važeći"
+
+#: ui/actions/GoalSeek.cpp:84
+#, fuzzy, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Izvorna ćelija mora sadržavati numeričku vrijednost!"
+
+#: ui/actions/GoalSeek.cpp:90
+#, fuzzy, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Data Y ćelija ne smije biti formula"
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Idi na ćeliju …"
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr ""
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+msgid "Goto"
+msgstr "Idi na ćeliju"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+msgid "That is not a valid cell."
+msgstr "Izraz %1 nije važeći"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Smanji uvlaku"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Povećaj uvlaku"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "Od većeg prema manjem"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "Veća točnost"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Povećaj uvlaku"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Smanji uvlaku"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "Iz baze po&dataka …"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+#| msgid "From &Database..."
+msgid "Insert data from a SQL database"
+msgstr "Iz baze po&dataka …"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Nema dostupnih upravljačkih programa za baze podataka! Morate složiti Qt s "
+"odgovrajućim upravljačkim programima."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Skup …"
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "Umetni tabelu"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Umetni tabelu"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, fuzzy, kde-format
+msgid "S&pecial Character..."
+msgstr "Posebno umetanje..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Link …"
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Umetni tabelu"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Link"
+msgstr "Ubaci vezu"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Remove a link"
+msgstr "Ukloni sve"
+
+#: ui/actions/Link.cpp:74
+#, fuzzy, kde-format
+msgid "Remove Link"
+msgstr "Ukloni sve"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Ukloni sve"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Ubaci vezu"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Izaberite pismo"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Spoji ćelije"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Spoji ćelije"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Spoji ćelije"
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Spoji ćelije"
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Dissociate Cells"
+msgstr "Razdvoji ćelije"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Ime područja …"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Umetni novi list."
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+msgid "Replace Named Area"
+msgstr "Ukloni sve"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Ukloni sve"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Edit or select named areas"
+msgstr "Ukloni sve"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Named Areas..."
+msgstr "Prikaži područje..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+msgid "Break Before Row"
+msgstr "Ukloni stupac"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+#| msgid "Header"
+msgid "Row Break"
+msgstr "Zaglavlje"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+msgid "Break Before Column"
+msgstr "Ukloni stupac"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+msgid "Column Break"
+msgstr "Broj"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Posebno umetanje …"
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Paste.cpp:153
+#, fuzzy, kde-format
+msgid "Paste with Insertion"
+msgstr "Umetni ćeliju"
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Umetni novi list."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "&Podzbroj …"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "&Podzbroj …"
+
+#: ui/actions/Pivot.cpp:29
+#, fuzzy, kde-format
+msgid "You must select multiple cells."
+msgstr "Stil tabele"
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "U&kloni komentar"
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet..."
+msgid "Show QTableView..."
+msgstr "Prikaži broj stupca..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Razvrstaj …"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+msgid "Sort &Increasing"
+msgstr "Sortiraj uzlazno"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:143
+#, fuzzy, kde-format
+msgid "Sort &Decreasing"
+msgstr "Sortiraj silazno"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Kriterij sortiranja"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr ""
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr ""
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Format ćelije …"
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "U&kloni komentar"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Masno"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, fuzzy, kde-format
+msgid "Italic"
+msgstr "Italija"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Podcrtano"
+
+#: ui/actions/Style.cpp:184
+#, fuzzy, kde-format
+#| msgid "Strike out"
+msgid "Strike Out"
+msgstr "Prekriženo"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Omatanje teksta"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+#| msgid "Wrap text"
+msgid "Wrap"
+msgstr "Omotaj tekst"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+#| msgid "Wrap Text"
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Omatanje teksta"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Print cell contents vertically"
+msgstr "Spoji ćelije"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Uspravni tekst"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Uspravni tekst"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Number Format"
+msgstr "Broj pokušaja"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Broj"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Scientific Format"
+msgstr "Znanstvena"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Znanstvena"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Znanstvena"
+
+#: ui/actions/Style.cpp:342
+#, fuzzy, kde-format
+msgid "Percent Format"
+msgstr "Format postotka"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Postotak"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Uglate zagrade formule"
+
+#: ui/actions/Style.cpp:379
+#, fuzzy, kde-format
+msgid "Money Format"
+msgstr "Format novca"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Novac"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Format"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Date Format"
+msgstr "Oblik datuma"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Oblikovanje"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Time Format"
+msgstr "Format vremena"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Oblikovanje"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Povećaj veličinu fonta"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Smanji veličinu pisma"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Uvećaj preciznost"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Smanji preciznost"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Increase Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Uvećaj preciznost"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Decrease Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Smanji preciznost"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Stil tabele"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Boja pozadine"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Set the background color"
+msgstr "Boja pozadine"
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create Style From Cell..."
+msgstr "Veličina ćelije"
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+msgid "Style From Cell"
+msgstr "Veličina ćelije"
+
+#: ui/actions/Styles.cpp:53
+#, fuzzy, kde-format
+msgid "Create Style From Cell"
+msgstr "Veličina ćelije"
+
+#: ui/actions/Styles.cpp:61
+#, fuzzy, kde-format
+msgid "The style name cannot be empty."
+msgstr "Ime tabele ne može biti prazno."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Stil takvog imena već postoji"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+#| msgid "Style Manager"
+msgid "Style Manager..."
+msgstr "Upravitelj stilom"
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Pomakni prema lijevo"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&Podzbroj …"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Podzbroj"
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+#| msgid "Upper limit"
+msgid "Upper"
+msgstr "Gornja granica"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+#| msgid "Power"
+msgid "Lower"
+msgstr "Eksponent"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+msgid "First Letter Upper"
+msgstr "Promijeni prvo slovo u &veliko"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+#| msgid "First letter uppercase"
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Promijeni prvo slovo u veliko"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+#| msgid "First letter uppercase"
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Promijeni prvo slovo u veliko"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+#| msgid "First letter uppercase"
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Promijeni prvo slovo u veliko"
+
+#: ui/actions/TextCase.cpp:95
+#, fuzzy, kde-format
+#| msgid "Lower Case"
+msgid "Upper Case"
+msgstr "Mala slova"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Mala slova"
+
+#: ui/actions/TextCase.cpp:99
+#, fuzzy, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Promijeni prvo slovo u &veliko"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Promijeni prvo slovo u &veliko"
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Promijeni prvo slovo u &veliko"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Promijeni kut"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr ""
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Valjanost …"
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "U&kloni komentar"
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "Ukloni sve"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Ukloni sve"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Kriterij valjanosti"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -13603,12 +16802,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Ukloni ćeliju"
 
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Obriši redove"
-
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
 msgctxt "(qtundo-format)"
@@ -13858,12 +17051,6 @@ msgstr ""
 msgid "Roman"
 msgstr "Rumunjska"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, fuzzy, kde-format
-msgid "Italic"
-msgstr "Italija"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -13881,12 +17068,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Obično"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Masno"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -13899,12 +17080,6 @@ msgstr "Boja:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Podcrtano"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14044,11 +17219,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Postotak"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14061,11 +17231,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Novac"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14076,11 +17241,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Znanstvena"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14286,11 +17446,6 @@ msgstr "Tri znamenke 153/652"
 msgid "Dolor Ipse"
 msgstr "Hrvatski znakovi šđčćž ŠĐČĆŽ"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Stil"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 #| msgid "Name:"
@@ -14302,11 +17457,6 @@ msgstr "Ime:"
 #, fuzzy, kde-format
 msgid "Inherit style:"
 msgstr "Stil tabele"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Stil takvog imena već postoji"
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -14352,12 +17502,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Standardno"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, fuzzy, kde-format
-msgid "Center"
-msgstr "Centrirano"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -14389,24 +17533,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Sredina"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, fuzzy, kde-format
-msgid "Bottom"
-msgstr "Poravnaj dolje"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -14569,20 +17695,10 @@ msgstr "Travanj"
 msgid "Apply changes"
 msgstr "Primijeni stil"
 
-#: ui/ExternalEditor.cpp:60
-#, fuzzy, kde-format
-msgid "Cancel"
-msgstr "Francuska"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Sve"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -14658,398 +17774,14 @@ msgstr ""
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[hh]::mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Funkcija …"
-
-#~ msgid "Insert math expression"
-#~ msgstr "Ubaci matematički izraz"
-
-#~ msgid "From &Database..."
-#~ msgstr "Iz baze po&dataka …"
-
-#, fuzzy
-#~| msgid "From &Database..."
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Iz baze po&dataka …"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Izbornik formule"
-
-#, fuzzy
-#~ msgid "Insert a function"
-#~ msgstr "Umetni stupac"
-
-#~ msgid "Others..."
-#~ msgstr "Ostalo …"
-
-#~ msgid "Modify Cell"
-#~ msgstr "Promijeni ćeliju"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Promijeni kut"
-
-#, fuzzy
-#~| msgid "Show Sheet..."
-#~ msgid "Show QTableView..."
-#~ msgstr "Prikaži broj stupca..."
-
 #, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "Zaštita"
 
 #, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "Zaštita"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Nema dostupnih upravljačkih programa za baze podataka! Morate složiti Qt "
-#~ "s odgovrajućim upravljačkim programima."
-
-#, fuzzy
-#~| msgid "From &Database..."
-#~ msgid "Insert Data From Database"
-#~ msgstr "Iz baze po&dataka …"
-
-#~ msgid "Type:"
-#~ msgstr "Tip:"
-
-#, fuzzy
-#~| msgid ""
-#~| "Port:\n"
-#~| "(if necessary)"
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Port:\n"
-#~ "(ukoliko je potrebno)"
-
-#~ msgid "Host:"
-#~ msgstr "Računalo:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Port:\n"
-#~ "(ukoliko je potrebno)"
-
-#, fuzzy
-#~ msgid "Database name: "
-#~ msgstr "Promijeni ime tabele"
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Lozinka:\n"
-#~ "(ukoliko je potrebno)"
-
-#, fuzzy
-#~ msgid "Select tables:"
-#~ msgstr "Stil tabele"
-
-#, fuzzy
-#~| msgid "Values"
-#~ msgid "Tables"
-#~ msgstr "Vrijednosti"
-
-#, fuzzy
-#~ msgid "Select columns:"
-#~ msgstr "Obriši Stupac"
-
-#, fuzzy
-#~ msgid "Table"
-#~ msgstr "Tabela"
-
-#~ msgid "Columns"
-#~ msgstr "Stupci"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Pronađi sve što odgovara sljedećem ( I )"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Pronađi sve što odgovara bilo čemu od sljedećeg (ILI)"
-
-#~ msgid "equals"
-#~ msgstr "jednako"
-
-#~ msgid "not equal"
-#~ msgstr "nejednako"
-
-#~ msgid "in"
-#~ msgstr "dolazno"
-
-#~ msgid "not in"
-#~ msgstr "nije u"
-
-#~ msgid "like"
-#~ msgstr "like"
-
-#~ msgid "greater"
-#~ msgstr "veće"
-
-#~ msgid "lesser"
-#~ msgstr "manje"
-
-#~ msgid "greater or equal"
-#~ msgstr "veće ili jednako"
-
-#~ msgid "less or equal"
-#~ msgstr "manje ili jednako"
-
-#, fuzzy
-#~ msgid "Sorted by"
-#~ msgstr "Sortiraj po"
-
-#~ msgid "Ascending"
-#~ msgstr "Rastuće"
-
-#~ msgid "Descending"
-#~ msgstr "Silazno"
-
-#, fuzzy
-#~ msgid "Distinct"
-#~ msgstr "Posebno"
-
-#~ msgid "Query Options"
-#~ msgstr "Mogućnosti upita"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL upit:"
-
-#, fuzzy
-#~ msgid "Insert in region"
-#~ msgstr "Umetni stupac"
-
-#, fuzzy
-#~ msgid "Starting in cell"
-#~ msgstr "String"
-
-#~ msgid "Result"
-#~ msgstr "Rezultat"
-
-#, fuzzy
-#~ msgid "You cannot specify a table here."
-#~ msgstr "NE možete ovdje odrediti tablicu!"
-
-#, fuzzy
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Morate odrediti valjano područje!"
-
-#, fuzzy
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Morate odrediti valjanu ćeliju!"
-
-#, fuzzy
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Niste ovlašteni za promjenu podataka u bazi!"
-
-#, fuzzy
-#~ msgid "Executing query failed."
-#~ msgstr "Izvršavanje upita nije uspjelo!"
-
-#, fuzzy
-#~| msgid "From &Database..."
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Iz baze po&dataka …"
-
-#, fuzzy
-#~ msgid "The port must be a number"
-#~ msgstr "Morate unijesti ime"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Spajam se na bazu …"
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Spojeno. Povlačim informacije o tablici …"
-
-#, fuzzy
-#~ msgid "This database contains no tables"
-#~ msgstr "Ova funkcija nema niti jedan parametar."
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Upravljački program nije mogao biti učitan"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Povlačim meta podatke o tablicama …"
-
-#, fuzzy
-#~ msgid "You have to select at least one table."
-#~ msgstr "Morate odabrati barem jednu tablicu!"
-
-#, fuzzy
-#~ msgid "You have to select at least one column."
-#~ msgstr "Morate odabrati barem jednu kolonu!"
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' ili '?' nisu valjani zamjenski znakovi u SQL-u. Pravilne zamjene su "
-#~ "'%' ili '_'. Dali ih želite zamijeniti?"
-
-#, fuzzy
-#~ msgid "Insert function"
-#~ msgstr "Umetni stupac"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Ova funkcija nema niti jedan parametar."
-
-#, fuzzy
-#~ msgid "Description is not available."
-#~ msgstr "Opis u stupcu"
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "Parametri"
-
-#, fuzzy
-#~ msgid "Show document settings dialog"
-#~ msgstr "Prikaži broj stupca"
-
-#, fuzzy
-#~ msgid "Document Settings"
-#~ msgstr "Parametri"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "Proračunski mod"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Točnost"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Automatski"
-
-#, fuzzy
-#~ msgid "String comparison:"
-#~ msgstr "Početna vrijednost"
-
-#, fuzzy
-#~ msgid "Regular Expressions"
-#~ msgstr "&Matematički izraz ..."
-
-#, fuzzy
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Osvježi na lokalnom sustavu"
-
-#, fuzzy
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "prosjek"
-
-#, fuzzy
-#~ msgid "Default number format: %1"
-#~ msgstr "Oblik datuma"
-
-#, fuzzy
-#~ msgid "Long date format: %1"
-#~ msgstr "Oblik datuma"
-
-#, fuzzy
-#~ msgid "Short date format: %1"
-#~ msgstr "&Podaci"
-
-#, fuzzy
-#~ msgid "Time format: %1"
-#~ msgstr "Format vremena"
-
-#, fuzzy
-#~ msgid "Currency format: %1"
-#~ msgstr "Valuta:"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Prilagođeni popisi …"
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "U&kloni komentar"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Prilagođeni popisi"
-
-#~ msgid "List:"
-#~ msgstr "Popis:"
-
-#~ msgid "Entry:"
-#~ msgstr "Stavka:"
-
-#, fuzzy
-#~| msgid "&Add"
-#~ msgid "Add"
-#~ msgstr "&Dodaj"
-
-#, fuzzy
-#~| msgid "&New"
-#~ msgid "New"
-#~ msgstr "&Novi"
-
-#, fuzzy
-#~ msgid "Remove"
-#~ msgstr "Ukloni sve"
-
-#~ msgid "Modify"
-#~ msgstr "Izmijeni"
-
-#~ msgid "Copy"
-#~ msgstr "Kopiraj"
-
-#, fuzzy
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr ""
-#~ "Da li zbilja želite obrisati skript\n"
-#~ "%1"
-
-#, fuzzy
-#~ msgid "Remove List"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Ćelija nije prazna.\n"
-#~ "Da ipak nastavim?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Traženje cilja …"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Traženje cilja"
-
-#, fuzzy
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Referenca na ćeliju je pogrešna!"
-
-#, fuzzy
-#~ msgid "Target value is invalid."
-#~ msgstr "Izraz %1 nije važeći"
-
-#, fuzzy
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Izvorna ćelija mora sadržavati numeričku vrijednost!"
-
-#, fuzzy
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Data Y ćelija ne smije biti formula"
 
 #~ msgid "Starting..."
 #~ msgstr "Početak …"
@@ -15073,97 +17805,6 @@ msgstr ""
 
 #~ msgid "Current value:"
 #~ msgstr "Trenutna vrijednost:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Naselje"
-
-#~ msgid "Selection List..."
-#~ msgstr "Izaberite pismo"
-
-#, fuzzy
-#~ msgid "More Options"
-#~ msgstr "Mogućnosti upita"
-
-#, fuzzy
-#~ msgid "Search entire sheet"
-#~ msgstr "Uspravni tekst"
-
-#, fuzzy
-#~ msgid "Search in:"
-#~ msgstr "Uspravni tekst"
-
-#, fuzzy
-#~ msgid "Cell Values"
-#~ msgstr "Vrijednosti"
-
-#, fuzzy
-#~ msgid "Comments"
-#~ msgstr "Komentar"
-
-#, fuzzy
-#~ msgid "Search direction:"
-#~ msgstr "Drugi uvjet"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~ msgid "Fewer Options"
-#~ msgstr "Opće Mogućnosti"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Format ćelije …"
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Ne postoje podaci u spremniku s isječcima."
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Ne postoje podaci u spremniku s isječcima."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "U&kloni komentar"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Posebno umetanje …"
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgid "Paste with Insertion"
-#~ msgstr "Umetni ćeliju"
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Umetni novi list."
-
-#, fuzzy
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Umetni ćeliju"
-
-#, fuzzy
-#~ msgid "Insert"
-#~ msgstr "Internet"
-
-#~ msgid "Move towards right"
-#~ msgstr "Pomakni prema desno"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Pomakni prema dolje"
-
-#~ msgid "Special Paste"
-#~ msgstr "Posebno umetanje"
 
 #, fuzzy
 #~ msgid "Content"
@@ -15198,27 +17839,8 @@ msgstr ""
 #~ msgstr "Dijeljenje"
 
 #, fuzzy
-#~| msgid "AutoFormat..."
-#~ msgid "Auto-Format..."
-#~ msgstr "SamoOblikovanje..."
-
-#, fuzzy
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~| msgid "AutoFormat..."
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "SamoOblikovanje..."
-
-#, fuzzy
-#~ msgid "Sheet Style"
-#~ msgstr "Stil tabele"
-
-#, fuzzy
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Broj neuspješnih pokušaja"
 
 #, fuzzy
 #~ msgid "Could not find image %1."
@@ -15229,110 +17851,8 @@ msgstr ""
 #~ msgstr "Ne mogu učitati sliku %1"
 
 #, fuzzy
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Ne mogu pronaći tabličnu XML stilsku datoteku '%1'"
-
-#, fuzzy
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Rasčlanjujem greške u tabličnoj datoteci XML stila %1"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgid "&Auto-Filter"
-#~ msgstr "samodopunjavanje"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "samodopunjavanje"
-
-#, fuzzy
-#~| msgid "Clear &All"
-#~ msgid "Clear All"
-#~ msgstr "&Očisti sve"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
 #~ msgid "Contents"
 #~ msgstr "Komentar"
-
-#, fuzzy
-#~ msgid "Clear Contents"
-#~ msgstr "Komentar"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Promijeni kut"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "Boja ruba"
-
-#~ msgid "Border Color"
-#~ msgstr "Boja ruba"
-
-#, fuzzy
-#~ msgid "Set the background color"
-#~ msgstr "Boja pozadine"
-
-#~ msgid "Background Color"
-#~ msgstr "Boja pozadine"
-
-#, fuzzy
-#~| msgid "Condition"
-#~ msgid "Conditional Styles..."
-#~ msgstr "Uvjet"
-
-#, fuzzy
-#~| msgid "Condition"
-#~ msgid "Conditional Styles"
-#~ msgstr "Uvjet"
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&Podzbroj …"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "&Podzbroj …"
-
-#, fuzzy
-#~ msgid "You must select multiple cells."
-#~ msgstr "Stil tabele"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Broj pokušaja"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -15343,94 +17863,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Format postotka"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Format vremena"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Oblik datuma"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Znanstvena"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Promijeni boju ruba"
-
-#~ msgid "<none>"
-#~ msgstr "<nijedno>"
-
-#~ msgid "equal to"
-#~ msgstr "Jednako"
-
-#~ msgid "greater than"
-#~ msgstr "veće od"
-
-#~ msgid "less than"
-#~ msgstr "manje od"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "jednako ili veće od"
-
-#~ msgid "equal to or less than"
-#~ msgstr "jednako ili manje od"
-
-#~ msgid "between"
-#~ msgstr "između"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "Raspon"
-
-#, fuzzy
-#~ msgid "different to"
-#~ msgstr "različita od"
-
-#, fuzzy
-#~ msgid "First Condition"
-#~ msgstr "Prvi uvjet"
-
-#, fuzzy
-#~ msgid "Second Condition"
-#~ msgstr "Drugi uvjet"
-
-#, fuzzy
-#~ msgid "Third Condition"
-#~ msgstr "Treći uvjet"
-
-#~ msgid "Cell is"
-#~ msgstr "Ćelija je"
-
-#~ msgid "Cell style"
-#~ msgstr "Stil ćelija"
-
-#~ msgid "different from"
-#~ msgstr "različita od"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Ukoliko je početna vrijednost veća od krajnje, vrijednost koraka mora "
-#~ "biti manja od nule!"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Ukoliko je početna vrijednost veća od krajnje, vrijednost koraka mora "
-#~ "biti manja od nule!"
-
-#, fuzzy
-#~ msgid "Select Source"
-#~ msgstr "Posebno umetanje..."
 
 #, fuzzy
 #~ msgid "Current Selection"
@@ -15454,10 +17886,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Field"
 #~ msgstr "Promijeni veličinu..."
-
-#, fuzzy
-#~ msgid "Add Filter"
-#~ msgstr "datoteka"
 
 #, fuzzy
 #~ msgid "Labels"
@@ -15505,11 +17933,6 @@ msgstr ""
 #~ msgstr "Retci"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "Operacija"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Vrijednost"
@@ -15527,173 +17950,21 @@ msgstr ""
 #~ msgid "Manual Selection"
 #~ msgstr "Izbornik formule"
 
-#~ msgid "Product"
-#~ msgstr "Umnožak"
-
 #~ msgid "Sort By"
 #~ msgstr "Razvrstavanje po"
-
-#~ msgid "Select Font..."
-#~ msgstr "Izaberi pismo"
-
-#~ msgid "Select Font Size"
-#~ msgstr "Izaberite veličinu pisma"
-
-#, fuzzy
-#~| msgid "Select Font Size"
-#~ msgid "Font Size"
-#~ msgstr "Izaberite veličinu pisma"
-
-#~ msgid "Text Color"
-#~ msgstr "Boja teksta"
-
-#, fuzzy
-#~ msgid "Set the text color"
-#~ msgstr "Boja pozadine"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Izgled ćelije"
-
-#, fuzzy
-#~| msgid "Style Manager"
-#~ msgid "Style Manager..."
-#~ msgstr "Upravitelj stilom"
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Pomakni prema lijevo"
-
-#, fuzzy
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Veličina ćelije"
-
-#, fuzzy
-#~ msgid "Style From Cell"
-#~ msgstr "Veličina ćelije"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Pomakni prema lijevo"
-
-#, fuzzy
-#~ msgid "Create Style From Cell"
-#~ msgstr "Veličina ćelije"
-
-#, fuzzy
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Ime tabele ne može biti prazno."
-
-#~ msgid "Style Manager"
-#~ msgstr "Upravitelj stilom"
-
-#~ msgid "All Styles"
-#~ msgstr "Svi stilovi"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Korisnički definirani stilovi"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Hijerarhijski"
-
-#~ msgid "&New..."
-#~ msgstr "&Novi …"
-
-#, fuzzy
-#~ msgid "&Modify..."
-#~ msgstr "&Dodaj/promijeni komentar ..."
-
-#, fuzzy
-#~ msgid "&Delete..."
-#~ msgstr "&Traženje cilja..."
-
-#, fuzzy
-#~ msgid "style%1"
-#~ msgstr "Stil:"
 
 #, fuzzy
 #~| msgid "Cells:"
 #~ msgid "Cells..."
 #~ msgstr "Ćelije:"
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Umetni ćelije …"
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Umetni novi list."
-
-#, fuzzy
-#~ msgid "Remove Cells..."
-#~ msgstr "Ukloni ćeliju ..."
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Umetni novi list."
-
 #, fuzzy
 #~| msgid "Insert Cells..."
 #~ msgid "Delete Cells..."
 #~ msgstr "Umetni ćelije …"
 
-#~ msgid "Insert rows"
-#~ msgstr "Umetni redove"
-
-#~ msgid "Insert columns"
-#~ msgstr "Umetni stupace"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Umetni ćeliju"
-
-#~ msgid "Move towards left"
-#~ msgstr "Pomakni prema lijevo"
-
-#~ msgid "Move towards top"
-#~ msgstr "Pomakni prema gore"
-
-#, fuzzy
-#~ msgid "Remove rows"
-#~ msgstr "Ukloni red"
-
-#, fuzzy
-#~ msgid "Remove columns"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~ msgid "Remove Cells"
-#~ msgstr "Ukloni ćeliju"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&Podzbroj …"
-
-#~ msgid "Subtotals"
-#~ msgstr "Podzbroj"
-
-#~ msgid "Remove All"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Morate odabrati barem jednu kolonu!"
-
 #~ msgid "Grand Total"
 #~ msgstr "Sveukupan zbroj"
-
-#, fuzzy
-#~ msgid "Column '%1' "
-#~ msgstr "Stupac %1"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#, fuzzy
-#~| msgid "StDev"
-#~ msgid "StDevP"
-#~ msgstr "StDev"
-
-#~ msgid "Var"
-#~ msgstr "Var"
 
 #~ msgid "&Page break between groups"
 #~ msgstr "&Prijelom stranice između grupa"
@@ -15712,41 +17983,6 @@ msgstr ""
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Podzbroj"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Idi na ćeliju …"
-
-#, fuzzy
-#~ msgid "Goto"
-#~ msgstr "Idi na ćeliju"
-
-#, fuzzy
-#~ msgid "Break Before Column"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~ msgid "Column Break"
-#~ msgstr "Broj"
-
-#, fuzzy
-#~ msgid "Break Before Row"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~| msgid "Header"
-#~ msgid "Row Break"
-#~ msgstr "Zaglavlje"
-
-#, fuzzy
-#~ msgid "Goto Cell"
-#~ msgstr "Idi na ćeliju"
-
-#, fuzzy
-#~ msgid "Enter cell:"
-#~ msgstr "Kamatna stopa"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Konsolidiraj …"
-
 #, fuzzy
 #~ msgid "Description in rows"
 #~ msgstr "Opis u redu"
@@ -15759,42 +17995,6 @@ msgstr ""
 #~| msgid "Co&py data"
 #~ msgid "Copy data"
 #~ msgstr "&Kopiraj podatke"
-
-#~ msgid "Consolidate"
-#~ msgstr "Konsolidiraj"
-
-#, fuzzy
-#~ msgid "Standard Deviation"
-#~ msgstr "Standardno"
-
-#~ msgid "Variance"
-#~ msgstr "varijabla"
-
-#, fuzzy
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Morate odabrati barem jednu kolonu!"
-
-#, fuzzy
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "Izraz %1 nije važeći"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Raspon\n"
-#~ "%1\n"
-#~ "je premal"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Raspon\n"
-#~ "%1\n"
-#~ "je prevelik"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -15810,26 +18010,6 @@ msgstr ""
 #~ "su različitih veličina"
 
 #, fuzzy
-#~| msgid "Consolidate"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Konsolidiraj"
-
-#, fuzzy
-#~| msgid "The source tables intersect with the destination table"
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Izvorna tablica se presjeca s odredišnom tablicom"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Raspon\n"
-#~ "%1\n"
-#~ " je nepravilan"
-
-#, fuzzy
 #~| msgid "&Function:"
 #~ msgid "Function:"
 #~ msgstr "&Funkcija:"
@@ -15843,94 +18023,13 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "Preferenca"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Promijeni kut …"
-
-#, fuzzy
-#~| msgid "Angle:"
-#~ msgid "Angle"
-#~ msgstr "Kut:"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Uvećaj preciznost"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Smanji preciznost"
-
-#, fuzzy
-#~| msgid "Increase Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Uvećaj preciznost"
-
-#, fuzzy
-#~| msgid "Decrease Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Smanji preciznost"
-
-#~ msgid "Change Angle"
-#~ msgstr "Promijeni kut"
-
-#~ msgid "Angle:"
-#~ msgstr "Kut:"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Promijeni kut"
-
-#~ msgid "Area Name..."
-#~ msgstr "Ime područja …"
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Umetni novi list."
-
-#, fuzzy
-#~ msgid "Named Areas..."
-#~ msgstr "Prikaži područje..."
-
-#, fuzzy
-#~ msgid "Named Areas"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgid "Edit or select named areas"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgid "Add Named Area"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgid "Enter the area name:"
-#~ msgstr "Kamatna stopa"
-
-#, fuzzy
-#~ msgid "Replace Named Area"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Ukloni sve"
-
 #, fuzzy
 #~| msgid "&Sheet"
 #~ msgid "&Select"
 #~ msgstr "&List"
 
-#, fuzzy
-#~ msgid "Area: %1"
-#~ msgstr "&Podaci"
-
 #~ msgid "&Edit..."
 #~ msgstr "Izmij&eni …"
-
-#~ msgid "&Remove"
-#~ msgstr "&Ukloni"
 
 #, fuzzy
 #~ msgid "New Named Area"
@@ -15939,133 +18038,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Edit Named Area"
 #~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr ""
-#~ "Da li zbilja želite obrisati skript\n"
-#~ "%1"
-
-#, fuzzy
-#~ msgid "Remove Named Area"
-#~ msgstr "Ukloni sve"
-
-#~ msgid "Cells:"
-#~ msgstr "Ćelije:"
-
-#~ msgid "Sheet:"
-#~ msgstr "List:"
-
-#~ msgid "Area name:"
-#~ msgstr "Ime područja"
-
-#~ msgid "Align Left"
-#~ msgstr "Poravnaj lijevo"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "U&kloni komentar"
-
-#~ msgid "Align Center"
-#~ msgstr "Centrirano"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "U&kloni komentar"
-
-#~ msgid "Align Right"
-#~ msgstr "Poravnaj desno"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "U&kloni komentar"
-
-#~ msgid "Align Top"
-#~ msgstr "Poravnato gore"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Spoji ćelije"
-
-#~ msgid "Align Middle"
-#~ msgstr "Poravnaj po sredini"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Spoji ćelije"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Poravnaj dolje"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Spoji ćelije"
-
-#~ msgid "Border Left"
-#~ msgstr "Lijevi rub"
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Pomakni prema lijevo"
-
-#~ msgid "Border Right"
-#~ msgstr "Desni rub"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Pomakni prema lijevo"
-
-#~ msgid "Border Top"
-#~ msgstr "Gornji rub"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Pomakni prema lijevo"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Donji rub"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Pomakni prema lijevo"
-
-#~ msgid "All Borders"
-#~ msgstr "Svi rubovi"
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Pomakni prema lijevo"
-
-#, fuzzy
-#~| msgid "All Borders"
-#~ msgid "No Borders"
-#~ msgstr "Svi rubovi"
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Pomakni prema lijevo"
-
-#~ msgid "Border Outline"
-#~ msgstr "Kontura ruba"
-
-#, fuzzy
-#~| msgid "Border Outline"
-#~ msgid "Outline"
-#~ msgstr "Kontura ruba"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Pomakni prema lijevo"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Spoji ćelije"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Spoji ćelije"
 
 #~ msgid "Australia"
 #~ msgstr "Australija"
@@ -17741,74 +19713,6 @@ msgstr ""
 #~ msgstr "Zimbabve"
 
 #, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~| msgid "Strike out"
-#~ msgid "Strike Out"
-#~ msgstr "Prekriženo"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Povećaj veličinu fonta"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Smanji veličinu pisma"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Omatanje teksta"
-
-#, fuzzy
-#~| msgid "Wrap text"
-#~ msgid "Wrap"
-#~ msgstr "Omotaj tekst"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Uspravni tekst"
-
-#, fuzzy
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Spoji ćelije"
-
-#, fuzzy
-#~ msgid "Percent Format"
-#~ msgstr "Format postotka"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgid "Money Format"
-#~ msgstr "Format novca"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~| msgid "Wrap Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Omatanje teksta"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Uspravni tekst"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Uglate zagrade formule"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Format"
-
-#, fuzzy
 #~ msgid "&Data Format"
 #~ msgstr "Format datuma"
 
@@ -17846,9 +19750,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "Uobičajena visina (20)"
 
-#~ msgid "Height:"
-#~ msgstr "Visina:"
-
 #, fuzzy
 #~ msgid "Set the height of the cell."
 #~ msgstr "Promijeni kut"
@@ -17857,501 +19758,27 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "Uobičajena širina (60)"
 
-#~ msgid "Width:"
-#~ msgstr "Širina:"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Dodaj komentar"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Povećaj uvlaku"
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "Veća točnost"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Smanji uvlaku"
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "Od većeg prema manjem"
-
-#, fuzzy
-#~| msgid "Lower Case"
-#~ msgid "Upper Case"
-#~ msgstr "Mala slova"
-
-#, fuzzy
-#~| msgid "Upper limit"
-#~ msgid "Upper"
-#~ msgstr "Gornja granica"
-
-#, fuzzy
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Promijeni prvo slovo u &veliko"
-
-#~ msgid "Lower Case"
-#~ msgstr "Mala slova"
-
-#, fuzzy
-#~| msgid "Power"
-#~ msgid "Lower"
-#~ msgstr "Eksponent"
-
-#, fuzzy
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Promijeni prvo slovo u &veliko"
-
-#, fuzzy
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Promijeni prvo slovo u &veliko"
-
-#, fuzzy
-#~ msgid "First Letter Upper"
-#~ msgstr "Promijeni prvo slovo u &veliko"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Comment..."
-#~ msgstr "Komentar"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Ukloni slog"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~| msgid "First letter uppercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Promijeni prvo slovo u veliko"
-
-#, fuzzy
-#~| msgid "First letter uppercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Promijeni prvo slovo u veliko"
-
-#, fuzzy
-#~| msgid "First letter uppercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Promijeni prvo slovo u veliko"
-
-#, fuzzy
-#~| msgid "Remove Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Ukloni slog"
-
-#, fuzzy
-#~ msgid "Clear Comment"
-#~ msgstr "Komentar"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Promijeni kut"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Povećaj uvlaku"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Smanji uvlaku"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Komentar ćelije"
-
-#~ msgid "&Left"
-#~ msgstr "&Lijevo"
-
-#~ msgid "&Right"
-#~ msgstr "&Desno"
-
 #~ msgid "&Up"
 #~ msgstr "&Gore"
-
-#~ msgid "&Down"
-#~ msgstr "&Dolje"
-
-#~ msgid "Autosum"
-#~ msgstr "Auto-zbroj"
-
-#, fuzzy
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Umetni stupac"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Izbornik formule"
-
-#, fuzzy
-#~ msgid "From &Text File..."
-#~ msgstr "Umetni stupac"
-
-#, fuzzy
-#~ msgid "Text File"
-#~ msgstr "Umetni stupac"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "Umetni novi list."
 
 #, fuzzy
 #~ msgid "From &Clipboard..."
 #~ msgstr "Umetni stupac"
 
-#, fuzzy
-#~ msgid "Clipboard"
-#~ msgstr "Umetni stupac"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "Umetni novi list."
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Tekst u stupce …"
-
-#, fuzzy
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Umetni stupac"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Ne postoje podaci u spremniku s isječcima."
-
-#, fuzzy
-#~| msgid "There is no data in the clipboard."
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Ne postoje podaci u spremniku s isječcima."
-
-#~ msgid "Text to Columns"
-#~ msgstr "Tekst u kolone"
-
-#, fuzzy
-#~ msgid "Cannot open input file."
-#~ msgstr "Ne mogu otvoriti ulaznu datoteku!"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Umetni stupac"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Umetni stupac"
-
-#, fuzzy
-#~| msgid "Text to Columns"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Tekst u kolone"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "Pomakni prema lijevo"
-
-#, fuzzy
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Spoji ćelije"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Spoji ćelije"
-
-#, fuzzy
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Spoji ćelije"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Spoji ćelije"
-
-#, fuzzy
-#~ msgid "Dissociate Cells"
-#~ msgstr "Razdvoji ćelije"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Pomakni prema lijevo"
-
-#, fuzzy
-#~ msgid "Resize Column..."
-#~ msgstr "Promijeni veličinu stupca..."
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "Promijeni kut"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Umetni _stupce"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Umetni novi list."
-
-#, fuzzy
-#~ msgid "Remove Columns"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Umetni novi list."
-
-#~ msgid "Hide Columns"
-#~ msgstr "Sakrij stupce"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Ukloni stupac …"
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~ msgid "Equalize Column"
-#~ msgstr "Obriši Stupac"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Umetni novi list."
-
-#~ msgid "Show Columns"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~ msgid "Resize Row..."
-#~ msgstr "Promijeni veličinu reda..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "Promijeni kut"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Umetni redove"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Umetni novi list."
-
-#, fuzzy
-#~ msgid "Remove Rows"
-#~ msgstr "Ukloni red"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Umetni novi list."
-
-#~ msgid "Hide Rows"
-#~ msgstr "Izbriši Red"
-
-#, fuzzy
-#~ msgid "Show Rows..."
-#~ msgstr "Prikaži područje..."
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "Ukloni stupac"
-
-#, fuzzy
-#~ msgid "Equalize Row"
-#~ msgstr "Jednako"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Umetni novi list."
-
-#, fuzzy
-#~ msgid "Show Rows"
-#~ msgstr "Prikaži tabelu"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Ukloni stupac"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Prilagodi stupac && kolona"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Prilagodi stupac"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Izbriši stupce"
 
-#~ msgid "Adjust Row"
-#~ msgstr "Prilagodi red"
-
 #~ msgid "Delete Rows"
 #~ msgstr "Izbriši redove"
-
-#, fuzzy
-#~ msgid "Resize Row"
-#~ msgstr "Promijeni veličinu reda"
-
-#, fuzzy
-#~ msgid "Resize Column"
-#~ msgstr "Promijeni veličinu stupca"
-
-#, fuzzy
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Broj neuspješnih pokušaja"
-
-#, fuzzy
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Broj neuspješnih pokušaja"
-
-#, fuzzy
-#~ msgid "Column: %1"
-#~ msgstr "Stupac %1"
-
-#, fuzzy
-#~ msgid "Row: %1"
-#~ msgstr "Red %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Link …"
-
-#, fuzzy
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Umetni tabelu"
-
-#, fuzzy
-#~ msgid "Link"
-#~ msgstr "Ubaci vezu"
-
-#, fuzzy
-#~ msgid "Remove Link"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgid "Remove a link"
-#~ msgstr "Ukloni sve"
-
-#~ msgid "Insert Link"
-#~ msgstr "Ubaci vezu"
 
 #, fuzzy
 #~ msgid "Edit Link"
 #~ msgstr "Ubaci vezu"
 
 #, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Ubaci vezu"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#, fuzzy
-#~ msgid "Link to Internet Address"
-#~ msgstr "Kamatna stopa"
-
-#, fuzzy
-#~ msgid "Internet address:"
-#~ msgstr "Kamatna stopa"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "E-pošta:"
-
-#, fuzzy
-#~ msgid "Link to Email Address"
-#~ msgstr "Kamatna stopa"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "Tekstualno područje je prazno!"
-
-#, fuzzy
-#~ msgid "Subject:"
-#~ msgstr "&Objekt ..."
-
-#~ msgid "File"
-#~ msgstr "Datoteka"
-
-#, fuzzy
-#~ msgid "Link to File"
-#~ msgstr "Veličina ćelije"
-
-#~ msgid "File location:"
-#~ msgstr "Lokacija datoteke:"
-
-#, fuzzy
-#~ msgid "Recent file:"
-#~ msgstr "Broj neuspješnih pokušaja"
-
-#~ msgid "No Entries"
-#~ msgstr "Nijedna stavka"
-
-#, fuzzy
-#~ msgid "Link to Cell"
-#~ msgstr "Veličina ćelije"
-
-#, fuzzy
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Ukloni sve"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Razvrstaj …"
-
-#, fuzzy
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Sortiraj silazno"
-
-#, fuzzy
-#~ msgid "Sort &Increasing"
-#~ msgstr "Sortiraj uzlazno"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Kriterij sortiranja"
-
-#, fuzzy
 #~| msgid "&Use custom list"
 #~ msgid "Use custom list"
 #~ msgstr "&Koristi korisnički popis"
-
-#~ msgid "Column %1"
-#~ msgstr "Stupac %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Red %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Prvi redak sadrži zaglavlje"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Prvi redak sadrži zaglavlje"
-
-#~ msgid "Sort"
-#~ msgstr "Razvrstavanje"
 
 #, fuzzy
 #~| msgid "Down"
@@ -18382,209 +19809,8 @@ msgstr ""
 #~ msgid "Direction"
 #~ msgstr "Zaštita"
 
-#~ msgid "Validity..."
-#~ msgstr "Valjanost …"
-
-#~ msgid "Validity"
-#~ msgstr "Valjanost"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "U&kloni komentar"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Ukloni sve"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Kriterij valjanosti"
-
-#~ msgid "Clear &All"
-#~ msgstr "&Očisti sve"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Kriterij"
-
-#~ msgid "Allow:"
-#~ msgstr "Dopusti:"
-
-#~ msgid "Integer"
-#~ msgstr "Cijeli broj"
-
-#~ msgid "Text Length"
-#~ msgstr "Duljina"
-
-#, fuzzy
-#~ msgid "List"
-#~ msgstr "Popis:"
-
-#~ msgid "Data:"
-#~ msgstr "Podaci:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Minimum:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Maksimum:"
-
-#~ msgid "Date:"
-#~ msgstr "Datum:"
-
-#, fuzzy
-#~ msgid "Date minimum:"
-#~ msgstr "Format datuma"
-
-#, fuzzy
-#~ msgid "Date maximum:"
-#~ msgstr "Format datuma"
-
-#~ msgid "Time:"
-#~ msgstr "Vrijeme:"
-
-#, fuzzy
-#~ msgid "Time minimum:"
-#~ msgstr "Format vremena"
-
-#, fuzzy
-#~ msgid "Time maximum:"
-#~ msgstr "Format vremena"
-
-#~ msgid "Number:"
-#~ msgstr "Broj:"
-
-#, fuzzy
-#~ msgid "Entries:"
-#~ msgstr "Nijedna stavka"
-
-#~ msgid "&Error Alert"
-#~ msgstr "&Upozorenje na grešku"
-
-#, fuzzy
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Prikaži rubove stranice"
-
-#~ msgid "Action:"
-#~ msgstr "Akcija:"
-
-#, fuzzy
-#~ msgid "Warning"
-#~ msgstr "Ispisivanje"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Naslov:"
-
-#~ msgid "Message:"
-#~ msgstr "Poruka:"
-
-#, fuzzy
-#~ msgid "This is not a valid value."
-#~ msgstr "Izraz %1 nije važeći"
-
-#, fuzzy
-#~ msgid "This is not a valid time."
-#~ msgstr "Izraz %1 nije važeći"
-
-#, fuzzy
-#~ msgid "This is not a valid date."
-#~ msgstr "Izraz %1 nije važeći"
-
-#~ msgid "&Series..."
-#~ msgstr "&Skup …"
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "Umetni tabelu"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Umetni tabelu"
-
-#, fuzzy
-#~ msgid "Select Character"
-#~ msgstr "Posebno umetanje..."
-
-#, fuzzy
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Pomakni prema lijevo"
-
-#~ msgid "Series"
-#~ msgstr "Serija"
-
-#, fuzzy
-#~ msgid "Insert Values"
-#~ msgstr "Umetni tabelu"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Linearno (2,4,6,…)"
-
-#, fuzzy
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Geometrijski"
-
-#, fuzzy
-#~ msgid "Start value:"
-#~ msgstr "Početna vrijednost"
-
-#~ msgid "Stop value:"
-#~ msgstr "Završna vrijednost:"
-
-#~ msgid "Step value:"
-#~ msgstr "Vrijednost koraka:"
-
-#, fuzzy
-#~ msgid "End and start value must be positive."
-#~ msgstr "Krajnja i početna vrijednost moraju biti pozitivne!"
-
-#, fuzzy
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Krajnja vrijednost mora biti veća od početne i vrijednost koraka mora "
-#~ "biti manja od '1'!"
-
-#, fuzzy
-#~ msgid "Step is negative."
-#~ msgstr "Korak je negativan !"
-
-#, fuzzy
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Vrijednost koraka mora biti veća od nule. Inače je linearna serija "
-#~ "bskonačna!"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Ukoliko je početna vrijednost veća od krajnje, vrijednost koraka mora "
-#~ "biti manja od nule!"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Ukoliko je vrijednost koraka negativna početna vrijednost mora biti veća "
-#~ "od krajnje!"
-
-#, fuzzy
-#~ msgid "S&pecial Character..."
-#~ msgstr "Posebno umetanje..."
 
 #, fuzzy
 #~ msgid "Internet address is empty"
@@ -22957,12 +24183,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "Stil:"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Podzbroj"
 
 #, fuzzy
 #~| msgid "Remove All"
@@ -32540,10 +33760,6 @@ msgstr ""
 #~ msgstr "&Rub"
 
 #, fuzzy
-#~ msgid "Inserting Text File"
-#~ msgstr "Umetni stupac"
-
-#, fuzzy
 #~ msgid "Locale Settings"
 #~ msgstr "Parametri"
 
@@ -32600,10 +33816,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Remove Cell"
 #~ msgstr "Ukloni ćeliju"
-
-#, fuzzy
-#~ msgid "Paste"
-#~ msgstr "Parsiranje"
 
 #, fuzzy
 #~ msgid "Style of Cell"
@@ -32691,10 +33903,6 @@ msgstr ""
 #~| msgid "Statistical"
 #~ msgid "Statistical Functions"
 #~ msgstr "Statistički"
-
-#, fuzzy
-#~ msgid "Text Functions"
-#~ msgstr "<h2>Sintaksa</h2><ul>"
 
 #, fuzzy
 #~| msgid "Function"

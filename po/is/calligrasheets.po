@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tables\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2011-07-07 08:22+0000\n"
 "Last-Translator: \n"
 "Language-Team:  <is@li.org>\n"
@@ -137,8 +137,13 @@ msgstr "Haus"
 msgid "Header1"
 msgstr "Haus"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, fuzzy, kde-format
 msgid "Default"
 msgstr "Sjálfgefið"
@@ -170,7 +175,8 @@ msgstr "sek"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Texti"
@@ -241,7 +247,8 @@ msgstr "</p><p><b>Skilagildi: </b>"
 msgid "Syntax"
 msgstr "Notkun"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Viðföng"
@@ -865,14 +872,15 @@ msgstr "CARY(12;0) skilar 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Tala"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Snið"
@@ -931,6 +939,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "IMABS(\"-i\") skilar 1"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, fuzzy, kde-format
 msgid "Database"
 msgstr "Gagnagrunnur"
@@ -1204,6 +1214,7 @@ msgstr "Dagur og tími"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1269,7 +1280,8 @@ msgstr "ISDATE(\"2.2.2000\") skilar True"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Tími"
@@ -4730,6 +4742,7 @@ msgid "Regular payments"
 msgstr "Regluleg segð"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Tegund"
@@ -5025,12 +5038,19 @@ msgstr "Handvirk"
 msgid "Automatic"
 msgstr "Sjálfvirk"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, fuzzy, kde-format
 msgid "Information"
 msgstr "Upplýsingar"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, fuzzy, kde-format
 msgid "Error"
 msgstr "Villa"
@@ -5830,7 +5850,7 @@ msgstr ""
 msgid "Math"
 msgstr "Stærðfræði"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, fuzzy, kde-format
 msgid "Function"
 msgstr "Aðgerð"
@@ -6299,6 +6319,7 @@ msgid "Range"
 msgstr "Svið"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 msgid "Criteria"
 msgstr "Forsenda"
@@ -7824,6 +7845,7 @@ msgid "Row"
 msgstr "Röð"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Dálkur"
@@ -12176,7 +12198,7 @@ msgid "&Go"
 msgstr "&Fara"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, fuzzy, kde-format
 msgid "&Insert"
 msgstr "Setja &inn"
@@ -12194,7 +12216,7 @@ msgid "F&ormat"
 msgstr "&Snið"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, fuzzy, kde-format
 msgid "Merge Cells"
 msgstr "Sameina reiti"
@@ -12273,8 +12295,8 @@ msgstr "Virkja"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 msgid "Font"
 msgstr "Letur"
@@ -12676,14 +12698,16 @@ msgstr "Eyða línu(m)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, fuzzy, kde-format
 msgid "Horizontal"
 msgstr "Lárétt"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, fuzzy, kde-format
 msgid "Vertical"
 msgstr "Lóðrétt"
@@ -12711,13 +12735,15 @@ msgid "Up"
 msgstr "Upp"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, fuzzy, kde-format
 msgid "Right"
 msgstr "Hægri"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, fuzzy, kde-format
 msgid "Left"
 msgstr "Vinstri"
@@ -12729,36 +12755,50 @@ msgstr "Sýna dálk(a)"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Engin"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Summa"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Lágmark"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Hámark"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Meðaltal"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Fjöldi"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, fuzzy, kde-format
 msgid "CountA"
 msgstr "FjöldiA"
@@ -13126,7 +13166,8 @@ msgstr "Hreinsa val"
 msgid "Move selected sheet to the bottom"
 msgstr "Nafn falins dálks:"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, fuzzy, kde-format
 msgid "Case Sensitive"
 msgstr "Háð há/lágstöfum"
@@ -13328,6 +13369,7 @@ msgid "Anchor"
 msgstr "Festipunktur"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Reitur"
@@ -13347,7 +13389,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "Fela töflu"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Next"
@@ -13363,7 +13405,7 @@ msgstr "Fara til vinstri"
 msgid "Previous Sheet"
 msgstr "Eyða töflu"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 msgid "Previous"
 msgstr "Fyrri"
@@ -13569,7 +13611,7 @@ msgstr ""
 "Þú ert á leið með að eyða töflu í notkun.\n"
 "Viltu halda áfram?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, fuzzy, kde-format
 msgid "Enter name:"
 msgstr "Sláðu inn heiti:"
@@ -13629,13 +13671,13 @@ msgstr "Talning: %1"
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Breyta texta"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
@@ -13643,10 +13685,3101 @@ msgstr "Breyta bakgrunnslit"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Breyta ramma"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Columns"
+msgstr "Setja inn dálka"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Rows"
+msgstr "Setja inn línur"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Remove Columns"
+msgstr "Fjarlægja dálka"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+msgid "Remove Rows"
+msgstr "Fjarlægja raðir"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Bæta við töflu"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Bæta við töflu"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Bæta við töflu"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Bæta við töflu"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+msgid "Hide Columns"
+msgstr "Fela dálka"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+msgid "Hide Rows"
+msgstr "Fela línu"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, fuzzy, kde-format
+msgid "Show Columns"
+msgstr "Sýna dálka"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, fuzzy, kde-format
+msgid "Show Rows"
+msgstr "Sýna röð(raðir)"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Sýna röð(raðir)"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "Fara til vinstri"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Sýna dálk(a)"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "Fara til vinstri"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+msgid "Equalize Column"
+msgstr "Jafna dálk"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+msgid "Equalize Row"
+msgstr "Jafna röð"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Bæta við töflu"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Bæta við töflu"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Stilla reit"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Stilla röð"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Row && Column"
+msgstr "Stilla línu og dálk"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+msgid "Show Columns..."
+msgstr "Sýna dálk(a)"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+msgid "Show Rows..."
+msgstr "Sýna röð(raðir)"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "Sýna dálk(a)"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "Sýna röð(raðir)"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Dálkur: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Röð: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+msgid "Resize Column..."
+msgstr "Breyta stærð dálks..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+msgid "Resize Row..."
+msgstr "Breyta stærð línu..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "Breyta lit á texta"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "Breyta lit á texta"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Align Left"
+msgstr "Jafna til vinstri"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Breyta lóðréttri jöfnun"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Align Right"
+msgstr "Jafna til hægri"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Align Center"
+msgstr "Jafna"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "Eyða athugasemd"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, fuzzy, kde-format
+msgid "Center"
+msgstr "Miðjað"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align Top"
+msgstr "Ofanjafna"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Sameina reiti"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, fuzzy, kde-format
+msgid "Top"
+msgstr "Efst"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Breyta lóðréttri jöfnun"
+
+#: ui/actions/Align.cpp:149
+#, fuzzy, kde-format
+msgid "Align Bottom"
+msgstr "Neðanjafna"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Sameina reiti"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, fuzzy, kde-format
+msgid "Bottom"
+msgstr "Neðst"
+
+#: ui/actions/Align.cpp:185
+#, fuzzy, kde-format
+msgid "Align Middle"
+msgstr "Miðjafna"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Sameina reiti"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Miðja"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Breyta horni..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr ""
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+#| msgid "Angle:"
+msgid "Angle"
+msgstr "Horn"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Breyta horni"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+#| msgid "Autofill"
+msgid "&Auto-Filter"
+msgstr "Sjálffylling"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Autofill"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Sjálffylling"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Fara til vinstri"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Auto-Format..."
+msgstr "Formhönnun reita..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, fuzzy, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Fann ekki XML skrána með töflusniði: \"%1\""
+
+#: ui/actions/AutoFormat.cpp:91
+#, fuzzy, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Túlkun töflusniðs misfórst í XML skránni %1"
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Formhönnun reita..."
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+msgid "Autosum"
+msgstr "SjálfSumma"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "SjálfSumma"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Border Left"
+msgstr "Vinstri jaðar"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Hægri jaðar"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Efri jaðar"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Neðri jaðar"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "All Borders"
+msgstr "Allir jaðrar"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Allt"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "No Borders"
+msgstr "Allir jaðrar"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Útlínur jaðra"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+#| msgid "Border Outline"
+msgid "Outline"
+msgstr "Efnisskipan"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Litur jaðra"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "Breyta lit á ramma"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Breyta lit á ramma"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, fuzzy, kde-format
+msgid "Insert Cells..."
+msgstr "Setja inn reit(i)..."
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Bæta við töflu"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, fuzzy, kde-format
+msgid "Remove Cells..."
+msgstr "Eyða reit(um)..."
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Bæta við töflu"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear All"
+msgstr "Hreinsa allt"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Clear Contents"
+msgstr "Eyða innihaldi"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Breyta texta"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Eyða"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "Athugasemd..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr ""
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Clear Comment"
+msgstr "Eyða innihaldi"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Comment.cpp:60
+#, fuzzy, kde-format
+msgid "Remove Comment"
+msgstr "Fjarlægja athugasemd"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Fjarlægja athugasemd"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Bæta við athugasemd"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+msgid "Conditional Styles..."
+msgstr "Eiginleikar reita, háðir skilyrðum..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+msgid "Conditional Styles"
+msgstr "Skilyrtir stílar"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "&Consolidate..."
+msgstr "Sameina..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Consolidate"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Sameina"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+msgid "Insert From &Text File..."
+msgstr "Textaskrá"
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "Bæta við töflu"
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+msgid "Text File"
+msgstr "Textaskrá"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, fuzzy, kde-format
+msgid "Cannot open input file."
+msgstr "Get ekki opnað inntaksskrá."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+msgid "Inserting Text File"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+msgid "Insert From &Clipboard..."
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "Bæta við töflu"
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+msgid "Clipboard"
+msgstr "Klippispjald"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:155
+#, fuzzy, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "&Text to Columns..."
+msgstr "Eyða dálk(um)"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:241
+#, fuzzy, kde-format
+msgid "Text to Columns"
+msgstr "Texta í dálka"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Texta í dálka"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+msgid "Custom Lists..."
+msgstr "Raða listum..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Add Named Area"
+msgstr "Raða í hækkandi"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, fuzzy, kde-format
+msgid "Enter the area name:"
+msgstr "Internet"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Breyta horni"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Horn:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+msgid "Automatic Format"
+msgstr "Formhönnun reita..."
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Nafn falins dálks:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Select Character"
+msgstr "Veldu staf"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Setja valda stafinn inn í textann"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, fuzzy, kde-format
+msgid "Cell Comment"
+msgstr "Athugasemd við reit"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<Ekkert>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "jafnt og"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "stærri en"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "minni en"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "samasem eða stærra en"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "samasem eða minni en"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "á milli"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "Hraði"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, fuzzy, kde-format
+msgid "different to"
+msgstr "ólíkt"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, fuzzy, kde-format
+msgid "First Condition"
+msgstr "Fyrsta skilyrði"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, fuzzy, kde-format
+msgid "Second Condition"
+msgstr "Annað skilyrði"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, fuzzy, kde-format
+msgid "Third Condition"
+msgstr "Þriðja skilyrði"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Reitur er"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, fuzzy, kde-format
+msgid "Cell style"
+msgstr "Reitur er"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "ólíkt"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Sameina"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, fuzzy, kde-format
+msgid "Product"
+msgstr "Vara"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, fuzzy, kde-format
+msgid "Standard Deviation"
+msgstr "Staðalfrávik"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, fuzzy, kde-format
+msgid "Variance"
+msgstr "Breytileiki"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+msgid "You have to define at least one source range."
+msgstr "Þú getur ekki falið síðustu sýnilegu töfluna."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "Dagsetningin er ekki gild!"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Sviðið\n"
+"%1\n"
+"er of lítið"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Sviðið\n"
+"%1\n"
+"er of stórt"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, fuzzy, kde-format
+#| msgid "The source tables intersect with the destination table"
+msgid "The source range intersects the destination range."
+msgstr "Töflunum tveimur sker saman"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Sviðið\n"
+"%1\n"
+" er ógilt"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, fuzzy, kde-format
+msgid "Insert Data From Database"
+msgstr "Dags."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, fuzzy, kde-format
+msgid "Type:"
+msgstr "Tegund:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, fuzzy, kde-format
+msgid "Database name: "
+msgstr "Breyta nafni töflu"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Host:"
+msgstr "Vél:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, fuzzy, kde-format
+msgid "Select tables:"
+msgstr "Snið töflu"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+msgid "Tables"
+msgstr "Töflur"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, fuzzy, kde-format
+msgid "Select columns:"
+msgstr "Eyða dálki(um)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Table"
+msgstr "Tafla"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, fuzzy, kde-format
+msgid "Columns"
+msgstr "Dálkar"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, fuzzy, kde-format
+msgid "equals"
+msgstr "er jafnt og"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, fuzzy, kde-format
+msgid "not equal"
+msgstr "ekki jafnt"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, fuzzy, kde-format
+msgid "in"
+msgstr "in"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, fuzzy, kde-format
+msgid "not in"
+msgstr "ekki í"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, fuzzy, kde-format
+msgid "like"
+msgstr "eins og"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, fuzzy, kde-format
+msgid "greater"
+msgstr "meira"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, fuzzy, kde-format
+msgid "greater or equal"
+msgstr "stærri en"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, fuzzy, kde-format
+msgid "less or equal"
+msgstr "stærri en"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, fuzzy, kde-format
+msgid "Sorted by"
+msgstr "Raða eftir"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, fuzzy, kde-format
+msgid "Ascending"
+msgstr "Hækkandi"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, fuzzy, kde-format
+msgid "Descending"
+msgstr "Lækkandi"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, fuzzy, kde-format
+msgid "Distinct"
+msgstr "Deilling"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, fuzzy, kde-format
+msgid "Query Options"
+msgstr "Textakostur:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, fuzzy, kde-format
+msgid "Insert in region"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, fuzzy, kde-format
+msgid "Starting in cell"
+msgstr "Strengur"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, fuzzy, kde-format
+msgid "Result"
+msgstr "Útkoma"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+msgid "You cannot specify a table here."
+msgstr "Þú getur ekki eytt einu töflunni í möppunni."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, fuzzy, kde-format
+msgid "You have to specify a valid region."
+msgstr "Þú getur ekki eytt einu töflunni í möppunni."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, fuzzy, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Þú getur ekki eytt einu töflunni í möppunni."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Dags."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, fuzzy, kde-format
+msgid "The port must be a number"
+msgstr "Tímasetningin er ekki gild!"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, fuzzy, kde-format
+msgid "This database contains no tables"
+msgstr "Í skjalinu er engin tafla."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, fuzzy, kde-format
+msgid "Driver could not be loaded"
+msgstr "Nafn töflu má ekki vera autt"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, fuzzy, kde-format
+msgid "You have to select at least one table."
+msgstr "Þú getur ekki falið síðustu sýnilegu töfluna."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, fuzzy, kde-format
+msgid "You have to select at least one column."
+msgstr "Þú getur ekki falið síðustu sýnilegu töfluna."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Skipta út"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Document Settings"
+msgstr "Stillingar skjals"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+msgid "Calculation"
+msgstr "Reikna"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+msgid "Case sensitive"
+msgstr "Óháð há-/lágstöfum"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+msgid "Precision as shown"
+msgstr "Nákvæmni"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Sjálfvirk"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+msgid "String comparison:"
+msgstr "Strengjagildi"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Regular Expressions"
+msgstr "Regluleg segð"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "Staðbundin viðföng"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Tungumál: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+msgid "Default number format: %1"
+msgstr "&Tölustafasnið"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+msgid "Long date format: %1"
+msgstr "Dagsetningarsnið"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Short date format: %1"
+msgstr "Stutt dags.: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, fuzzy, kde-format
+msgid "Time format: %1"
+msgstr "Tímasnið"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+msgid "Currency format: %1"
+msgstr "Núviriði"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, fuzzy, kde-format
+msgid "More Options"
+msgstr "Fleiri valmöguleikar"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Search entire sheet"
+msgstr "Lóðréttur texti"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Search in:"
+msgstr "Leita í:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Cell Values"
+msgstr "Gildi"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Comments"
+msgstr "Athugasemdir"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Search direction:"
+msgstr "Lóðréttur texti"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "Sýna röð(raðir)"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Fewer Options"
+msgstr "Textakostur:"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Set Function"
+msgstr "Aðgerð"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, fuzzy, kde-format
+msgid "Insert function"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, fuzzy, kde-format
+msgid "Help"
+msgstr "Hjálp"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Þetta fall hefur enga stika."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+msgid "Description is not available."
+msgstr "Útskýring í dálki"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Goal Seek"
+msgstr "Markmiðaleit"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, fuzzy, kde-format
+msgid "Goto Cell"
+msgstr "Fara í reit"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Enter cell:"
+msgstr "Internet"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Insert"
+msgstr "Setja inn"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Fara til hægri"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Fara niður"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Insert rows"
+msgstr "Bæta inn línu(m)"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Insert columns"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, fuzzy, kde-format
+msgid "Insert Cells"
+msgstr "Setja inn hólf"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "Fjarlægja"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Fara til vinstri"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Fara upp"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, fuzzy, kde-format
+msgid "Remove rows"
+msgstr "Eyða línu(m)"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, fuzzy, kde-format
+msgid "Remove columns"
+msgstr "Eyða dálk(um)"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, fuzzy, kde-format
+msgid "Remove Cells"
+msgstr "Eyða reit"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, fuzzy, kde-format
+msgid "Insert Link"
+msgstr "Setja inn tengil"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+msgid "Link to Internet Address"
+msgstr "Netslóð:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, fuzzy, kde-format
+msgid "Text to display:"
+msgstr "Texti sem á að sýna:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, fuzzy, kde-format
+msgid "Internet address:"
+msgstr "Internetslóð:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "Netfang:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+msgid "Link to Email Address"
+msgstr "Netslóð:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+msgid "Email address:"
+msgstr "Texti svæðis er tómur!"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+msgid "Subject:"
+msgstr "Viðfangsefni:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, fuzzy, kde-format
+msgid "File"
+msgstr "Skrá"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+msgid "Link to File"
+msgstr "Stærð reitar"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Staðsetning:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Recent file:"
+msgstr "Nýleg skrá:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, fuzzy, kde-format
+msgid "No Entries"
+msgstr "Engar færslur"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+msgid "Link to Cell"
+msgstr "Stærð reitar"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+msgid "Cell or Named Area:"
+msgstr "Eyða reit"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, fuzzy, kde-format
+msgid "Custom Lists"
+msgstr "Raða listum..."
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Save Changes"
+msgstr "Breyta stafstöðu"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Listi:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Færsla:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, fuzzy, kde-format
+msgid "Add"
+msgstr "Bæta við"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, fuzzy, kde-format
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, fuzzy, kde-format
+msgid "New"
+msgstr "Nýtt"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, fuzzy, kde-format
+msgid "Modify"
+msgstr "Breyta"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, fuzzy, kde-format
+msgid "Copy"
+msgstr "Afrita"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Viltu virkilega eyða þessum lista?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+msgid "Remove List"
+msgstr "Fjarlægja lista"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Svæðið er ekki tómt.\n"
+"Viltu halda áfram?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+msgid "Named Areas"
+msgstr "Eyða reit"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, fuzzy, kde-format
+msgid "Area: %1"
+msgstr "svæði: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, fuzzy, kde-format
+msgid "Cells:"
+msgstr "Reitur:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, fuzzy, kde-format
+msgid "Sheet:"
+msgstr "Blað:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, fuzzy, kde-format
+msgid "Area name:"
+msgstr "Nafn svæðis"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, fuzzy, kde-format
+msgid "&Remove"
+msgstr "&Fjarlægja"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+msgid "Save"
+msgstr "Opna/vista"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+#| msgid "Do you really want to remove this area name?"
+msgid "Do you really want to remove this named area?"
+msgstr "Viltu virkilega færa þetta svæðisnafn?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+msgid "Remove Named Area"
+msgstr "Eyða reit"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+msgid "The provided region is not valid."
+msgstr "Tímasetningin er ekki gild!"
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, fuzzy, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Líma með innsettum reit(um)"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+msgid "Select Source"
+msgstr "Veldu staf"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+msgid "Add Filter"
+msgstr "Sía"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "Aðgerð"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, fuzzy, kde-format
+msgid "Resize Row"
+msgstr "Breyta stærð á röð"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Hæð:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, fuzzy, kde-format
+msgid "Resize Column"
+msgstr "Breyta stærð á dálki"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Breidd:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Summa"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Series"
+msgstr "Setja inn raðir"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, fuzzy, kde-format
+msgid "Insert Values"
+msgstr "Bæta við töflu"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, fuzzy, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Rúmfræðileg"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Rúmfræðileg"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, fuzzy, kde-format
+msgid "Start value:"
+msgstr "Upphafsgildi"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, fuzzy, kde-format
+msgid "Stop value:"
+msgstr "Hágildi"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, fuzzy, kde-format
+msgid "Step value:"
+msgstr "Upphafsgildi"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+msgid "End and start value must be positive."
+msgstr "Sjálfgefin viðföng"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, fuzzy, kde-format
+msgid "Step is negative."
+msgstr "Skrefið er neikvætt !"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, fuzzy, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Skrefgildið þarf að vera hærra en 0.\n"
+"Annars er línulega röðin óendanleg!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, fuzzy, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Nafn falins dálks:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Nafn falins dálks:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Dálkur %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Röð %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "Tala"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "Sýna fyrirsögn á dálk"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Raða"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+msgid "Case Insensitive"
+msgstr "Óháð há-/lágstöfum"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Líma sérstakt"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, fuzzy, kde-format
+msgid "Style Manager"
+msgstr "Sniðstjóri"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, fuzzy, kde-format
+msgid "Style"
+msgstr "Stíll"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, fuzzy, kde-format
+msgid "All Styles"
+msgstr "Allir stílar"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Custom Styles"
+msgstr "Sérsniðnir stílar"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, fuzzy, kde-format
+msgid "Hierarchical"
+msgstr "Stigskipt"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, fuzzy, kde-format
+msgid "&New..."
+msgstr "&Nýtt..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, fuzzy, kde-format
+msgid "&Modify..."
+msgstr "&Breyta..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, fuzzy, kde-format
+msgid "&Delete..."
+msgstr "&Eyða..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, fuzzy, kde-format
+msgid "style%1"
+msgstr "Snið:"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Subtotals"
+msgstr "Millisamtölur"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, fuzzy, kde-format
+msgid "Remove All"
+msgstr "Fjarlægja allt"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, fuzzy, kde-format
+msgid "Column '%1' "
+msgstr "Dálkur %1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, fuzzy, kde-format
+msgid "StDev"
+msgstr "Staðalfrávik"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, fuzzy, kde-format
+msgid "StDevP"
+msgstr "Skref"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, fuzzy, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, fuzzy, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Þú getur ekki falið síðustu sýnilegu töfluna."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Lögmæti"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, fuzzy, kde-format
+msgid "Clear &All"
+msgstr "Hreinsa allt"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Leyfa:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Heiltala"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, fuzzy, kde-format
+msgid "Text Length"
+msgstr "Texta lengd"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, fuzzy, kde-format
+msgid "List"
+msgstr "Listi"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Gögn:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, fuzzy, kde-format
+msgid "Minimum:"
+msgstr "Lágmark:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, fuzzy, kde-format
+msgid "Maximum:"
+msgstr "Hámark:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, fuzzy, kde-format
+msgid "Date:"
+msgstr "Dagsetning:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, fuzzy, kde-format
+msgid "Date minimum:"
+msgstr "Lágmarks dagsetning"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, fuzzy, kde-format
+msgid "Date maximum:"
+msgstr "Hámarks dagsetning"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, fuzzy, kde-format
+msgid "Time:"
+msgstr "Tími:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, fuzzy, kde-format
+msgid "Time minimum:"
+msgstr "Lágmarkstími"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, fuzzy, kde-format
+msgid "Time maximum:"
+msgstr "Hámarks tími"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, fuzzy, kde-format
+msgid "Number:"
+msgstr "Fjöldi:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, fuzzy, kde-format
+msgid "Entries:"
+msgstr "Færslur:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+msgid "Error Alert"
+msgstr "Villuboð"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Aðgerð:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, fuzzy, kde-format
+msgid "Stop"
+msgstr "Stöðva"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, fuzzy, kde-format
+msgid "Warning"
+msgstr "Aðvörun"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Titill:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Skilaboð:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, fuzzy, kde-format
+msgid "Input Help"
+msgstr "Innsláttarhjálp"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, fuzzy, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Sýna innsláttarhjálp þegar reitur er valinn"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, fuzzy, kde-format
+msgid "This is not a valid value."
+msgstr "Gildið er ekki gilt!"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, fuzzy, kde-format
+msgid "This is not a valid time."
+msgstr "Tímasetningin er ekki gild!"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, fuzzy, kde-format
+msgid "This is not a valid date."
+msgstr "Dagsetningin er ekki gild!"
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "Staðbundin viðföng"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+msgid "Show document settings dialog"
+msgstr "Sýna vísir að athugasemd"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Breyta lit á texta"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Breyta reit"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute fixation"
+msgstr "Nákvæmni"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+msgid "Fill &Down"
+msgstr "&Niður"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+msgid "Fill &Left"
+msgstr "&Vinstri"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+msgid "Fill &Right"
+msgstr "&Hægri"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Velja formúlu"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Skipta út"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Select Font..."
+msgstr "Velja letur..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Breyta leturgerð"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Velja leturstærð"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+#| msgid "Select Font Size"
+msgid "Font Size"
+msgstr "Leturstærð"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Set the text color"
+msgstr "Breyta bakgrunnslit"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Litur texta"
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "&Function..."
+msgstr "Fall"
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "Insert math expression"
+msgstr "&Stærðfræðileg segð..."
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Velja formúlu"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+msgid "Insert a function"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Aðrir..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+msgid "&Goal Seek..."
+msgstr "&Raðir..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, fuzzy, kde-format
+msgid "Cell reference is invalid."
+msgstr "Tímasetningin er ekki gild!"
+
+#: ui/actions/GoalSeek.cpp:75
+#, fuzzy, kde-format
+msgid "Target value is invalid."
+msgstr "Tímasetningin er ekki gild!"
+
+#: ui/actions/GoalSeek.cpp:84
+#, fuzzy, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Reiturinn Gögn Y má ekki vera formúla"
+
+#: ui/actions/GoalSeek.cpp:90
+#, fuzzy, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Reiturinn Gögn Y má ekki vera formúla"
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Fara í reit..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr ""
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+msgid "Goto"
+msgstr "Fara"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+msgid "That is not a valid cell."
+msgstr "Tímasetningin er ekki gild!"
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Decrease Indent"
+msgstr "Minnka inndrátt"
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Increase Indent"
+msgstr "Auka inndrátt"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "Minnka inndrátt"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "Auka inndrátt"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Auka inndrátt"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Minnka inndrátt"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "From &Database..."
+msgstr "Dags."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Dags."
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Raðir..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "Bæta við töflu"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Setja inn raðir"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, fuzzy, kde-format
+msgid "S&pecial Character..."
+msgstr "Líma sérstakt..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "&Link..."
+msgstr "&Tengill..."
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Bæta við töflu"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Link"
+msgstr "Tengill"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Remove a link"
+msgstr "Eyða töflu"
+
+#: ui/actions/Link.cpp:74
+#, fuzzy, kde-format
+msgid "Remove Link"
+msgstr "Fjarlægja tengil"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Fjarlægja tengil"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Setja inn dálk(a)"
+
+#: ui/actions/ListChoose.cpp:28
+#, fuzzy, kde-format
+msgid "Selection List..."
+msgstr "Vallisti..."
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Sameina reiti"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Sameina reiti"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Dissociate Cells"
+msgstr "Aðgreina reiti"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "Fara til vinstri"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Area Name..."
+msgstr "Nafn svæðis"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Bæta við töflu"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+msgid "Replace Named Area"
+msgstr "Eyða reit"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Eyða reit"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Edit or select named areas"
+msgstr "Raða í hækkandi"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Named Areas..."
+msgstr "Sýna svæði..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+msgid "Break Before Row"
+msgstr "Eyða dálk(um)"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+msgid "Row Break"
+msgstr "Raðaskil"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+msgid "Break Before Column"
+msgstr "Eyða dálk(um)"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+msgid "Column Break"
+msgstr "Dálkaskil"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Líma sérstakt..."
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Paste.cpp:153
+#, fuzzy, kde-format
+msgid "Paste with Insertion"
+msgstr "Líma með innsetningu..."
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Bæta við töflu"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "&Pivot Tables..."
+msgstr "Raða..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "Create Pivot Tables"
+msgstr "Raða..."
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Þú verður að velja fleira en einn reit."
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+msgid "Show QTableView..."
+msgstr "Sýna fyrirsögn á röð"
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+msgid "&Sort..."
+msgstr "Raða..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+msgid "Sort &Increasing"
+msgstr "Raða í hækkandi"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:143
+#, fuzzy, kde-format
+msgid "Sort &Decreasing"
+msgstr "Raða í lækkandi"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Raða í hækkandi"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr ""
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Fara til vinstri"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr ""
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Cell Format..."
+msgstr "Formhönnun reita..."
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "Eyða athugasemd"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Feitletrun"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, fuzzy, kde-format
+msgid "Italic"
+msgstr "Skáletrað"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "undirstrikun"
+
+#: ui/actions/Style.cpp:184
+#, fuzzy, kde-format
+msgid "Strike Out"
+msgstr "Yfirstrikað"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Wrap Text"
+msgstr "Lóðréttur texti"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+msgid "Wrap"
+msgstr "Textaskrið"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Lóðréttur texti"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Print cell contents vertically"
+msgstr "Sameina reiti"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Lóðréttur texti"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Lóðréttur texti"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Number Format"
+msgstr "Tölusnið"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Tala"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Scientific Format"
+msgstr "Vísindaleg"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Vísindaleg"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Vísindaleg"
+
+#: ui/actions/Style.cpp:342
+#, fuzzy, kde-format
+msgid "Percent Format"
+msgstr "Prósentuframsetning"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Prósenta"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Prósentu framsetning"
+
+#: ui/actions/Style.cpp:379
+#, fuzzy, kde-format
+msgid "Money Format"
+msgstr "Framsetning peninga"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Peningar"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Framsetning á fjárupphæðum"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Date Format"
+msgstr "Snið á dagsetningu"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Snið"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Time Format"
+msgstr "Tímasnið"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Snið"
+
+#: ui/actions/Style.cpp:480
+#, fuzzy, kde-format
+msgid "Increase Font Size"
+msgstr "Stækka leturstærð"
+
+#: ui/actions/Style.cpp:504
+#, fuzzy, kde-format
+msgid "Decrease Font Size"
+msgstr "Minnka leturstærð"
+
+#: ui/actions/Style.cpp:530
+#, fuzzy, kde-format
+msgid "Increase Precision"
+msgstr "Auka nákvæmni"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:549
+#, fuzzy, kde-format
+msgid "Decrease Precision"
+msgstr "Minnka nákvæmni"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Auka nákvæmni"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Minnka nákvæmni"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Snið töflu"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Bakgrunnslitur"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Set the background color"
+msgstr "Breyta bakgrunnslit"
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create Style From Cell..."
+msgstr "Útlit reitar"
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+msgid "Style From Cell"
+msgstr "Útlit reitar"
+
+#: ui/actions/Styles.cpp:53
+#, fuzzy, kde-format
+msgid "Create Style From Cell"
+msgstr "Útlit reitar"
+
+#: ui/actions/Styles.cpp:61
+#, fuzzy, kde-format
+msgid "The style name cannot be empty."
+msgstr "Nafn töflu má ekki vera autt"
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, fuzzy, kde-format
+msgid "A style with this name already exists."
+msgstr "Skráin er til fyrir"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+msgid "Style Manager..."
+msgstr "Sniðstjóri"
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Fara til vinstri"
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "&Subtotals..."
+msgstr "Raða..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Millisamtölur"
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+msgid "Upper"
+msgstr "Efri"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+#| msgid "Power"
+msgid "Lower"
+msgstr "Neðri"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+msgid "First Letter Upper"
+msgstr "Breyta fyrsta staf í hástaf"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Breyta fyrsta staf í hástaf"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Breyta fyrsta staf í hástaf"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Breyta fyrsta staf í hástaf"
+
+#: ui/actions/TextCase.cpp:95
+#, fuzzy, kde-format
+msgid "Upper Case"
+msgstr "Hástafir"
+
+#: ui/actions/TextCase.cpp:97
+#, fuzzy, kde-format
+msgid "Lower Case"
+msgstr "Lágstafir"
+
+#: ui/actions/TextCase.cpp:99
+#, fuzzy, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Breyta fyrsta staf í hástaf"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Breyta fyrsta staf í hástaf"
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Breyta fyrsta staf í hástaf"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Breyta stafstöðu"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr ""
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Lögmæti..."
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Eyða athugasemd"
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "Eyða töflu"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Eyða töflu"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Lögmætisforsenda :"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -13900,12 +17033,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Eyða reit"
 
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Eyða"
-
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
 msgctxt "(qtundo-format)"
@@ -14143,12 +17270,6 @@ msgstr "Breyti (engin breyting)"
 msgid "Roman"
 msgstr "Roman"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, fuzzy, kde-format
-msgid "Italic"
-msgstr "Skáletrað"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14166,12 +17287,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Eðlilegt"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Feitletrun"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14184,12 +17299,6 @@ msgstr "Litur:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "undirstrikun"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14326,11 +17435,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Prósenta"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14343,11 +17447,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Peningar"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14358,11 +17457,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Vísindaleg"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14567,11 +17661,6 @@ msgstr "Þriggja aukastafa 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, fuzzy, kde-format
-msgid "Style"
-msgstr "Stíll"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 msgctxt "Name of the style"
@@ -14582,11 +17671,6 @@ msgstr "Nafn:"
 #, fuzzy, kde-format
 msgid "Inherit style:"
 msgstr "Erfa stíll:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, fuzzy, kde-format
-msgid "A style with this name already exists."
-msgstr "Skráin er til fyrir"
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -14632,12 +17716,6 @@ msgstr ""
 msgid "Standard"
 msgstr "staðlaður"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, fuzzy, kde-format
-msgid "Center"
-msgstr "Miðjað"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -14669,24 +17747,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, fuzzy, kde-format
-msgid "Top"
-msgstr "Efst"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Miðja"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, fuzzy, kde-format
-msgid "Bottom"
-msgstr "Neðst"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -14849,20 +17909,10 @@ msgstr "Virkja"
 msgid "Apply changes"
 msgstr "Virkja stillingar"
 
-#: ui/ExternalEditor.cpp:60
-#, fuzzy, kde-format
-msgid "Cancel"
-msgstr "Hætta við"
-
 #: ui/ExternalEditor.cpp:61
 #, fuzzy, kde-format
 msgid "Discard changes"
 msgstr "Hætta við breytingar"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Allt"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -14921,347 +17971,8 @@ msgstr ""
 #~ msgstr "Kerfi:"
 
 #, fuzzy
-#~ msgid "&Function..."
-#~ msgstr "Fall"
-
-#, fuzzy
-#~ msgid "Insert math expression"
-#~ msgstr "&Stærðfræðileg segð..."
-
-#, fuzzy
-#~ msgid "From &Database..."
-#~ msgstr "Dags."
-
-#, fuzzy
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Dags."
-
-#~ msgid "Formula Selection"
-#~ msgstr "Velja formúlu"
-
-#, fuzzy
-#~ msgid "Insert a function"
-#~ msgstr "Setja inn dálk(a)"
-
-#~ msgid "Others..."
-#~ msgstr "Aðrir..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Breyta reit"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Breyta lit á texta"
-
-#, fuzzy
-#~ msgid "Show QTableView..."
-#~ msgstr "Sýna fyrirsögn á röð"
-
-#, fuzzy
 #~ msgid "Permute reference fixation"
 #~ msgstr "Nákvæmni"
-
-#, fuzzy
-#~ msgid "Permute fixation"
-#~ msgstr "Nákvæmni"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Insert Data From Database"
-#~ msgstr "Dags."
-
-#, fuzzy
-#~ msgid "Type:"
-#~ msgstr "Tegund:"
-
-#, fuzzy
-#~ msgid "Host:"
-#~ msgstr "Vél:"
-
-#, fuzzy
-#~ msgid "Database name: "
-#~ msgstr "Breyta nafni töflu"
-
-#, fuzzy
-#~ msgid "Select tables:"
-#~ msgstr "Snið töflu"
-
-#, fuzzy
-#~ msgid "Tables"
-#~ msgstr "Töflur"
-
-#, fuzzy
-#~ msgid "Select columns:"
-#~ msgstr "Eyða dálki(um)"
-
-#, fuzzy
-#~ msgid "Table"
-#~ msgstr "Tafla"
-
-#, fuzzy
-#~ msgid "Columns"
-#~ msgstr "Dálkar"
-
-#, fuzzy
-#~ msgid "equals"
-#~ msgstr "er jafnt og"
-
-#, fuzzy
-#~ msgid "not equal"
-#~ msgstr "ekki jafnt"
-
-#, fuzzy
-#~ msgid "in"
-#~ msgstr "in"
-
-#, fuzzy
-#~ msgid "not in"
-#~ msgstr "ekki í"
-
-#, fuzzy
-#~ msgid "like"
-#~ msgstr "eins og"
-
-#, fuzzy
-#~ msgid "greater"
-#~ msgstr "meira"
-
-#, fuzzy
-#~ msgid "greater or equal"
-#~ msgstr "stærri en"
-
-#, fuzzy
-#~ msgid "less or equal"
-#~ msgstr "stærri en"
-
-#, fuzzy
-#~ msgid "Sorted by"
-#~ msgstr "Raða eftir"
-
-#, fuzzy
-#~ msgid "Ascending"
-#~ msgstr "Hækkandi"
-
-#, fuzzy
-#~ msgid "Descending"
-#~ msgstr "Lækkandi"
-
-#, fuzzy
-#~ msgid "Distinct"
-#~ msgstr "Deilling"
-
-#, fuzzy
-#~ msgid "Query Options"
-#~ msgstr "Textakostur:"
-
-#, fuzzy
-#~ msgid "Insert in region"
-#~ msgstr "Setja inn dálk(a)"
-
-#, fuzzy
-#~ msgid "Starting in cell"
-#~ msgstr "Strengur"
-
-#, fuzzy
-#~ msgid "Result"
-#~ msgstr "Útkoma"
-
-#, fuzzy
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Þú getur ekki eytt einu töflunni í möppunni."
-
-#, fuzzy
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Þú getur ekki eytt einu töflunni í möppunni."
-
-#, fuzzy
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Þú getur ekki eytt einu töflunni í möppunni."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Dags."
-
-#, fuzzy
-#~ msgid "The port must be a number"
-#~ msgstr "Tímasetningin er ekki gild!"
-
-#, fuzzy
-#~ msgid "This database contains no tables"
-#~ msgstr "Í skjalinu er engin tafla."
-
-#, fuzzy
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Nafn töflu má ekki vera autt"
-
-#, fuzzy
-#~ msgid "You have to select at least one table."
-#~ msgstr "Þú getur ekki falið síðustu sýnilegu töfluna."
-
-#, fuzzy
-#~ msgid "You have to select at least one column."
-#~ msgstr "Þú getur ekki falið síðustu sýnilegu töfluna."
-
-#, fuzzy
-#~ msgid "Insert function"
-#~ msgstr "Setja inn dálk(a)"
-
-#, fuzzy
-#~ msgid "Help"
-#~ msgstr "Hjálp"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Þetta fall hefur enga stika."
-
-#, fuzzy
-#~ msgid "Description is not available."
-#~ msgstr "Útskýring í dálki"
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "Staðbundin viðföng"
-
-#, fuzzy
-#~ msgid "Show document settings dialog"
-#~ msgstr "Sýna vísir að athugasemd"
-
-#, fuzzy
-#~ msgid "Document Settings"
-#~ msgstr "Stillingar skjals"
-
-#, fuzzy
-#~ msgid "Calculation"
-#~ msgstr "Reikna"
-
-#, fuzzy
-#~ msgid "Case sensitive"
-#~ msgstr "Óháð há-/lágstöfum"
-
-#, fuzzy
-#~ msgid "Precision as shown"
-#~ msgstr "Nákvæmni"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Sjálfvirk"
-
-#, fuzzy
-#~ msgid "String comparison:"
-#~ msgstr "Strengjagildi"
-
-#, fuzzy
-#~ msgid "Regular Expressions"
-#~ msgstr "Regluleg segð"
-
-#, fuzzy
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "Staðbundin viðföng"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Tungumál: %1"
-
-#, fuzzy
-#~ msgid "Default number format: %1"
-#~ msgstr "&Tölustafasnið"
-
-#, fuzzy
-#~ msgid "Long date format: %1"
-#~ msgstr "Dagsetningarsnið"
-
-#, fuzzy
-#~ msgid "Short date format: %1"
-#~ msgstr "Stutt dags.: %1"
-
-#, fuzzy
-#~ msgid "Time format: %1"
-#~ msgstr "Tímasnið"
-
-#, fuzzy
-#~ msgid "Currency format: %1"
-#~ msgstr "Núviriði"
-
-#, fuzzy
-#~ msgid "Custom Lists..."
-#~ msgstr "Raða listum..."
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Custom Lists"
-#~ msgstr "Raða listum..."
-
-#~ msgid "List:"
-#~ msgstr "Listi:"
-
-#~ msgid "Entry:"
-#~ msgstr "Færsla:"
-
-#, fuzzy
-#~ msgid "Add"
-#~ msgstr "Bæta við"
-
-#, fuzzy
-#~ msgid "New"
-#~ msgstr "Nýtt"
-
-#, fuzzy
-#~ msgid "Remove"
-#~ msgstr "Fjarlægja"
-
-#, fuzzy
-#~ msgid "Modify"
-#~ msgstr "Breyta"
-
-#, fuzzy
-#~ msgid "Copy"
-#~ msgstr "Afrita"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Viltu virkilega eyða þessum lista?"
-
-#, fuzzy
-#~ msgid "Remove List"
-#~ msgstr "Fjarlægja lista"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Svæðið er ekki tómt.\n"
-#~ "Viltu halda áfram?"
-
-#, fuzzy
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Raðir..."
-
-#, fuzzy
-#~ msgid "Goal Seek"
-#~ msgstr "Markmiðaleit"
-
-#, fuzzy
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Tímasetningin er ekki gild!"
-
-#, fuzzy
-#~ msgid "Target value is invalid."
-#~ msgstr "Tímasetningin er ekki gild!"
-
-#, fuzzy
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Reiturinn Gögn Y má ekki vera formúla"
-
-#, fuzzy
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Reiturinn Gögn Y má ekki vera formúla"
 
 #, fuzzy
 #~ msgid "Starting..."
@@ -15290,99 +18001,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Current value:"
 #~ msgstr "Núviriði"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Skipta út"
-
-#, fuzzy
-#~ msgid "Selection List..."
-#~ msgstr "Vallisti..."
-
-#, fuzzy
-#~ msgid "More Options"
-#~ msgstr "Fleiri valmöguleikar"
-
-#, fuzzy
-#~ msgid "Search entire sheet"
-#~ msgstr "Lóðréttur texti"
-
-#, fuzzy
-#~ msgid "Search in:"
-#~ msgstr "Leita í:"
-
-#, fuzzy
-#~ msgid "Cell Values"
-#~ msgstr "Gildi"
-
-#, fuzzy
-#~ msgid "Comments"
-#~ msgstr "Athugasemdir"
-
-#, fuzzy
-#~ msgid "Search direction:"
-#~ msgstr "Lóðréttur texti"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "Sýna röð(raðir)"
-
-#, fuzzy
-#~ msgid "Fewer Options"
-#~ msgstr "Textakostur:"
-
-#, fuzzy
-#~ msgid "Cell Format..."
-#~ msgstr "Formhönnun reita..."
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Eyða athugasemd"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Líma sérstakt..."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Paste with Insertion"
-#~ msgstr "Líma með innsetningu..."
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Líma með innsettum reit(um)"
-
-#, fuzzy
-#~ msgid "Insert"
-#~ msgstr "Setja inn"
-
-#~ msgid "Move towards right"
-#~ msgstr "Fara til hægri"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Fara niður"
-
-#~ msgid "Special Paste"
-#~ msgstr "Líma sérstakt"
 
 #, fuzzy
 #~ msgid "Content"
@@ -15417,25 +18035,8 @@ msgstr ""
 #~ msgstr "Deilling"
 
 #, fuzzy
-#~ msgid "Auto-Format..."
-#~ msgstr "Formhönnun reita..."
-
-#, fuzzy
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Formhönnun reita..."
-
-#, fuzzy
-#~ msgid "Sheet Style"
-#~ msgstr "Snið töflu"
-
-#, fuzzy
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Nafn falins dálks:"
 
 #, fuzzy
 #~ msgid "Could not find image %1."
@@ -15446,104 +18047,8 @@ msgstr ""
 #~ msgstr "Gat ekki hlaðið myndina %1"
 
 #, fuzzy
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Fann ekki XML skrána með töflusniði: \"%1\""
-
-#, fuzzy
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Túlkun töflusniðs misfórst í XML skránni %1"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgid "&Auto-Filter"
-#~ msgstr "Sjálffylling"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Sjálffylling"
-
-#, fuzzy
-#~ msgid "Clear All"
-#~ msgstr "Hreinsa allt"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
 #~ msgid "Contents"
 #~ msgstr "Innihald"
-
-#, fuzzy
-#~ msgid "Clear Contents"
-#~ msgstr "Eyða innihaldi"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Breyta texta"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "Breyta lit á ramma"
-
-#~ msgid "Border Color"
-#~ msgstr "Litur jaðra"
-
-#, fuzzy
-#~ msgid "Set the background color"
-#~ msgstr "Breyta bakgrunnslit"
-
-#~ msgid "Background Color"
-#~ msgstr "Bakgrunnslitur"
-
-#, fuzzy
-#~ msgid "Conditional Styles..."
-#~ msgstr "Eiginleikar reita, háðir skilyrðum..."
-
-#, fuzzy
-#~ msgid "Conditional Styles"
-#~ msgstr "Skilyrtir stílar"
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "&Pivot Tables..."
-#~ msgstr "Raða..."
-
-#, fuzzy
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Raða..."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Þú verður að velja fleira en einn reit."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Tölusnið"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -15554,81 +18059,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Prósentuframsetning"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Tímasnið"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Snið á dagsetningu"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Vísindaleg"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Breyta lit á ramma"
-
-#~ msgid "<none>"
-#~ msgstr "<Ekkert>"
-
-#~ msgid "equal to"
-#~ msgstr "jafnt og"
-
-#~ msgid "greater than"
-#~ msgstr "stærri en"
-
-#~ msgid "less than"
-#~ msgstr "minni en"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "samasem eða stærra en"
-
-#~ msgid "equal to or less than"
-#~ msgstr "samasem eða minni en"
-
-#~ msgid "between"
-#~ msgstr "á milli"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "Hraði"
-
-#, fuzzy
-#~ msgid "different to"
-#~ msgstr "ólíkt"
-
-#, fuzzy
-#~ msgid "First Condition"
-#~ msgstr "Fyrsta skilyrði"
-
-#, fuzzy
-#~ msgid "Second Condition"
-#~ msgstr "Annað skilyrði"
-
-#, fuzzy
-#~ msgid "Third Condition"
-#~ msgstr "Þriðja skilyrði"
-
-#~ msgid "Cell is"
-#~ msgstr "Reitur er"
-
-#, fuzzy
-#~ msgid "Cell style"
-#~ msgstr "Reitur er"
-
-#~ msgid "different from"
-#~ msgstr "ólíkt"
-
-#, fuzzy
-#~ msgid "Select Source"
-#~ msgstr "Veldu staf"
 
 #, fuzzy
 #~ msgid "Current Selection"
@@ -15650,10 +18080,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Field"
 #~ msgstr "Gefast upp"
-
-#, fuzzy
-#~ msgid "Add Filter"
-#~ msgstr "Sía"
 
 #, fuzzy
 #~ msgid "Select Option"
@@ -15699,11 +18125,6 @@ msgstr ""
 #~ msgstr "Raðir"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "Aðgerð"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Gildi"
@@ -15721,186 +18142,20 @@ msgstr ""
 #~ msgstr "Velja formúlu"
 
 #, fuzzy
-#~ msgid "Product"
-#~ msgstr "Vara"
-
-#, fuzzy
 #~ msgid "Sort By"
 #~ msgstr "Raða eftir"
-
-#, fuzzy
-#~ msgid "Select Font..."
-#~ msgstr "Velja letur..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Velja leturstærð"
-
-#, fuzzy
-#~| msgid "Select Font Size"
-#~ msgid "Font Size"
-#~ msgstr "Leturstærð"
-
-#~ msgid "Text Color"
-#~ msgstr "Litur texta"
-
-#, fuzzy
-#~ msgid "Set the text color"
-#~ msgstr "Breyta bakgrunnslit"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Breyta leturgerð"
-
-#, fuzzy
-#~ msgid "Style Manager..."
-#~ msgstr "Sniðstjóri"
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Útlit reitar"
-
-#, fuzzy
-#~ msgid "Style From Cell"
-#~ msgstr "Útlit reitar"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgid "Create Style From Cell"
-#~ msgstr "Útlit reitar"
-
-#, fuzzy
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Nafn töflu má ekki vera autt"
-
-#, fuzzy
-#~ msgid "Style Manager"
-#~ msgstr "Sniðstjóri"
-
-#, fuzzy
-#~ msgid "All Styles"
-#~ msgstr "Allir stílar"
-
-#, fuzzy
-#~ msgid "Custom Styles"
-#~ msgstr "Sérsniðnir stílar"
-
-#, fuzzy
-#~ msgid "Hierarchical"
-#~ msgstr "Stigskipt"
-
-#, fuzzy
-#~ msgid "&New..."
-#~ msgstr "&Nýtt..."
-
-#, fuzzy
-#~ msgid "&Modify..."
-#~ msgstr "&Breyta..."
-
-#, fuzzy
-#~ msgid "&Delete..."
-#~ msgstr "&Eyða..."
-
-#, fuzzy
-#~ msgid "style%1"
-#~ msgstr "Snið:"
 
 #, fuzzy
 #~ msgid "Cells..."
 #~ msgstr "Reitur:"
 
 #, fuzzy
-#~ msgid "Insert Cells..."
-#~ msgstr "Setja inn reit(i)..."
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Remove Cells..."
-#~ msgstr "Eyða reit(um)..."
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
 #~ msgid "Delete Cells..."
 #~ msgstr "Setja inn reit(i)..."
 
 #, fuzzy
-#~ msgid "Insert rows"
-#~ msgstr "Bæta inn línu(m)"
-
-#, fuzzy
-#~ msgid "Insert columns"
-#~ msgstr "Setja inn dálk(a)"
-
-#, fuzzy
-#~ msgid "Insert Cells"
-#~ msgstr "Setja inn hólf"
-
-#~ msgid "Move towards left"
-#~ msgstr "Fara til vinstri"
-
-#~ msgid "Move towards top"
-#~ msgstr "Fara upp"
-
-#, fuzzy
-#~ msgid "Remove rows"
-#~ msgstr "Eyða línu(m)"
-
-#, fuzzy
-#~ msgid "Remove columns"
-#~ msgstr "Eyða dálk(um)"
-
-#, fuzzy
-#~ msgid "Remove Cells"
-#~ msgstr "Eyða reit"
-
-#, fuzzy
-#~ msgid "&Subtotals..."
-#~ msgstr "Raða..."
-
-#, fuzzy
-#~ msgid "Subtotals"
-#~ msgstr "Millisamtölur"
-
-#, fuzzy
-#~ msgid "Remove All"
-#~ msgstr "Fjarlægja allt"
-
-#, fuzzy
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Þú getur ekki falið síðustu sýnilegu töfluna."
-
-#, fuzzy
 #~ msgid "Grand Total"
 #~ msgstr "Heildarstig"
-
-#, fuzzy
-#~ msgid "Column '%1' "
-#~ msgstr "Dálkur %1"
-
-#, fuzzy
-#~ msgid "StDev"
-#~ msgstr "Staðalfrávik"
-
-#, fuzzy
-#~ msgid "StDevP"
-#~ msgstr "Skref"
-
-#, fuzzy
-#~ msgid "Var"
-#~ msgstr "Var"
 
 #, fuzzy
 #~ msgid "Use function:"
@@ -15909,41 +18164,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Raða..."
-
-#~ msgid "Goto Cell..."
-#~ msgstr "Fara í reit..."
-
-#, fuzzy
-#~ msgid "Goto"
-#~ msgstr "Fara"
-
-#, fuzzy
-#~ msgid "Break Before Column"
-#~ msgstr "Eyða dálk(um)"
-
-#, fuzzy
-#~ msgid "Column Break"
-#~ msgstr "Dálkaskil"
-
-#, fuzzy
-#~ msgid "Break Before Row"
-#~ msgstr "Eyða dálk(um)"
-
-#, fuzzy
-#~ msgid "Row Break"
-#~ msgstr "Raðaskil"
-
-#, fuzzy
-#~ msgid "Goto Cell"
-#~ msgstr "Fara í reit"
-
-#, fuzzy
-#~ msgid "Enter cell:"
-#~ msgstr "Internet"
-
-#, fuzzy
-#~ msgid "&Consolidate..."
-#~ msgstr "Sameina..."
 
 #, fuzzy
 #~ msgid "Description in rows"
@@ -15956,43 +18176,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Copy data"
 #~ msgstr "Afrita gögn"
-
-#~ msgid "Consolidate"
-#~ msgstr "Sameina"
-
-#, fuzzy
-#~ msgid "Standard Deviation"
-#~ msgstr "Staðalfrávik"
-
-#, fuzzy
-#~ msgid "Variance"
-#~ msgstr "Breytileiki"
-
-#, fuzzy
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Þú getur ekki falið síðustu sýnilegu töfluna."
-
-#, fuzzy
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "Dagsetningin er ekki gild!"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Sviðið\n"
-#~ "%1\n"
-#~ "er of lítið"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Sviðið\n"
-#~ "%1\n"
-#~ "er of stórt"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16008,26 +18191,6 @@ msgstr ""
 #~ "eru ólík að stærð"
 
 #, fuzzy
-#~| msgid "Consolidate"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Sameina"
-
-#, fuzzy
-#~| msgid "The source tables intersect with the destination table"
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Töflunum tveimur sker saman"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Sviðið\n"
-#~ "%1\n"
-#~ " er ógilt"
-
-#, fuzzy
 #~ msgid "Function:"
 #~ msgstr "Aðgerð:"
 
@@ -16039,96 +18202,13 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "Uppgefnar tilvísanir"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Breyta horni..."
-
-#, fuzzy
-#~| msgid "Angle:"
-#~ msgid "Angle"
-#~ msgstr "Horn"
-
-#, fuzzy
-#~ msgid "Increase Precision"
-#~ msgstr "Auka nákvæmni"
-
-#, fuzzy
-#~ msgid "Decrease Precision"
-#~ msgstr "Minnka nákvæmni"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Auka nákvæmni"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Minnka nákvæmni"
-
-#~ msgid "Change Angle"
-#~ msgstr "Breyta horni"
-
-#~ msgid "Angle:"
-#~ msgstr "Horn:"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Breyta horni"
-
-#, fuzzy
-#~ msgid "Area Name..."
-#~ msgstr "Nafn svæðis"
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Named Areas..."
-#~ msgstr "Sýna svæði..."
-
-#, fuzzy
-#~ msgid "Named Areas"
-#~ msgstr "Eyða reit"
-
-#, fuzzy
-#~ msgid "Edit or select named areas"
-#~ msgstr "Raða í hækkandi"
-
-#, fuzzy
-#~ msgid "Add Named Area"
-#~ msgstr "Raða í hækkandi"
-
-#, fuzzy
-#~ msgid "Enter the area name:"
-#~ msgstr "Internet"
-
-#, fuzzy
-#~ msgid "Replace Named Area"
-#~ msgstr "Eyða reit"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Eyða reit"
-
 #, fuzzy
 #~ msgid "&Select"
 #~ msgstr "Valið"
 
 #, fuzzy
-#~ msgid "Area: %1"
-#~ msgstr "svæði: %1"
-
-#, fuzzy
 #~ msgid "&Edit..."
 #~ msgstr "Br&eyta..."
-
-#, fuzzy
-#~ msgid "&Remove"
-#~ msgstr "&Fjarlægja"
 
 #, fuzzy
 #~ msgid "New Named Area"
@@ -16137,142 +18217,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Edit Named Area"
 #~ msgstr "Raða í hækkandi"
-
-#, fuzzy
-#~| msgid "Do you really want to remove this area name?"
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Viltu virkilega færa þetta svæðisnafn?"
-
-#, fuzzy
-#~ msgid "Remove Named Area"
-#~ msgstr "Eyða reit"
-
-#, fuzzy
-#~ msgid "Cells:"
-#~ msgstr "Reitur:"
-
-#, fuzzy
-#~ msgid "Sheet:"
-#~ msgstr "Blað:"
-
-#, fuzzy
-#~ msgid "Area name:"
-#~ msgstr "Nafn svæðis"
-
-#, fuzzy
-#~ msgid "Align Left"
-#~ msgstr "Jafna til vinstri"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Align Center"
-#~ msgstr "Jafna"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Align Right"
-#~ msgstr "Jafna til hægri"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Align Top"
-#~ msgstr "Ofanjafna"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Sameina reiti"
-
-#, fuzzy
-#~ msgid "Align Middle"
-#~ msgstr "Miðjafna"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Sameina reiti"
-
-#, fuzzy
-#~ msgid "Align Bottom"
-#~ msgstr "Neðanjafna"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Sameina reiti"
-
-#, fuzzy
-#~ msgid "Border Left"
-#~ msgstr "Vinstri jaðar"
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Fara til vinstri"
-
-#~ msgid "Border Right"
-#~ msgstr "Hægri jaðar"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Fara til vinstri"
-
-#~ msgid "Border Top"
-#~ msgstr "Efri jaðar"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Fara til vinstri"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Neðri jaðar"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgid "All Borders"
-#~ msgstr "Allir jaðrar"
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgid "No Borders"
-#~ msgstr "Allir jaðrar"
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Fara til vinstri"
-
-#~ msgid "Border Outline"
-#~ msgstr "Útlínur jaðra"
-
-#, fuzzy
-#~| msgid "Border Outline"
-#~ msgid "Outline"
-#~ msgstr "Efnisskipan"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Breyta lóðréttri jöfnun"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Breyta lóðréttri jöfnun"
 
 #, fuzzy
 #~ msgid "Australia"
@@ -18307,74 +20251,6 @@ msgstr ""
 #~ msgstr "Simbabve dollari"
 
 #, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Strike Out"
-#~ msgstr "Yfirstrikað"
-
-#, fuzzy
-#~ msgid "Increase Font Size"
-#~ msgstr "Stækka leturstærð"
-
-#, fuzzy
-#~ msgid "Decrease Font Size"
-#~ msgstr "Minnka leturstærð"
-
-#, fuzzy
-#~ msgid "Wrap Text"
-#~ msgstr "Lóðréttur texti"
-
-#, fuzzy
-#~ msgid "Wrap"
-#~ msgstr "Textaskrið"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Lóðréttur texti"
-
-#, fuzzy
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Sameina reiti"
-
-#, fuzzy
-#~ msgid "Percent Format"
-#~ msgstr "Prósentuframsetning"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgid "Money Format"
-#~ msgstr "Framsetning peninga"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Lóðréttur texti"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Lóðréttur texti"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Prósentu framsetning"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Framsetning á fjárupphæðum"
-
-#, fuzzy
 #~ msgid "&Data Format"
 #~ msgstr "Dagsetningarsnið"
 
@@ -18412,9 +20288,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "Sjálfgefin hæð (20)"
 
-#~ msgid "Height:"
-#~ msgstr "Hæð:"
-
 #, fuzzy
 #~ msgid "Set the height of the cell."
 #~ msgstr "Breyta lit á texta"
@@ -18423,516 +20296,29 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "Sjálfgefin breydd (60)"
 
-#~ msgid "Width:"
-#~ msgstr "Breidd:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Bæta við athugasemd"
-
-#, fuzzy
-#~ msgid "Increase Indent"
-#~ msgstr "Auka inndrátt"
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "Auka inndrátt"
-
-#, fuzzy
-#~ msgid "Decrease Indent"
-#~ msgstr "Minnka inndrátt"
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "Minnka inndrátt"
-
-#, fuzzy
-#~ msgid "Upper Case"
-#~ msgstr "Hástafir"
-
-#, fuzzy
-#~ msgid "Upper"
-#~ msgstr "Efri"
-
-#, fuzzy
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Breyta fyrsta staf í hástaf"
-
-#, fuzzy
-#~ msgid "Lower Case"
-#~ msgstr "Lágstafir"
-
-#, fuzzy
-#~| msgid "Power"
-#~ msgid "Lower"
-#~ msgstr "Neðri"
-
-#, fuzzy
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Breyta fyrsta staf í hástaf"
-
-#, fuzzy
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Breyta fyrsta staf í hástaf"
-
-#, fuzzy
-#~ msgid "First Letter Upper"
-#~ msgstr "Breyta fyrsta staf í hástaf"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Comment..."
-#~ msgstr "Athugasemd..."
-
-#, fuzzy
-#~ msgid "Remove Comment"
-#~ msgstr "Fjarlægja athugasemd"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Breyta fyrsta staf í hástaf"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Breyta fyrsta staf í hástaf"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Breyta fyrsta staf í hástaf"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Fjarlægja athugasemd"
-
-#, fuzzy
-#~ msgid "Clear Comment"
-#~ msgstr "Eyða innihaldi"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Breyta stafstöðu"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Auka inndrátt"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Minnka inndrátt"
-
-#, fuzzy
-#~ msgid "Cell Comment"
-#~ msgstr "Athugasemd við reit"
-
-#, fuzzy
-#~ msgid "&Left"
-#~ msgstr "&Vinstri"
-
-#, fuzzy
-#~ msgid "&Right"
-#~ msgstr "&Hægri"
-
 #, fuzzy
 #~ msgid "&Up"
 #~ msgstr "&Upp"
-
-#, fuzzy
-#~ msgid "&Down"
-#~ msgstr "&Niður"
-
-#, fuzzy
-#~ msgid "Autosum"
-#~ msgstr "SjálfSumma"
-
-#, fuzzy
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Setja inn dálk(a)"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Velja formúlu"
-
-#, fuzzy
-#~ msgid "From &Text File..."
-#~ msgstr "Textaskrá"
-
-#, fuzzy
-#~ msgid "Text File"
-#~ msgstr "Textaskrá"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "Bæta við töflu"
 
 #, fuzzy
 #~ msgid "From &Clipboard..."
 #~ msgstr "Setja inn dálk(a)"
 
 #, fuzzy
-#~ msgid "Clipboard"
-#~ msgstr "Klippispjald"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "&Text to Columns..."
-#~ msgstr "Eyða dálk(um)"
-
-#, fuzzy
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Setja inn dálk(a)"
-
-#, fuzzy
-#~ msgid "Text to Columns"
-#~ msgstr "Texta í dálka"
-
-#, fuzzy
-#~ msgid "Cannot open input file."
-#~ msgstr "Get ekki opnað inntaksskrá."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Setja inn dálk(a)"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Setja inn dálk(a)"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Texta í dálka"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Sameina reiti"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Sameina reiti"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgid "Dissociate Cells"
-#~ msgstr "Aðgreina reiti"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Fara til vinstri"
-
-#, fuzzy
-#~ msgid "Resize Column..."
-#~ msgstr "Breyta stærð dálks..."
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "Breyta lit á texta"
-
-#, fuzzy
-#~ msgid "Insert Columns"
-#~ msgstr "Setja inn dálka"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Remove Columns"
-#~ msgstr "Fjarlægja dálka"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Hide Columns"
-#~ msgstr "Fela dálka"
-
-#, fuzzy
-#~ msgid "Show Columns..."
-#~ msgstr "Sýna dálk(a)"
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "Sýna dálk(a)"
-
-#, fuzzy
-#~ msgid "Equalize Column"
-#~ msgstr "Jafna dálk"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Show Columns"
-#~ msgstr "Sýna dálka"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Sýna dálk(a)"
-
-#, fuzzy
-#~ msgid "Resize Row..."
-#~ msgstr "Breyta stærð línu..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "Breyta lit á texta"
-
-#, fuzzy
-#~ msgid "Insert Rows"
-#~ msgstr "Setja inn línur"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Remove Rows"
-#~ msgstr "Fjarlægja raðir"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Hide Rows"
-#~ msgstr "Fela línu"
-
-#, fuzzy
-#~ msgid "Show Rows..."
-#~ msgstr "Sýna röð(raðir)"
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "Sýna röð(raðir)"
-
-#, fuzzy
-#~ msgid "Equalize Row"
-#~ msgstr "Jafna röð"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Show Rows"
-#~ msgstr "Sýna röð(raðir)"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Sýna röð(raðir)"
-
-#, fuzzy
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Stilla línu og dálk"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Stilla reit"
-
-#, fuzzy
 #~ msgid "Delete Columns"
 #~ msgstr "Eyða dálkum"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Stilla röð"
 
 #, fuzzy
 #~ msgid "Delete Rows"
 #~ msgstr "Eyða röðum"
 
 #, fuzzy
-#~ msgid "Resize Row"
-#~ msgstr "Breyta stærð á röð"
-
-#, fuzzy
-#~ msgid "Resize Column"
-#~ msgstr "Breyta stærð á dálki"
-
-#, fuzzy
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Nafn falins dálks:"
-
-#, fuzzy
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Nafn falins dálks:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Dálkur: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Röð: %1"
-
-#, fuzzy
-#~ msgid "&Link..."
-#~ msgstr "&Tengill..."
-
-#, fuzzy
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Link"
-#~ msgstr "Tengill"
-
-#, fuzzy
-#~ msgid "Remove Link"
-#~ msgstr "Fjarlægja tengil"
-
-#, fuzzy
-#~ msgid "Remove a link"
-#~ msgstr "Eyða töflu"
-
-#, fuzzy
-#~ msgid "Insert Link"
-#~ msgstr "Setja inn tengil"
-
-#, fuzzy
 #~ msgid "Edit Link"
 #~ msgstr "Breyta tengli"
 
 #, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Fjarlægja tengil"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Setja inn dálk(a)"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#, fuzzy
-#~ msgid "Link to Internet Address"
-#~ msgstr "Netslóð:"
-
-#, fuzzy
-#~ msgid "Text to display:"
-#~ msgstr "Texti sem á að sýna:"
-
-#, fuzzy
-#~ msgid "Internet address:"
-#~ msgstr "Internetslóð:"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "Netfang:"
-
-#, fuzzy
-#~ msgid "Link to Email Address"
-#~ msgstr "Netslóð:"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "Texti svæðis er tómur!"
-
-#, fuzzy
-#~ msgid "Subject:"
-#~ msgstr "Viðfangsefni:"
-
-#, fuzzy
-#~ msgid "File"
-#~ msgstr "Skrá"
-
-#, fuzzy
-#~ msgid "Link to File"
-#~ msgstr "Stærð reitar"
-
-#~ msgid "File location:"
-#~ msgstr "Staðsetning:"
-
-#, fuzzy
-#~ msgid "Recent file:"
-#~ msgstr "Nýleg skrá:"
-
-#, fuzzy
-#~ msgid "No Entries"
-#~ msgstr "Engar færslur"
-
-#, fuzzy
-#~ msgid "Link to Cell"
-#~ msgstr "Stærð reitar"
-
-#, fuzzy
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Eyða reit"
-
-#, fuzzy
-#~ msgid "&Sort..."
-#~ msgstr "Raða..."
-
-#, fuzzy
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Raða í lækkandi"
-
-#, fuzzy
-#~ msgid "Sort &Increasing"
-#~ msgstr "Raða í hækkandi"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Raða í hækkandi"
-
-#, fuzzy
 #~ msgid "Use custom list"
 #~ msgstr "Raða listum..."
-
-#~ msgid "Column %1"
-#~ msgstr "Dálkur %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Röð %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "Tala"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "Sýna fyrirsögn á dálk"
-
-#~ msgid "Sort"
-#~ msgstr "Raða"
-
-#, fuzzy
-#~ msgid "Case Insensitive"
-#~ msgstr "Óháð há-/lágstöfum"
 
 #, fuzzy
 #~ msgid "Move Up"
@@ -18962,205 +20348,9 @@ msgstr ""
 #~ msgid "Direction"
 #~ msgstr "Stefna"
 
-#~ msgid "Validity..."
-#~ msgstr "Lögmæti..."
-
-#~ msgid "Validity"
-#~ msgstr "Lögmæti"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "Eyða töflu"
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Eyða athugasemd"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Eyða töflu"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Lögmætisforsenda :"
-
-#, fuzzy
-#~ msgid "Clear &All"
-#~ msgstr "Hreinsa allt"
-
 #, fuzzy
 #~ msgid "&Criteria"
 #~ msgstr "Raða í hækkandi"
-
-#~ msgid "Allow:"
-#~ msgstr "Leyfa:"
-
-#~ msgid "Integer"
-#~ msgstr "Heiltala"
-
-#, fuzzy
-#~ msgid "Text Length"
-#~ msgstr "Texta lengd"
-
-#, fuzzy
-#~ msgid "List"
-#~ msgstr "Listi"
-
-#~ msgid "Data:"
-#~ msgstr "Gögn:"
-
-#, fuzzy
-#~ msgid "Minimum:"
-#~ msgstr "Lágmark:"
-
-#, fuzzy
-#~ msgid "Maximum:"
-#~ msgstr "Hámark:"
-
-#, fuzzy
-#~ msgid "Date:"
-#~ msgstr "Dagsetning:"
-
-#, fuzzy
-#~ msgid "Date minimum:"
-#~ msgstr "Lágmarks dagsetning"
-
-#, fuzzy
-#~ msgid "Date maximum:"
-#~ msgstr "Hámarks dagsetning"
-
-#, fuzzy
-#~ msgid "Time:"
-#~ msgstr "Tími:"
-
-#, fuzzy
-#~ msgid "Time minimum:"
-#~ msgstr "Lágmarkstími"
-
-#, fuzzy
-#~ msgid "Time maximum:"
-#~ msgstr "Hámarks tími"
-
-#, fuzzy
-#~ msgid "Number:"
-#~ msgstr "Fjöldi:"
-
-#, fuzzy
-#~ msgid "Entries:"
-#~ msgstr "Færslur:"
-
-#, fuzzy
-#~ msgid "&Error Alert"
-#~ msgstr "Villuboð"
-
-#~ msgid "Action:"
-#~ msgstr "Aðgerð:"
-
-#, fuzzy
-#~ msgid "Stop"
-#~ msgstr "Stöðva"
-
-#, fuzzy
-#~ msgid "Warning"
-#~ msgstr "Aðvörun"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Titill:"
-
-#~ msgid "Message:"
-#~ msgstr "Skilaboð:"
-
-#, fuzzy
-#~ msgid "Input Help"
-#~ msgstr "Innsláttarhjálp"
-
-#, fuzzy
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Sýna innsláttarhjálp þegar reitur er valinn"
-
-#, fuzzy
-#~ msgid "This is not a valid value."
-#~ msgstr "Gildið er ekki gilt!"
-
-#, fuzzy
-#~ msgid "This is not a valid time."
-#~ msgstr "Tímasetningin er ekki gild!"
-
-#, fuzzy
-#~ msgid "This is not a valid date."
-#~ msgstr "Dagsetningin er ekki gild!"
-
-#~ msgid "&Series..."
-#~ msgstr "&Raðir..."
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Setja inn raðir"
-
-#, fuzzy
-#~ msgid "Select Character"
-#~ msgstr "Veldu staf"
-
-#, fuzzy
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Setja valda stafinn inn í textann"
-
-#~ msgid "Series"
-#~ msgstr "Summa"
-
-#, fuzzy
-#~ msgid "Insert Values"
-#~ msgstr "Bæta við töflu"
-
-#, fuzzy
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Rúmfræðileg"
-
-#, fuzzy
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Rúmfræðileg"
-
-#, fuzzy
-#~ msgid "Start value:"
-#~ msgstr "Upphafsgildi"
-
-#, fuzzy
-#~ msgid "Stop value:"
-#~ msgstr "Hágildi"
-
-#, fuzzy
-#~ msgid "Step value:"
-#~ msgstr "Upphafsgildi"
-
-#, fuzzy
-#~ msgid "End and start value must be positive."
-#~ msgstr "Sjálfgefin viðföng"
-
-#, fuzzy
-#~ msgid "Step is negative."
-#~ msgstr "Skrefið er neikvætt !"
-
-#, fuzzy
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Skrefgildið þarf að vera hærra en 0.\n"
-#~ "Annars er línulega röðin óendanleg!"
-
-#, fuzzy
-#~ msgid "S&pecial Character..."
-#~ msgstr "Líma sérstakt..."
 
 #, fuzzy
 #~ msgid "Internet address is empty"
@@ -23780,11 +24970,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "Snið:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Millisamtölur"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -34883,10 +36068,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Document's Locale Settings"
 #~ msgstr "Staðbundin viðföng"
-
-#, fuzzy
-#~ msgid "Inserting Text File"
-#~ msgstr "Setja inn dálk(a)"
 
 #, fuzzy
 #~| msgid "Value (array)"

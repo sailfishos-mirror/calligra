@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcells\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2026-03-11 15:48+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -148,8 +148,13 @@ msgstr "Otsikko"
 msgid "Header1"
 msgstr "Otsikko1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Oletus"
@@ -181,7 +186,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Teksti"
@@ -252,7 +258,8 @@ msgstr "<p><b>Paluutyyppi:</b> %1</p>"
 msgid "Syntax"
 msgstr "Syntaksi"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Parametrit"
@@ -894,14 +901,15 @@ msgstr "CARY(12;0) palauttaa 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Luku"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Muotoilu"
@@ -958,6 +966,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") palauttaa 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Tietokanta"
@@ -1244,6 +1254,7 @@ msgstr "Päivämäärä ja aika"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1317,7 +1328,8 @@ msgstr "DAYS360(\"22.2.2002\"; \"21.4.2002\"; FALSE) palauttaa 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Aika"
@@ -4865,6 +4877,7 @@ msgid "Regular payments"
 msgstr "Säännöllinen lauseke"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Tyyppi"
@@ -5160,12 +5173,19 @@ msgstr "Käsin"
 msgid "Automatic"
 msgstr "Automaattinen"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Tiedot"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Virhe"
@@ -5990,7 +6010,7 @@ msgstr ""
 msgid "Math"
 msgstr "Matemaattiset"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Funktio"
@@ -6478,6 +6498,7 @@ msgid "Range"
 msgstr "Alue"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Ehdot"
@@ -8053,6 +8074,7 @@ msgid "Row"
 msgstr "Rivi"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Sarake"
@@ -12595,7 +12617,7 @@ msgid "&Go"
 msgstr "&Siirry"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "&Lisää"
@@ -12613,7 +12635,7 @@ msgid "F&ormat"
 msgstr "M&uotoile"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Yhdistä solut"
@@ -12692,8 +12714,8 @@ msgstr "Aktivoi"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Fontti"
@@ -13106,14 +13128,16 @@ msgstr "Sivun rajat:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Vaakasuunnassa"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Pystysuunnassa"
@@ -13140,13 +13164,15 @@ msgid "Up"
 msgstr "Ylemmäs"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Oikea"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Vasen"
@@ -13158,36 +13184,50 @@ msgstr "Alas, ensimmäinen sarake"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Ei mikään"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Summa"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Minimi"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Maksimi"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Keskiarvo"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Lukumäärä"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -13591,7 +13631,8 @@ msgstr "Poista valinta"
 msgid "Move selected sheet to the bottom"
 msgstr "Siirrä valittu laskentataulukko alimmas"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Erota pien- ja suuraakkoset"
@@ -13792,6 +13833,7 @@ msgid "Anchor"
 msgstr "Ankkuri"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Solu"
@@ -13811,7 +13853,7 @@ msgstr "Vaihtaa muodon ankkurointia"
 msgid "Next Sheet"
 msgstr "Seuraava laskentataulukko"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Seuraava"
@@ -13826,7 +13868,7 @@ msgstr "Siirry seuraavaan laskentataulukkoon"
 msgid "Previous Sheet"
 msgstr "Edellinen laskentataulukko"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Edellinen "
@@ -14034,7 +14076,7 @@ msgstr ""
 "Olet poistamassa valittua taulukkoa.\n"
 "Haluatko jatkaa?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Syötä nimi:"
@@ -14094,14 +14136,14 @@ msgstr "LukumääräA: "
 msgid "%1x%2"
 msgstr "%1 × %2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr ""
 "Muuta tekstiväriä\n"
 "tekstivärin muuttaminen"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr ""
@@ -14110,11 +14152,3221 @@ msgstr ""
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr ""
 "Muuta reunoja\n"
 "reunojen muuttaminen"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Lisää sarakkeita"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Lisää rivejä"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Poista sarakkeita"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Poista rivejä"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Lisää uuden rivin laskentataulukkoon"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Poistaa rivin laskentataulukosta"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Lisää uuden sarakkeen laskentataulukkoon"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Poistaa valitut sarakkeet laskentataulukosta"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Piilota sarakkeet"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Piilota rivit"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Näytä sarakkeet"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Näytä rivit"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Näyttää piilotetut rivit valitulla alueella."
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "Yhdistä valittu alue"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Näytä valinnan piilosarakkeet"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "Yhdistä valittu alue"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Muuta sarakkeet yhtä leveiksi"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Muuta rivit saman korkuisiksi"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Muuttaa valittujen rivien korkeuden samaksi."
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Muuttaa valitut sarakkeet samankokoisiksi"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Sovita sarake"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Sovita rivi"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Sovita rivi ja sarake"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "Muokkaa rivin ja sarakkeen kokoa niin että sisältö mahtuu siihen."
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "Muokkaa rivin ja sarakkeen kokoa niin että sisältö mahtuu siihen."
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "Muokkaa rivin ja sarakkeen kokoa niin että sisältö mahtuu siihen."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Näytä sarakkeet…"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Näytä rivit…"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Näytä piilosarakkeet"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Näytä piilotetut rivit"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Sarake: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Rivi: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Muuta sarakkeen kokoa…"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Muuta rivin kokoa…"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Muuta rivin korkeutta"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Muuta sarakkeen leveyttä"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Tasaa vasemmalle"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Tasaa solun sisältö vasempaan reunaan"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr ""
+"Muuta vaakatasausta\n"
+"vaakatasauksen muuttaminen"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Tasaa oikealle"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Tasaa solun sisältö oikeaan reunaan"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Keskitä vaakasuunnassa"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Keskitä solun sisältö vaakasuunnassa"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Keskitä"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Tasaa ylös"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Tasaa solun sisältö solun yläreunaan"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Ylös"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr ""
+"Muuta pystytasausta\n"
+"pystytasauksen muuttaminen"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Tasaa alas"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Tasaa solun sisältö solun alareunaan"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Alas"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Keskitä pystysuunnassa"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Keskitä solun sisältö pystysuunnassa"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Keskitä"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Muuta kulmaa…"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Muuta kulmaa, jossa solun sisältö tulostetaan"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Kulma"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr ""
+"Valitse kulma\n"
+"kulman valinta"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Automaattisuodatin"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Lisää automaattisen suodattimen solualueelle"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr ""
+"Automaattisuodatus\n"
+"automaattisuodatus"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Käytä ennalta määriteltyä tyyliä valituille soluille."
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Automaattimuotoilu…"
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Taulukkotyylistä XML-tiedostoa ”%1” ei löydy."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Jäsennysvirhe taulukkotyylisessä XML-tiedostossa %1."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr ""
+"Automaattimuotoilu\n"
+"automaattimuotoilu"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Automaattisumma"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Summa"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Automaattisumma"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Vasen reunaviiva"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Aseta valitulle alueelle vasen reunaviiva"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Oikea reunaviiva"
+
+# ”Oikea reunaviiva” kuulostaa ”väärän” vastakohdalta, mutta jos tämä esiintyy siinä missä muutkin viiva-asetukset, tulkintavaikeutta ei jääne?
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Aseta valitulle alueelle oikea reunaviiva"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Yläreunaviiva"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Aseta valitulle alueelle yläreunaviiva"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Alareunaviiva"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Aseta valitulle alueelle alareunaviiva"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Kaikki reunaviivat"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Aseta reunaviiva valitun solun kaikkien solujen ympärille"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Kaikki"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Ei reunoja"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Poista valitun alueen kaikki reunaviivat"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Ulkoreunaviiva"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Aseta valitulle alueelle ulkoreunaviiva"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Ulkoreunaviiva"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Reunaväri"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Valitse uusi reunaväri"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr ""
+"Vaihda reunaviivan väriä\n"
+"reunaviivan värin vaihto"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Lisää soluja…"
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Lisää tyhjän solun laskentataulukkoon"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Poista soluja…"
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Poistaa valitut solut laskentataulukosta."
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Tyhjennä kaikki"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Poista nykyisen solun sisältö ja muotoilut"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Poista sisältö"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Poistaa valitun solun sisältö"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr ""
+"Poista teksti\n"
+"tekstin poisto"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr ""
+"Poista\n"
+"poisto"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Kommentti…"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Muokkaa tämän solun kommenttia"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Poista kommentti"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Poista tämän solun kommentti"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Poista kommentti"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr ""
+"Poista kommentti\n"
+"kommentin poisto"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr ""
+"Lisää kommentti\n"
+"kommentin lisäys"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Ehdolliset tyylit…"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Aseta solun tyyli määräehtojen mukaan"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Ehdolliset tyylit"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Poista ehdolliset solutyylit"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Poista ehdolliset tyylit"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr ""
+"Poista ehdollinen muotoilu\n"
+"ehdollisen muotoilun poisto"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr ""
+"Lisää ehdollinen muotoilu\n"
+"ehdollisen muotoilun lisäys"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Kokoa…"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+"Luo alueen, jossa on yhteenvetotietoja samankaltaisten alueiden tiedoista"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr ""
+"Kokoa\n"
+"kokoaminen"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Kopio solu leikepöydälle."
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Siirrä solu leikepöydälle."
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "&Tekstitiedostosta…"
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "Lisää tietoja tekstitiedostosta kohdistimen kohdalle tai valintaan"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Tekstitiedosto"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "Tuo CSV-tiedosto"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "CSV-tiedostot (*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Tuontitiedostoa ei voida avata."
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "Tekstitiedoston lisääminen"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr ""
+"Lisätään tekstitiedostoa\n"
+"tekstitiedoston lisäys"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Lisäys leikepöydältä"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"Lisää CSV-tiedot leikepöydältä kohdistimen sijaintiin tai valittuun "
+"alueeseen."
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Leikepöytä"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Leikepöydällä ei ole tietoa."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Leikepöydällä ei ole käytettävää tietoa."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Lisäys leikepöydältä"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr ""
+"Lisäys leikepöydältä\n"
+"lisäys leikepöydältä"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Teksti sarakkeisiin…"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Levittää solujen sisällön useampaan sarakkeeseen "
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Teksti sarakkeiksi"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr ""
+"Teksti sarakkeiksi\n"
+"teksti sarakkeiksi"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Luo omia luetteloita lajittelua ja automaattista täyttöä varten"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Omat luettelot…"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Lisää nimetty alue"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Syötä alueen nimi:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Valitse kulma"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Kulma:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr ""
+"Automaattimuotoilu\n"
+"automaattimuotoilu"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Valitse taulukko, jonka asetuksia muutetaan:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Valitse merkki"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Lisää valittu merkki tekstiin"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Solun kommentti"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<ei mikään>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "yhtä suuri kuin"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "suurempi kuin"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "pienempi kuin"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "yhtä suuri tai suurempi kuin"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "yhtä suuri tai pienempi kuin"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "välissä"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "alueen ulkopuolella"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "eri kuin"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Ensimmäinen ehto"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Toinen ehto"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Kolmas ehto"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Solu on"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Solun tyyli"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "eri kuin"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "Jos ensimmäinen arvo on numero, toisenkin arvon täytyy olla numero."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Jos ensimmäinen arvo on merkkijono, toisenkin arvon täytyy olla merkkijono."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Kokoa"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Tulo"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Keskihajonta"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Varianssi"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Määritä vähintään yksi lähdealue."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 ei ole kelvollinen solualue."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Alue\n"
+"%1\n"
+"on liian pieni"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Alue\n"
+"%1\n"
+"on liian suuri"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "Lähde- ja kohdealueet lomittuvat."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Alue\n"
+"%1\n"
+"on virheellinen"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Lisää tietoja tietokannasta"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Tyyppi:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Tietokannan nimi: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Palvelin:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Portti:\n"
+"(jos tarvitaan)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Käyttäjätunnus:\n"
+"(jos tarvitaan)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Salasana:\n"
+"(jos tarvitaan)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Valitse taulukot:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Taulukot"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Valitse sarakkeet:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Taulukko"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Sarakkeet"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Kaikki alla olevat ehdot täyttyvät (AND)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Mikä tahansa alla oleva ehto täyttyy (OR)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "yhtä suuri kuin"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "eri suuri kuin"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "joukossa"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "ei joukossa"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "kuten"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "suurempi kuin"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "pienempi"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "suurempi tai yhtä suuri"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "pienempi tai yhtä suuri"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Lajittele kentän"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "mukaan nousevasti"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "mukaan laskevasti"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Vain ainutkertaiset tietueet"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Kyselyn asetukset"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL-kysely:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Lisää alueeseen"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Aloita solusta"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Tulos"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Tässä kohdassa ei voi määritellä taulua."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Määrittele kelvollinen alue."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Määritelty solu on virheellinen."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Kyselyn suoritus epäonnistui."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Tämä kysely ei palauttanut tietoja."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr ""
+"Lisää tietoja tietokannasta\n"
+"tietojen lisääminen tietokannasta"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Portin täytyy olla luku"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Yhdistetään tietokantaan…"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Yhdistetty. Haetaan taulukkojen tietoja…"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Tietokanta ei sisällä taulukkoja"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Ajuria ei voitu ladata."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Haetaan taulujen metadataa…"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Valitse vähintään yksi taulukko."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Valitse vähintään yksi sarake."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"Merkkejä ”*” ja ”?” ei voi käyttää SQL:ssä korvausmerkkeinä. Vastaavat "
+"korvausmerkit ovat ”%” or ”_”. Vaihdetaanko niiksi?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr ""
+"Korvaa\n"
+"korvaus"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Tiedoston asetukset"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, kde-format
+msgid "Calculation"
+msgstr "Laskenta"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr "Maa-asetus"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr "Erota pien- ja suuraakkoset"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, kde-format
+msgid "Precision as shown"
+msgstr "Tarkkuus kuten näkyy"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr "Hakuehtojen on sovittava koko soluun"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Automaattinen"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr "Merkkijonovertailu:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Regular Expressions"
+msgstr "Säännölliset lausekkeet"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr "Jokerimerkit"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr "Tyhjä vuosi:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "Käytä &järjestelmän kotoistusasetuksia"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, kde-format
+msgid "Language: %1 (%2)"
+msgstr "Kieli: %1 (%2)"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Oletuslukumuoto: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Pitkä päivämäärämuoto: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Lyhyt päivämäärämuoto: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Kellonaikamuoto: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Valuuttamuoto: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Lisää asetuksia"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Etsi koko taulukko"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Etsi:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Solun arvot"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Kommentit"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Hakusuunta:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Ensin poikittain, sitten alas"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Ensin alas, sitten poikittain"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Vähemmän asetuksia"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Related Functions"
+msgid "Set Function"
+msgstr "Samantapaisia funktioita"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Lisää funktio"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Ohje"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Tällä funktiolla ei ole parametreja."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Kuvausta ei ole saatavilla"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Tavoitteen haku"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Siirry soluun"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Anna solu:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Lisää"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Siirry oikealle"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Siirry alaspäin"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Lisää rivejä"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Lisää sarakkeita"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Lisää soluja"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Poista"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Siirry vasemmalle"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Siirry ylöspäin"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Poista rivejä"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Poista sarakkeita"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Poista soluja"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Lisää linkki"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Linkki internetosoitteeseen"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Näytettävä teksti:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Internet-osoite:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "Sähköposti"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "Linkki sähköpostiosoitteeseen"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "Sähköpostiosoite:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Aihe"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Tiedosto"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Linkki tiedostoon"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Tiedoston sijainti:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Viimeksi avattu tiedosto:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Ei merkintöjä"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Linkki soluun"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Solu tai nimetty alue:"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Omat luettelot"
+
+# ”Aakkoslaji” on minusta kökkö, mutta onko parempaakaan vaihtoehtoa?
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr ""
+"Vaihda aakkoslajia\n"
+"aakkoslajin vaihto"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Luettelo:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Arvo:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Lisää"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Peru"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Uusi"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Muokkaa"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Kopioi"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Haluatko varmasti poistaa luettelon?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Poista luettelo"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Merkintäalue ei ole tyhjä.\n"
+"Haluatko jatkaa?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Nimetyt alueet"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Alue: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Solut:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Taulukko:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Alueen nimi:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Poista"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Avaus/tallennus"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Haluatko varmasti poistaa tämän nimetyn alueen?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Poista nimetty alue"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Virheellinen soluviittaus."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Liitä lisäämällä soluja"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, kde-format
+msgid "Select Source"
+msgstr "Valitse lähde"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, kde-format
+msgid "Add Filter"
+msgstr "Lisää suodatin"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Bit Operations"
+msgid "Pivot Options"
+msgstr "Bittioperaatiot"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Muuta rivin kokoa"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Korkeus:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Muuta sarakkeen kokoa"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Leveys:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Sarja"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr ""
+"Lisää sarja\n"
+"sarjan lisäys"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Lisää arvoja"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Lisää sarja pystysuuntaan, yläkkäin"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Lisää sarja vaakasuuntaan, vasemmalta oikealle"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Lineaarinen (2, 4, 6,…)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Luo sarjan 'Alkuarvosta' 'Loppuarvoon', ja lisää jokaisella askeleella "
+"määritellyn askelarvon. Tämä vaihtoehto luo sarjoja joissa jokainen arvo on "
+"'Askeleen' verran suurempi kuin edellinen arvo."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Nouseva (2, 4, 8,…)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Luo sarjan 'Alusta' 'Loppuun' ja kertoo jokaisella askeleella määritellyn "
+"arvon. Jos käytät askeleen arvoa 5, sarjasta tulee tällainen: 5, 25, 125, "
+"625 koska 5 kertaa 5 on 25, joka viidellä kerrottuna on 125, ja joka taas "
+"viidellä kerrottuna on 625."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Aloitusarvo:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Loppuarvo:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Askelarvo:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Loppu- ja alkuarvojen tulee olla positiivisia."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Loppuarvon tulee olla suurempi kuin aloitusarvon, tai askelarvon tulee olla "
+"pienempi kuin yksi."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "Aloitusarvo, lopetusarvo tai askel ei voi olla nolla!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "Askelarvon on oltava jotakin muuta kuin 1"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "Askelarvo on negatiivinen."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Askelarvon tulee olla suurempi kuin nolla, muuten lineaarisesta sarjasta "
+"tulisi päättymätön."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Jos aloitusarvo on suurempi kuin lopetusarvo, askelarvon täytyy olla olla "
+"pienempi kuin nolla."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Jos askelarvo on negatiivinen, aloitusarvon tulee olla suurempi kuin "
+"lopetusarvon."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Valitse näytettävät piilorivit:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Valitse näytettävät piilosarakkeet:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Sarake %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Rivi %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "&Ensimmäinen sarake sisältää riviotsikot"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "&Ensimmäinen rivi sisältää sarakeotsikot"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Lajittele"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Älä erota pien- ja suuraakkosia"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Liitä määräten"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr "Liitä"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Tyylien hallinta"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Tyyli"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Kaikki tyylit"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Omat tyylit"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Hierarkinen"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Uusi…"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Muunna…"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Poista…"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "tyyli %1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Välisummat"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Poista kaikki"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Sarake %1 "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Valitse ainakin yksi sarake, johon lisätään välisummia."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Kelpoisuus"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Tyhjennä &kaikki"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Salli:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Kokonaisluku"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Tekstin pituus"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Luettelo"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Salli tyhjät"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Tieto:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Minimi:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Maksimi:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Päivämäärä:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Päivämäärä vähintään:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Päivämäärä enintään:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Aika:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Aika vähintään:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Aika enintään:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Luku:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Merkinnät:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "&Virheilmoitus"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Näytä virheviesti jos annetaan virheellisiä arvoja"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Toiminto:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Pysäytä"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Varoitus"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Otsikko:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Viesti:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Syöttöohje"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Näytä syöttöohje kun solu on valittuna"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Arvo ei kelvollinen."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Aika ei ole kelvollinen."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Päivämäärä ei ole kelvollinen."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Tiedoston asetukset…"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "Näytä tiedoston asetusikkuna"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Muokkaa korostettua solua"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Muokkaa solua"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "Suojaus"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Paste the contents of the clipboard at the cursor"
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Liitä leikepöydän sisältö kohdistimen kohdalle."
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Alas"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Vasemmalle"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Oikealle"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr ""
+"Täytä valinta\n"
+"valinnan täyttö"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr ""
+"Korvaa\n"
+"korvaus"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Valitse fontti…"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Asettaa solun muotoilun"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr ""
+"Muuta fonttia\n"
+"fontin muuttaminen"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Valitse fonttikoko"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Asettaa solun muotoilun"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Fonttikoko"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Aseta tekstiväri"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Tekstiväri"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Funktio…"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Lisää matemaattinen lauseke"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Kaavan valinta"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Lisää funktio"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Muut…"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&Tavoitteen haku…"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Toistuva laskutoimitus määräarvon löytämiseksi"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Virheellinen soluviittaus."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Virheellinen kohdearvo."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Lähdesolussa täytyy olla numeerinen arvo."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Kohdesolussa täytyy olla kaava."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Solun %1 tavoitteen haussa löytyi ratkaisu:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Solun %1 tavoitteen hakuun EI LÖYTYNYT ratkaisuja."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Siirry soluun…"
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Siirry tiettyyn soluun"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Siirry"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Aika ei ole kelvollinen."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Vähennä sisennystä"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Kasvata sisennystä"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Vähennä sisennystä"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Kasvata sisennystä"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr ""
+"Kasvata sisennystä\n"
+"sisennyksen kasvattaminen"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr ""
+"Pienennä sisennystä\n"
+"sisennyksen pienentäminen"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "&Tietokannasta…"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Lisää tietoja SQL-tietokannasta"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Tietokanta-ajureita ei ole saatavilla. Ominaisuuden käyttämiseksi on "
+"asennettava tarvittavat Qt-tietokanta-ajurit."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Sarja…"
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Lisää sarja"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr ""
+"Lisää sarja\n"
+"sarjan lisäys"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "&Erikoismerkki…"
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr "Lisää yksi tai useampi erikoismerkki, jota ei löydy näppäimistöltä."
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Suorita tarkistus…"
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Linkki…"
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Lisää Internet-hyperlinkki"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Linkki"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Poista linkki"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Poista linkki"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr ""
+"Poista linkki\n"
+"linkin poisto"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr ""
+"Aseta linkki\n"
+"linkin asettaminen"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Valintaluettelo…"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Yhdistä solut vaakasuunnassa"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Yhdistä solut pystysuunnassa"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Yhdistä valittu alue vaakasuuntaisesti"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Yhdistä valittu alue pystysuuntaisesti"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "Yhdistä valittu alue"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Jaa solut"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "Erota valitun alueet solut"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Alueen nimi…"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Asettaa laskentataulukon alueelle nimen."
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"Nimetty alue ”%1” on jo olemassa.\n"
+"Haluatko korvata sen?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "Korvaa nimetty alue"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr ""
+"Korvaa nimetty alue\n"
+"nimetyn alueen korvaaminen"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Muokkaa tai valitsee nimettyjä alueita"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Nimetyt alueet…"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Vaihto ennen riviä"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Aseta pakollinen sivunvaihto ennen riviä"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Rivin katkaisu"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Vaihto ennen saraketta"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Aseta pakollinen sivunvaihto ennen saraketta"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Sarakkeen katkaisu"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Liitä leikepöydän sisältö kohdistimen kohdalle."
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Liitä määräten…"
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Liitä leikepöydän sisältö määrittelyin…"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Liitä lisäten"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Lisää solun leikepöydältä laskentataulukkoon"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "&Välisummat"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "&Välisummat"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "On valittava useampi solu."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Valitsee laskentataulukon kaikki solut"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "Näytä QTableView…"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Lajittele…"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Lajittele soluryhmä"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "&Lajittele nousevasti"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Lajittele soluryhmä nousevasti (alusta loppuun)"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "&Lajittele laskevasti"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "Lajittele soluryhmä laskevasti (lopusta alkuun)"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr ""
+"Lajittele tietoja\n"
+"tietojen lajittelu"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Haluatko tarkistaa seuraavan laskentataulukon oikeinkirjoituksen?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Siirry seuraavaan laskentataulukkoon"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Oikolue"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Solun muotoilu…"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Asettaa solun muotoilun"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Lihavoitu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Kursiivi"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Alleviivattu"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Yliviivaus"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Rivitä solun teksti useammalle riville"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Rivitä teksti"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Rivitys"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr ""
+"Rivitä teksti\n"
+"tekstin rivittäminen"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Tulosta solun sisältö pystysuuntaisesti"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Pystysuuntainen teksti"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr ""
+"Pystysuuntainen teksti\n"
+"pystysuuntainen teksti"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr ""
+"Lukumuoto\n"
+"lukumuoto"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Asettaa solun muotoilun"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Ensimmäinen luku"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr ""
+"Tieteellinen muoto\n"
+"tieteellinen muoto"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "Muuta solun muotoilu prosenttimuotoon"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Tieteellinen"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Tieteellinen"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Prosenttimuoto"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Muuta solun muotoilu prosenttimuotoon"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Prosentti"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr ""
+"Prosenttien muotoilu\n"
+"prosenttien muotoilu"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Valuuttamuoto"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Muuta solun muotoilu paikalliseen valuuttamuotoon"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Valuutta"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr ""
+"Valuutan muotoilu\n"
+"valuutan muotoilu"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr ""
+"Päiväysmuoto\n"
+"päiväysmuoto"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Asettaa solun muotoilun"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Muotoilu"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Asettaa solun muotoilun"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr ""
+"Kellonaikamuoto\n"
+"kellonaikamuoto"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Muotoilu"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Suurenna fonttikokoa"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Pienennä fonttikokoa"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Lisää tarkkuutta"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Lisää näytöllä esitettyä tarkkuutta"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Vähennä tarkkuutta"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Vähennä näytöllä esitettyä tarkkuutta"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr ""
+"Lisää tarkkuutta\n"
+"tarkkuuden lisäys"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr ""
+"Vähennä tarkkuutta\n"
+"tarkkuuden vähennys"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Palauttaa oletusmuotoilun"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Taulukon tyyli"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Taustaväri"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Aseta taustaväri"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Luo tyyli solusta…"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Luo uusi tyyli valitun solun pohjalta"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Tyyli solusta"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Luo tyyli solusta"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Tyylin nimi ei voi olla tyhjä."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Tämän niminen tyyli on jo olemassa."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Muokkaa ja hallitse solutyylejä"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Tyylien hallinta…"
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Käytä ennalta määriteltyä tyyliä valituille soluille."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&Välisummat"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Luo erilaisia välisummia luetteloon tai tietokantaan"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Välisummat"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Suuraakkoset"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "Pienaakkoset"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Alkukirjain suuraakkoseksi"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr ""
+"Muuta suuraakkosiin\n"
+"suuraakkosiin muuttaminen"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr ""
+"Muuta pienaakkosiin\n"
+"pienaakkosiin muuttaminen"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr ""
+"Suuraakkosta alkukirjain\n"
+"alkukirjaimen suuraakkostaminen"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Suuraakkoset"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Pienaakkoset"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Muuta ensimmäinen kirjain suuraakkoseksi"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Muut kirjaimet suuraakkosiksi"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Muuta kirjaimet pienaakkosiksi"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "Muuta alkukirjain suuraakkoseksi"
+
+# ”Aakkoslaji” on minusta kökkö, mutta onko parempaakaan vaihtoehtoa?
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr ""
+"Vaihda aakkoslajia\n"
+"aakkoslajin vaihto"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Aseta solun kelpoisuuden vahvistavat ehdot"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Kelpoisuus…"
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Poistaa kelpoisuusehdot tästä solusta"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Poista kelpoisuusehdot"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr ""
+"Poista kelpoisuustarkistus\n"
+"kelpoisuustarkistuksen poisto"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr ""
+"Lisää kelpoisuustarkistus\n"
+"kelpoisuustarkistuksen lisäys"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14370,13 +17622,6 @@ msgid "Remove Cells"
 msgstr ""
 "Poista solut\n"
 "solujen poisto"
-
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr ""
-"Poista\n"
-"poisto"
 
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
@@ -14660,12 +17905,6 @@ msgstr "Vaihteleva (Ei muutosta)"
 msgid "Roman"
 msgstr "Roomalainen"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Kursiivi"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14688,12 +17927,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Tavallinen"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Lihavoitu"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14706,12 +17939,6 @@ msgstr "Väri:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "Jos tämä on valittu, nykyisen solun teksti alleviivataan."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Alleviivattu"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14856,11 +18083,6 @@ msgstr ""
 "Lukumuoto noudattaa järjestelmän asetusten lukumuotoa. Luvut tasataan "
 "oletusarvoisesti oikealle."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Prosentti"
-
 # En kyllä ihan tajua, mitä ”will be multiplied by 100%” tarkoittaa? Periaatteessahan kai 12 × 100 % = 12 × 12 = 144!
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
@@ -14878,11 +18100,6 @@ msgstr ""
 "Jos esimerkiksi syötät 12 ja valitset lukumuodoksi prosentit, luku esitetään "
 "muodossa 1,200 %. Palauttamalla muotoilun yleiseksi solussa näkyy taas 12."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Valuutta"
-
 # converts -> muotoilee, koska minusta mitään ”muunnosta” ei tapahdu
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
@@ -14899,11 +18116,6 @@ msgstr ""
 "samoista asetuksista.\n"
 "Halutun valuuttamuotoilun voi asettaa myös Muotoilu-työkalurivin Valuutta-"
 "kuvakkeella."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Tieteellinen"
 
 # changes -> muotoilee, koska minusta mitään ”muunnosta” ei tapahdu
 #: ui/dialogs/LayoutPage_Float.cpp:85
@@ -15150,11 +18362,6 @@ msgstr "Kolmeen numeroon asti 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Tyyli"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15165,11 +18372,6 @@ msgstr "Nimi:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Tyylin perusta:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Tämän niminen tyyli on jo olemassa."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15223,12 +18425,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Vakio"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Keskitä"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15266,24 +18462,6 @@ msgstr ""
 "<b>Ylös</b> tarkoittaa, että sisältö sijoitetaan solun ylälaitaan.\n"
 "<b>Keskitä</b> tarkoittaa, että sisältö keskitetään pystysuunnassa.\n"
 "<b>Alas</b> tarkoittaa, että sisältö sijoitetaan alalaitaan.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Ylös"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Keskitä"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Alas"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15475,20 +18653,10 @@ msgstr "Käytä"
 msgid "Apply changes"
 msgstr "Ota muutokset käyttöön"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Peru"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Hylkää muutokset"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Kaikki"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15586,364 +18754,13 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[tt]:mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Funktio…"
-
-#~ msgid "Insert math expression"
-#~ msgstr "Lisää matemaattinen lauseke"
-
-#~ msgid "From &Database..."
-#~ msgstr "&Tietokannasta…"
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Lisää tietoja SQL-tietokannasta"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Kaavan valinta"
-
-#~ msgid "Insert a function"
-#~ msgstr "Lisää funktio"
-
-#~ msgid "Others..."
-#~ msgstr "Muut…"
-
-#~ msgid "Modify Cell"
-#~ msgstr "Muokkaa solua"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Muokkaa korostettua solua"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Suorita tarkistus…"
-
-#~ msgid "Show QTableView..."
-#~ msgstr "Näytä QTableView…"
-
 #, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "Suojaus"
 
-#, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "Suojaus"
-
-#, fuzzy
-#~| msgid "Paste the contents of the clipboard at the cursor"
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Liitä leikepöydän sisältö kohdistimen kohdalle."
-
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Tietokanta-ajureita ei ole saatavilla. Ominaisuuden käyttämiseksi on "
-#~ "asennettava tarvittavat Qt-tietokanta-ajurit."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Lisää tietoja tietokannasta"
-
-#~ msgid "Type:"
-#~ msgstr "Tyyppi:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Käyttäjätunnus:\n"
-#~ "(jos tarvitaan)"
-
-#~ msgid "Host:"
-#~ msgstr "Palvelin:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Portti:\n"
-#~ "(jos tarvitaan)"
-
-#~ msgid "Database name: "
-#~ msgstr "Tietokannan nimi: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Salasana:\n"
-#~ "(jos tarvitaan)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Valitse taulukot:"
-
-#~ msgid "Tables"
-#~ msgstr "Taulukot"
-
-#~ msgid "Select columns:"
-#~ msgstr "Valitse sarakkeet:"
-
-#~ msgid "Table"
-#~ msgstr "Taulukko"
-
-#~ msgid "Columns"
-#~ msgstr "Sarakkeet"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Kaikki alla olevat ehdot täyttyvät (AND)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Mikä tahansa alla oleva ehto täyttyy (OR)"
-
-#~ msgid "equals"
-#~ msgstr "yhtä suuri kuin"
-
-#~ msgid "not equal"
-#~ msgstr "eri suuri kuin"
-
-#~ msgid "in"
-#~ msgstr "joukossa"
-
-#~ msgid "not in"
-#~ msgstr "ei joukossa"
-
-#~ msgid "like"
-#~ msgstr "kuten"
-
-#~ msgid "greater"
-#~ msgstr "suurempi kuin"
-
-#~ msgid "lesser"
-#~ msgstr "pienempi"
-
-#~ msgid "greater or equal"
-#~ msgstr "suurempi tai yhtä suuri"
-
-#~ msgid "less or equal"
-#~ msgstr "pienempi tai yhtä suuri"
-
-#~ msgid "Sorted by"
-#~ msgstr "Lajittele kentän"
-
-#~ msgid "Ascending"
-#~ msgstr "mukaan nousevasti"
-
-#~ msgid "Descending"
-#~ msgstr "mukaan laskevasti"
-
-#~ msgid "Distinct"
-#~ msgstr "Vain ainutkertaiset tietueet"
-
-#~ msgid "Query Options"
-#~ msgstr "Kyselyn asetukset"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL-kysely:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Lisää alueeseen"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Aloita solusta"
-
-#~ msgid "Result"
-#~ msgstr "Tulos"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Tässä kohdassa ei voi määritellä taulua."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Määrittele kelvollinen alue."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Määritelty solu on virheellinen."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Et voi muuttaa tietokannassa olevia tietoja."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Kyselyn suoritus epäonnistui."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Tämä kysely ei palauttanut tietoja."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr ""
-#~ "Lisää tietoja tietokannasta\n"
-#~ "tietojen lisääminen tietokannasta"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Portin täytyy olla luku"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Yhdistetään tietokantaan…"
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Yhdistetty. Haetaan taulukkojen tietoja…"
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Tietokanta ei sisällä taulukkoja"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Ajuria ei voitu ladata."
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Haetaan taulujen metadataa…"
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Valitse vähintään yksi taulukko."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Valitse vähintään yksi sarake."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "Merkkejä ”*” ja ”?” ei voi käyttää SQL:ssä korvausmerkkeinä. Vastaavat "
-#~ "korvausmerkit ovat ”%” or ”_”. Vaihdetaanko niiksi?"
-
-#~ msgid "Insert function"
-#~ msgstr "Lisää funktio"
-
-#~ msgid "Help"
-#~ msgstr "Ohje"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Tällä funktiolla ei ole parametreja."
-
-#~ msgid "Description is not available."
-#~ msgstr "Kuvausta ei ole saatavilla"
-
-#~ msgid "Document Settings..."
-#~ msgstr "Tiedoston asetukset…"
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "Näytä tiedoston asetusikkuna"
-
-#~ msgid "Document Settings"
-#~ msgstr "Tiedoston asetukset"
-
-#~ msgid "Calculation"
-#~ msgstr "Laskenta"
-
-#~ msgid "Locale"
-#~ msgstr "Maa-asetus"
-
-#~ msgid "Case sensitive"
-#~ msgstr "Erota pien- ja suuraakkoset"
-
-#~ msgid "Precision as shown"
-#~ msgstr "Tarkkuus kuten näkyy"
-
-#~ msgid "Search criteria must apply to whole cell"
-#~ msgstr "Hakuehtojen on sovittava koko soluun"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Automaattinen"
-
-#~ msgid "String comparison:"
-#~ msgstr "Merkkijonovertailu:"
-
-#~ msgid "Regular Expressions"
-#~ msgstr "Säännölliset lausekkeet"
-
-#~ msgid "Wildcards"
-#~ msgstr "Jokerimerkit"
-
-#~ msgid "Null Year:"
-#~ msgstr "Tyhjä vuosi:"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "Käytä &järjestelmän kotoistusasetuksia"
-
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Kieli: %1 (%2)"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Oletuslukumuoto: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Pitkä päivämäärämuoto: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Lyhyt päivämäärämuoto: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Kellonaikamuoto: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Valuuttamuoto: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Omat luettelot…"
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "Luo omia luetteloita lajittelua ja automaattista täyttöä varten"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Valitsee laskentataulukon kaikki solut"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Omat luettelot"
-
-#~ msgid "List:"
-#~ msgstr "Luettelo:"
-
-#~ msgid "Entry:"
-#~ msgstr "Arvo:"
-
-#~ msgid "Add"
-#~ msgstr "Lisää"
-
-#~ msgid "New"
-#~ msgstr "Uusi"
-
-#~ msgid "Remove"
-#~ msgstr "Poista"
-
-#~ msgid "Modify"
-#~ msgstr "Muokkaa"
-
-#~ msgid "Copy"
-#~ msgstr "Kopioi"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Haluatko varmasti poistaa luettelon?"
-
-#~ msgid "Remove List"
-#~ msgstr "Poista luettelo"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Merkintäalue ei ole tyhjä.\n"
-#~ "Haluatko jatkaa?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Tavoitteen haku…"
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Toistuva laskutoimitus määräarvon löytämiseksi"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Tavoitteen haku"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Virheellinen soluviittaus."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Virheellinen kohdearvo."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Lähdesolussa täytyy olla numeerinen arvo."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Kohdesolussa täytyy olla kaava."
 
 #~ msgid "Starting..."
 #~ msgstr "Aloitetaan…"
@@ -15953,12 +18770,6 @@ msgstr "Linkki %1 aktivoitu"
 
 #~ msgid "New value:"
 #~ msgstr "Uusi arvo:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Solun %1 tavoitteen haussa löytyi ratkaisu:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Solun %1 tavoitteen hakuun EI LÖYTYNYT ratkaisuja."
 
 #~ msgid "Set cell:"
 #~ msgstr "Aseta solu:"
@@ -15977,84 +18788,6 @@ msgstr "Linkki %1 aktivoitu"
 
 #~ msgid "Current value:"
 #~ msgstr "Nykyinen arvo:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr ""
-#~ "Korvaa\n"
-#~ "korvaus"
-
-#~ msgid "Selection List..."
-#~ msgstr "Valintaluettelo…"
-
-#~ msgid "More Options"
-#~ msgstr "Lisää asetuksia"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Etsi koko taulukko"
-
-#~ msgid "Search in:"
-#~ msgstr "Etsi:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Solun arvot"
-
-#~ msgid "Comments"
-#~ msgstr "Kommentit"
-
-#~ msgid "Search direction:"
-#~ msgstr "Hakusuunta:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Ensin poikittain, sitten alas"
-
-#~ msgid "Down then Across"
-#~ msgstr "Ensin alas, sitten poikittain"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Vähemmän asetuksia"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Solun muotoilu…"
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Asettaa solun muotoilun"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Siirrä solu leikepöydälle."
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Kopio solu leikepöydälle."
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Liitä leikepöydän sisältö kohdistimen kohdalle."
-
-#~ msgid "Special Paste..."
-#~ msgstr "Liitä määräten…"
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Liitä leikepöydän sisältö määrittelyin…"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Liitä lisäten"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Lisää solun leikepöydältä laskentataulukkoon"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Liitä lisäämällä soluja"
-
-#~ msgid "Insert"
-#~ msgstr "Lisää"
-
-#~ msgid "Move towards right"
-#~ msgstr "Siirry oikealle"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Siirry alaspäin"
-
-#~ msgid "Special Paste"
-#~ msgstr "Liitä määräten"
 
 #~ msgid "Content"
 #~ msgstr "Sisältö"
@@ -16086,35 +18819,14 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Division"
 #~ msgstr "Osamäärä"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Oikolue"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Haluatko tarkistaa seuraavan laskentataulukon oikeinkirjoituksen?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr ""
 #~ "Korjaa väärin kirjoitetut sanat\n"
 #~ "väärin kirjoitettujen sanojen korjaaminen"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Automaattimuotoilu…"
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Muuttaa laskentataulukon muotoilua"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr ""
-#~ "Automaattimuotoilu\n"
-#~ "automaattimuotoilu"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Taulukon tyyli"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Valitse taulukko, jonka asetuksia muutetaan:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Kuvaa %1 ei löydy."
@@ -16122,102 +18834,8 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Could not load image %1."
 #~ msgstr "Kuvan %1 lataaminen ei onnistu."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Taulukkotyylistä XML-tiedostoa ”%1” ei löydy."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Jäsennysvirhe taulukkotyylisessä XML-tiedostossa %1."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Automaattisuodatin"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Lisää automaattisen suodattimen solualueelle"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr ""
-#~ "Automaattisuodatus\n"
-#~ "automaattisuodatus"
-
-#~ msgid "Clear All"
-#~ msgstr "Tyhjennä kaikki"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Poista nykyisen solun sisältö ja muotoilut"
-
 #~ msgid "Contents"
 #~ msgstr "Sisältö"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Poista sisältö"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Poistaa valitun solun sisältö"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr ""
-#~ "Poista teksti\n"
-#~ "tekstin poisto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr ""
-#~ "Poista ehdollinen muotoilu\n"
-#~ "ehdollisen muotoilun poisto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr ""
-#~ "Lisää ehdollinen muotoilu\n"
-#~ "ehdollisen muotoilun lisäys"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Valitse uusi reunaväri"
-
-#~ msgid "Border Color"
-#~ msgstr "Reunaväri"
-
-#~ msgid "Set the background color"
-#~ msgstr "Aseta taustaväri"
-
-#~ msgid "Background Color"
-#~ msgstr "Taustaväri"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Ehdolliset tyylit…"
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Aseta solun tyyli määräehtojen mukaan"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Ehdolliset tyylit"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Poista ehdolliset tyylit"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Poista ehdolliset solutyylit"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&Välisummat"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "&Välisummat"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "On valittava useampi solu."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr ""
-#~ "Lukumuoto\n"
-#~ "lukumuoto"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16230,88 +18848,6 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgstr ""
 #~ "Prosenttimuoto\n"
 #~ "prosenttimuoto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr ""
-#~ "Kellonaikamuoto\n"
-#~ "kellonaikamuoto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr ""
-#~ "Päiväysmuoto\n"
-#~ "päiväysmuoto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr ""
-#~ "Tieteellinen muoto\n"
-#~ "tieteellinen muoto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr ""
-#~ "Vaihda reunaviivan väriä\n"
-#~ "reunaviivan värin vaihto"
-
-#~ msgid "<none>"
-#~ msgstr "<ei mikään>"
-
-#~ msgid "equal to"
-#~ msgstr "yhtä suuri kuin"
-
-#~ msgid "greater than"
-#~ msgstr "suurempi kuin"
-
-#~ msgid "less than"
-#~ msgstr "pienempi kuin"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "yhtä suuri tai suurempi kuin"
-
-#~ msgid "equal to or less than"
-#~ msgstr "yhtä suuri tai pienempi kuin"
-
-#~ msgid "between"
-#~ msgstr "välissä"
-
-#~ msgid "outside range"
-#~ msgstr "alueen ulkopuolella"
-
-#~ msgid "different to"
-#~ msgstr "eri kuin"
-
-#~ msgid "First Condition"
-#~ msgstr "Ensimmäinen ehto"
-
-#~ msgid "Second Condition"
-#~ msgstr "Toinen ehto"
-
-#~ msgid "Third Condition"
-#~ msgstr "Kolmas ehto"
-
-#~ msgid "Cell is"
-#~ msgstr "Solu on"
-
-#~ msgid "Cell style"
-#~ msgstr "Solun tyyli"
-
-#~ msgid "different from"
-#~ msgstr "eri kuin"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr "Jos ensimmäinen arvo on numero, toisenkin arvon täytyy olla numero."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Jos ensimmäinen arvo on merkkijono, toisenkin arvon täytyy olla "
-#~ "merkkijono."
-
-#~ msgid "Select Source"
-#~ msgstr "Valitse lähde"
 
 #~ msgid "Current Selection"
 #~ msgstr "Nykyinen valinta"
@@ -16342,9 +18878,6 @@ msgstr "Linkki %1 aktivoitu"
 
 #~ msgid "!="
 #~ msgstr "!="
-
-#~ msgid "Add Filter"
-#~ msgstr "Lisää suodatin"
 
 #~ msgid "Labels"
 #~ msgstr "Selitteet"
@@ -16377,11 +18910,6 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Rows"
 #~ msgstr "Rivejä"
 
-#, fuzzy
-#~| msgid "Bit Operations"
-#~ msgid "Pivot Options"
-#~ msgstr "Bittioperaatiot"
-
 #~ msgid "Value Type"
 #~ msgstr "Arvon tyyppi"
 
@@ -16396,155 +18924,17 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Manual Selection"
 #~ msgstr "Käsinvalinta"
 
-#~ msgid "Product"
-#~ msgstr "Tulo"
-
 #~ msgid "Sort By"
 #~ msgstr "Lajittelu"
-
-#~ msgid "Select Font..."
-#~ msgstr "Valitse fontti…"
-
-#~ msgid "Select Font Size"
-#~ msgstr "Valitse fonttikoko"
-
-#~ msgid "Font Size"
-#~ msgstr "Fonttikoko"
-
-#~ msgid "Text Color"
-#~ msgstr "Tekstiväri"
-
-#~ msgid "Set the text color"
-#~ msgstr "Aseta tekstiväri"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr ""
-#~ "Muuta fonttia\n"
-#~ "fontin muuttaminen"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Tyylien hallinta…"
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Muokkaa ja hallitse solutyylejä"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Käytä ennalta määriteltyä tyyliä valituille soluille."
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Luo tyyli solusta…"
-
-#~ msgid "Style From Cell"
-#~ msgstr "Tyyli solusta"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Luo uusi tyyli valitun solun pohjalta"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Luo tyyli solusta"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Tyylin nimi ei voi olla tyhjä."
-
-#~ msgid "Style Manager"
-#~ msgstr "Tyylien hallinta"
-
-#~ msgid "All Styles"
-#~ msgstr "Kaikki tyylit"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Omat tyylit"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Hierarkinen"
-
-#~ msgid "&New..."
-#~ msgstr "&Uusi…"
-
-#~ msgid "&Modify..."
-#~ msgstr "&Muunna…"
-
-#~ msgid "&Delete..."
-#~ msgstr "&Poista…"
-
-#~ msgid "style%1"
-#~ msgstr "tyyli %1"
 
 #~ msgid "Cells..."
 #~ msgstr "Soluja…"
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Lisää soluja…"
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Lisää tyhjän solun laskentataulukkoon"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Poista soluja…"
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Poistaa valitut solut laskentataulukosta."
-
 #~ msgid "Delete Cells..."
 #~ msgstr "Poista soluja…"
 
-#~ msgid "Insert rows"
-#~ msgstr "Lisää rivejä"
-
-#~ msgid "Insert columns"
-#~ msgstr "Lisää sarakkeita"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Lisää soluja"
-
-#~ msgid "Move towards left"
-#~ msgstr "Siirry vasemmalle"
-
-#~ msgid "Move towards top"
-#~ msgstr "Siirry ylöspäin"
-
-#~ msgid "Remove rows"
-#~ msgstr "Poista rivejä"
-
-#~ msgid "Remove columns"
-#~ msgstr "Poista sarakkeita"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Poista soluja"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&Välisummat"
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Luo erilaisia välisummia luetteloon tai tietokantaan"
-
-#~ msgid "Subtotals"
-#~ msgstr "Välisummat"
-
-#~ msgid "Remove All"
-#~ msgstr "Poista kaikki"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Valitse ainakin yksi sarake, johon lisätään välisummia."
-
 #~ msgid "Grand Total"
 #~ msgstr "Loppusumma"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Sarake %1 "
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "&Korvaa nykyiset välisummat"
@@ -16570,46 +18960,6 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Lisää alisummat:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Siirry soluun…"
-
-#~ msgid "Goto"
-#~ msgstr "Siirry"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Siirry tiettyyn soluun"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Vaihto ennen saraketta"
-
-#~ msgid "Column Break"
-#~ msgstr "Sarakkeen katkaisu"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Aseta pakollinen sivunvaihto ennen saraketta"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Vaihto ennen riviä"
-
-#~ msgid "Row Break"
-#~ msgstr "Rivin katkaisu"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Aseta pakollinen sivunvaihto ennen riviä"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Siirry soluun"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Anna solu:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Kokoa…"
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr ""
-#~ "Luo alueen, jossa on yhteenvetotietoja samankaltaisten alueiden tiedoista"
-
 #~ msgid "Description in rows"
 #~ msgstr "Kuvaukset riveillä"
 
@@ -16618,39 +18968,6 @@ msgstr "Linkki %1 aktivoitu"
 
 #~ msgid "Copy data"
 #~ msgstr "Kopioi tiedot"
-
-#~ msgid "Consolidate"
-#~ msgstr "Kokoa"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Keskihajonta"
-
-#~ msgid "Variance"
-#~ msgstr "Varianssi"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Määritä vähintään yksi lähdealue."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 ei ole kelvollinen solualue."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Alue\n"
-#~ "%1\n"
-#~ "on liian pieni"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Alue\n"
-#~ "%1\n"
-#~ "on liian suuri"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16665,24 +18982,6 @@ msgstr "Linkki %1 aktivoitu"
 #~ "%2\n"
 #~ "ovat erikokoisia"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr ""
-#~ "Kokoa\n"
-#~ "kokoaminen"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Lähde- ja kohdealueet lomittuvat."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Alue\n"
-#~ "%1\n"
-#~ "on virheellinen"
-
 #~ msgid "Function:"
 #~ msgstr "Funktio:"
 
@@ -16692,214 +18991,17 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Entered references:"
 #~ msgstr "Syötetyt viittaukset:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Muuta kulmaa…"
-
-#~ msgid "Angle"
-#~ msgstr "Kulma"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Muuta kulmaa, jossa solun sisältö tulostetaan"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Lisää tarkkuutta"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Lisää näytöllä esitettyä tarkkuutta"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Vähennä tarkkuutta"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Vähennä näytöllä esitettyä tarkkuutta"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr ""
-#~ "Lisää tarkkuutta\n"
-#~ "tarkkuuden lisäys"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr ""
-#~ "Vähennä tarkkuutta\n"
-#~ "tarkkuuden vähennys"
-
-#~ msgid "Change Angle"
-#~ msgstr "Valitse kulma"
-
-#~ msgid "Angle:"
-#~ msgstr "Kulma:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr ""
-#~ "Valitse kulma\n"
-#~ "kulman valinta"
-
-#~ msgid "Area Name..."
-#~ msgstr "Alueen nimi…"
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Asettaa laskentataulukon alueelle nimen."
-
-#~ msgid "Named Areas..."
-#~ msgstr "Nimetyt alueet…"
-
-#~ msgid "Named Areas"
-#~ msgstr "Nimetyt alueet"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Muokkaa tai valitsee nimettyjä alueita"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Lisää nimetty alue"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Syötä alueen nimi:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "Nimetty alue ”%1” on jo olemassa.\n"
-#~ "Haluatko korvata sen?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "Korvaa nimetty alue"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr ""
-#~ "Korvaa nimetty alue\n"
-#~ "nimetyn alueen korvaaminen"
-
 #~ msgid "&Select"
 #~ msgstr "&Valitse"
 
-#~ msgid "Area: %1"
-#~ msgstr "Alue: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Muokkaa…"
-
-#~ msgid "&Remove"
-#~ msgstr "&Poista"
 
 #~ msgid "New Named Area"
 #~ msgstr "Poista nimetty alue"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Muokkaa nimettyä aluetta"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Haluatko varmasti poistaa tämän nimetyn alueen?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Poista nimetty alue"
-
-#~ msgid "Cells:"
-#~ msgstr "Solut:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Taulukko:"
-
-#~ msgid "Area name:"
-#~ msgstr "Alueen nimi:"
-
-#~ msgid "Align Left"
-#~ msgstr "Tasaa vasemmalle"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Tasaa solun sisältö vasempaan reunaan"
-
-#~ msgid "Align Center"
-#~ msgstr "Keskitä vaakasuunnassa"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Keskitä solun sisältö vaakasuunnassa"
-
-#~ msgid "Align Right"
-#~ msgstr "Tasaa oikealle"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Tasaa solun sisältö oikeaan reunaan"
-
-#~ msgid "Align Top"
-#~ msgstr "Tasaa ylös"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Tasaa solun sisältö solun yläreunaan"
-
-#~ msgid "Align Middle"
-#~ msgstr "Keskitä pystysuunnassa"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Keskitä solun sisältö pystysuunnassa"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Tasaa alas"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Tasaa solun sisältö solun alareunaan"
-
-#~ msgid "Border Left"
-#~ msgstr "Vasen reunaviiva"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Aseta valitulle alueelle vasen reunaviiva"
-
-#~ msgid "Border Right"
-#~ msgstr "Oikea reunaviiva"
-
-# ”Oikea reunaviiva” kuulostaa ”väärän” vastakohdalta, mutta jos tämä esiintyy siinä missä muutkin viiva-asetukset, tulkintavaikeutta ei jääne?
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Aseta valitulle alueelle oikea reunaviiva"
-
-#~ msgid "Border Top"
-#~ msgstr "Yläreunaviiva"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Aseta valitulle alueelle yläreunaviiva"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Alareunaviiva"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Aseta valitulle alueelle alareunaviiva"
-
-#~ msgid "All Borders"
-#~ msgstr "Kaikki reunaviivat"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Aseta reunaviiva valitun solun kaikkien solujen ympärille"
-
-#~ msgid "No Borders"
-#~ msgstr "Ei reunoja"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Poista valitun alueen kaikki reunaviivat"
-
-#~ msgid "Border Outline"
-#~ msgstr "Ulkoreunaviiva"
-
-#~ msgid "Outline"
-#~ msgstr "Ulkoreunaviiva"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Aseta valitulle alueelle ulkoreunaviiva"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr ""
-#~ "Muuta vaakatasausta\n"
-#~ "vaakatasauksen muuttaminen"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr ""
-#~ "Muuta pystytasausta\n"
-#~ "pystytasauksen muuttaminen"
 
 #~ msgid "Australia"
 #~ msgstr "Australia"
@@ -18711,69 +20813,6 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Zimbabwen dollari"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Palauttaa oletusmuotoilun"
-
-#~ msgid "Strike Out"
-#~ msgstr "Yliviivaus"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Suurenna fonttikokoa"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Pienennä fonttikokoa"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Rivitä teksti"
-
-#~ msgid "Wrap"
-#~ msgstr "Rivitys"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Rivitä solun teksti useammalle riville"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Pystysuuntainen teksti"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Tulosta solun sisältö pystysuuntaisesti"
-
-#~ msgid "Percent Format"
-#~ msgstr "Prosenttimuoto"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Muuta solun muotoilu prosenttimuotoon"
-
-#~ msgid "Money Format"
-#~ msgstr "Valuuttamuoto"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Muuta solun muotoilu paikalliseen valuuttamuotoon"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr ""
-#~ "Rivitä teksti\n"
-#~ "tekstin rivittäminen"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr ""
-#~ "Pystysuuntainen teksti\n"
-#~ "pystysuuntainen teksti"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr ""
-#~ "Prosenttien muotoilu\n"
-#~ "prosenttien muotoilu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr ""
-#~ "Valuutan muotoilu\n"
-#~ "valuutan muotoilu"
-
 #~ msgid "&Data Format"
 #~ msgstr "&Tietojen muotoilu"
 
@@ -18832,9 +20871,6 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Default height (%1)"
 #~ msgstr "Oletuskorkeus (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Korkeus:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Aseta solun korkeus."
 
@@ -18847,473 +20883,32 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Default width (%1)"
 #~ msgstr "Oletusleveys (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Leveys:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr ""
-#~ "Lisää kommentti\n"
-#~ "kommentin lisäys"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Kasvata sisennystä"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Kasvata sisennystä"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Vähennä sisennystä"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Vähennä sisennystä"
-
-#~ msgid "Upper Case"
-#~ msgstr "Suuraakkoset"
-
-#~ msgid "Upper"
-#~ msgstr "Suuraakkoset"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Muut kirjaimet suuraakkosiksi"
-
-#~ msgid "Lower Case"
-#~ msgstr "Pienaakkoset"
-
-#~ msgid "Lower"
-#~ msgstr "Pienaakkoset"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Muuta kirjaimet pienaakkosiksi"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Muuta ensimmäinen kirjain suuraakkoseksi"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Alkukirjain suuraakkoseksi"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Muuta alkukirjain suuraakkoseksi"
-
-#~ msgid "Comment..."
-#~ msgstr "Kommentti…"
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Muokkaa tämän solun kommenttia"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Poista kommentti"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Poista tämän solun kommentti"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr ""
-#~ "Muuta suuraakkosiin\n"
-#~ "suuraakkosiin muuttaminen"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr ""
-#~ "Muuta pienaakkosiin\n"
-#~ "pienaakkosiin muuttaminen"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr ""
-#~ "Suuraakkosta alkukirjain\n"
-#~ "alkukirjaimen suuraakkostaminen"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr ""
-#~ "Poista kommentti\n"
-#~ "kommentin poisto"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Poista kommentti"
-
-# ”Aakkoslaji” on minusta kökkö, mutta onko parempaakaan vaihtoehtoa?
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr ""
-#~ "Vaihda aakkoslajia\n"
-#~ "aakkoslajin vaihto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr ""
-#~ "Kasvata sisennystä\n"
-#~ "sisennyksen kasvattaminen"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr ""
-#~ "Pienennä sisennystä\n"
-#~ "sisennyksen pienentäminen"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Solun kommentti"
-
-#~ msgid "&Left"
-#~ msgstr "&Vasemmalle"
-
-#~ msgid "&Right"
-#~ msgstr "&Oikealle"
-
 #~ msgid "&Up"
 #~ msgstr "&Ylös"
-
-#~ msgid "&Down"
-#~ msgstr "&Alas"
-
-#~ msgid "Autosum"
-#~ msgstr "Automaattisumma"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Summa"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr ""
-#~ "Täytä valinta\n"
-#~ "valinnan täyttö"
-
-#~ msgid "From &Text File..."
-#~ msgstr "&Tekstitiedostosta…"
-
-#~ msgid "Text File"
-#~ msgstr "Tekstitiedosto"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "Lisää tietoja tekstitiedostosta kohdistimen kohdalle tai valintaan"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "&Leikepöydältä…"
 
-#~ msgid "Clipboard"
-#~ msgstr "Leikepöytä"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Lisää CSV-tiedot leikepöydältä kohdistimen sijaintiin tai valittuun "
-#~ "alueeseen."
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Teksti sarakkeisiin…"
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Levittää solujen sisällön useampaan sarakkeeseen "
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Lisäys leikepöydältä"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Leikepöydällä ei ole tietoa."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Leikepöydällä ei ole käytettävää tietoa."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "Tuo CSV-tiedosto"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "CSV-tiedostot (*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Teksti sarakkeiksi"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Tuontitiedostoa ei voida avata."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr ""
-#~ "Lisäys leikepöydältä\n"
-#~ "lisäys leikepöydältä"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr ""
-#~ "Lisätään tekstitiedostoa\n"
-#~ "tekstitiedoston lisäys"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr ""
-#~ "Teksti sarakkeiksi\n"
-#~ "teksti sarakkeiksi"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "Yhdistä valittu alue"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Yhdistä solut vaakasuunnassa"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Yhdistä valittu alue vaakasuuntaisesti"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Yhdistä solut pystysuunnassa"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Yhdistä valittu alue pystysuuntaisesti"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Jaa solut"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Erota valitun alueet solut"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Muuta sarakkeen kokoa…"
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Muuta sarakkeen leveyttä"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Lisää sarakkeita"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Lisää uuden sarakkeen laskentataulukkoon"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Poista sarakkeita"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Poistaa valitut sarakkeet laskentataulukosta"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Piilota sarakkeet"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Piilottaa sarakkeen tästä"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Näytä sarakkeet…"
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Näytä piilosarakkeet"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Muuta sarakkeet yhtä leveiksi"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Muuttaa valitut sarakkeet samankokoisiksi"
-
-#~ msgid "Show Columns"
-#~ msgstr "Näytä sarakkeet"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Näytä valinnan piilosarakkeet"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Muuta rivin kokoa…"
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Muuta rivin korkeutta"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Lisää rivejä"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Lisää uuden rivin laskentataulukkoon"
-
-#~ msgid "Remove Rows"
-#~ msgstr "Poista rivejä"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Poistaa rivin laskentataulukosta"
-
-#~ msgid "Hide Rows"
-#~ msgstr "Piilota rivit"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Piilota rivi tästä"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Näytä rivit…"
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Näytä piilotetut rivit"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Muuta rivit saman korkuisiksi"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Muuttaa valittujen rivien korkeuden samaksi."
-
-#~ msgid "Show Rows"
-#~ msgstr "Näytä rivit"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Näyttää piilotetut rivit valitulla alueella."
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Sovita rivi ja sarake"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "Muokkaa rivin ja sarakkeen kokoa niin että sisältö mahtuu siihen."
-
-#~ msgid "Adjust Column"
-#~ msgstr "Sovita sarake"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Poista sarakkeita"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Sovita rivi"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Poista rivejä"
 
-#~ msgid "Resize Row"
-#~ msgstr "Muuta rivin kokoa"
-
-#~ msgid "Resize Column"
-#~ msgstr "Muuta sarakkeen kokoa"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Valitse näytettävät piilosarakkeet:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Valitse näytettävät piilorivit:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Sarake: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Rivi: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Linkki…"
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Lisää Internet-hyperlinkki"
-
-#~ msgid "Link"
-#~ msgstr "Linkki"
-
-#~ msgid "Remove Link"
-#~ msgstr "Poista linkki"
-
-#~ msgid "Remove a link"
-#~ msgstr "Poista linkki"
-
-#~ msgid "Insert Link"
-#~ msgstr "Lisää linkki"
-
 #~ msgid "Edit Link"
 #~ msgstr "Muokkaa linkkiä"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr ""
-#~ "Poista linkki\n"
-#~ "linkin poisto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr ""
-#~ "Aseta linkki\n"
-#~ "linkin asettaminen"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Linkki internetosoitteeseen"
-
-#~ msgid "Text to display:"
-#~ msgstr "Näytettävä teksti:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Internet-osoite:"
-
-#~ msgid "Email"
-#~ msgstr "Sähköposti"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "Linkki sähköpostiosoitteeseen"
-
-#~ msgid "Email address:"
-#~ msgstr "Sähköpostiosoite:"
-
-#~ msgid "Subject:"
-#~ msgstr "Aihe"
-
-#~ msgid "File"
-#~ msgstr "Tiedosto"
-
-#~ msgid "Link to File"
-#~ msgstr "Linkki tiedostoon"
-
-#~ msgid "File location:"
-#~ msgstr "Tiedoston sijainti:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Viimeksi avattu tiedosto:"
-
-#~ msgid "No Entries"
-#~ msgstr "Ei merkintöjä"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Linkki soluun"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Solu tai nimetty alue:"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Lajittele…"
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Lajittele soluryhmä"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "&Lajittele laskevasti"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "Lajittele soluryhmä laskevasti (lopusta alkuun)"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "&Lajittele nousevasti"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "Lajittele soluryhmä nousevasti (alusta loppuun)"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr ""
-#~ "Lajittele tietoja\n"
-#~ "tietojen lajittelu"
 
 #~ msgid "Use custom list"
 #~ msgstr "Mukauta luetteloa"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Kopioi solun muotoilu (reunat, värit, tekstityyli)"
-
-#~ msgid "Column %1"
-#~ msgstr "Sarake %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Rivi %1"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Ensimmäinen sarake sisältää riviotsikot"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Ensimmäinen rivi sisältää sarakeotsikot"
-
-#~ msgid "Sort"
-#~ msgstr "Lajittele"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Älä erota pien- ja suuraakkosia"
 
 #~ msgid "Move Up"
 #~ msgstr "Siirrä ylemmäs"
@@ -19378,235 +20973,8 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Lajittele riveihin ryhmitelty tieto pystysuuntaan"
 
-#~ msgid "Validity..."
-#~ msgstr "Kelpoisuus…"
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Aseta solun kelpoisuuden vahvistavat ehdot"
-
-#~ msgid "Validity"
-#~ msgstr "Kelpoisuus"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Poista kelpoisuusehdot"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Poistaa kelpoisuusehdot tästä solusta"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr ""
-#~ "Poista kelpoisuustarkistus\n"
-#~ "kelpoisuustarkistuksen poisto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr ""
-#~ "Lisää kelpoisuustarkistus\n"
-#~ "kelpoisuustarkistuksen lisäys"
-
-#~ msgid "Clear &All"
-#~ msgstr "Tyhjennä &kaikki"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Ehdot"
-
-#~ msgid "Allow:"
-#~ msgstr "Salli:"
-
-#~ msgid "Integer"
-#~ msgstr "Kokonaisluku"
-
-#~ msgid "Text Length"
-#~ msgstr "Tekstin pituus"
-
-#~ msgid "List"
-#~ msgstr "Luettelo"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Salli tyhjät"
-
-#~ msgid "Data:"
-#~ msgstr "Tieto:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Minimi:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Maksimi:"
-
-#~ msgid "Date:"
-#~ msgstr "Päivämäärä:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Päivämäärä vähintään:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Päivämäärä enintään:"
-
-#~ msgid "Time:"
-#~ msgstr "Aika:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Aika vähintään:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Aika enintään:"
-
-#~ msgid "Number:"
-#~ msgstr "Luku:"
-
-#~ msgid "Entries:"
-#~ msgstr "Merkinnät:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "&Virheilmoitus"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Näytä virheviesti jos annetaan virheellisiä arvoja"
-
-#~ msgid "Action:"
-#~ msgstr "Toiminto:"
-
-#~ msgid "Stop"
-#~ msgstr "Pysäytä"
-
-#~ msgid "Warning"
-#~ msgstr "Varoitus"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Otsikko:"
-
-#~ msgid "Message:"
-#~ msgstr "Viesti:"
-
-#~ msgid "Input Help"
-#~ msgstr "Syöttöohje"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Näytä syöttöohje kun solu on valittuna"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Arvo ei kelvollinen."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Aika ei ole kelvollinen."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Päivämäärä ei ole kelvollinen."
-
-#~ msgid "&Series..."
-#~ msgstr "&Sarja…"
-
-#~ msgid "Insert a series"
-#~ msgstr "Lisää sarja"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr ""
-#~ "Lisää sarja\n"
-#~ "sarjan lisäys"
-
-#~ msgid "Select Character"
-#~ msgstr "Valitse merkki"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Lisää valittu merkki tekstiin"
-
-#~ msgid "Series"
-#~ msgstr "Sarja"
-
-#~ msgid "Insert Values"
-#~ msgstr "Lisää arvoja"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Lisää sarja pystysuuntaan, yläkkäin"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Lisää sarja vaakasuuntaan, vasemmalta oikealle"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Lineaarinen (2, 4, 6,…)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Luo sarjan 'Alkuarvosta' 'Loppuarvoon', ja lisää jokaisella askeleella "
-#~ "määritellyn askelarvon. Tämä vaihtoehto luo sarjoja joissa jokainen arvo "
-#~ "on 'Askeleen' verran suurempi kuin edellinen arvo."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Nouseva (2, 4, 8,…)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Luo sarjan 'Alusta' 'Loppuun' ja kertoo jokaisella askeleella määritellyn "
-#~ "arvon. Jos käytät askeleen arvoa 5, sarjasta tulee tällainen: 5, 25, 125, "
-#~ "625 koska 5 kertaa 5 on 25, joka viidellä kerrottuna on 125, ja joka taas "
-#~ "viidellä kerrottuna on 625."
-
-#~ msgid "Start value:"
-#~ msgstr "Aloitusarvo:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Loppuarvo:"
-
-#~ msgid "Step value:"
-#~ msgstr "Askelarvo:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Loppu- ja alkuarvojen tulee olla positiivisia."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Loppuarvon tulee olla suurempi kuin aloitusarvon, tai askelarvon tulee "
-#~ "olla pienempi kuin yksi."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "Aloitusarvo, lopetusarvo tai askel ei voi olla nolla!"
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "Askelarvon on oltava jotakin muuta kuin 1"
-
-#~ msgid "Step is negative."
-#~ msgstr "Askelarvo on negatiivinen."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Askelarvon tulee olla suurempi kuin nolla, muuten lineaarisesta sarjasta "
-#~ "tulisi päättymätön."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Jos aloitusarvo on suurempi kuin lopetusarvo, askelarvon täytyy olla olla "
-#~ "pienempi kuin nolla."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Jos askelarvo on negatiivinen, aloitusarvon tulee olla suurempi kuin "
-#~ "lopetusarvon."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "&Erikoismerkki…"
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr "Lisää yksi tai useampi erikoismerkki, jota ei löydy näppäimistöltä."
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Internet-osoite on tyhjä"
@@ -27623,12 +28991,6 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "tyyli %1"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Välisummat"
 
 #, fuzzy
 #~| msgid "Remove All"
@@ -43820,9 +45182,6 @@ msgstr "Linkki %1 aktivoitu"
 #~ msgid "Document's Locale Settings"
 #~ msgstr "Tiedoston kotoistusasetukset"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "Tekstitiedoston lisääminen"
-
 #~ msgid "y (array)"
 #~ msgstr "y (taulukko)"
 
@@ -43885,9 +45244,6 @@ msgstr "Linkki %1 aktivoitu"
 
 #~ msgid "Remove Cell"
 #~ msgstr "Poista solu"
-
-#~ msgid "Paste"
-#~ msgstr "Liitä"
 
 #~ msgid "Paste & Insert"
 #~ msgstr "Liitä ja lisää"
@@ -43986,11 +45342,6 @@ msgstr "Linkki %1 aktivoitu"
 #~| msgid "Statistical"
 #~ msgid "Statistical Functions"
 #~ msgstr "Tilasto"
-
-#, fuzzy
-#~| msgid "Related Functions"
-#~ msgid "Text Functions"
-#~ msgstr "Samantapaisia funktioita"
 
 #, fuzzy
 #~| msgid "Function"

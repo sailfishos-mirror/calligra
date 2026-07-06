@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligrasheets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2025-10-06 08:56-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -144,8 +144,13 @@ msgstr "Cabeçalho"
 msgid "Header1"
 msgstr "Cabeçalho1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Padrão"
@@ -177,7 +182,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Texto"
@@ -250,7 +256,8 @@ msgstr "<p><b>Tipo devolvido:</b> %1</p>"
 msgid "Syntax"
 msgstr "Sintaxe"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Parâmetros"
@@ -896,14 +903,15 @@ msgstr "CARY(12;0) retorna 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Número"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Formato"
@@ -960,6 +968,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") retorna 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Banco de dados"
@@ -1262,6 +1272,7 @@ msgstr "Data e Hora"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1335,7 +1346,8 @@ msgstr "O DAYS360(\"22/2/2002\"; \"21/4/2002\"; FALSE) retorna 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Hora"
@@ -4962,6 +4974,7 @@ msgid "Regular payments"
 msgstr "Pagamentos regulares"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Tipo"
@@ -5299,12 +5312,19 @@ msgstr "Manual"
 msgid "Automatic"
 msgstr "Automático"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Informações"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Erro"
@@ -6129,7 +6149,7 @@ msgstr ""
 msgid "Math"
 msgstr "Matemática"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Função"
@@ -6623,6 +6643,7 @@ msgid "Range"
 msgstr "Intervalo"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Critério"
@@ -8226,6 +8247,7 @@ msgid "Row"
 msgstr "Linha"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Coluna"
@@ -12852,7 +12874,7 @@ msgid "&Go"
 msgstr "&Ir"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "&Inserir"
@@ -12870,7 +12892,7 @@ msgid "F&ormat"
 msgstr "F&ormatar"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Mesclar células"
@@ -12949,8 +12971,8 @@ msgstr "Ativar"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Fonte"
@@ -13363,14 +13385,16 @@ msgstr "Limites da página:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Horizontal"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Vertical"
@@ -13397,13 +13421,15 @@ msgid "Up"
 msgstr "Para Cima"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Direita"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Esquerda"
@@ -13415,36 +13441,50 @@ msgstr "Para Baixo, Primeira Coluna"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Nenhum"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Soma"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Min"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Max"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Média"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Contagem"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -13852,7 +13892,8 @@ msgstr "Limpar seleção"
 msgid "Move selected sheet to the bottom"
 msgstr "Mover a planilha selecionada para o fundo"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Diferenciar maiúsculas de minúsculas"
@@ -14053,6 +14094,7 @@ msgid "Anchor"
 msgstr "Âncora"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Célula"
@@ -14072,7 +14114,7 @@ msgstr "Alternar ancoramento da forma"
 msgid "Next Sheet"
 msgstr "Próxima Planilha"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Próxima"
@@ -14087,7 +14129,7 @@ msgstr "Mover para a próxima planilha"
 msgid "Previous Sheet"
 msgstr "Planilha anterior"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Anterior"
@@ -14292,7 +14334,7 @@ msgstr ""
 "Você está prestes a remover a planilha ativa.\n"
 "Deseja continuar?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Digite o nome:"
@@ -14352,21 +14394,3133 @@ msgstr "Contagem (countA): "
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Mudar cor do texto"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "Mudar cor de fundo"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Mudar borda"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Inserir colunas"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Inserir linhas"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Remover colunas"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Remover linhas"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Insere uma nova linha na planilha"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Remove uma linha da planilha"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Insere uma nova coluna na planilha"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Remove as colunas selecionadas da planilha"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Ocultar colunas"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Ocultar linhas"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Mostrar colunas"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Mostrar linhas"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Mostrar linhas ocultas na seleção"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "Mesclar a região selecionada"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Mostrar linhas ocultas na seleção"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "Mesclar a região selecionada"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Igualar Coluna"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Igualar linha"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Redimensiona as linhas selecionadas para o mesmo tamanho"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Redimensiona as colunas selecionadas para terem o mesmo tamanho"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Ajustar coluna"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Ajustar linha"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Ajustar linha e coluna"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "Ajustar tamanho da linha/coluna de modo a caber o conteúdo"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "Ajustar tamanho da linha/coluna de modo a caber o conteúdo"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "Ajustar tamanho da linha/coluna de modo a caber o conteúdo"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Mostrar colunas..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Mostrar linhas..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Mostrar colunas ocultas"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Mostrar linhas ocultas"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Coluna: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Linha: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Redimensionar coluna..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Redimensionar linha..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Alterar a altura de uma linha"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Alterar a largura de uma coluna"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Alinhar à esquerda"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Justificar o conteúdo da célula à esquerda"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Mudar alinhamento horizontal"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Alinhar à direita"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Justificar à direita o conteúdo da célula"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Centralizar"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Centrar o conteúdo da célula"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Centro"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Alinhar no topo"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Alinhar o conteúdo da célula ao seu topo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Topo"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Mudar alinhamento vertical"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Alinhar abaixo"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Alinhar o conteúdo da célula à sua parte inferior"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Inferior"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Alinhar no Meio"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Alinhar o conteúdo da célula ao seu centro"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Meio"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Mudar ângulo..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Alterar o ângulo com o qual o conteúdo da célula é impresso"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Ângulo"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Mudar ângulo"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Auto-Filtrar"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Adicionar um filtro automático a um intervalo de células"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Auto-filtrar"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Aplicar um estilo pré-definido às células selecionadas"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Auto-Formatação..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Não foi possível encontrar a folha de estilo do arquivo XML '%1'."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Erro de processamento da folha de estilo do arquivo XML %1."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Auto-formatar"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Autosoma"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Inserir a função 'soma'"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Autosoma"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Borda Esquerda"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Definir uma borda esquerda para a área selecionada"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Borda Direita"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Definir uma borda direita para a área selecionada"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Borda de topo"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Definir uma borda superior para a área selecionada"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Borda de fundo"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Definir uma borda inferior para a área selecionada"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Todas as Bordas"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Definir uma borda ao redor de todas as células da área selecionada"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Todos"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Sem Bordas"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Remover todas as bordas da área selecionada"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Contorno da borda"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Definir uma borda para a área ao redor da área selecionada"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Contorno"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Cor da borda"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Selecionar uma nova cor de borda"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Mudar cor da borda"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Inserir células..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Inserir uma célula em branco na planilha"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Remover células..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Remove a célula atual da planilha"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Limpar tudo"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Limpa todo o conteúdo e formatação da célula atual"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Limpar conteúdo"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Remover os conteúdos da célula atual"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Limpar texto"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Excluir"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Comentário..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Editar um comentário para esta célula"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Limpar comentário"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Remover o comentário desta célula"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Remover comentário"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Remover comentário"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Adicionar comentário"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Estilos condicionais..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Definir o estilo da célula, com base em certas condições"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Estilos condicionais"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Remover os estilos condicionais das células"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Remover estilos condicionais"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Remover formatação condicional"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Adicionar formatação condicional"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Consolidar..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Criar uma região de dados resumidos de um grupo de regiões similares"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Consolidar"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Copiar o objeto da célula para a área de transferência"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Mover o objeto da célula para a área de transferência"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "Do Arquivo de &Texto..."
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Inserir dados de um arquivo de texto, na posição do cursor/seleção atual"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Arquivo de Texto"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "Importar arquivo de dados CSV"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "Arquivos de dados CSV (*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Não foi possível abrir o arquivo de entrada."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Inserting Text File"
+msgid "Inserting Text File"
+msgstr "Inserir arquivo de texto"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Inserir arquivo de texto"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Inserindo da área de transferência"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"Inserir os dados em CSV da área de transferência na posição do cursor/"
+"seleção atual"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Área de transferência"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Não há nenhum dado na área de transferência."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Não há dados utilizáveis na área de transferência."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Inserindo da área de transferência"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Inserir da área de transferência"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Texto para colunas..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Expandir o conteúdo das células por várias colunas"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Texto para colunas"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Texto para colunas"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Criar listas personalizadas para ordenar ou preencher automaticamente"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Listas personalizadas..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Adicionar Área com Nome"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Insira nome da área:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Mudar ângulo"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Ângulo:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "Auto-formatar"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Selecione o estilo de planilha a aplicar:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Selecionar caractere"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Inserir o caractere selecionado no texto"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Comentário da Célula"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<nenhum>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "igual a"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "maior que"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "menor que"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "maior ou igual a"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "menor ou igual a"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "entre"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "fora do intervalo"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "diferente de"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Primeira Condição"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Segunda Condição"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Terceira Condição"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "A célula é"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Estilo da célula"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "diferente de"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Se o primeiro valor é um número, o segundo valor também deve ser um número."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Se o primeiro valor é um string, o segundo valor também deve ser um string."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Consolidado"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Produto"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Desvio Padrão"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Variação"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Você deve definir pelo menos uma faixa de origem."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 não é uma faixa de células válida."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"A faixa\n"
+"%1\n"
+"é muito pequena"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"A faixa\n"
+"%1\n"
+"é muito grande"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "A faixa de origem intercepta a faixa de destino."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"A faixa\n"
+"%1\n"
+" é malformada"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Inserir Dados do Banco de Dados"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Tipo:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Nome do banco de dados: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Máquina:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Porta:\n"
+"(se necessário)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Nome do usuário:\n"
+"(se necessário)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Senha:\n"
+"(se necessário)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Selecionar tabelas:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Tabelas"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Selecionar colunas:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Tabela"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Colunas"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Casar com todos os seguintes (E)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Casar com qualquer dos seguintes (OU)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "igual à"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "não igual"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "em"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "não em"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "como"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "maior que"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "menor que"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "maior que ou igual"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "menor que ou igual"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Ordenar por"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Ascendente"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Descendente"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Diferente"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Opções da Consulta"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "Consulta SQL:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Inserir na região"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Iniciar na célula"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Resultado"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Você não pode especificar uma tabela aqui."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Você deve especificar uma região válida."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Você deve especificar uma célula válida."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Consulta executada falhou."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Você não obteve nenhum resultado com esta consulta."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Inserir dados do banco de dados"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "A porta deve ser um número"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Conectando ao banco de dados..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Conectado. Recuperando informações da tabela..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Este banco de dados não possui nenhuma tabela"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Não foi possível carregar o driver"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Recuperando tipos de dados das tabelas..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Você deve selecionar pelo menos uma tabela."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Você deve selecionar pelo menos uma coluna."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' ou '?' não são comandos válidos em SQL. Os comandos apropriados são '%' "
+"ou '_'. Deseja substituí-los?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Substituir"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Configurações do documento"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, kde-format
+msgid "Calculation"
+msgstr "Cálculo"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr "Localização"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr "Diferenciar maiúsculas de minúsculas"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, kde-format
+msgid "Precision as shown"
+msgstr "Precisão visível"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr "Os critérios de pesquisa devem ser aplicados na célula inteira"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, kde-format
+msgid "Automatic find labels"
+msgstr "Localizar as legendas automaticamente"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr "Comparação de strings:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Regular Expressions"
+msgstr "Expressões regulares"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr "Caracteres especiais"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr "Ano nulo:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Usar Configurações Regionais do Sistema"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, kde-format
+msgid "Language: %1 (%2)"
+msgstr "Idioma: %1 (%2)"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Formato de número padrão: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Formato de datas longo: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Formato de datas curto: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Formato de hora: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Formato monetário: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Mais Opções"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Pesquisar em toda a folha"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Pesquisar em:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Valores das células"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Comentários"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Direção da pesquisa:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Ao Longo e para Baixo"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Para Baixo e ao Longo"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Menos Opções"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "Função"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Inserir função"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Ajuda"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Esta função não tem parâmetros."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "A descrição não está disponível."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Pesquisar Objetivo"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Ir para a célula"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Insira célula:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Inserir"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Mover para a direita"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Mover para baixo"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Inserir linhas"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Inserir colunas"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Inserir células"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Remover"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Mover para a esquerda"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Mover para o topo"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Remover linhas"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Remover colunas"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Remover Células"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Inserir link"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Link para endereço da Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Texto a ser exibido:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Endereço Internet:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "E-mail"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "Link para endereço de e-mail"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "Endereço de e-mail:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Assunto:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Arquivo"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Ligação para Arquivo"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Localização do arquivo:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Arquivo recente:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Nenhuma Entrada"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Ligação para Célula"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Célula ou Área Nomeada:"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Listas personalizadas"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "Alterar maiúsculas e minúsculas"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Lista:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Registro:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Adicionar"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Novo"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Modificar"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Copiar"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Deseja realmente remover esta lista?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Remover lista"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"A área de entrada não está vazia.\n"
+"Deseja continuar?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Áreas com nome"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Área: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Células:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Planilha:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Nome da área:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Remover"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Abrir/Salvar"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Deseja mesmo apagar esta área com nome?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Remover Área com Nome"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Referência da célula é inválida."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Colar Inserindo Células"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, kde-format
+msgid "Select Source"
+msgstr "Selecionar origem"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr "Janela de configuração da tabela dinâmica"
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, kde-format
+msgid "Add Filter"
+msgstr "Adicionar filtro"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, kde-format
+msgid "Pivot Options"
+msgstr "Opções da tabela dinâmica"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Redimensionar linha"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Altura:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Redimensionar coluna"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Largura:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Séries"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "Inserir série"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Inserir Valores"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Inserir as séries verticalmente, uma abaixo da outra"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Inserir as séries horizontalmente, da esquerda para direita"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Linear (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Gera uma série do 'início' ao 'fim' e para cada passo adiciona o valor "
+"fornecido no passo. Isto cria uma série onde cada valor é um 'passo' maior "
+"que o valor anterior."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Geométrica (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Gera uma série do 'início' ao 'fim' e para cada passo multiplica o valor com "
+"o valor fornecido no passo. Usando uma passo de 5 fornece uma lista como 5, "
+"25, 125, 625 uma vez que 5 vezes 5 (passo) igual à 25, e vezes 5 igual à "
+"125, e que este último número multiplicado pelo mesmo valor de passo 5 "
+"retorna 625."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Valor de início:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Valor de parada:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Valor do passo:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Os valores iniciais e finais devem ser positivos."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"O valor final deve ser maior que o valor inicial ou o passo deve ser menor "
+"que '1'."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "Nenhum dos valores de Start, Stop ou Step podem ser iguais a zero."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "O valor Step deve ser diferente de 1"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "Passo é negativo."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"O valor do passo deve ser maior que zero. De outro modo a série linear é "
+"infinita."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Se o valor inicial é maior que o valor final o passo deve ser menor que zero."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Se o passo é negativo, o valor inicial deve ser maior que o valor final."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Selecione linha ocultas para mostrar:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Selecione colunas ocultas para mostrar:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Coluna %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Linha %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "A &primeira coluna contém os cabeçalhos das linhas"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "A &primeira linha contém os cabeçalhos das colunas"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Classificar"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Não diferenciar maiúsculas de minúsculas"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Colar especial"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Gerenciador de estilos"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Estilo"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Todos os estilos"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Estilos personalizados"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Hierárquico"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Novo..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Modificar..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Excluir..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "estilo%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Subtotais"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Remover Tudo"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Coluna '%1' "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Você deve selecionar pelo menos uma coluna para adicionar subtotais."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Validade"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Limpar &Tudo"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Permitir:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Inteiro"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Comprimento do Texto"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Lista"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Permitir vazio"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Dados:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Mínimo:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Máximo:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Data:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Data mínima:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Data máxima:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Hora:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Hora mínima:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Hora máxima:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Número:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Registros:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "Alerta de &Erro"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Mostrar mensagem de erro quando valores inválidos são inseridos"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Ação:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Parar"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Aviso"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Título:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Mensagem:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Ajuda de Entrada"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Mostrar ajuda de entrada quando a célula é selecionada"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Este não é um valor válido."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Esta não é uma hora válida."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Esta não é uma data válida."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Configurações do documento..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "Mostrar a janela de configuração do documento"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Editar a célula selecionada"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Modificar célula"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "Alternar fixação"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Alternar a fixação de referência no cursor de texto"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Abaixo"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Esquerda"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Direita"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Preencher seleção"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Substituir"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Selecionar fonte..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Definir a formatação da célula"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Alterar fonte"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Selecionar tamanho da fonte"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Definir a formatação da célula"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Tamanho da fonte"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Definir a cor do texto"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Cor do texto"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Função..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Inserir uma expressão matemática"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Seleção da fórmula"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Inserir uma função"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Outros..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "Pesquisar &objetivo..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Repetindo o cálculo para encontrar um valor específico"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Referência da célula é inválida."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Valor alvo é inválido."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Célula fonte deve conter um valor numérico."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "A célula alvo deve conter uma fórmula."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Pesquisa de objetivo com célula %1 encontrou uma solução:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Pesquisa de objetivo com célula %1 NÃO encontrou solução."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Ir para a célula..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Mover para uma célula em particular"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Ir para"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Esta não é uma hora válida."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Diminuir recuo"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Aumentar recuo"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Diminui o recuo"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Aumenta o recuo"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Aumentar recuo"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Diminuir recuo"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "Do Banco de &Dados..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Inserir dados de um banco de dados SQL"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Não há nenhum driver de bancos de dados disponível. Para usar esta "
+"funcionalidade, você precisa instalar drivers de bancos de dados do Qt."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Séries..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Inserir uma série"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Inserir série"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "&Caractere especial..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+"Inserir um ou mais símbolos ou letras que não estão presentes no teclado"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Rodar Inspetor..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Link..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Inserir uma Hiperligação de Internet"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Link"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Remover uma ligação"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Remover Link"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Remover link"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Configurar link"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Lista de Seleção..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Mesclar células na horizontal"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Mesclar células na vertical"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Mesclar a região selecionada apenas na horizontal"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Mesclar a região selecionada apenas na vertical"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "Mesclar a região selecionada"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Separar células"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "Quebrar a união da região selecionada"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Nome da Área..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Definir o nome para uma região da planilha"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"A área com nome '%1' já existe.\n"
+"Deseja substituí-la?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "Substituir Área com Nome"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Substituir área com nome"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Editar ou selecionar as áreas com nome"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Áreas com nome..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Quebrar antes da linha"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Insere uma quebra manual de página antes da linha"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Quebra de linha"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Quebrar antes da coluna"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Insere uma quebra de página manual antes da coluna"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Quebra de coluna"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Colar o conteúdo da área de transferência no cursor"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Colar especial..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Colar o conteúdo da área de transferência com opções especiais"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Colar com inserção"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Insere uma célula da área de transferência na planilha"
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "&Pivot Tables..."
+msgstr "&Tabelas dinâmicas..."
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "Create Pivot Tables"
+msgstr "Criar tabelas dinâmicas"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Você precisa selecionar múltiplas células."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Recalcular o valor de cada célula na planilha atual"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "Mostrar QTableView..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Ordenar..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Ordenar um grupo de células"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Classificação &Ascendente"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+"Ordenar um grupo de células pela ordem crescente (primeiro para o último)"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "Classificação &Descendente"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+"Ordenar um grupo de células pela ordem decrescente (último para o primeiro)"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Ordenar dados"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Deseja verificar a ortografia na próxima planilha?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Mover para a próxima planilha"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Verificar a ortografia"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Formato da célula..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Definir a formatação da célula"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Negrito"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Itálico"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Sublinhado"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Tachado"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Repartir o texto da célula em várias linhas"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Quebra de texto"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Quebrar"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Quebra de texto"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Imprimir o conteúdo da célula na vertical"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Texto vertical"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Texto vertical"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Formato numérico"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Definir a formatação da célula"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Primeiro número"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "Formato científico"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "Definir a formatação da célula para ser uma porcentagem"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Científico"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Científico"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Formato porcentual"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Definir a formatação da célula para ser uma porcentagem"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Porcentagem"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Formato porcentual"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Formato Monetário"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Definir a formatação da célula como sendo a da sua moeda local"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Moeda"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Formato monetário"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Formato da data"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Definir a formatação da célula"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Formato"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Definir a formatação da célula"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Formato da hora"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Formato"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Aumentar tamanho da fonte"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Diminuir tamanho da fonte"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Aumentar precisão"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Aumentar a precisão decimal mostrada na tela"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Diminuir precisão"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Diminuir a precisão decimal mostrada na tela"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Aumentar precisão"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Diminuir precisão"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Restaurar a formatação padrão"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Estilo da Planilha"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Cor de Fundo"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Mudar a cor de fundo"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Criar estilo a partir da célula..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Criar um novo estilo baseado na célula atualmente selecionada"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Estilo a Partir da Célula"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Criar estilo a partir da célula"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "O nome do estilo não pode estar vazio."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Um estilo com este nome já existe."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Editar e organizar os estilos de células"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Gerenciador de estilos..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Aplicar um estilo pré-definido às células selecionadas"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&Subtotais..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Cria tipos diferentes de subtotais, para uma lista ou banco de dados"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Subtotais"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Maiúsculas"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "Minúsculas"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Primeira Letra em Maiúsculas"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Mudar para maiúsculas"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Mudar para minúsculas"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Primeira letra em maiúsculas"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Caixa Alta"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Caixa Baixa"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Converter Primeira Letra para Maiúscula"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Converter todas as letras para maiúsculas"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Converter todas as letras para minúsculas"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "Capitalizar a primeira letra"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Alterar maiúsculas e minúsculas"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Definir os testes de confirmação da validade dos dados da célula"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Validade..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Remover os testes de validade da célula"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Remover Validade"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Remover critério de validade"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Adicionar critério de validade"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14613,11 +17767,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Remover células"
 
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Excluir"
-
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
 msgid "Merge Cells Horizontally"
@@ -14836,12 +17985,6 @@ msgstr "Variável (sem alteração)"
 msgid "Roman"
 msgstr "Romano"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Itálico"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14864,12 +18007,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Normal"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Negrito"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14883,12 +18020,6 @@ msgstr "Cor:"
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
 "Se esta opção estiver assinalada, o texto da célula atual ficará sublinhado."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Sublinhado"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15038,11 +18169,6 @@ msgstr ""
 "do Sistema -> Aparência e Comportamento Comuns -> Localização -> País/região "
 "e idioma -> Números. Os números são justificados à direita, por padrão."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Porcentagem"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15062,11 +18188,6 @@ msgstr ""
 "genérico, voltará a colocá-lo como 12.\n"
 "Você pode também usar o ícone de Porcentagem na barra de formatação."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Moeda"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15084,11 +18205,6 @@ msgstr ""
 "Sistema.\n"
 "Você poderá usar também o ícone Monetário na barra de formatação para "
 "definir a formatação da célula, para que fique como a sua moeda atual."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Científico"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15346,11 +18462,6 @@ msgstr "Três dígitos 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Estilo"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15361,11 +18472,6 @@ msgstr "Nome:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Estilo herdado:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Um estilo com este nome já existe."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15418,12 +18524,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Padrão"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Centro"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15465,24 +18565,6 @@ msgstr ""
 "célula.\n"
 "O <b>Fundo</b> significa que o conteúdo será mostrado no fundo da célula.</"
 "qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Topo"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Meio"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Inferior"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15676,20 +18758,10 @@ msgstr "Aplicar"
 msgid "Apply changes"
 msgstr "Aplicar alterações"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Cancelar"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Descartar alterações"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Todos"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15790,355 +18862,11 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[hh]:mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Função..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "Inserir uma expressão matemática"
-
-#~ msgid "From &Database..."
-#~ msgstr "Do Banco de &Dados..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Inserir dados de um banco de dados SQL"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Seleção da fórmula"
-
-#~ msgid "Insert a function"
-#~ msgstr "Inserir uma função"
-
-#~ msgid "Others..."
-#~ msgstr "Outros..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Modificar célula"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Editar a célula selecionada"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Rodar Inspetor..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "Mostrar QTableView..."
-
 #~ msgid "Permute reference fixation"
 #~ msgstr "Alternar fixação de referência"
 
-#~ msgid "Permute fixation"
-#~ msgstr "Alternar fixação"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Alternar a fixação de referência no cursor de texto"
-
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Não há nenhum driver de bancos de dados disponível. Para usar esta "
-#~ "funcionalidade, você precisa instalar drivers de bancos de dados do Qt."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Inserir Dados do Banco de Dados"
-
-#~ msgid "Type:"
-#~ msgstr "Tipo:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Nome do usuário:\n"
-#~ "(se necessário)"
-
-#~ msgid "Host:"
-#~ msgstr "Máquina:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Porta:\n"
-#~ "(se necessário)"
-
-#~ msgid "Database name: "
-#~ msgstr "Nome do banco de dados: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Senha:\n"
-#~ "(se necessário)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Selecionar tabelas:"
-
-#~ msgid "Tables"
-#~ msgstr "Tabelas"
-
-#~ msgid "Select columns:"
-#~ msgstr "Selecionar colunas:"
-
-#~ msgid "Table"
-#~ msgstr "Tabela"
-
-#~ msgid "Columns"
-#~ msgstr "Colunas"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Casar com todos os seguintes (E)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Casar com qualquer dos seguintes (OU)"
-
-#~ msgid "equals"
-#~ msgstr "igual à"
-
-#~ msgid "not equal"
-#~ msgstr "não igual"
-
-#~ msgid "in"
-#~ msgstr "em"
-
-#~ msgid "not in"
-#~ msgstr "não em"
-
-#~ msgid "like"
-#~ msgstr "como"
-
-#~ msgid "greater"
-#~ msgstr "maior que"
-
-#~ msgid "lesser"
-#~ msgstr "menor que"
-
-#~ msgid "greater or equal"
-#~ msgstr "maior que ou igual"
-
-#~ msgid "less or equal"
-#~ msgstr "menor que ou igual"
-
-#~ msgid "Sorted by"
-#~ msgstr "Ordenar por"
-
-#~ msgid "Ascending"
-#~ msgstr "Ascendente"
-
-#~ msgid "Descending"
-#~ msgstr "Descendente"
-
-#~ msgid "Distinct"
-#~ msgstr "Diferente"
-
-#~ msgid "Query Options"
-#~ msgstr "Opções da Consulta"
-
-#~ msgid "SQL query:"
-#~ msgstr "Consulta SQL:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Inserir na região"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Iniciar na célula"
-
-#~ msgid "Result"
-#~ msgstr "Resultado"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Você não pode especificar uma tabela aqui."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Você deve especificar uma região válida."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Você deve especificar uma célula válida."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Você não foi autorizado a mudar dados no banco de dados."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Consulta executada falhou."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Você não obteve nenhum resultado com esta consulta."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Inserir dados do banco de dados"
-
-#~ msgid "The port must be a number"
-#~ msgstr "A porta deve ser um número"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Conectando ao banco de dados..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Conectado. Recuperando informações da tabela..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Este banco de dados não possui nenhuma tabela"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Não foi possível carregar o driver"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Recuperando tipos de dados das tabelas..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Você deve selecionar pelo menos uma tabela."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Você deve selecionar pelo menos uma coluna."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' ou '?' não são comandos válidos em SQL. Os comandos apropriados são "
-#~ "'%' ou '_'. Deseja substituí-los?"
-
-#~ msgid "Insert function"
-#~ msgstr "Inserir função"
-
-#~ msgid "Help"
-#~ msgstr "Ajuda"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Esta função não tem parâmetros."
-
-#~ msgid "Description is not available."
-#~ msgstr "A descrição não está disponível."
-
-#~ msgid "Document Settings..."
-#~ msgstr "Configurações do documento..."
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "Mostrar a janela de configuração do documento"
-
-#~ msgid "Document Settings"
-#~ msgstr "Configurações do documento"
-
-#~ msgid "Calculation"
-#~ msgstr "Cálculo"
-
-#~ msgid "Locale"
-#~ msgstr "Localização"
-
-#~ msgid "Case sensitive"
-#~ msgstr "Diferenciar maiúsculas de minúsculas"
-
-#~ msgid "Precision as shown"
-#~ msgstr "Precisão visível"
-
-#~ msgid "Search criteria must apply to whole cell"
-#~ msgstr "Os critérios de pesquisa devem ser aplicados na célula inteira"
-
-#~ msgid "Automatic find labels"
-#~ msgstr "Localizar as legendas automaticamente"
-
-#~ msgid "String comparison:"
-#~ msgstr "Comparação de strings:"
-
-#~ msgid "Regular Expressions"
-#~ msgstr "Expressões regulares"
-
-#~ msgid "Wildcards"
-#~ msgstr "Caracteres especiais"
-
-#~ msgid "Null Year:"
-#~ msgstr "Ano nulo:"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Usar Configurações Regionais do Sistema"
-
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Idioma: %1 (%2)"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Formato de número padrão: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Formato de datas longo: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Formato de datas curto: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Formato de hora: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Formato monetário: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Listas personalizadas..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr ""
-#~ "Criar listas personalizadas para ordenar ou preencher automaticamente"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Recalcular o valor de cada célula na planilha atual"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Listas personalizadas"
-
-#~ msgid "List:"
-#~ msgstr "Lista:"
-
-#~ msgid "Entry:"
-#~ msgstr "Registro:"
-
-#~ msgid "Add"
-#~ msgstr "Adicionar"
-
-#~ msgid "New"
-#~ msgstr "Novo"
-
-#~ msgid "Remove"
-#~ msgstr "Remover"
-
-#~ msgid "Modify"
-#~ msgstr "Modificar"
-
-#~ msgid "Copy"
-#~ msgstr "Copiar"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Deseja realmente remover esta lista?"
-
-#~ msgid "Remove List"
-#~ msgstr "Remover lista"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "A área de entrada não está vazia.\n"
-#~ "Deseja continuar?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "Pesquisar &objetivo..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Repetindo o cálculo para encontrar um valor específico"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Pesquisar Objetivo"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Referência da célula é inválida."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Valor alvo é inválido."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Célula fonte deve conter um valor numérico."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "A célula alvo deve conter uma fórmula."
 
 #~ msgid "Starting..."
 #~ msgstr "Iniciando..."
@@ -16148,12 +18876,6 @@ msgstr "A ligação %1 foi ativada"
 
 #~ msgid "New value:"
 #~ msgstr "Novo valor:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Pesquisa de objetivo com célula %1 encontrou uma solução:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Pesquisa de objetivo com célula %1 NÃO encontrou solução."
 
 #~ msgid "Set cell:"
 #~ msgstr "Selecione célula:"
@@ -16171,82 +18893,6 @@ msgstr "A ligação %1 foi ativada"
 
 #~ msgid "Current value:"
 #~ msgstr "Valor atual:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Substituir"
-
-#~ msgid "Selection List..."
-#~ msgstr "Lista de Seleção..."
-
-#~ msgid "More Options"
-#~ msgstr "Mais Opções"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Pesquisar em toda a folha"
-
-#~ msgid "Search in:"
-#~ msgstr "Pesquisar em:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Valores das células"
-
-#~ msgid "Comments"
-#~ msgstr "Comentários"
-
-#~ msgid "Search direction:"
-#~ msgstr "Direção da pesquisa:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Ao Longo e para Baixo"
-
-#~ msgid "Down then Across"
-#~ msgstr "Para Baixo e ao Longo"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Menos Opções"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Formato da célula..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Definir a formatação da célula"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Mover o objeto da célula para a área de transferência"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Copiar o objeto da célula para a área de transferência"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Colar o conteúdo da área de transferência no cursor"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Colar especial..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Colar o conteúdo da área de transferência com opções especiais"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Colar com inserção"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Insere uma célula da área de transferência na planilha"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Colar Inserindo Células"
-
-#~ msgid "Insert"
-#~ msgstr "Inserir"
-
-#~ msgid "Move towards right"
-#~ msgstr "Mover para a direita"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Mover para baixo"
-
-#~ msgid "Special Paste"
-#~ msgstr "Colar especial"
 
 #~ msgid "Content"
 #~ msgstr "Conteúdo"
@@ -16278,31 +18924,12 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Division"
 #~ msgstr "Divisão"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Verificar a ortografia"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Deseja verificar a ortografia na próxima planilha?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Corrigir palavras erradas"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Auto-Formatação..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Altera a formatação da planilha"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Auto-formatar"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Estilo da Planilha"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Selecione o estilo de planilha a aplicar:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Não foi possível encontrar a imagem %1."
@@ -16310,88 +18937,8 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Could not load image %1."
 #~ msgstr "Não foi possível carregar a imagem %1."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Não foi possível encontrar a folha de estilo do arquivo XML '%1'."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Erro de processamento da folha de estilo do arquivo XML %1."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Auto-Filtrar"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Adicionar um filtro automático a um intervalo de células"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Auto-filtrar"
-
-#~ msgid "Clear All"
-#~ msgstr "Limpar tudo"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Limpa todo o conteúdo e formatação da célula atual"
-
 #~ msgid "Contents"
 #~ msgstr "Conteúdo"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Limpar conteúdo"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Remover os conteúdos da célula atual"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Limpar texto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Remover formatação condicional"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Adicionar formatação condicional"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Selecionar uma nova cor de borda"
-
-#~ msgid "Border Color"
-#~ msgstr "Cor da borda"
-
-#~ msgid "Set the background color"
-#~ msgstr "Mudar a cor de fundo"
-
-#~ msgid "Background Color"
-#~ msgstr "Cor de Fundo"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Estilos condicionais..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Definir o estilo da célula, com base em certas condições"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Estilos condicionais"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Remover estilos condicionais"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Remover os estilos condicionais das células"
-
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&Tabelas dinâmicas..."
-
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Criar tabelas dinâmicas"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Você precisa selecionar múltiplas células."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Formato numérico"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16400,82 +18947,6 @@ msgstr "A ligação %1 foi ativada"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Formato porcentual"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Formato da hora"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Formato da data"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Formato científico"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Mudar cor da borda"
-
-#~ msgid "<none>"
-#~ msgstr "<nenhum>"
-
-#~ msgid "equal to"
-#~ msgstr "igual a"
-
-#~ msgid "greater than"
-#~ msgstr "maior que"
-
-#~ msgid "less than"
-#~ msgstr "menor que"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "maior ou igual a"
-
-#~ msgid "equal to or less than"
-#~ msgstr "menor ou igual a"
-
-#~ msgid "between"
-#~ msgstr "entre"
-
-#~ msgid "outside range"
-#~ msgstr "fora do intervalo"
-
-#~ msgid "different to"
-#~ msgstr "diferente de"
-
-#~ msgid "First Condition"
-#~ msgstr "Primeira Condição"
-
-#~ msgid "Second Condition"
-#~ msgstr "Segunda Condição"
-
-#~ msgid "Third Condition"
-#~ msgstr "Terceira Condição"
-
-#~ msgid "Cell is"
-#~ msgstr "A célula é"
-
-#~ msgid "Cell style"
-#~ msgstr "Estilo da célula"
-
-#~ msgid "different from"
-#~ msgstr "diferente de"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Se o primeiro valor é um número, o segundo valor também deve ser um "
-#~ "número."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Se o primeiro valor é um string, o segundo valor também deve ser um "
-#~ "string."
-
-#~ msgid "Select Source"
-#~ msgstr "Selecionar origem"
 
 #~ msgid "Current Selection"
 #~ msgstr "Seleção atual"
@@ -16506,12 +18977,6 @@ msgstr "A ligação %1 foi ativada"
 
 #~ msgid "!="
 #~ msgstr "!="
-
-#~ msgid "Pivot Table Configuration Window"
-#~ msgstr "Janela de configuração da tabela dinâmica"
-
-#~ msgid "Add Filter"
-#~ msgstr "Adicionar filtro"
 
 #~ msgid "Drag from Labels and drop in the desired field"
 #~ msgstr "Arraste das legendas e solte no campo desejado"
@@ -16547,9 +19012,6 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Rows"
 #~ msgstr "Linhas"
 
-#~ msgid "Pivot Options"
-#~ msgstr "Opções da tabela dinâmica"
-
 #~ msgid "Value Type"
 #~ msgstr "Tipo de valor"
 
@@ -16562,155 +19024,17 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Manual Selection"
 #~ msgstr "Seleção manual"
 
-#~ msgid "Product"
-#~ msgstr "Produto"
-
 #~ msgid "Sort By"
 #~ msgstr "Ordenar por"
-
-#~ msgid "Select Font..."
-#~ msgstr "Selecionar fonte..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Selecionar tamanho da fonte"
-
-#~ msgid "Font Size"
-#~ msgstr "Tamanho da fonte"
-
-#~ msgid "Text Color"
-#~ msgstr "Cor do texto"
-
-#~ msgid "Set the text color"
-#~ msgstr "Definir a cor do texto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Alterar fonte"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Gerenciador de estilos..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Editar e organizar os estilos de células"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Aplicar um estilo pré-definido às células selecionadas"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Criar estilo a partir da célula..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "Estilo a Partir da Célula"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Criar um novo estilo baseado na célula atualmente selecionada"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Criar estilo a partir da célula"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "O nome do estilo não pode estar vazio."
-
-#~ msgid "Style Manager"
-#~ msgstr "Gerenciador de estilos"
-
-#~ msgid "All Styles"
-#~ msgstr "Todos os estilos"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Estilos personalizados"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Hierárquico"
-
-#~ msgid "&New..."
-#~ msgstr "&Novo..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Modificar..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Excluir..."
-
-#~ msgid "style%1"
-#~ msgstr "estilo%1"
 
 #~ msgid "Cells..."
 #~ msgstr "Células..."
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Inserir células..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Inserir uma célula em branco na planilha"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Remover células..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Remove a célula atual da planilha"
-
 #~ msgid "Delete Cells..."
 #~ msgstr "Excluir células..."
 
-#~ msgid "Insert rows"
-#~ msgstr "Inserir linhas"
-
-#~ msgid "Insert columns"
-#~ msgstr "Inserir colunas"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Inserir células"
-
-#~ msgid "Move towards left"
-#~ msgstr "Mover para a esquerda"
-
-#~ msgid "Move towards top"
-#~ msgstr "Mover para o topo"
-
-#~ msgid "Remove rows"
-#~ msgstr "Remover linhas"
-
-#~ msgid "Remove columns"
-#~ msgstr "Remover colunas"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Remover Células"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&Subtotais..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr ""
-#~ "Cria tipos diferentes de subtotais, para uma lista ou banco de dados"
-
-#~ msgid "Subtotals"
-#~ msgstr "Subtotais"
-
-#~ msgid "Remove All"
-#~ msgstr "Remover Tudo"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr ""
-#~ "Você deve selecionar pelo menos uma coluna para adicionar subtotais."
-
 #~ msgid "Grand Total"
 #~ msgstr "Total geral"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Coluna '%1' "
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "&Substituir Subtotais atuais"
@@ -16736,46 +19060,6 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Adicionar Subtotal à:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Ir para a célula..."
-
-#~ msgid "Goto"
-#~ msgstr "Ir para"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Mover para uma célula em particular"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Quebrar antes da coluna"
-
-#~ msgid "Column Break"
-#~ msgstr "Quebra de coluna"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Insere uma quebra de página manual antes da coluna"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Quebrar antes da linha"
-
-#~ msgid "Row Break"
-#~ msgstr "Quebra de linha"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Insere uma quebra manual de página antes da linha"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Ir para a célula"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Insira célula:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Consolidar..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr ""
-#~ "Criar uma região de dados resumidos de um grupo de regiões similares"
-
 #~ msgid "Description in rows"
 #~ msgstr "Descrição em linhas"
 
@@ -16784,39 +19068,6 @@ msgstr "A ligação %1 foi ativada"
 
 #~ msgid "Copy data"
 #~ msgstr "Copiar dados"
-
-#~ msgid "Consolidate"
-#~ msgstr "Consolidado"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Desvio Padrão"
-
-#~ msgid "Variance"
-#~ msgstr "Variação"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Você deve definir pelo menos uma faixa de origem."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 não é uma faixa de células válida."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "A faixa\n"
-#~ "%1\n"
-#~ "é muito pequena"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "A faixa\n"
-#~ "%1\n"
-#~ "é muito grande"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16831,22 +19082,6 @@ msgstr "A ligação %1 foi ativada"
 #~ "%2\n"
 #~ "têm tamanhos diferentes"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Consolidar"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "A faixa de origem intercepta a faixa de destino."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "A faixa\n"
-#~ "%1\n"
-#~ " é malformada"
-
 #~ msgid "Function:"
 #~ msgstr "Função:"
 
@@ -16856,201 +19091,17 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Entered references:"
 #~ msgstr "Referências inseridas:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Mudar ângulo..."
-
-#~ msgid "Angle"
-#~ msgstr "Ângulo"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Alterar o ângulo com o qual o conteúdo da célula é impresso"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Aumentar precisão"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Aumentar a precisão decimal mostrada na tela"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Diminuir precisão"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Diminuir a precisão decimal mostrada na tela"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Aumentar precisão"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Diminuir precisão"
-
-#~ msgid "Change Angle"
-#~ msgstr "Mudar ângulo"
-
-#~ msgid "Angle:"
-#~ msgstr "Ângulo:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Mudar ângulo"
-
-#~ msgid "Area Name..."
-#~ msgstr "Nome da Área..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Definir o nome para uma região da planilha"
-
-#~ msgid "Named Areas..."
-#~ msgstr "Áreas com nome..."
-
-#~ msgid "Named Areas"
-#~ msgstr "Áreas com nome"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Editar ou selecionar as áreas com nome"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Adicionar Área com Nome"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Insira nome da área:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "A área com nome '%1' já existe.\n"
-#~ "Deseja substituí-la?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "Substituir Área com Nome"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Substituir área com nome"
-
 #~ msgid "&Select"
 #~ msgstr "&Selecionar"
 
-#~ msgid "Area: %1"
-#~ msgstr "Área: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Editar..."
-
-#~ msgid "&Remove"
-#~ msgstr "&Remover"
 
 #~ msgid "New Named Area"
 #~ msgstr "Nova Área com Nome"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Editar Área com Nome"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Deseja mesmo apagar esta área com nome?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Remover Área com Nome"
-
-#~ msgid "Cells:"
-#~ msgstr "Células:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Planilha:"
-
-#~ msgid "Area name:"
-#~ msgstr "Nome da área:"
-
-#~ msgid "Align Left"
-#~ msgstr "Alinhar à esquerda"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Justificar o conteúdo da célula à esquerda"
-
-#~ msgid "Align Center"
-#~ msgstr "Centralizar"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Centrar o conteúdo da célula"
-
-#~ msgid "Align Right"
-#~ msgstr "Alinhar à direita"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Justificar à direita o conteúdo da célula"
-
-#~ msgid "Align Top"
-#~ msgstr "Alinhar no topo"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Alinhar o conteúdo da célula ao seu topo"
-
-#~ msgid "Align Middle"
-#~ msgstr "Alinhar no Meio"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Alinhar o conteúdo da célula ao seu centro"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Alinhar abaixo"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Alinhar o conteúdo da célula à sua parte inferior"
-
-#~ msgid "Border Left"
-#~ msgstr "Borda Esquerda"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Definir uma borda esquerda para a área selecionada"
-
-#~ msgid "Border Right"
-#~ msgstr "Borda Direita"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Definir uma borda direita para a área selecionada"
-
-#~ msgid "Border Top"
-#~ msgstr "Borda de topo"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Definir uma borda superior para a área selecionada"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Borda de fundo"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Definir uma borda inferior para a área selecionada"
-
-#~ msgid "All Borders"
-#~ msgstr "Todas as Bordas"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Definir uma borda ao redor de todas as células da área selecionada"
-
-#~ msgid "No Borders"
-#~ msgstr "Sem Bordas"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Remover todas as bordas da área selecionada"
-
-#~ msgid "Border Outline"
-#~ msgstr "Contorno da borda"
-
-#~ msgid "Outline"
-#~ msgstr "Contorno"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Definir uma borda para a área ao redor da área selecionada"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Mudar alinhamento horizontal"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Mudar alinhamento vertical"
 
 #~ msgid "Australia"
 #~ msgstr "Austrália"
@@ -18864,61 +20915,6 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Dólar zimbabuano"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Restaurar a formatação padrão"
-
-#~ msgid "Strike Out"
-#~ msgstr "Tachado"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Aumentar tamanho da fonte"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Diminuir tamanho da fonte"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Quebra de texto"
-
-#~ msgid "Wrap"
-#~ msgstr "Quebrar"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Repartir o texto da célula em várias linhas"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Texto vertical"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Imprimir o conteúdo da célula na vertical"
-
-#~ msgid "Percent Format"
-#~ msgstr "Formato porcentual"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Definir a formatação da célula para ser uma porcentagem"
-
-#~ msgid "Money Format"
-#~ msgstr "Formato Monetário"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Definir a formatação da célula como sendo a da sua moeda local"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Quebra de texto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Texto vertical"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Formato porcentual"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Formato monetário"
-
 #~ msgid "&Data Format"
 #~ msgstr "Formato dos &dados"
 
@@ -18976,9 +20972,6 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Default height (%1)"
 #~ msgstr "Altura padrão (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Altura:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Define a altura da célula."
 
@@ -18992,446 +20985,32 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Default width (%1)"
 #~ msgstr "Largura padrão (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Largura:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Adicionar comentário"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Aumentar recuo"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Aumenta o recuo"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Diminuir recuo"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Diminui o recuo"
-
-#~ msgid "Upper Case"
-#~ msgstr "Caixa Alta"
-
-#~ msgid "Upper"
-#~ msgstr "Maiúsculas"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Converter todas as letras para maiúsculas"
-
-#~ msgid "Lower Case"
-#~ msgstr "Caixa Baixa"
-
-#~ msgid "Lower"
-#~ msgstr "Minúsculas"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Converter todas as letras para minúsculas"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Converter Primeira Letra para Maiúscula"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Primeira Letra em Maiúsculas"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Capitalizar a primeira letra"
-
-#~ msgid "Comment..."
-#~ msgstr "Comentário..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Editar um comentário para esta célula"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Remover comentário"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Remover o comentário desta célula"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Mudar para maiúsculas"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Mudar para minúsculas"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Primeira letra em maiúsculas"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Remover comentário"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Limpar comentário"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Alterar maiúsculas e minúsculas"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Aumentar recuo"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Diminuir recuo"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Comentário da Célula"
-
-#~ msgid "&Left"
-#~ msgstr "&Esquerda"
-
-#~ msgid "&Right"
-#~ msgstr "&Direita"
-
 #~ msgid "&Up"
 #~ msgstr "A&cima"
-
-#~ msgid "&Down"
-#~ msgstr "&Abaixo"
-
-#~ msgid "Autosum"
-#~ msgstr "Autosoma"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Inserir a função 'soma'"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Preencher seleção"
-
-#~ msgid "From &Text File..."
-#~ msgstr "Do Arquivo de &Texto..."
-
-#~ msgid "Text File"
-#~ msgstr "Arquivo de Texto"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Inserir dados de um arquivo de texto, na posição do cursor/seleção atual"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "&Da área de transferência..."
 
-#~ msgid "Clipboard"
-#~ msgstr "Área de transferência"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Inserir os dados em CSV da área de transferência na posição do cursor/"
-#~ "seleção atual"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Texto para colunas..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Expandir o conteúdo das células por várias colunas"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Inserindo da área de transferência"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Não há nenhum dado na área de transferência."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Não há dados utilizáveis na área de transferência."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "Importar arquivo de dados CSV"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "Arquivos de dados CSV (*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Texto para colunas"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Não foi possível abrir o arquivo de entrada."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Inserir da área de transferência"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Inserir arquivo de texto"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Texto para colunas"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "Mesclar a região selecionada"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Mesclar células na horizontal"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Mesclar a região selecionada apenas na horizontal"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Mesclar células na vertical"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Mesclar a região selecionada apenas na vertical"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Separar células"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Quebrar a união da região selecionada"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Redimensionar coluna..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Alterar a largura de uma coluna"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Inserir colunas"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Insere uma nova coluna na planilha"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Remover colunas"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Remove as colunas selecionadas da planilha"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Ocultar colunas"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Ocultar a coluna desta"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Mostrar colunas..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Mostrar colunas ocultas"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Igualar Coluna"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Redimensiona as colunas selecionadas para terem o mesmo tamanho"
-
-#~ msgid "Show Columns"
-#~ msgstr "Mostrar colunas"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Mostrar linhas ocultas na seleção"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Redimensionar linha..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Alterar a altura de uma linha"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Inserir linhas"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Insere uma nova linha na planilha"
-
-#~ msgid "Remove Rows"
-#~ msgstr "Remover linhas"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Remove uma linha da planilha"
-
-#~ msgid "Hide Rows"
-#~ msgstr "Ocultar linhas"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Ocultar uma linha desta"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Mostrar linhas..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Mostrar linhas ocultas"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Igualar linha"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Redimensiona as linhas selecionadas para o mesmo tamanho"
-
-#~ msgid "Show Rows"
-#~ msgstr "Mostrar linhas"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Mostrar linhas ocultas na seleção"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Ajustar linha e coluna"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "Ajustar tamanho da linha/coluna de modo a caber o conteúdo"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Ajustar coluna"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Excluir colunas"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Ajustar linha"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Excluir linhas"
 
-#~ msgid "Resize Row"
-#~ msgstr "Redimensionar linha"
-
-#~ msgid "Resize Column"
-#~ msgstr "Redimensionar coluna"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Selecione colunas ocultas para mostrar:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Selecione linha ocultas para mostrar:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Coluna: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Linha: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Link..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Inserir uma Hiperligação de Internet"
-
-#~ msgid "Link"
-#~ msgstr "Link"
-
-#~ msgid "Remove Link"
-#~ msgstr "Remover Link"
-
-#~ msgid "Remove a link"
-#~ msgstr "Remover uma ligação"
-
-#~ msgid "Insert Link"
-#~ msgstr "Inserir link"
-
 #~ msgid "Edit Link"
 #~ msgstr "Editar Link"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Remover link"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Configurar link"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Link para endereço da Internet"
-
-#~ msgid "Text to display:"
-#~ msgstr "Texto a ser exibido:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Endereço Internet:"
-
-#~ msgid "Email"
-#~ msgstr "E-mail"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "Link para endereço de e-mail"
-
-#~ msgid "Email address:"
-#~ msgstr "Endereço de e-mail:"
-
-#~ msgid "Subject:"
-#~ msgstr "Assunto:"
-
-#~ msgid "File"
-#~ msgstr "Arquivo"
-
-#~ msgid "Link to File"
-#~ msgstr "Ligação para Arquivo"
-
-#~ msgid "File location:"
-#~ msgstr "Localização do arquivo:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Arquivo recente:"
-
-#~ msgid "No Entries"
-#~ msgstr "Nenhuma Entrada"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Ligação para Célula"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Célula ou Área Nomeada:"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Ordenar..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Ordenar um grupo de células"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Classificação &Descendente"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr ""
-#~ "Ordenar um grupo de células pela ordem decrescente (último para o "
-#~ "primeiro)"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Classificação &Ascendente"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr ""
-#~ "Ordenar um grupo de células pela ordem crescente (primeiro para o último)"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Ordenar dados"
 
 #~ msgid "Use custom list"
 #~ msgstr "Usar lista personalizada"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Copiar a formatação das células (Bordas, Cores, Estilo de Texto)"
-
-#~ msgid "Column %1"
-#~ msgstr "Coluna %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Linha %1"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "A &primeira coluna contém os cabeçalhos das linhas"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "A &primeira linha contém os cabeçalhos das colunas"
-
-#~ msgid "Sort"
-#~ msgstr "Classificar"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Não diferenciar maiúsculas de minúsculas"
 
 #~ msgid "Move Up"
 #~ msgstr "Subir"
@@ -19496,230 +21075,8 @@ msgstr "A ligação %1 foi ativada"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Dados ordenados agrupados em linhas verticalmente"
 
-#~ msgid "Validity..."
-#~ msgstr "Validade..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Definir os testes de confirmação da validade dos dados da célula"
-
-#~ msgid "Validity"
-#~ msgstr "Validade"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Remover Validade"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Remover os testes de validade da célula"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Remover critério de validade"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Adicionar critério de validade"
-
-#~ msgid "Clear &All"
-#~ msgstr "Limpar &Tudo"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Critério"
-
-#~ msgid "Allow:"
-#~ msgstr "Permitir:"
-
-#~ msgid "Integer"
-#~ msgstr "Inteiro"
-
-#~ msgid "Text Length"
-#~ msgstr "Comprimento do Texto"
-
-#~ msgid "List"
-#~ msgstr "Lista"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Permitir vazio"
-
-#~ msgid "Data:"
-#~ msgstr "Dados:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Mínimo:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Máximo:"
-
-#~ msgid "Date:"
-#~ msgstr "Data:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Data mínima:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Data máxima:"
-
-#~ msgid "Time:"
-#~ msgstr "Hora:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Hora mínima:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Hora máxima:"
-
-#~ msgid "Number:"
-#~ msgstr "Número:"
-
-#~ msgid "Entries:"
-#~ msgstr "Registros:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "Alerta de &Erro"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Mostrar mensagem de erro quando valores inválidos são inseridos"
-
-#~ msgid "Action:"
-#~ msgstr "Ação:"
-
-#~ msgid "Stop"
-#~ msgstr "Parar"
-
-#~ msgid "Warning"
-#~ msgstr "Aviso"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Título:"
-
-#~ msgid "Message:"
-#~ msgstr "Mensagem:"
-
-#~ msgid "Input Help"
-#~ msgstr "Ajuda de Entrada"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Mostrar ajuda de entrada quando a célula é selecionada"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Este não é um valor válido."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Esta não é uma hora válida."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Esta não é uma data válida."
-
-#~ msgid "&Series..."
-#~ msgstr "&Séries..."
-
-#~ msgid "Insert a series"
-#~ msgstr "Inserir uma série"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Inserir série"
-
-#~ msgid "Select Character"
-#~ msgstr "Selecionar caractere"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Inserir o caractere selecionado no texto"
-
-#~ msgid "Series"
-#~ msgstr "Séries"
-
-#~ msgid "Insert Values"
-#~ msgstr "Inserir Valores"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Inserir as séries verticalmente, uma abaixo da outra"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Inserir as séries horizontalmente, da esquerda para direita"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Linear (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Gera uma série do 'início' ao 'fim' e para cada passo adiciona o valor "
-#~ "fornecido no passo. Isto cria uma série onde cada valor é um 'passo' "
-#~ "maior que o valor anterior."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Geométrica (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Gera uma série do 'início' ao 'fim' e para cada passo multiplica o valor "
-#~ "com o valor fornecido no passo. Usando uma passo de 5 fornece uma lista "
-#~ "como 5, 25, 125, 625 uma vez que 5 vezes 5 (passo) igual à 25, e vezes 5 "
-#~ "igual à 125, e que este último número multiplicado pelo mesmo valor de "
-#~ "passo 5 retorna 625."
-
-#~ msgid "Start value:"
-#~ msgstr "Valor de início:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Valor de parada:"
-
-#~ msgid "Step value:"
-#~ msgstr "Valor do passo:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Os valores iniciais e finais devem ser positivos."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "O valor final deve ser maior que o valor inicial ou o passo deve ser "
-#~ "menor que '1'."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "Nenhum dos valores de Start, Stop ou Step podem ser iguais a zero."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "O valor Step deve ser diferente de 1"
-
-#~ msgid "Step is negative."
-#~ msgstr "Passo é negativo."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "O valor do passo deve ser maior que zero. De outro modo a série linear é "
-#~ "infinita."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Se o valor inicial é maior que o valor final o passo deve ser menor que "
-#~ "zero."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Se o passo é negativo, o valor inicial deve ser maior que o valor final."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "&Caractere especial..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr ""
-#~ "Inserir um ou mais símbolos ou letras que não estão presentes no teclado"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Endereço Internet está vazio"

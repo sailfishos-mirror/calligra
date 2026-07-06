@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sheets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2025-07-12 13:23+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -140,8 +140,13 @@ msgstr "Goiburua"
 msgid "Header1"
 msgstr "Goiburua1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Lehenetsia"
@@ -173,7 +178,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Testua"
@@ -245,7 +251,8 @@ msgstr "<p><b>Emaitza mota:</b> %1</p>"
 msgid "Syntax"
 msgstr "Sintaxia"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Parametroak"
@@ -892,14 +899,15 @@ msgstr "CARY(12;0) funtzioak 0 itzultzen du"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Zenbakia"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Formatua"
@@ -956,6 +964,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") funtzioak 99 itzultzen du"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Datu-basea"
@@ -1257,6 +1267,7 @@ msgstr "Data eta ordua"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1332,7 +1343,8 @@ msgstr ""
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Ordua"
@@ -5041,6 +5053,7 @@ msgid "Regular payments"
 msgstr "Ordainketa erregularrak"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Mota"
@@ -5390,12 +5403,19 @@ msgstr "Eskuzkoa"
 msgid "Automatic"
 msgstr "Automatikoa"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Informazioa"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Errorea"
@@ -6226,7 +6246,7 @@ msgstr ""
 msgid "Math"
 msgstr "Matematikoak"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Funtzioa"
@@ -6724,6 +6744,7 @@ msgid "Range"
 msgstr "Barrutia"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Irizpideak"
@@ -8359,6 +8380,7 @@ msgid "Row"
 msgstr "Errenkada"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Zutabea"
@@ -12999,7 +13021,7 @@ msgid "&Go"
 msgstr "&Joan"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "T&xertatu"
@@ -13017,7 +13039,7 @@ msgid "F&ormat"
 msgstr "&Formatua"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Batu gelaxkak"
@@ -13096,8 +13118,8 @@ msgstr "Aktibatu"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Letra-tipoa"
@@ -13515,14 +13537,16 @@ msgstr "Orri-muga:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Horizontala"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Bertikala"
@@ -13549,13 +13573,15 @@ msgid "Up"
 msgstr "Gora"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Eskuinean"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Ezkerrean"
@@ -13567,36 +13593,50 @@ msgstr "Behera, lehenengo zutabea"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Bat ere ez"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Batura"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Minimoa"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Maximoa"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Batez bestekoa"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Kopurua"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -14006,7 +14046,8 @@ msgstr "Garbitu hautapena"
 msgid "Move selected sheet to the bottom"
 msgstr "Eraman hautatutako orria beheraino"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Maiuskulak/minuskulak bereizita"
@@ -14208,6 +14249,7 @@ msgid "Anchor"
 msgstr "Ainguratu"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Gelaxka"
@@ -14227,7 +14269,7 @@ msgstr "Aldatu forma-ainguratzea"
 msgid "Next Sheet"
 msgstr "Hurrengo orria"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Hurrengoa"
@@ -14242,7 +14284,7 @@ msgstr "Joan hurrengo orrira"
 msgid "Previous Sheet"
 msgstr "Aurreko orria"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Aurrekoa"
@@ -14447,7 +14489,7 @@ msgstr ""
 "Orri aktiboa kenduko duzu. \n"
 "Jarraitu nahi duzu?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Idatzi izena:"
@@ -14507,21 +14549,3158 @@ msgstr "Zenbat ez-huts:"
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Testuaren kolorea aldatu"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "Aldatu atzeko planoaren kolorea"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Ertza aldatu"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Txertatu zutabeak"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Txertatu errenkadak"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Kendu zutabeak"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Kendu errenkadak"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Errenkada bat txertatzen du kalkulu-orrian"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Errenkada bat kentzen du kalkulu-orritik"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Zutabe bat txertatzen du kalkulu-orrian"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Hautatutako zutabeak kentzen ditu kalkulu-orritik"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Ezkutatu zutabeak"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Ezkutatu errenkadak"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Bistaratu zutabeak"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Bistaratu errenkadak"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Hautapeneko errenkada ezkutuak bistaratzen ditu"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "Konbinatu hautatutako barrutia"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Hautapeneko zutabe ezkutuak bistaratzen ditu"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "Konbinatu hautatutako barrutia"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Berdindu zutabeak"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Berdindu errenkadak"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Haututako errenkaden tamaina aldatzen du, tamaina bera izan dezaten"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Haututako zutabeen tamaina aldatzen du, tamaina bera izan dezaten"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Doitu zutabea"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Doitu errenkada"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Doitu errenkada eta zutabea"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+"Errenkadaren eta zutabearen tamainak doitzen ditu, edukia ondo sar dadin"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+"Errenkadaren eta zutabearen tamainak doitzen ditu, edukia ondo sar dadin"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+"Errenkadaren eta zutabearen tamainak doitzen ditu, edukia ondo sar dadin"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Bistaratu zutabeak..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Bistaratu errenkadak..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Ezkutuko zutabeak bistaratzen ditu"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Ezkutuko errenkadak bistaratzen ditu"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Zutabea: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Errenkada: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Zutabearen tamaina aldatu..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Errenkadaren tamaina aldatu..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Errenkaden altuera aldatu"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Zutabearen zabalera aldatu"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Lerrokatu ezkerrean"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Ezkerrean lerrokatzen du gelaxken edukia"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Lerrokatze horizontala aldatu"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Lerrokatu eskuinean"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Eskuinean lerrokatzen du gelaxken edukia"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Lerrokatu erdian"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Erdian lerrokatzen du gelaxken edukia"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Erdian"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Lerrokatu goian"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Gelaxkaren edukia goialdean lerrokatzen du"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Goian"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Lerrokatze bertikala aldatu"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Lerrokatu behean"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Gelaxkaren edukia behealdean lerrokatzen du"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Behean"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Lerrokatu erdialdean"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Gelaxkaren edukia erdiratu egiten du"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Erdian"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Angelua aldatu..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Gelaxken edukia inprimatzeko angelua aldatzen du"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Angelua"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Angelua aldatu"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Iragazki automatikoa"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Iragazki automatiko bat gehitzen dio gelaxka-barruti bati"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Iragazki automatikoa"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Aurrez definitutako estilo bat aplikatzen die hautatutako gelaxkei."
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Formatu automatikoa"
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Ezin izan da orri-estiloaren '%1' XML fitxategia aurkitu."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Analisi-errorea gertatu da orri-estiloaren %1 XML fitxategian."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Formatu automatikoa"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Batuketa automatikoa"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Batuketaren funtzioa txertatzen du"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Batuketa automatikoa"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Ertza ezkerrean"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Ertza jartzen du hautatutako arearen ezkerraldean"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Ertza eskuinean"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Ertza jartzen du hautatutako arearen eskuinaldean"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Ertza goian"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Ertza jartzen du hautatutako arearen goialdean"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Ertza behean"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Ertza jartzen du hautatutako arearen behealdean"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Ertz guztiak"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Ertza jartzen du hautatutako areako gelaxka guztien inguruan"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Denak"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Ertzik gabe"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Hautatutako areako ertz guztiak kentzen ditu"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Kanpoko ertza"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Ertza jartzen du hautatutako arearen inguruan"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Ingerada"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Ertzaren kolorea"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Beste ertz-kolore bat hautatu"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Aldatu ertz-kolorea"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Gelaxkak txertatu..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Gelaxka huts bat sartzen du kalkulu-orrian"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Gelaxkak kendu..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Gelaxkak kentzen ditu kalkulu-orritik"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Garbitu dena"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Eduki eta formatu guztiak kentzen ditu uneko gelaxkatik"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Garbitu edukia"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Uneko gelaxkaren edukia kentzen du"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Garbitu testua"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Ezabatu"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Iruzkina..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Iruzkin bat editatu gelaxka honetarako"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Garbitu iruzkina"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Gelaxka honetako iruzkina kentzen du"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Kendu iruzkina"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Kendu iruzkina"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Gehitu iruzkina"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Baldintzapeko estiloak"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Baldintza batzuen araberako estiloa ezartzen zaio gelaxkari"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Baldintzapeko estiloak"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Gelaxkaren baldintzapeko estiloak kentzen ditu"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Kendu baldintzapeko estiloak"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Kendu baldintzapeko formatua"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Gehitu baldintzapeko formatua"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Kontsolidatu..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Antzeko barruti batzuen laburpen-datuen barruti bat sortzen du"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Kontsolidatu"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Gelaxkako objektua arbelean kopiatzen du."
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Gelaxkako objektua arbelera eramaten du."
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "&Testu-fitxategitik..."
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Datuak txertatzen ditu testu-fitxategi batetik kurtsorearen uneko posiziora "
+"edo hautapenera"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Testu-fitxategia"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "Inportatu CSV datu-fitxategia"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "CSV datu-fitxategia (*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Ezin da ireki sarrera-fitxategia."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Inserting Text File"
+msgid "Inserting Text File"
+msgstr "Testu-fitxategia txertatu"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Testu-fitxategia txertatu"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Arbeletik txertatu"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"Arbeleko CSV datuak txertatzen ditu kurtsorearen uneko posizioan edo "
+"hautapenean"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Arbela"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Arbelean ez dago daturik."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Arbelean ez dago datu erabilgarririk."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Arbeletik txertatu"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Arbeletik txertatu"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Testua zutabetan banatu..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Gelaxken uneko edukia zenbait zutabetan banatzen du"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Testua zutabetan"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Testua zutabetan"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+"Zerrenda pertsonalizatuak sortzen ditu, ordenatzeko edo automatikoki "
+"betetzeko."
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Zerrenda pertsonalizatuak..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Gehitu area izenduna"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Idatzi area-izena:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Angelua aldatu"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Angelua:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "Formatu automatikoa"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Hautatu aplikatu beharreko orri-estiloa:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Karakterea hautatu"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Hautatutako karakterea testuan txertatzen du"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Gelaxkaren iruzkina"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<none>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "honen berdina da:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "hau baino handiagoa da:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "hau baino txikiagoa da:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "honen berdina edo handiagoa da:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "honen berdina edo txikiagoa da:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "bitarte honetan dago:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "barruti honetatik kanpo dago:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "honen ezberdina da:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Lehenengo baldintza"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Bigarren baldintza"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Hirugarren baldintza"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Gelaxka"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Gelaxka-estiloa"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "honen ezberdina da:"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Lehenengo balioa zenbaki bat bada, bigarren balioak ere zenbaki bat izan "
+"behar du."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Lehenengo balioa kate bat bada, bigarren balioak ere kate bat izan behar du."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Kontsolidatu"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Biderkadura"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Desbideratze estandarra"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Bariantza"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Jatorrizko barruti bat definitu behar duzu gutxienez!"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 ez da baliozko gelaxka-barruti bat."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"%1\n"
+"barrutia\n"
+"txikiegia da"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"%1\n"
+"barrutia\n"
+"handiegia da"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "Jatorrizko barrutiak helburuko barrutia ebakitzen du."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"%1\n"
+"barrutia\n"
+" gaizki eratua dago"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Txertatu datuak datu-basetik"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Mota:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Datu-basearen izena:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Ostalaria:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Ataka:\n"
+"(beharrezkoa bada)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Erabiltzailearen izena:\n"
+"(beharrezkoa bada)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Pasahitza:\n"
+"(beharrezkoa bada)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Hautatu taulak:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Taulak"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Hautatu zutabeak:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Taula"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Zutabeak"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Bat egiten du ondorengo guztiekin (AND)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Bat egiten du ondorengoren batekin (OR)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "honen berdina da:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "ez da honen berdina:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "hemen dago:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "ez dago hemen:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "hau bezalakoa da:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "hau baino handiagoa da:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "hau baino txikiagoa da:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "honen berdina edo handiagoa da:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "honen berdina edo txikiagoa da:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Honen arabera ordenatua"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Gorantz"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Beherantz"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Desberdina"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Kontsulta-aukerak"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL kontsulta:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Txertatu eremu batean"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Gelaxka honetan hasi"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Emaitza:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Hemen ezin da taularik zehaztu."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Baliozko eremu bat zehaztu behar da."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Baliozko gelaxka bat zehaztu behar da."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Huts egin du kontsulta exekutatzean."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Kontsulta horrek ez du emaitzarik eman."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Txertatu datuak datu-basetik"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Atakak zenbaki bat izan behar du"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Datu-basera konektatzen..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Konektatuta. Taularen informazioa eskuratzen..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Datu-base honek ez du taularik"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Ezin da kontrolatzailea kargatu"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Taulen metadatuak eskuratzen..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Taula bat hautatu behar da gutxienez."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Zutabe bat hautatu behar duzu gutxienez."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' eta '?' ez dira baliozko komodinak SQLn. Komodin egokiak '%' eta '_' "
+"dira, hurrenez hurren. Ordeztu nahi dituzu?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Ordeztu"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Dokumentuaren ezarpenak"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "Kalkulu modua"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Case Insensitive"
+msgid "Case sensitive"
+msgstr "Maiuskulak/minuskulak bereizi gabe"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Doitasuna"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Automatikoa"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "String to compare with"
+msgid "String comparison:"
+msgstr "Konparatzeko katea"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "Adierazpen erregularra"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Erabili sistemaren eskualde-ezarpenak"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Hizkuntza: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Zenbaki-formatu lehenetsia: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Data-formatu luzea: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Data-formatu laburra: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Ordu-formatua: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Moneta-formatua: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Aukera gehiago"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Arakatu orri osoa"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Bilatu hemen:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Gelaxka-balioa"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Iruzkinak"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Bilaketaren noranzkoa:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Zeharka eta, gero, goitik behera"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Goitik behera eta, gero, zeharka"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Aukera gutxiago"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "Funtzioa"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Funtzio bat txertatu"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Laguntza"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Funtzio honek ez du parametrorik."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Deskribapena ez dago erabilgarri."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Xede-bilaketa"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Joan gelaxkara"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Sartu gelaxka:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Txertatu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Eskuinera mugitu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Behera mugitu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Errenkadak txertatu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Zutabeak txertatu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Gelaxkak txertatu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Kendu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Ezkerrera mugitu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Gora mugitu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Errenkadak kendu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Zutabeak kendu"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Gelaxkak kendu"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Txertatu esteka"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Interneteko helbide baten esteka"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Bistaratzeko testua:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Interneteko helbidea:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "Helbide elektronikoa"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "Helbide elektroniko baten esteka"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "Helbide elektronikoa:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Gaia:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Fitxategia"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Fitxategi baten esteka"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Fitxategiaren kokapena:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Azken fitxategia:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Sarrerarik ez"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Gelaxka baten esteka"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Gelaxka edo area izenduna:"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Zerrenda pertsonalizatuak"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "Aldatu maiuskulak/minuskulak"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Zerrenda:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Sarrera:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Gehitu"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Utzi"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Berria"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Aldatu"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Kopiatu"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Benetan kendu nahi duzu zerrenda hau?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Kendu zerrenda"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Sarreraren area ez dago hutsik.\n"
+"Jarraitu nahi duzu?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Area izendunak"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Area: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Gelaxkak:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Orria:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Arearen izena:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Kendu"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Ireki/Gorde"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Benetan kendu nahi duzu area izendun hau?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Area izenduna kendu"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Gelaxkaren erreferentzia baliogabea da."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Itsatsi gelaxkak txertatuz"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "Select Character"
+msgid "Select Source"
+msgstr "Karakterea hautatu"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "Add Filter"
+msgstr "Iragazkia"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Bit Operations"
+msgid "Pivot Options"
+msgstr "Bit-eragiketak"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Errenkadaren tamaina aldatu"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Altuera:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Zutabearen tamaina aldatu"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Zabalera:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Serieak"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "Txertatu seriea"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Txertatu balioak"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Balioak bertikalki txertatu, bata bestearen azpian"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Balioak horizontalki txertatu, bata bestearen eskuinean"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Lineala (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Sortu serie bat 'hasiera'tik 'amaiera'raino eta urrats bakoitzean gehitu "
+"horretarako esleitutako balioa. Hala, serie bat sortzen da, non urrats "
+"bakoitza aurrekoa baino 'urrats' bat handiagoa baita."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Geometrikoa (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Sortu serie bat 'hasiera'tik 'amaiera'raino eta urrats bakoitzean biderkatu "
+"horretarako esleitutako balioa. Urratsa 5 bada, honelako serie bat sortzen "
+"da: 5, 25, 125, 625; alegia, 5 bider 5 (urratsa) 25, hori (25) bider 5 = "
+"125, eta hori (125) bider 5 = 625."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Hasierako balioa:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Muga:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Urratsaren balioa:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Hasierako eta amaierako balioek positiboak izan behar dute."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Amaierako balioak hasierako balioa baino handiagoa izan behar du, edo, "
+"bestela, urratsak '1' baino txikiagoa izan behar du."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "Hasierako balioak, amaierakoak edo urratsak ezin dira zero izan."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "Urratsa ezin da 1 izan"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "Urratsa negatiboa da."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Urratsak zero baino handiagoa izan behar du; bestela, serie lineala "
+"infinitua izango litzateke."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Hasierako balioa amaierako balioa baino handiagoa bada, urratsak zero baino "
+"txikiagoa izan behar du."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Urratsa negatiboa bada, hasierako balioak amaierako balioa baino handiagoa "
+"izan behar du."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Hautatu ezkutuko errenkadak, bistaratzeko:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Hautatu ezkutuko zutabeak, bistaratzeko:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "%1 zutabea"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "%1 errendaka"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "&Lehen zutabean errenkaden izenak daude"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "&Lehenengo errenkadan zutabeen izenak daude"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Ordenatu"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Maiuskulak/minuskulak bereizi gabe"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Itsaste berezia"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Estilo-kudeatzailea"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Estiloa"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Estilo guztiak"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Estilo pertsonalizatuak"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Hierarkikoa"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Berria..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Aldatu..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Ezabatu..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "%1 estiloa"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Subtotalak"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Kendu denak"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "'%1' zutabea"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Gutxienez zutabe bat hautatu behar duzu guztizko partzialak gehitzeko."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Baliozkotasuna"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "&Garbitu dena"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Onartu:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Osokoa"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Testuaren luzera"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Zerrenda"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Onartu gelaxka hutsak"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Datuak:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Gutxienekoa:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Gehienekoa:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Data:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Data minimoa:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Data maximoa:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Ordua:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Ordu minimoa:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Ordu maximoa:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Zenbakia:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Sarrerak:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "&Errore-abisua"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Erakutsi errore-mezua balio baliogabeak sartzean"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Ekintza:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Gelditu"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Abisua"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Titulua:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Mezua:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Sarreraren laguntza"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Erakutsi sarreraren laguntza gelaxka hautatzean"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Balio hau ez da baliozkoa."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Ordu hau ez da baliozkoa."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Data hau ez da baliozkoa."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Dokumentuaren ezarpenak..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "Dokumentu-ezarpenen elkarrizketa-koadroa bistaratzen du"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Gelaxka nabarmendua editatzen du"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Aldatu gelaxka"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "Trukatu finkatzea"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Erreferentzia testu-kurtsorera finkatzeko modua trukatzen du"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Behean"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "E&zkerrean"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "Es&kuinean"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Bete hautapena"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Ordeztu"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Letra-tipoa hautatu..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Ezarri gelaxka-formatua"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Letra-tipoa aldatu"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Letra-tamaina hautatu"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Ezarri gelaxka-formatua"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Letra-tamaina"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Ezarri testu-kolorea"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Testu-kolorea"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Funtzioa..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Adierazpen matematiko bat txertatzen du"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Formula-hautapena"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Funtzio bat txertatzen du"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Beste zenbait..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&Xede-bilaketa..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Kalkuluak errepikatzen ditu, balio jakin bat bilatzeko"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Gelaxkaren erreferentzia baliogabea da."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Xede-balioa baliogabea da."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Iturburu-gelaxkak zenbakizko balio bat eduki behar du."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Xede-gelaxkak formula bat eduki behar du."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Emaitza bat aurkitu da %1 gelaxkarako xede bat bilatzean:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Ez da emaitzarik aurkitu %1 gelaxkarako xede bat bilatzean."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Joan gelaxkara..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Gelaxka jakin batera joaten da"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Joan"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Ordu hau ez da baliozkoa."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Txikiagotu koska"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Handitu koska"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Koska txikiagotzen du"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Koska handitzen du"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Handitu koska"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Txikitu koska"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "&Datu-basetik..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Datuak txertatzen ditu SQL datu-base batetik"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+#| msgid ""
+#| "No database drivers available.  To use this feature you need to install "
+#| "the necessary Qt 3 database drivers."
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Ez dago erabilgarri datu-basearen kontrolatzailerik. Eginbide hau "
+"erabiltzeko, beharrezkoa da Qt 3 datu-basearen kontrolatzaileak instalatzea."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Serieak..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Serie bat txertatzen du"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Txertatu seriea"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "&Karaktere berezia..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr "Teklatuan agertzen ez diren karaktere edo sinboloak txertatzen ditu"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Exekutatu ikuskatzailea..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Esteka..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Interneteko hiperesteka bat txertatzen du"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Esteka"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Esteka bat kendu"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Kendu esteka"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Kendu esteka"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Set Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Ezarri esteka"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Hautapen-zerrenda..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Batu gelaxkak horizontalki"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Batu gelaxkak bertikalki"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Konbinatu hautatutako barrutia horizontalki"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Konbinatu hautatutako barrutia bertikalki"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "Konbinatu hautatutako barrutia"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Bereizi gelaxkak"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "Banandu hautatutako barrutia"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Arearen izena..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Kalkulu-orriaren barruti baten izena ezartzen du"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"'%1' area izenduna badago lehendik.\n"
+"Ordeztu nahi duzu?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "Area izenduna ordeztu"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Area izenduna ordeztu"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Area izendunak editatzeko edo hautatzeko"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Area izendunak..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Jauzia errenkadaren aurretik"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Orri-jauzi bat ezartzen du eskuz, errenkadaren aurretik"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Errenkada-jauzia"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Jauzia zutabearen aurretik"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Orri-jauzi bat ezartzen du eskuz, zutabearen aurretik"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Zutabe-jauzia"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Arbeleko edukia kurtsorea dagoen tokian itsasten du."
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Itsaste berezia..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Arbeleko edukia itsasten du aukera bereziekin"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Itsatsi txertatuz"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Arbeleko gelaxka bat kalkulu-orrian txertatzen du"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "&Subtotalak..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "&Subtotalak..."
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Gelaxka bat baino gehiago hautatu behar duzu"
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Uneko kalkulu-orriko gelaxka guztiak hautatzen ditu"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "QTableView bistaratu..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Ordenatu..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Gelaxka multzo bat ordenatzen du"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Ordenatu &gorantz"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Gelaxka multzo bat ordenatzen du goranzko ordenan (lehenetik azkenera)"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "Ordenatu &beherantz"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+"Gelaxka multzo bat ordenatzen du beheranzko ordenan (azkenetik lehenera)"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Ordenatu datuak"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Orri honetako ortografia egiaztatu nahi duzu?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Joan hurrengo orrira"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Ortografia egiaztatu"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Gelaxka-formatua..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Ezarri gelaxka-formatua"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Lodia"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Etzana"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Azpimarratua"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Marratua"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Egokitu testua, errenkadatan banatuz"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Egokitu ertzean"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Egokitu"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Egokitu ertzean"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Gelaxken edukia bertikalki inprimatzen du"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Testu bertikala"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Testu bertikala"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Zenbaki-formatua"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Ezarri gelaxka-formatua"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Lehen zenbakia"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "Formatu zientifikoa"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "Gelaxken formatua ezartzen du ehunekoen itxura izan dezaten"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Zientifikoa"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Zientifikoa"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Ehunekoen formatua"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Gelaxken formatua ezartzen du ehunekoen itxura izan dezaten"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Ehunekoa"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Ehuneko-formatua"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Diru-formatua"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Gelaxken formatua ezartzen du tokiko monetaren itxura izan dezaten"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Dirua"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Diru-formatua"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Data-formatua"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Ezarri gelaxka-formatua"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Formatua"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Ezarri gelaxka-formatua"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Ordu-formatua"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Formatua"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Handitu letra-tamaina"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Txikitu letra-tamaina"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Handitu zehaztasuna"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Pantailan bistaratzen den zehaztasun dezimala handitzen du"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Txikiagotu zehaztasuna"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Pantailan bistaratzen den zehaztasun dezimala txikiagotzen du"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Handiagotu zehaztasuna"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Txikiagotu zehaztasuna"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Formatu lehenetsia berrezartzen du"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Orriaren estiloa"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Atzeko planoaren kolorea"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Atzeko planoaren kolorea ezarri"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Sortu estiloa gelaxkatik..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Estilo berri bat sortzen du uneko gelaxka hautatuan oinarrituta."
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Gelaxkaren estiloa"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Estiloa sortu gelaxkatik"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Ezin da estiloaren izena hutsik utzi."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Dagoeneko badago izen bereko estilo bat."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Gelaxka-estiloak editatu eta antolatu"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Estilo-kudeatzailea..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Aurrez definitutako estilo bat aplikatzen die hautatutako gelaxkei."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&Subtotalak..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Zerrenda edo datu-base bateko subtotalak sortzen ditu"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Subtotalak"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Maiuskula"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "Minuskula"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Lehen letra maiuskulaz"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Bihurtu maiuskula"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Bihurtu minuskula"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Lehen letra maiuskulaz"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Maiuskula"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Minuskula"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Lehen letra maiuskula bihurtzen du"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Letra guztiak maiuskula bihurtzen ditu"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Letra guztiak minuskula bihurtzen ditu"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "Lehen letra maiuskulaz"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Aldatu maiuskulak/minuskulak"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Probak ezartzen ditu gelaxketako datuak baliozkoak direla egiaztatzeko"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Baliozkotasuna..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Gelaxkaren baliozkotasun-probak kentzen ditu"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Kendu baliozkotasuna"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Kendu baliozkotasun-egiaztapena"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Gehitu baliozkotasun-egiaztapena"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14767,11 +17946,6 @@ msgstr "Txertatu gelaxkak"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Kendu gelaxkak"
-
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Ezabatu"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -15022,12 +18196,6 @@ msgstr "Desberdinak (aldaketarik ez)"
 msgid "Roman"
 msgstr "Erromatarra"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Etzana"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -15051,12 +18219,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Normala"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Lodia"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -15069,12 +18231,6 @@ msgstr "Kolorea:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "Hautamarka badu, uneko gelaxkako testua azpimarratua egongo da."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Azpimarratua"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15227,11 +18383,6 @@ msgstr ""
 "Eskualde-ezarpenak -> Herrialdea/Eskualdea eta hizkuntza -> Zenbakiak "
 "fitxa). Zenbakiak, lehenespenez, eskuinean lerrokatzen dira."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Ehunekoa"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15250,11 +18401,6 @@ msgstr ""
 "ezarrita, zenbakia 12 izango da berriro.\n"
 "Formatuen tresna-barrako Ehunekoa ikonoa ere erabil daiteke horretarako."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Dirua"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15271,11 +18417,6 @@ msgstr ""
 "Moneta-ikurra bistaratzen da, eta sistemaren ezarpenetan ezarritako "
 "doitasuna izango du zenbakiak. Formatuen tresna-barrako Moneta ikonoa ere "
 "erabil daiteke gelaxkari uneko monetaren formatua emateko."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Zientifikoa"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15538,11 +18679,6 @@ msgstr "Hiru digitu 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Estiloa"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15553,11 +18689,6 @@ msgstr "Izena:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Heredatu estiloa:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Dagoeneko badago izen bereko estilo bat."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15613,12 +18744,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Estandarra"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Erdian"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15659,24 +18784,6 @@ msgstr ""
 "kokapen bertikalari dagokionez.\n"
 "<b>Behean</b> aukeratuz gero, gelaxkaren edukia gelaxkaren behealdean "
 "bistaratzen da.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Goian"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Erdian"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Behean"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15869,20 +18976,10 @@ msgstr "Aplikatu"
 msgid "Apply changes"
 msgstr "Aplikatu aldaketak"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Utzi"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Baztertu aldaketak"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Denak"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15985,363 +19082,11 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[hh]:mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Funtzioa..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "Adierazpen matematiko bat txertatzen du"
-
-#~ msgid "From &Database..."
-#~ msgstr "&Datu-basetik..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Datuak txertatzen ditu SQL datu-base batetik"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Formula-hautapena"
-
-#~ msgid "Insert a function"
-#~ msgstr "Funtzio bat txertatzen du"
-
-#~ msgid "Others..."
-#~ msgstr "Beste zenbait..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Aldatu gelaxka"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Gelaxka nabarmendua editatzen du"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Exekutatu ikuskatzailea..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "QTableView bistaratu..."
-
 #~ msgid "Permute reference fixation"
 #~ msgstr "Trukatu finkatze-erreferentzia"
 
-#~ msgid "Permute fixation"
-#~ msgstr "Trukatu finkatzea"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Erreferentzia testu-kurtsorera finkatzeko modua trukatzen du"
-
-#, fuzzy
-#~| msgid ""
-#~| "No database drivers available.  To use this feature you need to install "
-#~| "the necessary Qt 3 database drivers."
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Ez dago erabilgarri datu-basearen kontrolatzailerik. Eginbide hau "
-#~ "erabiltzeko, beharrezkoa da Qt 3 datu-basearen kontrolatzaileak "
-#~ "instalatzea."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Txertatu datuak datu-basetik"
-
-#~ msgid "Type:"
-#~ msgstr "Mota:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Erabiltzailearen izena:\n"
-#~ "(beharrezkoa bada)"
-
-#~ msgid "Host:"
-#~ msgstr "Ostalaria:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Ataka:\n"
-#~ "(beharrezkoa bada)"
-
-#~ msgid "Database name: "
-#~ msgstr "Datu-basearen izena:"
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Pasahitza:\n"
-#~ "(beharrezkoa bada)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Hautatu taulak:"
-
-#~ msgid "Tables"
-#~ msgstr "Taulak"
-
-#~ msgid "Select columns:"
-#~ msgstr "Hautatu zutabeak:"
-
-#~ msgid "Table"
-#~ msgstr "Taula"
-
-#~ msgid "Columns"
-#~ msgstr "Zutabeak"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Bat egiten du ondorengo guztiekin (AND)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Bat egiten du ondorengoren batekin (OR)"
-
-#~ msgid "equals"
-#~ msgstr "honen berdina da:"
-
-#~ msgid "not equal"
-#~ msgstr "ez da honen berdina:"
-
-#~ msgid "in"
-#~ msgstr "hemen dago:"
-
-#~ msgid "not in"
-#~ msgstr "ez dago hemen:"
-
-#~ msgid "like"
-#~ msgstr "hau bezalakoa da:"
-
-#~ msgid "greater"
-#~ msgstr "hau baino handiagoa da:"
-
-#~ msgid "lesser"
-#~ msgstr "hau baino txikiagoa da:"
-
-#~ msgid "greater or equal"
-#~ msgstr "honen berdina edo handiagoa da:"
-
-#~ msgid "less or equal"
-#~ msgstr "honen berdina edo txikiagoa da:"
-
-#~ msgid "Sorted by"
-#~ msgstr "Honen arabera ordenatua"
-
-#~ msgid "Ascending"
-#~ msgstr "Gorantz"
-
-#~ msgid "Descending"
-#~ msgstr "Beherantz"
-
-#~ msgid "Distinct"
-#~ msgstr "Desberdina"
-
-#~ msgid "Query Options"
-#~ msgstr "Kontsulta-aukerak"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL kontsulta:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Txertatu eremu batean"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Gelaxka honetan hasi"
-
-#~ msgid "Result"
-#~ msgstr "Emaitza:"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Hemen ezin da taularik zehaztu."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Baliozko eremu bat zehaztu behar da."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Baliozko gelaxka bat zehaztu behar da."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Ez duzu baimenik datu-baseko balioak aldatzeko."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Huts egin du kontsulta exekutatzean."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Kontsulta horrek ez du emaitzarik eman."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Txertatu datuak datu-basetik"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Atakak zenbaki bat izan behar du"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Datu-basera konektatzen..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Konektatuta. Taularen informazioa eskuratzen..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Datu-base honek ez du taularik"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Ezin da kontrolatzailea kargatu"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Taulen metadatuak eskuratzen..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Taula bat hautatu behar da gutxienez."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Zutabe bat hautatu behar duzu gutxienez."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' eta '?' ez dira baliozko komodinak SQLn. Komodin egokiak '%' eta '_' "
-#~ "dira, hurrenez hurren. Ordeztu nahi dituzu?"
-
-#~ msgid "Insert function"
-#~ msgstr "Funtzio bat txertatu"
-
-#~ msgid "Help"
-#~ msgstr "Laguntza"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Funtzio honek ez du parametrorik."
-
-#~ msgid "Description is not available."
-#~ msgstr "Deskribapena ez dago erabilgarri."
-
-#~ msgid "Document Settings..."
-#~ msgstr "Dokumentuaren ezarpenak..."
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "Dokumentu-ezarpenen elkarrizketa-koadroa bistaratzen du"
-
-#~ msgid "Document Settings"
-#~ msgstr "Dokumentuaren ezarpenak"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "Kalkulu modua"
-
-#, fuzzy
-#~| msgid "Case Insensitive"
-#~ msgid "Case sensitive"
-#~ msgstr "Maiuskulak/minuskulak bereizi gabe"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Doitasuna"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Automatikoa"
-
-#, fuzzy
-#~| msgid "String to compare with"
-#~ msgid "String comparison:"
-#~ msgstr "Konparatzeko katea"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "Adierazpen erregularra"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Erabili sistemaren eskualde-ezarpenak"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Hizkuntza: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Zenbaki-formatu lehenetsia: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Data-formatu luzea: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Data-formatu laburra: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Ordu-formatua: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Moneta-formatua: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Zerrenda pertsonalizatuak..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr ""
-#~ "Zerrenda pertsonalizatuak sortzen ditu, ordenatzeko edo automatikoki "
-#~ "betetzeko."
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Uneko kalkulu-orriko gelaxka guztiak hautatzen ditu"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Zerrenda pertsonalizatuak"
-
-#~ msgid "List:"
-#~ msgstr "Zerrenda:"
-
-#~ msgid "Entry:"
-#~ msgstr "Sarrera:"
-
-#~ msgid "Add"
-#~ msgstr "Gehitu"
-
-#~ msgid "New"
-#~ msgstr "Berria"
-
-#~ msgid "Remove"
-#~ msgstr "Kendu"
-
-#~ msgid "Modify"
-#~ msgstr "Aldatu"
-
-#~ msgid "Copy"
-#~ msgstr "Kopiatu"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Benetan kendu nahi duzu zerrenda hau?"
-
-#~ msgid "Remove List"
-#~ msgstr "Kendu zerrenda"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Sarreraren area ez dago hutsik.\n"
-#~ "Jarraitu nahi duzu?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Xede-bilaketa..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Kalkuluak errepikatzen ditu, balio jakin bat bilatzeko"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Xede-bilaketa"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Gelaxkaren erreferentzia baliogabea da."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Xede-balioa baliogabea da."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Iturburu-gelaxkak zenbakizko balio bat eduki behar du."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Xede-gelaxkak formula bat eduki behar du."
 
 #~ msgid "Starting..."
 #~ msgstr "Hasten..."
@@ -16351,12 +19096,6 @@ msgstr "%1 esteka aktibatuta"
 
 #~ msgid "New value:"
 #~ msgstr "Balio berria:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Emaitza bat aurkitu da %1 gelaxkarako xede bat bilatzean:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Ez da emaitzarik aurkitu %1 gelaxkarako xede bat bilatzean."
 
 #~ msgid "Set cell:"
 #~ msgstr "Ezarri gelaxka honi:"
@@ -16372,82 +19111,6 @@ msgstr "%1 esteka aktibatuta"
 
 #~ msgid "Current value:"
 #~ msgstr "Uneko balioa:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Ordeztu"
-
-#~ msgid "Selection List..."
-#~ msgstr "Hautapen-zerrenda..."
-
-#~ msgid "More Options"
-#~ msgstr "Aukera gehiago"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Arakatu orri osoa"
-
-#~ msgid "Search in:"
-#~ msgstr "Bilatu hemen:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Gelaxka-balioa"
-
-#~ msgid "Comments"
-#~ msgstr "Iruzkinak"
-
-#~ msgid "Search direction:"
-#~ msgstr "Bilaketaren noranzkoa:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Zeharka eta, gero, goitik behera"
-
-#~ msgid "Down then Across"
-#~ msgstr "Goitik behera eta, gero, zeharka"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Aukera gutxiago"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Gelaxka-formatua..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Ezarri gelaxka-formatua"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Gelaxkako objektua arbelera eramaten du."
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Gelaxkako objektua arbelean kopiatzen du."
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Arbeleko edukia kurtsorea dagoen tokian itsasten du."
-
-#~ msgid "Special Paste..."
-#~ msgstr "Itsaste berezia..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Arbeleko edukia itsasten du aukera bereziekin"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Itsatsi txertatuz"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Arbeleko gelaxka bat kalkulu-orrian txertatzen du"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Itsatsi gelaxkak txertatuz"
-
-#~ msgid "Insert"
-#~ msgstr "Txertatu"
-
-#~ msgid "Move towards right"
-#~ msgstr "Eskuinera mugitu"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Behera mugitu"
-
-#~ msgid "Special Paste"
-#~ msgstr "Itsaste berezia"
 
 #~ msgid "Content"
 #~ msgstr "Edukia"
@@ -16479,31 +19142,12 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Division"
 #~ msgstr "Zatiketa"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Ortografia egiaztatu"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Orri honetako ortografia egiaztatu nahi duzu?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Zuzendu gaizki idatzitako hitzak"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Formatu automatikoa"
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Kalkulu-orriaren formatua ezartzen du"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Formatu automatikoa"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Orriaren estiloa"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Hautatu aplikatu beharreko orri-estiloa:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Ezin izan da %1 irudia aurkitu."
@@ -16511,92 +19155,8 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Could not load image %1."
 #~ msgstr "Ezin izan da %1 irudia kargatu."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Ezin izan da orri-estiloaren '%1' XML fitxategia aurkitu."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Analisi-errorea gertatu da orri-estiloaren %1 XML fitxategian."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Iragazki automatikoa"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Iragazki automatiko bat gehitzen dio gelaxka-barruti bati"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Iragazki automatikoa"
-
-#~ msgid "Clear All"
-#~ msgstr "Garbitu dena"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Eduki eta formatu guztiak kentzen ditu uneko gelaxkatik"
-
 #~ msgid "Contents"
 #~ msgstr "Edukia"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Garbitu edukia"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Uneko gelaxkaren edukia kentzen du"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Garbitu testua"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Kendu baldintzapeko formatua"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Gehitu baldintzapeko formatua"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Beste ertz-kolore bat hautatu"
-
-#~ msgid "Border Color"
-#~ msgstr "Ertzaren kolorea"
-
-#~ msgid "Set the background color"
-#~ msgstr "Atzeko planoaren kolorea ezarri"
-
-#~ msgid "Background Color"
-#~ msgstr "Atzeko planoaren kolorea"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Baldintzapeko estiloak"
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Baldintza batzuen araberako estiloa ezartzen zaio gelaxkari"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Baldintzapeko estiloak"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Kendu baldintzapeko estiloak"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Gelaxkaren baldintzapeko estiloak kentzen ditu"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&Subtotalak..."
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "&Subtotalak..."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Gelaxka bat baino gehiago hautatu behar duzu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Zenbaki-formatua"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16605,84 +19165,6 @@ msgstr "%1 esteka aktibatuta"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Ehuneko-formatua"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Ordu-formatua"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Data-formatua"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Formatu zientifikoa"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Aldatu ertz-kolorea"
-
-#~ msgid "<none>"
-#~ msgstr "<none>"
-
-#~ msgid "equal to"
-#~ msgstr "honen berdina da:"
-
-#~ msgid "greater than"
-#~ msgstr "hau baino handiagoa da:"
-
-#~ msgid "less than"
-#~ msgstr "hau baino txikiagoa da:"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "honen berdina edo handiagoa da:"
-
-#~ msgid "equal to or less than"
-#~ msgstr "honen berdina edo txikiagoa da:"
-
-#~ msgid "between"
-#~ msgstr "bitarte honetan dago:"
-
-#~ msgid "outside range"
-#~ msgstr "barruti honetatik kanpo dago:"
-
-#~ msgid "different to"
-#~ msgstr "honen ezberdina da:"
-
-#~ msgid "First Condition"
-#~ msgstr "Lehenengo baldintza"
-
-#~ msgid "Second Condition"
-#~ msgstr "Bigarren baldintza"
-
-#~ msgid "Third Condition"
-#~ msgstr "Hirugarren baldintza"
-
-#~ msgid "Cell is"
-#~ msgstr "Gelaxka"
-
-#~ msgid "Cell style"
-#~ msgstr "Gelaxka-estiloa"
-
-#~ msgid "different from"
-#~ msgstr "honen ezberdina da:"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Lehenengo balioa zenbaki bat bada, bigarren balioak ere zenbaki bat izan "
-#~ "behar du."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Lehenengo balioa kate bat bada, bigarren balioak ere kate bat izan behar "
-#~ "du."
-
-#, fuzzy
-#~| msgid "Select Character"
-#~ msgid "Select Source"
-#~ msgstr "Karakterea hautatu"
 
 #, fuzzy
 #~| msgid "Clear Selection"
@@ -16708,11 +19190,6 @@ msgstr "%1 esteka aktibatuta"
 #~| msgid "Yield"
 #~ msgid "Field"
 #~ msgstr "Etekina"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Add Filter"
-#~ msgstr "Iragazkia"
 
 #, fuzzy
 #~| msgid "Text Option"
@@ -16759,11 +19236,6 @@ msgstr "%1 esteka aktibatuta"
 #~ msgstr "Errenkadak"
 
 #, fuzzy
-#~| msgid "Bit Operations"
-#~ msgid "Pivot Options"
-#~ msgstr "Bit-eragiketak"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Balioa"
@@ -16784,156 +19256,19 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Manual Selection"
 #~ msgstr "Bete hautapena"
 
-#~ msgid "Product"
-#~ msgstr "Biderkadura"
-
 #, fuzzy
 #~| msgid "Sorted by"
 #~ msgid "Sort By"
 #~ msgstr "Honen arabera ordenatua"
 
-#~ msgid "Select Font..."
-#~ msgstr "Letra-tipoa hautatu..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Letra-tamaina hautatu"
-
-#~ msgid "Font Size"
-#~ msgstr "Letra-tamaina"
-
-#~ msgid "Text Color"
-#~ msgstr "Testu-kolorea"
-
-#~ msgid "Set the text color"
-#~ msgstr "Ezarri testu-kolorea"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Letra-tipoa aldatu"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Estilo-kudeatzailea..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Gelaxka-estiloak editatu eta antolatu"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Aurrez definitutako estilo bat aplikatzen die hautatutako gelaxkei."
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Sortu estiloa gelaxkatik..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "Gelaxkaren estiloa"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Estilo berri bat sortzen du uneko gelaxka hautatuan oinarrituta."
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Estiloa sortu gelaxkatik"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Ezin da estiloaren izena hutsik utzi."
-
-#~ msgid "Style Manager"
-#~ msgstr "Estilo-kudeatzailea"
-
-#~ msgid "All Styles"
-#~ msgstr "Estilo guztiak"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Estilo pertsonalizatuak"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Hierarkikoa"
-
-#~ msgid "&New..."
-#~ msgstr "&Berria..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Aldatu..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Ezabatu..."
-
-#~ msgid "style%1"
-#~ msgstr "%1 estiloa"
-
 #~ msgid "Cells..."
 #~ msgstr "Gelaxkak..."
-
-#~ msgid "Insert Cells..."
-#~ msgstr "Gelaxkak txertatu..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Gelaxka huts bat sartzen du kalkulu-orrian"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Gelaxkak kendu..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Gelaxkak kentzen ditu kalkulu-orritik"
 
 #~ msgid "Delete Cells..."
 #~ msgstr "Gelaxkak ezabatu..."
 
-#~ msgid "Insert rows"
-#~ msgstr "Errenkadak txertatu"
-
-#~ msgid "Insert columns"
-#~ msgstr "Zutabeak txertatu"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Gelaxkak txertatu"
-
-#~ msgid "Move towards left"
-#~ msgstr "Ezkerrera mugitu"
-
-#~ msgid "Move towards top"
-#~ msgstr "Gora mugitu"
-
-#~ msgid "Remove rows"
-#~ msgstr "Errenkadak kendu"
-
-#~ msgid "Remove columns"
-#~ msgstr "Zutabeak kendu"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Gelaxkak kendu"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&Subtotalak..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Zerrenda edo datu-base bateko subtotalak sortzen ditu"
-
-#~ msgid "Subtotals"
-#~ msgstr "Subtotalak"
-
-#~ msgid "Remove All"
-#~ msgstr "Kendu denak"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr ""
-#~ "Gutxienez zutabe bat hautatu behar duzu guztizko partzialak gehitzeko."
-
 #~ msgid "Grand Total"
 #~ msgstr "Guztira"
-
-#~ msgid "Column '%1' "
-#~ msgstr "'%1' zutabea"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "&Ordeztu uneko guztizko partzialak"
@@ -16959,45 +19294,6 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Gehitu guztizko partziala honi:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Joan gelaxkara..."
-
-#~ msgid "Goto"
-#~ msgstr "Joan"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Gelaxka jakin batera joaten da"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Jauzia zutabearen aurretik"
-
-#~ msgid "Column Break"
-#~ msgstr "Zutabe-jauzia"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Orri-jauzi bat ezartzen du eskuz, zutabearen aurretik"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Jauzia errenkadaren aurretik"
-
-#~ msgid "Row Break"
-#~ msgstr "Errenkada-jauzia"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Orri-jauzi bat ezartzen du eskuz, errenkadaren aurretik"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Joan gelaxkara"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Sartu gelaxka:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Kontsolidatu..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "Antzeko barruti batzuen laburpen-datuen barruti bat sortzen du"
-
 #~ msgid "Description in rows"
 #~ msgstr "Deskribapena errenkadetan"
 
@@ -17006,39 +19302,6 @@ msgstr "%1 esteka aktibatuta"
 
 #~ msgid "Copy data"
 #~ msgstr "Kopiatu datuak"
-
-#~ msgid "Consolidate"
-#~ msgstr "Kontsolidatu"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Desbideratze estandarra"
-
-#~ msgid "Variance"
-#~ msgstr "Bariantza"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Jatorrizko barruti bat definitu behar duzu gutxienez!"
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 ez da baliozko gelaxka-barruti bat."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "%1\n"
-#~ "barrutia\n"
-#~ "txikiegia da"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "%1\n"
-#~ "barrutia\n"
-#~ "handiegia da"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -17053,22 +19316,6 @@ msgstr "%1 esteka aktibatuta"
 #~ "barrutiek\n"
 #~ "tamaina desberdina dute"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Kontsolidatu"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Jatorrizko barrutiak helburuko barrutia ebakitzen du."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "%1\n"
-#~ "barrutia\n"
-#~ " gaizki eratua dago"
-
 #~ msgid "Function:"
 #~ msgstr "Funtzioa:"
 
@@ -17078,201 +19325,17 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Entered references:"
 #~ msgstr "Sartutako erreferentziak:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Angelua aldatu..."
-
-#~ msgid "Angle"
-#~ msgstr "Angelua"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Gelaxken edukia inprimatzeko angelua aldatzen du"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Handitu zehaztasuna"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Pantailan bistaratzen den zehaztasun dezimala handitzen du"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Txikiagotu zehaztasuna"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Pantailan bistaratzen den zehaztasun dezimala txikiagotzen du"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Handiagotu zehaztasuna"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Txikiagotu zehaztasuna"
-
-#~ msgid "Change Angle"
-#~ msgstr "Angelua aldatu"
-
-#~ msgid "Angle:"
-#~ msgstr "Angelua:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Angelua aldatu"
-
-#~ msgid "Area Name..."
-#~ msgstr "Arearen izena..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Kalkulu-orriaren barruti baten izena ezartzen du"
-
-#~ msgid "Named Areas..."
-#~ msgstr "Area izendunak..."
-
-#~ msgid "Named Areas"
-#~ msgstr "Area izendunak"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Area izendunak editatzeko edo hautatzeko"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Gehitu area izenduna"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Idatzi area-izena:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "'%1' area izenduna badago lehendik.\n"
-#~ "Ordeztu nahi duzu?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "Area izenduna ordeztu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Area izenduna ordeztu"
-
 #~ msgid "&Select"
 #~ msgstr "Ha&utatu"
 
-#~ msgid "Area: %1"
-#~ msgstr "Area: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Editatu..."
-
-#~ msgid "&Remove"
-#~ msgstr "&Kendu"
 
 #~ msgid "New Named Area"
 #~ msgstr "Area izendun berria"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Area izenduna editatu"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Benetan kendu nahi duzu area izendun hau?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Area izenduna kendu"
-
-#~ msgid "Cells:"
-#~ msgstr "Gelaxkak:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Orria:"
-
-#~ msgid "Area name:"
-#~ msgstr "Arearen izena:"
-
-#~ msgid "Align Left"
-#~ msgstr "Lerrokatu ezkerrean"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Ezkerrean lerrokatzen du gelaxken edukia"
-
-#~ msgid "Align Center"
-#~ msgstr "Lerrokatu erdian"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Erdian lerrokatzen du gelaxken edukia"
-
-#~ msgid "Align Right"
-#~ msgstr "Lerrokatu eskuinean"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Eskuinean lerrokatzen du gelaxken edukia"
-
-#~ msgid "Align Top"
-#~ msgstr "Lerrokatu goian"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Gelaxkaren edukia goialdean lerrokatzen du"
-
-#~ msgid "Align Middle"
-#~ msgstr "Lerrokatu erdialdean"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Gelaxkaren edukia erdiratu egiten du"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Lerrokatu behean"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Gelaxkaren edukia behealdean lerrokatzen du"
-
-#~ msgid "Border Left"
-#~ msgstr "Ertza ezkerrean"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Ertza jartzen du hautatutako arearen ezkerraldean"
-
-#~ msgid "Border Right"
-#~ msgstr "Ertza eskuinean"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Ertza jartzen du hautatutako arearen eskuinaldean"
-
-#~ msgid "Border Top"
-#~ msgstr "Ertza goian"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Ertza jartzen du hautatutako arearen goialdean"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Ertza behean"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Ertza jartzen du hautatutako arearen behealdean"
-
-#~ msgid "All Borders"
-#~ msgstr "Ertz guztiak"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Ertza jartzen du hautatutako areako gelaxka guztien inguruan"
-
-#~ msgid "No Borders"
-#~ msgstr "Ertzik gabe"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Hautatutako areako ertz guztiak kentzen ditu"
-
-#~ msgid "Border Outline"
-#~ msgstr "Kanpoko ertza"
-
-#~ msgid "Outline"
-#~ msgstr "Ingerada"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Ertza jartzen du hautatutako arearen inguruan"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Lerrokatze horizontala aldatu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Lerrokatze bertikala aldatu"
 
 #~ msgid "Australia"
 #~ msgstr "Australia"
@@ -19087,61 +21150,6 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Dolar zimbabwetarra"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Formatu lehenetsia berrezartzen du"
-
-#~ msgid "Strike Out"
-#~ msgstr "Marratua"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Handitu letra-tamaina"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Txikitu letra-tamaina"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Egokitu ertzean"
-
-#~ msgid "Wrap"
-#~ msgstr "Egokitu"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Egokitu testua, errenkadatan banatuz"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Testu bertikala"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Gelaxken edukia bertikalki inprimatzen du"
-
-#~ msgid "Percent Format"
-#~ msgstr "Ehunekoen formatua"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Gelaxken formatua ezartzen du ehunekoen itxura izan dezaten"
-
-#~ msgid "Money Format"
-#~ msgstr "Diru-formatua"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Gelaxken formatua ezartzen du tokiko monetaren itxura izan dezaten"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Egokitu ertzean"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Testu bertikala"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Ehuneko-formatua"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Diru-formatua"
-
 #~ msgid "&Data Format"
 #~ msgstr "&Datu-formatua"
 
@@ -19200,9 +21208,6 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Default height (%1)"
 #~ msgstr "Altuera lehenetsia ( %1)"
 
-#~ msgid "Height:"
-#~ msgstr "Altuera:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Ezarri gelaxkaren altuera."
 
@@ -19216,451 +21221,32 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Default width (%1)"
 #~ msgstr "Zabalera lehenetsia ( %1)"
 
-#~ msgid "Width:"
-#~ msgstr "Zabalera:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Gehitu iruzkina"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Handitu koska"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Koska handitzen du"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Txikiagotu koska"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Koska txikiagotzen du"
-
-#~ msgid "Upper Case"
-#~ msgstr "Maiuskula"
-
-#~ msgid "Upper"
-#~ msgstr "Maiuskula"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Letra guztiak maiuskula bihurtzen ditu"
-
-#~ msgid "Lower Case"
-#~ msgstr "Minuskula"
-
-#~ msgid "Lower"
-#~ msgstr "Minuskula"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Letra guztiak minuskula bihurtzen ditu"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Lehen letra maiuskula bihurtzen du"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Lehen letra maiuskulaz"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Lehen letra maiuskulaz"
-
-#~ msgid "Comment..."
-#~ msgstr "Iruzkina..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Iruzkin bat editatu gelaxka honetarako"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Kendu iruzkina"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Gelaxka honetako iruzkina kentzen du"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Bihurtu maiuskula"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Bihurtu minuskula"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Lehen letra maiuskulaz"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Kendu iruzkina"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Garbitu iruzkina"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Aldatu maiuskulak/minuskulak"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Handitu koska"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Txikitu koska"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Gelaxkaren iruzkina"
-
-#~ msgid "&Left"
-#~ msgstr "E&zkerrean"
-
-#~ msgid "&Right"
-#~ msgstr "Es&kuinean"
-
 #~ msgid "&Up"
 #~ msgstr "&Goian"
-
-#~ msgid "&Down"
-#~ msgstr "&Behean"
-
-#~ msgid "Autosum"
-#~ msgstr "Batuketa automatikoa"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Batuketaren funtzioa txertatzen du"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Bete hautapena"
-
-#~ msgid "From &Text File..."
-#~ msgstr "&Testu-fitxategitik..."
-
-#~ msgid "Text File"
-#~ msgstr "Testu-fitxategia"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Datuak txertatzen ditu testu-fitxategi batetik kurtsorearen uneko "
-#~ "posiziora edo hautapenera"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "&Arbeletik..."
 
-#~ msgid "Clipboard"
-#~ msgstr "Arbela"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Arbeleko CSV datuak txertatzen ditu kurtsorearen uneko posizioan edo "
-#~ "hautapenean"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Testua zutabetan banatu..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Gelaxken uneko edukia zenbait zutabetan banatzen du"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Arbeletik txertatu"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Arbelean ez dago daturik."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Arbelean ez dago datu erabilgarririk."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "Inportatu CSV datu-fitxategia"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "CSV datu-fitxategia (*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Testua zutabetan"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Ezin da ireki sarrera-fitxategia."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Arbeletik txertatu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Testu-fitxategia txertatu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Testua zutabetan"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "Konbinatu hautatutako barrutia"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Batu gelaxkak horizontalki"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Konbinatu hautatutako barrutia horizontalki"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Batu gelaxkak bertikalki"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Konbinatu hautatutako barrutia bertikalki"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Bereizi gelaxkak"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Banandu hautatutako barrutia"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Zutabearen tamaina aldatu..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Zutabearen zabalera aldatu"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Txertatu zutabeak"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Zutabe bat txertatzen du kalkulu-orrian"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Kendu zutabeak"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Hautatutako zutabeak kentzen ditu kalkulu-orritik"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Ezkutatu zutabeak"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Zutabeak ezkutatzen ditu"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Bistaratu zutabeak..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Ezkutuko zutabeak bistaratzen ditu"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Berdindu zutabeak"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Haututako zutabeen tamaina aldatzen du, tamaina bera izan dezaten"
-
-#~ msgid "Show Columns"
-#~ msgstr "Bistaratu zutabeak"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Hautapeneko zutabe ezkutuak bistaratzen ditu"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Errenkadaren tamaina aldatu..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Errenkaden altuera aldatu"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Txertatu errenkadak"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Errenkada bat txertatzen du kalkulu-orrian"
-
-#~ msgid "Remove Rows"
-#~ msgstr "Kendu errenkadak"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Errenkada bat kentzen du kalkulu-orritik"
-
-#~ msgid "Hide Rows"
-#~ msgstr "Ezkutatu errenkadak"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Errenkadak ezkutatzen ditu"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Bistaratu errenkadak..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Ezkutuko errenkadak bistaratzen ditu"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Berdindu errenkadak"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Haututako errenkaden tamaina aldatzen du, tamaina bera izan dezaten"
-
-#~ msgid "Show Rows"
-#~ msgstr "Bistaratu errenkadak"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Hautapeneko errenkada ezkutuak bistaratzen ditu"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Doitu errenkada eta zutabea"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr ""
-#~ "Errenkadaren eta zutabearen tamainak doitzen ditu, edukia ondo sar dadin"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Doitu zutabea"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Ezabatu zutabeak"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Doitu errenkada"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Ezabatu errenkadak"
 
-#~ msgid "Resize Row"
-#~ msgstr "Errenkadaren tamaina aldatu"
-
-#~ msgid "Resize Column"
-#~ msgstr "Zutabearen tamaina aldatu"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Hautatu ezkutuko zutabeak, bistaratzeko:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Hautatu ezkutuko errenkadak, bistaratzeko:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Zutabea: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Errenkada: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Esteka..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Interneteko hiperesteka bat txertatzen du"
-
-#~ msgid "Link"
-#~ msgstr "Esteka"
-
-#~ msgid "Remove Link"
-#~ msgstr "Kendu esteka"
-
-#~ msgid "Remove a link"
-#~ msgstr "Esteka bat kendu"
-
-#~ msgid "Insert Link"
-#~ msgstr "Txertatu esteka"
-
 #~ msgid "Edit Link"
 #~ msgstr "Editatu esteka"
-
-#, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Kendu esteka"
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Ezarri esteka"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Interneteko helbide baten esteka"
-
-#~ msgid "Text to display:"
-#~ msgstr "Bistaratzeko testua:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Interneteko helbidea:"
-
-#~ msgid "Email"
-#~ msgstr "Helbide elektronikoa"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "Helbide elektroniko baten esteka"
-
-#~ msgid "Email address:"
-#~ msgstr "Helbide elektronikoa:"
-
-#~ msgid "Subject:"
-#~ msgstr "Gaia:"
-
-#~ msgid "File"
-#~ msgstr "Fitxategia"
-
-#~ msgid "Link to File"
-#~ msgstr "Fitxategi baten esteka"
-
-#~ msgid "File location:"
-#~ msgstr "Fitxategiaren kokapena:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Azken fitxategia:"
-
-#~ msgid "No Entries"
-#~ msgstr "Sarrerarik ez"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Gelaxka baten esteka"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Gelaxka edo area izenduna:"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Ordenatu..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Gelaxka multzo bat ordenatzen du"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Ordenatu &beherantz"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr ""
-#~ "Gelaxka multzo bat ordenatzen du beheranzko ordenan (azkenetik lehenera)"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Ordenatu &gorantz"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr ""
-#~ "Gelaxka multzo bat ordenatzen du goranzko ordenan (lehenetik azkenera)"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Ordenatu datuak"
 
 #~ msgid "Use custom list"
 #~ msgstr "Erabili zerrenda pertsonalizatua"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Kopiatu gelaxka-formatua (ertzak, koloreak, testu-estiloa)"
-
-#~ msgid "Column %1"
-#~ msgstr "%1 zutabea"
-
-#~ msgid "Row %1"
-#~ msgstr "%1 errendaka"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Lehen zutabean errenkaden izenak daude"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Lehenengo errenkadan zutabeen izenak daude"
-
-#~ msgid "Sort"
-#~ msgstr "Ordenatu"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Maiuskulak/minuskulak bereizi gabe"
 
 #~ msgid "Move Up"
 #~ msgstr "Eraman gora"
@@ -19725,230 +21311,8 @@ msgstr "%1 esteka aktibatuta"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Ordenatu bertikalki errenkadatan multzokatutako datuak"
 
-#~ msgid "Validity..."
-#~ msgstr "Baliozkotasuna..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr ""
-#~ "Probak ezartzen ditu gelaxketako datuak baliozkoak direla egiaztatzeko"
-
-#~ msgid "Validity"
-#~ msgstr "Baliozkotasuna"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Kendu baliozkotasuna"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Gelaxkaren baliozkotasun-probak kentzen ditu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Kendu baliozkotasun-egiaztapena"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Gehitu baliozkotasun-egiaztapena"
-
-#~ msgid "Clear &All"
-#~ msgstr "&Garbitu dena"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Irizpideak"
-
-#~ msgid "Allow:"
-#~ msgstr "Onartu:"
-
-#~ msgid "Integer"
-#~ msgstr "Osokoa"
-
-#~ msgid "Text Length"
-#~ msgstr "Testuaren luzera"
-
-#~ msgid "List"
-#~ msgstr "Zerrenda"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Onartu gelaxka hutsak"
-
-#~ msgid "Data:"
-#~ msgstr "Datuak:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Gutxienekoa:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Gehienekoa:"
-
-#~ msgid "Date:"
-#~ msgstr "Data:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Data minimoa:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Data maximoa:"
-
-#~ msgid "Time:"
-#~ msgstr "Ordua:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Ordu minimoa:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Ordu maximoa:"
-
-#~ msgid "Number:"
-#~ msgstr "Zenbakia:"
-
-#~ msgid "Entries:"
-#~ msgstr "Sarrerak:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "&Errore-abisua"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Erakutsi errore-mezua balio baliogabeak sartzean"
-
-#~ msgid "Action:"
-#~ msgstr "Ekintza:"
-
-#~ msgid "Stop"
-#~ msgstr "Gelditu"
-
-#~ msgid "Warning"
-#~ msgstr "Abisua"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Titulua:"
-
-#~ msgid "Message:"
-#~ msgstr "Mezua:"
-
-#~ msgid "Input Help"
-#~ msgstr "Sarreraren laguntza"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Erakutsi sarreraren laguntza gelaxka hautatzean"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Balio hau ez da baliozkoa."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Ordu hau ez da baliozkoa."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Data hau ez da baliozkoa."
-
-#~ msgid "&Series..."
-#~ msgstr "&Serieak..."
-
-#~ msgid "Insert a series"
-#~ msgstr "Serie bat txertatzen du"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Txertatu seriea"
-
-#~ msgid "Select Character"
-#~ msgstr "Karakterea hautatu"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Hautatutako karakterea testuan txertatzen du"
-
-#~ msgid "Series"
-#~ msgstr "Serieak"
-
-#~ msgid "Insert Values"
-#~ msgstr "Txertatu balioak"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Balioak bertikalki txertatu, bata bestearen azpian"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Balioak horizontalki txertatu, bata bestearen eskuinean"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Lineala (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Sortu serie bat 'hasiera'tik 'amaiera'raino eta urrats bakoitzean gehitu "
-#~ "horretarako esleitutako balioa. Hala, serie bat sortzen da, non urrats "
-#~ "bakoitza aurrekoa baino 'urrats' bat handiagoa baita."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Geometrikoa (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Sortu serie bat 'hasiera'tik 'amaiera'raino eta urrats bakoitzean "
-#~ "biderkatu horretarako esleitutako balioa. Urratsa 5 bada, honelako serie "
-#~ "bat sortzen da: 5, 25, 125, 625; alegia, 5 bider 5 (urratsa) 25, hori "
-#~ "(25) bider 5 = 125, eta hori (125) bider 5 = 625."
-
-#~ msgid "Start value:"
-#~ msgstr "Hasierako balioa:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Muga:"
-
-#~ msgid "Step value:"
-#~ msgstr "Urratsaren balioa:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Hasierako eta amaierako balioek positiboak izan behar dute."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Amaierako balioak hasierako balioa baino handiagoa izan behar du, edo, "
-#~ "bestela, urratsak '1' baino txikiagoa izan behar du."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "Hasierako balioak, amaierakoak edo urratsak ezin dira zero izan."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "Urratsa ezin da 1 izan"
-
-#~ msgid "Step is negative."
-#~ msgstr "Urratsa negatiboa da."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Urratsak zero baino handiagoa izan behar du; bestela, serie lineala "
-#~ "infinitua izango litzateke."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Hasierako balioa amaierako balioa baino handiagoa bada, urratsak zero "
-#~ "baino txikiagoa izan behar du."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Urratsa negatiboa bada, hasierako balioak amaierako balioa baino "
-#~ "handiagoa izan behar du."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "&Karaktere berezia..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr "Teklatuan agertzen ez diren karaktere edo sinboloak txertatzen ditu"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Interneteko helbidea hutsik dago"
@@ -27979,12 +29343,6 @@ msgstr "%1 esteka aktibatuta"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "%1 estiloa"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Subtotalak"
 
 #, fuzzy
 #~| msgid "Remove All"

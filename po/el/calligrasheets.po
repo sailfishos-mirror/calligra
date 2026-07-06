@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tables\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 02:56+0000\n"
 "PO-Revision-Date: 2024-09-19 14:25+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -147,8 +147,13 @@ msgstr "Κεφαλίδα"
 msgid "Header1"
 msgstr "Κεφαλίδα1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Προκαθορισμένο"
@@ -180,7 +185,8 @@ msgstr "δ"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Κείμενο"
@@ -253,7 +259,8 @@ msgstr "<p><b>Τύπος επιστροφής:</b> %1</p>"
 msgid "Syntax"
 msgstr "Σύνταξη"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Παράμετροι"
@@ -901,14 +908,15 @@ msgstr "CARY(12;0) επιστρέφει 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Αριθμός"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Μορφή"
@@ -966,6 +974,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") επιστρέφει 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Βάση δεδομένων"
@@ -1268,6 +1278,7 @@ msgstr "Ημερομηνία & ώρα"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1343,7 +1354,8 @@ msgstr "DAYS360(\"2/22/2002\", \"4/21/2002\", FALSE) επιστρέφει 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Ώρα"
@@ -5068,6 +5080,7 @@ msgid "Regular payments"
 msgstr "Τακτικές πληρωμές"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Τύπος"
@@ -5409,12 +5422,19 @@ msgstr "Χειρωνακτική"
 msgid "Automatic"
 msgstr "Αυτόματα"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Πληροφορίες"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Σφάλμα"
@@ -6245,7 +6265,7 @@ msgstr ""
 msgid "Math"
 msgstr "Μαθηματικά"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Συνάρτηση"
@@ -6747,6 +6767,7 @@ msgid "Range"
 msgstr "Εύρος"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Κριτήρια"
@@ -8357,6 +8378,7 @@ msgid "Row"
 msgstr "Γραμμή"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Στήλη"
@@ -13029,7 +13051,7 @@ msgid "&Go"
 msgstr "&Μετάβαση"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "Εισαγ&ωγή"
@@ -13047,7 +13069,7 @@ msgid "F&ormat"
 msgstr "Μ&ορφή"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Συγχώνευση κελιών"
@@ -13126,8 +13148,8 @@ msgstr "Ενεργοποίηση"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Γραμματοσειρά"
@@ -13542,14 +13564,16 @@ msgstr "Όρια σελίδας:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Οριζόντια"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Κατακόρυφα"
@@ -13576,13 +13600,15 @@ msgid "Up"
 msgstr "Πάνω"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Δεξιά"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Αριστερά"
@@ -13594,36 +13620,50 @@ msgstr "Κάτω, πρώτη στήλη"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Κανένα"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Άθροισμα"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Ελάχιστο"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Μέγιστο"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Μέσος όρος"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Αριθμός"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "Πλήθος"
@@ -14036,7 +14076,8 @@ msgstr "Καθαρισμός επιλογής"
 msgid "Move selected sheet to the bottom"
 msgstr "Μετακίνηση του επιλεγμένου φύλλο στο τέλος"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Διάκριση πεζών/κεφαλαίων"
@@ -14237,6 +14278,7 @@ msgid "Anchor"
 msgstr "Αγκύρωση"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Κελί"
@@ -14256,7 +14298,7 @@ msgstr "Αλλαγή σχήματος αγκύρωσης"
 msgid "Next Sheet"
 msgstr "Επόμενο φύλλο"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Επόμενο"
@@ -14271,7 +14313,7 @@ msgstr "Μετακίνηση στο επόμενο φύλλο"
 msgid "Previous Sheet"
 msgstr "Προηγούμενο φύλλο"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Προηγούμενο"
@@ -14476,7 +14518,7 @@ msgstr ""
 "Πρόκειται να αφαιρέσετε το ενεργό φύλλο.\n"
 "Επιθυμείτε να συνεχίσετε;"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Εισάγετε όνομα:"
@@ -14536,21 +14578,3148 @@ msgstr "Πλήθος: "
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Τροποποίηση χρώματος κειμένου"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "Τροποποίηση χρώματος φόντου"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Τροποποίηση περιγράμματος"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Εισαγωγή στηλών"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Εισαγωγή γραμμών"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Αφαίρεση στηλών"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Αφαίρεση γραμμών"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Εισαγωγή μιας νέας γραμμής στο φύλλο εργασίας"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Αφαίρεση μιας γραμμής από το φύλλο εργασίας"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Εισαγωγή μιας νέας στήλης στο φύλλο εργασίας"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Αφαιρεί τις επιλεγμένες στήλες από το φύλλο εργασίας"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Απόκρυψη στηλών"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Απόκρυψη γραμμών"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Εμφάνιση στηλών"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Εμφάνιση γραμμών"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Εμφάνιση κρυφών γραμμών στην επιλογή"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "Συγχώνευση της επιλεγμένης περιοχής"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Εμφάνιση κρυφών στηλών στην επιλογή"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "Συγχώνευση της επιλεγμένης περιοχής"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Εξίσωση στήλης"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Εξίσωση γραμμής"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Αλλαγή μεγέθους των επιλεγμένων γραμμών ώστε να έχουν το ίδιο μέγεθος"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Αλλαγή μεγέθους των επιλεγμένων στηλών ώστε να έχουν το ίδιο μέγεθος"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Προσαρμογή στήλης"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Προσαρμογή γραμμής"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Προσαρμογή γραμμής && στήλης"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+"Προσαρμογή του μεγέθους της γραμμής/στήλης ώστε να χωράει το περιεχόμενο"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+"Προσαρμογή του μεγέθους της γραμμής/στήλης ώστε να χωράει το περιεχόμενο"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+"Προσαρμογή του μεγέθους της γραμμής/στήλης ώστε να χωράει το περιεχόμενο"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Εμφάνιση στηλών..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Εμφάνιση γραμμών..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Εμφάνιση κρυφών στηλών"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Εμφάνιση κρυφών γραμμών"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Στήλη: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Γραμμή: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Αλλαγή μεγέθους στήλης..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Αλλαγή μεγέθους γραμμής..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Αλλαγή του ύψους μιας γραμμής"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Αλλαγή του πλάτους μιας στήλης"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Στοίχιση αριστερά"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Στοίχιση αριστερά των περιεχομένων του κελιού"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Τροποποίηση οριζόντιας στοίχισης"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Στοίχιση δεξιά"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Στοίχιση δεξιά των περιεχομένων του κελιού"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Στοίχιση στο κέντρο"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Ευθυγράμμιση στο κέντρο των περιεχομένων του κελιού"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Κέντρο"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Στοίχιση πάνω"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Στοίχιση των περιεχομένου του κελιού στο πάνω μέρος του"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Πάνω"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Τροποποίηση κατακόρυφης στοίχισης"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Στοίχιση κάτω"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Στοίχιση των περιεχομένων του κελιού στο κάτω μέρος του"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Κάτω"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Στοίχιση στο κέντρο"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Στοίχιση των περιεχομένων του κελιού στο κέντρο του"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Κέντρο"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Τροποποίηση γωνίας..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr ""
+"Τροποποίηση της γωνίας με την οποία τα περιεχόμενα του κελιού εκτυπώνονται"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Γωνία"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Τροποποίηση γωνίας"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Αυτόματο φίλτρο"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Προσθήκη ενός αυτόματου φίλτρο σε ένα εύρος κελιών"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Αυτόματο φίλτρο"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Εφαρμογή ενός προκαθορισμένου στιλ στα επιλεγμένα κελιά"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Αυτόματη μορφοποίηση..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Αδυναμία εύρεσης του αρχείου XML στιλ φύλλου '%1'."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Σφάλμα ανάλυσης στο αρχείο XML στιλ φύλλο %1."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Αυτόματη διαμόρφωση"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Αυτόματη άθροιση"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Εισαγωγή της συνάρτησης 'sum'"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Αυτόματη άθροιση"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Περίγραμμα αριστερά"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Ορισμός ενός αριστερού περιγράμματος στην επιλεγμένη περιοχή"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Περίγραμμα δεξιά"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Ορισμός ενός δεξιού περιγράμματος στην επιλεγμένη περιοχή"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Περίγραμμα πάνω"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Ορισμός ενός πάνω περιγράμματος στην επιλεγμένη περιοχή"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Περίγραμμα κάτω"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Ορισμός ενός κάτω περιγράμματος στην επιλεγμένη περιοχή"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Όλα τα περιγράμματα"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr ""
+"Ορισμός ενός περιγράμματος γύρω από όλα τα κελιά στην επιλεγμένη περιοχή"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Όλα"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Χωρίς περιγράμματα"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Αφαίρεση όλων των περιγραμμάτων στην επιλεγμένη περιοχή"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Περίγραμμα ορίων"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Ορισμός ενός περιγράμματος στα όρια της επιλεγμένης περιοχής"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Περίγραμμα"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Χρώμα περιγράμματος"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Επιλογή ενός νέου χρώματος περιγράμματος"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Αλλαγή χρώματος περιγράμματος"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Εισαγωγή κελιών..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Εισαγωγή ενός κενού κελιού στο φύλλο εργασίας"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Αφαίρεση κελιών..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Αφαίρεση των κελιών από το φύλλο εργασίας"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Καθαρισμός όλων"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Καθαρισμός όλων των περιεχομένων και μορφοποίησης του τρέχοντος κελιού"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Καθαρισμός περιεχομένων"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Αφαίρεση των περιεχομένων του τρέχοντος κελιού"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Καθαρισμός κειμένου"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Σχόλιο..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Επεξεργασία ενός σχολίου γι' αυτό το κελί"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Καθαρισμός σχολίου"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Αφαίρεση του σχολίου αυτού του κελιού"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Αφαίρεση σχολίου"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Αφαίρεση σχολίου"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Προσθήκη σχολίου"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Υπό συνθήκη στιλ..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Ορισμός στιλ του κελιού βασισμένο σε διάφορες συνθήκες"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Υπό συνθήκη στιλ"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Αφαίρεση των υπό συνθήκη στιλ κελιών"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Αφαίρεση των υπό συνθήκη στιλ"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Αφαίρεση της υπό συνθήκη σχηματοποίησης"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Προσθήκη υπό συνθήκη σχηματοποίησης"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "Σ&υγχώνευση..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+"Δημιουργία μιας περιοχής δεδομένων περίληψης από μία ομάδα παρόμοιων περιοχών"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Eνοποίηση"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Αντιγραφή του αντικειμένου του κελιού στο πρόχειρο"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Μετακίνηση του αντικειμένου του κελιού στο πρόχειρο"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "Από αρχείο &κειμένου..."
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Εισαγωγή δεδομένων από ένα αρχείο κειμένου στην τρέχουσα θέση/επιλογή του "
+"δρομέα"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Αρχείο κειμένου"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "Εισαγωγή αρχείου δεδομένων CSV"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "Αρχεία δεδομένων CSV (*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Δεν ήταν δυνατό το άνοιγμα του αρχείου εισόδου."
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "Εισαγωγή αρχείου κειμένου"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Εισαγωγή αρχείου κειμένου"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Εισαγωγή από πρόχειρο"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"Εισαγωγή δεδομένων CSV από το πρόχειρο στην τρέχουσα θέση/επιλογή του δρομέα"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Πρόχειρο"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Δεν υπάρχουν δεδομένα στο πρόχειρο."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Δεν υπάρχουν χρήσιμα δεδομένα στο πρόχειρο."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Εισαγωγή από πρόχειρο"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Εισαγωγή από πρόχειρο"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Κείμενο σε στήλες..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Ανάπτυξη του περιεχομένου των κελιών σε πολλαπλές στήλες"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Κείμενο σε στήλες"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Κείμενο σε στήλες"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Δημιουργία προσαρμοσμένων λιστών για ταξινόμηση ή αυτόματη συμπλήρωση"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Προσαρμοσμένες λίστες..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Προσθήκη περιοχής με ονομασία"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Εισάγετε το όνομα περιοχής:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Τροποποίηση γωνίας"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Γωνία:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "Αυτόματη διαμόρφωση"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Επιλογή του στιλ φύλλου για εφαρμογή:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Επιλογή χαρακτήρα"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Εισαγάγετε τον επιλεγμένο χαρακτήρα στο κείμενο"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Σχόλιο κελιού"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<κανένα>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "ίσο με"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "μεγαλύτερο από"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "μικρότερο από"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "ίσο με ή μεγαλύτερο από"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "ίσο με ή μικρότερο από"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "ανάμεσα σε"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "εκτός εύρους"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "διαφορετικό από"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Πρώτη συνθήκη"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Δεύτερη συνθήκη"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Τρίτη συνθήκη"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Το κελί είναι"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Στιλ κελιού"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "διαφορετικό από"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Αν η πρώτη τιμή είναι ένας αριθμός, η δεύτερη τιμή πρέπει επίσης να είναι "
+"ένας αριθμός."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Αν η πρώτη τιμή είναι μια συμβολοσειρά, η δεύτερη τιμή πρέπει επίσης να "
+"είναι μια συμβολοσειρά."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Συγχώνευση"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Γινόμενο"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Τυπική απόκλιση"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Διακύμανση"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Πρέπει να επιλέξετε τουλάχιστον ένα πηγαίο εύρος."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 δεν είναι ένα έγκυρο εύρος κελιού."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Το εύρος\n"
+"%1\n"
+"είναι πολύ μικρό"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Το εύρος\n"
+"%1\n"
+"είναι πολύ μεγάλο"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "το πηγαίο εύρος παρεμβάλλεται με το εύρος προορισμού"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Το εύρος\n"
+"%1\n"
+" έχει λάθος μορφή"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Εισαγωγή δεδομένων από βάση δεδομένων"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Τύπος:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Όνομα βάσης δεδομένων: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Υπολογιστής:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Θύρα:\n"
+"(αν είναι απαραίτητο)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Όνομα χρήστη:\n"
+"(αν είναι απαραίτητο)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Κωδικός πρόσβασης:\n"
+"(αν είναι απαραίτητο)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Επιλογή πινάκων:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Πίνακες"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Επιλογή στηλών:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Πίνακας"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Στήλες"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Ταίριασμα όλων των ακόλουθων (ΚΑΙ)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Ταίριασμα με οποιοδήποτε από τα ακόλουθα (Ή)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "ίσο με"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "όχι ίσο με"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "μέσα"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "όχι μέσα"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "όμοιο"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "μεγαλύτερο"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "μικρότερο"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "μεγαλύτερο ή ίσο"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "μικρότερο ή ίσο"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Ταξινόμηση κατά"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Αύξουσα"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Φθίνουσα"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Διαχωρισμός"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Επιλογές ερωτήματος"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL ερώτηση:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Εισαγωγή στην περιοχή"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Αρχή στο κελί"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Αποτέλεσμα"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Δεν μπορείτε να ορίσετε εδώ ένα πίνακα."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Πρέπει να καθορίσετε μια έγκυρη περιοχή."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Πρέπει να ορίσετε ένα έγκυρο κελί."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Η εκτέλεση του ερωτήματος απέτυχε."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Δε λάβατε κανένα αποτέλεσμα με αυτό το ερώτημα."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Εισαγωγή δεδομένων από βάση δεδομένων"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Η θύρα πρέπει να είναι αριθμός"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Σύνδεση στη βάση δεδομένων..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Σύνδεση. Ανάκτηση πληροφοριών πίνακα..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Αυτή η βάση δεδομένων δεν περιέχει πίνακες"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Ο οδηγός δεν ήταν δυνατό να φορτωθεί"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Ανάκτηση μεταδεδομένων των πινάκων..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Πρέπει να επιλέξετε τουλάχιστον ένα πίνακα."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Πρέπει να επιλέξετε τουλάχιστον μία στήλη."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"Τα '*' ή '?' δεν είναι έγκυρα σύμβολο υποκατάστασης στην SQL. Τα σωστά "
+"αντίστοιχα σύμβολα είναι τα '%' ή '_'. Επιθυμείτε την αντικατάστασή τους;"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Αντικατάσταση"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Ρυθμίσεις εγγράφου"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, kde-format
+msgid "Calculation"
+msgstr "Υπολογισμός"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr "Εντοπιότητα"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr "Με διάκριση πεζών/κεφαλαίων"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, kde-format
+msgid "Precision as shown"
+msgstr "Ακρίβεια όπως εμφανίζεται"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr "Τα κριτήρια αναζήτησης πρέπει να ισχύουν για όλο το κελί"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, kde-format
+msgid "Automatic find labels"
+msgstr "Αυτόματη εύρεση ετικετών"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr "Σύγκριση συμβολοσειρών"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Regular Expressions"
+msgstr "Κανονικές εκφράσεις"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr "Σύμβολα υποκατάστασης"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr "Κενό έτος:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Χρήση ρυθμίσεων εντοπιότητας συστήματος"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, kde-format
+msgid "Language: %1 (%2)"
+msgstr "Γλώσσα: %1 (%2)"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Προκαθορισμένη μορφή ημερομηνίας: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Εκτενής μορφή ημερομηνίας: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Σύντομη μορφή ημερομηνίας: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Μορφή ώρας: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Μορφή νομίσματος: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Περισσότερες επιλογές"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Αναζήτηση σε ολόκληρο το φύλλο"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Αναζήτηση σε:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Τιμές κελιών"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Σχόλια"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Κατεύθυνση αναζήτησης:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Κατά μήκος και προς τα κάτω"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Προς τα κάτω και κατά μήκος"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Λιγότερες επιλογές"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Text Functions"
+msgid "Set Function"
+msgstr "Συναρτήσεις κειμένου"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Εισαγωγή συνάρτησης"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Βοήθεια"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Αυτή η συνάρτηση δεν έχει παραμέτρους."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Η περιγραφή δεν είναι διαθέσιμη."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Αναζήτηση στόχου"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Μετάβαση στο κελί"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Εισάγετε κελί:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Εισαγωγή"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Μετακίνηση προς τα δεξιά"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Μετακίνηση προς τα κάτω"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Εισαγωγή γραμμών"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Εισαγωγή στηλών"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Εισαγωγή κελιών"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Μετακίνηση προς τα αριστερά"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Μετακίνηση προς τα πάνω"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Αφαίρεση γραμμών"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Αφαίρεση στηλών"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Αφαίρεση κελιών"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Εισαγωγή δεσμού"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Διαδίκτυο"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Δεσμός σε διεύθυνση διαδικτύου"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Κείμενο για εμφάνιση:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Διεύθυνση διαδικτύου:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "Ηλ. αλληλογραφία"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "Σύνδεσμος σε διεύθυνση αλληλογραφίας"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "Διεύθυνση αλληλογραφίας:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Θέμα:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Αρχείο"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Σύνδεσμος σε αρχείου"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Τοποθεσία αρχείου:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Πρόσφατο αρχείο:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Καμία καταχώρηση"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Σύνδεσμος σε κελί"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Κελί ή περιοχή με ονομασία:"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Προσαρμοσμένες λίστες"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "Τροποποίηση πεζών/κεφαλαίων"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Λίστα:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Καταχώρηση:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Προσθήκη"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Νέο"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Τροποποίηση"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Επιθυμείτε πραγματικά την αφαίρεση αυτής της λίστας;"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Αφαίρεση λίστας"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Η περιοχή καταχώρησης δεν είναι άδεια.\n"
+"Επιθυμείτε τη συνέχεια;"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Περιοχές με ονομασία"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Περιοχή: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Κελιά:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Φύλλο:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Όνομα περιοχής:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "Α&φαίρεση"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Άνοιγμα/αποθήκευση"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Επιθυμείτε πραγματικά να αφαιρέσετε αυτήν την περιοχή με ονομασία;"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Αφαίρεση περιοχής με ονομασία"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Η αναφορά κελιού δεν είναι έγκυρη."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Επικόλληση εισαγόμενων κελιών"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, kde-format
+msgid "Select Source"
+msgstr "Επιλογή πηγής"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr "Παράθυρο διαμόρφωσης συγκεντρωτικών πινάκων"
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, kde-format
+msgid "Add Filter"
+msgstr "Προσθήκη φίλτρου"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, kde-format
+msgid "Pivot Options"
+msgstr "Επιλογές συγκεντρωτικών (pivot)"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Αλλαγή μεγέθους γραμμής"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Ύψος:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Αλλαγή μεγέθους στήλης"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Πλάτος:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Σειρά"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "Εισαγωγή σειράς"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Εισαγωγή τιμών"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Εισαγωγή της σειράς κατακόρυφα, το ένα κάτω από το άλλο"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Εισαγωγή της σειράς οριζόντια, από αριστερά προς τα δεξιά"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Γραμμική (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Δημιουργία μιας σειράς από 'αρχή' έως 'τέλος' και για κάθε βήμα πρόσθεση της "
+"τιμής που δίνεται στο βήμα. Αυτό δημιουργεί μια σειρά όπου κάθε τιμή είναι "
+"'βήμα' μεγαλύτερη από την προηγούμενη τιμή."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Γεωμετρική (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Δημιουργία μιας σειράς από 'αρχή' έως 'τέλος' και για κάθε βήμα "
+"πολλαπλασιασμός με την τιμή που δίνεται στο βήμα. Χρησιμοποιώντας ένα βήμα 5 "
+"δημιουργείται μια σειρά όπως: 5, 25, 125, 625 αφού το 5 πολλαπλασιασμένο με "
+"το 5 (βήμα) ίσον 25, και αυτό πολλαπλασιασμένο με 5 ίσον 125, το οποίο "
+"πολλαπλασιασμένο με το ίδιο βήμα 5 ίσον με 625."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Αρχική τιμή:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Τελική τιμή:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Τιμή βήματος:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Η τελική και αρχική τιμή πρέπει να είναι θετικές."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Η τελική τιμή πρέπει να είναι μεγαλύτερη από την αρχική τιμή ή η τιμή του "
+"βήματος πρέπει να είναι μικρότερη από '1'."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+"Καμία από τις τιμές Αρχική, Τελική ή Βήμα δεν μπορεί να είναι ίση με μηδέν."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "Η τιμή βήματος πρέπει να είναι διαφορετική από 1"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "Το βήμα είναι αρνητικό."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Η τιμή του βήματος πρέπει να είναι μεγαλύτερη του μηδενός. Σε άλλη περίπτωση "
+"η γραμμική σειρά είναι ατέρμονη."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Αν η αρχική τιμή είναι μεγαλύτερη από την τελική τιμή το βήμα πρέπει να "
+"είναι μικρότερο του μηδενός."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Αν το βήμα είναι αρνητικό, η αρχική τιμή πρέπει να είναι μεγαλύτερη της "
+"τελικής τιμής."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Επιλογή κρυφών γραμμών για εμφάνιση:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Επιλογή κρυφών στηλών για εμφάνιση:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Στήλη %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Γραμμή %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "Η π&ρώτη στήλη περιέχει κεφαλίδες γραμμών"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "Η &πρώτη γραμμή περιέχει κεφαλίδες στηλών"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Ταξινόμηση"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Χωρίς διάκριση πεζών/κεφαλαίων"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Ειδική επικόλληση"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr "Επικόλληση"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Διαχειριστής στιλ"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Στιλ"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Όλα τα στιλ"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Προσαρμοσμένα στιλ"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Ιεραρχικά"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Νέο..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Τροποποίηση..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Διαγραφή..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "στιλ%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Μερικά σύνολα"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Αφαίρεση όλων"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Στήλη '%1' "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "Τυπική απόκλιση"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "Τυπική απόκλιση πληθ."
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Διακύμανση"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "Διακύμανση πληθυσμού"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr ""
+"Πρέπει να επιλέξετε τουλάχιστον μία στήλη για υπολογισμό μερικών συνόλων."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Εγκυρότητα"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Καθαρισμός ό&λων"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Επίτρεψε:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Ακέραιος"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Μήκος κειμένου"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Λίστα"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Επίτρεψε κενά"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Δεδομένα:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Ελάχιστο:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Μέγιστο:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Ημερομηνία:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Ελάχιστη ημερομηνία:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Μέγιστη ημερομηνία:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Ώρα:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Ελάχιστη ώρα:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Μέγιστη ώρα:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Αριθμός:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Καταχωρίσεις:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "Προειδοποίηση &σφάλματος"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Εμφάνιση μηνύματος σφάλματος όταν εισάγονται μη έγκυρες τιμές"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Ενέργεια:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Σταμάτημα"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Προειδοποίηση"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Τίτλος:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Μήνυμα:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Βοήθεια εισαγωγής"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Εμφάνιση της βοήθειας εισαγωγής όταν επιλεγεί το κελί"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Αυτή δεν είναι μια έγκυρη τιμή."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Αυτή δεν είναι μια έγκυρη ώρα."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Αυτή δεν είναι μια έγκυρη ημερομηνία."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Ρυθμίσεις εγγράφου..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "Εμφάνιση διαλόγου ρυθμίσεων εγγράφου"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Επεξεργασία του τονισμένου κελιού"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Τροποποίηση κελιού"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "Μετάθεση σταθερού σημείου"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Μετάθεση του σταθερού σημείου αναφοράς στο δρομέα κειμένου"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Κάτω"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Αριστερά"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Δεξιά"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Συμπλήρωση επιλογής"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Αντικατάσταση"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Επιλογή γραμματοσειράς..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Ορισμός μορφοποίησης του κελιού"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Τροποποίηση γραμματοσειράς"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Επιλογή μεγέθους γραμματοσειράς"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Ορισμός μορφοποίησης του κελιού"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Μέγεθος γραμματοσειράς"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Ορισμός του χρώματος κειμένου"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Χρώμα κειμένου"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Συνάρτηση..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Εισαγωγή μαθηματικής έκφρασης"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Επιλογή μαθηματικού τύπου"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Εισαγωγή μιας συνάρτησης"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Άλλες..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "Αναζήτηση &στόχου..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Επανάληψη υπολογισμού για την εύρεση μιας συγκεκριμένης τιμής"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Η αναφορά κελιού δεν είναι έγκυρη."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Η τιμή στόχου δεν είναι έγκυρη."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Το κελί πηγής πρέπει να περιέχει μια αριθμητική τιμή."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Το κελί στόχου πρέπει να περιέχει ένα μαθηματικό τύπο."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Η αναζήτηση στόχου με το κελί %1 βρήκε μια λύση:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Η αναζήτηση στόχου με το κελί %1 ΔΕ βρήκε λύση."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Μετάβαση στο κελί..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Μετακίνηση σε ένα συγκεκριμένο κελί"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Μετάβαση"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Αυτή δεν είναι μια έγκυρη ώρα."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Μείωση εσοχής"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Αύξηση εσοχής"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Μείωση της εσοχής"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Αύξηση της εσοχής"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Αύξηση εσοχής"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Μείωση εσοχής"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "Από &βάση δεδομένων..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Εισαγωγή δεδομένων από μια βάση δεδομένων SQL"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Δεν υπάρχουν διαθέσιμοι οδηγοί βάσης δεδομένων. Πρέπει να εγκαταστήσετε τους "
+"απαραίτητους οδηγούς βάσης δεδομένων της Qt."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "Σ&ειρά..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Εισαγωγή μιας σειράς"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Εισαγωγή σειράς"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "Ει&δικός χαρακτήρας..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+"Εισαγωγή ενός ή περισσότερων συμβόλων ή γραμμάτων που δε βρίσκονται στο "
+"πληκτρολόγιο"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Εκτέλεση επιθεωρητή..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Δεσμός..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Εισαγωγή ενός υπερδεσμού διαδικτύου"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Δεσμός"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Αφαίρεση ενός δεσμού"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Αφαίρεση δεσμού"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Αφαίρεση δεσμού"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Ορισμός δεσμού"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Λίστα επιλογής..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Συγχώνευση κελιών οριζόντια"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Συγχώνευση κελιών κατακόρυφα"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Συγχώνευση της επιλεγμένης περιοχής οριζόντια"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Συγχώνευση της επιλεγμένης περιοχής κατακόρυφα"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "Συγχώνευση της επιλεγμένης περιοχής"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Διαχωρισμός κελιών"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "Αναίρεση της συγχώνευσης της επιλεγμένης περιοχής"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Όνομα περιοχής..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Καθορισμός μιας ονομασίας για μια περιοχή του λογιστικού φύλλου"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"Η περιοχή με ονομασία '%1' υπάρχει ήδη.\n"
+"Επιθυμείτε την αντικατάστασή της;"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "Αντικατάσταση περιοχής με ονομασία"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Αντικατάσταση περιοχής με ονομασία"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Επεξεργασία ή επιλογή περιοχών με ονομασία"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Περιοχές με ονομασία..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Αλλαγή σελίδας πριν από τη γραμμή"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Ορισμός χειροκίνητης αλλαγής σελίδας πριν από τη γραμμή"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Αλλαγή σελίδας στη γραμμή"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Αλλαγή σελίδας πριν από τη στήλη"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Ορισμός χειροκίνητης αλλαγής σελίδας πριν από τη στήλη"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Αλλαγή σελίδας στη στήλη"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Επικόλληση των περιεχομένων του προχείρου στο δρομέα"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Ειδική επικόλληση..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Επικόλληση των περιεχομένων του προχείρου με ειδικές επιλογές"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Επικόλληση με εισαγωγή"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Εισάγει ένα κελί από το πρόχειρο στο φύλλο εργασίας"
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "&Pivot Tables..."
+msgstr "Συγκεντρωτικοί (&pivot) πίνακες..."
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "Create Pivot Tables"
+msgstr "Δημιουργία συγκεντρωτικών πινάκων"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Πρέπει να επιλέξετε πολλαπλά κελιά."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Επιλογή όλων των κελιών στο τρέχον φύλλο εργασίας"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "Εμφάνιση QTableView..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Ταξινόμηση..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Ταξινόμηση μιας ομάδας κελιών"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "&Αύξουσα ταξινόμηση"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Ταξινόμηση μιας ομάδας κελιών σε αύξουσα (πρώτο στο τελευταίο) σειρά"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "&Φθίνουσα ταξινόμηση"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "Ταξινόμηση μιας ομάδας κελιών σε φθίνουσα (τελευταίο στο πρώτο) σειρά"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Ταξινόμηση δεδομένων"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Επιθυμείτε να εκτελέσετε ορθογραφικό έλεγχο στο επόμενο φύλλο;"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Μετακίνηση στο επόμενο φύλλο"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Ορθογραφικός έλεγχος"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Μορφή κελιού..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Ορισμός μορφοποίησης του κελιού"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Έντονο"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Πλάγια"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Υπογράμμιση"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Επιγράμμιση"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Το κείμενο του κελιού θα αναδιπλώνεται σε πολλαπλές γραμμές"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Αναδίπλωση κειμένου"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Αναδίπλωση"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Αναδίπλωση κειμένου"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Εκτύπωση των περιεχομένων του κελιού κατακόρυφα"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Κατακόρυφο κείμενο"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Κατακόρυφο κείμενο"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Μορφή αριθμού"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Ορισμός μορφοποίησης του κελιού"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Πρώτος αριθμός"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "Επιστημονική μορφή"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr ""
+"Ορισμός της μορφοποίησης του κελιού ώστε να φαίνεται σαν ποσοστό επί τοις "
+"εκατό"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Επιστημονική"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Επιστημονική"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Μορφή ποσοστού"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr ""
+"Ορισμός της μορφοποίησης του κελιού ώστε να φαίνεται σαν ποσοστό επί τοις "
+"εκατό"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Ποσοστό"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Μορφή ποσοστού"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Μορφή χρημάτων"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr ""
+"Ορισμός της μορφοποίησης του κελιού ώστε να εμφανίζεται σαν το τοπικό σας "
+"νόμισμα"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Χρήμα"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Μορφή νομίσματος"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Μορφή ημερομηνίας"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Ορισμός μορφοποίησης του κελιού"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Μορφή"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Ορισμός μορφοποίησης του κελιού"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Μορφή ώρας"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Μορφή"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Αύξηση μεγέθους γραμματοσειράς"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Μείωση μεγέθους γραμματοσειράς"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Αύξηση ακρίβειας"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Αύξηση της δεκαδικής ακρίβειας που φαίνεται στην οθόνη"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Μείωση ακρίβειας"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Μείωση της δεκαδικής ακρίβειας που φαίνεται στην οθόνη"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Αύξηση ακρίβειας"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Μείωση ακρίβειας"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Επαναφορά στην προκαθορισμένη μορφή"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Στιλ φύλλου"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Χρώμα φόντου"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Ορισμός του χρώματος φόντου"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Δημιουργία στιλ από κελί..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Δημιουργία ενός νέου στιλ βασισμένο στο τρέχον επιλεγμένο κελί"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Στιλ από κελί"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Δημιουργία στιλ από κελί"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Το όνομα στιλ δεν μπορεί να είναι κενό."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Ένα στιλ με αυτό το όνομα υπάρχει ήδη."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Επεξεργασία και οργάνωση των στιλ κελιών"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Διαχειριστής στιλ..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Εφαρμογή ενός προκαθορισμένου στιλ στα επιλεγμένα κελιά"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&Μερικά σύνολα..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+"Δημιουργία διαφορετικού είδους μερικών συνόλων σε μία λίστα ή βάση δεδομένων"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Μερικά σύνολα"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Κεφαλαία"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "Πεζά"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Πρώτο γράμμα κεφαλαίο"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Εναλλαγή σε κεφαλαία"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Εναλλαγή σε πεζά"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Πρώτο γράμμα κεφαλαίο"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Κεφαλαία"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Πεζά"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Μετατροπή πρώτου γράμματος σε κεφαλαίο"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Μετατροπή όλων των γραμμάτων σε κεφαλαία"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Μετατροπή όλων των γραμμάτων σε πεζά"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "Μετατροπή του πρώτου γράμματος σε κεφαλαίο"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Τροποποίηση πεζών/κεφαλαίων"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Ορισμός ελέγχων για την επιβεβαίωση εγκυρότητας των δεδομένων κελιού"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Εγκυρότητα..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Αφαίρεση των ελέγχων εγκυρότητας σε αυτό το κελί"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Αφαίρεση εγκυρότητας"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Αφαίρεση ελέγχου εγκυρότητας"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Προσθήκη ελέγχου εγκυρότητας"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14797,11 +17966,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Αφαίρεση κελιών"
 
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Διαγραφή"
-
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
 msgid "Merge Cells Horizontally"
@@ -15020,12 +18184,6 @@ msgstr "Μεταβαλλόμενο (χωρίς αλλαγή)"
 msgid "Roman"
 msgstr "Όρθια"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Πλάγια"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -15048,12 +18206,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Κανονικό"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Έντονο"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -15067,12 +18219,6 @@ msgstr "Χρώμα:"
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
 "Αν αυτό ενεργοποιηθεί, το κείμενο του τρέχοντος κελιού θα υπογραμμιστεί."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Υπογράμμιση"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15225,11 +18371,6 @@ msgstr ""
 "συστήματος -> Κοινή εμφάνιση και συμπεριφορά -> Εντοπιότητα -> Χώρα/"
 "Περιφέρεια & Γλώσσα -> Αριθμοί. Οι αριθμοί προκαθορισμένα στοιχίζονται δεξιά."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Ποσοστό"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15250,11 +18391,6 @@ msgstr ""
 "Μπορείτε επίσης να χρησιμοποιήσετε το εικονίδιο ποσοστού από τη γραμμή "
 "εργαλείων μορφής."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Χρήμα"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15273,11 +18409,6 @@ msgstr ""
 "Μπορείτε επίσης να χρησιμοποιήσετε το εικονίδιο νομίσματος στη γραμμή "
 "εργαλείων μορφής για να ορίσετε τη μορφή κελιού όπως την τρέχουσα "
 "νομισματική μονάδα σας."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Επιστημονική"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15539,11 +18670,6 @@ msgstr "Τρία ψηφία 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Στιλ"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15554,11 +18680,6 @@ msgstr "Όνομα:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Κληρονόμηση στιλ:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Ένα στιλ με αυτό το όνομα υπάρχει ήδη."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15613,12 +18734,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Τυπική"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Κέντρο"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15658,24 +18773,6 @@ msgstr ""
 "Το <b>Κέντρο</b> εμφανίζει το περιεχόμενο στο κέντρο κατακόρυφα του κελιού.\n"
 "Το <b>Κάτω</b> σημαίνει ότι το περιεχόμενο του κελιού θα εμφανίζεται στο "
 "κάτω μέρος του κελιού.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Πάνω"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Κέντρο"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Κάτω"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15874,20 +18971,10 @@ msgstr "Εφαρμογή"
 msgid "Apply changes"
 msgstr "Εφαρμογή τροποποιήσεων"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Ακύρωση"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Απόρριψη τροποποιήσεων"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Όλα"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15989,355 +19076,11 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[ωω]::λλ)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Συνάρτηση..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "Εισαγωγή μαθηματικής έκφρασης"
-
-#~ msgid "From &Database..."
-#~ msgstr "Από &βάση δεδομένων..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Εισαγωγή δεδομένων από μια βάση δεδομένων SQL"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Επιλογή μαθηματικού τύπου"
-
-#~ msgid "Insert a function"
-#~ msgstr "Εισαγωγή μιας συνάρτησης"
-
-#~ msgid "Others..."
-#~ msgstr "Άλλες..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Τροποποίηση κελιού"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Επεξεργασία του τονισμένου κελιού"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Εκτέλεση επιθεωρητή..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "Εμφάνιση QTableView..."
-
 #~ msgid "Permute reference fixation"
 #~ msgstr "Μετάθεση σταθερού σημείου αναφοράς"
 
-#~ msgid "Permute fixation"
-#~ msgstr "Μετάθεση σταθερού σημείου"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Μετάθεση του σταθερού σημείου αναφοράς στο δρομέα κειμένου"
-
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Δεν υπάρχουν διαθέσιμοι οδηγοί βάσης δεδομένων. Πρέπει να εγκαταστήσετε "
-#~ "τους απαραίτητους οδηγούς βάσης δεδομένων της Qt."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Εισαγωγή δεδομένων από βάση δεδομένων"
-
-#~ msgid "Type:"
-#~ msgstr "Τύπος:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Όνομα χρήστη:\n"
-#~ "(αν είναι απαραίτητο)"
-
-#~ msgid "Host:"
-#~ msgstr "Υπολογιστής:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Θύρα:\n"
-#~ "(αν είναι απαραίτητο)"
-
-#~ msgid "Database name: "
-#~ msgstr "Όνομα βάσης δεδομένων: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Κωδικός πρόσβασης:\n"
-#~ "(αν είναι απαραίτητο)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Επιλογή πινάκων:"
-
-#~ msgid "Tables"
-#~ msgstr "Πίνακες"
-
-#~ msgid "Select columns:"
-#~ msgstr "Επιλογή στηλών:"
-
-#~ msgid "Table"
-#~ msgstr "Πίνακας"
-
-#~ msgid "Columns"
-#~ msgstr "Στήλες"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Ταίριασμα όλων των ακόλουθων (ΚΑΙ)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Ταίριασμα με οποιοδήποτε από τα ακόλουθα (Ή)"
-
-#~ msgid "equals"
-#~ msgstr "ίσο με"
-
-#~ msgid "not equal"
-#~ msgstr "όχι ίσο με"
-
-#~ msgid "in"
-#~ msgstr "μέσα"
-
-#~ msgid "not in"
-#~ msgstr "όχι μέσα"
-
-#~ msgid "like"
-#~ msgstr "όμοιο"
-
-#~ msgid "greater"
-#~ msgstr "μεγαλύτερο"
-
-#~ msgid "lesser"
-#~ msgstr "μικρότερο"
-
-#~ msgid "greater or equal"
-#~ msgstr "μεγαλύτερο ή ίσο"
-
-#~ msgid "less or equal"
-#~ msgstr "μικρότερο ή ίσο"
-
-#~ msgid "Sorted by"
-#~ msgstr "Ταξινόμηση κατά"
-
-#~ msgid "Ascending"
-#~ msgstr "Αύξουσα"
-
-#~ msgid "Descending"
-#~ msgstr "Φθίνουσα"
-
-#~ msgid "Distinct"
-#~ msgstr "Διαχωρισμός"
-
-#~ msgid "Query Options"
-#~ msgstr "Επιλογές ερωτήματος"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL ερώτηση:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Εισαγωγή στην περιοχή"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Αρχή στο κελί"
-
-#~ msgid "Result"
-#~ msgstr "Αποτέλεσμα"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Δεν μπορείτε να ορίσετε εδώ ένα πίνακα."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Πρέπει να καθορίσετε μια έγκυρη περιοχή."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Πρέπει να ορίσετε ένα έγκυρο κελί."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Δε σας επιτρέπεται να κάνετε αλλαγές στη βάση δεδομένων."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Η εκτέλεση του ερωτήματος απέτυχε."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Δε λάβατε κανένα αποτέλεσμα με αυτό το ερώτημα."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Εισαγωγή δεδομένων από βάση δεδομένων"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Η θύρα πρέπει να είναι αριθμός"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Σύνδεση στη βάση δεδομένων..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Σύνδεση. Ανάκτηση πληροφοριών πίνακα..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Αυτή η βάση δεδομένων δεν περιέχει πίνακες"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Ο οδηγός δεν ήταν δυνατό να φορτωθεί"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Ανάκτηση μεταδεδομένων των πινάκων..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Πρέπει να επιλέξετε τουλάχιστον ένα πίνακα."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Πρέπει να επιλέξετε τουλάχιστον μία στήλη."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "Τα '*' ή '?' δεν είναι έγκυρα σύμβολο υποκατάστασης στην SQL. Τα σωστά "
-#~ "αντίστοιχα σύμβολα είναι τα '%' ή '_'. Επιθυμείτε την αντικατάστασή τους;"
-
-#~ msgid "Insert function"
-#~ msgstr "Εισαγωγή συνάρτησης"
-
-#~ msgid "Help"
-#~ msgstr "Βοήθεια"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Αυτή η συνάρτηση δεν έχει παραμέτρους."
-
-#~ msgid "Description is not available."
-#~ msgstr "Η περιγραφή δεν είναι διαθέσιμη."
-
-#~ msgid "Document Settings..."
-#~ msgstr "Ρυθμίσεις εγγράφου..."
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "Εμφάνιση διαλόγου ρυθμίσεων εγγράφου"
-
-#~ msgid "Document Settings"
-#~ msgstr "Ρυθμίσεις εγγράφου"
-
-#~ msgid "Calculation"
-#~ msgstr "Υπολογισμός"
-
-#~ msgid "Locale"
-#~ msgstr "Εντοπιότητα"
-
-#~ msgid "Case sensitive"
-#~ msgstr "Με διάκριση πεζών/κεφαλαίων"
-
-#~ msgid "Precision as shown"
-#~ msgstr "Ακρίβεια όπως εμφανίζεται"
-
-#~ msgid "Search criteria must apply to whole cell"
-#~ msgstr "Τα κριτήρια αναζήτησης πρέπει να ισχύουν για όλο το κελί"
-
-#~ msgid "Automatic find labels"
-#~ msgstr "Αυτόματη εύρεση ετικετών"
-
-#~ msgid "String comparison:"
-#~ msgstr "Σύγκριση συμβολοσειρών"
-
-#~ msgid "Regular Expressions"
-#~ msgstr "Κανονικές εκφράσεις"
-
-#~ msgid "Wildcards"
-#~ msgstr "Σύμβολα υποκατάστασης"
-
-#~ msgid "Null Year:"
-#~ msgstr "Κενό έτος:"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Χρήση ρυθμίσεων εντοπιότητας συστήματος"
-
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Γλώσσα: %1 (%2)"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Προκαθορισμένη μορφή ημερομηνίας: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Εκτενής μορφή ημερομηνίας: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Σύντομη μορφή ημερομηνίας: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Μορφή ώρας: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Μορφή νομίσματος: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Προσαρμοσμένες λίστες..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr ""
-#~ "Δημιουργία προσαρμοσμένων λιστών για ταξινόμηση ή αυτόματη συμπλήρωση"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Επιλογή όλων των κελιών στο τρέχον φύλλο εργασίας"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Προσαρμοσμένες λίστες"
-
-#~ msgid "List:"
-#~ msgstr "Λίστα:"
-
-#~ msgid "Entry:"
-#~ msgstr "Καταχώρηση:"
-
-#~ msgid "Add"
-#~ msgstr "Προσθήκη"
-
-#~ msgid "New"
-#~ msgstr "Νέο"
-
-#~ msgid "Remove"
-#~ msgstr "Αφαίρεση"
-
-#~ msgid "Modify"
-#~ msgstr "Τροποποίηση"
-
-#~ msgid "Copy"
-#~ msgstr "Αντιγραφή"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Επιθυμείτε πραγματικά την αφαίρεση αυτής της λίστας;"
-
-#~ msgid "Remove List"
-#~ msgstr "Αφαίρεση λίστας"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Η περιοχή καταχώρησης δεν είναι άδεια.\n"
-#~ "Επιθυμείτε τη συνέχεια;"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "Αναζήτηση &στόχου..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Επανάληψη υπολογισμού για την εύρεση μιας συγκεκριμένης τιμής"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Αναζήτηση στόχου"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Η αναφορά κελιού δεν είναι έγκυρη."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Η τιμή στόχου δεν είναι έγκυρη."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Το κελί πηγής πρέπει να περιέχει μια αριθμητική τιμή."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Το κελί στόχου πρέπει να περιέχει ένα μαθηματικό τύπο."
 
 #~ msgid "Starting..."
 #~ msgstr "Έναρξη..."
@@ -16347,12 +19090,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 
 #~ msgid "New value:"
 #~ msgstr "Νέα τιμή:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Η αναζήτηση στόχου με το κελί %1 βρήκε μια λύση:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Η αναζήτηση στόχου με το κελί %1 ΔΕ βρήκε λύση."
 
 #~ msgid "Set cell:"
 #~ msgstr "Ορισμός κελιού:"
@@ -16368,82 +19105,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 
 #~ msgid "Current value:"
 #~ msgstr "Τρέχουσα τιμή:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Αντικατάσταση"
-
-#~ msgid "Selection List..."
-#~ msgstr "Λίστα επιλογής..."
-
-#~ msgid "More Options"
-#~ msgstr "Περισσότερες επιλογές"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Αναζήτηση σε ολόκληρο το φύλλο"
-
-#~ msgid "Search in:"
-#~ msgstr "Αναζήτηση σε:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Τιμές κελιών"
-
-#~ msgid "Comments"
-#~ msgstr "Σχόλια"
-
-#~ msgid "Search direction:"
-#~ msgstr "Κατεύθυνση αναζήτησης:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Κατά μήκος και προς τα κάτω"
-
-#~ msgid "Down then Across"
-#~ msgstr "Προς τα κάτω και κατά μήκος"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Λιγότερες επιλογές"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Μορφή κελιού..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Ορισμός μορφοποίησης του κελιού"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Μετακίνηση του αντικειμένου του κελιού στο πρόχειρο"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Αντιγραφή του αντικειμένου του κελιού στο πρόχειρο"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Επικόλληση των περιεχομένων του προχείρου στο δρομέα"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Ειδική επικόλληση..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Επικόλληση των περιεχομένων του προχείρου με ειδικές επιλογές"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Επικόλληση με εισαγωγή"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Εισάγει ένα κελί από το πρόχειρο στο φύλλο εργασίας"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Επικόλληση εισαγόμενων κελιών"
-
-#~ msgid "Insert"
-#~ msgstr "Εισαγωγή"
-
-#~ msgid "Move towards right"
-#~ msgstr "Μετακίνηση προς τα δεξιά"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Μετακίνηση προς τα κάτω"
-
-#~ msgid "Special Paste"
-#~ msgstr "Ειδική επικόλληση"
 
 #~ msgid "Content"
 #~ msgstr "Περιεχόμενο"
@@ -16475,31 +19136,12 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Division"
 #~ msgstr "Διαίρεση"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Ορθογραφικός έλεγχος"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Επιθυμείτε να εκτελέσετε ορθογραφικό έλεγχο στο επόμενο φύλλο;"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Διόρθωση ανορθόγραφων λέξεων"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Αυτόματη μορφοποίηση..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Καθορισμός της μορφοποίησης του φύλλου εργασίας"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Αυτόματη διαμόρφωση"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Στιλ φύλλου"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Επιλογή του στιλ φύλλου για εφαρμογή:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Αδυναμία εύρεσης της εικόνας %1."
@@ -16507,89 +19149,8 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Could not load image %1."
 #~ msgstr "Αδυναμία φόρτωσης της εικόνας %1."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Αδυναμία εύρεσης του αρχείου XML στιλ φύλλου '%1'."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Σφάλμα ανάλυσης στο αρχείο XML στιλ φύλλο %1."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Αυτόματο φίλτρο"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Προσθήκη ενός αυτόματου φίλτρο σε ένα εύρος κελιών"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Αυτόματο φίλτρο"
-
-#~ msgid "Clear All"
-#~ msgstr "Καθαρισμός όλων"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr ""
-#~ "Καθαρισμός όλων των περιεχομένων και μορφοποίησης του τρέχοντος κελιού"
-
 #~ msgid "Contents"
 #~ msgstr "Περιεχόμενα"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Καθαρισμός περιεχομένων"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Αφαίρεση των περιεχομένων του τρέχοντος κελιού"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Καθαρισμός κειμένου"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Αφαίρεση της υπό συνθήκη σχηματοποίησης"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Προσθήκη υπό συνθήκη σχηματοποίησης"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Επιλογή ενός νέου χρώματος περιγράμματος"
-
-#~ msgid "Border Color"
-#~ msgstr "Χρώμα περιγράμματος"
-
-#~ msgid "Set the background color"
-#~ msgstr "Ορισμός του χρώματος φόντου"
-
-#~ msgid "Background Color"
-#~ msgstr "Χρώμα φόντου"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Υπό συνθήκη στιλ..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Ορισμός στιλ του κελιού βασισμένο σε διάφορες συνθήκες"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Υπό συνθήκη στιλ"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Αφαίρεση των υπό συνθήκη στιλ"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Αφαίρεση των υπό συνθήκη στιλ κελιών"
-
-#~ msgid "&Pivot Tables..."
-#~ msgstr "Συγκεντρωτικοί (&pivot) πίνακες..."
-
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Δημιουργία συγκεντρωτικών πινάκων"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Πρέπει να επιλέξετε πολλαπλά κελιά."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Μορφή αριθμού"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16598,82 +19159,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Μορφή ποσοστού"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Μορφή ώρας"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Μορφή ημερομηνίας"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Επιστημονική μορφή"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Αλλαγή χρώματος περιγράμματος"
-
-#~ msgid "<none>"
-#~ msgstr "<κανένα>"
-
-#~ msgid "equal to"
-#~ msgstr "ίσο με"
-
-#~ msgid "greater than"
-#~ msgstr "μεγαλύτερο από"
-
-#~ msgid "less than"
-#~ msgstr "μικρότερο από"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "ίσο με ή μεγαλύτερο από"
-
-#~ msgid "equal to or less than"
-#~ msgstr "ίσο με ή μικρότερο από"
-
-#~ msgid "between"
-#~ msgstr "ανάμεσα σε"
-
-#~ msgid "outside range"
-#~ msgstr "εκτός εύρους"
-
-#~ msgid "different to"
-#~ msgstr "διαφορετικό από"
-
-#~ msgid "First Condition"
-#~ msgstr "Πρώτη συνθήκη"
-
-#~ msgid "Second Condition"
-#~ msgstr "Δεύτερη συνθήκη"
-
-#~ msgid "Third Condition"
-#~ msgstr "Τρίτη συνθήκη"
-
-#~ msgid "Cell is"
-#~ msgstr "Το κελί είναι"
-
-#~ msgid "Cell style"
-#~ msgstr "Στιλ κελιού"
-
-#~ msgid "different from"
-#~ msgstr "διαφορετικό από"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Αν η πρώτη τιμή είναι ένας αριθμός, η δεύτερη τιμή πρέπει επίσης να είναι "
-#~ "ένας αριθμός."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Αν η πρώτη τιμή είναι μια συμβολοσειρά, η δεύτερη τιμή πρέπει επίσης να "
-#~ "είναι μια συμβολοσειρά."
-
-#~ msgid "Select Source"
-#~ msgstr "Επιλογή πηγής"
 
 #~ msgid "Current Selection"
 #~ msgstr "Τρέχουσα επιλογή"
@@ -16704,12 +19189,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 
 #~ msgid "!="
 #~ msgstr "!="
-
-#~ msgid "Pivot Table Configuration Window"
-#~ msgstr "Παράθυρο διαμόρφωσης συγκεντρωτικών πινάκων"
-
-#~ msgid "Add Filter"
-#~ msgstr "Προσθήκη φίλτρου"
 
 #~ msgid "Drag from Labels and drop in the desired field"
 #~ msgstr "Ανακτήστε από ετικέτες και αποθέστε στο επιθυμητό πεδίο"
@@ -16745,9 +19224,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Rows"
 #~ msgstr "Γραμμές"
 
-#~ msgid "Pivot Options"
-#~ msgstr "Επιλογές συγκεντρωτικών (pivot)"
-
 #~ msgid "Value Type"
 #~ msgstr "Τύπος τιμής"
 
@@ -16760,156 +19236,17 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Manual Selection"
 #~ msgstr "Χειροκίνητη επιλογή"
 
-#~ msgid "Product"
-#~ msgstr "Γινόμενο"
-
 #~ msgid "Sort By"
 #~ msgstr "Ταξινόμηση κατά"
-
-#~ msgid "Select Font..."
-#~ msgstr "Επιλογή γραμματοσειράς..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Επιλογή μεγέθους γραμματοσειράς"
-
-#~ msgid "Font Size"
-#~ msgstr "Μέγεθος γραμματοσειράς"
-
-#~ msgid "Text Color"
-#~ msgstr "Χρώμα κειμένου"
-
-#~ msgid "Set the text color"
-#~ msgstr "Ορισμός του χρώματος κειμένου"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Τροποποίηση γραμματοσειράς"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Διαχειριστής στιλ..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Επεξεργασία και οργάνωση των στιλ κελιών"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Εφαρμογή ενός προκαθορισμένου στιλ στα επιλεγμένα κελιά"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Δημιουργία στιλ από κελί..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "Στιλ από κελί"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Δημιουργία ενός νέου στιλ βασισμένο στο τρέχον επιλεγμένο κελί"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Δημιουργία στιλ από κελί"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Το όνομα στιλ δεν μπορεί να είναι κενό."
-
-#~ msgid "Style Manager"
-#~ msgstr "Διαχειριστής στιλ"
-
-#~ msgid "All Styles"
-#~ msgstr "Όλα τα στιλ"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Προσαρμοσμένα στιλ"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Ιεραρχικά"
-
-#~ msgid "&New..."
-#~ msgstr "&Νέο..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Τροποποίηση..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Διαγραφή..."
-
-#~ msgid "style%1"
-#~ msgstr "στιλ%1"
 
 #~ msgid "Cells..."
 #~ msgstr "Κελιά..."
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Εισαγωγή κελιών..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Εισαγωγή ενός κενού κελιού στο φύλλο εργασίας"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Αφαίρεση κελιών..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Αφαίρεση των κελιών από το φύλλο εργασίας"
-
 #~ msgid "Delete Cells..."
 #~ msgstr "Διαγραφή κελιών..."
 
-#~ msgid "Insert rows"
-#~ msgstr "Εισαγωγή γραμμών"
-
-#~ msgid "Insert columns"
-#~ msgstr "Εισαγωγή στηλών"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Εισαγωγή κελιών"
-
-#~ msgid "Move towards left"
-#~ msgstr "Μετακίνηση προς τα αριστερά"
-
-#~ msgid "Move towards top"
-#~ msgstr "Μετακίνηση προς τα πάνω"
-
-#~ msgid "Remove rows"
-#~ msgstr "Αφαίρεση γραμμών"
-
-#~ msgid "Remove columns"
-#~ msgstr "Αφαίρεση στηλών"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Αφαίρεση κελιών"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&Μερικά σύνολα..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr ""
-#~ "Δημιουργία διαφορετικού είδους μερικών συνόλων σε μία λίστα ή βάση "
-#~ "δεδομένων"
-
-#~ msgid "Subtotals"
-#~ msgstr "Μερικά σύνολα"
-
-#~ msgid "Remove All"
-#~ msgstr "Αφαίρεση όλων"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr ""
-#~ "Πρέπει να επιλέξετε τουλάχιστον μία στήλη για υπολογισμό μερικών συνόλων."
-
 #~ msgid "Grand Total"
 #~ msgstr "Γενικό σύνολο"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Στήλη '%1' "
-
-#~ msgid "StDev"
-#~ msgstr "Τυπική απόκλιση"
-
-#~ msgid "StDevP"
-#~ msgstr "Τυπική απόκλιση πληθ."
-
-#~ msgid "Var"
-#~ msgstr "Διακύμανση"
-
-#~ msgid "VarP"
-#~ msgstr "Διακύμανση πληθυσμού"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "Αντικατάσταση τ&ρεχόντων μερικών συνόλων"
@@ -16935,47 +19272,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Πρόσθεση μερικού συνόλου στο:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Μετάβαση στο κελί..."
-
-#~ msgid "Goto"
-#~ msgstr "Μετάβαση"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Μετακίνηση σε ένα συγκεκριμένο κελί"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Αλλαγή σελίδας πριν από τη στήλη"
-
-#~ msgid "Column Break"
-#~ msgstr "Αλλαγή σελίδας στη στήλη"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Ορισμός χειροκίνητης αλλαγής σελίδας πριν από τη στήλη"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Αλλαγή σελίδας πριν από τη γραμμή"
-
-#~ msgid "Row Break"
-#~ msgstr "Αλλαγή σελίδας στη γραμμή"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Ορισμός χειροκίνητης αλλαγής σελίδας πριν από τη γραμμή"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Μετάβαση στο κελί"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Εισάγετε κελί:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "Σ&υγχώνευση..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr ""
-#~ "Δημιουργία μιας περιοχής δεδομένων περίληψης από μία ομάδα παρόμοιων "
-#~ "περιοχών"
-
 #~ msgid "Description in rows"
 #~ msgstr "Περιγραφή σε γραμμές"
 
@@ -16984,39 +19280,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 
 #~ msgid "Copy data"
 #~ msgstr "Αντιγραφή δεδομένων"
-
-#~ msgid "Consolidate"
-#~ msgstr "Συγχώνευση"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Τυπική απόκλιση"
-
-#~ msgid "Variance"
-#~ msgstr "Διακύμανση"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Πρέπει να επιλέξετε τουλάχιστον ένα πηγαίο εύρος."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 δεν είναι ένα έγκυρο εύρος κελιού."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Το εύρος\n"
-#~ "%1\n"
-#~ "είναι πολύ μικρό"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Το εύρος\n"
-#~ "%1\n"
-#~ "είναι πολύ μεγάλο"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -17031,22 +19294,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ "%2\n"
 #~ "έχουν διαφορετικό μέγεθος"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Eνοποίηση"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "το πηγαίο εύρος παρεμβάλλεται με το εύρος προορισμού"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Το εύρος\n"
-#~ "%1\n"
-#~ " έχει λάθος μορφή"
-
 #~ msgid "Function:"
 #~ msgstr "Συνάρτηση:"
 
@@ -17056,203 +19303,17 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Entered references:"
 #~ msgstr "Εισηγμένες αναφορές:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Τροποποίηση γωνίας..."
-
-#~ msgid "Angle"
-#~ msgstr "Γωνία"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr ""
-#~ "Τροποποίηση της γωνίας με την οποία τα περιεχόμενα του κελιού εκτυπώνονται"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Αύξηση ακρίβειας"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Αύξηση της δεκαδικής ακρίβειας που φαίνεται στην οθόνη"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Μείωση ακρίβειας"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Μείωση της δεκαδικής ακρίβειας που φαίνεται στην οθόνη"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Αύξηση ακρίβειας"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Μείωση ακρίβειας"
-
-#~ msgid "Change Angle"
-#~ msgstr "Τροποποίηση γωνίας"
-
-#~ msgid "Angle:"
-#~ msgstr "Γωνία:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Τροποποίηση γωνίας"
-
-#~ msgid "Area Name..."
-#~ msgstr "Όνομα περιοχής..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Καθορισμός μιας ονομασίας για μια περιοχή του λογιστικού φύλλου"
-
-#~ msgid "Named Areas..."
-#~ msgstr "Περιοχές με ονομασία..."
-
-#~ msgid "Named Areas"
-#~ msgstr "Περιοχές με ονομασία"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Επεξεργασία ή επιλογή περιοχών με ονομασία"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Προσθήκη περιοχής με ονομασία"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Εισάγετε το όνομα περιοχής:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "Η περιοχή με ονομασία '%1' υπάρχει ήδη.\n"
-#~ "Επιθυμείτε την αντικατάστασή της;"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "Αντικατάσταση περιοχής με ονομασία"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Αντικατάσταση περιοχής με ονομασία"
-
 #~ msgid "&Select"
 #~ msgstr "&Επιλογή"
 
-#~ msgid "Area: %1"
-#~ msgstr "Περιοχή: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Επεξεργασία..."
-
-#~ msgid "&Remove"
-#~ msgstr "Α&φαίρεση"
 
 #~ msgid "New Named Area"
 #~ msgstr "Νέα περιοχή με ονομασία"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Επεξεργασία περιοχής με ονομασία"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Επιθυμείτε πραγματικά να αφαιρέσετε αυτήν την περιοχή με ονομασία;"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Αφαίρεση περιοχής με ονομασία"
-
-#~ msgid "Cells:"
-#~ msgstr "Κελιά:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Φύλλο:"
-
-#~ msgid "Area name:"
-#~ msgstr "Όνομα περιοχής:"
-
-#~ msgid "Align Left"
-#~ msgstr "Στοίχιση αριστερά"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Στοίχιση αριστερά των περιεχομένων του κελιού"
-
-#~ msgid "Align Center"
-#~ msgstr "Στοίχιση στο κέντρο"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Ευθυγράμμιση στο κέντρο των περιεχομένων του κελιού"
-
-#~ msgid "Align Right"
-#~ msgstr "Στοίχιση δεξιά"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Στοίχιση δεξιά των περιεχομένων του κελιού"
-
-#~ msgid "Align Top"
-#~ msgstr "Στοίχιση πάνω"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Στοίχιση των περιεχομένου του κελιού στο πάνω μέρος του"
-
-#~ msgid "Align Middle"
-#~ msgstr "Στοίχιση στο κέντρο"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Στοίχιση των περιεχομένων του κελιού στο κέντρο του"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Στοίχιση κάτω"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Στοίχιση των περιεχομένων του κελιού στο κάτω μέρος του"
-
-#~ msgid "Border Left"
-#~ msgstr "Περίγραμμα αριστερά"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Ορισμός ενός αριστερού περιγράμματος στην επιλεγμένη περιοχή"
-
-#~ msgid "Border Right"
-#~ msgstr "Περίγραμμα δεξιά"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Ορισμός ενός δεξιού περιγράμματος στην επιλεγμένη περιοχή"
-
-#~ msgid "Border Top"
-#~ msgstr "Περίγραμμα πάνω"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Ορισμός ενός πάνω περιγράμματος στην επιλεγμένη περιοχή"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Περίγραμμα κάτω"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Ορισμός ενός κάτω περιγράμματος στην επιλεγμένη περιοχή"
-
-#~ msgid "All Borders"
-#~ msgstr "Όλα τα περιγράμματα"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr ""
-#~ "Ορισμός ενός περιγράμματος γύρω από όλα τα κελιά στην επιλεγμένη περιοχή"
-
-#~ msgid "No Borders"
-#~ msgstr "Χωρίς περιγράμματα"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Αφαίρεση όλων των περιγραμμάτων στην επιλεγμένη περιοχή"
-
-#~ msgid "Border Outline"
-#~ msgstr "Περίγραμμα ορίων"
-
-#~ msgid "Outline"
-#~ msgstr "Περίγραμμα"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Ορισμός ενός περιγράμματος στα όρια της επιλεγμένης περιοχής"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Τροποποίηση οριζόντιας στοίχισης"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Τροποποίηση κατακόρυφης στοίχισης"
 
 #~ msgid "Australia"
 #~ msgstr "Αυστραλία"
@@ -19063,65 +21124,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Δολάριο Ζιμπάμπουε"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Επαναφορά στην προκαθορισμένη μορφή"
-
-#~ msgid "Strike Out"
-#~ msgstr "Επιγράμμιση"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Αύξηση μεγέθους γραμματοσειράς"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Μείωση μεγέθους γραμματοσειράς"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Αναδίπλωση κειμένου"
-
-#~ msgid "Wrap"
-#~ msgstr "Αναδίπλωση"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Το κείμενο του κελιού θα αναδιπλώνεται σε πολλαπλές γραμμές"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Κατακόρυφο κείμενο"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Εκτύπωση των περιεχομένων του κελιού κατακόρυφα"
-
-#~ msgid "Percent Format"
-#~ msgstr "Μορφή ποσοστού"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr ""
-#~ "Ορισμός της μορφοποίησης του κελιού ώστε να φαίνεται σαν ποσοστό επί τοις "
-#~ "εκατό"
-
-#~ msgid "Money Format"
-#~ msgstr "Μορφή χρημάτων"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr ""
-#~ "Ορισμός της μορφοποίησης του κελιού ώστε να εμφανίζεται σαν το τοπικό σας "
-#~ "νόμισμα"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Αναδίπλωση κειμένου"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Κατακόρυφο κείμενο"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Μορφή ποσοστού"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Μορφή νομίσματος"
-
 #~ msgid "&Data Format"
 #~ msgstr "Μορφή &δεδομένων"
 
@@ -19182,9 +21184,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Default height (%1)"
 #~ msgstr "Προκαθορισμένο ύψος (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Ύψος:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Ορισμός του ύψους του κελιού."
 
@@ -19198,449 +21197,32 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Default width (%1)"
 #~ msgstr "Προκαθορισμένο πλάτος (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Πλάτος:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Προσθήκη σχολίου"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Αύξηση εσοχής"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Αύξηση της εσοχής"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Μείωση εσοχής"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Μείωση της εσοχής"
-
-#~ msgid "Upper Case"
-#~ msgstr "Κεφαλαία"
-
-#~ msgid "Upper"
-#~ msgstr "Κεφαλαία"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Μετατροπή όλων των γραμμάτων σε κεφαλαία"
-
-#~ msgid "Lower Case"
-#~ msgstr "Πεζά"
-
-#~ msgid "Lower"
-#~ msgstr "Πεζά"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Μετατροπή όλων των γραμμάτων σε πεζά"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Μετατροπή πρώτου γράμματος σε κεφαλαίο"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Πρώτο γράμμα κεφαλαίο"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Μετατροπή του πρώτου γράμματος σε κεφαλαίο"
-
-#~ msgid "Comment..."
-#~ msgstr "Σχόλιο..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Επεξεργασία ενός σχολίου γι' αυτό το κελί"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Αφαίρεση σχολίου"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Αφαίρεση του σχολίου αυτού του κελιού"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Εναλλαγή σε κεφαλαία"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Εναλλαγή σε πεζά"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Πρώτο γράμμα κεφαλαίο"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Αφαίρεση σχολίου"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Καθαρισμός σχολίου"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Τροποποίηση πεζών/κεφαλαίων"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Αύξηση εσοχής"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Μείωση εσοχής"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Σχόλιο κελιού"
-
-#~ msgid "&Left"
-#~ msgstr "&Αριστερά"
-
-#~ msgid "&Right"
-#~ msgstr "&Δεξιά"
-
 #~ msgid "&Up"
 #~ msgstr "&Πάνω"
-
-#~ msgid "&Down"
-#~ msgstr "&Κάτω"
-
-#~ msgid "Autosum"
-#~ msgstr "Αυτόματη άθροιση"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Εισαγωγή της συνάρτησης 'sum'"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Συμπλήρωση επιλογής"
-
-#~ msgid "From &Text File..."
-#~ msgstr "Από αρχείο &κειμένου..."
-
-#~ msgid "Text File"
-#~ msgstr "Αρχείο κειμένου"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Εισαγωγή δεδομένων από ένα αρχείο κειμένου στην τρέχουσα θέση/επιλογή του "
-#~ "δρομέα"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "Από το &πρόχειρο..."
 
-#~ msgid "Clipboard"
-#~ msgstr "Πρόχειρο"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Εισαγωγή δεδομένων CSV από το πρόχειρο στην τρέχουσα θέση/επιλογή του "
-#~ "δρομέα"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Κείμενο σε στήλες..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Ανάπτυξη του περιεχομένου των κελιών σε πολλαπλές στήλες"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Εισαγωγή από πρόχειρο"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Δεν υπάρχουν δεδομένα στο πρόχειρο."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Δεν υπάρχουν χρήσιμα δεδομένα στο πρόχειρο."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "Εισαγωγή αρχείου δεδομένων CSV"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "Αρχεία δεδομένων CSV (*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Κείμενο σε στήλες"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Δεν ήταν δυνατό το άνοιγμα του αρχείου εισόδου."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Εισαγωγή από πρόχειρο"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Εισαγωγή αρχείου κειμένου"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Κείμενο σε στήλες"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "Συγχώνευση της επιλεγμένης περιοχής"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Συγχώνευση κελιών οριζόντια"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Συγχώνευση της επιλεγμένης περιοχής οριζόντια"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Συγχώνευση κελιών κατακόρυφα"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Συγχώνευση της επιλεγμένης περιοχής κατακόρυφα"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Διαχωρισμός κελιών"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Αναίρεση της συγχώνευσης της επιλεγμένης περιοχής"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Αλλαγή μεγέθους στήλης..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Αλλαγή του πλάτους μιας στήλης"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Εισαγωγή στηλών"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Εισαγωγή μιας νέας στήλης στο φύλλο εργασίας"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Αφαίρεση στηλών"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Αφαιρεί τις επιλεγμένες στήλες από το φύλλο εργασίας"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Απόκρυψη στηλών"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Απόκρυψη της στήλης από αυτό"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Εμφάνιση στηλών..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Εμφάνιση κρυφών στηλών"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Εξίσωση στήλης"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr ""
-#~ "Αλλαγή μεγέθους των επιλεγμένων στηλών ώστε να έχουν το ίδιο μέγεθος"
-
-#~ msgid "Show Columns"
-#~ msgstr "Εμφάνιση στηλών"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Εμφάνιση κρυφών στηλών στην επιλογή"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Αλλαγή μεγέθους γραμμής..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Αλλαγή του ύψους μιας γραμμής"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Εισαγωγή γραμμών"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Εισαγωγή μιας νέας γραμμής στο φύλλο εργασίας"
-
-#~ msgid "Remove Rows"
-#~ msgstr "Αφαίρεση γραμμών"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Αφαίρεση μιας γραμμής από το φύλλο εργασίας"
-
-#~ msgid "Hide Rows"
-#~ msgstr "Απόκρυψη γραμμών"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Απόκρυψη μιας γραμμής από αυτό"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Εμφάνιση γραμμών..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Εμφάνιση κρυφών γραμμών"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Εξίσωση γραμμής"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr ""
-#~ "Αλλαγή μεγέθους των επιλεγμένων γραμμών ώστε να έχουν το ίδιο μέγεθος"
-
-#~ msgid "Show Rows"
-#~ msgstr "Εμφάνιση γραμμών"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Εμφάνιση κρυφών γραμμών στην επιλογή"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Προσαρμογή γραμμής && στήλης"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr ""
-#~ "Προσαρμογή του μεγέθους της γραμμής/στήλης ώστε να χωράει το περιεχόμενο"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Προσαρμογή στήλης"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Διαγραφή στηλών"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Προσαρμογή γραμμής"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Διαγραφή γραμμών"
 
-#~ msgid "Resize Row"
-#~ msgstr "Αλλαγή μεγέθους γραμμής"
-
-#~ msgid "Resize Column"
-#~ msgstr "Αλλαγή μεγέθους στήλης"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Επιλογή κρυφών στηλών για εμφάνιση:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Επιλογή κρυφών γραμμών για εμφάνιση:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Στήλη: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Γραμμή: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Δεσμός..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Εισαγωγή ενός υπερδεσμού διαδικτύου"
-
-#~ msgid "Link"
-#~ msgstr "Δεσμός"
-
-#~ msgid "Remove Link"
-#~ msgstr "Αφαίρεση δεσμού"
-
-#~ msgid "Remove a link"
-#~ msgstr "Αφαίρεση ενός δεσμού"
-
-#~ msgid "Insert Link"
-#~ msgstr "Εισαγωγή δεσμού"
-
 #~ msgid "Edit Link"
 #~ msgstr "Επεξεργασία δεσμού"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Αφαίρεση δεσμού"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Ορισμός δεσμού"
-
-#~ msgid "Internet"
-#~ msgstr "Διαδίκτυο"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Δεσμός σε διεύθυνση διαδικτύου"
-
-#~ msgid "Text to display:"
-#~ msgstr "Κείμενο για εμφάνιση:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Διεύθυνση διαδικτύου:"
-
-#~ msgid "Email"
-#~ msgstr "Ηλ. αλληλογραφία"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "Σύνδεσμος σε διεύθυνση αλληλογραφίας"
-
-#~ msgid "Email address:"
-#~ msgstr "Διεύθυνση αλληλογραφίας:"
-
-#~ msgid "Subject:"
-#~ msgstr "Θέμα:"
-
-#~ msgid "File"
-#~ msgstr "Αρχείο"
-
-#~ msgid "Link to File"
-#~ msgstr "Σύνδεσμος σε αρχείου"
-
-#~ msgid "File location:"
-#~ msgstr "Τοποθεσία αρχείου:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Πρόσφατο αρχείο:"
-
-#~ msgid "No Entries"
-#~ msgstr "Καμία καταχώρηση"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Σύνδεσμος σε κελί"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Κελί ή περιοχή με ονομασία:"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Ταξινόμηση..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Ταξινόμηση μιας ομάδας κελιών"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "&Φθίνουσα ταξινόμηση"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr ""
-#~ "Ταξινόμηση μιας ομάδας κελιών σε φθίνουσα (τελευταίο στο πρώτο) σειρά"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "&Αύξουσα ταξινόμηση"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr ""
-#~ "Ταξινόμηση μιας ομάδας κελιών σε αύξουσα (πρώτο στο τελευταίο) σειρά"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Ταξινόμηση δεδομένων"
 
 #~ msgid "Use custom list"
 #~ msgstr "Χρήση προσαρμοσμένης λίστας"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Αντιγραφή διαμόρφωσης κελιού (περιγράμματα, χρώματα, στιλ κειμένου)"
-
-#~ msgid "Column %1"
-#~ msgstr "Στήλη %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Γραμμή %1"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "Η π&ρώτη στήλη περιέχει κεφαλίδες γραμμών"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "Η &πρώτη γραμμή περιέχει κεφαλίδες στηλών"
-
-#~ msgid "Sort"
-#~ msgstr "Ταξινόμηση"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Χωρίς διάκριση πεζών/κεφαλαίων"
 
 #~ msgid "Move Up"
 #~ msgstr "Μετακίνηση πάνω"
@@ -19705,235 +21287,8 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Ταξινόμηση δεδομένων σε ομάδες γραμμών κατακόρυφα"
 
-#~ msgid "Validity..."
-#~ msgstr "Εγκυρότητα..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr ""
-#~ "Ορισμός ελέγχων για την επιβεβαίωση εγκυρότητας των δεδομένων κελιού"
-
-#~ msgid "Validity"
-#~ msgstr "Εγκυρότητα"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Αφαίρεση εγκυρότητας"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Αφαίρεση των ελέγχων εγκυρότητας σε αυτό το κελί"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Αφαίρεση ελέγχου εγκυρότητας"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Προσθήκη ελέγχου εγκυρότητας"
-
-#~ msgid "Clear &All"
-#~ msgstr "Καθαρισμός ό&λων"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Κριτήρια"
-
-#~ msgid "Allow:"
-#~ msgstr "Επίτρεψε:"
-
-#~ msgid "Integer"
-#~ msgstr "Ακέραιος"
-
-#~ msgid "Text Length"
-#~ msgstr "Μήκος κειμένου"
-
-#~ msgid "List"
-#~ msgstr "Λίστα"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Επίτρεψε κενά"
-
-#~ msgid "Data:"
-#~ msgstr "Δεδομένα:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Ελάχιστο:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Μέγιστο:"
-
-#~ msgid "Date:"
-#~ msgstr "Ημερομηνία:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Ελάχιστη ημερομηνία:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Μέγιστη ημερομηνία:"
-
-#~ msgid "Time:"
-#~ msgstr "Ώρα:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Ελάχιστη ώρα:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Μέγιστη ώρα:"
-
-#~ msgid "Number:"
-#~ msgstr "Αριθμός:"
-
-#~ msgid "Entries:"
-#~ msgstr "Καταχωρίσεις:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "Προειδοποίηση &σφάλματος"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Εμφάνιση μηνύματος σφάλματος όταν εισάγονται μη έγκυρες τιμές"
-
-#~ msgid "Action:"
-#~ msgstr "Ενέργεια:"
-
-#~ msgid "Stop"
-#~ msgstr "Σταμάτημα"
-
-#~ msgid "Warning"
-#~ msgstr "Προειδοποίηση"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Τίτλος:"
-
-#~ msgid "Message:"
-#~ msgstr "Μήνυμα:"
-
-#~ msgid "Input Help"
-#~ msgstr "Βοήθεια εισαγωγής"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Εμφάνιση της βοήθειας εισαγωγής όταν επιλεγεί το κελί"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Αυτή δεν είναι μια έγκυρη τιμή."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Αυτή δεν είναι μια έγκυρη ώρα."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Αυτή δεν είναι μια έγκυρη ημερομηνία."
-
-#~ msgid "&Series..."
-#~ msgstr "Σ&ειρά..."
-
-#~ msgid "Insert a series"
-#~ msgstr "Εισαγωγή μιας σειράς"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Εισαγωγή σειράς"
-
-#~ msgid "Select Character"
-#~ msgstr "Επιλογή χαρακτήρα"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Εισαγάγετε τον επιλεγμένο χαρακτήρα στο κείμενο"
-
-#~ msgid "Series"
-#~ msgstr "Σειρά"
-
-#~ msgid "Insert Values"
-#~ msgstr "Εισαγωγή τιμών"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Εισαγωγή της σειράς κατακόρυφα, το ένα κάτω από το άλλο"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Εισαγωγή της σειράς οριζόντια, από αριστερά προς τα δεξιά"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Γραμμική (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Δημιουργία μιας σειράς από 'αρχή' έως 'τέλος' και για κάθε βήμα πρόσθεση "
-#~ "της τιμής που δίνεται στο βήμα. Αυτό δημιουργεί μια σειρά όπου κάθε τιμή "
-#~ "είναι 'βήμα' μεγαλύτερη από την προηγούμενη τιμή."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Γεωμετρική (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Δημιουργία μιας σειράς από 'αρχή' έως 'τέλος' και για κάθε βήμα "
-#~ "πολλαπλασιασμός με την τιμή που δίνεται στο βήμα. Χρησιμοποιώντας ένα "
-#~ "βήμα 5 δημιουργείται μια σειρά όπως: 5, 25, 125, 625 αφού το 5 "
-#~ "πολλαπλασιασμένο με το 5 (βήμα) ίσον 25, και αυτό πολλαπλασιασμένο με 5 "
-#~ "ίσον 125, το οποίο πολλαπλασιασμένο με το ίδιο βήμα 5 ίσον με 625."
-
-#~ msgid "Start value:"
-#~ msgstr "Αρχική τιμή:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Τελική τιμή:"
-
-#~ msgid "Step value:"
-#~ msgstr "Τιμή βήματος:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Η τελική και αρχική τιμή πρέπει να είναι θετικές."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Η τελική τιμή πρέπει να είναι μεγαλύτερη από την αρχική τιμή ή η τιμή του "
-#~ "βήματος πρέπει να είναι μικρότερη από '1'."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr ""
-#~ "Καμία από τις τιμές Αρχική, Τελική ή Βήμα δεν μπορεί να είναι ίση με "
-#~ "μηδέν."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "Η τιμή βήματος πρέπει να είναι διαφορετική από 1"
-
-#~ msgid "Step is negative."
-#~ msgstr "Το βήμα είναι αρνητικό."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Η τιμή του βήματος πρέπει να είναι μεγαλύτερη του μηδενός. Σε άλλη "
-#~ "περίπτωση η γραμμική σειρά είναι ατέρμονη."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Αν η αρχική τιμή είναι μεγαλύτερη από την τελική τιμή το βήμα πρέπει να "
-#~ "είναι μικρότερο του μηδενός."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Αν το βήμα είναι αρνητικό, η αρχική τιμή πρέπει να είναι μεγαλύτερη της "
-#~ "τελικής τιμής."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "Ει&δικός χαρακτήρας..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr ""
-#~ "Εισαγωγή ενός ή περισσότερων συμβόλων ή γραμμάτων που δε βρίσκονται στο "
-#~ "πληκτρολόγιο"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Η διεύθυνση διαδικτύου είναι κενή"
@@ -26540,11 +27895,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "στιλ%1"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Μερικά σύνολα"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -41176,9 +42526,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 #~ msgid "Document's Locale Settings"
 #~ msgstr "Ρυθμίσεις εντοπιότητας εγγράφου"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "Εισαγωγή αρχείου κειμένου"
-
 #~ msgid "y (array)"
 #~ msgstr "y (πίνακας)"
 
@@ -41254,9 +42601,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 
 #~ msgid "Remove Cell"
 #~ msgstr "Αφαίρεση κελιού"
-
-#~ msgid "Paste"
-#~ msgstr "Επικόλληση"
 
 #~ msgid "Paste & Insert"
 #~ msgstr "Επικόλληση & εισαγωγή"
@@ -41335,9 +42679,6 @@ msgstr "Ο σύνδεσμος %1 ενεργοποιήθηκε"
 
 #~ msgid "Statistical Functions"
 #~ msgstr "Στατιστικές συναρτήσεις"
-
-#~ msgid "Text Functions"
-#~ msgstr "Συναρτήσεις κειμένου"
 
 #~ msgid "Trig Functions"
 #~ msgstr "Συναρτήσεις τριγωνομετρίας"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2004-05-25 15:26+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -133,8 +133,13 @@ msgstr "Reollin"
 msgid "Header1"
 msgstr "Reollin1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Dre ziouer"
@@ -166,7 +171,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Skrid"
@@ -243,7 +249,8 @@ msgstr "<br><b>Rizh :</b>"
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Rannbennadoù"
@@ -862,14 +869,15 @@ msgstr "0 e zistaol CARY(12;0)"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Niverenn"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Furmadiñ"
@@ -925,6 +933,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "99 e zistaol ARABIC(\"XCIX\")"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Stlennvon"
@@ -1202,6 +1212,7 @@ msgstr "Deiziad hag eur"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1268,7 +1279,8 @@ msgstr "59 e zistaol DAYS360(\"2/22/2002\", \"4/21/2002\", FALSE)"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Eur"
@@ -4810,6 +4822,7 @@ msgid "Regular payments"
 msgstr "Troienn reolataet"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Seurt"
@@ -5103,12 +5116,19 @@ msgstr "Diwar zorn"
 msgid "Automatic"
 msgstr "Emgefreek"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Titouroù"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Fazi"
@@ -5899,7 +5919,7 @@ msgstr ""
 msgid "Math"
 msgstr "Jedoniel"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Fonksion"
@@ -6372,6 +6392,7 @@ msgid "Range"
 msgstr "Skeul"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 #| msgid "Croatia"
 msgid "Criteria"
@@ -7934,6 +7955,7 @@ msgid "Row"
 msgstr "&Linenn"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Bann"
@@ -12414,7 +12436,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "&Enlakaat"
@@ -12432,7 +12454,7 @@ msgid "F&ormat"
 msgstr "&Furmadiñ"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Dastum al logoù"
@@ -12514,8 +12536,8 @@ msgstr "Kuzhat ar folenn"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 #| msgid "&Font"
 msgid "Font"
@@ -12947,14 +12969,16 @@ msgstr "Hep muzul"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "A-blaen"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "A-blomm"
@@ -12982,13 +13006,15 @@ msgid "Up"
 msgstr "Uhel"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Dehoù"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Kleiz"
@@ -13000,36 +13026,50 @@ msgstr "Enlakaat bannoù"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Ebet"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, fuzzy, kde-format
 msgid "Sum"
 msgstr "Reizhiad : "
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Mun"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Uhelañ"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Etread"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Niveriñ"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "KontA"
@@ -13408,7 +13448,8 @@ msgstr "Goullonderiñ an diuzadenn"
 msgid "Move selected sheet to the bottom"
 msgstr "Dibabit ar folennoù kuzhet da ziskouez :"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, fuzzy, kde-format
 #| msgid "Paste & Insert"
 msgid "Case Sensitive"
@@ -13617,6 +13658,7 @@ msgid "Anchor"
 msgstr "Andora"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Log"
@@ -13637,7 +13679,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "Folenn a heul"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Next"
@@ -13653,7 +13695,7 @@ msgstr "Fiñval d'ar bann a-heul"
 msgid "Previous Sheet"
 msgstr "Folenn diaraok"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 #| msgid "Previous Sheet"
 msgid "Previous"
@@ -13875,7 +13917,7 @@ msgstr ""
 "Emaoc'h o vont da zilemel ar folenn red.\n"
 "Fellout a ra deoc'h kenderc'hel ?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Roit an anv :"
@@ -13935,14 +13977,14 @@ msgstr "KontA : "
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 #| msgid "Change Text Color"
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Kemmañ liv ar skrid"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 #| msgid "Change Background Color"
 msgctxt "(qtundo-format)"
@@ -13951,11 +13993,3264 @@ msgstr "Kemmañ liv an drekleur"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 #| msgid "Change Border"
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Kemmañ ar bevenn"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Enlakaat bannoù"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Enlakaat linennoù"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Dilemel bannoù"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Dilemel linennoù"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Kuzhat ar bannoù"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Kuzhat al linennoù"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Diskouez ar bannoù"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Diskouez al linennoù"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Diskouez al linennoù kuzhet e-barzh an dibab"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Diskouez ar bannoù kuzhet e-barzh an dibab"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+#| msgid "Resize Column"
+msgid "Equalize Column"
+msgstr "Adventañ ar bann"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+#| msgid "Resize Row"
+msgid "Equalize Row"
+msgstr "Adventañ al linenn"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Lakaat ar vann"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Lakaat al linenn"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+#| msgid "Adjust Column"
+msgid "Adjust Row && Column"
+msgstr "Lakaat ar vann"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Diskouez ar bannoù ..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Diskouez al linennoù ..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Diskouez al vannoù kuzhet"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Diskouez al linennoù kuzhet"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Bann : %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Linenn : %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Adventañ ar bann ..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Adventañ al linenn ..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "Kemmañ ledander ar vann."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Kemmañ ledander ar vann"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Steudañ d'a-gleiz"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "Dilemel an askelenn"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+#| msgid "Change Horizontal Alignment"
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Kemmañ skweraj a-blaen"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Steudañ d'a-zehou"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "Dilemel an askelenn"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Steudañ d'ar c'hreiz"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "Dilemel an askelenn"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Kreizennad"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+#| msgid "Align Left"
+msgid "Align Top"
+msgstr "Steudañ d'a-gleiz"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Dastum al logoù %1"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "A-us"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+#| msgid "Change Vertical Alignment"
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Kemmañ skweraj a-blomm"
+
+#: ui/actions/Align.cpp:149
+#, fuzzy, kde-format
+#| msgid "Bottom"
+msgid "Align Bottom"
+msgstr "Traoñ"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Dastum al logoù %1"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Traoñ"
+
+#: ui/actions/Align.cpp:185
+#, fuzzy, kde-format
+#| msgid "Middle"
+msgid "Align Middle"
+msgstr "Kreiz"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Dastum al logoù %1"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Kreiz"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Kemmañ ar c'hogn ..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr ""
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+#| msgid "Angle:"
+msgid "Angle"
+msgstr "Kogn :"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Kemmañ ar c'hogn"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+#| msgid "File"
+msgid "&Auto-Filter"
+msgstr "Restr"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "File"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Restr"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Format"
+msgid "Auto-Format..."
+msgstr "Furmadiñ"
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Ne m'eus ket gallet kavout ur restr XML '%1' e-giz folenn."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Fazi en ur lenn ar restr XML %1 e-giz folenn."
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Furmadiñ"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Autosum"
+msgstr "Emgefreek"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+#| msgid "Insert a function"
+msgid "Insert the 'sum' function"
+msgstr "Enlakaat ur fonksion"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Automatic"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Emgefreek"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Bevenn a-gleiz"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Bevenn a-zehou"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Bevenn al laez"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Bevenn an traoñ"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "An holl vevennoù"
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Holl"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "All Borders"
+msgid "No Borders"
+msgstr "An holl vevennoù"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Border.cpp:213
+#, fuzzy, kde-format
+#| msgid "Guinea"
+msgid "Border Outline"
+msgstr "Gine"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+#| msgid "Guinea"
+msgid "Outline"
+msgstr "Gine"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Liv ar vevenn"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "Kemmañ liv ar bevenn"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+#| msgid "Change Border"
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Kemmañ ar bevenn"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Enlakaat logoù ..."
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Lemel al logoù ..."
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+#| msgid "Clear &All"
+msgid "Clear All"
+msgstr "Goullonderiñ an &holl re"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Adenvel ar folenn bev."
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+#| msgid "Contents"
+msgid "Clear Contents"
+msgstr "Endalc'had"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Adenvel ar folenn bev."
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+#| msgid "Clear Text"
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Goullonderiñ ar skrid"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+#| msgid "Delete"
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Dilemel"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "Askelenn"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr ""
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+#| msgid "Contents"
+msgid "Clear Comment"
+msgstr "Endalc'had"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "Dilemel an askelenn"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Dilemel an askelenn"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Remove Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Dilemel an askelenn"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Ouzhpennañ un askelenn"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Custom Styles"
+msgid "Conditional Styles..."
+msgstr "Gizioù diouzoc'h"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "Custom Styles"
+msgid "Conditional Styles"
+msgstr "Gizioù diouzoc'h"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+#| msgid "Mongolia"
+msgid "&Consolidate..."
+msgstr "Mongoli"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Mongolia"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Mongoli"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Adenvel ar folenn bev."
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Adenvel ar folenn bev."
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "Eus ar restr &skrid ..."
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Text File"
+msgstr "Eus ar restr &skrid ..."
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "N'hellan ket digeriñ ar restr enkas."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Inserting Text File"
+msgstr "Eus ar restr &skrid ..."
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+#| msgid "From &Text File..."
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Eus ar restr &skrid ..."
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "From &Clipboard..."
+msgid "Insert From &Clipboard..."
+msgstr "Eus ar &golver ..."
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+#| msgid "From &Clipboard..."
+msgid "Clipboard"
+msgstr "Eus ar &golver ..."
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:155
+#, fuzzy, kde-format
+#| msgid "From &Clipboard..."
+msgid "Inserting From Clipboard"
+msgstr "Eus ar &golver ..."
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+#| msgid "From &Clipboard..."
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Eus ar &golver ..."
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+#| msgid "Insert Columns"
+msgid "&Text to Columns..."
+msgstr "Enlakaat bannoù"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:241
+#, fuzzy, kde-format
+#| msgid "Insert Columns"
+msgid "Text to Columns"
+msgstr "Enlakaat bannoù"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgid "Insert Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Enlakaat bannoù"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Rolloù diouzoc'h ..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Edit Area"
+msgid "Add Named Area"
+msgstr "Aozañ ar gorread"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Roit anv ar gorread :"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Kemmañ ar c'hogn"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Kogn :"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "Format"
+msgid "Automatic Format"
+msgstr "Furmadiñ"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "Select hidden sheets to show:"
+msgid "Select the sheet style to apply:"
+msgstr "Dibabit ar folennoù kuzhet da ziskouez :"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Character"
+msgstr "Arouezenn &dibar ..."
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Askelenn al log"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<hini ebet>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, fuzzy, kde-format
+#| msgid "equals"
+msgid "equal to"
+msgstr "par da"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "less than"
+msgid "greater than"
+msgstr "nebeutoc'h evit"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "nebeutoc'h evit"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, fuzzy, kde-format
+#| msgid "less than"
+msgid "equal to or greater than"
+msgstr "nebeutoc'h evit"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "less than"
+msgid "equal to or less than"
+msgstr "nebeutoc'h evit"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "etre"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "SKEW(skeul)"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, fuzzy, kde-format
+#| msgid "Position"
+msgid "First Condition"
+msgstr "Lec'h"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, fuzzy, kde-format
+#| msgid "Position"
+msgid "Second Condition"
+msgstr "Lec'h"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, fuzzy, kde-format
+#| msgid "Position"
+msgid "Third Condition"
+msgstr "Lec'h"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Al log a zo"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Giz al log"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, fuzzy, kde-format
+#| msgid "Mongolia"
+msgid "Consolidate"
+msgstr "Mongoli"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, fuzzy, kde-format
+#| msgid "Standard"
+msgid "Standard Deviation"
+msgstr "Reoliek"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, fuzzy, kde-format
+#| msgid "France"
+msgid "Variance"
+msgstr "Gall"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+#| msgid "You have to select at least one column."
+msgid "You have to define at least one source range."
+msgstr "Red eo deoc'h da zibab ur vann d'an nebeutañ."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+#| msgid "This is not a valid date."
+msgid "%1 is not a valid cell range."
+msgstr "N'eo ket un deiziad mad."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Re bihan\n"
+"eo ar skeul\n"
+"%1"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Re braz\n"
+"eo ar skeul\n"
+"%1"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Siek eo\n"
+"ar skeul\n"
+"%1"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Enlakaat ar roadoù eus ar stlennvon"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Rizh :"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Anv ar stlennvon : "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Ostiz :"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Porzh :\n"
+"(ma zo red)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Anv an arveriad :\n"
+"(ma zo red)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Tremenger :\n"
+"(ma zo red)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Dibab an taolennoù :"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+#| msgid "Values"
+msgid "Tables"
+msgstr "Gwerzhioù"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Dibabit ar bannoù :"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+#| msgid "Tala"
+msgid "Table"
+msgstr "Tala"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Bannoù"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "par da"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "disheñvel diouzh"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "e-barzh"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "evel"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, fuzzy, kde-format
+#| msgid "not equal"
+msgid "greater"
+msgstr "disheñvel diouzh"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, fuzzy, kde-format
+#| msgid "not equal"
+msgid "greater or equal"
+msgstr "disheñvel diouzh"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "not equal"
+msgid "less or equal"
+msgstr "disheñvel diouzh"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Rummet gant"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, fuzzy, kde-format
+#| msgid "Fewer Options"
+msgid "Query Options"
+msgstr "Nebeut dibarzhoù"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, fuzzy, kde-format
+msgid "Insert in region"
+msgstr "Troienn reolataet"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Disoc'h"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+msgid "You cannot specify a table here."
+msgstr "Kuzhat ar folenn bev."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, fuzzy, kde-format
+#| msgid "You have to select at least one column."
+msgid "You have to specify a valid region."
+msgstr "Red eo deoc'h da zibab ur vann d'an nebeutañ."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, fuzzy, kde-format
+#| msgid "You have to select at least one table."
+msgid "You have to specify a valid cell."
+msgstr "Red eo deoc'h da zibab un daolenn d'an nebeutañ."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "Insert Data From Database"
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Enlakaat ar roadoù eus ar stlennvon"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Ar pozh a rank bezañ un niverenn"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Emaon o kevreañ ouzh ar stlennvon ..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, fuzzy, kde-format
+#| msgid "This document has no sheets (tables)."
+msgid "This database contains no tables"
+msgstr "N'eus ket bet folenn ebet gant an teul-se (taolennoù)."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "N'em eus ket kargañ ar sturier"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Red eo deoc'h da zibab un daolenn d'an nebeutañ."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Red eo deoc'h da zibab ur vann d'an nebeutañ."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Erlec'hiañ"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "Locale Settings"
+msgid "Document Settings"
+msgstr "Dibarzhoù an broelañ"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "Mod jeladenn"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Case sensitive"
+msgstr "Pegañ hag ensoc'hañ"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "Spister :"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "Emgefreek"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "Troienn reolataet"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+#| msgid "Locale Settings"
+msgid "&Use System's Locale Settings"
+msgstr "Dibarzhoù an broelañ"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Yezh : %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Furmad dre ziouer a niver : %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Furmad an deiziad hir : %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Furmad an deiziad berr : %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Furmad an eur : %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Formad ar moneiz : %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Dibarzhoù muioc'h"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Klask an holl folenn"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Klask e :"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Gwerzhioù log"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Askelennoù"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Keñver klask :"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "Diskouez al linennoù kuzhet."
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Nebeut dibarzhoù"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "Fonksion"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, fuzzy, kde-format
+#| msgid "Insert a function"
+msgid "Insert function"
+msgstr "Enlakaat ur fonksion"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, fuzzy, kde-format
+#| msgid "&Help"
+msgid "Help"
+msgstr "&Skoazell"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, fuzzy, kde-format
+#| msgid "This document has no sheets (tables)."
+msgid "This function has no parameters."
+msgstr "N'eus ket bet folenn ebet gant an teul-se (taolennoù)."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Deskrivadur ebet."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr ""
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Mont d'al log"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Roit al log :"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Enlakaat"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Fiñval war-du a-zehou"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, fuzzy, kde-format
+#| msgid "Move towards left"
+msgid "Move towards bottom"
+msgstr "Fiñval war-du a-gleiz"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Enlakaat linennoù"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Enlakaat bannoù"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Enlakaat logoù"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Lemel"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Fiñval war-du a-gleiz"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, fuzzy, kde-format
+#| msgid "Move towards left"
+msgid "Move towards top"
+msgstr "Fiñval war-du a-gleiz"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Dilemel al linennoù"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Dilemel ar bannoù"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Lemel al logoù"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Enlakaat ul liamm"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Kenrouedad"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Internet Address"
+msgstr "Chomlec'h kenrouedad :"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Skrid da ziskouez :"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Chomlec'h kenrouedad :"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "Postel :"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Email Address"
+msgstr "Chomlec'h kenrouedad :"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+#| msgid "Mail address is empty"
+msgid "Email address:"
+msgstr "Goullo eo ar chomlec'h elektronek"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+#| msgid "Cut Object"
+msgid "Subject:"
+msgstr "Troc'hañ an dra"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Restr"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to File"
+msgstr "Ment al log"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Lec'hiadur ar restr :"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Restr nevez :"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "N'eus bouetadur ebet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to Cell"
+msgstr "Ment al log"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+#| msgid "Remove Area"
+msgid "Cell or Named Area:"
+msgstr "Lemel ar gorread"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Rolloù diouzoc'h"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Save Changes"
+msgstr "Kemmañ ar gwerzh"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Listenn :"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Bouetadur :"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "&Add"
+msgid "Add"
+msgstr "&Ouzhpennañ"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgid "Cancel"
+msgstr "&Nullañ"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, fuzzy, kde-format
+#| msgid "&New"
+msgid "New"
+msgstr "&Nevez"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, fuzzy, kde-format
+#| msgid "&Modify"
+msgid "Modify"
+msgstr "&Kemmañ"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, fuzzy, kde-format
+#| msgid "Co&py"
+msgid "Copy"
+msgstr "&Eilañ"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "C'hoant ho peus da zilemel ar roll-se ?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Dilemel al listenn"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, fuzzy, kde-format
+#| msgid ""
+#| "You are about to remove the active sheet.\n"
+#| "Do you want to continue?"
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Emaoc'h o vont da zilemel ar folenn red.\n"
+"Fellout a ra deoc'h kenderc'hel ?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+#| msgid "Remove Area"
+msgid "Named Areas"
+msgstr "Lemel ar gorread"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Gorread : %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Logoù :"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Folenn :"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Anv ar gorread :"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Lemel"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+#| msgid "Do you really want to remove this list?"
+msgid "Do you really want to remove this named area?"
+msgstr "C'hoant ho peus da zilemel ar roll-se ?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+#| msgid "Remove Area"
+msgid "Remove Named Area"
+msgstr "Lemel ar gorread"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, kde-format
+msgid "The provided region is not valid."
+msgstr ""
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Paste Inserting Cells"
+msgstr "Enlakaat logoù"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Source"
+msgstr "Arouezenn &dibar ..."
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "File"
+msgid "Add Filter"
+msgstr "Restr"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "Ober"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Adventañ al linenn"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Uhelder :"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Adventañ ar bann"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Ledander :"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, fuzzy, kde-format
+msgid "Series"
+msgstr "Enlakaat ar gwerzhioù"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Series"
+msgstr "Enlakaat ar gwerzhioù"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Enlakaat ar gwerzhioù"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, fuzzy, kde-format
+#| msgid "Any value"
+msgid "Start value:"
+msgstr "Ur werzh bennak"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "T(value)"
+msgid "Stop value:"
+msgstr "T(gwerzh)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, fuzzy, kde-format
+#| msgid "New value:"
+msgid "Step value:"
+msgstr "Gwerzh nevez :"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+#| msgid "Alpha parameter"
+msgid "End and start value must be positive."
+msgstr "Rannbennad alfa"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Dibabit al linennoù kuzhet da ziskouez :"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Dibabit ar bannoù kuzhet da ziskouez :"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Bann %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Linenn %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+#| msgid "First number"
+msgid "&First column contains row headers"
+msgstr "Niverenn kentañ"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+#| msgid "Show c&olumn header"
+msgid "&First row contains column headers"
+msgstr "Diskouez reollin ar v&ann"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Rummañ"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Case Insensitive"
+msgstr "Pegañ hag ensoc'hañ"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Special Paste"
+msgstr "Arouezenn &dibar ..."
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr "Pegañ"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Merour ar gizioù"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Giz"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "An holl c'hizioù"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Gizioù diouzoc'h"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, fuzzy, kde-format
+#| msgid "Vertical"
+msgid "Hierarchical"
+msgstr "A-blomm"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Nevez ..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "K&emmañ ..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Dilemel ..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "giz%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Lemel an holl re"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Bann '%1' "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, fuzzy, kde-format
+#| msgid "You have to select at least one column."
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Red eo deoc'h da zibab ur vann d'an nebeutañ."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Validity"
+msgstr "Lemel ul liamm."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Goullonderiñ an &holl re"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Aotreañ :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, fuzzy, kde-format
+#| msgid "Internet"
+msgid "Integer"
+msgstr "Kenrouedad"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Hirder ar skrid"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Listenn"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Roadoù :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Izelañ :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Uhelañ :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Deiziad :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Deiziad izelañ :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Deiziad uhelañ :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Eur :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, fuzzy, kde-format
+#| msgid "Date minimum:"
+msgid "Time minimum:"
+msgstr "Deiziad izelañ :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, fuzzy, kde-format
+#| msgid "Date maximum:"
+msgid "Time maximum:"
+msgstr "Deiziad uhelañ :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Niver :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Bouetaduroù :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "Error"
+msgid "Error Alert"
+msgstr "Fazi"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Diskouez ar c'hemennad fazi pa vez roet gwerzhioù fall"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Gwezhiad :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Paouez"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Diwallit"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Titl :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Kemennad :"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, fuzzy, kde-format
+#| msgid "This is not a valid date."
+msgid "This is not a valid value."
+msgstr "N'eo ket un deiziad mad."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, fuzzy, kde-format
+#| msgid "This is not a valid date."
+msgid "This is not a valid time."
+msgstr "N'eo ket un deiziad mad."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "N'eo ket un deiziad mad."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+#| msgid "Locale Settings"
+msgid "Document Settings..."
+msgstr "Dibarzhoù an broelañ"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+msgid "Show document settings dialog"
+msgstr "Dis&kouez barenn ar formulennoù"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Kemmañ ledander ar vann."
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Kemmañ al log"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "&Cell Protection"
+msgid "Permute fixation"
+msgstr "Gwarez al &log"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Adenvel ar folenn bev."
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Izel"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "A-&gleiz"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Dehoù"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Diuzadenn ar formulenn"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+#| msgid "Replacement"
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Erlec'hiañ"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Dibabit un nodrezh ..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+#| msgid "Change Font"
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Kemmañ an nodrezh"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Dibabit ment an nodrezh"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+#| msgid "Select Font Size"
+msgid "Font Size"
+msgstr "Dibabit ment an nodrezh"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+#| msgid "Set the background color"
+msgid "Set the text color"
+msgstr "Lakaat liv drekleur"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Liv ar skrid"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Fonksion ..."
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "Insert math expression"
+msgstr "Troienn reolataet"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Diuzadenn ar formulenn"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Enlakaat ur fonksion"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Ar re all ..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Mont d'al log ..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr ""
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+#| msgid "Goto Cell"
+msgid "Goto"
+msgstr "Mont d'al log"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid date."
+msgid "That is not a valid cell."
+msgstr "N'eo ket un deiziad mad."
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Decrease Indent"
+msgstr "Izelaat ment an nodrezh"
+
+#: ui/actions/Indent.cpp:26
+#, fuzzy, kde-format
+msgid "Increase Indent"
+msgstr "Kreskiñ ment an nodrezh"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "Izelaat ment an nodrezh"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "Kreskiñ ment an nodrezh"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Kreskiñ ment an nodrezh"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Izelaat ment an nodrezh"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "Eus ar &stlennvon ..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Enlakaat ar roadoù eus ar stlennvon"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+#| msgid "Others..."
+msgid "&Series..."
+msgstr "Ar re all ..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "Enlakaat ar gwerzhioù"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Enlakaat ar gwerzhioù"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "Arouezenn &dibar ..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Liamm ..."
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+#| msgid "Insert a new sheet"
+msgid "Insert an Internet hyperlink"
+msgstr "Enlakaat ur folenn nevez"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+#| msgid "Set Link"
+msgid "Link"
+msgstr "Lakaat ul liamm"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Lemel ul liamm"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Lemel al liamm"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Lemel al liamm"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Set Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Lakaat ul liamm"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Roll dibab ..."
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Dastum al logoù %1"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Dastum al logoù %1"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Dastum al logoù %1"
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Dastum al logoù %1"
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr ""
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Anv ar gorread ..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+#| msgid "Display a named area"
+msgid "Replace Named Area"
+msgstr "Diskouez ur gorread anvet"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+#| msgid "Display a named area"
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Diskouez ur gorread anvet"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Display a named area"
+msgid "Edit or select named areas"
+msgstr "Diskouez ur gorread anvet"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Show Area..."
+msgid "Named Areas..."
+msgstr "Diskouez ar gorread ..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Row"
+msgstr "Dilemel bannoù"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+#| msgid "Header"
+msgid "Row Break"
+msgstr "Reollin"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Column"
+msgstr "Dilemel bannoù"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+msgid "Column Break"
+msgstr "Niverenn bellgomz"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Adenvel ar folenn bev."
+
+#: ui/actions/Paste.cpp:94
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Special Paste..."
+msgstr "Arouezenn &dibar ..."
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Adenvel ar folenn bev."
+
+#: ui/actions/Paste.cpp:153
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Paste with Insertion"
+msgstr "Pegañ hag ensoc'hañ"
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "&Pivot Tables..."
+msgstr ""
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "Create Pivot Tables"
+msgstr ""
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Red eo deoc'h da zibab meur a log."
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Enlakaat ur folenn nevez."
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet..."
+msgid "Show QTableView..."
+msgstr "Diskouez ar folenn ..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Rummañ ..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+#| msgid "Sorting"
+msgid "Sort &Increasing"
+msgstr "Emaon o rummañ"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:143
+#, fuzzy, kde-format
+#| msgid "Sorting"
+msgid "Sort &Decreasing"
+msgstr "Emaon o rummañ"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Rummañ gant"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr ""
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Fiñval d'ar bann a-heul"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Gwiriekaat ar skritur"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Furmad al log ..."
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "Lakaat furmad ar folenn labour."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Druz"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Italek"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Islinañ"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+#| msgid "Vertical Text"
+msgid "Wrap Text"
+msgstr "Skrid a-blomm"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+#| msgid "Vertical Text"
+msgid "Wrap"
+msgstr "Skrid a-blomm"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Skrid a-blomm"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Print cell contents vertically"
+msgstr "Dastum al logoù %1"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Skrid a-blomm"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Skrid a-blomm"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Furmad an niverenn"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Niverenn kentañ"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Scientific Format"
+msgstr "Skiantel"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Skiantel"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Skiantel"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Furmad an dregantad"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Dregantad"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Format Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Furmad an dregantad"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Furmad ar moneiz"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Moneiz"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format Money"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Furmad ar moneiz"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Furmad an deiziad"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Furmadiñ"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Furmad an eur"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Furmadiñ"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Kreskiñ ment an nodrezh"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Izelaat ment an nodrezh"
+
+#: ui/actions/Style.cpp:530
+#, fuzzy, kde-format
+msgid "Increase Precision"
+msgstr "Kreskiñ ment an nodrezh"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:549
+#, fuzzy, kde-format
+msgid "Decrease Precision"
+msgstr "Izelaat ment an nodrezh"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Kreskiñ ment an nodrezh"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Izelaat ment an nodrezh"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "Lakaat furmad ar folenn labour."
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Giz ar folenn"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Liv an drekleur"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Lakaat liv drekleur"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Krouiñ ar c'hiz eus al log ..."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "Style of Cell"
+msgid "Style From Cell"
+msgstr "Giz al log"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Krouiñ ar c'hiz eus al log"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "N'hell ket bezañ goullo anv ar c'hiz."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Bez' ez eus ur c'hiz a vez graet an anv-mañ dioutañ endeo."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+#| msgid "Style Manager"
+msgid "Style Manager..."
+msgstr "Merour ar gizioù"
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Diskennit ar folenn dibabet."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:118
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+#| msgid "Upper Case"
+msgid "Upper"
+msgstr "Lizherennoù vras"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+#| msgid "Power"
+msgid "Lower"
+msgstr "Gremm"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+#| msgid "First Sheet"
+msgid "First Letter Upper"
+msgstr "Folenn kentañ"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+#| msgid "First Sheet"
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Folenn kentañ"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+#| msgid "First Sheet"
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Folenn kentañ"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+#| msgid "First Sheet"
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Folenn kentañ"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Lizherennoù vras"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Lizherennoù vihan"
+
+#: ui/actions/TextCase.cpp:99
+#, fuzzy, kde-format
+#| msgid "First Sheet"
+msgid "Convert First Letter to Upper Case"
+msgstr "Folenn kentañ"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+#| msgid "First Sheet"
+msgid "Convert all letters to upper case"
+msgstr "Folenn kentañ"
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+#| msgid "First Sheet"
+msgid "Convert all letters to lower case"
+msgstr "Folenn kentañ"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Kemmañ ar gwerzh"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr ""
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+msgid "Validity..."
+msgstr "Lemel ul liamm."
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Adenvel ar folenn bev."
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "Lemel ul liamm."
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Lemel ul liamm."
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Lemel ul liamm."
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14215,13 +17510,6 @@ msgstr "Enlakaat logoù"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Lemel al logoù"
-
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-#| msgid "Delete"
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Dilemel"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -14486,12 +17774,6 @@ msgstr ""
 msgid "Roman"
 msgstr "Roman"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Italek"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14509,12 +17791,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Boas"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Druz"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14527,12 +17803,6 @@ msgstr "Liv :"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Islinañ"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14673,11 +17943,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Dregantad"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14690,11 +17955,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Moneiz"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14705,11 +17965,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Skiantel"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14916,11 +18171,6 @@ msgstr ""
 msgid "Dolor Ipse"
 msgstr "Gortoz pell, gortoz gwell"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Giz"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 #| msgid "Name:"
@@ -14933,11 +18183,6 @@ msgstr "Anv :"
 #| msgid "Sheet Style"
 msgid "Inherit style:"
 msgstr "Giz ar folenn"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Bez' ez eus ur c'hiz a vez graet an anv-mañ dioutañ endeo."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -14984,12 +18229,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Reoliek"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Kreizennad"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15021,24 +18260,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "A-us"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Kreiz"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Traoñ"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15204,21 +18425,10 @@ msgstr "Ebrel"
 msgid "Apply changes"
 msgstr "Arloañ ar c'hizioù"
 
-#: ui/ExternalEditor.cpp:60
-#, fuzzy, kde-format
-#| msgid "&Cancel"
-msgid "Cancel"
-msgstr "&Nullañ"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Holl"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -15295,321 +18505,10 @@ msgstr ""
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[ee]::mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Fonksion ..."
-
-#, fuzzy
-#~ msgid "Insert math expression"
-#~ msgstr "Troienn reolataet"
-
-#~ msgid "From &Database..."
-#~ msgstr "Eus ar &stlennvon ..."
-
-#, fuzzy
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Enlakaat ar roadoù eus ar stlennvon"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Diuzadenn ar formulenn"
-
-#~ msgid "Insert a function"
-#~ msgstr "Enlakaat ur fonksion"
-
-#~ msgid "Others..."
-#~ msgstr "Ar re all ..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Kemmañ al log"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Kemmañ ledander ar vann."
-
-#, fuzzy
-#~| msgid "Show Sheet..."
-#~ msgid "Show QTableView..."
-#~ msgstr "Diskouez ar folenn ..."
-
 #, fuzzy
 #~| msgid "&Cell Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "Gwarez al &log"
-
-#, fuzzy
-#~| msgid "&Cell Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "Gwarez al &log"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Adenvel ar folenn bev."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Enlakaat ar roadoù eus ar stlennvon"
-
-#~ msgid "Type:"
-#~ msgstr "Rizh :"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Anv an arveriad :\n"
-#~ "(ma zo red)"
-
-#~ msgid "Host:"
-#~ msgstr "Ostiz :"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Porzh :\n"
-#~ "(ma zo red)"
-
-#~ msgid "Database name: "
-#~ msgstr "Anv ar stlennvon : "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Tremenger :\n"
-#~ "(ma zo red)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Dibab an taolennoù :"
-
-#, fuzzy
-#~| msgid "Values"
-#~ msgid "Tables"
-#~ msgstr "Gwerzhioù"
-
-#~ msgid "Select columns:"
-#~ msgstr "Dibabit ar bannoù :"
-
-#, fuzzy
-#~| msgid "Tala"
-#~ msgid "Table"
-#~ msgstr "Tala"
-
-#~ msgid "Columns"
-#~ msgstr "Bannoù"
-
-#~ msgid "equals"
-#~ msgstr "par da"
-
-#~ msgid "not equal"
-#~ msgstr "disheñvel diouzh"
-
-#~ msgid "in"
-#~ msgstr "e-barzh"
-
-#~ msgid "like"
-#~ msgstr "evel"
-
-#, fuzzy
-#~| msgid "not equal"
-#~ msgid "greater or equal"
-#~ msgstr "disheñvel diouzh"
-
-#, fuzzy
-#~| msgid "not equal"
-#~ msgid "less or equal"
-#~ msgstr "disheñvel diouzh"
-
-#~ msgid "Sorted by"
-#~ msgstr "Rummet gant"
-
-#, fuzzy
-#~| msgid "Fewer Options"
-#~ msgid "Query Options"
-#~ msgstr "Nebeut dibarzhoù"
-
-#, fuzzy
-#~ msgid "Insert in region"
-#~ msgstr "Troienn reolataet"
-
-#~ msgid "Result"
-#~ msgstr "Disoc'h"
-
-#, fuzzy
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Kuzhat ar folenn bev."
-
-#, fuzzy
-#~| msgid "You have to select at least one column."
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Red eo deoc'h da zibab ur vann d'an nebeutañ."
-
-#, fuzzy
-#~| msgid "You have to select at least one table."
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Red eo deoc'h da zibab un daolenn d'an nebeutañ."
-
-#, fuzzy
-#~| msgid "Insert Data From Database"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Enlakaat ar roadoù eus ar stlennvon"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Ar pozh a rank bezañ un niverenn"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Emaon o kevreañ ouzh ar stlennvon ..."
-
-#, fuzzy
-#~| msgid "This document has no sheets (tables)."
-#~ msgid "This database contains no tables"
-#~ msgstr "N'eus ket bet folenn ebet gant an teul-se (taolennoù)."
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "N'em eus ket kargañ ar sturier"
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Red eo deoc'h da zibab un daolenn d'an nebeutañ."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Red eo deoc'h da zibab ur vann d'an nebeutañ."
-
-#, fuzzy
-#~| msgid "Insert a function"
-#~ msgid "Insert function"
-#~ msgstr "Enlakaat ur fonksion"
-
-#, fuzzy
-#~| msgid "&Help"
-#~ msgid "Help"
-#~ msgstr "&Skoazell"
-
-#, fuzzy
-#~| msgid "This document has no sheets (tables)."
-#~ msgid "This function has no parameters."
-#~ msgstr "N'eus ket bet folenn ebet gant an teul-se (taolennoù)."
-
-#~ msgid "Description is not available."
-#~ msgstr "Deskrivadur ebet."
-
-#, fuzzy
-#~| msgid "Locale Settings"
-#~ msgid "Document Settings..."
-#~ msgstr "Dibarzhoù an broelañ"
-
-#, fuzzy
-#~ msgid "Show document settings dialog"
-#~ msgstr "Dis&kouez barenn ar formulennoù"
-
-#, fuzzy
-#~| msgid "Locale Settings"
-#~ msgid "Document Settings"
-#~ msgstr "Dibarzhoù an broelañ"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "Mod jeladenn"
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Case sensitive"
-#~ msgstr "Pegañ hag ensoc'hañ"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "Spister :"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "Emgefreek"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "Troienn reolataet"
-
-#, fuzzy
-#~| msgid "Locale Settings"
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "Dibarzhoù an broelañ"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Yezh : %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Furmad dre ziouer a niver : %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Furmad an deiziad hir : %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Furmad an deiziad berr : %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Furmad an eur : %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Formad ar moneiz : %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Rolloù diouzoc'h ..."
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#~ msgid "Custom Lists"
-#~ msgstr "Rolloù diouzoc'h"
-
-#~ msgid "List:"
-#~ msgstr "Listenn :"
-
-#~ msgid "Entry:"
-#~ msgstr "Bouetadur :"
-
-#, fuzzy
-#~| msgid "&Add"
-#~ msgid "Add"
-#~ msgstr "&Ouzhpennañ"
-
-#, fuzzy
-#~| msgid "&New"
-#~ msgid "New"
-#~ msgstr "&Nevez"
-
-#~ msgid "Remove"
-#~ msgstr "Lemel"
-
-#, fuzzy
-#~| msgid "&Modify"
-#~ msgid "Modify"
-#~ msgstr "&Kemmañ"
-
-#, fuzzy
-#~| msgid "Co&py"
-#~ msgid "Copy"
-#~ msgstr "&Eilañ"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "C'hoant ho peus da zilemel ar roll-se ?"
-
-#~ msgid "Remove List"
-#~ msgstr "Dilemel al listenn"
-
-#, fuzzy
-#~| msgid ""
-#~| "You are about to remove the active sheet.\n"
-#~| "Do you want to continue?"
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Emaoc'h o vont da zilemel ar folenn red.\n"
-#~ "Fellout a ra deoc'h kenderc'hel ?"
 
 #~ msgid "Starting..."
 #~ msgstr "Emaon o loc'hañ ..."
@@ -15634,98 +18533,6 @@ msgstr ""
 
 #~ msgid "Current value:"
 #~ msgstr "Gwerzh red :"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Erlec'hiañ"
-
-#~ msgid "Selection List..."
-#~ msgstr "Roll dibab ..."
-
-#~ msgid "More Options"
-#~ msgstr "Dibarzhoù muioc'h"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Klask an holl folenn"
-
-#~ msgid "Search in:"
-#~ msgstr "Klask e :"
-
-#~ msgid "Cell Values"
-#~ msgstr "Gwerzhioù log"
-
-#~ msgid "Comments"
-#~ msgstr "Askelennoù"
-
-#~ msgid "Search direction:"
-#~ msgstr "Keñver klask :"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "Diskouez al linennoù kuzhet."
-
-#~ msgid "Fewer Options"
-#~ msgstr "Nebeut dibarzhoù"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Furmad al log ..."
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "Lakaat furmad ar folenn labour."
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Adenvel ar folenn bev."
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Adenvel ar folenn bev."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Adenvel ar folenn bev."
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Special Paste..."
-#~ msgstr "Arouezenn &dibar ..."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Adenvel ar folenn bev."
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Paste with Insertion"
-#~ msgstr "Pegañ hag ensoc'hañ"
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Enlakaat logoù"
-
-#~ msgid "Insert"
-#~ msgstr "Enlakaat"
-
-#~ msgid "Move towards right"
-#~ msgstr "Fiñval war-du a-zehou"
-
-#, fuzzy
-#~| msgid "Move towards left"
-#~ msgid "Move towards bottom"
-#~ msgstr "Fiñval war-du a-gleiz"
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Special Paste"
-#~ msgstr "Arouezenn &dibar ..."
 
 #~ msgid "Content"
 #~ msgstr "Endalc'had"
@@ -15757,30 +18564,8 @@ msgstr ""
 #~ msgid "Division"
 #~ msgstr "Ment"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Gwiriekaat ar skritur"
-
-#, fuzzy
-#~| msgid "Format"
-#~ msgid "Auto-Format..."
-#~ msgstr "Furmadiñ"
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Lakaat furmad ar folenn labour"
-
-#, fuzzy
-#~| msgid "Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Furmadiñ"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Giz ar folenn"
-
-#, fuzzy
-#~| msgid "Select hidden sheets to show:"
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Dibabit ar folennoù kuzhet da ziskouez :"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Ne m'eus ket gallet kavout ar skeudenn %1."
@@ -15788,99 +18573,8 @@ msgstr ""
 #~ msgid "Could not load image %1."
 #~ msgstr "Ne m'eus ket gallet kargañ ar skeudenn %1."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Ne m'eus ket gallet kavout ur restr XML '%1' e-giz folenn."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Fazi en ur lenn ar restr XML %1 e-giz folenn."
-
-#, fuzzy
-#~| msgid "File"
-#~ msgid "&Auto-Filter"
-#~ msgstr "Restr"
-
-#, fuzzy
-#~| msgid "File"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Restr"
-
-#, fuzzy
-#~| msgid "Clear &All"
-#~ msgid "Clear All"
-#~ msgstr "Goullonderiñ an &holl re"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Adenvel ar folenn bev."
-
 #~ msgid "Contents"
 #~ msgstr "Endalc'had"
-
-#, fuzzy
-#~| msgid "Contents"
-#~ msgid "Clear Contents"
-#~ msgstr "Endalc'had"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Adenvel ar folenn bev."
-
-#, fuzzy
-#~| msgid "Clear Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Goullonderiñ ar skrid"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Lakaat furmad ar folenn labour."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Lakaat furmad ar folenn labour."
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "Kemmañ liv ar bevenn"
-
-#~ msgid "Border Color"
-#~ msgstr "Liv ar vevenn"
-
-#~ msgid "Set the background color"
-#~ msgstr "Lakaat liv drekleur"
-
-#~ msgid "Background Color"
-#~ msgstr "Liv an drekleur"
-
-#, fuzzy
-#~| msgid "Custom Styles"
-#~ msgid "Conditional Styles..."
-#~ msgstr "Gizioù diouzoc'h"
-
-#, fuzzy
-#~| msgid "Custom Styles"
-#~ msgid "Conditional Styles"
-#~ msgstr "Gizioù diouzoc'h"
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Lakaat furmad ar folenn labour."
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Lakaat furmad ar folenn labour."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Red eo deoc'h da zibab meur a log."
-
-#, fuzzy
-#~| msgid "Number Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Furmad an niverenn"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -15891,83 +18585,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Furmad an dregantad"
-
-#, fuzzy
-#~| msgid "Time Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Furmad an eur"
-
-#, fuzzy
-#~| msgid "Date Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Furmad an deiziad"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Skiantel"
-
-#, fuzzy
-#~| msgid "Change Border"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Kemmañ ar bevenn"
-
-#~ msgid "<none>"
-#~ msgstr "<hini ebet>"
-
-#, fuzzy
-#~| msgid "equals"
-#~ msgid "equal to"
-#~ msgstr "par da"
-
-#~ msgid "less than"
-#~ msgstr "nebeutoc'h evit"
-
-#, fuzzy
-#~| msgid "less than"
-#~ msgid "equal to or greater than"
-#~ msgstr "nebeutoc'h evit"
-
-#, fuzzy
-#~| msgid "less than"
-#~ msgid "equal to or less than"
-#~ msgstr "nebeutoc'h evit"
-
-#~ msgid "between"
-#~ msgstr "etre"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "SKEW(skeul)"
-
-#, fuzzy
-#~| msgid "Position"
-#~ msgid "First Condition"
-#~ msgstr "Lec'h"
-
-#, fuzzy
-#~| msgid "Position"
-#~ msgid "Second Condition"
-#~ msgstr "Lec'h"
-
-#, fuzzy
-#~| msgid "Position"
-#~ msgid "Third Condition"
-#~ msgstr "Lec'h"
-
-#~ msgid "Cell is"
-#~ msgstr "Al log a zo"
-
-#~ msgid "Cell style"
-#~ msgstr "Giz al log"
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Source"
-#~ msgstr "Arouezenn &dibar ..."
 
 #, fuzzy
 #~| msgid "Sheet Selection"
@@ -15993,11 +18610,6 @@ msgstr ""
 #~| msgid "Bs"
 #~ msgid "Field"
 #~ msgstr "Bs"
-
-#, fuzzy
-#~| msgid "File"
-#~ msgid "Add Filter"
-#~ msgstr "Restr"
 
 #, fuzzy
 #~| msgid "TextLabel"
@@ -16050,11 +18662,6 @@ msgstr ""
 #~ msgstr "Linenn"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "Ober"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "Gwerzh"
@@ -16076,190 +18683,20 @@ msgstr ""
 #~ msgid "Sort By"
 #~ msgstr "Rummañ gant"
 
-#~ msgid "Select Font..."
-#~ msgstr "Dibabit un nodrezh ..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Dibabit ment an nodrezh"
-
-#, fuzzy
-#~| msgid "Select Font Size"
-#~ msgid "Font Size"
-#~ msgstr "Dibabit ment an nodrezh"
-
-#~ msgid "Text Color"
-#~ msgstr "Liv ar skrid"
-
-#, fuzzy
-#~| msgid "Set the background color"
-#~ msgid "Set the text color"
-#~ msgstr "Lakaat liv drekleur"
-
-#, fuzzy
-#~| msgid "Change Font"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Kemmañ an nodrezh"
-
-#, fuzzy
-#~| msgid "Style Manager"
-#~ msgid "Style Manager..."
-#~ msgstr "Merour ar gizioù"
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Krouiñ ar c'hiz eus al log ..."
-
-#, fuzzy
-#~| msgid "Style of Cell"
-#~ msgid "Style From Cell"
-#~ msgstr "Giz al log"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Krouiñ ar c'hiz eus al log"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "N'hell ket bezañ goullo anv ar c'hiz."
-
-#~ msgid "Style Manager"
-#~ msgstr "Merour ar gizioù"
-
-#~ msgid "All Styles"
-#~ msgstr "An holl c'hizioù"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Gizioù diouzoc'h"
-
-#, fuzzy
-#~| msgid "Vertical"
-#~ msgid "Hierarchical"
-#~ msgstr "A-blomm"
-
-#~ msgid "&New..."
-#~ msgstr "&Nevez ..."
-
-#~ msgid "&Modify..."
-#~ msgstr "K&emmañ ..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Dilemel ..."
-
-#~ msgid "style%1"
-#~ msgstr "giz%1"
-
 #, fuzzy
 #~| msgid "Cells:"
 #~ msgid "Cells..."
 #~ msgstr "Logoù :"
-
-#~ msgid "Insert Cells..."
-#~ msgstr "Enlakaat logoù ..."
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Lemel al logoù ..."
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Enlakaat ur folenn nevez."
 
 #, fuzzy
 #~| msgid "Insert Cells..."
 #~ msgid "Delete Cells..."
 #~ msgstr "Enlakaat logoù ..."
 
-#~ msgid "Insert rows"
-#~ msgstr "Enlakaat linennoù"
-
-#~ msgid "Insert columns"
-#~ msgstr "Enlakaat bannoù"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Enlakaat logoù"
-
-#~ msgid "Move towards left"
-#~ msgstr "Fiñval war-du a-gleiz"
-
-#, fuzzy
-#~| msgid "Move towards left"
-#~ msgid "Move towards top"
-#~ msgstr "Fiñval war-du a-gleiz"
-
-#~ msgid "Remove rows"
-#~ msgstr "Dilemel al linennoù"
-
-#~ msgid "Remove columns"
-#~ msgstr "Dilemel ar bannoù"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Lemel al logoù"
-
-#~ msgid "Remove All"
-#~ msgstr "Lemel an holl re"
-
-#, fuzzy
-#~| msgid "You have to select at least one column."
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Red eo deoc'h da zibab ur vann d'an nebeutañ."
-
-#~ msgid "Column '%1' "
-#~ msgstr "Bann '%1' "
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
 #, fuzzy
 #~| msgid "Insert a function"
 #~ msgid "Use function:"
 #~ msgstr "Enlakaat ur fonksion"
-
-#~ msgid "Goto Cell..."
-#~ msgstr "Mont d'al log ..."
-
-#, fuzzy
-#~| msgid "Goto Cell"
-#~ msgid "Goto"
-#~ msgstr "Mont d'al log"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Column"
-#~ msgstr "Dilemel bannoù"
-
-#, fuzzy
-#~ msgid "Column Break"
-#~ msgstr "Niverenn bellgomz"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Row"
-#~ msgstr "Dilemel bannoù"
-
-#, fuzzy
-#~| msgid "Header"
-#~ msgid "Row Break"
-#~ msgstr "Reollin"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Mont d'al log"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Roit al log :"
-
-#, fuzzy
-#~| msgid "Mongolia"
-#~ msgid "&Consolidate..."
-#~ msgstr "Mongoli"
 
 #, fuzzy
 #~| msgid "&Description in row"
@@ -16277,64 +18714,6 @@ msgstr ""
 #~ msgstr "Kroati"
 
 #, fuzzy
-#~| msgid "Mongolia"
-#~ msgid "Consolidate"
-#~ msgstr "Mongoli"
-
-#, fuzzy
-#~| msgid "Standard"
-#~ msgid "Standard Deviation"
-#~ msgstr "Reoliek"
-
-#, fuzzy
-#~| msgid "France"
-#~ msgid "Variance"
-#~ msgstr "Gall"
-
-#, fuzzy
-#~| msgid "You have to select at least one column."
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Red eo deoc'h da zibab ur vann d'an nebeutañ."
-
-#, fuzzy
-#~| msgid "This is not a valid date."
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "N'eo ket un deiziad mad."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Re bihan\n"
-#~ "eo ar skeul\n"
-#~ "%1"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Re braz\n"
-#~ "eo ar skeul\n"
-#~ "%1"
-
-#, fuzzy
-#~| msgid "Mongolia"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Mongoli"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Siek eo\n"
-#~ "ar skeul\n"
-#~ "%1"
-
-#, fuzzy
 #~| msgid "&Function:"
 #~ msgid "Function:"
 #~ msgstr "&Fonksion :"
@@ -16349,98 +18728,13 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "Roit anv ar gorread :"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Kemmañ ar c'hogn ..."
-
-#, fuzzy
-#~| msgid "Angle:"
-#~ msgid "Angle"
-#~ msgstr "Kogn :"
-
-#, fuzzy
-#~ msgid "Increase Precision"
-#~ msgstr "Kreskiñ ment an nodrezh"
-
-#, fuzzy
-#~ msgid "Decrease Precision"
-#~ msgstr "Izelaat ment an nodrezh"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Kreskiñ ment an nodrezh"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Izelaat ment an nodrezh"
-
-#~ msgid "Change Angle"
-#~ msgstr "Kemmañ ar c'hogn"
-
-#~ msgid "Angle:"
-#~ msgstr "Kogn :"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Kemmañ ar c'hogn"
-
-#~ msgid "Area Name..."
-#~ msgstr "Anv ar gorread ..."
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#, fuzzy
-#~| msgid "Show Area..."
-#~ msgid "Named Areas..."
-#~ msgstr "Diskouez ar gorread ..."
-
-#, fuzzy
-#~| msgid "Remove Area"
-#~ msgid "Named Areas"
-#~ msgstr "Lemel ar gorread"
-
-#, fuzzy
-#~| msgid "Display a named area"
-#~ msgid "Edit or select named areas"
-#~ msgstr "Diskouez ur gorread anvet"
-
-#, fuzzy
-#~| msgid "Edit Area"
-#~ msgid "Add Named Area"
-#~ msgstr "Aozañ ar gorread"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Roit anv ar gorread :"
-
-#, fuzzy
-#~| msgid "Display a named area"
-#~ msgid "Replace Named Area"
-#~ msgstr "Diskouez ur gorread anvet"
-
-#, fuzzy
-#~| msgid "Display a named area"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Diskouez ur gorread anvet"
-
 #, fuzzy
 #~| msgid "&Sheet"
 #~ msgid "&Select"
 #~ msgstr "&Folenn"
 
-#~ msgid "Area: %1"
-#~ msgstr "Gorread : %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Aozañ ..."
-
-#~ msgid "&Remove"
-#~ msgstr "&Lemel"
 
 #, fuzzy
 #~| msgid "Remove Area"
@@ -16451,143 +18745,6 @@ msgstr ""
 #~| msgid "Edit Area"
 #~ msgid "Edit Named Area"
 #~ msgstr "Aozañ ar gorread"
-
-#, fuzzy
-#~| msgid "Do you really want to remove this list?"
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "C'hoant ho peus da zilemel ar roll-se ?"
-
-#, fuzzy
-#~| msgid "Remove Area"
-#~ msgid "Remove Named Area"
-#~ msgstr "Lemel ar gorread"
-
-#~ msgid "Cells:"
-#~ msgstr "Logoù :"
-
-#~ msgid "Sheet:"
-#~ msgstr "Folenn :"
-
-#~ msgid "Area name:"
-#~ msgstr "Anv ar gorread :"
-
-#~ msgid "Align Left"
-#~ msgstr "Steudañ d'a-gleiz"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Dilemel an askelenn"
-
-#~ msgid "Align Center"
-#~ msgstr "Steudañ d'ar c'hreiz"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "Dilemel an askelenn"
-
-#~ msgid "Align Right"
-#~ msgstr "Steudañ d'a-zehou"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Dilemel an askelenn"
-
-#, fuzzy
-#~| msgid "Align Left"
-#~ msgid "Align Top"
-#~ msgstr "Steudañ d'a-gleiz"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Dastum al logoù %1"
-
-#, fuzzy
-#~| msgid "Middle"
-#~ msgid "Align Middle"
-#~ msgstr "Kreiz"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Dastum al logoù %1"
-
-#, fuzzy
-#~| msgid "Bottom"
-#~ msgid "Align Bottom"
-#~ msgstr "Traoñ"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Dastum al logoù %1"
-
-#~ msgid "Border Left"
-#~ msgstr "Bevenn a-gleiz"
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#~ msgid "Border Right"
-#~ msgstr "Bevenn a-zehou"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#~ msgid "Border Top"
-#~ msgstr "Bevenn al laez"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#~ msgid "Border Bottom"
-#~ msgstr "Bevenn an traoñ"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#~ msgid "All Borders"
-#~ msgstr "An holl vevennoù"
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#, fuzzy
-#~| msgid "All Borders"
-#~ msgid "No Borders"
-#~ msgstr "An holl vevennoù"
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#, fuzzy
-#~| msgid "Guinea"
-#~ msgid "Border Outline"
-#~ msgstr "Gine"
-
-#, fuzzy
-#~| msgid "Guinea"
-#~ msgid "Outline"
-#~ msgstr "Gine"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#, fuzzy
-#~| msgid "Change Horizontal Alignment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Kemmañ skweraj a-blaen"
-
-#, fuzzy
-#~| msgid "Change Vertical Alignment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Kemmañ skweraj a-blomm"
 
 #~ msgid "Australia"
 #~ msgstr "Australi"
@@ -18402,71 +20559,6 @@ msgstr ""
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Dollar eus Zimbabwe"
 
-#, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "Lakaat furmad ar folenn labour."
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Kreskiñ ment an nodrezh"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Izelaat ment an nodrezh"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgid "Wrap Text"
-#~ msgstr "Skrid a-blomm"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgid "Wrap"
-#~ msgstr "Skrid a-blomm"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Skrid a-blomm"
-
-#, fuzzy
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Dastum al logoù %1"
-
-#~ msgid "Percent Format"
-#~ msgstr "Furmad an dregantad"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Lakaat furmad ar folenn labour."
-
-#~ msgid "Money Format"
-#~ msgstr "Furmad ar moneiz"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Lakaat furmad ar folenn labour."
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Skrid a-blomm"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Skrid a-blomm"
-
-#, fuzzy
-#~| msgid "Format Percent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Furmad an dregantad"
-
-#, fuzzy
-#~| msgid "Format Money"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Furmad ar moneiz"
-
 #~ msgid "&Data Format"
 #~ msgstr "Furmad ar &roadoù"
 
@@ -18502,9 +20594,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "Uhelder dre ziouer (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Uhelder :"
-
 #, fuzzy
 #~ msgid "Set the height of the cell."
 #~ msgstr "Kemmañ ledander ar vann."
@@ -18512,502 +20601,25 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "Ledander dre ziouer (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Ledander :"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Ouzhpennañ un askelenn"
-
-#, fuzzy
-#~ msgid "Increase Indent"
-#~ msgstr "Kreskiñ ment an nodrezh"
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "Kreskiñ ment an nodrezh"
-
-#, fuzzy
-#~ msgid "Decrease Indent"
-#~ msgstr "Izelaat ment an nodrezh"
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "Izelaat ment an nodrezh"
-
-#~ msgid "Upper Case"
-#~ msgstr "Lizherennoù vras"
-
-#, fuzzy
-#~| msgid "Upper Case"
-#~ msgid "Upper"
-#~ msgstr "Lizherennoù vras"
-
-#, fuzzy
-#~| msgid "First Sheet"
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Folenn kentañ"
-
-#~ msgid "Lower Case"
-#~ msgstr "Lizherennoù vihan"
-
-#, fuzzy
-#~| msgid "Power"
-#~ msgid "Lower"
-#~ msgstr "Gremm"
-
-#, fuzzy
-#~| msgid "First Sheet"
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Folenn kentañ"
-
-#, fuzzy
-#~| msgid "First Sheet"
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Folenn kentañ"
-
-#, fuzzy
-#~| msgid "First Sheet"
-#~ msgid "First Letter Upper"
-#~ msgstr "Folenn kentañ"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Comment..."
-#~ msgstr "Askelenn"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Dilemel an askelenn"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Dilemel an askelenn"
-
-#, fuzzy
-#~| msgid "First Sheet"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Folenn kentañ"
-
-#, fuzzy
-#~| msgid "First Sheet"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Folenn kentañ"
-
-#, fuzzy
-#~| msgid "Remove Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Dilemel an askelenn"
-
-#, fuzzy
-#~| msgid "Contents"
-#~ msgid "Clear Comment"
-#~ msgstr "Endalc'had"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Kemmañ ar gwerzh"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Kreskiñ ment an nodrezh"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Izelaat ment an nodrezh"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Askelenn al log"
-
-#~ msgid "&Left"
-#~ msgstr "A-&gleiz"
-
-#~ msgid "&Right"
-#~ msgstr "&Dehoù"
-
 #~ msgid "&Up"
 #~ msgstr "&Huel"
-
-#~ msgid "&Down"
-#~ msgstr "&Izel"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Autosum"
-#~ msgstr "Emgefreek"
-
-#, fuzzy
-#~| msgid "Insert a function"
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Enlakaat ur fonksion"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Diuzadenn ar formulenn"
-
-#~ msgid "From &Text File..."
-#~ msgstr "Eus ar restr &skrid ..."
-
-#, fuzzy
-#~| msgid "From &Text File..."
-#~ msgid "Text File"
-#~ msgstr "Eus ar restr &skrid ..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "Enlakaat ur folenn nevez."
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "Eus ar &golver ..."
 
-#, fuzzy
-#~| msgid "From &Clipboard..."
-#~ msgid "Clipboard"
-#~ msgstr "Eus ar &golver ..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#, fuzzy
-#~| msgid "Insert Columns"
-#~ msgid "&Text to Columns..."
-#~ msgstr "Enlakaat bannoù"
-
-#, fuzzy
-#~| msgid "From &Clipboard..."
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Eus ar &golver ..."
-
-#, fuzzy
-#~| msgid "Insert Columns"
-#~ msgid "Text to Columns"
-#~ msgstr "Enlakaat bannoù"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "N'hellan ket digeriñ ar restr enkas."
-
-#, fuzzy
-#~| msgid "From &Clipboard..."
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Eus ar &golver ..."
-
-#, fuzzy
-#~| msgid "From &Text File..."
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Eus ar restr &skrid ..."
-
-#, fuzzy
-#~| msgid "Insert Columns"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Enlakaat bannoù"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#, fuzzy
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Dastum al logoù %1"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Dastum al logoù %1"
-
-#, fuzzy
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Dastum al logoù %1"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Dastum al logoù %1"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#~ msgid "Resize Column..."
-#~ msgstr "Adventañ ar bann ..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Kemmañ ledander ar vann"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Enlakaat bannoù"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#~ msgid "Remove Columns"
-#~ msgstr "Dilemel bannoù"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#~ msgid "Hide Columns"
-#~ msgstr "Kuzhat ar bannoù"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Diskouez ar bannoù ..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Diskouez al vannoù kuzhet"
-
-#, fuzzy
-#~| msgid "Resize Column"
-#~ msgid "Equalize Column"
-#~ msgstr "Adventañ ar bann"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#~ msgid "Show Columns"
-#~ msgstr "Diskouez ar bannoù"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Diskouez ar bannoù kuzhet e-barzh an dibab"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Adventañ al linenn ..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "Kemmañ ledander ar vann."
-
-#~ msgid "Insert Rows"
-#~ msgstr "Enlakaat linennoù"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#~ msgid "Remove Rows"
-#~ msgstr "Dilemel linennoù"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#~ msgid "Hide Rows"
-#~ msgstr "Kuzhat al linennoù"
-
-#~ msgid "Show Rows..."
-#~ msgstr "Diskouez al linennoù ..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Diskouez al linennoù kuzhet"
-
-#, fuzzy
-#~| msgid "Resize Row"
-#~ msgid "Equalize Row"
-#~ msgstr "Adventañ al linenn"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Enlakaat ur folenn nevez."
-
-#~ msgid "Show Rows"
-#~ msgstr "Diskouez al linennoù"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Diskouez al linennoù kuzhet e-barzh an dibab"
-
-#, fuzzy
-#~| msgid "Adjust Column"
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Lakaat ar vann"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Lakaat ar vann"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Lemel ar bannoù"
 
-#~ msgid "Adjust Row"
-#~ msgstr "Lakaat al linenn"
-
 #~ msgid "Delete Rows"
 #~ msgstr "Lemel linennoù"
-
-#~ msgid "Resize Row"
-#~ msgstr "Adventañ al linenn"
-
-#~ msgid "Resize Column"
-#~ msgstr "Adventañ ar bann"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Dibabit ar bannoù kuzhet da ziskouez :"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Dibabit al linennoù kuzhet da ziskouez :"
-
-#~ msgid "Column: %1"
-#~ msgstr "Bann : %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Linenn : %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Liamm ..."
-
-#, fuzzy
-#~| msgid "Insert a new sheet"
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Enlakaat ur folenn nevez"
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgid "Link"
-#~ msgstr "Lakaat ul liamm"
-
-#~ msgid "Remove Link"
-#~ msgstr "Lemel al liamm"
-
-#~ msgid "Remove a link"
-#~ msgstr "Lemel ul liamm"
-
-#~ msgid "Insert Link"
-#~ msgstr "Enlakaat ul liamm"
 
 #~ msgid "Edit Link"
 #~ msgstr "Aozañ al liamm"
 
 #, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Lemel al liamm"
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Lakaat ul liamm"
-
-#~ msgid "Internet"
-#~ msgstr "Kenrouedad"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Internet Address"
-#~ msgstr "Chomlec'h kenrouedad :"
-
-#~ msgid "Text to display:"
-#~ msgstr "Skrid da ziskouez :"
-
-#~ msgid "Internet address:"
-#~ msgstr "Chomlec'h kenrouedad :"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "Postel :"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Email Address"
-#~ msgstr "Chomlec'h kenrouedad :"
-
-#, fuzzy
-#~| msgid "Mail address is empty"
-#~ msgid "Email address:"
-#~ msgstr "Goullo eo ar chomlec'h elektronek"
-
-#, fuzzy
-#~| msgid "Cut Object"
-#~ msgid "Subject:"
-#~ msgstr "Troc'hañ an dra"
-
-#~ msgid "File"
-#~ msgstr "Restr"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to File"
-#~ msgstr "Ment al log"
-
-#~ msgid "File location:"
-#~ msgstr "Lec'hiadur ar restr :"
-
-#~ msgid "Recent file:"
-#~ msgstr "Restr nevez :"
-
-#~ msgid "No Entries"
-#~ msgstr "N'eus bouetadur ebet"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to Cell"
-#~ msgstr "Ment al log"
-
-#, fuzzy
-#~| msgid "Remove Area"
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Lemel ar gorread"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Rummañ ..."
-
-#, fuzzy
-#~| msgid "Sorting"
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Emaon o rummañ"
-
-#, fuzzy
-#~| msgid "Sorting"
-#~ msgid "Sort &Increasing"
-#~ msgstr "Emaon o rummañ"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Rummañ gant"
-
-#, fuzzy
 #~| msgid "Custom Lists"
 #~ msgid "Use custom list"
 #~ msgstr "Rolloù diouzoc'h"
-
-#~ msgid "Column %1"
-#~ msgstr "Bann %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Linenn %1"
-
-#, fuzzy
-#~| msgid "First number"
-#~ msgid "&First column contains row headers"
-#~ msgstr "Niverenn kentañ"
-
-#, fuzzy
-#~| msgid "Show c&olumn header"
-#~ msgid "&First row contains column headers"
-#~ msgstr "Diskouez reollin ar v&ann"
-
-#~ msgid "Sort"
-#~ msgstr "Rummañ"
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Case Insensitive"
-#~ msgstr "Pegañ hag ensoc'hañ"
 
 #, fuzzy
 #~| msgid "Down"
@@ -19045,176 +20657,9 @@ msgstr ""
 #~ msgstr "Spister :"
 
 #, fuzzy
-#~ msgid "Validity..."
-#~ msgstr "Lemel ul liamm."
-
-#, fuzzy
-#~ msgid "Validity"
-#~ msgstr "Lemel ul liamm."
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "Lemel ul liamm."
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Adenvel ar folenn bev."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Lemel ul liamm."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Lemel ul liamm."
-
-#~ msgid "Clear &All"
-#~ msgstr "Goullonderiñ an &holl re"
-
-#, fuzzy
 #~| msgid "Croatia"
 #~ msgid "&Criteria"
 #~ msgstr "Kroati"
-
-#~ msgid "Allow:"
-#~ msgstr "Aotreañ :"
-
-#, fuzzy
-#~| msgid "Internet"
-#~ msgid "Integer"
-#~ msgstr "Kenrouedad"
-
-#~ msgid "Text Length"
-#~ msgstr "Hirder ar skrid"
-
-#~ msgid "List"
-#~ msgstr "Listenn"
-
-#~ msgid "Data:"
-#~ msgstr "Roadoù :"
-
-#~ msgid "Minimum:"
-#~ msgstr "Izelañ :"
-
-#~ msgid "Maximum:"
-#~ msgstr "Uhelañ :"
-
-#~ msgid "Date:"
-#~ msgstr "Deiziad :"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Deiziad izelañ :"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Deiziad uhelañ :"
-
-#~ msgid "Time:"
-#~ msgstr "Eur :"
-
-#, fuzzy
-#~| msgid "Date minimum:"
-#~ msgid "Time minimum:"
-#~ msgstr "Deiziad izelañ :"
-
-#, fuzzy
-#~| msgid "Date maximum:"
-#~ msgid "Time maximum:"
-#~ msgstr "Deiziad uhelañ :"
-
-#~ msgid "Number:"
-#~ msgstr "Niver :"
-
-#~ msgid "Entries:"
-#~ msgstr "Bouetaduroù :"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Diskouez ar c'hemennad fazi pa vez roet gwerzhioù fall"
-
-#~ msgid "Action:"
-#~ msgstr "Gwezhiad :"
-
-#~ msgid "Stop"
-#~ msgstr "Paouez"
-
-#~ msgid "Warning"
-#~ msgstr "Diwallit"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Titl :"
-
-#~ msgid "Message:"
-#~ msgstr "Kemennad :"
-
-#, fuzzy
-#~| msgid "This is not a valid date."
-#~ msgid "This is not a valid value."
-#~ msgstr "N'eo ket un deiziad mad."
-
-#, fuzzy
-#~| msgid "This is not a valid date."
-#~ msgid "This is not a valid time."
-#~ msgstr "N'eo ket un deiziad mad."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "N'eo ket un deiziad mad."
-
-#, fuzzy
-#~| msgid "Others..."
-#~ msgid "&Series..."
-#~ msgstr "Ar re all ..."
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "Enlakaat ar gwerzhioù"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Enlakaat ar gwerzhioù"
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Character"
-#~ msgstr "Arouezenn &dibar ..."
-
-#, fuzzy
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Diskennit ar folenn dibabet."
-
-#, fuzzy
-#~ msgid "Series"
-#~ msgstr "Enlakaat ar gwerzhioù"
-
-#~ msgid "Insert Values"
-#~ msgstr "Enlakaat ar gwerzhioù"
-
-#, fuzzy
-#~| msgid "Any value"
-#~ msgid "Start value:"
-#~ msgstr "Ur werzh bennak"
-
-#, fuzzy
-#~| msgid "T(value)"
-#~ msgid "Stop value:"
-#~ msgstr "T(gwerzh)"
-
-#, fuzzy
-#~| msgid "New value:"
-#~ msgid "Step value:"
-#~ msgstr "Gwerzh nevez :"
-
-#, fuzzy
-#~| msgid "Alpha parameter"
-#~ msgid "End and start value must be positive."
-#~ msgstr "Rannbennad alfa"
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "Arouezenn &dibar ..."
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Goullo eo ar chomlec'h kenrouedad"
@@ -34758,11 +36203,6 @@ msgstr ""
 #~ msgstr "Dibarzhoù an broelañ"
 
 #, fuzzy
-#~| msgid "From &Text File..."
-#~ msgid "Inserting Text File"
-#~ msgstr "Eus ar restr &skrid ..."
-
-#, fuzzy
 #~| msgid "Database"
 #~ msgid "y (array)"
 #~ msgstr "Stlennvon"
@@ -34831,9 +36271,6 @@ msgstr ""
 
 #~ msgid "Remove Cell"
 #~ msgstr "Dilemel al log"
-
-#~ msgid "Paste"
-#~ msgstr "Pegañ"
 
 #~ msgid "Style of Cell"
 #~ msgstr "Giz al log"
@@ -34915,11 +36352,6 @@ msgstr ""
 #, fuzzy
 #~| msgid "Function"
 #~ msgid "Statistical Functions"
-#~ msgstr "Fonksion"
-
-#, fuzzy
-#~| msgid "Function"
-#~ msgid "Text Functions"
 #~ msgstr "Fonksion"
 
 #, fuzzy

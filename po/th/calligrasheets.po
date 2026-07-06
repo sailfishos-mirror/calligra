@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2008-04-17 22:27+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -140,8 +140,13 @@ msgstr "มากกว่า"
 msgid "Header1"
 msgstr "มากกว่า"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, fuzzy, kde-format
 msgid "Default"
 msgstr "ผลลัพธ์"
@@ -174,7 +179,8 @@ msgstr "Ls"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "ข้อความ"
@@ -246,7 +252,8 @@ msgstr "ชนิดที่ส่งกลับ: "
 msgid "Syntax"
 msgstr "ไวยากรณ์"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "รูปแบบตัวแปร"
@@ -877,14 +884,15 @@ msgstr "CARY(12;0) จะได้ค่า 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "ตัวเลข"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "รูปแบบ"
@@ -941,6 +949,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") จะได้ค่า 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "ฐานข้อมูล"
@@ -1214,6 +1224,7 @@ msgstr "วันที่และเวลา"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1279,7 +1290,8 @@ msgstr "DAYS(\"2002-02-22\"; \"2002-02-26\") จะได้ค่า 4"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "เวลา"
@@ -4725,6 +4737,7 @@ msgid "Regular payments"
 msgstr "ฟังก์ชัน..."
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "ชนิด"
@@ -5009,12 +5022,19 @@ msgstr "ทำเอง"
 msgid "Automatic"
 msgstr "อัตโนมัติ"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, fuzzy, kde-format
 msgid "Information"
 msgstr "ชนิดของข้อมูล"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr ""
@@ -5817,7 +5837,7 @@ msgstr ""
 msgid "Math"
 msgstr "คณิตศาสตร์"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "ฟังก์ชัน"
@@ -6294,6 +6314,7 @@ msgid "Range"
 msgstr "เปลี่ยนข้อความ"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 #| msgid "Sort Criteria"
 msgid "Criteria"
@@ -7813,6 +7834,7 @@ msgid "Row"
 msgstr "แ&ถว"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "สดมภ์"
@@ -12242,7 +12264,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "แทรก"
@@ -12260,7 +12282,7 @@ msgid "F&ormat"
 msgstr "รู&ปแบบ"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "ผสานเซลล์"
@@ -12341,8 +12363,8 @@ msgstr "ซ่อนแผ่นงาน"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "แบบอักษร"
@@ -12766,14 +12788,16 @@ msgstr "ตัวแบ่ง"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "ข้อความทางแนวนอน"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "ข้อความทางแนวตั้ง"
@@ -12802,13 +12826,15 @@ msgid "Up"
 msgstr "เลื่อนขึ้น"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "ชิดด้านขวา"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "ชิดด้านซ้าย"
@@ -12820,36 +12846,50 @@ msgstr "แสดงสดมภ์"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "ไม่ใช้"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "ผลรวม"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "ค่าน้อยที่สุด"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "ค่ามากที่สุด"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "ค่าเฉลี่ย"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "นับจำนวน"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, fuzzy, kde-format
 msgid "CountA"
 msgstr "นับจำนวน"
@@ -13226,7 +13266,8 @@ msgstr "ล้างส่วนที่เลือก"
 msgid "Move selected sheet to the bottom"
 msgstr "ย้ายวัตถุเซลล์ไปยังคลิปบอร์ด"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, fuzzy, kde-format
 #| msgid "Paste & Insert"
 msgid "Case Sensitive"
@@ -13434,6 +13475,7 @@ msgid "Anchor"
 msgstr "แอนโดรา"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "เซลล์"
@@ -13454,7 +13496,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "แผ่นงานถัดไป"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "ถัดไป"
@@ -13469,7 +13511,7 @@ msgstr "ย้ายไปยังแผ่นงานถัดไป"
 msgid "Previous Sheet"
 msgstr "แผ่นงานก่อนหน้านี้"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "ก่อนหน้านี้"
@@ -13677,7 +13719,7 @@ msgstr ""
 "คุณกำลังจะทำการลบแผ่นงานที่กำลังทำงานอยู่\n"
 "คุณต้องการจะทำต่อไปจริงหรือไม่ ?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "ป้อนชื่อ:"
@@ -13737,14 +13779,14 @@ msgstr "นับจำนวน: %1"
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 #| msgid "Change Text Color"
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "เปลี่ยนข้อความ"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 #| msgid "Change Background Color"
 msgctxt "(qtundo-format)"
@@ -13753,11 +13795,3189 @@ msgstr "เปลี่ยนสีพื้นหลัง"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 #| msgid "Change Border"
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "เปลี่ยนเส้นขอบ"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "แทรกสดมภ์"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "แทรกแถว"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "ลบสดมภ์"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "ลบแถว"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "แทรกแถวใหม่ไปยังแผ่นงาน"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "ลบแถวออกจากแผ่นงาน"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "แทรกสดมภ์ใหม่ไปยังแผ่นงาน"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "ลบเซลล์ปัจจุบันออกจากแผ่นงาน"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "ซ่อนสดมภ์"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "ซ่อนแถว"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "แสดงสดมภ์"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "แสดงแถว"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "แสดงแถวที่ถูกซ่อนไว้ในช่วงที่เลือกไว้"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "แสดงสดมภ์ที่ถูกซ่อนไว้ในช่วงที่เลือกไว้"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "ปรับขนาดสดมภ์ให้เท่ากัน"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "ปรับขนาดแถวให้เท่ากัน"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "ปรับขนาดแถวที่เลือกไว้ให้มีขนาดเท่ากัน"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "ปรับขนาดสดมภ์ที่เลือกไว้ให้มีขนาดเท่ากัน"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "ปรับขนาดสดมภ์ให้พอดี"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "ปรับขนาดแถวให้พอดี"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+msgid "Adjust Row && Column"
+msgstr "ปรับค่าแถวและสดมภ์ให้พอดี"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, fuzzy, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "ปรับค่าแถวและสดมภ์ให้พอดีกับเนื้อหา"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr "ปรับค่าแถวและสดมภ์ให้พอดีกับเนื้อหา"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr "ปรับค่าแถวและสดมภ์ให้พอดีกับเนื้อหา"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "แสดงสดมภ์..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "แสดงแถว..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "แสดงสดมภ์ที่ถูกซ่อนไว้"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "แสดงแถวที่ถูกซ่อนไว้"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "สดมภ์: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "แถว: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "ปรับขนาดสดมภ์..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "ปรับขนาดแถว..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "ปรับความสูงของแถว"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "ปรับความกว้างของสดมภ์"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "เรียงชิดด้านซ้าย"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "จัดเรียงเนื้อหาเซลล์ชิดด้านซ้ายของเซลล์"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+#| msgid "Change Horizontal Alignment"
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "เปลี่ยนการจัดวางทางแนวนอน"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "เรียงชิดด้านขวา"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "จัดเรียงเนื้อหาเซลล์ชิดด้านขวาของเซลล์"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "เรียงกึ่งกลาง"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "จัดเรียงเนื้อหาเซลล์ให้อยู่กึ่งกลางเซลล์"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "จัดกึ่งกลาง"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "เรียงชิดด้านบน"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "จัดเรียงเนื้อหาเซลล์ชิดด้านบนของเซลล์"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "ชิดด้านบน"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+#| msgid "Change Vertical Alignment"
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "เปลี่ยนการจัดวางทางแนวตั้ง"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "เรียงชิดด้านล่าง"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "จัดเรียงเนื้อหาเซลล์ชิดด้านล่างของเซลล์"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "ชิดด้านล่าง"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "เรียงตรงกลาง"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "จัดเรียงเนื้อหาเซลล์ให้อยู่ตำแหน่งกึ่งกลางเซลล์"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "จัดกึ่งกลาง"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "เปลี่ยนค่ามุม..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "เปลี่ยนมุมที่จะให้เนื้อหาเซลล์ถูกพิมพ์เอียงไป"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "มุม"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "เปลี่ยนมุม"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "ตัวกรองอัตโนมัติ"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "เพิ่มตัวกรองอัตโนมัติไปยังช่วงของเซลล์"
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Auto-Filter"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "ตัวกรองอัตโนมัติ"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "ตั้งค่าเส้นขอบด้านบนให้พื้นที่ที่เลือก"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "รูปแบบอัตโนมัติ..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, fuzzy, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "ไม่สามารถค้นพบแฟ้มรูปแบบตาราง XML '%1'"
+
+#: ui/actions/AutoFormat.cpp:91
+#, fuzzy, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "การแจงคำในแฟ้มรูปแบบตาราง XML %1 ผิดพลาด"
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+#| msgid "Auto-Format"
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "รูปแบบอัตโนมัติ."
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "ผลรวมอัตโนมัติ"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "แทรกฟังก์ชัน 'ผลรวม'"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "ผลรวมอัตโนมัติ"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "เส้นขอบด้านซ้าย"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "ตั้งค่าขอบด้านซ้ายให้พื้นที่ที่เลือก"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "เส้นขอบด้านขวา"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "ตั้งค่าเส้นขอบด้านขวาให้พื้นที่ที่เลือก"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "เส้นขอบด้านบน"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "ตั้งค่าเส้นขอบด้านบนให้พื้นที่ที่เลือก"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "เส้นขอบด้านล่าง"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "ตั้งค่าเส้นขอบด้านล่างให้พื้นที่ที่เลือก"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "เส้นขอบทั้งหมด"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "ตั้งค่าให้ทุกเซลล์ในพื้นที่ที่เลือกมีเส้นขอบล้อมรอบ"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "ทั้งหมด"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "ไม่มีเส้นขอบ"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "ลบเส้นขอบทั้งหมดออกจากพื้นที่ที่เลือก"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "เส้นขอบรอบนอก"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "ตั้งค่าให้มีเส้นขอบรอบนอกพื้นที่ที่เลือก"
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+#| msgid "Border Outline"
+msgid "Outline"
+msgstr "เส้นขอบรอบนอก"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "สีของเส้นขอบ"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "เลือกสีเส้นขอบใหม่"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+#| msgid "Change Border Color"
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "เปลี่ยนสีของเส้นขอบ"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "แทรกเซลล์..."
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "แทรกเซลล์เปล่าเข้าไปยังแผ่นงาน"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "ลบเซลล์..."
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "ลบเซลล์ปัจจุบันออกจากแผ่นงาน"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+#| msgid "Clear &All"
+msgid "Clear All"
+msgstr "ล้างทั้ง&หมด"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "ลบเนื้อหาและรูปแบบทั้งหมดออกจากเซลล์ปัจจุบัน"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Clear Contents"
+msgstr "หมายเหตุ"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "ลบเนื้อหาออกจากเซลล์ปัจจุบัน"
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+#| msgid "Clear Text"
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "ล้างข้อความ"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+#| msgid "Delete"
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "ลบ"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "หมายเหตุ..."
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+msgid "Edit a comment for this cell"
+msgstr "แก้ไขหมายเหตุของเซลล์นี้"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Clear Comment"
+msgstr "หมายเหตุ"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "ลบหมายเหตุของเซลล์นี้"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "ลบหมายเหตุ"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Remove Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "ลบหมายเหตุ"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "เพิ่มหมายเหตุ"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Conditional Cell Attributes..."
+msgid "Conditional Styles..."
+msgstr "รูปแบบเงื่อนไขของเซลล์..."
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "ตั้งค่ารูปแบบของเซลล์ตามเงื่อนไขที่ต้องการ"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "รูปแบบเงื่อนไขเซลล์"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "ลบรูปแบบเงื่อนไขเซลล์"
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "ลบรูปแบบเงื่อนไขเซลล์"
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+#| msgid "Remove Conditional Formatting"
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "ลบรูปแบบเงื่อนไขเซลล์"
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+#| msgid "Add Conditional Formatting"
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "เพิ่มรูปแบบเงื่อนไขเซลล์"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "ผ&สานเซลล์.."
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "สร้างขอบเขตของการรวมค่าข้อมูลจากกลุ่มของขอบเขตที่คล้ายกัน"
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Consolidate"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "ผสาน"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "คัดลอกวัตถุเซลล์ไปยังคลิปบอร์ด"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "ย้ายวัตถุเซลล์ไปยังคลิปบอร์ด"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "จากแฟ้ม&ข้อความ..."
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "แทรกข้อมูลจากแฟ้มข้อความ ไปยังตำแหน่งเคอร์เซอร์/ตำแหน่งที่เลือกในปัจจุบัน"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "แฟ้มข้อความ"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "ไม่สามารถเปิดแฟ้มเพื่อนำเข้าได้"
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "กำลังแทรกแฟ้มข้อความ"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+#| msgid "Inserting Text File"
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "กำลังแทรกแฟ้มข้อความ"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "กำลังแทรกข้อมูลจากคลิปบอร์ด"
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "แทรกข้อมูล csv จากคลิปบอร์ด ไปยังตำแหน่งเคอร์เซอร์/ตำแหน่งที่เลือกในปัจจุบัน"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "คลิปบอร์ด"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "ไม่มีข้อมูลอยู่ในคลิปบอร์ด"
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "ไม่มีข้อมูลที่สามารถใช้ได้ภายในคลิปบอร์ด"
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "กำลังแทรกข้อมูลจากคลิปบอร์ด"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+#| msgid "Inserting From Clipboard"
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "กำลังแทรกข้อมูลจากคลิปบอร์ด"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&ข้อความไปยังสดมภ์..."
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "ขยายเนื้อหาของเซลล์เป็นหลาย ๆ สดมภ์"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "ข้อความไปยังสดมภ์"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgid "Text to Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "ข้อความไปยังสดมภ์"
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "สร้างรายการกำหนดเองสำหรับการเรียงลำดับหรือเติมเต็มอัตโนมัติ"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "รายการกำหนดเอง..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "เพิ่มพื้นที่ที่กำหนดชื่อ"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "ป้อนชื่อของพื้นที่:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "เปลี่ยนมุม"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "มุม:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "รูปแบบอัตโนมัติ."
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "เลือกแถวที่ซ่อนอยู่เพื่อแสดง"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Character"
+msgstr "อัก&ขระพิเศษ..."
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "The text that will replace characters in old text"
+msgid "Insert the selected character in the text"
+msgstr "ข้อความจะแทนที่ตัวอักษรในข้อความเดิม"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "หมายเหตุของเซลล์"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<ไม่มี>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "เท่ากับ"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "มากกว่า"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "น้อยกว่า"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "มากกว่าหรือเท่ากับ"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "น้อยกว่าหรือเท่ากับ"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "ระหว่าง"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "อยู่นอกช่วง"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "แตกต่างจาก"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "เงื่อนไขแรก"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "เงื่อนไขที่สอง"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "เงื่อนไขที่สาม"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "เซลล์"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "รูปแบบเซลล์"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "แตกต่างจาก"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, fuzzy, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "หากค่าเริ่มต้นมากกว่าค่าสิ้นสุดแล้ว ค่าแต่ละขั้นจะต้องมีค่าน้อยกว่าศูนย์ !"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, fuzzy, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr "หากค่าเริ่มต้นมากกว่าค่าสิ้นสุดแล้ว ค่าแต่ละขั้นจะต้องมีค่าน้อยกว่าศูนย์ !"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "ผสาน"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "โปรดักต์"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "ค่าเบี่ยงเบนมาตรฐาน"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "ตัวแปร"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+msgid "You have to define at least one source range."
+msgstr "คุณจะต้องเลือกอย่างน้อยหนึ่งสดมภ์ !"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "นี่เป็นค่าวันที่ที่ไม่ถูกต้อง !"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"ช่วง\n"
+"%1\n"
+"มีค่าน้อยเกินไป"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"ช่วง\n"
+"%1\n"
+"มีค่ามากเกินไป"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, fuzzy, kde-format
+#| msgid "The source tables intersect with the destination table"
+msgid "The source range intersects the destination range."
+msgstr "ตารางต้นทางอินเตอร์เซกต์ตารางปลายทาง"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"รูปแบบช่วง\n"
+"%1\n"
+"ไม่ถูกต้อง"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "แทรกข้อมูลจากฐานข้อมูล"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "ชนิด: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "ชื่อฐานข้อมูล: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "โฮสต์:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"พอร์ต:\n"
+"(หากจำเป็นต้องใช้)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"ชื่อผู้ใช้:\n"
+"(หากจำเป็นต้องใช้)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"รหัสผ่าน:\n"
+"(หากจำเป็นต้องใช้)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "เลือกตาราง:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+msgid "Tables"
+msgstr "&ค่า"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "เลือกสดมภ์:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Table"
+msgstr "ตาราง"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "สดมภ์"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "ที่เข้าคู่กับต่อไปนี้ทั้งหมด (และ)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "ที่เข้าคู่กับต่อไปนี้ทั้งหมด (หรือ)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "เท่ากับ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "ไม่เท่ากับ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "อยู่ใน"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "ไม่อยู่ใน"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "คล้ายกับ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "มากกว่า"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "น้อยกว่า"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "มากกว่าหรือเท่ากับ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "น้อยกว่าหรือเท่ากับ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "เรียงลำดับแบบ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "จากน้อยไปมาก"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "จากมากไปน้อย"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, fuzzy, kde-format
+msgid "Distinct"
+msgstr "หารค่า"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, fuzzy, kde-format
+msgid "Query Options"
+msgstr "ตัวเลือกการขอข้อมูล"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "ร้องขอแบบ SQL:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "แทรกในขอบเขต"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "เริ่มในสดมภ์"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "ผลลัพธ์"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, fuzzy, kde-format
+msgid "You cannot specify a table here."
+msgstr "คุณไม่สามารถกำหนดตารางตรงนี้ได้ !"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, fuzzy, kde-format
+msgid "You have to specify a valid region."
+msgstr "คุณได้กำหนดขอบเขตที่ถูกต้อง !"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, fuzzy, kde-format
+msgid "You have to specify a valid cell."
+msgstr "คุณได้กำหนดเซลล์ที่ถูกต้อง !"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, fuzzy, kde-format
+msgid "Executing query failed."
+msgstr "การประมวลผลการขอข้อมูลล้มเหลว !"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "Insert Data From Database"
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "แทรกข้อมูลจากฐานข้อมูล"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "พอร์ตจะต้องเป็นตัวเลข"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "กำลังเชื่อมต่อไปยังฐานข้อมูล..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "เชื่อมต่อแล้ว กำลังรับค่าข้อมูลเกี่ยวกับตาราง..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "ฐานข้อมูลนี้ไม่มีตารางอยู่เลย"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "ไม่สามารถโหลดไดรเวอร์ได้"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "กำลังรับข้อมูลเมต้าของตาราง..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, fuzzy, kde-format
+msgid "You have to select at least one table."
+msgstr "คุณจะต้องเลือกอย่างน้อยหนึ่งตาราง !"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, fuzzy, kde-format
+msgid "You have to select at least one column."
+msgstr "คุณจะต้องเลือกอย่างน้อยหนึ่งสดมภ์ !"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' หรือ '?' ไม่ใช้ไวลด์การ์ดที่ถูกต้องในภาษา SQL หากต้องการ ให้ใช้เครื่องหมาย '%' หรือ '_' "
+"แทน คุณต้องการแทนที่มันหรือไม่ ?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "กันยายน"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Document Settings"
+msgstr "รูปแบบภาษาท้องถิ่น"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "โหมดการคำนวณ"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Case sensitive"
+msgstr "วางและแทรก"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "จำนวนทศนิยม"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "อัตโนมัติ"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "String to compare with"
+msgid "String comparison:"
+msgstr "ข้อความที่จะเปรียบเทียบด้วย"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+msgid "Regular Expressions"
+msgstr "ฟังก์ชัน..."
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&ปรับให้อยู่ในรูปแบบภาษาท้องถิ่นของระบบ"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "ภาษา: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+msgid "Default number format: %1"
+msgstr "รูปแบบตัวเลข"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+msgid "Long date format: %1"
+msgstr "รูปแบบวันที่"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Short date format: %1"
+msgstr "วันที่แบบย่อ: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, fuzzy, kde-format
+msgid "Time format: %1"
+msgstr "รูปแบบเวลา"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+msgid "Currency format: %1"
+msgstr "เงินตรา"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, fuzzy, kde-format
+msgid "More Options"
+msgstr "ตัวเลือกการขอข้อมูล"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Search entire sheet"
+msgstr "ข้อความทางแนวตั้ง"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Search in:"
+msgstr "ข้อความทางแนวตั้ง"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Cell Values"
+msgstr "&ค่า"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Comments"
+msgstr "หมายเหตุ"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Search direction:"
+msgstr "ข้อความทางแนวตั้ง"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "แสดงแถวที่ถูกซ่อนไว้"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Fewer Options"
+msgstr "ตัวเลือกการขอข้อมูล"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Related Functions"
+msgid "Set Function"
+msgstr "ฟังก์ชันที่เกี่ยวข้อง"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "แทรกฟังก์ชัน"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr ""
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "ฟังก์ชันนี้ไม่มีพารามิเตอร์"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+msgid "Description is not available."
+msgstr "คำอธิบายของส&ดมภ์"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr ""
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "ไปยังเซลล์"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Enter cell:"
+msgstr "เติมชื่อ:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Insert"
+msgstr "อินเตอร์เน็ต"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "ย้ายไปด้านขวา"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "ย้ายลงด้านล่าง"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "แทรกแถว"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "แทรกสดมภ์"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "แทรกเซลล์"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "ลบเซลล์"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "ย้ายไปด้านซ้าย"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "ย้ายขึ้นด้านบน"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "ลบแถว"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "ลบสดมภ์"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "ลบเซลล์"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "แทรกที่อยู่เชื่อมโยง"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "อินเทอร์เน็ต"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "เชื่อมโยงไปยังที่อยู่อินเทอร์เน็ต"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "ข้อความที่จะแสดง:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "ที่อยู่อินเทอร์เน็ต:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "อีเมล:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Link to Mail Address"
+msgid "Link to Email Address"
+msgstr "เชื่อมโยงไปยังที่อยู่จดหมาย"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+msgid "Email address:"
+msgstr "พื้นที่ข้อความว่างอยู่ !"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "หัวข้อ:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "แฟ้ม"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "เชื่อมโยงไปยังแฟ้ม"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "ตำแหน่งของแฟ้ม:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "แฟ้มที่เคยเรียกใช้:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, fuzzy, kde-format
+#| msgid "Entries:"
+msgid "No Entries"
+msgstr "รายการ:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "เชื่อมโยงไปยังเซลล์"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+msgid "Cell or Named Area:"
+msgstr "ลบเซลล์"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "รายการข้อมูลกำหนดเอง"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "เปลี่ยนตัวพิมพ์ของอักษร "
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "รายการข้อมูล:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "ข้อมูลในรายการ:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "เพิ่ม"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "สร้างใหม่"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "แก้ไข"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "คัดลอก"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "คุณต้องการจะเอารายการนี้ออกจริงหรือไม่ ?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "เอารายการออก"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"พื้นที่ที่เติมไม่ใช่พื้นที่ว่าง\n"
+"คุณต้องการทำต่อไปใช่หรือไม่ ?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+#| msgid "Named Areas..."
+msgid "Named Areas"
+msgstr "พื้นที่ที่ถูกกำหนดชื่อ..."
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "พื้นที่: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "เซลล์:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "แผ่นงาน:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "ชื่อพื้นที่:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, fuzzy, kde-format
+msgid "&Remove"
+msgstr "&ลบหมายเหตุ"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+#| msgid "Do you really want to remove this area name?"
+msgid "Do you really want to remove this named area?"
+msgstr "คุณต้องการลบชื่อพื้นที่นี้ใช่หรือไม่ ?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "ลบพื้นที่ที่กำหนดชื่อ"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+msgid "The provided region is not valid."
+msgstr "การอ้างอิงถึงเซลล์ไม่ถูกต้อง !"
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "วางแทรกเซลล์"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Source"
+msgstr "อัก&ขระพิเศษ..."
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "Add Filter"
+msgstr "ตัวกรอง"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Bit Operations"
+msgid "Pivot Options"
+msgstr "การปฏิบัติการกับบิต"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "ปรับขนาดแถว"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "สูง:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "ปรับขนาดสดมภ์"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "กว้าง:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "อนุกรม"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "แทรกอนุกรม"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "แทรกค่า"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "แทรกอนุกรมทางแนวตั้ง ด้านล่างตัวอื่น ๆ"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "แทรกอนุกรมทางแนวนอน จากซ้ายไปขวา"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "เชิงเส้น (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "เรขาคณิต (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"สร้างอนุกรมจาก 'ค่าเริ่มต้น' ถึง 'ค่าสิ้่นสุด' และสำหรับแต่ละขั้นลำดับจะคูณค่ากับค่าแต่ละขั้นที่กำหนด "
+"โดยการใช้ขั้น 5 ขั้นจะได้รายการเช่น: 5, 25, 125, 625 โดยเป็นการคูณ 5 กับ 5 (ค่าแต่ละขั้น) "
+"มีค่าเท่ากับ 25, และนำไปคูณกับ 5 อีก ได้ค่า 125, และทำการคูณเพิ่มไปตามลำดับ "
+"จนถึงค่าขั้นสุดท้ายคือ 625"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "ค่าเริ่มต้น:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "ค่าสิ้นสุด:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "ค่าแต่ละขั้น:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+msgid "End and start value must be positive."
+msgstr "ค่าเริ่มและสิ้นสุดจะต้องมีค่ามากกว่าศูนย์ !"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, fuzzy, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr "ค่าสิ้นสุดจะต้องมากกว่าค่าเริ่มต้น หรือค่าแต่ละขั้นจะต้องน้อยกว่า '1' !"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, fuzzy, kde-format
+msgid "Step is negative."
+msgstr "ค่าแต่ละขั้นน้อยกว่าศูนย์ !"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, fuzzy, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr "ค่าแต่ละขั้นจะต้องมากกว่าศูนย์ ไม่เช่นนั้นอนุกรมแบบลิเนียร์จะไม่มีจุดสิ้นสุด !"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, fuzzy, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr "หากค่าเริ่มต้นมากกว่าค่าสิ้นสุดแล้ว ค่าแต่ละขั้นจะต้องมีค่าน้อยกว่าศูนย์ !"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, fuzzy, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr "หากค่าแต่ละขั้นน้อยกว่าศูนย์ ค่าเริ่มต้นจะต้องมีค่ามากกว่าค่าสิ้นสุด !"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, fuzzy, kde-format
+msgid "Select hidden rows to show:"
+msgstr "เลือกแถวที่ซ่อนอยู่เพื่อแสดง"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Select hidden columns to show:"
+msgstr "เลือกสดมภ์ที่ซ่อนอยู่เพื่อแสดง"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "สดมภ์ %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "แถว %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "แถวแ&รกเป็นส่วนหัว"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "แถวแ&รกเป็นส่วนหัว"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "เรียงลำดับ"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Case Insensitive"
+msgstr "วางและแทรก"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "วางแบบพิเศษ"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr "วาง"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "ตัวจัดการรูปแบบ"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, fuzzy, kde-format
+msgid "Style"
+msgstr "รูปแบบ:"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "รูปแบบทั้งหมด"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "รูปแบบกำหนดเอง"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, fuzzy, kde-format
+#| msgid "Vertical"
+msgid "Hierarchical"
+msgstr "ข้อความทางแนวตั้ง"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "สร้างให&ม่..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "แก้ไข..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "ลบ..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "รูปแบบ%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, fuzzy, kde-format
+msgid "Subtotals"
+msgstr "เรียง&ลำดับ..."
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "เอาออกทั้งหมด"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "สดมภ์ '%1' "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, fuzzy, kde-format
+#| msgid "Mar"
+msgid "Var"
+msgstr "มี.ค."
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, fuzzy, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "คุณจะต้องเลือกอย่างน้อยหนึ่งสดมภ์ !"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "การตรวจสอบ"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "ล้างทั้ง&หมด"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "อนุญาต:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "เลขจำนวนเต็ม"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "ความยาวข้อความ"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, fuzzy, kde-format
+msgid "List"
+msgstr "รายการที่มี:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "ข้อมูล:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "น้อยที่สุด: "
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "มากที่สุด: "
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "วันที่:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "วันที่น้อยที่สุด:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "วันที่มากที่สุด:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "เวลา:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "เวลาน้อยที่สุด:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "เวลามากที่สุด:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "หมายเลข:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "รายการ:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "แจ้งเตือน&ข้อผิดพลาด"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, fuzzy, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "แ&สดงข้อความผิดพลาด"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "การกระทำ:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "หยุด"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "แจ้งเตือน"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "เรื่อง:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "ข้อความ:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, fuzzy, kde-format
+msgid "This is not a valid value."
+msgstr "นี่เป็นค่าที่ไม่ถูกต้อง !"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, fuzzy, kde-format
+msgid "This is not a valid time."
+msgstr "นี่เป็นค่าเวลาที่ไม่ถูกต้อง !"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, fuzzy, kde-format
+msgid "This is not a valid date."
+msgstr "นี่เป็นค่าวันที่ที่ไม่ถูกต้อง !"
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "รูปแบบภาษาท้องถิ่น"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+#| msgid "Show c&omment indicator"
+msgid "Show document settings dialog"
+msgstr "แสดงตัวบ่งว่ามี&หมายเหตุ"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "แก้ไขการเน้นสีเซลล์"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "แก้ไขเซลล์"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "การป้องกัน"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Paste the contents of the clipboard at the cursor"
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "วางเนื้อหาจากคลิปบอร์ดไปยังตำแหน่งเคอร์เซอร์"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "เลื่อนลง"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "ทางซ้าย"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "ทางขวา"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+#| msgid "Fill Selection"
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "เติมเต็มส่วนที่เลือก"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "กันยายน"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "เลือกแบบอักษร..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "ตั้งค่ารูปแบบเซลล์"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+#| msgid "Change Font"
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "เปลี่ยนแบบอักษร"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "เลือกขนาดตัวอักษร"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "ตั้งค่ารูปแบบเซลล์"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "ขนาดตัวอักษร"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+#| msgid "Set the background color"
+msgid "Set the text color"
+msgstr "ตั้งค่าสีพื้นหลัง"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "สีตัวอักษร"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&ฟังก์ชัน..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "แทรกนิพจน์คณิตศาสตร์"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "การเลือกสูตร"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "แทรกฟังก์ชัน"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "อื่น ๆ..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, fuzzy, kde-format
+msgid "Cell reference is invalid."
+msgstr "การอ้างอิงถึงเซลล์ไม่ถูกต้อง !"
+
+#: ui/actions/GoalSeek.cpp:75
+#, fuzzy, kde-format
+msgid "Target value is invalid."
+msgstr "ค่าปลายทางไม่ถูกต้อง !"
+
+#: ui/actions/GoalSeek.cpp:84
+#, fuzzy, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "เซลล์ต้นทางต้องมีค่าที่เป็นตัวเลข !"
+
+#: ui/actions/GoalSeek.cpp:90
+#, fuzzy, kde-format
+msgid "Target cell must contain a formula."
+msgstr "เซลล์ปลายทางต้องมีค่าที่เป็นสูตร !"
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "ไปยังเซลล์..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "ย้ายไปยังเซลล์บางส่วน"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "ไปยัง"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+msgid "That is not a valid cell."
+msgstr "นี่เป็นค่าเวลาที่ไม่ถูกต้อง !"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "ลดระยะการเยื้อง"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "เพิ่มระยะการเยื้อง"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "ลดระยะของการเยื้อง"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "เพิ่มระยะของการเยื้อง"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+#| msgid "Increase Indentation"
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "เพิ่มระยะการเยื้อง"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+#| msgid "Decrease Indentation"
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "ลดระยะการเยื้อง"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "จากฐาน&ข้อมูล..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "แทรกข้อมูลจากฐานข้อมูลแบบ SQL"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr "ไม่มีไดรเวอร์สำหรับฐานข้อมูลอยู่ ! คุณต้องคอมไพล์ Qt ใหม่ พร้อมกับไดรเวอร์ที่ต้องการใช้"
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&อนุกรม..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "แทรกอนุกรม"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+#| msgid "Insert Series"
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "แทรกอนุกรม"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "อัก&ขระพิเศษ..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "ที่อยู่เ&ชื่อมโยง..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "แทรกที่อยู่เชื่อมโยงอินเทอร์เน็ต"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "ที่อยู่เชื่อมโยง"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "ลบที่อยู่เชื่อมโยง"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "ลบที่อยู่เชื่อมโยง"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "ลบที่อยู่เชื่อมโยง"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Set Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "ตั้งค่าที่อยู่เชื่อมโยง"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "รายการการเลือก..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "ผสานเซลล์ทางแนวนอน"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "ผสานเซลล์ทางแนวตั้ง"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "แยกเซลล์"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "ชื่อพื้นที่..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "ตั้งชื่อพื้นที่ของแผ่นงานตารางคำนวณ"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+msgid "Replace Named Area"
+msgstr "แสดงพื้นที่ที่ถูกกำหนดชื่อ"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "แสดงพื้นที่ที่ถูกกำหนดชื่อ"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "แก้ไขหรือเลือกพื้นที่ที่ถูกกำหนดชื่อ"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "พื้นที่ที่ถูกกำหนดชื่อ..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Row"
+msgstr "ลบสดมภ์"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+msgid "Row Break"
+msgstr "มากกว่า"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Column"
+msgstr "ลบสดมภ์"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+msgid "Column Break"
+msgstr "จำนวนที่สอง"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "วางเนื้อหาจากคลิปบอร์ดไปยังตำแหน่งเคอร์เซอร์"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "วางแบบพิเศษ..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "วางเนื้อหาจากคลิปบอร์ดด้วยตัวเลือกพิเศษ"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "วางพร้อมทำการแทรก..."
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "แทรกเซลล์จากคลิปบอร์ดเข้าไปยังแผ่นงาน"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "&Pivot Tables..."
+msgstr "เรียง&ลำดับ..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+msgid "Create Pivot Tables"
+msgstr "เรียง&ลำดับ..."
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "คุณต้องเลือกเซลล์หลายเซลล์ก่อน"
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "เลือกทุกเซลล์ที่อยู่ในแผ่นงานปัจจุบัน"
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet..."
+msgid "Show QTableView..."
+msgstr "แสดงแผ่นงาน..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "เรียง&ลำดับ..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "เรียงลำดับกลุ่มของเซลล์"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "เรียงลำดับจากน้อ&ยไปหามาก"
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+#| msgid "Sort a group of cells in ascending (first to last) order"
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "เรียงลำดับกลุ่มเซลล์แบบน้อยไปหามาก (จากตัวแรกไปตัวสุดท้าย)"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "เรียงลำดับจาก&มากไปหาน้อย"
+
+#: ui/actions/Sort.cpp:145
+#, fuzzy, kde-format
+#| msgid "Sort a group of cells in decreasing (last to first) order"
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "เรียงลำดับกลุ่มเซลล์แบบมากไปหาน้อย (จากตัวสุดท้ายไปตัวแรก)"
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+#| msgid "Sort Data"
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "เรียงลำดับข้อมูล"
+
+#: ui/actions/SpellCheck.cpp:84
+#, fuzzy, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "คุณต้องการจะตรวจคำสะกดในตารางถัดไปใช่หรือไม่ ?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "ย้ายไปยังแผ่นงานถัดไป"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "ตรวจสอบคำสะกด"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "รูปแบบเซลล์..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "ตั้งค่ารูปแบบเซลล์"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "ตัวหนา"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "ตัวเอียง"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "ขีดเส้นใต้"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "เส้นพาดกลาง"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "สร้างให้มีการตัดคำข้อความในเซลล์เป็นแบบหลายบรรทัด"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "ตัดคำข้อความ"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "ตัดคำ"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+#| msgid "Wrap Text"
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "ตัดคำข้อความ"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "พิมพ์เนื้อหาเซลล์ทางแนวตั้ง"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "ข้อความทางแนวตั้ง"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "ข้อความทางแนวตั้ง"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "รูปแบบตัวเลข"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "ตั้งค่ารูปแบบเซลล์"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "จำนวนแรก"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "รูปแบบวิทยาศาสตร์"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "ตั้งค่ารูปแบบเซลล์ในรูปแบบร้อยละ"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "วิทยาศาสตร์"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "วิทยาศาสตร์"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "รูปแบบร้อยละ"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "ตั้งค่ารูปแบบเซลล์ในรูปแบบร้อยละ"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "ร้อยละ"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Format Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "รูปแบบร้อยละ"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "รูปแบบเงินตรา"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "แสดงรูปแบบเซลล์ในการแสดงรูปแบบเงินตราให้เป็นแบบท้องถิ่น"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "เงินตรา"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format Money"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "รูปแบบเงินตรา"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "รูปแบบวันที่"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "ตั้งค่ารูปแบบเซลล์"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "รูปแบบ"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "ตั้งค่ารูปแบบเซลล์"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "รูปแบบเวลา"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "รูปแบบ"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "เพิ่มขนาดตัวอักษร"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "ลดขนาดตัวอักษร"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "เพิ่มจำนวนทศนิยม"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "เพิ่มจำนวนเลขทศนิยมที่จะแสดงบนหน้าจอ"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "ลดจำนวนทศนิยม"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "ลดจำนวนเลขทศนิยมที่จะแสดงบนหน้าจอ"
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Increase Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "เพิ่มจำนวนทศนิยม"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Decrease Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "ลดจำนวนทศนิยม"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "ปรับกลับไปใช้รูปแบบปริยาย"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "รูปแบบแผ่นงาน"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "สีพื้นหลัง"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "ตั้งค่าสีพื้นหลัง"
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create Style From Cell..."
+msgstr "&สร้างแม่แบบจากเอกสาร..."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "ตั้งค่าเส้นขอบด้านบนให้พื้นที่ที่เลือก"
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "Style of Cell"
+msgid "Style From Cell"
+msgstr "รูปแบบเซลล์"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "สร้างรูปแบบจากเซลล์"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "ชื่อรูปแบบไม่สามารถว่างไว้ได้"
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, fuzzy, kde-format
+msgid "A style with this name already exists."
+msgstr "มีแฟ้มอยู่แล้ว"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "แก้ไขและจัดการรูปแบบเซลล์"
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+#| msgid "Style Manager"
+msgid "Style Manager..."
+msgstr "ตัวจัดการรูปแบบ"
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "ตั้งค่าเส้นขอบด้านบนให้พื้นที่ที่เลือก"
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "&Subtotals..."
+msgstr "เรียง&ลำดับ..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "เรียง&ลำดับ..."
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "ตัวพิมพ์ใหญ่"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "ตัวพิมพ์เล็ก"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+msgid "First Letter Upper"
+msgstr "แปลงตัวอักษรตัวแรกเป็นตัวพิมพ์ใ&หญ่"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+#| msgid "Switch to uppercase"
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "สลับเป็นตัวพิมพ์ใหญ่"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+#| msgid "Switch to lowercase"
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "สลับเป็นตัวพิมพ์เล็ก"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "แปลงตัวอักษรตัวแรกเป็นตัวพิมพ์ใ&หญ่"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "ตัวพิมพ์ใหญ่"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "ตัวพิมพ์เล็ก"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "แปลงตัวอักษรตัวแรกเป็นตัวพิมพ์ใหญ่"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "แปลงตัวอักษรทั้งหมดเป็นตัวพิมพ์ใหญ่"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "แปลงตัวอักษรทั้งหมดเป็นตัวพิมพ์เล็ก"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "ตัวอักษรตัวแรกเป็นตัวพิมพ์ใหญ่"
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+#| msgid "Change Case"
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "เปลี่ยนตัวพิมพ์ของอักษร "
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "ตั้งค่าการทดสอบเพื่อยืนยันว่าข้อมูลของเซลล์มีความถูกต้อง"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "การตรวจสอบ..."
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "ลบตัวทดสอบความถูกต้องบนเซลล์นี้"
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "ลบตาราง"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "ลบตาราง"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+#| msgid "Validity Criteria"
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "เงื่อนไขการตรวจสอบ"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14017,13 +17237,6 @@ msgstr "แทรกเซลล์"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "ลบเซลล์"
-
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-#| msgid "Delete"
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "ลบ"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -14295,12 +17508,6 @@ msgstr ""
 msgid "Roman"
 msgstr "โรมาเนีย"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "ตัวเอียง"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14318,12 +17525,6 @@ msgstr ""
 msgid "Normal"
 msgstr "ปกติ"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "ตัวหนา"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14337,12 +17538,6 @@ msgstr "สี:"
 #| msgid "If this is checked, the current cell text wil be underlined."
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "หากกาเลือกที่นี่ ข้อความของเซลล์ปัจจุบันจะถูกขีดเส้นใต้"
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "ขีดเส้นใต้"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14483,11 +17678,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "ร้อยละ"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14500,11 +17690,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "เงินตรา"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14515,11 +17700,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "วิทยาศาสตร์"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14724,11 +17904,6 @@ msgstr ""
 msgid "Dolor Ipse"
 msgstr "ตัวอักษร - Font"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, fuzzy, kde-format
-msgid "Style"
-msgstr "รูปแบบ:"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 msgctxt "Name of the style"
@@ -14739,11 +17914,6 @@ msgstr "ชื่อ"
 #, fuzzy, kde-format
 msgid "Inherit style:"
 msgstr "รูปแบบแผ่นงาน"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, fuzzy, kde-format
-msgid "A style with this name already exists."
-msgstr "มีแฟ้มอยู่แล้ว"
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -14789,12 +17959,6 @@ msgstr ""
 msgid "Standard"
 msgstr "มาตรฐาน"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "จัดกึ่งกลาง"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -14826,24 +17990,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "ชิดด้านบน"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "จัดกึ่งกลาง"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "ชิดด้านล่าง"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15007,20 +18153,10 @@ msgstr "เมษายน"
 msgid "Apply changes"
 msgstr "ปรับใช้รูปแบบ"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "ยกเลิก"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "ทั้งหมด"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15078,376 +18214,14 @@ msgstr ""
 #~ msgid "System: "
 #~ msgstr "ระบบ: "
 
-#~ msgid "&Function..."
-#~ msgstr "&ฟังก์ชัน..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "แทรกนิพจน์คณิตศาสตร์"
-
-#~ msgid "From &Database..."
-#~ msgstr "จากฐาน&ข้อมูล..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "แทรกข้อมูลจากฐานข้อมูลแบบ SQL"
-
-#~ msgid "Formula Selection"
-#~ msgstr "การเลือกสูตร"
-
-#~ msgid "Insert a function"
-#~ msgstr "แทรกฟังก์ชัน"
-
-#~ msgid "Others..."
-#~ msgstr "อื่น ๆ..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "แก้ไขเซลล์"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "แก้ไขการเน้นสีเซลล์"
-
-#, fuzzy
-#~| msgid "Show Sheet..."
-#~ msgid "Show QTableView..."
-#~ msgstr "แสดงแผ่นงาน..."
-
 #, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "การป้องกัน"
 
 #, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "การป้องกัน"
-
-#, fuzzy
-#~| msgid "Paste the contents of the clipboard at the cursor"
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "วางเนื้อหาจากคลิปบอร์ดไปยังตำแหน่งเคอร์เซอร์"
-
-#, fuzzy
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "ไม่มีไดรเวอร์สำหรับฐานข้อมูลอยู่ ! คุณต้องคอมไพล์ Qt ใหม่ พร้อมกับไดรเวอร์ที่ต้องการใช้"
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "แทรกข้อมูลจากฐานข้อมูล"
-
-#~ msgid "Type:"
-#~ msgstr "ชนิด: "
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "ชื่อผู้ใช้:\n"
-#~ "(หากจำเป็นต้องใช้)"
-
-#~ msgid "Host:"
-#~ msgstr "โฮสต์:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "พอร์ต:\n"
-#~ "(หากจำเป็นต้องใช้)"
-
-#~ msgid "Database name: "
-#~ msgstr "ชื่อฐานข้อมูล: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "รหัสผ่าน:\n"
-#~ "(หากจำเป็นต้องใช้)"
-
-#~ msgid "Select tables:"
-#~ msgstr "เลือกตาราง:"
-
-#, fuzzy
-#~ msgid "Tables"
-#~ msgstr "&ค่า"
-
-#~ msgid "Select columns:"
-#~ msgstr "เลือกสดมภ์:"
-
-#, fuzzy
-#~ msgid "Table"
-#~ msgstr "ตาราง"
-
-#~ msgid "Columns"
-#~ msgstr "สดมภ์"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "ที่เข้าคู่กับต่อไปนี้ทั้งหมด (และ)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "ที่เข้าคู่กับต่อไปนี้ทั้งหมด (หรือ)"
-
-#~ msgid "equals"
-#~ msgstr "เท่ากับ"
-
-#~ msgid "not equal"
-#~ msgstr "ไม่เท่ากับ"
-
-#~ msgid "in"
-#~ msgstr "อยู่ใน"
-
-#~ msgid "not in"
-#~ msgstr "ไม่อยู่ใน"
-
-#~ msgid "like"
-#~ msgstr "คล้ายกับ"
-
-#~ msgid "greater"
-#~ msgstr "มากกว่า"
-
-#~ msgid "lesser"
-#~ msgstr "น้อยกว่า"
-
-#~ msgid "greater or equal"
-#~ msgstr "มากกว่าหรือเท่ากับ"
-
-#~ msgid "less or equal"
-#~ msgstr "น้อยกว่าหรือเท่ากับ"
-
-#~ msgid "Sorted by"
-#~ msgstr "เรียงลำดับแบบ"
-
-#~ msgid "Ascending"
-#~ msgstr "จากน้อยไปมาก"
-
-#~ msgid "Descending"
-#~ msgstr "จากมากไปน้อย"
-
-#, fuzzy
-#~ msgid "Distinct"
-#~ msgstr "หารค่า"
-
-#, fuzzy
-#~ msgid "Query Options"
-#~ msgstr "ตัวเลือกการขอข้อมูล"
-
-#~ msgid "SQL query:"
-#~ msgstr "ร้องขอแบบ SQL:"
-
-#~ msgid "Insert in region"
-#~ msgstr "แทรกในขอบเขต"
-
-#~ msgid "Starting in cell"
-#~ msgstr "เริ่มในสดมภ์"
-
-#~ msgid "Result"
-#~ msgstr "ผลลัพธ์"
-
-#, fuzzy
-#~ msgid "You cannot specify a table here."
-#~ msgstr "คุณไม่สามารถกำหนดตารางตรงนี้ได้ !"
-
-#, fuzzy
-#~ msgid "You have to specify a valid region."
-#~ msgstr "คุณได้กำหนดขอบเขตที่ถูกต้อง !"
-
-#, fuzzy
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "คุณได้กำหนดเซลล์ที่ถูกต้อง !"
-
-#, fuzzy
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "คุณยังไม่ได้รับอนุญาตให้ทำการเปลี่ยนแปลงข้อมูลในฐานข้อมูล !"
-
-#, fuzzy
-#~ msgid "Executing query failed."
-#~ msgstr "การประมวลผลการขอข้อมูลล้มเหลว !"
-
-#, fuzzy
-#~| msgid "Insert Data From Database"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "แทรกข้อมูลจากฐานข้อมูล"
-
-#~ msgid "The port must be a number"
-#~ msgstr "พอร์ตจะต้องเป็นตัวเลข"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "กำลังเชื่อมต่อไปยังฐานข้อมูล..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "เชื่อมต่อแล้ว กำลังรับค่าข้อมูลเกี่ยวกับตาราง..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "ฐานข้อมูลนี้ไม่มีตารางอยู่เลย"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "ไม่สามารถโหลดไดรเวอร์ได้"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "กำลังรับข้อมูลเมต้าของตาราง..."
-
-#, fuzzy
-#~ msgid "You have to select at least one table."
-#~ msgstr "คุณจะต้องเลือกอย่างน้อยหนึ่งตาราง !"
-
-#, fuzzy
-#~ msgid "You have to select at least one column."
-#~ msgstr "คุณจะต้องเลือกอย่างน้อยหนึ่งสดมภ์ !"
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' หรือ '?' ไม่ใช้ไวลด์การ์ดที่ถูกต้องในภาษา SQL หากต้องการ ให้ใช้เครื่องหมาย '%' หรือ "
-#~ "'_' แทน คุณต้องการแทนที่มันหรือไม่ ?"
-
-#~ msgid "Insert function"
-#~ msgstr "แทรกฟังก์ชัน"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "ฟังก์ชันนี้ไม่มีพารามิเตอร์"
-
-#, fuzzy
-#~ msgid "Description is not available."
-#~ msgstr "คำอธิบายของส&ดมภ์"
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "รูปแบบภาษาท้องถิ่น"
-
-#, fuzzy
-#~| msgid "Show c&omment indicator"
-#~ msgid "Show document settings dialog"
-#~ msgstr "แสดงตัวบ่งว่ามี&หมายเหตุ"
-
-#, fuzzy
-#~ msgid "Document Settings"
-#~ msgstr "รูปแบบภาษาท้องถิ่น"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "โหมดการคำนวณ"
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Case sensitive"
-#~ msgstr "วางและแทรก"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "จำนวนทศนิยม"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "อัตโนมัติ"
-
-#, fuzzy
-#~| msgid "String to compare with"
-#~ msgid "String comparison:"
-#~ msgstr "ข้อความที่จะเปรียบเทียบด้วย"
-
-#, fuzzy
-#~ msgid "Regular Expressions"
-#~ msgstr "ฟังก์ชัน..."
-
-#, fuzzy
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&ปรับให้อยู่ในรูปแบบภาษาท้องถิ่นของระบบ"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "ภาษา: %1"
-
-#, fuzzy
-#~ msgid "Default number format: %1"
-#~ msgstr "รูปแบบตัวเลข"
-
-#, fuzzy
-#~ msgid "Long date format: %1"
-#~ msgstr "รูปแบบวันที่"
-
-#, fuzzy
-#~ msgid "Short date format: %1"
-#~ msgstr "วันที่แบบย่อ: %1"
-
-#, fuzzy
-#~ msgid "Time format: %1"
-#~ msgstr "รูปแบบเวลา"
-
-#, fuzzy
-#~ msgid "Currency format: %1"
-#~ msgstr "เงินตรา"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "รายการกำหนดเอง..."
-
-#, fuzzy
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "สร้างรายการกำหนดเองสำหรับการเรียงลำดับหรือเติมเต็มอัตโนมัติ"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "เลือกทุกเซลล์ที่อยู่ในแผ่นงานปัจจุบัน"
-
-#~ msgid "Custom Lists"
-#~ msgstr "รายการข้อมูลกำหนดเอง"
-
-#~ msgid "List:"
-#~ msgstr "รายการข้อมูล:"
-
-#~ msgid "Entry:"
-#~ msgstr "ข้อมูลในรายการ:"
-
-#~ msgid "Add"
-#~ msgstr "เพิ่ม"
-
-#~ msgid "New"
-#~ msgstr "สร้างใหม่"
-
-#, fuzzy
-#~ msgid "Remove"
-#~ msgstr "ลบเซลล์"
-
-#~ msgid "Modify"
-#~ msgstr "แก้ไข"
-
-#~ msgid "Copy"
-#~ msgstr "คัดลอก"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "คุณต้องการจะเอารายการนี้ออกจริงหรือไม่ ?"
-
-#~ msgid "Remove List"
-#~ msgstr "เอารายการออก"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "พื้นที่ที่เติมไม่ใช่พื้นที่ว่าง\n"
-#~ "คุณต้องการทำต่อไปใช่หรือไม่ ?"
-
-#, fuzzy
-#~ msgid "Cell reference is invalid."
-#~ msgstr "การอ้างอิงถึงเซลล์ไม่ถูกต้อง !"
-
-#, fuzzy
-#~ msgid "Target value is invalid."
-#~ msgstr "ค่าปลายทางไม่ถูกต้อง !"
-
-#, fuzzy
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "เซลล์ต้นทางต้องมีค่าที่เป็นตัวเลข !"
-
-#, fuzzy
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "เซลล์ปลายทางต้องมีค่าที่เป็นสูตร !"
 
 #~ msgid "Starting..."
 #~ msgstr "กำลังเริ่ม..."
@@ -15469,89 +18243,6 @@ msgstr ""
 
 #~ msgid "Current value:"
 #~ msgstr "ค่าปัจจุบัน:"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "กันยายน"
-
-#~ msgid "Selection List..."
-#~ msgstr "รายการการเลือก..."
-
-#, fuzzy
-#~ msgid "More Options"
-#~ msgstr "ตัวเลือกการขอข้อมูล"
-
-#, fuzzy
-#~ msgid "Search entire sheet"
-#~ msgstr "ข้อความทางแนวตั้ง"
-
-#, fuzzy
-#~ msgid "Search in:"
-#~ msgstr "ข้อความทางแนวตั้ง"
-
-#, fuzzy
-#~ msgid "Cell Values"
-#~ msgstr "&ค่า"
-
-#, fuzzy
-#~ msgid "Comments"
-#~ msgstr "หมายเหตุ"
-
-#, fuzzy
-#~ msgid "Search direction:"
-#~ msgstr "ข้อความทางแนวตั้ง"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "แสดงแถวที่ถูกซ่อนไว้"
-
-#, fuzzy
-#~ msgid "Fewer Options"
-#~ msgstr "ตัวเลือกการขอข้อมูล"
-
-#~ msgid "Cell Format..."
-#~ msgstr "รูปแบบเซลล์..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "ตั้งค่ารูปแบบเซลล์"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "ย้ายวัตถุเซลล์ไปยังคลิปบอร์ด"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "คัดลอกวัตถุเซลล์ไปยังคลิปบอร์ด"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "วางเนื้อหาจากคลิปบอร์ดไปยังตำแหน่งเคอร์เซอร์"
-
-#~ msgid "Special Paste..."
-#~ msgstr "วางแบบพิเศษ..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "วางเนื้อหาจากคลิปบอร์ดด้วยตัวเลือกพิเศษ"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "วางพร้อมทำการแทรก..."
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "แทรกเซลล์จากคลิปบอร์ดเข้าไปยังแผ่นงาน"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "วางแทรกเซลล์"
-
-#, fuzzy
-#~ msgid "Insert"
-#~ msgstr "อินเตอร์เน็ต"
-
-#~ msgid "Move towards right"
-#~ msgstr "ย้ายไปด้านขวา"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "ย้ายลงด้านล่าง"
-
-#~ msgid "Special Paste"
-#~ msgstr "วางแบบพิเศษ"
 
 #~ msgid "Content"
 #~ msgstr "เนื้อหา"
@@ -15585,37 +18276,14 @@ msgstr ""
 #~ msgid "Division"
 #~ msgstr "หารค่า"
 
-#~ msgid "Check the spelling"
-#~ msgstr "ตรวจสอบคำสะกด"
-
-#, fuzzy
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "คุณต้องการจะตรวจคำสะกดในตารางถัดไปใช่หรือไม่ ?"
-
 #, fuzzy
 #~| msgid "Correct Misspelled Word"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "แก้คำที่สะกดผิดให้ถูกต้อง"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "รูปแบบอัตโนมัติ..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "ตั้งค่ารูปแบบของแผ่นงาน"
-
-#, fuzzy
-#~| msgid "Auto-Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "รูปแบบอัตโนมัติ."
-
-#~ msgid "Sheet Style"
-#~ msgstr "รูปแบบแผ่นงาน"
-
-#, fuzzy
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "เลือกแถวที่ซ่อนอยู่เพื่อแสดง"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "ไม่สามารถค้นพบรูปภาพ %1"
@@ -15624,113 +18292,8 @@ msgstr ""
 #~ msgstr "ไม่สามารถเรียกใช้รูปภาพ %1 ได้"
 
 #, fuzzy
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "ไม่สามารถค้นพบแฟ้มรูปแบบตาราง XML '%1'"
-
-#, fuzzy
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "การแจงคำในแฟ้มรูปแบบตาราง XML %1 ผิดพลาด"
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "ตัวกรองอัตโนมัติ"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "เพิ่มตัวกรองอัตโนมัติไปยังช่วงของเซลล์"
-
-#, fuzzy
-#~| msgid "Auto-Filter"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "ตัวกรองอัตโนมัติ"
-
-#, fuzzy
-#~| msgid "Clear &All"
-#~ msgid "Clear All"
-#~ msgstr "ล้างทั้ง&หมด"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "ลบเนื้อหาและรูปแบบทั้งหมดออกจากเซลล์ปัจจุบัน"
-
-#, fuzzy
 #~ msgid "Contents"
 #~ msgstr "หมายเหตุ"
-
-#, fuzzy
-#~ msgid "Clear Contents"
-#~ msgstr "หมายเหตุ"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "ลบเนื้อหาออกจากเซลล์ปัจจุบัน"
-
-#, fuzzy
-#~| msgid "Clear Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "ล้างข้อความ"
-
-#, fuzzy
-#~| msgid "Remove Conditional Formatting"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "ลบรูปแบบเงื่อนไขเซลล์"
-
-#, fuzzy
-#~| msgid "Add Conditional Formatting"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "เพิ่มรูปแบบเงื่อนไขเซลล์"
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "เลือกสีเส้นขอบใหม่"
-
-#~ msgid "Border Color"
-#~ msgstr "สีของเส้นขอบ"
-
-#~ msgid "Set the background color"
-#~ msgstr "ตั้งค่าสีพื้นหลัง"
-
-#~ msgid "Background Color"
-#~ msgstr "สีพื้นหลัง"
-
-#, fuzzy
-#~| msgid "Conditional Cell Attributes..."
-#~ msgid "Conditional Styles..."
-#~ msgstr "รูปแบบเงื่อนไขของเซลล์..."
-
-#, fuzzy
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "ตั้งค่ารูปแบบของเซลล์ตามเงื่อนไขที่ต้องการ"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "รูปแบบเงื่อนไขเซลล์"
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "ลบรูปแบบเงื่อนไขเซลล์"
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "ลบรูปแบบเงื่อนไขเซลล์"
-
-#, fuzzy
-#~ msgid "&Pivot Tables..."
-#~ msgstr "เรียง&ลำดับ..."
-
-#, fuzzy
-#~ msgid "Create Pivot Tables"
-#~ msgstr "เรียง&ลำดับ..."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "คุณต้องเลือกเซลล์หลายเซลล์ก่อน"
-
-#, fuzzy
-#~| msgid "Number Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "รูปแบบตัวเลข"
 
 #, fuzzy
 #~| msgid "Currency Format"
@@ -15743,90 +18306,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "รูปแบบร้อยละ"
-
-#, fuzzy
-#~| msgid "Time Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "รูปแบบเวลา"
-
-#, fuzzy
-#~| msgid "Date Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "รูปแบบวันที่"
-
-#, fuzzy
-#~| msgid "Scientific Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "รูปแบบวิทยาศาสตร์"
-
-#, fuzzy
-#~| msgid "Change Border Color"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "เปลี่ยนสีของเส้นขอบ"
-
-#~ msgid "<none>"
-#~ msgstr "<ไม่มี>"
-
-#~ msgid "equal to"
-#~ msgstr "เท่ากับ"
-
-#~ msgid "greater than"
-#~ msgstr "มากกว่า"
-
-#~ msgid "less than"
-#~ msgstr "น้อยกว่า"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "มากกว่าหรือเท่ากับ"
-
-#~ msgid "equal to or less than"
-#~ msgstr "น้อยกว่าหรือเท่ากับ"
-
-#~ msgid "between"
-#~ msgstr "ระหว่าง"
-
-#~ msgid "outside range"
-#~ msgstr "อยู่นอกช่วง"
-
-#~ msgid "different to"
-#~ msgstr "แตกต่างจาก"
-
-#~ msgid "First Condition"
-#~ msgstr "เงื่อนไขแรก"
-
-#~ msgid "Second Condition"
-#~ msgstr "เงื่อนไขที่สอง"
-
-#~ msgid "Third Condition"
-#~ msgstr "เงื่อนไขที่สาม"
-
-#~ msgid "Cell is"
-#~ msgstr "เซลล์"
-
-#~ msgid "Cell style"
-#~ msgstr "รูปแบบเซลล์"
-
-#~ msgid "different from"
-#~ msgstr "แตกต่างจาก"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr "หากค่าเริ่มต้นมากกว่าค่าสิ้นสุดแล้ว ค่าแต่ละขั้นจะต้องมีค่าน้อยกว่าศูนย์ !"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr "หากค่าเริ่มต้นมากกว่าค่าสิ้นสุดแล้ว ค่าแต่ละขั้นจะต้องมีค่าน้อยกว่าศูนย์ !"
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Source"
-#~ msgstr "อัก&ขระพิเศษ..."
 
 #, fuzzy
 #~| msgid "Sheet Selection"
@@ -15851,11 +18330,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Field"
 #~ msgstr "ปรับขนาด"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Add Filter"
-#~ msgstr "ตัวกรอง"
 
 #, fuzzy
 #~| msgid "TextLabel"
@@ -15909,11 +18383,6 @@ msgstr ""
 #~ msgstr "แถว"
 
 #, fuzzy
-#~| msgid "Bit Operations"
-#~ msgid "Pivot Options"
-#~ msgstr "การปฏิบัติการกับบิต"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "ค่า"
@@ -15932,160 +18401,16 @@ msgstr ""
 #~ msgid "Manual Selection"
 #~ msgstr "เติมเต็มส่วนที่เลือก"
 
-#~ msgid "Product"
-#~ msgstr "โปรดักต์"
-
 #~ msgid "Sort By"
 #~ msgstr "เรียงลำดับตาม"
 
-#~ msgid "Select Font..."
-#~ msgstr "เลือกแบบอักษร..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "เลือกขนาดตัวอักษร"
-
-#~ msgid "Font Size"
-#~ msgstr "ขนาดตัวอักษร"
-
-#~ msgid "Text Color"
-#~ msgstr "สีตัวอักษร"
-
-#, fuzzy
-#~| msgid "Set the background color"
-#~ msgid "Set the text color"
-#~ msgstr "ตั้งค่าสีพื้นหลัง"
-
-#, fuzzy
-#~| msgid "Change Font"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "เปลี่ยนแบบอักษร"
-
-#, fuzzy
-#~| msgid "Style Manager"
-#~ msgid "Style Manager..."
-#~ msgstr "ตัวจัดการรูปแบบ"
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "แก้ไขและจัดการรูปแบบเซลล์"
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "ตั้งค่าเส้นขอบด้านบนให้พื้นที่ที่เลือก"
-
-#, fuzzy
-#~ msgid "Create Style From Cell..."
-#~ msgstr "&สร้างแม่แบบจากเอกสาร..."
-
-#, fuzzy
-#~| msgid "Style of Cell"
-#~ msgid "Style From Cell"
-#~ msgstr "รูปแบบเซลล์"
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "ตั้งค่าเส้นขอบด้านบนให้พื้นที่ที่เลือก"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "สร้างรูปแบบจากเซลล์"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "ชื่อรูปแบบไม่สามารถว่างไว้ได้"
-
-#~ msgid "Style Manager"
-#~ msgstr "ตัวจัดการรูปแบบ"
-
-#~ msgid "All Styles"
-#~ msgstr "รูปแบบทั้งหมด"
-
-#~ msgid "Custom Styles"
-#~ msgstr "รูปแบบกำหนดเอง"
-
-#, fuzzy
-#~| msgid "Vertical"
-#~ msgid "Hierarchical"
-#~ msgstr "ข้อความทางแนวตั้ง"
-
-#~ msgid "&New..."
-#~ msgstr "สร้างให&ม่..."
-
-#~ msgid "&Modify..."
-#~ msgstr "แก้ไข..."
-
-#~ msgid "&Delete..."
-#~ msgstr "ลบ..."
-
-#~ msgid "style%1"
-#~ msgstr "รูปแบบ%1"
-
 #~ msgid "Cells..."
 #~ msgstr "เซลล์..."
-
-#~ msgid "Insert Cells..."
-#~ msgstr "แทรกเซลล์..."
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "แทรกเซลล์เปล่าเข้าไปยังแผ่นงาน"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "ลบเซลล์..."
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "ลบเซลล์ปัจจุบันออกจากแผ่นงาน"
 
 #, fuzzy
 #~| msgid "Insert Cells..."
 #~ msgid "Delete Cells..."
 #~ msgstr "แทรกเซลล์..."
-
-#~ msgid "Insert rows"
-#~ msgstr "แทรกแถว"
-
-#~ msgid "Insert columns"
-#~ msgstr "แทรกสดมภ์"
-
-#~ msgid "Insert Cells"
-#~ msgstr "แทรกเซลล์"
-
-#~ msgid "Move towards left"
-#~ msgstr "ย้ายไปด้านซ้าย"
-
-#~ msgid "Move towards top"
-#~ msgstr "ย้ายขึ้นด้านบน"
-
-#~ msgid "Remove rows"
-#~ msgstr "ลบแถว"
-
-#~ msgid "Remove columns"
-#~ msgstr "ลบสดมภ์"
-
-#~ msgid "Remove Cells"
-#~ msgstr "ลบเซลล์"
-
-#, fuzzy
-#~ msgid "&Subtotals..."
-#~ msgstr "เรียง&ลำดับ..."
-
-#, fuzzy
-#~ msgid "Subtotals"
-#~ msgstr "เรียง&ลำดับ..."
-
-#~ msgid "Remove All"
-#~ msgstr "เอาออกทั้งหมด"
-
-#, fuzzy
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "คุณจะต้องเลือกอย่างน้อยหนึ่งสดมภ์ !"
-
-#~ msgid "Column '%1' "
-#~ msgstr "สดมภ์ '%1' "
-
-#, fuzzy
-#~| msgid "Mar"
-#~ msgid "Var"
-#~ msgstr "มี.ค."
 
 #~ msgid "Summary &only"
 #~ msgstr "ผลรวมเท่านั้น"
@@ -16099,47 +18424,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Add Subtotal to:"
 #~ msgstr "เรียง&ลำดับ..."
-
-#~ msgid "Goto Cell..."
-#~ msgstr "ไปยังเซลล์..."
-
-#~ msgid "Goto"
-#~ msgstr "ไปยัง"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "ย้ายไปยังเซลล์บางส่วน"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Column"
-#~ msgstr "ลบสดมภ์"
-
-#, fuzzy
-#~ msgid "Column Break"
-#~ msgstr "จำนวนที่สอง"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Row"
-#~ msgstr "ลบสดมภ์"
-
-#, fuzzy
-#~ msgid "Row Break"
-#~ msgstr "มากกว่า"
-
-#~ msgid "Goto Cell"
-#~ msgstr "ไปยังเซลล์"
-
-#, fuzzy
-#~ msgid "Enter cell:"
-#~ msgstr "เติมชื่อ:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "ผ&สานเซลล์.."
-
-#, fuzzy
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "สร้างขอบเขตของการรวมค่าข้อมูลจากกลุ่มของขอบเขตที่คล้ายกัน"
 
 #, fuzzy
 #~| msgid "&Description in row"
@@ -16156,41 +18440,6 @@ msgstr ""
 #~ msgid "Copy data"
 #~ msgstr "คัด&ลอกข้อมูล"
 
-#~ msgid "Consolidate"
-#~ msgstr "ผสาน"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "ค่าเบี่ยงเบนมาตรฐาน"
-
-#~ msgid "Variance"
-#~ msgstr "ตัวแปร"
-
-#, fuzzy
-#~ msgid "You have to define at least one source range."
-#~ msgstr "คุณจะต้องเลือกอย่างน้อยหนึ่งสดมภ์ !"
-
-#, fuzzy
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "นี่เป็นค่าวันที่ที่ไม่ถูกต้อง !"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "ช่วง\n"
-#~ "%1\n"
-#~ "มีค่าน้อยเกินไป"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "ช่วง\n"
-#~ "%1\n"
-#~ "มีค่ามากเกินไป"
-
 #~ msgid ""
 #~ "The ranges\n"
 #~ "%1\n"
@@ -16203,26 +18452,6 @@ msgstr ""
 #~ "และ\n"
 #~ "%2\n"
 #~ "มีขนาดที่แตกต่างกัน"
-
-#, fuzzy
-#~| msgid "Consolidate"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "ผสาน"
-
-#, fuzzy
-#~| msgid "The source tables intersect with the destination table"
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "ตารางต้นทางอินเตอร์เซกต์ตารางปลายทาง"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "รูปแบบช่วง\n"
-#~ "%1\n"
-#~ "ไม่ถูกต้อง"
 
 #, fuzzy
 #~| msgid "&Function:"
@@ -16239,95 +18468,11 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "ไ&ปยังค่าอ้างอิง:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "เปลี่ยนค่ามุม..."
-
-#~ msgid "Angle"
-#~ msgstr "มุม"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "เปลี่ยนมุมที่จะให้เนื้อหาเซลล์ถูกพิมพ์เอียงไป"
-
-#~ msgid "Increase Precision"
-#~ msgstr "เพิ่มจำนวนทศนิยม"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "เพิ่มจำนวนเลขทศนิยมที่จะแสดงบนหน้าจอ"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "ลดจำนวนทศนิยม"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "ลดจำนวนเลขทศนิยมที่จะแสดงบนหน้าจอ"
-
-#, fuzzy
-#~| msgid "Increase Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "เพิ่มจำนวนทศนิยม"
-
-#, fuzzy
-#~| msgid "Decrease Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "ลดจำนวนทศนิยม"
-
-#~ msgid "Change Angle"
-#~ msgstr "เปลี่ยนมุม"
-
-#~ msgid "Angle:"
-#~ msgstr "มุม:"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "เปลี่ยนมุม"
-
-#~ msgid "Area Name..."
-#~ msgstr "ชื่อพื้นที่..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "ตั้งชื่อพื้นที่ของแผ่นงานตารางคำนวณ"
-
-#~ msgid "Named Areas..."
-#~ msgstr "พื้นที่ที่ถูกกำหนดชื่อ..."
-
-#, fuzzy
-#~| msgid "Named Areas..."
-#~ msgid "Named Areas"
-#~ msgstr "พื้นที่ที่ถูกกำหนดชื่อ..."
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "แก้ไขหรือเลือกพื้นที่ที่ถูกกำหนดชื่อ"
-
-#~ msgid "Add Named Area"
-#~ msgstr "เพิ่มพื้นที่ที่กำหนดชื่อ"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "ป้อนชื่อของพื้นที่:"
-
-#, fuzzy
-#~ msgid "Replace Named Area"
-#~ msgstr "แสดงพื้นที่ที่ถูกกำหนดชื่อ"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "แสดงพื้นที่ที่ถูกกำหนดชื่อ"
-
 #~ msgid "&Select"
 #~ msgstr "เลือก"
 
-#~ msgid "Area: %1"
-#~ msgstr "พื้นที่: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "แก้ไข..."
-
-#, fuzzy
-#~ msgid "&Remove"
-#~ msgstr "&ลบหมายเหตุ"
 
 #, fuzzy
 #~ msgid "New Named Area"
@@ -16337,119 +18482,6 @@ msgstr ""
 #~| msgid "Edit Area"
 #~ msgid "Edit Named Area"
 #~ msgstr "แก้ไขพื้นที่"
-
-#, fuzzy
-#~| msgid "Do you really want to remove this area name?"
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "คุณต้องการลบชื่อพื้นที่นี้ใช่หรือไม่ ?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "ลบพื้นที่ที่กำหนดชื่อ"
-
-#~ msgid "Cells:"
-#~ msgstr "เซลล์:"
-
-#~ msgid "Sheet:"
-#~ msgstr "แผ่นงาน:"
-
-#~ msgid "Area name:"
-#~ msgstr "ชื่อพื้นที่:"
-
-#~ msgid "Align Left"
-#~ msgstr "เรียงชิดด้านซ้าย"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "จัดเรียงเนื้อหาเซลล์ชิดด้านซ้ายของเซลล์"
-
-#~ msgid "Align Center"
-#~ msgstr "เรียงกึ่งกลาง"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "จัดเรียงเนื้อหาเซลล์ให้อยู่กึ่งกลางเซลล์"
-
-#~ msgid "Align Right"
-#~ msgstr "เรียงชิดด้านขวา"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "จัดเรียงเนื้อหาเซลล์ชิดด้านขวาของเซลล์"
-
-#~ msgid "Align Top"
-#~ msgstr "เรียงชิดด้านบน"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "จัดเรียงเนื้อหาเซลล์ชิดด้านบนของเซลล์"
-
-#~ msgid "Align Middle"
-#~ msgstr "เรียงตรงกลาง"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "จัดเรียงเนื้อหาเซลล์ให้อยู่ตำแหน่งกึ่งกลางเซลล์"
-
-#~ msgid "Align Bottom"
-#~ msgstr "เรียงชิดด้านล่าง"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "จัดเรียงเนื้อหาเซลล์ชิดด้านล่างของเซลล์"
-
-#~ msgid "Border Left"
-#~ msgstr "เส้นขอบด้านซ้าย"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "ตั้งค่าขอบด้านซ้ายให้พื้นที่ที่เลือก"
-
-#~ msgid "Border Right"
-#~ msgstr "เส้นขอบด้านขวา"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "ตั้งค่าเส้นขอบด้านขวาให้พื้นที่ที่เลือก"
-
-#~ msgid "Border Top"
-#~ msgstr "เส้นขอบด้านบน"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "ตั้งค่าเส้นขอบด้านบนให้พื้นที่ที่เลือก"
-
-#~ msgid "Border Bottom"
-#~ msgstr "เส้นขอบด้านล่าง"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "ตั้งค่าเส้นขอบด้านล่างให้พื้นที่ที่เลือก"
-
-#~ msgid "All Borders"
-#~ msgstr "เส้นขอบทั้งหมด"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "ตั้งค่าให้ทุกเซลล์ในพื้นที่ที่เลือกมีเส้นขอบล้อมรอบ"
-
-#~ msgid "No Borders"
-#~ msgstr "ไม่มีเส้นขอบ"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "ลบเส้นขอบทั้งหมดออกจากพื้นที่ที่เลือก"
-
-#~ msgid "Border Outline"
-#~ msgstr "เส้นขอบรอบนอก"
-
-#, fuzzy
-#~| msgid "Border Outline"
-#~ msgid "Outline"
-#~ msgstr "เส้นขอบรอบนอก"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "ตั้งค่าให้มีเส้นขอบรอบนอกพื้นที่ที่เลือก"
-
-#, fuzzy
-#~| msgid "Change Horizontal Alignment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "เปลี่ยนการจัดวางทางแนวนอน"
-
-#, fuzzy
-#~| msgid "Change Vertical Alignment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "เปลี่ยนการจัดวางทางแนวตั้ง"
 
 #~ msgid "Australia"
 #~ msgstr "ออสเตรเลีย"
@@ -18222,69 +20254,6 @@ msgstr ""
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "ดอลลาร์ซิมบับเว"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "ปรับกลับไปใช้รูปแบบปริยาย"
-
-#~ msgid "Strike Out"
-#~ msgstr "เส้นพาดกลาง"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "เพิ่มขนาดตัวอักษร"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "ลดขนาดตัวอักษร"
-
-#~ msgid "Wrap Text"
-#~ msgstr "ตัดคำข้อความ"
-
-#~ msgid "Wrap"
-#~ msgstr "ตัดคำ"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "สร้างให้มีการตัดคำข้อความในเซลล์เป็นแบบหลายบรรทัด"
-
-#~ msgid "Vertical Text"
-#~ msgstr "ข้อความทางแนวตั้ง"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "พิมพ์เนื้อหาเซลล์ทางแนวตั้ง"
-
-#~ msgid "Percent Format"
-#~ msgstr "รูปแบบร้อยละ"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "ตั้งค่ารูปแบบเซลล์ในรูปแบบร้อยละ"
-
-#~ msgid "Money Format"
-#~ msgstr "รูปแบบเงินตรา"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "แสดงรูปแบบเซลล์ในการแสดงรูปแบบเงินตราให้เป็นแบบท้องถิ่น"
-
-#, fuzzy
-#~| msgid "Wrap Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "ตัดคำข้อความ"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "ข้อความทางแนวตั้ง"
-
-#, fuzzy
-#~| msgid "Format Percent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "รูปแบบร้อยละ"
-
-#, fuzzy
-#~| msgid "Format Money"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "รูปแบบเงินตรา"
-
 #~ msgid "&Data Format"
 #~ msgstr "รูปแบบ&ข้อมูล"
 
@@ -18319,516 +20288,39 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "ความสูงปริยาย (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "สูง:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "ตั้งค่าความสูงของเซลล์"
 
 #~ msgid "Default width (%1)"
 #~ msgstr "ความกว้างปริยาย (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "กว้าง:"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "เพิ่มหมายเหตุ"
-
-#~ msgid "Increase Indent"
-#~ msgstr "เพิ่มระยะการเยื้อง"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "เพิ่มระยะของการเยื้อง"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "ลดระยะการเยื้อง"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "ลดระยะของการเยื้อง"
-
-#~ msgid "Upper Case"
-#~ msgstr "ตัวพิมพ์ใหญ่"
-
-#~ msgid "Upper"
-#~ msgstr "ตัวพิมพ์ใหญ่"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "แปลงตัวอักษรทั้งหมดเป็นตัวพิมพ์ใหญ่"
-
-#~ msgid "Lower Case"
-#~ msgstr "ตัวพิมพ์เล็ก"
-
-#~ msgid "Lower"
-#~ msgstr "ตัวพิมพ์เล็ก"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "แปลงตัวอักษรทั้งหมดเป็นตัวพิมพ์เล็ก"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "แปลงตัวอักษรตัวแรกเป็นตัวพิมพ์ใหญ่"
-
-#, fuzzy
-#~ msgid "First Letter Upper"
-#~ msgstr "แปลงตัวอักษรตัวแรกเป็นตัวพิมพ์ใ&หญ่"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "ตัวอักษรตัวแรกเป็นตัวพิมพ์ใหญ่"
-
-#~ msgid "Comment..."
-#~ msgstr "หมายเหตุ..."
-
-#, fuzzy
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "แก้ไขหมายเหตุของเซลล์นี้"
-
-#~ msgid "Remove Comment"
-#~ msgstr "ลบหมายเหตุ"
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "ลบหมายเหตุของเซลล์นี้"
-
-#, fuzzy
-#~| msgid "Switch to uppercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "สลับเป็นตัวพิมพ์ใหญ่"
-
-#, fuzzy
-#~| msgid "Switch to lowercase"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "สลับเป็นตัวพิมพ์เล็ก"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "แปลงตัวอักษรตัวแรกเป็นตัวพิมพ์ใ&หญ่"
-
-#, fuzzy
-#~| msgid "Remove Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "ลบหมายเหตุ"
-
-#, fuzzy
-#~ msgid "Clear Comment"
-#~ msgstr "หมายเหตุ"
-
-#, fuzzy
-#~| msgid "Change Case"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "เปลี่ยนตัวพิมพ์ของอักษร "
-
-#, fuzzy
-#~| msgid "Increase Indentation"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "เพิ่มระยะการเยื้อง"
-
-#, fuzzy
-#~| msgid "Decrease Indentation"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "ลดระยะการเยื้อง"
-
-#~ msgid "Cell Comment"
-#~ msgstr "หมายเหตุของเซลล์"
-
-#~ msgid "&Left"
-#~ msgstr "ทางซ้าย"
-
-#~ msgid "&Right"
-#~ msgstr "ทางขวา"
-
 #~ msgid "&Up"
 #~ msgstr "เลื่อนขึ้น"
 
-#~ msgid "&Down"
-#~ msgstr "เลื่อนลง"
-
-#~ msgid "Autosum"
-#~ msgstr "ผลรวมอัตโนมัติ"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "แทรกฟังก์ชัน 'ผลรวม'"
-
-#, fuzzy
-#~| msgid "Fill Selection"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "เติมเต็มส่วนที่เลือก"
-
-#~ msgid "From &Text File..."
-#~ msgstr "จากแฟ้ม&ข้อความ..."
-
-#~ msgid "Text File"
-#~ msgstr "แฟ้มข้อความ"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "แทรกข้อมูลจากแฟ้มข้อความ ไปยังตำแหน่งเคอร์เซอร์/ตำแหน่งที่เลือกในปัจจุบัน"
-
 #~ msgid "From &Clipboard..."
 #~ msgstr "จาก&คลิปบอร์ด..."
-
-#~ msgid "Clipboard"
-#~ msgstr "คลิปบอร์ด"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "แทรกข้อมูล csv จากคลิปบอร์ด ไปยังตำแหน่งเคอร์เซอร์/ตำแหน่งที่เลือกในปัจจุบัน"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&ข้อความไปยังสดมภ์..."
-
-#, fuzzy
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "ขยายเนื้อหาของเซลล์เป็นหลาย ๆ สดมภ์"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "กำลังแทรกข้อมูลจากคลิปบอร์ด"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "ไม่มีข้อมูลอยู่ในคลิปบอร์ด"
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "ไม่มีข้อมูลที่สามารถใช้ได้ภายในคลิปบอร์ด"
-
-#~ msgid "Text to Columns"
-#~ msgstr "ข้อความไปยังสดมภ์"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "ไม่สามารถเปิดแฟ้มเพื่อนำเข้าได้"
-
-#, fuzzy
-#~| msgid "Inserting From Clipboard"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "กำลังแทรกข้อมูลจากคลิปบอร์ด"
-
-#, fuzzy
-#~| msgid "Inserting Text File"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "กำลังแทรกแฟ้มข้อความ"
-
-#, fuzzy
-#~| msgid "Text to Columns"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "ข้อความไปยังสดมภ์"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "ผสานเซลล์ทางแนวนอน"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "ผสานเซลล์ทางแนวตั้ง"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "แยกเซลล์"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "รวมขอบเขตที่เลือกไว้ให้เป็นเซลล์ขนาดใหญ่เซลล์เดียว"
-
-#~ msgid "Resize Column..."
-#~ msgstr "ปรับขนาดสดมภ์..."
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "ปรับความกว้างของสดมภ์"
-
-#~ msgid "Insert Columns"
-#~ msgstr "แทรกสดมภ์"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "แทรกสดมภ์ใหม่ไปยังแผ่นงาน"
-
-#~ msgid "Remove Columns"
-#~ msgstr "ลบสดมภ์"
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "ลบเซลล์ปัจจุบันออกจากแผ่นงาน"
-
-#~ msgid "Hide Columns"
-#~ msgstr "ซ่อนสดมภ์"
 
 #, fuzzy
 #~ msgid "Hide the column from this"
 #~ msgstr "ซ่อนสดมภ์จากการแสดงผล"
 
-#~ msgid "Show Columns..."
-#~ msgstr "แสดงสดมภ์..."
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "แสดงสดมภ์ที่ถูกซ่อนไว้"
-
-#~ msgid "Equalize Column"
-#~ msgstr "ปรับขนาดสดมภ์ให้เท่ากัน"
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "ปรับขนาดสดมภ์ที่เลือกไว้ให้มีขนาดเท่ากัน"
-
-#~ msgid "Show Columns"
-#~ msgstr "แสดงสดมภ์"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "แสดงสดมภ์ที่ถูกซ่อนไว้ในช่วงที่เลือกไว้"
-
-#~ msgid "Resize Row..."
-#~ msgstr "ปรับขนาดแถว..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "ปรับความสูงของแถว"
-
-#~ msgid "Insert Rows"
-#~ msgstr "แทรกแถว"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "แทรกแถวใหม่ไปยังแผ่นงาน"
-
-#~ msgid "Remove Rows"
-#~ msgstr "ลบแถว"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "ลบแถวออกจากแผ่นงาน"
-
-#~ msgid "Hide Rows"
-#~ msgstr "ซ่อนแถว"
-
 #, fuzzy
 #~ msgid "Hide a row from this"
 #~ msgstr "ซ่อนแถวจากการแสดงผล"
 
-#~ msgid "Show Rows..."
-#~ msgstr "แสดงแถว..."
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "แสดงแถวที่ถูกซ่อนไว้"
-
-#~ msgid "Equalize Row"
-#~ msgstr "ปรับขนาดแถวให้เท่ากัน"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "ปรับขนาดแถวที่เลือกไว้ให้มีขนาดเท่ากัน"
-
-#~ msgid "Show Rows"
-#~ msgstr "แสดงแถว"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "แสดงแถวที่ถูกซ่อนไว้ในช่วงที่เลือกไว้"
-
-#, fuzzy
-#~ msgid "Adjust Row && Column"
-#~ msgstr "ปรับค่าแถวและสดมภ์ให้พอดี"
-
-#, fuzzy
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "ปรับค่าแถวและสดมภ์ให้พอดีกับเนื้อหา"
-
-#~ msgid "Adjust Column"
-#~ msgstr "ปรับขนาดสดมภ์ให้พอดี"
-
 #~ msgid "Delete Columns"
 #~ msgstr "ลบสดมภ์"
 
-#~ msgid "Adjust Row"
-#~ msgstr "ปรับขนาดแถวให้พอดี"
-
 #~ msgid "Delete Rows"
 #~ msgstr "ลบแถว"
-
-#~ msgid "Resize Row"
-#~ msgstr "ปรับขนาดแถว"
-
-#~ msgid "Resize Column"
-#~ msgstr "ปรับขนาดสดมภ์"
-
-#, fuzzy
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "เลือกสดมภ์ที่ซ่อนอยู่เพื่อแสดง"
-
-#, fuzzy
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "เลือกแถวที่ซ่อนอยู่เพื่อแสดง"
-
-#~ msgid "Column: %1"
-#~ msgstr "สดมภ์: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "แถว: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "ที่อยู่เ&ชื่อมโยง..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "แทรกที่อยู่เชื่อมโยงอินเทอร์เน็ต"
-
-#~ msgid "Link"
-#~ msgstr "ที่อยู่เชื่อมโยง"
-
-#~ msgid "Remove Link"
-#~ msgstr "ลบที่อยู่เชื่อมโยง"
-
-#~ msgid "Remove a link"
-#~ msgstr "ลบที่อยู่เชื่อมโยง"
-
-#~ msgid "Insert Link"
-#~ msgstr "แทรกที่อยู่เชื่อมโยง"
 
 #~ msgid "Edit Link"
 #~ msgstr "แก้ไขที่อยู่เชื่อมโยง"
 
 #, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "ลบที่อยู่เชื่อมโยง"
-
-#, fuzzy
-#~| msgid "Set Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "ตั้งค่าที่อยู่เชื่อมโยง"
-
-#~ msgid "Internet"
-#~ msgstr "อินเทอร์เน็ต"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "เชื่อมโยงไปยังที่อยู่อินเทอร์เน็ต"
-
-#~ msgid "Text to display:"
-#~ msgstr "ข้อความที่จะแสดง:"
-
-#~ msgid "Internet address:"
-#~ msgstr "ที่อยู่อินเทอร์เน็ต:"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "อีเมล:"
-
-#, fuzzy
-#~| msgid "Link to Mail Address"
-#~ msgid "Link to Email Address"
-#~ msgstr "เชื่อมโยงไปยังที่อยู่จดหมาย"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "พื้นที่ข้อความว่างอยู่ !"
-
-#~ msgid "Subject:"
-#~ msgstr "หัวข้อ:"
-
-#~ msgid "File"
-#~ msgstr "แฟ้ม"
-
-#~ msgid "Link to File"
-#~ msgstr "เชื่อมโยงไปยังแฟ้ม"
-
-#~ msgid "File location:"
-#~ msgstr "ตำแหน่งของแฟ้ม:"
-
-#~ msgid "Recent file:"
-#~ msgstr "แฟ้มที่เคยเรียกใช้:"
-
-#, fuzzy
-#~| msgid "Entries:"
-#~ msgid "No Entries"
-#~ msgstr "รายการ:"
-
-#~ msgid "Link to Cell"
-#~ msgstr "เชื่อมโยงไปยังเซลล์"
-
-#, fuzzy
-#~ msgid "Cell or Named Area:"
-#~ msgstr "ลบเซลล์"
-
-#~ msgid "&Sort..."
-#~ msgstr "เรียง&ลำดับ..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "เรียงลำดับกลุ่มของเซลล์"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "เรียงลำดับจาก&มากไปหาน้อย"
-
-#, fuzzy
-#~| msgid "Sort a group of cells in decreasing (last to first) order"
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "เรียงลำดับกลุ่มเซลล์แบบมากไปหาน้อย (จากตัวสุดท้ายไปตัวแรก)"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "เรียงลำดับจากน้อ&ยไปหามาก"
-
-#, fuzzy
-#~| msgid "Sort a group of cells in ascending (first to last) order"
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "เรียงลำดับกลุ่มเซลล์แบบน้อยไปหามาก (จากตัวแรกไปตัวสุดท้าย)"
-
-#, fuzzy
-#~| msgid "Sort Data"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "เรียงลำดับข้อมูล"
-
-#, fuzzy
 #~| msgid "&Use custom list"
 #~ msgid "Use custom list"
 #~ msgstr "ใ&ช้รายการกำหนดเอง"
-
-#~ msgid "Column %1"
-#~ msgstr "สดมภ์ %1"
-
-#~ msgid "Row %1"
-#~ msgstr "แถว %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "แถวแ&รกเป็นส่วนหัว"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "แถวแ&รกเป็นส่วนหัว"
-
-#~ msgid "Sort"
-#~ msgstr "เรียงลำดับ"
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Case Insensitive"
-#~ msgstr "วางและแทรก"
 
 #, fuzzy
 #~ msgid "Move Up"
@@ -18872,222 +20364,10 @@ msgstr ""
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "เรียงลำดับกลุ่มของเซลล์"
 
-#~ msgid "Validity..."
-#~ msgstr "การตรวจสอบ..."
-
-#, fuzzy
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "ตั้งค่าการทดสอบเพื่อยืนยันว่าข้อมูลของเซลล์มีความถูกต้อง"
-
-#~ msgid "Validity"
-#~ msgstr "การตรวจสอบ"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "ลบตาราง"
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "ลบตัวทดสอบความถูกต้องบนเซลล์นี้"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "ลบตาราง"
-
-#, fuzzy
-#~| msgid "Validity Criteria"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "เงื่อนไขการตรวจสอบ"
-
-#~ msgid "Clear &All"
-#~ msgstr "ล้างทั้ง&หมด"
-
 #, fuzzy
 #~| msgid "Sort Criteria"
 #~ msgid "&Criteria"
 #~ msgstr "เงื่อนไขการเรียงลำดับ"
-
-#~ msgid "Allow:"
-#~ msgstr "อนุญาต:"
-
-#~ msgid "Integer"
-#~ msgstr "เลขจำนวนเต็ม"
-
-#~ msgid "Text Length"
-#~ msgstr "ความยาวข้อความ"
-
-#, fuzzy
-#~ msgid "List"
-#~ msgstr "รายการที่มี:"
-
-#~ msgid "Data:"
-#~ msgstr "ข้อมูล:"
-
-#~ msgid "Minimum:"
-#~ msgstr "น้อยที่สุด: "
-
-#~ msgid "Maximum:"
-#~ msgstr "มากที่สุด: "
-
-#~ msgid "Date:"
-#~ msgstr "วันที่:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "วันที่น้อยที่สุด:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "วันที่มากที่สุด:"
-
-#~ msgid "Time:"
-#~ msgstr "เวลา:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "เวลาน้อยที่สุด:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "เวลามากที่สุด:"
-
-#~ msgid "Number:"
-#~ msgstr "หมายเลข:"
-
-#~ msgid "Entries:"
-#~ msgstr "รายการ:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "แจ้งเตือน&ข้อผิดพลาด"
-
-#, fuzzy
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "แ&สดงข้อความผิดพลาด"
-
-#~ msgid "Action:"
-#~ msgstr "การกระทำ:"
-
-#~ msgid "Stop"
-#~ msgstr "หยุด"
-
-#~ msgid "Warning"
-#~ msgstr "แจ้งเตือน"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "เรื่อง:"
-
-#~ msgid "Message:"
-#~ msgstr "ข้อความ:"
-
-#, fuzzy
-#~ msgid "This is not a valid value."
-#~ msgstr "นี่เป็นค่าที่ไม่ถูกต้อง !"
-
-#, fuzzy
-#~ msgid "This is not a valid time."
-#~ msgstr "นี่เป็นค่าเวลาที่ไม่ถูกต้อง !"
-
-#, fuzzy
-#~ msgid "This is not a valid date."
-#~ msgstr "นี่เป็นค่าวันที่ที่ไม่ถูกต้อง !"
-
-#~ msgid "&Series..."
-#~ msgstr "&อนุกรม..."
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "แทรกอนุกรม"
-
-#, fuzzy
-#~| msgid "Insert Series"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "แทรกอนุกรม"
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Character"
-#~ msgstr "อัก&ขระพิเศษ..."
-
-#, fuzzy
-#~| msgid "The text that will replace characters in old text"
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "ข้อความจะแทนที่ตัวอักษรในข้อความเดิม"
-
-#~ msgid "Series"
-#~ msgstr "อนุกรม"
-
-#~ msgid "Insert Values"
-#~ msgstr "แทรกค่า"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "แทรกอนุกรมทางแนวตั้ง ด้านล่างตัวอื่น ๆ"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "แทรกอนุกรมทางแนวนอน จากซ้ายไปขวา"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "เชิงเส้น (2,4,6,...)"
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "เรขาคณิต (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "สร้างอนุกรมจาก 'ค่าเริ่มต้น' ถึง 'ค่าสิ้่นสุด' "
-#~ "และสำหรับแต่ละขั้นลำดับจะคูณค่ากับค่าแต่ละขั้นที่กำหนด โดยการใช้ขั้น 5 ขั้นจะได้รายการเช่น: 5, "
-#~ "25, 125, 625 โดยเป็นการคูณ 5 กับ 5 (ค่าแต่ละขั้น) มีค่าเท่ากับ 25, และนำไปคูณกับ 5 อีก "
-#~ "ได้ค่า 125, และทำการคูณเพิ่มไปตามลำดับ จนถึงค่าขั้นสุดท้ายคือ 625"
-
-#~ msgid "Start value:"
-#~ msgstr "ค่าเริ่มต้น:"
-
-#~ msgid "Stop value:"
-#~ msgstr "ค่าสิ้นสุด:"
-
-#~ msgid "Step value:"
-#~ msgstr "ค่าแต่ละขั้น:"
-
-#, fuzzy
-#~ msgid "End and start value must be positive."
-#~ msgstr "ค่าเริ่มและสิ้นสุดจะต้องมีค่ามากกว่าศูนย์ !"
-
-#, fuzzy
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr "ค่าสิ้นสุดจะต้องมากกว่าค่าเริ่มต้น หรือค่าแต่ละขั้นจะต้องน้อยกว่า '1' !"
-
-#, fuzzy
-#~ msgid "Step is negative."
-#~ msgstr "ค่าแต่ละขั้นน้อยกว่าศูนย์ !"
-
-#, fuzzy
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr "ค่าแต่ละขั้นจะต้องมากกว่าศูนย์ ไม่เช่นนั้นอนุกรมแบบลิเนียร์จะไม่มีจุดสิ้นสุด !"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr "หากค่าเริ่มต้นมากกว่าค่าสิ้นสุดแล้ว ค่าแต่ละขั้นจะต้องมีค่าน้อยกว่าศูนย์ !"
-
-#, fuzzy
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr "หากค่าแต่ละขั้นน้อยกว่าศูนย์ ค่าเริ่มต้นจะต้องมีค่ามากกว่าค่าสิ้นสุด !"
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "อัก&ขระพิเศษ..."
 
 #~ msgid "Internet address is empty"
 #~ msgstr "ที่อยู่อินเทอร์เน็ตว่างอยู่"
@@ -36171,9 +37451,6 @@ msgstr ""
 #~ msgid "Document's Locale Settings"
 #~ msgstr "รูปแบบภาษาท้องถิ่น"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "กำลังแทรกแฟ้มข้อความ"
-
 #, fuzzy
 #~| msgid "Value (array)"
 #~ msgid "y (array)"
@@ -36241,9 +37518,6 @@ msgstr ""
 
 #~ msgid "Remove Cell"
 #~ msgstr "ลบเซลล์"
-
-#~ msgid "Paste"
-#~ msgstr "วาง"
 
 #~ msgid "Paste & Insert"
 #~ msgstr "วางและแทรก"
@@ -36334,11 +37608,6 @@ msgstr ""
 #~| msgid "Statistical"
 #~ msgid "Statistical Functions"
 #~ msgstr "ค่าสถิติ"
-
-#, fuzzy
-#~| msgid "Related Functions"
-#~ msgid "Text Functions"
-#~ msgstr "ฟังก์ชันที่เกี่ยวข้อง"
 
 #, fuzzy
 #~| msgid "Function"

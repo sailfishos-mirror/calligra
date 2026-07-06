@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2009-04-22 00:19+0530\n"
 "Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -142,8 +142,13 @@ msgstr "शीर्ष टीका"
 msgid "Header1"
 msgstr "शीर्ष टीका"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "मूलभूत"
@@ -175,7 +180,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "पाठ"
@@ -250,7 +256,8 @@ msgstr ""
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "पैरामीटर"
@@ -877,14 +884,15 @@ msgstr "संदर्भ"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "संख्या"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "प्रारूप"
@@ -945,6 +953,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "मान"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "डाटाबेस"
@@ -1218,6 +1228,7 @@ msgstr "दिनाँक आ समय"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1289,7 +1300,8 @@ msgstr ""
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "समय"
@@ -4770,6 +4782,7 @@ msgid "Regular payments"
 msgstr "नियमित वर्णन"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "प्रकार"
@@ -5053,12 +5066,19 @@ msgstr "दस्ती"
 msgid "Automatic"
 msgstr "स्वचालित"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "सूचना"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "त्रुटि"
@@ -5854,7 +5874,7 @@ msgstr ""
 msgid "Math"
 msgstr "गणित"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "फंक्शन"
@@ -6347,6 +6367,7 @@ msgid "Range"
 msgstr "परिसर"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "मापदंड"
@@ -7901,6 +7922,7 @@ msgid "Row"
 msgstr "पँक्ति"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "कालम"
@@ -12334,7 +12356,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "जोड़ू (&I)"
@@ -12354,7 +12376,7 @@ msgid "F&ormat"
 msgstr "प्रारूप"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "कोष्ठसभकेँ मिलाबू"
@@ -12439,8 +12461,8 @@ msgstr "नाम बदलू शीट"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "फोन्ट"
@@ -12859,14 +12881,16 @@ msgstr "निचलका सीमा"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "क्षैतिज"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "लम्बवत"
@@ -12893,13 +12917,15 @@ msgid "Up"
 msgstr "उप्पर"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "दहिन्ना"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "बामाँ"
@@ -12912,36 +12938,50 @@ msgstr "कोष्ठ जोडू"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "किछु नहि"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "जोड़"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "न्यूनतम"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "अधिकतम"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "औसत"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "गिनती"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -13338,7 +13378,8 @@ msgstr "फाइल विकल्प"
 msgid "Move selected sheet to the bottom"
 msgstr "शीटकेँ रक्षा करू"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr ""
@@ -13564,6 +13605,7 @@ msgid "Anchor"
 msgstr "एंकर"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "सेल"
@@ -13584,7 +13626,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "शीट दिअ'"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "अगिला"
@@ -13601,7 +13643,7 @@ msgstr "नाम बदलू शीट"
 msgid "Previous Sheet"
 msgstr "पछिला"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "पछिला"
@@ -13831,7 +13873,7 @@ msgid ""
 "Do you want to continue?"
 msgstr ""
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, fuzzy, kde-format
 #| msgid "Area name:"
 msgid "Enter name:"
@@ -13896,14 +13938,14 @@ msgstr "CountA"
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 #| msgid "Text Color"
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "पाठ रंग"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 #| msgid "Change Background Color"
 msgctxt "(qtundo-format)"
@@ -13912,11 +13954,3384 @@ msgstr "पृष्ठभूमि रंग बदलू"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 #| msgid "Page order"
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "पृष्ठ क्रम"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Insert Columns"
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "पंक्तिसभकेँ जोडू"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+#| msgid "Delete Columns"
+msgid "Remove Columns"
+msgstr "कालम मेटाउ"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Remove Rows"
+msgstr "हटाबू"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+#| msgid "Insert Sheet"
+msgid "Inserts a new row into the spreadsheet"
+msgstr "शीट दिअ'"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Removes a row from the spreadsheet"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+#| msgid "Insert Sheet"
+msgid "Inserts a new column into the spreadsheet"
+msgstr "शीट दिअ'"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgid "Hide Columns"
+msgstr "कालम"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, fuzzy, kde-format
+#| msgid "Resize"
+msgid "Hide Rows"
+msgstr "आकार बदलू"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgid "Show Columns"
+msgstr "कालम"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, fuzzy, kde-format
+#| msgid "Rows"
+msgid "Show Rows"
+msgstr "पंक्ति"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+#| msgid "Show Sheet"
+msgid "Show hidden rows in the selection"
+msgstr "शीट देखाउ"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Hide the selected rows"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgid "Show hidden columns in the selection"
+msgstr "कालम"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Hide the selected columns"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+#| msgid "Delete Columns"
+msgid "Equalize Column"
+msgstr "कालम मेटाउ"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, fuzzy, kde-format
+#| msgid "Resize"
+msgid "Equalize Row"
+msgstr "आकार बदलू"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Adjust Column"
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+#| msgid "Insert Rows"
+msgid "Adjust Row"
+msgstr "पंक्तिसभकेँ जोडू"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Adjust Row && Column"
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgid "Show Columns..."
+msgstr "कालम"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, fuzzy, kde-format
+#| msgid "Rows"
+msgid "Show Rows..."
+msgstr "पंक्ति"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+#| msgid "Columns"
+msgid "Show hidden columns"
+msgstr "कालम"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+#| msgid "Rows"
+msgid "Show hidden rows"
+msgstr "पंक्ति"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, fuzzy, kde-format
+#| msgid "Column"
+msgid "Column: %1"
+msgstr "कालम"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr ""
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+#| msgid "Delete Columns"
+msgid "Resize Column..."
+msgstr "कालम मेटाउ"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, fuzzy, kde-format
+#| msgid "Resize"
+msgid "Resize Row..."
+msgstr "आकार बदलू"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+#| msgid "Change Case"
+msgid "Change the height of a row"
+msgstr "केस बदलू"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr ""
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "बामाँ संरेखण"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Left justify the cell contents"
+msgstr "टिप्पणी"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+#| msgid "Center vertically"
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "केंद्र लबंवत रूप सँ"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "दहिन्ना संरेखण"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Right justify the cell contents"
+msgstr "टिप्पणी"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "केँद्रक' सँरेखण"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Center the cell contents"
+msgstr "टिप्पणी"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "केंद्र"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "उप्पर संरेखण"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+#| msgid "Center vertically"
+msgid "Align cell contents along the top of the cell"
+msgstr "केंद्र लबंवत रूप सँ"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "उप्पर"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+#| msgid "Center vertically"
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "केंद्र लबंवत रूप सँ"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "तल संरेखण"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+#| msgid "Center vertically"
+msgid "Align cell contents along the bottom of the cell"
+msgstr "केंद्र लबंवत रूप सँ"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "नीच्चाँ"
+
+#: ui/actions/Align.cpp:185
+#, fuzzy, kde-format
+#| msgid "Middle"
+msgid "Align Middle"
+msgstr "मध्य"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+#| msgid "Center vertically"
+msgid "Align cell contents centered in the cell"
+msgstr "केंद्र लबंवत रूप सँ"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "मध्य"
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+#| msgid "Change Case"
+msgid "Change Angle..."
+msgstr "केस बदलू"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr ""
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "कोण"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Case"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "केस बदलू"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "&Auto-Filter"
+msgstr "फिल्टर"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Filter"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "फिल्टर"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr ""
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Format"
+msgid "Auto-Format..."
+msgstr "प्रारूप"
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr ""
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr ""
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "प्रारूप"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Autosum"
+msgstr "स्वचालित"
+
+#: ui/actions/AutoSum.cpp:22
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Insert the 'sum' function"
+msgstr "फंक्शन"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Automatic"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "स्वचालित"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "Border Left"
+msgstr "किनार"
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Set a left border to the selected area"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "Border Right"
+msgstr "किनार"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Set a right border to the selected area"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "Border Top"
+msgstr "किनार"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Set a top border to the selected area"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+#| msgid "Border Color"
+msgid "Border Bottom"
+msgstr "किनारे क' रंग"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "All Borders"
+msgstr "किनार"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "सभ"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "Border"
+msgid "No Borders"
+msgstr "किनार"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Remove all borders in the selected area"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/Border.cpp:213
+#, fuzzy, kde-format
+#| msgid "Outline"
+msgid "Border Outline"
+msgstr "बाहरी रूपरेखा"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr ""
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "बाहरी रूपरेखा"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "किनारे क' रंग"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+#| msgid "Border Color"
+msgid "Select a new border color"
+msgstr "किनारे क' रंग"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+#| msgid "Border Color"
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "किनारे क' रंग"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Insert Cells..."
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+#| msgid "Insert Sheet"
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "शीट दिअ'"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, fuzzy, kde-format
+#| msgid "Remove All"
+msgid "Remove Cells..."
+msgstr "सभटा हटाउ"
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Removes the cells from the spreadsheet"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "सभकेँ हटाबू"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Clear all contents and formatting of the current cell"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Clear Contents"
+msgstr "टिप्पणी"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Remove the contents of the current cell"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+#| msgid "Clear"
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "खाली"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+#| msgid "Delete"
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "मेटाबू"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "टिप्पणी"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr ""
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Clear Comment"
+msgstr "टिप्पणी"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Remove this cell's comment"
+msgstr "टिप्पणी"
+
+#: ui/actions/Comment.cpp:60
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Remove Comment"
+msgstr "टिप्पणी"
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "टिप्पणी"
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "टिपप्णी जोड़ू"
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Conditional Styles"
+msgid "Conditional Styles..."
+msgstr "सशर्त शैली"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr ""
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "सशर्त शैली"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+#| msgid "Conditional Styles"
+msgid "Remove the conditional cell styles"
+msgstr "सशर्त शैली"
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+#| msgid "Conditional Styles"
+msgid "Remove Conditional Styles"
+msgstr "सशर्त शैली"
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+#| msgid "Conditional Styles"
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "सशर्त शैली"
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+#| msgid "Conditional Styles"
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "सशर्त शैली"
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+#| msgid "Consolidate"
+msgid "&Consolidate..."
+msgstr "एकत्रित करू"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr ""
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Consolidate"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "एकत्रित करू"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr ""
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "Move the cell object to the clipboard"
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "Text File"
+msgid "Insert From &Text File..."
+msgstr "पाठ फाइल:"
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "पाठ फाइल:"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgid "Text File"
+msgid "Inserting Text File"
+msgstr "पाठ फाइल:"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+#| msgid "Text File"
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "पाठ फाइल:"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "क्लिपबोर्ड"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "क्लिपबोर्ड"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:155
+#, fuzzy, kde-format
+#| msgid "Clipboard"
+msgid "Inserting From Clipboard"
+msgstr "क्लिपबोर्ड"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+#| msgid "Clipboard"
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "क्लिपबोर्ड"
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+#| msgid "Text to Columns"
+msgid "&Text to Columns..."
+msgstr "पाठसँ कालम"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "पाठसँ कालम"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgid "Text to Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "पाठसँ कालम"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+#| msgid "Custom..."
+msgid "Custom Lists..."
+msgstr "मनपसिन्न..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgid "Add Named Area"
+msgstr "प्रतिस्थापन"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, fuzzy, kde-format
+#| msgid "Reference"
+msgid "Enter the area name:"
+msgstr "संदर्भ"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Change Case"
+msgid "Change Angle"
+msgstr "केस बदलू"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "कोण:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "Format"
+msgid "Automatic Format"
+msgstr "प्रारूप"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "Select the sheet style to apply:"
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "Select Character"
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Insert the selected character in the text"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Cell Comment"
+msgstr "टिप्पणी"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<कोनो नहि>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "एकर समान"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "सँ बेसी"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "एकरासँ कम"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, fuzzy, kde-format
+#| msgid "greater than"
+msgid "equal to or greater than"
+msgstr "सँ बेसी"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "less than"
+msgid "equal to or less than"
+msgstr "एकरासँ कम"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "बीचमे"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "outside range"
+msgstr "सेल परिसर"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "First Condition"
+msgstr "स्थिति"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "Second Condition"
+msgstr "स्थिति"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, fuzzy, kde-format
+#| msgid "Condition"
+msgid "Third Condition"
+msgstr "स्थिति"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, fuzzy, kde-format
+#| msgid "Cell"
+msgid "Cell is"
+msgstr "सेल"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, fuzzy, kde-format
+#| msgid "All Styles"
+msgid "Cell style"
+msgstr "सभ शैली"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "एकत्रित करू"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "उत्पाद"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "मानक विचलन"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "चरांक"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr ""
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, fuzzy, kde-format
+#| msgid "Database"
+msgid "Insert Data From Database"
+msgstr "डाटाबेस"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "प्रकार:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Database"
+msgid "Database name: "
+msgstr "डाटाबेस"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "होस्ट:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, fuzzy, kde-format
+#| msgid "Sheets"
+msgid "Select tables:"
+msgstr "शीट"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "सारणी"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, fuzzy, kde-format
+#| msgid "Delete Columns"
+msgid "Select columns:"
+msgstr "कालम मेटाउ"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "सारणी"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "कालम"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "बराबर"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "समान नहि"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "in"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "समान"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, fuzzy, kde-format
+#| msgid "greater than"
+msgid "greater"
+msgstr "सँ बेसी"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, fuzzy, kde-format
+#| msgid "greater than"
+msgid "greater or equal"
+msgstr "सँ बेसी"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "not equal"
+msgid "less or equal"
+msgstr "समान नहि"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, fuzzy, kde-format
+#| msgid "Sort By"
+msgid "Sorted by"
+msgstr "क'द्वारा छाँटू"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "आरोहण क्रम"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "अवरोहण क्रम"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "Query Options"
+msgstr "फाइल विकल्प"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, fuzzy, kde-format
+#| msgid "Insert Link"
+msgid "Insert in region"
+msgstr "कड़ी डालू"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "परिणाम"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "Database"
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "डाटाबेस"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "बदलू"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "Print settings"
+msgid "Document Settings"
+msgstr "छपाइ जमावट"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Fraction"
+msgid "Calculation"
+msgstr "हिस्सा"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "परिशुद्धता"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "स्वचालित"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "नियमित वर्णन"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, kde-format
+msgid "Language: %1 (%2)"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+#| msgid "Number Format"
+msgid "Default number format: %1"
+msgstr "सँख्या प्रारूप"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+#| msgid "Date format"
+msgid "Long date format: %1"
+msgstr "दिनांक प्रारूप"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, fuzzy, kde-format
+#| msgid "Date format"
+msgid "Short date format: %1"
+msgstr "दिनांक प्रारूप"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, fuzzy, kde-format
+#| msgid "Time Format"
+msgid "Time format: %1"
+msgstr "समय प्रारूप"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+#| msgid "Currency"
+msgid "Currency format: %1"
+msgstr "मुद्रा"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "More Options"
+msgstr "फाइल विकल्प"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Sheets"
+msgid "Search entire sheet"
+msgstr "शीट"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "value"
+msgid "Search in:"
+msgstr "मान"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, fuzzy, kde-format
+#| msgid "Values"
+msgid "Cell Values"
+msgstr "मान"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "टिप्पणी"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Search direction:"
+msgstr "सुरक्षा"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "Fewer Options"
+msgstr "फाइल विकल्प"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "फंक्शन"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Insert function"
+msgstr "फंक्शन"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "मद्दति "
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr ""
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Description is not available."
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "लक्ष्य प्राप्ति"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, fuzzy, kde-format
+#| msgid "Cell"
+msgid "Goto Cell"
+msgstr "सेल"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "Merge cells"
+msgid "Enter cell:"
+msgstr "कोष्ठ मिलाबू"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "जोडू"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Move towards right"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr ""
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, fuzzy, kde-format
+#| msgid "Insert Rows"
+msgid "Insert rows"
+msgstr "पंक्तिसभकेँ जोडू"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Insert columns"
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "हटाबू"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Move towards left"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr ""
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgid "Remove rows"
+msgstr "हटाबू"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, fuzzy, kde-format
+#| msgid "Delete Columns"
+msgid "Remove columns"
+msgstr "कालम मेटाउ"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Remove All"
+msgid "Remove Cells"
+msgstr "सभटा हटाउ"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "कड़ी डालू"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "इंटरनेट"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+#| msgid "Internet"
+msgid "Link to Internet Address"
+msgstr "इंटरनेट"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, fuzzy, kde-format
+#| msgid "Internet"
+msgid "Internet address:"
+msgstr "इंटरनेट"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "इमेलः"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Link to Email Address"
+msgstr "इमेलः"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email address:"
+msgstr "इमेलः"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "विषय:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "फाइल"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+#| msgid "Insert Cell"
+msgid "Link to File"
+msgstr "जोडू कोष्ठ"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "File location:"
+msgstr "फाइल विकल्प"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, fuzzy, kde-format
+#| msgid "Entry:"
+msgid "No Entries"
+msgstr "प्रविष्टि:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+#| msgid "Insert Cell"
+msgid "Link to Cell"
+msgstr "जोडू कोष्ठ"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgid "Cell or Named Area:"
+msgstr "प्रतिस्थापन"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, fuzzy, kde-format
+#| msgid "Custom Styles"
+msgid "Custom Lists"
+msgstr "शैलीसभकेँ पसँदीदा करू"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "केस बदलू"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, fuzzy, kde-format
+#| msgid "List"
+msgid "List:"
+msgstr "सूची"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "प्रविष्टि:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "जोड़ू"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "रद करू"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "नवीन"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "सुधारू"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "कापी करू"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr ""
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+#| msgid "Remove Link"
+msgid "Remove List"
+msgstr "लिंक मेटाबू"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgid "Named Areas"
+msgstr "प्रतिस्थापन"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, fuzzy, kde-format
+#| msgid "Area:"
+msgid "Area: %1"
+msgstr "क्षेत्र:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, fuzzy, kde-format
+#| msgid "Cell"
+msgid "Cells:"
+msgstr "सेल"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "शीट:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "क्षेत्र नामः"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "हटाबू (&R)"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "खोलू/सहेजू"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgid "Remove Named Area"
+msgstr "प्रतिस्थापन"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, kde-format
+msgid "The provided region is not valid."
+msgstr ""
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Paste Inserting Cells"
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "Select Source"
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "Add Filter"
+msgstr "फिल्टर"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "सँक्रिया"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Resize"
+msgid "Resize Row"
+msgstr "आकार बदलू"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "उँचाइ:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, fuzzy, kde-format
+#| msgid "Delete Columns"
+msgid "Resize Column"
+msgstr "कालम मेटाउ"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "चओड़ाइ:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "श्रृंखला"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "श्रृंखला जोडू"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Insert Values"
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, fuzzy, kde-format
+#| msgid "value"
+msgid "Start value:"
+msgstr "मान"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "value"
+msgid "Stop value:"
+msgstr "मान"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, fuzzy, kde-format
+#| msgid "value"
+msgid "Step value:"
+msgstr "मान"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, fuzzy, kde-format
+#| msgid "Parameters"
+msgid "End and start value must be positive."
+msgstr "पैरामीटर"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "Select hidden rows to show:"
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "Select hidden columns to show:"
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, fuzzy, kde-format
+#| msgid "Column"
+msgid "Column %1"
+msgstr "कालम"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr ""
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+#| msgid "First interest"
+msgid "&First column contains row headers"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+#| msgid "First interest"
+msgid "&First row contains column headers"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "छाँटू"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr ""
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "Special Paste"
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr "साटू"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "शैली"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "सभ शैली"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "शैलीसभकेँ पसँदीदा करू"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "पदक्रमीय"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "नया... (&N)"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "सुधारू... (&M)"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "मेटाबू (&D)..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, fuzzy, kde-format
+#| msgid "Style"
+msgid "style%1"
+msgstr "शैली"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "समग्र योग"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "सभटा हटाउ"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, fuzzy, kde-format
+#| msgid "Column"
+msgid "Column '%1' "
+msgstr "कालम"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, fuzzy, kde-format
+#| msgid "StDev"
+msgid "StDevP"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr ""
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "वैधता"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, fuzzy, kde-format
+#| msgid "Clear All"
+msgid "Clear &All"
+msgstr "सभकेँ हटाबू"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "पूर्णांक"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, fuzzy, kde-format
+#| msgid "Length"
+msgid "Text Length"
+msgstr "नमाइ"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "सूची"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, fuzzy, kde-format
+#| msgid "Date"
+msgid "Data:"
+msgstr "दिनांक"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "न्यूनतमः"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "अधिकतम:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "दिनांक:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, fuzzy, kde-format
+#| msgid "Minimum:"
+msgid "Date minimum:"
+msgstr "न्यूनतमः"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, fuzzy, kde-format
+#| msgid "Maximum:"
+msgid "Date maximum:"
+msgstr "अधिकतम:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "समय:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, fuzzy, kde-format
+#| msgid "Minimum:"
+msgid "Time minimum:"
+msgstr "न्यूनतमः"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, fuzzy, kde-format
+#| msgid "Maximum:"
+msgid "Time maximum:"
+msgstr "अधिकतम:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, fuzzy, kde-format
+#| msgid "Number"
+msgid "Number:"
+msgstr "संख्या"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, fuzzy, kde-format
+#| msgid "Entry:"
+msgid "Entries:"
+msgstr "प्रविष्टि:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "Error"
+msgid "Error Alert"
+msgstr "त्रुटि"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Action:"
+msgstr "फंक्शन"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "रोकू"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "चेतावनी"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "शीर्षक:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "संदेश:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "इनपुट सहायता"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr ""
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+#| msgid "Print settings"
+msgid "Document Settings..."
+msgstr "छपाइ जमावट"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+#| msgid "Formula"
+msgid "Show document settings dialog"
+msgstr "सूत्र"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr ""
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+#| msgid "Modify"
+msgid "Modify Cell"
+msgstr "सुधारू"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "सुरक्षा"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr ""
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "नीच्चाँ (&D)"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "बम्माँ (&L)"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "दहिन्ना (&R)"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+#| msgid "File Options"
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "फाइल विकल्प"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+#| msgid "Replace"
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "बदलू"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "Select Font..."
+msgstr "फाइल विकल्प"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell font"
+msgstr "सेल परिसर"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+#| msgid "Change Font"
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "फोन्ट बदलू"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Font Size"
+msgid "Select Font Size"
+msgstr "फाँट आकार"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell font size"
+msgstr "सेल परिसर"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "फाँट आकार"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+#| msgid "Text Color"
+msgid "Set the text color"
+msgstr "पाठ रंग"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "पाठ रंग"
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "&Function..."
+msgstr "फंक्शन"
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Insert math expression"
+msgstr "नियमित वर्णन"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "Formula Selection"
+msgstr "फाइल विकल्प"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Insert a function"
+msgstr "फंक्शन"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, fuzzy, kde-format
+#| msgid "Series"
+msgid "Others..."
+msgstr "श्रृंखला"
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+#| msgid "Goal Seek"
+msgid "&Goal Seek..."
+msgstr "लक्ष्य प्राप्ति"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, kde-format
+msgid "Goal seeking with cell %1 found a solution."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr ""
+
+#: ui/actions/Goto.cpp:25
+#, fuzzy, kde-format
+#| msgid "&Delete..."
+msgid "Goto Cell..."
+msgstr "मेटाबू (&D)..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr ""
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "एकरामे जाउ"
+
+#: ui/actions/Goto.cpp:44
+#, kde-format
+msgid "That is not a valid cell."
+msgstr ""
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "हाशिया घटाबू"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "हाशिया बढ़ाबू"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+#| msgid "Decrease Indent"
+msgid "Decrease the indentation"
+msgstr "हाशिया घटाबू"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+#| msgid "Increase Indent"
+msgid "Increase the indentation"
+msgstr "हाशिया बढ़ाबू"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+#| msgid "Increase Indent"
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "हाशिया बढ़ाबू"
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+#| msgid "Decrease Indent"
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "हाशिया घटाबू"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+#| msgid "Database"
+msgid "From &Database..."
+msgstr "डाटाबेस"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+#| msgid "Database"
+msgid "Insert data from a SQL database"
+msgstr "डाटाबेस"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+#| msgid "Series"
+msgid "&Series..."
+msgstr "श्रृंखला"
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+#| msgid "Insert Series"
+msgid "Insert a series"
+msgstr "श्रृंखला जोडू"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+#| msgid "Insert Series"
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "श्रृंखला जोडू"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "S&pecial Character..."
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+#| msgid "Link"
+msgid "&Link..."
+msgstr "लिंक"
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+#| msgid "Insert Sheet"
+msgid "Insert an Internet hyperlink"
+msgstr "शीट दिअ'"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "लिंक"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+#| msgid "Remove Link"
+msgid "Remove a link"
+msgstr "लिंक मेटाबू"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "लिंक मेटाबू"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Remove Link"
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "लिंक मेटाबू"
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+#| msgid "Insert Link"
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "कड़ी डालू"
+
+#: ui/actions/ListChoose.cpp:28
+#, fuzzy, kde-format
+#| msgid "File Options"
+msgid "Selection List..."
+msgstr "फाइल विकल्प"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+#| msgid "Center vertically"
+msgid "Merge Cells Horizontally"
+msgstr "केंद्र लबंवत रूप सँ"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Merge Cells Vertically"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+#| msgid "Center vertically"
+msgid "Merge the selected region horizontally"
+msgstr "केंद्र लबंवत रूप सँ"
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Merge the selected region vertically"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Merge the selected region"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr ""
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+#| msgid "Merge Cells"
+msgid "Unmerge the selected region"
+msgstr "कोष्ठसभकेँ मिलाबू"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+#| msgid "Area name:"
+msgid "Area Name..."
+msgstr "क्षेत्र नामः"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+#| msgid "Insert Sheet"
+msgid "Set a name for a region of the spreadsheet"
+msgstr "शीट दिअ'"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgid "Replace Named Area"
+msgstr "प्रतिस्थापन"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+#| msgid "Replacement"
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "प्रतिस्थापन"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgid "Edit or select named areas"
+msgstr "प्रतिस्थापन"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgid "Named Areas..."
+msgstr "प्रतिस्थापन"
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+#| msgid "Delete Columns"
+msgid "Break Before Row"
+msgstr "कालम मेटाउ"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+#| msgid "Column Header"
+msgid "Row Break"
+msgstr "कालम शीर्षिका"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgid "Delete Columns"
+msgid "Break Before Column"
+msgstr "कालम मेटाउ"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+#| msgid "Column Header"
+msgid "Column Break"
+msgstr "कालम शीर्षिका"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/Paste.cpp:94
+#, fuzzy, kde-format
+#| msgid "Protect Sheet"
+msgid "Special Paste..."
+msgstr "शीटकेँ रक्षा करू"
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr ""
+
+#: ui/actions/Paste.cpp:153
+#, fuzzy, kde-format
+#| msgid "Insert Cells"
+msgid "Paste with Insertion"
+msgstr "कोष्ठ जोडू"
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+#| msgid "Insert Sheet"
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "शीट दिअ'"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "Subtotals"
+msgid "&Pivot Tables..."
+msgstr "समग्र योग"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "Subtotals"
+msgid "Create Pivot Tables"
+msgstr "समग्र योग"
+
+#: ui/actions/Pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "&Delete..."
+msgid "You must select multiple cells."
+msgstr "मेटाबू (&D)..."
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+#| msgid "Sheets"
+msgid "Selects all cells in the current sheet"
+msgstr "शीट"
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet"
+msgid "Show QTableView..."
+msgstr "शीट देखाउ"
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+#| msgid "Sort"
+msgid "&Sort..."
+msgstr "छाँटू"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr ""
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr ""
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+#| msgid "Start date"
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "आरंभ दिनांक"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr ""
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr ""
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Cell Format..."
+msgstr "सेल परिसर"
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell formatting"
+msgstr "सेल परिसर"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "मोट"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "तिरछा"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "रेखांकित"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr ""
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+#| msgid "Vertical Text"
+msgid "Wrap Text"
+msgstr "लंबरूप पाठ"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "व्रैप"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "लंबरूप पाठ"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+#| msgid "Center vertically"
+msgid "Print cell contents vertically"
+msgstr "केंद्र लबंवत रूप सँ"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "लंबरूप पाठ"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "लंबरूप पाठ"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "सँख्या प्रारूप"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell formatting to a number"
+msgstr "सेल परिसर"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First interest"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Scientific"
+msgid "Scientific Format"
+msgstr "वैज्ञानिक"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell formatting to a scientific format"
+msgstr "सेल परिसर"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "वैज्ञानिक"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "वैज्ञानिक"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "प्रतिशत प्रारूप"
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell formatting to look like a percentage"
+msgstr "सेल परिसर"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "प्रतिशत"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "प्रतिशत"
+
+#: ui/actions/Style.cpp:379
+#, fuzzy, kde-format
+#| msgid "Change Font"
+msgid "Money Format"
+msgstr "फोन्ट बदलू"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell formatting to look like your local currency"
+msgstr "सेल परिसर"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "मुद्रा"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "प्रारूप"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "तिथि प्रारूप"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell formatting to a date"
+msgstr "सेल परिसर"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "प्रारूप"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Set the cell formatting to a time"
+msgstr "सेल परिसर"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "समय प्रारूप"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "प्रारूप"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "फोन्ट आकार घटाबू"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "फोन्ट आकार घटाबू"
+
+#: ui/actions/Style.cpp:530
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Increase Precision"
+msgstr "परिशुद्धता"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:549
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Decrease Precision"
+msgstr "परिशुद्धता"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr ""
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "परिशुद्धता"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "परिशुद्धता"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+#| msgid "Cell range"
+msgid "Resets to the default format"
+msgstr "सेल परिसर"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Custom Styles"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "शैलीसभकेँ पसँदीदा करू"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "पृष्ठभूमि रँग"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+#| msgid "Background color:"
+msgid "Set the background color"
+msgstr "पृष्ठभूमि क' रंगः"
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+#| msgid "&Delete..."
+msgid "Create Style From Cell..."
+msgstr "मेटाबू (&D)..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr ""
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "&Delete..."
+msgid "Style From Cell"
+msgstr "मेटाबू (&D)..."
+
+#: ui/actions/Styles.cpp:53
+#, fuzzy, kde-format
+#| msgid "&Delete..."
+msgid "Create Style From Cell"
+msgstr "मेटाबू (&D)..."
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr ""
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr ""
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr ""
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+#| msgid "Subtotals"
+msgid "&Subtotals..."
+msgstr "समग्र योग"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr ""
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "समग्र योग"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "उप्परी"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "निचला"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+#| msgid "First interest"
+msgid "First Letter Upper"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+#| msgid "First interest"
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+#| msgid "First interest"
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+#| msgid "First interest"
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/TextCase.cpp:95
+#, fuzzy, kde-format
+#| msgid "Upper"
+msgid "Upper Case"
+msgstr "उप्परी"
+
+#: ui/actions/TextCase.cpp:97
+#, fuzzy, kde-format
+#| msgid "Lower"
+msgid "Lower Case"
+msgstr "निचला"
+
+#: ui/actions/TextCase.cpp:99
+#, fuzzy, kde-format
+#| msgid "First interest"
+msgid "Convert First Letter to Upper Case"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+#| msgid "First interest"
+msgid "Convert all letters to upper case"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+#| msgid "First interest"
+msgid "Convert all letters to lower case"
+msgstr "पहिल ब्याज"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr ""
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+#| msgid "Change Case"
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "केस बदलू"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr ""
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+#| msgid "Validity"
+msgid "Validity..."
+msgstr "वैधता"
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+#| msgid "Rename Sheet"
+msgid "Remove the validity tests on this cell"
+msgstr "नाम बदलू शीट"
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+#| msgid "Validity"
+msgid "Remove Validity"
+msgstr "वैधता"
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+#| msgid "Validity"
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "वैधता"
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+#| msgid "Validity"
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "वैधता"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14176,13 +17591,6 @@ msgstr "कोष्ठ जोडू"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "सभटा हटाउ"
-
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-#| msgid "Delete"
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "मेटाबू"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -14452,12 +17860,6 @@ msgstr "परिवर्तनीय (कोनो परिवर्तन �
 msgid "Roman"
 msgstr "रोमानिया"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "तिरछा"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14475,12 +17877,6 @@ msgstr ""
 msgid "Normal"
 msgstr "सामान्य"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "मोट"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14493,12 +17889,6 @@ msgstr "रँग:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "रेखांकित"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14641,11 +18031,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "प्रतिशत"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14658,11 +18043,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "मुद्रा"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14673,11 +18053,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "वैज्ञानिक"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14887,11 +18262,6 @@ msgstr ""
 msgid "Dolor Ipse"
 msgstr "रँग"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "शैली"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 #| msgid "Name:"
@@ -14904,11 +18274,6 @@ msgstr "नाम:"
 #| msgid "Custom Styles"
 msgid "Inherit style:"
 msgstr "शैलीसभकेँ पसँदीदा करू"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr ""
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -14955,12 +18320,6 @@ msgstr ""
 msgid "Standard"
 msgstr "मानक"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "केंद्र"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -14992,24 +18351,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "उप्पर"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "मध्य"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "नीच्चाँ"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15176,20 +18517,10 @@ msgstr "लागू करू"
 msgid "Apply changes"
 msgstr "परिवर्तन लागू करू"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "रद करू"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "परिवर्तन फेंक दिअ'"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "सभ"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15247,270 +18578,9 @@ msgstr ""
 #~ msgstr "दिनाँक आ समय"
 
 #, fuzzy
-#~| msgid "Function"
-#~ msgid "&Function..."
-#~ msgstr "फंक्शन"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Insert math expression"
-#~ msgstr "नियमित वर्णन"
-
-#, fuzzy
-#~| msgid "Database"
-#~ msgid "From &Database..."
-#~ msgstr "डाटाबेस"
-
-#, fuzzy
-#~| msgid "Database"
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "डाटाबेस"
-
-#, fuzzy
-#~| msgid "File Options"
-#~ msgid "Formula Selection"
-#~ msgstr "फाइल विकल्प"
-
-#, fuzzy
-#~| msgid "Function"
-#~ msgid "Insert a function"
-#~ msgstr "फंक्शन"
-
-#, fuzzy
-#~| msgid "Series"
-#~ msgid "Others..."
-#~ msgstr "श्रृंखला"
-
-#, fuzzy
-#~| msgid "Modify"
-#~ msgid "Modify Cell"
-#~ msgstr "सुधारू"
-
-#, fuzzy
-#~| msgid "Show Sheet"
-#~ msgid "Show QTableView..."
-#~ msgstr "शीट देखाउ"
-
-#, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "सुरक्षा"
-
-#, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "सुरक्षा"
-
-#, fuzzy
-#~| msgid "Database"
-#~ msgid "Insert Data From Database"
-#~ msgstr "डाटाबेस"
-
-#~ msgid "Type:"
-#~ msgstr "प्रकार:"
-
-#~ msgid "Host:"
-#~ msgstr "होस्ट:"
-
-#, fuzzy
-#~| msgid "Database"
-#~ msgid "Database name: "
-#~ msgstr "डाटाबेस"
-
-#, fuzzy
-#~| msgid "Sheets"
-#~ msgid "Select tables:"
-#~ msgstr "शीट"
-
-#~ msgid "Tables"
-#~ msgstr "सारणी"
-
-#, fuzzy
-#~| msgid "Delete Columns"
-#~ msgid "Select columns:"
-#~ msgstr "कालम मेटाउ"
-
-#~ msgid "Table"
-#~ msgstr "सारणी"
-
-#~ msgid "Columns"
-#~ msgstr "कालम"
-
-#~ msgid "equals"
-#~ msgstr "बराबर"
-
-#~ msgid "not equal"
-#~ msgstr "समान नहि"
-
-#~ msgid "in"
-#~ msgstr "in"
-
-#~ msgid "like"
-#~ msgstr "समान"
-
-#, fuzzy
-#~| msgid "greater than"
-#~ msgid "greater"
-#~ msgstr "सँ बेसी"
-
-#, fuzzy
-#~| msgid "greater than"
-#~ msgid "greater or equal"
-#~ msgstr "सँ बेसी"
-
-#, fuzzy
-#~| msgid "not equal"
-#~ msgid "less or equal"
-#~ msgstr "समान नहि"
-
-#, fuzzy
-#~| msgid "Sort By"
-#~ msgid "Sorted by"
-#~ msgstr "क'द्वारा छाँटू"
-
-#~ msgid "Ascending"
-#~ msgstr "आरोहण क्रम"
-
-#~ msgid "Descending"
-#~ msgstr "अवरोहण क्रम"
-
-#, fuzzy
-#~| msgid "File Options"
-#~ msgid "Query Options"
-#~ msgstr "फाइल विकल्प"
-
-#, fuzzy
-#~| msgid "Insert Link"
-#~ msgid "Insert in region"
-#~ msgstr "कड़ी डालू"
-
-#~ msgid "Result"
-#~ msgstr "परिणाम"
-
-#, fuzzy
-#~| msgid "Database"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "डाटाबेस"
-
-#, fuzzy
-#~| msgid "Function"
-#~ msgid "Insert function"
-#~ msgstr "फंक्शन"
-
-#~ msgid "Help"
-#~ msgstr "मद्दति "
-
-#, fuzzy
-#~| msgid "Print settings"
-#~ msgid "Document Settings..."
-#~ msgstr "छपाइ जमावट"
-
-#, fuzzy
-#~| msgid "Formula"
-#~ msgid "Show document settings dialog"
-#~ msgstr "सूत्र"
-
-#, fuzzy
-#~| msgid "Print settings"
-#~ msgid "Document Settings"
-#~ msgstr "छपाइ जमावट"
-
-#, fuzzy
-#~| msgid "Fraction"
-#~ msgid "Calculation"
-#~ msgstr "हिस्सा"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "परिशुद्धता"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "स्वचालित"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "नियमित वर्णन"
-
-#, fuzzy
-#~| msgid "Number Format"
-#~ msgid "Default number format: %1"
-#~ msgstr "सँख्या प्रारूप"
-
-#, fuzzy
-#~| msgid "Date format"
-#~ msgid "Long date format: %1"
-#~ msgstr "दिनांक प्रारूप"
-
-#, fuzzy
-#~| msgid "Date format"
-#~ msgid "Short date format: %1"
-#~ msgstr "दिनांक प्रारूप"
-
-#, fuzzy
-#~| msgid "Time Format"
-#~ msgid "Time format: %1"
-#~ msgstr "समय प्रारूप"
-
-#, fuzzy
-#~| msgid "Currency"
-#~ msgid "Currency format: %1"
-#~ msgstr "मुद्रा"
-
-#, fuzzy
-#~| msgid "Custom..."
-#~ msgid "Custom Lists..."
-#~ msgstr "मनपसिन्न..."
-
-#, fuzzy
-#~| msgid "Sheets"
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "शीट"
-
-#, fuzzy
-#~| msgid "Custom Styles"
-#~ msgid "Custom Lists"
-#~ msgstr "शैलीसभकेँ पसँदीदा करू"
-
-#, fuzzy
-#~| msgid "List"
-#~ msgid "List:"
-#~ msgstr "सूची"
-
-#~ msgid "Entry:"
-#~ msgstr "प्रविष्टि:"
-
-#~ msgid "Add"
-#~ msgstr "जोड़ू"
-
-#~ msgid "New"
-#~ msgstr "नवीन"
-
-#~ msgid "Remove"
-#~ msgstr "हटाबू"
-
-#~ msgid "Modify"
-#~ msgstr "सुधारू"
-
-#~ msgid "Copy"
-#~ msgstr "कापी करू"
-
-#, fuzzy
-#~| msgid "Remove Link"
-#~ msgid "Remove List"
-#~ msgstr "लिंक मेटाबू"
-
-#, fuzzy
-#~| msgid "Goal Seek"
-#~ msgid "&Goal Seek..."
-#~ msgstr "लक्ष्य प्राप्ति"
-
-#~ msgid "Goal Seek"
-#~ msgstr "लक्ष्य प्राप्ति"
 
 #~ msgid "Starting..."
 #~ msgstr "आरंभ कए रहल अछि…"
@@ -15540,73 +18610,6 @@ msgstr ""
 #~ msgid "Current value:"
 #~ msgstr "मान"
 
-#, fuzzy
-#~| msgid "Replace"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "बदलू"
-
-#, fuzzy
-#~| msgid "File Options"
-#~ msgid "Selection List..."
-#~ msgstr "फाइल विकल्प"
-
-#, fuzzy
-#~| msgid "File Options"
-#~ msgid "More Options"
-#~ msgstr "फाइल विकल्प"
-
-#, fuzzy
-#~| msgid "Sheets"
-#~ msgid "Search entire sheet"
-#~ msgstr "शीट"
-
-#, fuzzy
-#~| msgid "value"
-#~ msgid "Search in:"
-#~ msgstr "मान"
-
-#, fuzzy
-#~| msgid "Values"
-#~ msgid "Cell Values"
-#~ msgstr "मान"
-
-#~ msgid "Comments"
-#~ msgstr "टिप्पणी"
-
-#, fuzzy
-#~| msgid "Protection"
-#~ msgid "Search direction:"
-#~ msgstr "सुरक्षा"
-
-#, fuzzy
-#~| msgid "File Options"
-#~ msgid "Fewer Options"
-#~ msgstr "फाइल विकल्प"
-
-#, fuzzy
-#~| msgid "Cell range"
-#~ msgid "Cell Format..."
-#~ msgstr "सेल परिसर"
-
-#, fuzzy
-#~| msgid "Cell range"
-#~ msgid "Set the cell formatting"
-#~ msgstr "सेल परिसर"
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Paste with Insertion"
-#~ msgstr "कोष्ठ जोडू"
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "कोष्ठ जोडू"
-
-#~ msgid "Insert"
-#~ msgstr "जोडू"
-
 #~ msgid "Content"
 #~ msgstr "विषय"
 
@@ -15634,119 +18637,12 @@ msgstr ""
 #~ msgstr "विभाजन"
 
 #, fuzzy
-#~| msgid "Format"
-#~ msgid "Auto-Format..."
-#~ msgstr "प्रारूप"
-
-#, fuzzy
 #~| msgid "Cell range"
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "सेल परिसर"
 
-#, fuzzy
-#~| msgid "Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "प्रारूप"
-
-#, fuzzy
-#~| msgid "Custom Styles"
-#~ msgid "Sheet Style"
-#~ msgstr "शैलीसभकेँ पसँदीदा करू"
-
-#, fuzzy
-#~| msgid "Protect Sheet"
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "शीटकेँ रक्षा करू"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "&Auto-Filter"
-#~ msgstr "फिल्टर"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "फिल्टर"
-
-#~ msgid "Clear All"
-#~ msgstr "सभकेँ हटाबू"
-
 #~ msgid "Contents"
 #~ msgstr "विषय सूची"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Clear Contents"
-#~ msgstr "टिप्पणी"
-
-#, fuzzy
-#~| msgid "Rename Sheet"
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "नाम बदलू शीट"
-
-#, fuzzy
-#~| msgid "Clear"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "खाली"
-
-#, fuzzy
-#~| msgid "Conditional Styles"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "सशर्त शैली"
-
-#, fuzzy
-#~| msgid "Border Color"
-#~ msgid "Select a new border color"
-#~ msgstr "किनारे क' रंग"
-
-#~ msgid "Border Color"
-#~ msgstr "किनारे क' रंग"
-
-#, fuzzy
-#~| msgid "Background color:"
-#~ msgid "Set the background color"
-#~ msgstr "पृष्ठभूमि क' रंगः"
-
-#~ msgid "Background Color"
-#~ msgstr "पृष्ठभूमि रँग"
-
-#, fuzzy
-#~| msgid "Conditional Styles"
-#~ msgid "Conditional Styles..."
-#~ msgstr "सशर्त शैली"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "सशर्त शैली"
-
-#, fuzzy
-#~| msgid "Conditional Styles"
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "सशर्त शैली"
-
-#, fuzzy
-#~| msgid "Conditional Styles"
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "सशर्त शैली"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgid "&Pivot Tables..."
-#~ msgstr "समग्र योग"
-
-#, fuzzy
-#~| msgid "&Delete..."
-#~ msgid "You must select multiple cells."
-#~ msgstr "मेटाबू (&D)..."
-
-#, fuzzy
-#~| msgid "Number Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "सँख्या प्रारूप"
 
 #, fuzzy
 #~| msgid "Currency"
@@ -15759,90 +18655,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "प्रतिशत प्रारूप"
-
-#, fuzzy
-#~| msgid "Time Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "समय प्रारूप"
-
-#, fuzzy
-#~| msgid "Date Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "तिथि प्रारूप"
-
-#, fuzzy
-#~| msgid "Scientific"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "वैज्ञानिक"
-
-#, fuzzy
-#~| msgid "Border Color"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "किनारे क' रंग"
-
-#~ msgid "<none>"
-#~ msgstr "<कोनो नहि>"
-
-#~ msgid "equal to"
-#~ msgstr "एकर समान"
-
-#~ msgid "greater than"
-#~ msgstr "सँ बेसी"
-
-#~ msgid "less than"
-#~ msgstr "एकरासँ कम"
-
-#, fuzzy
-#~| msgid "greater than"
-#~ msgid "equal to or greater than"
-#~ msgstr "सँ बेसी"
-
-#, fuzzy
-#~| msgid "less than"
-#~ msgid "equal to or less than"
-#~ msgstr "एकरासँ कम"
-
-#~ msgid "between"
-#~ msgstr "बीचमे"
-
-#, fuzzy
-#~| msgid "Cell range"
-#~ msgid "outside range"
-#~ msgstr "सेल परिसर"
-
-#, fuzzy
-#~| msgid "Condition"
-#~ msgid "First Condition"
-#~ msgstr "स्थिति"
-
-#, fuzzy
-#~| msgid "Condition"
-#~ msgid "Second Condition"
-#~ msgstr "स्थिति"
-
-#, fuzzy
-#~| msgid "Condition"
-#~ msgid "Third Condition"
-#~ msgstr "स्थिति"
-
-#, fuzzy
-#~| msgid "Cell"
-#~ msgid "Cell is"
-#~ msgstr "सेल"
-
-#, fuzzy
-#~| msgid "All Styles"
-#~ msgid "Cell style"
-#~ msgstr "सभ शैली"
-
-#, fuzzy
-#~| msgid "Protect Sheet"
-#~ msgid "Select Source"
-#~ msgstr "शीटकेँ रक्षा करू"
 
 #, fuzzy
 #~| msgid "File Options"
@@ -15868,11 +18680,6 @@ msgstr ""
 #~| msgid "Yield"
 #~ msgid "Field"
 #~ msgstr "उपज"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Add Filter"
-#~ msgstr "फिल्टर"
 
 #, fuzzy
 #~| msgid "File Options"
@@ -15919,11 +18726,6 @@ msgstr ""
 #~ msgstr "पंक्ति"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "सँक्रिया"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "मान"
@@ -15943,76 +18745,8 @@ msgstr ""
 #~ msgid "Manual Selection"
 #~ msgstr "फाइल विकल्प"
 
-#~ msgid "Product"
-#~ msgstr "उत्पाद"
-
 #~ msgid "Sort By"
 #~ msgstr "क'द्वारा छाँटू"
-
-#, fuzzy
-#~| msgid "File Options"
-#~ msgid "Select Font..."
-#~ msgstr "फाइल विकल्प"
-
-#, fuzzy
-#~| msgid "Font Size"
-#~ msgid "Select Font Size"
-#~ msgstr "फाँट आकार"
-
-#~ msgid "Font Size"
-#~ msgstr "फाँट आकार"
-
-#~ msgid "Text Color"
-#~ msgstr "पाठ रंग"
-
-#, fuzzy
-#~| msgid "Text Color"
-#~ msgid "Set the text color"
-#~ msgstr "पाठ रंग"
-
-#, fuzzy
-#~| msgid "Change Font"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "फोन्ट बदलू"
-
-#, fuzzy
-#~| msgid "&Delete..."
-#~ msgid "Create Style From Cell..."
-#~ msgstr "मेटाबू (&D)..."
-
-#, fuzzy
-#~| msgid "&Delete..."
-#~ msgid "Style From Cell"
-#~ msgstr "मेटाबू (&D)..."
-
-#, fuzzy
-#~| msgid "&Delete..."
-#~ msgid "Create Style From Cell"
-#~ msgstr "मेटाबू (&D)..."
-
-#~ msgid "All Styles"
-#~ msgstr "सभ शैली"
-
-#~ msgid "Custom Styles"
-#~ msgstr "शैलीसभकेँ पसँदीदा करू"
-
-#~ msgid "Hierarchical"
-#~ msgstr "पदक्रमीय"
-
-#~ msgid "&New..."
-#~ msgstr "नया... (&N)"
-
-#~ msgid "&Modify..."
-#~ msgstr "सुधारू... (&M)"
-
-#~ msgid "&Delete..."
-#~ msgstr "मेटाबू (&D)..."
-
-#, fuzzy
-#~| msgid "Style"
-#~ msgid "style%1"
-#~ msgstr "शैली"
 
 #, fuzzy
 #~| msgid "&Delete..."
@@ -16020,82 +18754,12 @@ msgstr ""
 #~ msgstr "मेटाबू (&D)..."
 
 #, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Insert Cells..."
-#~ msgstr "कोष्ठ जोडू"
-
-#, fuzzy
-#~| msgid "Remove All"
-#~ msgid "Remove Cells..."
-#~ msgstr "सभटा हटाउ"
-
-#, fuzzy
-#~| msgid "Rename Sheet"
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "नाम बदलू शीट"
-
-#, fuzzy
 #~| msgid "&Delete..."
 #~ msgid "Delete Cells..."
 #~ msgstr "मेटाबू (&D)..."
 
-#, fuzzy
-#~| msgid "Insert Rows"
-#~ msgid "Insert rows"
-#~ msgstr "पंक्तिसभकेँ जोडू"
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Insert columns"
-#~ msgstr "कोष्ठ जोडू"
-
-#~ msgid "Insert Cells"
-#~ msgstr "कोष्ठ जोडू"
-
-#, fuzzy
-#~| msgid "Remove"
-#~ msgid "Remove rows"
-#~ msgstr "हटाबू"
-
-#, fuzzy
-#~| msgid "Delete Columns"
-#~ msgid "Remove columns"
-#~ msgstr "कालम मेटाउ"
-
-#, fuzzy
-#~| msgid "Remove All"
-#~ msgid "Remove Cells"
-#~ msgstr "सभटा हटाउ"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgid "&Subtotals..."
-#~ msgstr "समग्र योग"
-
-#~ msgid "Subtotals"
-#~ msgstr "समग्र योग"
-
-#~ msgid "Remove All"
-#~ msgstr "सभटा हटाउ"
-
 #~ msgid "Grand Total"
 #~ msgstr "सम्पूर्ण योग"
-
-#, fuzzy
-#~| msgid "Column"
-#~ msgid "Column '%1' "
-#~ msgstr "कालम"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#, fuzzy
-#~| msgid "StDev"
-#~ msgid "StDevP"
-#~ msgstr "StDev"
-
-#~ msgid "Var"
-#~ msgstr "Var"
 
 #, fuzzy
 #~| msgid "Function"
@@ -16108,72 +18772,9 @@ msgstr ""
 #~ msgstr "समग्र योग"
 
 #, fuzzy
-#~| msgid "&Delete..."
-#~ msgid "Goto Cell..."
-#~ msgstr "मेटाबू (&D)..."
-
-#~ msgid "Goto"
-#~ msgstr "एकरामे जाउ"
-
-#, fuzzy
-#~| msgid "Delete Columns"
-#~ msgid "Break Before Column"
-#~ msgstr "कालम मेटाउ"
-
-#, fuzzy
-#~| msgid "Column Header"
-#~ msgid "Column Break"
-#~ msgstr "कालम शीर्षिका"
-
-#, fuzzy
-#~| msgid "Delete Columns"
-#~ msgid "Break Before Row"
-#~ msgstr "कालम मेटाउ"
-
-#, fuzzy
-#~| msgid "Column Header"
-#~ msgid "Row Break"
-#~ msgstr "कालम शीर्षिका"
-
-#, fuzzy
-#~| msgid "Cell"
-#~ msgid "Goto Cell"
-#~ msgstr "सेल"
-
-#, fuzzy
-#~| msgid "Merge cells"
-#~ msgid "Enter cell:"
-#~ msgstr "कोष्ठ मिलाबू"
-
-#, fuzzy
-#~| msgid "Consolidate"
-#~ msgid "&Consolidate..."
-#~ msgstr "एकत्रित करू"
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Description in columns"
-#~ msgstr "कोष्ठ जोडू"
-
-#, fuzzy
 #~| msgid "Croatia"
 #~ msgid "Copy data"
 #~ msgstr "क्रोशिया"
-
-#~ msgid "Consolidate"
-#~ msgstr "एकत्रित करू"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "मानक विचलन"
-
-#~ msgid "Variance"
-#~ msgstr "चरांक"
-
-#, fuzzy
-#~| msgid "Consolidate"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "एकत्रित करू"
 
 #, fuzzy
 #~| msgid "Function"
@@ -16191,206 +18792,17 @@ msgstr ""
 #~ msgstr "संदर्भ"
 
 #, fuzzy
-#~| msgid "Change Case"
-#~ msgid "Change Angle..."
-#~ msgstr "केस बदलू"
-
-#~ msgid "Angle"
-#~ msgstr "कोण"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Increase Precision"
-#~ msgstr "परिशुद्धता"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Decrease Precision"
-#~ msgstr "परिशुद्धता"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "परिशुद्धता"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "परिशुद्धता"
-
-#, fuzzy
-#~| msgid "Change Case"
-#~ msgid "Change Angle"
-#~ msgstr "केस बदलू"
-
-#~ msgid "Angle:"
-#~ msgstr "कोण:"
-
-#, fuzzy
-#~| msgid "Change Case"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "केस बदलू"
-
-#, fuzzy
-#~| msgid "Area name:"
-#~ msgid "Area Name..."
-#~ msgstr "क्षेत्र नामः"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgid "Named Areas..."
-#~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgid "Named Areas"
-#~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgid "Add Named Area"
-#~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
-#~| msgid "Reference"
-#~ msgid "Enter the area name:"
-#~ msgstr "संदर्भ"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgid "Replace Named Area"
-#~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
 #~| msgid "Protect Sheet"
 #~ msgid "&Select"
 #~ msgstr "शीटकेँ रक्षा करू"
 
-#, fuzzy
-#~| msgid "Area:"
-#~ msgid "Area: %1"
-#~ msgstr "क्षेत्र:"
-
 #~ msgid "&Edit..."
 #~ msgstr "संपादित करु (&E)..."
-
-#~ msgid "&Remove"
-#~ msgstr "हटाबू (&R)"
 
 #, fuzzy
 #~| msgid "Replacement"
 #~ msgid "New Named Area"
 #~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgid "Edit Named Area"
-#~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgid "Remove Named Area"
-#~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
-#~| msgid "Cell"
-#~ msgid "Cells:"
-#~ msgstr "सेल"
-
-#~ msgid "Sheet:"
-#~ msgstr "शीट:"
-
-#~ msgid "Area name:"
-#~ msgstr "क्षेत्र नामः"
-
-#~ msgid "Align Left"
-#~ msgstr "बामाँ संरेखण"
-
-#~ msgid "Align Center"
-#~ msgstr "केँद्रक' सँरेखण"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Center the cell contents"
-#~ msgstr "टिप्पणी"
-
-#~ msgid "Align Right"
-#~ msgstr "दहिन्ना संरेखण"
-
-#~ msgid "Align Top"
-#~ msgstr "उप्पर संरेखण"
-
-#, fuzzy
-#~| msgid "Middle"
-#~ msgid "Align Middle"
-#~ msgstr "मध्य"
-
-#, fuzzy
-#~| msgid "Center vertically"
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "केंद्र लबंवत रूप सँ"
-
-#~ msgid "Align Bottom"
-#~ msgstr "तल संरेखण"
-
-#, fuzzy
-#~| msgid "Border"
-#~ msgid "Border Left"
-#~ msgstr "किनार"
-
-#, fuzzy
-#~| msgid "Border"
-#~ msgid "Border Right"
-#~ msgstr "किनार"
-
-#, fuzzy
-#~| msgid "Border"
-#~ msgid "Border Top"
-#~ msgstr "किनार"
-
-#, fuzzy
-#~| msgid "Border Color"
-#~ msgid "Border Bottom"
-#~ msgstr "किनारे क' रंग"
-
-#, fuzzy
-#~| msgid "Border"
-#~ msgid "All Borders"
-#~ msgstr "किनार"
-
-#, fuzzy
-#~| msgid "Border"
-#~ msgid "No Borders"
-#~ msgstr "किनार"
-
-#, fuzzy
-#~| msgid "Outline"
-#~ msgid "Border Outline"
-#~ msgstr "बाहरी रूपरेखा"
-
-#~ msgid "Outline"
-#~ msgstr "बाहरी रूपरेखा"
-
-#, fuzzy
-#~| msgid "Center vertically"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "केंद्र लबंवत रूप सँ"
-
-#, fuzzy
-#~| msgid "Center vertically"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "केंद्र लबंवत रूप सँ"
 
 #~ msgid "Australia"
 #~ msgstr "आस्ट्रेलिया"
@@ -17955,70 +20367,6 @@ msgstr ""
 #~ msgstr "जिंबाब्वे"
 
 #, fuzzy
-#~| msgid "Cell range"
-#~ msgid "Resets to the default format"
-#~ msgstr "सेल परिसर"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "फोन्ट आकार घटाबू"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "फोन्ट आकार घटाबू"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgid "Wrap Text"
-#~ msgstr "लंबरूप पाठ"
-
-#~ msgid "Wrap"
-#~ msgstr "व्रैप"
-
-#~ msgid "Vertical Text"
-#~ msgstr "लंबरूप पाठ"
-
-#, fuzzy
-#~| msgid "Center vertically"
-#~ msgid "Print cell contents vertically"
-#~ msgstr "केंद्र लबंवत रूप सँ"
-
-#~ msgid "Percent Format"
-#~ msgstr "प्रतिशत प्रारूप"
-
-#, fuzzy
-#~| msgid "Cell range"
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "सेल परिसर"
-
-#, fuzzy
-#~| msgid "Change Font"
-#~ msgid "Money Format"
-#~ msgstr "फोन्ट बदलू"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "लंबरूप पाठ"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "लंबरूप पाठ"
-
-#, fuzzy
-#~| msgid "Percent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "प्रतिशत"
-
-#, fuzzy
-#~| msgid "Format"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "प्रारूप"
-
-#, fuzzy
 #~| msgid "Date Format"
 #~ msgid "&Data Format"
 #~ msgstr "तिथि प्रारूप"
@@ -18058,403 +20406,19 @@ msgstr ""
 #~ msgid "Size of Cell"
 #~ msgstr "जोडू कोष्ठ"
 
-#~ msgid "Height:"
-#~ msgstr "उँचाइ:"
-
-#~ msgid "Width:"
-#~ msgstr "चओड़ाइ:"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "टिपप्णी जोड़ू"
-
-#~ msgid "Increase Indent"
-#~ msgstr "हाशिया बढ़ाबू"
-
-#, fuzzy
-#~| msgid "Increase Indent"
-#~ msgid "Increase the indentation"
-#~ msgstr "हाशिया बढ़ाबू"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "हाशिया घटाबू"
-
-#, fuzzy
-#~| msgid "Decrease Indent"
-#~ msgid "Decrease the indentation"
-#~ msgstr "हाशिया घटाबू"
-
-#, fuzzy
-#~| msgid "Upper"
-#~ msgid "Upper Case"
-#~ msgstr "उप्परी"
-
-#~ msgid "Upper"
-#~ msgstr "उप्परी"
-
-#, fuzzy
-#~| msgid "First interest"
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "पहिल ब्याज"
-
-#, fuzzy
-#~| msgid "Lower"
-#~ msgid "Lower Case"
-#~ msgstr "निचला"
-
-#~ msgid "Lower"
-#~ msgstr "निचला"
-
-#, fuzzy
-#~| msgid "First interest"
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "पहिल ब्याज"
-
-#, fuzzy
-#~| msgid "First interest"
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "पहिल ब्याज"
-
-#, fuzzy
-#~| msgid "First interest"
-#~ msgid "First Letter Upper"
-#~ msgstr "पहिल ब्याज"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Comment..."
-#~ msgstr "टिप्पणी"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Remove Comment"
-#~ msgstr "टिप्पणी"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Remove this cell's comment"
-#~ msgstr "टिप्पणी"
-
-#, fuzzy
-#~| msgid "First interest"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "पहिल ब्याज"
-
-#, fuzzy
-#~| msgid "First interest"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "पहिल ब्याज"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "टिप्पणी"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Clear Comment"
-#~ msgstr "टिप्पणी"
-
-#, fuzzy
-#~| msgid "Change Case"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "केस बदलू"
-
-#, fuzzy
-#~| msgid "Increase Indent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "हाशिया बढ़ाबू"
-
-#, fuzzy
-#~| msgid "Decrease Indent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "हाशिया घटाबू"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Cell Comment"
-#~ msgstr "टिप्पणी"
-
-#~ msgid "&Left"
-#~ msgstr "बम्माँ (&L)"
-
-#~ msgid "&Right"
-#~ msgstr "दहिन्ना (&R)"
-
 #~ msgid "&Up"
 #~ msgstr "उप्पर (&U)"
-
-#~ msgid "&Down"
-#~ msgstr "नीच्चाँ (&D)"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Autosum"
-#~ msgstr "स्वचालित"
-
-#, fuzzy
-#~| msgid "Function"
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "फंक्शन"
-
-#, fuzzy
-#~| msgid "File Options"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "फाइल विकल्प"
-
-#, fuzzy
-#~| msgid "Text File"
-#~ msgid "From &Text File..."
-#~ msgstr "पाठ फाइल:"
-
-#~ msgid "Text File"
-#~ msgstr "पाठ फाइल:"
 
 #, fuzzy
 #~| msgid "Clipboard"
 #~ msgid "From &Clipboard..."
 #~ msgstr "क्लिपबोर्ड"
 
-#~ msgid "Clipboard"
-#~ msgstr "क्लिपबोर्ड"
-
-#, fuzzy
-#~| msgid "Text to Columns"
-#~ msgid "&Text to Columns..."
-#~ msgstr "पाठसँ कालम"
-
-#, fuzzy
-#~| msgid "Clipboard"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "क्लिपबोर्ड"
-
-#~ msgid "Text to Columns"
-#~ msgstr "पाठसँ कालम"
-
-#, fuzzy
-#~| msgid "Clipboard"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "क्लिपबोर्ड"
-
-#, fuzzy
-#~| msgid "Text File"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "पाठ फाइल:"
-
-#, fuzzy
-#~| msgid "Text to Columns"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "पाठसँ कालम"
-
-#, fuzzy
-#~| msgid "Merge Cells"
-#~ msgid "Merge the selected region"
-#~ msgstr "कोष्ठसभकेँ मिलाबू"
-
-#, fuzzy
-#~| msgid "Center vertically"
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "केंद्र लबंवत रूप सँ"
-
-#, fuzzy
-#~| msgid "Center vertically"
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "केंद्र लबंवत रूप सँ"
-
-#, fuzzy
-#~| msgid "Merge Cells"
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "कोष्ठसभकेँ मिलाबू"
-
-#, fuzzy
-#~| msgid "Merge Cells"
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "कोष्ठसभकेँ मिलाबू"
-
-#, fuzzy
-#~| msgid "Merge Cells"
-#~ msgid "Unmerge the selected region"
-#~ msgstr "कोष्ठसभकेँ मिलाबू"
-
-#, fuzzy
-#~| msgid "Delete Columns"
-#~ msgid "Resize Column..."
-#~ msgstr "कालम मेटाउ"
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Insert Columns"
-#~ msgstr "कोष्ठ जोडू"
-
-#, fuzzy
-#~| msgid "Insert Sheet"
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "शीट दिअ'"
-
-#, fuzzy
-#~| msgid "Delete Columns"
-#~ msgid "Remove Columns"
-#~ msgstr "कालम मेटाउ"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgid "Hide Columns"
-#~ msgstr "कालम"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgid "Show Columns..."
-#~ msgstr "कालम"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgid "Show hidden columns"
-#~ msgstr "कालम"
-
-#, fuzzy
-#~| msgid "Delete Columns"
-#~ msgid "Equalize Column"
-#~ msgstr "कालम मेटाउ"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgid "Show Columns"
-#~ msgstr "कालम"
-
-#, fuzzy
-#~| msgid "Columns"
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "कालम"
-
-#, fuzzy
-#~| msgid "Resize"
-#~ msgid "Resize Row..."
-#~ msgstr "आकार बदलू"
-
-#~ msgid "Insert Rows"
-#~ msgstr "पंक्तिसभकेँ जोडू"
-
-#, fuzzy
-#~| msgid "Insert Sheet"
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "शीट दिअ'"
-
-#, fuzzy
-#~| msgid "Remove"
-#~ msgid "Remove Rows"
-#~ msgstr "हटाबू"
-
-#, fuzzy
-#~| msgid "Resize"
-#~ msgid "Hide Rows"
-#~ msgstr "आकार बदलू"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgid "Show Rows..."
-#~ msgstr "पंक्ति"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgid "Show hidden rows"
-#~ msgstr "पंक्ति"
-
-#, fuzzy
-#~| msgid "Resize"
-#~ msgid "Equalize Row"
-#~ msgstr "आकार बदलू"
-
-#, fuzzy
-#~| msgid "Rows"
-#~ msgid "Show Rows"
-#~ msgstr "पंक्ति"
-
-#, fuzzy
-#~| msgid "Show Sheet"
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "शीट देखाउ"
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Adjust Row && Column"
-#~ msgstr "कोष्ठ जोडू"
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Adjust Column"
-#~ msgstr "कोष्ठ जोडू"
-
 #~ msgid "Delete Columns"
 #~ msgstr "कालम मेटाउ"
 
-#, fuzzy
-#~| msgid "Insert Rows"
-#~ msgid "Adjust Row"
-#~ msgstr "पंक्तिसभकेँ जोडू"
-
 #~ msgid "Delete Rows"
 #~ msgstr "पंक्तिसभकेँ मेटाउ"
-
-#, fuzzy
-#~| msgid "Resize"
-#~ msgid "Resize Row"
-#~ msgstr "आकार बदलू"
-
-#, fuzzy
-#~| msgid "Delete Columns"
-#~ msgid "Resize Column"
-#~ msgstr "कालम मेटाउ"
-
-#, fuzzy
-#~| msgid "Protect Sheet"
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "शीटकेँ रक्षा करू"
-
-#, fuzzy
-#~| msgid "Protect Sheet"
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "शीटकेँ रक्षा करू"
-
-#, fuzzy
-#~| msgid "Column"
-#~ msgid "Column: %1"
-#~ msgstr "कालम"
-
-#, fuzzy
-#~| msgid "Link"
-#~ msgid "&Link..."
-#~ msgstr "लिंक"
-
-#, fuzzy
-#~| msgid "Insert Sheet"
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "शीट दिअ'"
-
-#~ msgid "Link"
-#~ msgstr "लिंक"
-
-#~ msgid "Remove Link"
-#~ msgstr "लिंक मेटाबू"
-
-#, fuzzy
-#~| msgid "Remove Link"
-#~ msgid "Remove a link"
-#~ msgstr "लिंक मेटाबू"
-
-#~ msgid "Insert Link"
-#~ msgstr "कड़ी डालू"
 
 #, fuzzy
 #~| msgid "Insert Link"
@@ -18462,109 +20426,9 @@ msgstr ""
 #~ msgstr "कड़ी डालू"
 
 #, fuzzy
-#~| msgid "Remove Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "लिंक मेटाबू"
-
-#, fuzzy
-#~| msgid "Insert Link"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "कड़ी डालू"
-
-#~ msgid "Internet"
-#~ msgstr "इंटरनेट"
-
-#, fuzzy
-#~| msgid "Internet"
-#~ msgid "Link to Internet Address"
-#~ msgstr "इंटरनेट"
-
-#, fuzzy
-#~| msgid "Internet"
-#~ msgid "Internet address:"
-#~ msgstr "इंटरनेट"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "इमेलः"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Link to Email Address"
-#~ msgstr "इमेलः"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email address:"
-#~ msgstr "इमेलः"
-
-#~ msgid "Subject:"
-#~ msgstr "विषय:"
-
-#~ msgid "File"
-#~ msgstr "फाइल"
-
-#, fuzzy
-#~| msgid "Insert Cell"
-#~ msgid "Link to File"
-#~ msgstr "जोडू कोष्ठ"
-
-#, fuzzy
-#~| msgid "File Options"
-#~ msgid "File location:"
-#~ msgstr "फाइल विकल्प"
-
-#, fuzzy
-#~| msgid "Entry:"
-#~ msgid "No Entries"
-#~ msgstr "प्रविष्टि:"
-
-#, fuzzy
-#~| msgid "Insert Cell"
-#~ msgid "Link to Cell"
-#~ msgstr "जोडू कोष्ठ"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgid "Cell or Named Area:"
-#~ msgstr "प्रतिस्थापन"
-
-#, fuzzy
-#~| msgid "Sort"
-#~ msgid "&Sort..."
-#~ msgstr "छाँटू"
-
-#, fuzzy
-#~| msgid "Start date"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "आरंभ दिनांक"
-
-#, fuzzy
 #~| msgid "Custom Styles"
 #~ msgid "Use custom list"
 #~ msgstr "शैलीसभकेँ पसँदीदा करू"
-
-#, fuzzy
-#~| msgid "Column"
-#~ msgid "Column %1"
-#~ msgstr "कालम"
-
-#, fuzzy
-#~| msgid "First interest"
-#~ msgid "&First column contains row headers"
-#~ msgstr "पहिल ब्याज"
-
-#, fuzzy
-#~| msgid "First interest"
-#~ msgid "&First row contains column headers"
-#~ msgstr "पहिल ब्याज"
-
-#~ msgid "Sort"
-#~ msgstr "छाँटू"
 
 #, fuzzy
 #~| msgid "Down"
@@ -18597,174 +20461,9 @@ msgstr ""
 #~ msgstr "सुरक्षा"
 
 #, fuzzy
-#~| msgid "Validity"
-#~ msgid "Validity..."
-#~ msgstr "वैधता"
-
-#~ msgid "Validity"
-#~ msgstr "वैधता"
-
-#, fuzzy
-#~| msgid "Validity"
-#~ msgid "Remove Validity"
-#~ msgstr "वैधता"
-
-#, fuzzy
-#~| msgid "Validity"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "वैधता"
-
-#, fuzzy
-#~| msgid "Validity"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "वैधता"
-
-#, fuzzy
-#~| msgid "Clear All"
-#~ msgid "Clear &All"
-#~ msgstr "सभकेँ हटाबू"
-
-#, fuzzy
 #~| msgid "Criteria"
 #~ msgid "&Criteria"
 #~ msgstr "मापदंड"
-
-#~ msgid "Integer"
-#~ msgstr "पूर्णांक"
-
-#, fuzzy
-#~| msgid "Length"
-#~ msgid "Text Length"
-#~ msgstr "नमाइ"
-
-#~ msgid "List"
-#~ msgstr "सूची"
-
-#, fuzzy
-#~| msgid "Date"
-#~ msgid "Data:"
-#~ msgstr "दिनांक"
-
-#~ msgid "Minimum:"
-#~ msgstr "न्यूनतमः"
-
-#~ msgid "Maximum:"
-#~ msgstr "अधिकतम:"
-
-#~ msgid "Date:"
-#~ msgstr "दिनांक:"
-
-#, fuzzy
-#~| msgid "Minimum:"
-#~ msgid "Date minimum:"
-#~ msgstr "न्यूनतमः"
-
-#, fuzzy
-#~| msgid "Maximum:"
-#~ msgid "Date maximum:"
-#~ msgstr "अधिकतम:"
-
-#~ msgid "Time:"
-#~ msgstr "समय:"
-
-#, fuzzy
-#~| msgid "Minimum:"
-#~ msgid "Time minimum:"
-#~ msgstr "न्यूनतमः"
-
-#, fuzzy
-#~| msgid "Maximum:"
-#~ msgid "Time maximum:"
-#~ msgstr "अधिकतम:"
-
-#, fuzzy
-#~| msgid "Number"
-#~ msgid "Number:"
-#~ msgstr "संख्या"
-
-#, fuzzy
-#~| msgid "Entry:"
-#~ msgid "Entries:"
-#~ msgstr "प्रविष्टि:"
-
-#, fuzzy
-#~| msgid "Function"
-#~ msgid "Action:"
-#~ msgstr "फंक्शन"
-
-#~ msgid "Stop"
-#~ msgstr "रोकू"
-
-#~ msgid "Warning"
-#~ msgstr "चेतावनी"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "शीर्षक:"
-
-#~ msgid "Message:"
-#~ msgstr "संदेश:"
-
-#~ msgid "Input Help"
-#~ msgstr "इनपुट सहायता"
-
-#, fuzzy
-#~| msgid "Series"
-#~ msgid "&Series..."
-#~ msgstr "श्रृंखला"
-
-#, fuzzy
-#~| msgid "Insert Series"
-#~ msgid "Insert a series"
-#~ msgstr "श्रृंखला जोडू"
-
-#, fuzzy
-#~| msgid "Insert Series"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "श्रृंखला जोडू"
-
-#, fuzzy
-#~| msgid "Protect Sheet"
-#~ msgid "Select Character"
-#~ msgstr "शीटकेँ रक्षा करू"
-
-#~ msgid "Series"
-#~ msgstr "श्रृंखला"
-
-#, fuzzy
-#~| msgid "Insert Cells"
-#~ msgid "Insert Values"
-#~ msgstr "कोष्ठ जोडू"
-
-#, fuzzy
-#~| msgid "value"
-#~ msgid "Start value:"
-#~ msgstr "मान"
-
-#, fuzzy
-#~| msgid "value"
-#~ msgid "Stop value:"
-#~ msgstr "मान"
-
-#, fuzzy
-#~| msgid "value"
-#~ msgid "Step value:"
-#~ msgstr "मान"
-
-#, fuzzy
-#~| msgid "Parameters"
-#~ msgid "End and start value must be positive."
-#~ msgstr "पैरामीटर"
-
-#, fuzzy
-#~| msgid "Protect Sheet"
-#~ msgid "S&pecial Character..."
-#~ msgstr "शीटकेँ रक्षा करू"
 
 #, fuzzy
 #~| msgid "Internet"
@@ -21710,12 +23409,6 @@ msgstr ""
 #~ msgstr "मेटाबू (&D)..."
 
 #, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "समग्र योग"
-
-#, fuzzy
 #~| msgid "Remove All"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Remove All"
@@ -24533,11 +26226,6 @@ msgstr ""
 #~ msgstr "फ्लोट"
 
 #, fuzzy
-#~| msgid "Text File"
-#~ msgid "Inserting Text File"
-#~ msgstr "पाठ फाइल:"
-
-#, fuzzy
 #~| msgid "Values"
 #~ msgid "y (array)"
 #~ msgstr "मान"
@@ -24564,9 +26252,6 @@ msgstr ""
 #~ msgctxt "application name"
 #~ msgid "Tables"
 #~ msgstr "सारणी"
-
-#~ msgid "Paste"
-#~ msgstr "साटू"
 
 #~ msgid "Options"
 #~ msgstr "विकल्प"

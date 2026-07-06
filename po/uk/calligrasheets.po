@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligrasheets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2025-10-06 13:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -144,8 +144,13 @@ msgstr "Заголовок"
 msgid "Header1"
 msgstr "Заголовок1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Типовий"
@@ -177,7 +182,8 @@ msgstr "с"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Текст"
@@ -248,7 +254,8 @@ msgstr "<p><b>Тип результату:</b> %1</p>"
 msgid "Syntax"
 msgstr "Синтаксис"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Параметри"
@@ -888,14 +895,15 @@ msgstr "CARY(12;0) повертає 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Число"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Формат"
@@ -954,6 +962,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") повертає 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "База даних"
@@ -1255,6 +1265,7 @@ msgstr "Дата і час"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1328,7 +1339,8 @@ msgstr "DAYS360(\"2/22/2002\"; \"4/21/2002\"; FALSE) повертає 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Час"
@@ -4989,6 +5001,7 @@ msgid "Regular payments"
 msgstr "Регулярні сплати"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Тип"
@@ -5333,12 +5346,19 @@ msgstr "Ручний"
 msgid "Automatic"
 msgstr "Автоматичний"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Інформація"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Помилка"
@@ -6168,7 +6188,7 @@ msgstr ""
 msgid "Math"
 msgstr "Розрахунки"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Функція"
@@ -6664,6 +6684,7 @@ msgid "Range"
 msgstr "Діапазон"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Критерій"
@@ -8260,6 +8281,7 @@ msgid "Row"
 msgstr "Рядок"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Колонка"
@@ -12899,7 +12921,7 @@ msgid "&Go"
 msgstr "Пере&хід"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "Вс&тавка"
@@ -12917,7 +12939,7 @@ msgid "F&ormat"
 msgstr "Ф&ормат"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Об'єднати комірки"
@@ -12996,8 +13018,8 @@ msgstr "Задіяти"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Шрифт"
@@ -13413,14 +13435,16 @@ msgstr "Обмеження сторінки:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "По горизонталі"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "По вертикалі"
@@ -13447,13 +13471,15 @@ msgid "Up"
 msgstr "Вгору"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Праворуч"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Ліворуч"
@@ -13465,36 +13491,50 @@ msgstr "Вниз, перша колонка"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Немає"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Сума"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Мінімум"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Максимум"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Середнє"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Кількість"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -13901,7 +13941,8 @@ msgstr "Зняти вибір"
 msgid "Move selected sheet to the bottom"
 msgstr "Пересунути вибраний аркуш в кінець"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "З урахуванням регістру"
@@ -14102,6 +14143,7 @@ msgid "Anchor"
 msgstr "Фіксатор"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Комірка"
@@ -14121,7 +14163,7 @@ msgstr "Перемкнути фіксування форми"
 msgid "Next Sheet"
 msgstr "Наступний аркуш"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Наступний"
@@ -14136,7 +14178,7 @@ msgstr "Перейти до наступного аркуша"
 msgid "Previous Sheet"
 msgstr "Попередній аркуш"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Попередній"
@@ -14343,7 +14385,7 @@ msgstr ""
 "Ви збираєтесь вилучити активний аркуш.\n"
 "Продовжити?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Введіть назву:"
@@ -14403,14 +14445,14 @@ msgstr "CountA: "
 msgid "%1x%2"
 msgstr "%1⨯%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr ""
 "Змінити колір тексту\n"
 "зміну кольору тексту"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr ""
@@ -14419,11 +14461,3218 @@ msgstr ""
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr ""
 "Змінити рамку\n"
 "зміну рамки"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Вставити колонку"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Вставити рядки"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Вилучити колонки"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Вилучити рядки"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Вставляє новий рядок в електронну таблицю"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Вилучає рядок з електронної таблиці."
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Вставити в електронну таблицю нову колонку"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Вилучає позначені стовпчики з електронної таблиці"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Сховати колонки"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Сховати рядки"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Показати колонки"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Показати рядки"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Показати у вибраному сховані рядки"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "Об'єднати вибрану ділянку"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Показати у вибраному сховані колонки"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "Об'єднати вибрану ділянку"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Вирівняти ширину колонки"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Вирівняти висоту рядка"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Змінити висоту вибраних рядків, щоб у всіх була однакова"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Змінити ширину вибраних колонок, щоб у всіх була однакова"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Скоригувати колонку"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Скоригувати рядок"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Скоригувати рядок і колонку"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "Скоригувати розміри рядка/колонки, щоб вміщався зміст"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "Скоригувати розміри рядка/колонки, щоб вміщався зміст"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "Скоригувати розміри рядка/колонки, щоб вміщався зміст"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Показати колонки…"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Показати рядки…"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Показати сховані колонки"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Показати сховані рядки"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Колонка: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Рядок: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Змінити розмір колонки…"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Змінити висоту рядка…"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Змінити висоту рядка"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Змінити ширину колонки"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "По лівому краю"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Вирівняти вміст комірки ліворуч"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr ""
+"Змінити горизонтальне вирівнювання\n"
+"зміну горизонтального вирівнювання"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "По правому краю"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Вирівняти вміст комірки праворуч"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "По центру"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Вирівняти вміст комірки по центру"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "По центру"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Вгору"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Вирівняти вміст комірки по верху"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Зверху"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr ""
+"Змінити вертикальне вирівнювання\n"
+"зміну вертикального вирівнювання"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "До низу"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Вирівняти вміст комірки до низу"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Внизу"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "По середині"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Вирівняти вміст по середині комірки"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Посередині"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Змінити кут…"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Змінити кут, під яким друкуватиметься вміст комірки"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Кут"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr ""
+"Змінити кут\n"
+"зміну кута"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Автофільтр"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Додати автоматичний фільтр до діапазону комірок"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr ""
+"Автофільтрування\n"
+"автофільтрування"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Застосувати до вибраних комірок стиль, який вже визначено"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Автоформатування…"
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Не вдалося знайти файл XML стилю аркуша «%1»."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Помилка під час розбору файла XML стилю аркуша %1."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr ""
+"Автоформатування\n"
+"автоформатування"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Автосума"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Вставити функцію «sum»"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Автосума"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Ліва межа"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Вказати ліву межу для вибраної ділянки"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Права межа"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Вказати праву межу для вибраної ділянки"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Верхня межа"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Вказати верхню межу для вибраної ділянки"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Нижня межа"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Вказати нижню межу для вибраної ділянки"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Всі межі"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Вказати межі навколо всіх комірок у вибраній ділянці"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Всі"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Без меж"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Вилучити всі межі в вибраній ділянці"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Контур межі"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Вказати межу контуру вибраної ділянки"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Контур"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Колір межі"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Вибрати новий колір межі"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr ""
+"Змінити колір рамки\n"
+"зміну кольору рамки"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Вставити комірки…"
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Вставити в електронну таблицю порожню комірку"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Вилучити комірки…"
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Вилучає комірки з електронної таблиці"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Очистити все"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Вилучити увесь вміст і форматування поточної комірки"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Очистити вміст"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Вилучити вміст поточної комірки"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr ""
+"Вилучити текст\n"
+"вилучення тексту"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr ""
+"Вилучити\n"
+"вилучення"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Коментар…"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Редагувати коментар для цієї комірки"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Вилучити коментар"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Вилучити коментар цієї комірки"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Вилучити коментар"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr ""
+"Вилучити коментар\n"
+"вилучення коментаря"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr ""
+"Додати коментар\n"
+"додавання коментаря"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Умовне форматування комірки…"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Встановити формат комірки залежно від певних умов"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Умовні стилі"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Вилучити умовне форматування комірки"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Вилучити умовне форматування"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr ""
+"Вилучити умовне форматування\n"
+"вилучення умовного форматування"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr ""
+"Додати умовне форматування\n"
+"додавання умовного форматування"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Консолідувати…"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Створити ділянку з даними підсумків з групи подібних ділянок"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr ""
+"Консолідувати\n"
+"консолідацію"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Скопіювати об'єкт комірки до буфера"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Перенести об'єкт комірки до буфера"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "З &текстового файла…"
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "Вставити дані з текстового файла до поточної позиції/вибору курсора"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Текстовий файл"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "Імпортування файла даних у форматі CSV"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "файли даних CSV (*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Не вдається відкрити вхідний файл."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Inserting Text File"
+msgid "Inserting Text File"
+msgstr ""
+"Вставити текстовий файл\n"
+"вставлення текстового файла"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr ""
+"Вставити текстовий файл\n"
+"вставлення текстового файла"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Вставляння з буфера даних"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "Вставити CSV-дані з буфера до поточної позиції/вибору курсора."
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Кишеня"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "В кишені нема жодних даних."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "В кишені нема придатних даних."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Вставляння з буфера даних"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr ""
+"Вставити з буфера даних\n"
+"вставлення з буфера даних"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Текст у колонки…"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Розширити вміст комірки на декілька колонок"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Текст у колонки"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr ""
+"Текст у колонки\n"
+"перетворення тексту у колонки"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Створити нетипові списки для впорядкування або автозаповнення"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Нетипові списки…"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Додати ділянку з назвою"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Введіть назву ділянки:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Змінити кут"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Кут:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr ""
+"Автоформатування\n"
+"автоформатування"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Застосувати стиль аркуша:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Обрати символ"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Вставити вибраний символ до тексту"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Коментар комірки"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<немає>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "дорівнює"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "більше, ніж"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "менше, ніж"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "дорівнює або більше, ніж"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "дорівнює або менше, ніж"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "між"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "поза діапазоном"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "відмінний від"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Перша умова"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Друга умова"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Третя умова"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Комірка є"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Стиль комірки"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "відмінна від"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Якщо перше значення — це число, то і друге значення мусить бути числом."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Якщо перше значення — це рядок символів, то і друге значення мусить бути "
+"рядком символів."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Консолідувати"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Продукт"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Стандартне відхилення"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Дисперсія"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Вам слід вказати принаймні один діапазон вхідних комірок."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 не є коректним діапазоном комірок."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Діапазон\n"
+"%1\n"
+"надто малий"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Діапазон\n"
+"%1\n"
+"надто великий"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr ""
+"Діапазон вхідних комірок перетинається з діапазоном комірок призначення."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Діапазон\n"
+"%1\n"
+" містить помилки"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Вставити дані з бази даних"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Тип:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Назва бази даних: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Вузол:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Порт:\n"
+"(якщо потрібно)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Користувач:\n"
+"(якщо потрібно)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Пароль:\n"
+"(якщо потрібно)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Виберіть таблиці:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Таблиці"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Виберіть колонки:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Таблиця"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Колонки"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Має збігатися з усіма наступними (І)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Має збігатися з будь-чим з наступних (АБО)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "дорівнює"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "не дорівнює"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "в"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "не в"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "збігається"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "більше"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "менше"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "більше або дорівнює"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "менше або дорівнює"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Впорядкувати"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "За зростанням"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "За спаданням"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Окремий"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Параметри запиту"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "Запит SQL:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Вставити в ділянку"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Починаючи з комірки"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Результат"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Ви не можете вказати таблицю тут."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Потрібно вказати чинну ділянку."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Потрібно вказати чинну комірку."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Не вдалось виконати запит."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Цей запит не вернув жодного результату."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr ""
+"Вставити дані з бази даних\n"
+"вставлення даних з бази даних"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Порт мусить бути числом"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "З'єднання з базою даних…"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "З'єднано. Отримання інформації таблиці…"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Ця база даних не містить жодної таблиці"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Не вдалося завантажити драйвер"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Отримання метаданих таблиці…"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Потрібно вибрати хоча б одну колонку."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Потрібно вибрати хоча б одну колонку."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' або '?' не є коректними шаблонами заміни SQL. Замість них слід "
+"використовувати '%' або '_'. Бажаєте провести заміну?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr ""
+"Замінити\n"
+"заміну"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Параметри документа"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, kde-format
+msgid "Calculation"
+msgstr "Обчислення"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr "Локаль"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr "З врахуванням регістру"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, kde-format
+msgid "Precision as shown"
+msgstr "Точність, як показано"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr "Критерії пошуку мають стосуватися до усієї комірки"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, kde-format
+msgid "Automatic find labels"
+msgstr "Автоматичний пошук міток"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr "Порівняння рядків:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Regular Expressions"
+msgstr "Формальні вирази"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr "Шаблони заміни"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr "Рік відліку:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Використовувати параметри локалі системи"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, kde-format
+msgid "Language: %1 (%2)"
+msgstr "Мова: %1 (%2)"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Типовий формат чисел: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Формат довгої дати: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Формат короткої дати: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Формат часу: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Формат валюти: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Більше параметрів"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Пошук у всьому аркуші"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Шукати в:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Значення у комірках"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Коментарі"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Напрямок пошуку:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Впоперек, потім вниз"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Вниз, потім впоперек"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Менше параметрів"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "Функція"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Вставити функцію"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Довідка"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Ця функція не має параметрів."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Нема опису."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Пошук розв’язку"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Перейти до комірки"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Введіть комірку:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Вставити"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Пересунути праворуч"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Пересунути ліворуч"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Вставити рядки"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Вставити колонки"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Вставити комірки"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Вилучити"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Пересунути ліворуч"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Пересунуту вгору"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Вилучити рядки"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Вилучити колонки"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Вилучити комірки"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Вставити посилання"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Інтернет"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Посилання на адресу в Інтернеті"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Показати текст:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Адреса в інтернеті:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "Ел. пошта"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "Посилання на адресу електронної пошти"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "Адреса ел. пошти:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Тема:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Файл"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Посилання на файл"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Адреса файла:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Недавній файл:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Записи відсутні"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Посилання на комірку"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Комірку або ділянку з назвою:"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Нетипові списки"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr ""
+"Змінити регістр\n"
+"зміну регістру"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Список:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Запис:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Додати"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Створити"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Змінити"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Копіювати"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Ви справді хочете вилучити цей список?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Вилучити список"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Ділянка не є порожньою.\n"
+"Продовжити?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Ділянки з назвами"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Ділянка: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Комірки:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Аркуш:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Назва ділянки:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "Ви&лучити"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Відкрити/Зберегти"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Ви справді хочете вилучити цю ділянку з назвою?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Вилучити ділянку з назвою"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Некоректне посилання на комірку."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Вставити комірки зі зміщенням"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, kde-format
+msgid "Select Source"
+msgstr "Виберіть джерело"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr "Вікно налаштовування зведеної таблиці"
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, kde-format
+msgid "Add Filter"
+msgstr "Додати фільтр"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, kde-format
+msgid "Pivot Options"
+msgstr "Параметри зведеної таблиці"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Змінити розмір рядка"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Висота:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Змінити розмір колонки"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Ширина:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Ряд"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr ""
+"Вставити послідовність\n"
+"вставлення послідовності"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Вставити значення"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Вставити рядки вертикально, один під одним"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Вставити рядки горизонтально, зліва направо"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Лінійний (2,4,6,…)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Створює ряд з вказаним початковим, кінцевим елементом і приростом. Кожне "
+"наступне значення у цьому ряді може бути отримане шляхом додавання числа, що "
+"вказане як крок, до попереднього елемента."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Геометричний (2,4,8,…)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Створює ряд з вказаним початковим, кінцевим елементом і приростом (кроком) "
+"множення елементів. Кожне наступне значення у цьому ряді може бути отримане "
+"шляхом множення числа, вказаного як крок, на попередній елемент. Наприклад, "
+"якщо крок рівний 5, а початковий елемент рівний 5, отримуємо ряд 5, 25, 125, "
+"625…"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Початкове значення:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Кінцеве значення:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Крок:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Кінцеве і початкове значення мусять бути додатними."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Кінцеве значення мусить бути більшим за початкове або крок мусить бути "
+"меншим за «1»."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "Ні значення початку, зупинки, ні кроку не може бути рівним 0."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "Значення кроку не може бути 1"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "Від'ємний крок."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Значення кроку повинно бути додатнім. Інакше лінійні ряди будуть нескінченні."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Якщо початкове значення більше за кінцеве, то крок мусить бути меншим нуля."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Якщо крок від'ємний, то початкове значення мусить бути більшим за кінцеве."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Показати приховані рядки:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Показати приховані колонки:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Колонка %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Ряд %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "&Перша колонка містить заголовки рядків"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "&Перший рядок містить заголовки колонок"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Впорядковування"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Без врахування регістру"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Спеціальна вставка"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Менеджер стилів"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Стиль"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Всі стилі"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Нетипові стилі"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Ієрархічний"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Створити…"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Змінити…"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Вилучити…"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "стиль%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Підсумки"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Вилучити всі"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Колонка «%1» "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Для додавання підсумків потрібно вибрати принаймні одну колонку."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Коректність"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Очистити &всі"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Дозволити:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Ціле"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Довжина тексту"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Список"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Дозволити порожні"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Дані:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Мінімум:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Максимум:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Мінімальна дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Максимальна дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Час:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Мінімальний час:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Максимальний час:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Номер:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Елементів:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "&Сигнал помилки"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Показувати повідомлення про помилку, якщо введено некоректне значення"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Дія:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Зупинка"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Попередження"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Повідомлення:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Довідка для вводу"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Показувати довідку для вводу, коли вибрано комірку"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Некоректне значення."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Некоректний час."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Некоректна дата."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Параметри документа…"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "Показати діалогове вікно параметрів документа"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Редагувати підсвічену комірку"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Змінити комірку"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "Змінити порядок прив’язки"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Змінити порядок прив’язки посилання комірки, у якій перебуває курсор"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Вниз"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "Лі&воруч"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&Праворуч"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr ""
+"Заповнити позначене\n"
+"заповнення позначеного"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr ""
+"Замінити\n"
+"заміну"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Вибрати шрифт…"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Форматування комірки"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr ""
+"Змінити шрифт\n"
+"зміну шрифту"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Виберіть розмір шрифту"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Форматування комірки"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Розмір шрифту"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Вказати колір тексту"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Колір тексту"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Функція…"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Вставити математичний вираз"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Вибір формули"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Вставити функцію"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Інші…"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&Пошук розв’язку…"
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Повторення підрахунку, щоб знайти певне значення"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Некоректне посилання на комірку."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Некоректне цільове значення."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Вихідна комірка повинна містити числове значення."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Цільова комірка повинна містити формулу."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Пошук розв’язку у комірці %1, знайдено розв’язок:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Пошук розв’язку у комірці %1 виявив, що розв’язок НЕ знайдено."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Перейти до комірки…"
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Перейти до певної комірки"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Перейти до комірки"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Некоректний час."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Зменшити відступ"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Збільшити відступ"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Зменшити відступ"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Збільшити відступ"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr ""
+"Збільшити відступ\n"
+"збільшення відступу"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr ""
+"Зменшити відступ\n"
+"зменшення відступу"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "З &бази даних…"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Вставити дані з бази даних SQL"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Драйвери баз даних недоступні. Щоб мати змогу скористатися цією можливістю, "
+"вам слід встановити необхідні драйвери баз даних з Qt."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "По&слідовність…"
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Вставити серію"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr ""
+"Вставити послідовність\n"
+"вставлення послідовності"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "Сп&еціальний символ…"
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+"Вставити один або більше символів або літер, які неможливо ввести з "
+"клавіатури"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Запуск інспектора…"
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Посилання…"
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Вставити гіперпосилання"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Посилання"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Вилучити посилання"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Вилучити посилання"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr ""
+"Вилучити посилання\n"
+"вилучення посилання"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr ""
+"Вказати посилання\n"
+"встановлення посилання"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Список вибору…"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Об'єднати комірки горизонтально"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Об'єднати комірки вертикально"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Об'єднати вибрану ділянку горизонтально"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Об'єднати вибрану ділянку вертикально"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "Об'єднати вибрану ділянку"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Роз'єднати комірки"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "Роз'єднати вибрану ділянку"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Назвати ділянку…"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Вкажіть назву ділянки електронної таблиці"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"Ділянка з назвою «%1» вже існує.\n"
+"Бажаєте замінити її?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "Замінити ділянку з назвою"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr ""
+"Замінити ділянку з назвою\n"
+"заміну ділянки з назвою"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Змінити або вибрати названі ділянки"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Ділянки з назвами…"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Розрив перед рядком"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Додати вручну розрив сторінки перед рядком"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Розрив рядка"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Розрив перед колонкою"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Додати вручну розрив сторінки перед колонкою"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Розрив колонки"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Вставити вміст буфера в поточну позицію курсора"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Спеціальна вставка…"
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Вставити зі спеціальними параметрами вміст буфера"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Вставити з новими рядками"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Вставляє комірку з буфера в електронну таблицю"
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "&Pivot Tables..."
+msgstr "Зв&едені таблиці…"
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "Create Pivot Tables"
+msgstr "Створити зведені таблиці"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Вам слід позначити щонайменше дві комірки."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Обирає всі комірки поточного аркуша"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "Показати QTableView…"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "Впо&рядкувати…"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Впорядкувати групу комірок"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Впорядкувати за з&більшенням"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr ""
+"Впорядкувати групу комірок в порядку збільшення (від першого до останнього)"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "Впорядкувати за з&меншенням"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr ""
+"Впорядкувати групу комірок в порядку зменшення (від останнього до першого)"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr ""
+"Сортувати дані\n"
+"сортування даних"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Перевірити правопис в наступному аркуші?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Перейти до наступного аркуша"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Перевірка правопису"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Формат комірки…"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Форматування комірки"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Жирний"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Курсив"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Підкреслити"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Закреслений"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Зробити, щоб текст у комірці переносився за рядками"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Перенос тексту"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Переносити рядки"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr ""
+"Перенести текст\n"
+"перенесення тексту"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Друкувати вміст комірки вертикально"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Вертикальний текст"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr ""
+"Вертикальний текст\n"
+"вертикальний текст"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr ""
+"Формат числа\n"
+"форматування у режимі числа"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Форматування комірки"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Перше число"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr ""
+"Науковий формат\n"
+"форматування у режимі інженерного запису"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "Формат комірки має виглядати як відсотки"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Науковий"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Науковий"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Формат відсотків"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Формат комірки має виглядати як відсотки"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Відсоток"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr ""
+"Форматувати як відсотки\n"
+"форматування у режимі відсотків"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Формат грошей"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Формат комірки має відповідати грошовій системі вашої країни"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Гроші"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr ""
+"Форматувати як гроші\n"
+"форматування у режимі грошей"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr ""
+"Формат дати\n"
+"форматування у режимі дати"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Форматування комірки"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Формат"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Форматування комірки"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr ""
+"Формат часу\n"
+"форматування у режимі часу"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Формат"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Збільшити розмір шрифту"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Зменшити розмір шрифту"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Збільшити точність"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Збільшити десяткову точність на екрані"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Зменшити точність"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Зменшити десяткову точність на екрані"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr ""
+"Підвищити точність\n"
+"підвищення точності"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr ""
+"Знизити точність\n"
+"зниження точності"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Скинути до типового формату"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Стиль аркуша"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Колір тла"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Вказати колір тла"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Створити стиль з комірки…"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Створити новий стиль на основі вибраної зараз комірки"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Стиль за коміркою"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Створити стиль з комірки"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Назва стилю не може бути порожньою."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Стиль з такою назвою вже існує."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Редагування і керування стилями комірок"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Керування стилями…"
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Застосувати до вибраних комірок стиль, який вже визначено"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "Промі&жні підсумки…"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Створити інший вид проміжних підсумків для списку або бази даних"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Підсумки"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Верхній регістр"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "У нижній регістр"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Змінити регістр першої літери на верхній"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr ""
+"Перемкнутися на верхній регістр\n"
+"перехід на верхній регістр"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr ""
+"Перейти у нижній регістр\n"
+"перехід на нижній регістр"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr ""
+"Верхній регістр для першої літери\n"
+"верхній регістр для першої літери"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Верхній регістр"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Нижній регістр"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Змінити регістр першої літери на верхній"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Перетворити всі літери на великі"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Перетворити всі літери на малі"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "Перша літера — велика"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr ""
+"Змінити регістр\n"
+"зміну регістру"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Вказати перевірку правильності даних комірки"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Коректність…"
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Вилучити перевірку правильності даних комірки"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Вилучити перевірку коректності"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr ""
+"Вилучити перевірку коректності\n"
+"вилучення перевірки коректності"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr ""
+"Додати перевірку коректності\n"
+"додавання перевірки коректності"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14679,13 +17928,6 @@ msgid "Remove Cells"
 msgstr ""
 "Вилучити комірки\n"
 "вилучення комірок"
-
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr ""
-"Вилучити\n"
-"вилучення"
 
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
@@ -14969,12 +18211,6 @@ msgstr "Різний (без зміни)"
 msgid "Roman"
 msgstr "Roman"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Курсив"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14997,12 +18233,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Звичайний"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Жирний"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -15015,12 +18245,6 @@ msgstr "Колір:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "Якщо буде позначено, текст поточної комірки буде підкреслено."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Підкреслити"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15167,11 +18391,6 @@ msgstr ""
 "параметрів → Загальний вигляд і поведінка → Локаль → Країна/Регіон та мова → "
 "Числа. Типово для чисел використовується вирівнювання праворуч."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Відсоток"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15191,11 +18410,6 @@ msgstr ""
 "Для встановлення формату відсотків ви також можете скористатися кнопкою зі "
 "значком % на панелі інструментів."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Гроші"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15211,11 +18425,6 @@ msgstr ""
 "Регіон та мова → Гроші.\n"
 "Ви також можете використати кнопку з зображенням грошей, щоб встановити "
 "форматування комірки відповідно до вашої поточної грошової одиниці."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Науковий"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15473,11 +18682,6 @@ msgstr "Три цифри 153/652"
 msgid "Dolor Ipse"
 msgstr "Тестова phrase"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Стиль"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15488,11 +18692,6 @@ msgstr "Назва:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Успадкувати стиль:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Стиль з такою назвою вже існує."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15545,12 +18744,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Стандартна"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "По центру"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15589,24 +18782,6 @@ msgstr ""
 "<b>Зверху</b> означає, що вміст буде показано зверху комірки.\n"
 "<b>Посередині</b> означає, що вміст буде показано посередині комірки.\n"
 "<b>Внизу</b> означає, що вміст буде показано внизу комірки.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Зверху"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Посередині"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Внизу"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15801,20 +18976,10 @@ msgstr "Застосувати"
 msgid "Apply changes"
 msgstr "Застосувати зміни"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Скасувати"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Відкинути зміни"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Всі"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15912,357 +19077,11 @@ msgstr "Посилання %1 активовано"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[гг]::хх)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Функція…"
-
-#~ msgid "Insert math expression"
-#~ msgstr "Вставити математичний вираз"
-
-#~ msgid "From &Database..."
-#~ msgstr "З &бази даних…"
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Вставити дані з бази даних SQL"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Вибір формули"
-
-#~ msgid "Insert a function"
-#~ msgstr "Вставити функцію"
-
-#~ msgid "Others..."
-#~ msgstr "Інші…"
-
-#~ msgid "Modify Cell"
-#~ msgstr "Змінити комірку"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Редагувати підсвічену комірку"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Запуск інспектора…"
-
-#~ msgid "Show QTableView..."
-#~ msgstr "Показати QTableView…"
-
 #~ msgid "Permute reference fixation"
 #~ msgstr "Змінити прив’язку посилання"
 
-#~ msgid "Permute fixation"
-#~ msgstr "Змінити порядок прив’язки"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr ""
-#~ "Змінити порядок прив’язки посилання комірки, у якій перебуває курсор"
-
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Драйвери баз даних недоступні. Щоб мати змогу скористатися цією "
-#~ "можливістю, вам слід встановити необхідні драйвери баз даних з Qt."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Вставити дані з бази даних"
-
-#~ msgid "Type:"
-#~ msgstr "Тип:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Користувач:\n"
-#~ "(якщо потрібно)"
-
-#~ msgid "Host:"
-#~ msgstr "Вузол:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Порт:\n"
-#~ "(якщо потрібно)"
-
-#~ msgid "Database name: "
-#~ msgstr "Назва бази даних: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Пароль:\n"
-#~ "(якщо потрібно)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Виберіть таблиці:"
-
-#~ msgid "Tables"
-#~ msgstr "Таблиці"
-
-#~ msgid "Select columns:"
-#~ msgstr "Виберіть колонки:"
-
-#~ msgid "Table"
-#~ msgstr "Таблиця"
-
-#~ msgid "Columns"
-#~ msgstr "Колонки"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Має збігатися з усіма наступними (І)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Має збігатися з будь-чим з наступних (АБО)"
-
-#~ msgid "equals"
-#~ msgstr "дорівнює"
-
-#~ msgid "not equal"
-#~ msgstr "не дорівнює"
-
-#~ msgid "in"
-#~ msgstr "в"
-
-#~ msgid "not in"
-#~ msgstr "не в"
-
-#~ msgid "like"
-#~ msgstr "збігається"
-
-#~ msgid "greater"
-#~ msgstr "більше"
-
-#~ msgid "lesser"
-#~ msgstr "менше"
-
-#~ msgid "greater or equal"
-#~ msgstr "більше або дорівнює"
-
-#~ msgid "less or equal"
-#~ msgstr "менше або дорівнює"
-
-#~ msgid "Sorted by"
-#~ msgstr "Впорядкувати"
-
-#~ msgid "Ascending"
-#~ msgstr "За зростанням"
-
-#~ msgid "Descending"
-#~ msgstr "За спаданням"
-
-#~ msgid "Distinct"
-#~ msgstr "Окремий"
-
-#~ msgid "Query Options"
-#~ msgstr "Параметри запиту"
-
-#~ msgid "SQL query:"
-#~ msgstr "Запит SQL:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Вставити в ділянку"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Починаючи з комірки"
-
-#~ msgid "Result"
-#~ msgstr "Результат"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Ви не можете вказати таблицю тут."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Потрібно вказати чинну ділянку."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Потрібно вказати чинну комірку."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Вам не дозволено змінювати дані в базі даних."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Не вдалось виконати запит."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Цей запит не вернув жодного результату."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr ""
-#~ "Вставити дані з бази даних\n"
-#~ "вставлення даних з бази даних"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Порт мусить бути числом"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "З'єднання з базою даних…"
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "З'єднано. Отримання інформації таблиці…"
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Ця база даних не містить жодної таблиці"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Не вдалося завантажити драйвер"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Отримання метаданих таблиці…"
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Потрібно вибрати хоча б одну колонку."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Потрібно вибрати хоча б одну колонку."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' або '?' не є коректними шаблонами заміни SQL. Замість них слід "
-#~ "використовувати '%' або '_'. Бажаєте провести заміну?"
-
-#~ msgid "Insert function"
-#~ msgstr "Вставити функцію"
-
-#~ msgid "Help"
-#~ msgstr "Довідка"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Ця функція не має параметрів."
-
-#~ msgid "Description is not available."
-#~ msgstr "Нема опису."
-
-#~ msgid "Document Settings..."
-#~ msgstr "Параметри документа…"
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "Показати діалогове вікно параметрів документа"
-
-#~ msgid "Document Settings"
-#~ msgstr "Параметри документа"
-
-#~ msgid "Calculation"
-#~ msgstr "Обчислення"
-
-#~ msgid "Locale"
-#~ msgstr "Локаль"
-
-#~ msgid "Case sensitive"
-#~ msgstr "З врахуванням регістру"
-
-#~ msgid "Precision as shown"
-#~ msgstr "Точність, як показано"
-
-#~ msgid "Search criteria must apply to whole cell"
-#~ msgstr "Критерії пошуку мають стосуватися до усієї комірки"
-
-#~ msgid "Automatic find labels"
-#~ msgstr "Автоматичний пошук міток"
-
-#~ msgid "String comparison:"
-#~ msgstr "Порівняння рядків:"
-
-#~ msgid "Regular Expressions"
-#~ msgstr "Формальні вирази"
-
-#~ msgid "Wildcards"
-#~ msgstr "Шаблони заміни"
-
-#~ msgid "Null Year:"
-#~ msgstr "Рік відліку:"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Використовувати параметри локалі системи"
-
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Мова: %1 (%2)"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Типовий формат чисел: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Формат довгої дати: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Формат короткої дати: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Формат часу: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Формат валюти: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Нетипові списки…"
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "Створити нетипові списки для впорядкування або автозаповнення"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Обирає всі комірки поточного аркуша"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Нетипові списки"
-
-#~ msgid "List:"
-#~ msgstr "Список:"
-
-#~ msgid "Entry:"
-#~ msgstr "Запис:"
-
-#~ msgid "Add"
-#~ msgstr "Додати"
-
-#~ msgid "New"
-#~ msgstr "Створити"
-
-#~ msgid "Remove"
-#~ msgstr "Вилучити"
-
-#~ msgid "Modify"
-#~ msgstr "Змінити"
-
-#~ msgid "Copy"
-#~ msgstr "Копіювати"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Ви справді хочете вилучити цей список?"
-
-#~ msgid "Remove List"
-#~ msgstr "Вилучити список"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Ділянка не є порожньою.\n"
-#~ "Продовжити?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Пошук розв’язку…"
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Повторення підрахунку, щоб знайти певне значення"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Пошук розв’язку"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Некоректне посилання на комірку."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Некоректне цільове значення."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Вихідна комірка повинна містити числове значення."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Цільова комірка повинна містити формулу."
 
 #~ msgid "Starting..."
 #~ msgstr "Запуск…"
@@ -16272,12 +19091,6 @@ msgstr "Посилання %1 активовано"
 
 #~ msgid "New value:"
 #~ msgstr "Нове значення:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Пошук розв’язку у комірці %1, знайдено розв’язок:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Пошук розв’язку у комірці %1 виявив, що розв’язок НЕ знайдено."
 
 #~ msgid "Set cell:"
 #~ msgstr "Встановити комірку:"
@@ -16294,84 +19107,6 @@ msgstr "Посилання %1 активовано"
 
 #~ msgid "Current value:"
 #~ msgstr "Поточне значення:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr ""
-#~ "Замінити\n"
-#~ "заміну"
-
-#~ msgid "Selection List..."
-#~ msgstr "Список вибору…"
-
-#~ msgid "More Options"
-#~ msgstr "Більше параметрів"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Пошук у всьому аркуші"
-
-#~ msgid "Search in:"
-#~ msgstr "Шукати в:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Значення у комірках"
-
-#~ msgid "Comments"
-#~ msgstr "Коментарі"
-
-#~ msgid "Search direction:"
-#~ msgstr "Напрямок пошуку:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Впоперек, потім вниз"
-
-#~ msgid "Down then Across"
-#~ msgstr "Вниз, потім впоперек"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Менше параметрів"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Формат комірки…"
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Форматування комірки"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Перенести об'єкт комірки до буфера"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Скопіювати об'єкт комірки до буфера"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Вставити вміст буфера в поточну позицію курсора"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Спеціальна вставка…"
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Вставити зі спеціальними параметрами вміст буфера"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Вставити з новими рядками"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Вставляє комірку з буфера в електронну таблицю"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Вставити комірки зі зміщенням"
-
-#~ msgid "Insert"
-#~ msgstr "Вставити"
-
-#~ msgid "Move towards right"
-#~ msgstr "Пересунути праворуч"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Пересунути ліворуч"
-
-#~ msgid "Special Paste"
-#~ msgstr "Спеціальна вставка"
 
 #~ msgid "Content"
 #~ msgstr "Вміст"
@@ -16403,35 +19138,14 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Division"
 #~ msgstr "Ділення"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Перевірка правопису"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Перевірити правопис в наступному аркуші?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr ""
 #~ "Виправити помилки у словах\n"
 #~ "виправлення помилок у словах"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Автоформатування…"
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Вкажіть форматування аркуша"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr ""
-#~ "Автоформатування\n"
-#~ "автоформатування"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Стиль аркуша"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Застосувати стиль аркуша:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Не вдалося знайти зображення %1."
@@ -16439,98 +19153,8 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Could not load image %1."
 #~ msgstr "Не вдалося завантажити зображення %1."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Не вдалося знайти файл XML стилю аркуша «%1»."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Помилка під час розбору файла XML стилю аркуша %1."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Автофільтр"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Додати автоматичний фільтр до діапазону комірок"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr ""
-#~ "Автофільтрування\n"
-#~ "автофільтрування"
-
-#~ msgid "Clear All"
-#~ msgstr "Очистити все"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Вилучити увесь вміст і форматування поточної комірки"
-
 #~ msgid "Contents"
 #~ msgstr "Вміст"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Очистити вміст"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Вилучити вміст поточної комірки"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr ""
-#~ "Вилучити текст\n"
-#~ "вилучення тексту"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr ""
-#~ "Вилучити умовне форматування\n"
-#~ "вилучення умовного форматування"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr ""
-#~ "Додати умовне форматування\n"
-#~ "додавання умовного форматування"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Вибрати новий колір межі"
-
-#~ msgid "Border Color"
-#~ msgstr "Колір межі"
-
-#~ msgid "Set the background color"
-#~ msgstr "Вказати колір тла"
-
-#~ msgid "Background Color"
-#~ msgstr "Колір тла"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Умовне форматування комірки…"
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Встановити формат комірки залежно від певних умов"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Умовні стилі"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Вилучити умовне форматування"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Вилучити умовне форматування комірки"
-
-#~ msgid "&Pivot Tables..."
-#~ msgstr "Зв&едені таблиці…"
-
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Створити зведені таблиці"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Вам слід позначити щонайменше дві комірки."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr ""
-#~ "Формат числа\n"
-#~ "форматування у режимі числа"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16543,89 +19167,6 @@ msgstr "Посилання %1 активовано"
 #~ msgstr ""
 #~ "Формат відсотків\n"
 #~ "форматування у режимі відсотків"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr ""
-#~ "Формат часу\n"
-#~ "форматування у режимі часу"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr ""
-#~ "Формат дати\n"
-#~ "форматування у режимі дати"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr ""
-#~ "Науковий формат\n"
-#~ "форматування у режимі інженерного запису"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr ""
-#~ "Змінити колір рамки\n"
-#~ "зміну кольору рамки"
-
-#~ msgid "<none>"
-#~ msgstr "<немає>"
-
-#~ msgid "equal to"
-#~ msgstr "дорівнює"
-
-#~ msgid "greater than"
-#~ msgstr "більше, ніж"
-
-#~ msgid "less than"
-#~ msgstr "менше, ніж"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "дорівнює або більше, ніж"
-
-#~ msgid "equal to or less than"
-#~ msgstr "дорівнює або менше, ніж"
-
-#~ msgid "between"
-#~ msgstr "між"
-
-#~ msgid "outside range"
-#~ msgstr "поза діапазоном"
-
-#~ msgid "different to"
-#~ msgstr "відмінний від"
-
-#~ msgid "First Condition"
-#~ msgstr "Перша умова"
-
-#~ msgid "Second Condition"
-#~ msgstr "Друга умова"
-
-#~ msgid "Third Condition"
-#~ msgstr "Третя умова"
-
-#~ msgid "Cell is"
-#~ msgstr "Комірка є"
-
-#~ msgid "Cell style"
-#~ msgstr "Стиль комірки"
-
-#~ msgid "different from"
-#~ msgstr "відмінна від"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Якщо перше значення — це число, то і друге значення мусить бути числом."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Якщо перше значення — це рядок символів, то і друге значення мусить бути "
-#~ "рядком символів."
-
-#~ msgid "Select Source"
-#~ msgstr "Виберіть джерело"
 
 #~ msgid "Current Selection"
 #~ msgstr "Поточне позначене"
@@ -16656,12 +19197,6 @@ msgstr "Посилання %1 активовано"
 
 #~ msgid "!="
 #~ msgstr "!="
-
-#~ msgid "Pivot Table Configuration Window"
-#~ msgstr "Вікно налаштовування зведеної таблиці"
-
-#~ msgid "Add Filter"
-#~ msgstr "Додати фільтр"
 
 #~ msgid "Drag from Labels and drop in the desired field"
 #~ msgstr "Перетягніть пункт зі списку міток і скиньте до бажаного поля"
@@ -16697,9 +19232,6 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Rows"
 #~ msgstr "Рядки"
 
-#~ msgid "Pivot Options"
-#~ msgstr "Параметри зведеної таблиці"
-
 #~ msgid "Value Type"
 #~ msgstr "Тип значень"
 
@@ -16712,155 +19244,17 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Manual Selection"
 #~ msgstr "Вибір вручну"
 
-#~ msgid "Product"
-#~ msgstr "Продукт"
-
 #~ msgid "Sort By"
 #~ msgstr "Впорядкувати за"
-
-#~ msgid "Select Font..."
-#~ msgstr "Вибрати шрифт…"
-
-#~ msgid "Select Font Size"
-#~ msgstr "Виберіть розмір шрифту"
-
-#~ msgid "Font Size"
-#~ msgstr "Розмір шрифту"
-
-#~ msgid "Text Color"
-#~ msgstr "Колір тексту"
-
-#~ msgid "Set the text color"
-#~ msgstr "Вказати колір тексту"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr ""
-#~ "Змінити шрифт\n"
-#~ "зміну шрифту"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Керування стилями…"
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Редагування і керування стилями комірок"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Застосувати до вибраних комірок стиль, який вже визначено"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Створити стиль з комірки…"
-
-#~ msgid "Style From Cell"
-#~ msgstr "Стиль за коміркою"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Створити новий стиль на основі вибраної зараз комірки"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Створити стиль з комірки"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Назва стилю не може бути порожньою."
-
-#~ msgid "Style Manager"
-#~ msgstr "Менеджер стилів"
-
-#~ msgid "All Styles"
-#~ msgstr "Всі стилі"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Нетипові стилі"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Ієрархічний"
-
-#~ msgid "&New..."
-#~ msgstr "&Створити…"
-
-#~ msgid "&Modify..."
-#~ msgstr "&Змінити…"
-
-#~ msgid "&Delete..."
-#~ msgstr "&Вилучити…"
-
-#~ msgid "style%1"
-#~ msgstr "стиль%1"
 
 #~ msgid "Cells..."
 #~ msgstr "Комірки…"
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Вставити комірки…"
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Вставити в електронну таблицю порожню комірку"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Вилучити комірки…"
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Вилучає комірки з електронної таблиці"
-
 #~ msgid "Delete Cells..."
 #~ msgstr "Вилучити комірки…"
 
-#~ msgid "Insert rows"
-#~ msgstr "Вставити рядки"
-
-#~ msgid "Insert columns"
-#~ msgstr "Вставити колонки"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Вставити комірки"
-
-#~ msgid "Move towards left"
-#~ msgstr "Пересунути ліворуч"
-
-#~ msgid "Move towards top"
-#~ msgstr "Пересунуту вгору"
-
-#~ msgid "Remove rows"
-#~ msgstr "Вилучити рядки"
-
-#~ msgid "Remove columns"
-#~ msgstr "Вилучити колонки"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Вилучити комірки"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "Промі&жні підсумки…"
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Створити інший вид проміжних підсумків для списку або бази даних"
-
-#~ msgid "Subtotals"
-#~ msgstr "Підсумки"
-
-#~ msgid "Remove All"
-#~ msgstr "Вилучити всі"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Для додавання підсумків потрібно вибрати принаймні одну колонку."
-
 #~ msgid "Grand Total"
 #~ msgstr "Загальна сума"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Колонка «%1» "
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "&Замінити поточні підсумки"
@@ -16886,45 +19280,6 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Додати підсумок до:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Перейти до комірки…"
-
-#~ msgid "Goto"
-#~ msgstr "Перейти до комірки"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Перейти до певної комірки"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Розрив перед колонкою"
-
-#~ msgid "Column Break"
-#~ msgstr "Розрив колонки"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Додати вручну розрив сторінки перед колонкою"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Розрив перед рядком"
-
-#~ msgid "Row Break"
-#~ msgstr "Розрив рядка"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Додати вручну розрив сторінки перед рядком"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Перейти до комірки"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Введіть комірку:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Консолідувати…"
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "Створити ділянку з даними підсумків з групи подібних ділянок"
-
 #~ msgid "Description in rows"
 #~ msgstr "Опису у рядках"
 
@@ -16933,39 +19288,6 @@ msgstr "Посилання %1 активовано"
 
 #~ msgid "Copy data"
 #~ msgstr "Копіювати дані"
-
-#~ msgid "Consolidate"
-#~ msgstr "Консолідувати"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Стандартне відхилення"
-
-#~ msgid "Variance"
-#~ msgstr "Дисперсія"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Вам слід вказати принаймні один діапазон вхідних комірок."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 не є коректним діапазоном комірок."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Діапазон\n"
-#~ "%1\n"
-#~ "надто малий"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Діапазон\n"
-#~ "%1\n"
-#~ "надто великий"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16980,25 +19302,6 @@ msgstr "Посилання %1 активовано"
 #~ "%2\n"
 #~ "мають різні розміри"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr ""
-#~ "Консолідувати\n"
-#~ "консолідацію"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr ""
-#~ "Діапазон вхідних комірок перетинається з діапазоном комірок призначення."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Діапазон\n"
-#~ "%1\n"
-#~ " містить помилки"
-
 #~ msgid "Function:"
 #~ msgstr "Функція:"
 
@@ -17008,213 +19311,17 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Entered references:"
 #~ msgstr "Введені посилання:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Змінити кут…"
-
-#~ msgid "Angle"
-#~ msgstr "Кут"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Змінити кут, під яким друкуватиметься вміст комірки"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Збільшити точність"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Збільшити десяткову точність на екрані"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Зменшити точність"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Зменшити десяткову точність на екрані"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr ""
-#~ "Підвищити точність\n"
-#~ "підвищення точності"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr ""
-#~ "Знизити точність\n"
-#~ "зниження точності"
-
-#~ msgid "Change Angle"
-#~ msgstr "Змінити кут"
-
-#~ msgid "Angle:"
-#~ msgstr "Кут:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr ""
-#~ "Змінити кут\n"
-#~ "зміну кута"
-
-#~ msgid "Area Name..."
-#~ msgstr "Назвати ділянку…"
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Вкажіть назву ділянки електронної таблиці"
-
-#~ msgid "Named Areas..."
-#~ msgstr "Ділянки з назвами…"
-
-#~ msgid "Named Areas"
-#~ msgstr "Ділянки з назвами"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Змінити або вибрати названі ділянки"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Додати ділянку з назвою"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Введіть назву ділянки:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "Ділянка з назвою «%1» вже існує.\n"
-#~ "Бажаєте замінити її?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "Замінити ділянку з назвою"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr ""
-#~ "Замінити ділянку з назвою\n"
-#~ "заміну ділянки з назвою"
-
 #~ msgid "&Select"
 #~ msgstr "&Вибрати"
 
-#~ msgid "Area: %1"
-#~ msgstr "Ділянка: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Редагувати…"
-
-#~ msgid "&Remove"
-#~ msgstr "Ви&лучити"
 
 #~ msgid "New Named Area"
 #~ msgstr "Нова ділянка з назвою"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Змінити ділянку з назвою"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Ви справді хочете вилучити цю ділянку з назвою?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Вилучити ділянку з назвою"
-
-#~ msgid "Cells:"
-#~ msgstr "Комірки:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Аркуш:"
-
-#~ msgid "Area name:"
-#~ msgstr "Назва ділянки:"
-
-#~ msgid "Align Left"
-#~ msgstr "По лівому краю"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Вирівняти вміст комірки ліворуч"
-
-#~ msgid "Align Center"
-#~ msgstr "По центру"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Вирівняти вміст комірки по центру"
-
-#~ msgid "Align Right"
-#~ msgstr "По правому краю"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Вирівняти вміст комірки праворуч"
-
-#~ msgid "Align Top"
-#~ msgstr "Вгору"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Вирівняти вміст комірки по верху"
-
-#~ msgid "Align Middle"
-#~ msgstr "По середині"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Вирівняти вміст по середині комірки"
-
-#~ msgid "Align Bottom"
-#~ msgstr "До низу"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Вирівняти вміст комірки до низу"
-
-#~ msgid "Border Left"
-#~ msgstr "Ліва межа"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Вказати ліву межу для вибраної ділянки"
-
-#~ msgid "Border Right"
-#~ msgstr "Права межа"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Вказати праву межу для вибраної ділянки"
-
-#~ msgid "Border Top"
-#~ msgstr "Верхня межа"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Вказати верхню межу для вибраної ділянки"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Нижня межа"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Вказати нижню межу для вибраної ділянки"
-
-#~ msgid "All Borders"
-#~ msgstr "Всі межі"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Вказати межі навколо всіх комірок у вибраній ділянці"
-
-#~ msgid "No Borders"
-#~ msgstr "Без меж"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Вилучити всі межі в вибраній ділянці"
-
-#~ msgid "Border Outline"
-#~ msgstr "Контур межі"
-
-#~ msgid "Outline"
-#~ msgstr "Контур"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Вказати межу контуру вибраної ділянки"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr ""
-#~ "Змінити горизонтальне вирівнювання\n"
-#~ "зміну горизонтального вирівнювання"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr ""
-#~ "Змінити вертикальне вирівнювання\n"
-#~ "зміну вертикального вирівнювання"
 
 #~ msgid "Australia"
 #~ msgstr "Австралія"
@@ -19025,69 +21132,6 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Долар Зімбабве"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Скинути до типового формату"
-
-#~ msgid "Strike Out"
-#~ msgstr "Закреслений"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Збільшити розмір шрифту"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Зменшити розмір шрифту"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Перенос тексту"
-
-#~ msgid "Wrap"
-#~ msgstr "Переносити рядки"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Зробити, щоб текст у комірці переносився за рядками"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Вертикальний текст"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Друкувати вміст комірки вертикально"
-
-#~ msgid "Percent Format"
-#~ msgstr "Формат відсотків"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Формат комірки має виглядати як відсотки"
-
-#~ msgid "Money Format"
-#~ msgstr "Формат грошей"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Формат комірки має відповідати грошовій системі вашої країни"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr ""
-#~ "Перенести текст\n"
-#~ "перенесення тексту"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr ""
-#~ "Вертикальний текст\n"
-#~ "вертикальний текст"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr ""
-#~ "Форматувати як відсотки\n"
-#~ "форматування у режимі відсотків"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr ""
-#~ "Форматувати як гроші\n"
-#~ "форматування у режимі грошей"
-
 #~ msgid "&Data Format"
 #~ msgstr "Формат &даних"
 
@@ -19147,9 +21191,6 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Default height (%1)"
 #~ msgstr "Типова висота (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Висота:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Встановити висоту комірки."
 
@@ -19163,473 +21204,32 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Default width (%1)"
 #~ msgstr "Типова ширина (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Ширина:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr ""
-#~ "Додати коментар\n"
-#~ "додавання коментаря"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Збільшити відступ"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Збільшити відступ"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Зменшити відступ"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Зменшити відступ"
-
-#~ msgid "Upper Case"
-#~ msgstr "Верхній регістр"
-
-#~ msgid "Upper"
-#~ msgstr "Верхній регістр"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Перетворити всі літери на великі"
-
-#~ msgid "Lower Case"
-#~ msgstr "Нижній регістр"
-
-#~ msgid "Lower"
-#~ msgstr "У нижній регістр"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Перетворити всі літери на малі"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Змінити регістр першої літери на верхній"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Змінити регістр першої літери на верхній"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Перша літера — велика"
-
-#~ msgid "Comment..."
-#~ msgstr "Коментар…"
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Редагувати коментар для цієї комірки"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Вилучити коментар"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Вилучити коментар цієї комірки"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr ""
-#~ "Перемкнутися на верхній регістр\n"
-#~ "перехід на верхній регістр"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr ""
-#~ "Перейти у нижній регістр\n"
-#~ "перехід на нижній регістр"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr ""
-#~ "Верхній регістр для першої літери\n"
-#~ "верхній регістр для першої літери"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr ""
-#~ "Вилучити коментар\n"
-#~ "вилучення коментаря"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Вилучити коментар"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr ""
-#~ "Змінити регістр\n"
-#~ "зміну регістру"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr ""
-#~ "Збільшити відступ\n"
-#~ "збільшення відступу"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr ""
-#~ "Зменшити відступ\n"
-#~ "зменшення відступу"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Коментар комірки"
-
-#~ msgid "&Left"
-#~ msgstr "Лі&воруч"
-
-#~ msgid "&Right"
-#~ msgstr "&Праворуч"
-
 #~ msgid "&Up"
 #~ msgstr "&Вгору"
-
-#~ msgid "&Down"
-#~ msgstr "&Вниз"
-
-#~ msgid "Autosum"
-#~ msgstr "Автосума"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Вставити функцію «sum»"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr ""
-#~ "Заповнити позначене\n"
-#~ "заповнення позначеного"
-
-#~ msgid "From &Text File..."
-#~ msgstr "З &текстового файла…"
-
-#~ msgid "Text File"
-#~ msgstr "Текстовий файл"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "Вставити дані з текстового файла до поточної позиції/вибору курсора"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "З &буфера даних…"
 
-#~ msgid "Clipboard"
-#~ msgstr "Кишеня"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "Вставити CSV-дані з буфера до поточної позиції/вибору курсора."
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Текст у колонки…"
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Розширити вміст комірки на декілька колонок"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Вставляння з буфера даних"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "В кишені нема жодних даних."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "В кишені нема придатних даних."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "Імпортування файла даних у форматі CSV"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "файли даних CSV (*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Текст у колонки"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Не вдається відкрити вхідний файл."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr ""
-#~ "Вставити з буфера даних\n"
-#~ "вставлення з буфера даних"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr ""
-#~ "Вставити текстовий файл\n"
-#~ "вставлення текстового файла"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr ""
-#~ "Текст у колонки\n"
-#~ "перетворення тексту у колонки"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "Об'єднати вибрану ділянку"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Об'єднати комірки горизонтально"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Об'єднати вибрану ділянку горизонтально"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Об'єднати комірки вертикально"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Об'єднати вибрану ділянку вертикально"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Роз'єднати комірки"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Роз'єднати вибрану ділянку"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Змінити розмір колонки…"
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Змінити ширину колонки"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Вставити колонку"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Вставити в електронну таблицю нову колонку"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Вилучити колонки"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Вилучає позначені стовпчики з електронної таблиці"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Сховати колонки"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Сховати колонку з цього місця"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Показати колонки…"
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Показати сховані колонки"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Вирівняти ширину колонки"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Змінити ширину вибраних колонок, щоб у всіх була однакова"
-
-#~ msgid "Show Columns"
-#~ msgstr "Показати колонки"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Показати у вибраному сховані колонки"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Змінити висоту рядка…"
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Змінити висоту рядка"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Вставити рядки"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Вставляє новий рядок в електронну таблицю"
-
-#~ msgid "Remove Rows"
-#~ msgstr "Вилучити рядки"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Вилучає рядок з електронної таблиці."
-
-#~ msgid "Hide Rows"
-#~ msgstr "Сховати рядки"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Сховати рядок з цього місця"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Показати рядки…"
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Показати сховані рядки"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Вирівняти висоту рядка"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Змінити висоту вибраних рядків, щоб у всіх була однакова"
-
-#~ msgid "Show Rows"
-#~ msgstr "Показати рядки"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Показати у вибраному сховані рядки"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Скоригувати рядок і колонку"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "Скоригувати розміри рядка/колонки, щоб вміщався зміст"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Скоригувати колонку"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Вилучити колонки"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Скоригувати рядок"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Вилучити рядки"
 
-#~ msgid "Resize Row"
-#~ msgstr "Змінити розмір рядка"
-
-#~ msgid "Resize Column"
-#~ msgstr "Змінити розмір колонки"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Показати приховані колонки:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Показати приховані рядки:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Колонка: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Рядок: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Посилання…"
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Вставити гіперпосилання"
-
-#~ msgid "Link"
-#~ msgstr "Посилання"
-
-#~ msgid "Remove Link"
-#~ msgstr "Вилучити посилання"
-
-#~ msgid "Remove a link"
-#~ msgstr "Вилучити посилання"
-
-#~ msgid "Insert Link"
-#~ msgstr "Вставити посилання"
-
 #~ msgid "Edit Link"
 #~ msgstr "Змінити посилання"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr ""
-#~ "Вилучити посилання\n"
-#~ "вилучення посилання"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr ""
-#~ "Вказати посилання\n"
-#~ "встановлення посилання"
-
-#~ msgid "Internet"
-#~ msgstr "Інтернет"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Посилання на адресу в Інтернеті"
-
-#~ msgid "Text to display:"
-#~ msgstr "Показати текст:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Адреса в інтернеті:"
-
-#~ msgid "Email"
-#~ msgstr "Ел. пошта"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "Посилання на адресу електронної пошти"
-
-#~ msgid "Email address:"
-#~ msgstr "Адреса ел. пошти:"
-
-#~ msgid "Subject:"
-#~ msgstr "Тема:"
-
-#~ msgid "File"
-#~ msgstr "Файл"
-
-#~ msgid "Link to File"
-#~ msgstr "Посилання на файл"
-
-#~ msgid "File location:"
-#~ msgstr "Адреса файла:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Недавній файл:"
-
-#~ msgid "No Entries"
-#~ msgstr "Записи відсутні"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Посилання на комірку"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Комірку або ділянку з назвою:"
-
-#~ msgid "&Sort..."
-#~ msgstr "Впо&рядкувати…"
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Впорядкувати групу комірок"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Впорядкувати за з&меншенням"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr ""
-#~ "Впорядкувати групу комірок в порядку зменшення (від останнього до першого)"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Впорядкувати за з&більшенням"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr ""
-#~ "Впорядкувати групу комірок в порядку збільшення (від першого до "
-#~ "останнього)"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr ""
-#~ "Сортувати дані\n"
-#~ "сортування даних"
 
 #~ msgid "Use custom list"
 #~ msgstr "Використати нетиповий список"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Копіювати форматування комірки (межі, кольори, стиль тексту)"
-
-#~ msgid "Column %1"
-#~ msgstr "Колонка %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Ряд %1"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Перша колонка містить заголовки рядків"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Перший рядок містить заголовки колонок"
-
-#~ msgid "Sort"
-#~ msgstr "Впорядковування"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Без врахування регістру"
 
 #~ msgid "Move Up"
 #~ msgstr "Пересунути вгору"
@@ -19696,238 +21296,8 @@ msgstr "Посилання %1 активовано"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Впорядкувати дані, згруповані за рядками, вертикально"
 
-#~ msgid "Validity..."
-#~ msgstr "Коректність…"
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Вказати перевірку правильності даних комірки"
-
-#~ msgid "Validity"
-#~ msgstr "Коректність"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Вилучити перевірку коректності"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Вилучити перевірку правильності даних комірки"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr ""
-#~ "Вилучити перевірку коректності\n"
-#~ "вилучення перевірки коректності"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr ""
-#~ "Додати перевірку коректності\n"
-#~ "додавання перевірки коректності"
-
-#~ msgid "Clear &All"
-#~ msgstr "Очистити &всі"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Критерій"
-
-#~ msgid "Allow:"
-#~ msgstr "Дозволити:"
-
-#~ msgid "Integer"
-#~ msgstr "Ціле"
-
-#~ msgid "Text Length"
-#~ msgstr "Довжина тексту"
-
-#~ msgid "List"
-#~ msgstr "Список"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Дозволити порожні"
-
-#~ msgid "Data:"
-#~ msgstr "Дані:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Мінімум:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Максимум:"
-
-#~ msgid "Date:"
-#~ msgstr "Дата:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Мінімальна дата:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Максимальна дата:"
-
-#~ msgid "Time:"
-#~ msgstr "Час:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Мінімальний час:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Максимальний час:"
-
-#~ msgid "Number:"
-#~ msgstr "Номер:"
-
-#~ msgid "Entries:"
-#~ msgstr "Елементів:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "&Сигнал помилки"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr ""
-#~ "Показувати повідомлення про помилку, якщо введено некоректне значення"
-
-#~ msgid "Action:"
-#~ msgstr "Дія:"
-
-#~ msgid "Stop"
-#~ msgstr "Зупинка"
-
-#~ msgid "Warning"
-#~ msgstr "Попередження"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Заголовок:"
-
-#~ msgid "Message:"
-#~ msgstr "Повідомлення:"
-
-#~ msgid "Input Help"
-#~ msgstr "Довідка для вводу"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Показувати довідку для вводу, коли вибрано комірку"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Некоректне значення."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Некоректний час."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Некоректна дата."
-
-#~ msgid "&Series..."
-#~ msgstr "По&слідовність…"
-
-#~ msgid "Insert a series"
-#~ msgstr "Вставити серію"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr ""
-#~ "Вставити послідовність\n"
-#~ "вставлення послідовності"
-
-#~ msgid "Select Character"
-#~ msgstr "Обрати символ"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Вставити вибраний символ до тексту"
-
-#~ msgid "Series"
-#~ msgstr "Ряд"
-
-#~ msgid "Insert Values"
-#~ msgstr "Вставити значення"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Вставити рядки вертикально, один під одним"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Вставити рядки горизонтально, зліва направо"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Лінійний (2,4,6,…)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Створює ряд з вказаним початковим, кінцевим елементом і приростом. Кожне "
-#~ "наступне значення у цьому ряді може бути отримане шляхом додавання числа, "
-#~ "що вказане як крок, до попереднього елемента."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Геометричний (2,4,8,…)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Створює ряд з вказаним початковим, кінцевим елементом і приростом "
-#~ "(кроком) множення елементів. Кожне наступне значення у цьому ряді може "
-#~ "бути отримане шляхом множення числа, вказаного як крок, на попередній "
-#~ "елемент. Наприклад, якщо крок рівний 5, а початковий елемент рівний 5, "
-#~ "отримуємо ряд 5, 25, 125, 625…"
-
-#~ msgid "Start value:"
-#~ msgstr "Початкове значення:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Кінцеве значення:"
-
-#~ msgid "Step value:"
-#~ msgstr "Крок:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Кінцеве і початкове значення мусять бути додатними."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Кінцеве значення мусить бути більшим за початкове або крок мусить бути "
-#~ "меншим за «1»."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "Ні значення початку, зупинки, ні кроку не може бути рівним 0."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "Значення кроку не може бути 1"
-
-#~ msgid "Step is negative."
-#~ msgstr "Від'ємний крок."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Значення кроку повинно бути додатнім. Інакше лінійні ряди будуть "
-#~ "нескінченні."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Якщо початкове значення більше за кінцеве, то крок мусить бути меншим "
-#~ "нуля."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Якщо крок від'ємний, то початкове значення мусить бути більшим за кінцеве."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "Сп&еціальний символ…"
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr ""
-#~ "Вставити один або більше символів або літер, які неможливо ввести з "
-#~ "клавіатури"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Адреса Інтернету порожня"

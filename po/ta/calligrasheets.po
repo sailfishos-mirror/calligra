@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2025-11-30 15:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -141,8 +141,13 @@ msgstr "தலைப்பு"
 msgid "Header1"
 msgstr "தலைப்பு1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, fuzzy, kde-format
 msgid "Default"
 msgstr "விளைவு"
@@ -174,7 +179,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "உரை"
@@ -246,7 +252,8 @@ msgstr "<p><b>திருப்ப வகை: </b>"
 msgid "Syntax"
 msgstr ""
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "அளபுருகள்"
@@ -894,14 +901,15 @@ msgstr "CARY(12;0), 0 ஆக திரும்பும் "
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "எண்"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "வடிவம்"
@@ -959,6 +967,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") 99 திரும்பும்"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "தரவுத்தளம்"
@@ -1259,6 +1269,7 @@ msgstr "தேதி மற்றும் நேரம்"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1332,7 +1343,8 @@ msgstr "DAYS360(\"2/22/2002\", \"4/21/2002\", FALSE) 59ஆக திரும்
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "நேரம்"
@@ -5062,6 +5074,7 @@ msgid "Regular payments"
 msgstr "math  தொடரை சொருகு."
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "வகை"
@@ -5388,12 +5401,19 @@ msgstr "கைமுறை"
 msgid "Automatic"
 msgstr "தன்னியக்க"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, fuzzy, kde-format
 msgid "Information"
 msgstr "தகவல் வகை"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, fuzzy, kde-format
 msgid "Error"
 msgstr "யூரோ"
@@ -6239,7 +6259,7 @@ msgstr ""
 msgid "Math"
 msgstr "கணிதம்"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "செயல்பாடு"
@@ -6731,6 +6751,7 @@ msgid "Range"
 msgstr "வீச்சு"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, fuzzy, kde-format
 #| msgid "Criteria"
 msgid "Criteria"
@@ -8313,6 +8334,7 @@ msgid "Row"
 msgstr "குறுக்குவரிசை"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "நெடுவரிசை"
@@ -12907,7 +12929,7 @@ msgid "&Go"
 msgstr ""
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, fuzzy, kde-format
 msgid "&Insert"
 msgstr "கிடக்கைகளை செருகு"
@@ -12925,7 +12947,7 @@ msgid "F&ormat"
 msgstr "வடிவமைப்பு"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "செல்களை ஒன்றாகச் சேர்"
@@ -13006,8 +13028,8 @@ msgstr "தாளை மறை"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, fuzzy, kde-format
 msgid "Font"
 msgstr "ப்ராயின்ட்"
@@ -13430,14 +13452,16 @@ msgstr "கீழ் வரம்பு"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, fuzzy, kde-format
 msgid "Horizontal"
 msgstr "ப்ராயின்ட்"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, fuzzy, kde-format
 msgid "Vertical"
 msgstr "மெட்டிகல்"
@@ -13465,13 +13489,15 @@ msgid "Up"
 msgstr "மேல்"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, fuzzy, kde-format
 msgid "Right"
 msgstr "&வலது"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, fuzzy, kde-format
 msgid "Left"
 msgstr "&இடது"
@@ -13483,36 +13509,50 @@ msgstr "நெடுக்கைகளை செருகு"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "எதுவுமில்லை"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "கூட்டு"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "கழித்தல்"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "அதிகபட்ச"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "சராசரி"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "கூட்டு"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "எண்ணிக்கைA"
@@ -13884,7 +13924,8 @@ msgstr "வாய்பாடு தேர்வு"
 msgid "Move selected sheet to the bottom"
 msgstr "அறை பொருளை இடைநிலைப் பலகைக்கு கொண்டு செல்."
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, fuzzy, kde-format
 #| msgid "Paste & Insert"
 msgid "Case Sensitive"
@@ -14091,6 +14132,7 @@ msgid "Anchor"
 msgstr "அன்டோரா"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "சிற்றறை"
@@ -14111,7 +14153,7 @@ msgstr ""
 msgid "Next Sheet"
 msgstr "அடுத்த காகிதம்"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Next"
@@ -14127,7 +14169,7 @@ msgstr "அடுத்த காகிதத்திற்கு நகரவ�
 msgid "Previous Sheet"
 msgstr "கடந்த காகிதத்தை "
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, fuzzy, kde-format
 #| msgid "Previous Sheet"
 msgid "Previous"
@@ -14346,7 +14388,7 @@ msgstr ""
 "நீங்கள் செயல்பாட்டில் உள்ள அட்டவணையை நீக்க போகிறீர்கள்.\n"
 "பரவாயில்லையா?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "பெயரை நுழைக்க"
@@ -14406,13 +14448,13 @@ msgstr "எண்ணிக்கை: %1"
 msgid "%1x%2"
 msgstr ""
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "உரையை மாற்றுக"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
@@ -14420,10 +14462,3185 @@ msgstr "பின்னணி நிறம்"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "ஓரம் நிறம் மாற்றுக"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "நெடுக்கைகளை செருகு"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "கிடக்கைகளை செருகு"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "நெடுக்கைகளை நீக்குக "
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "கிடக்கைகளை நீக்குக"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, fuzzy, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "விரிபட்டியலில் புதிய கிடக்கையை செருகு"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, fuzzy, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "விரிபட்டியல் உள்ள கிடக்கையை நீக்கு. "
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, fuzzy, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "விரிபட்டியலில் புதிய நெடுக்கையை செருகு"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, fuzzy, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "விரித்தாளிலிருந்து தற்போதைய அறையை நீக்கு."
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "நெடுவரிசையை மறைக்க"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "கிடக்கைகளை மறைக்க"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "நெடுவரிசைகளைக் காட்டு"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "வரிசைகளைக் காட்டு"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, fuzzy, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "மறைந்த கிடக்கையை தேர்வில் காட்டு "
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+msgid "Hide the selected rows"
+msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, fuzzy, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "மறைந்த நெடுக்கையை தேர்வில் காட்டு "
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+msgid "Hide the selected columns"
+msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "நெடுக்கை சமப்படுத்து "
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "கிடக்கையை சமப்படுத்து"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, fuzzy, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "அதே அளவில் உள்ள கிடக்கையை மறு அளவாக்கு"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, fuzzy, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "அதே அளவில் உள்ள நெடுக்கையை மறு அளவாக்கு"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "நெடுவரிசையை சரிப்படுத்தவும்"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "குறுக்குவரிசையை சரிப்படுத்தவும்"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "கிடக்கை && நெடுக்கை சரிப்படுத்து"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, fuzzy, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "நெடுக்கை/ கிடக்கையின் அளவை சரிப்படுத்து அதனுடைய தொகுப்பு பொருத்துதல் வேண்டும்."
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+msgid "Adjusts row size so that the contents will fit"
+msgstr "நெடுக்கை/ கிடக்கையின் அளவை சரிப்படுத்து அதனுடைய தொகுப்பு பொருத்துதல் வேண்டும்."
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+msgid "Adjusts column size so that the contents will fit"
+msgstr "நெடுக்கை/ கிடக்கையின் அளவை சரிப்படுத்து அதனுடைய தொகுப்பு பொருத்துதல் வேண்டும்."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "நெடுக்கைகளை காட்டு"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "கிடக்கைகளை காட்டு"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden columns"
+msgstr "மறைந்த நெடுக்கைகளை காட்டு"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, fuzzy, kde-format
+msgid "Show hidden rows"
+msgstr "மறைந்த கிடக்கையை காட்டு"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "நெடுவரிசை: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "குறுக்குவரி: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "நெடுக்கை அளவை மாற்று..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "கிடக்கை அளவை மாற்று..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the height of a row"
+msgstr "கிடக்கையின் உயரத்தை மாற்று"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, fuzzy, kde-format
+msgid "Change the width of a column"
+msgstr "நெடுவரிசை அகலத்தை சீரமை"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "இடதுப்பக்கமாக ஒருநிலைபடுத்து"
+
+#: ui/actions/Align.cpp:19
+#, fuzzy, kde-format
+msgid "Left justify the cell contents"
+msgstr "அறையின் தொகுப்புகளை இடப்படுத்தவும். "
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "செல்களை ஒன்றாகச் சேர்%1"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "வலது பக்கமாக ஒருநிலைபடுத்து"
+
+#: ui/actions/Align.cpp:51
+#, fuzzy, kde-format
+msgid "Right justify the cell contents"
+msgstr "அறையின் தொகுப்புகளை வலப்படுத்தவும். "
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "மையமாக ஒருநிலைபடுத்து"
+
+#: ui/actions/Align.cpp:83
+#, fuzzy, kde-format
+msgid "Center the cell contents"
+msgstr "அறையின் தொகுப்புகளை நடுப்படுத்தவும். "
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, fuzzy, kde-format
+msgid "Center"
+msgstr "மையமாக ஒருநிலைபடுத்து"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "மேல் புறமாக ஒருநிலைப்படுத்து"
+
+#: ui/actions/Align.cpp:115
+#, fuzzy, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "அறையின் உள்ளடக்கங்களை அறையின் மேல்வாரியாகப் பொருத்து."
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr ""
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "செல்களை ஒன்றாகச் சேர்%1"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "கீழ்ப்புறமாக ஒருநிலைபடுத்து"
+
+#: ui/actions/Align.cpp:151
+#, fuzzy, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "அறையின் உள்ளடக்கங்களை அறையின் கீழ்வாரியாகப் பொருத்து."
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, fuzzy, kde-format
+msgid "Bottom"
+msgstr "கீழ்ப்புறமாக ஒருநிலைபடுத்து"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "நடுப்புறமாக ஒருநிலைப்படுத்து"
+
+#: ui/actions/Align.cpp:187
+#, fuzzy, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "அறையின் உள்ளடக்கங்களை அறையின் நடுவாரியாகப் பொருத்து."
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "நடுவில்"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "கோணத்தை மாற்று..."
+
+#: ui/actions/Angle.cpp:25
+#, fuzzy, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "அறையின் உள்ளடக்கங்களின் கோணத்தை மாற்றி அச்சிடு."
+
+#: ui/actions/Angle.cpp:34
+#, fuzzy, kde-format
+#| msgid "Angle:"
+msgid "Angle"
+msgstr "கோணம்:"
+
+#: ui/actions/Angle.cpp:56
+#, fuzzy
+#| msgid "Change Angle"
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "கோணம் மாற்று"
+
+#: ui/actions/AutoFilter.cpp:21
+#, fuzzy, kde-format
+#| msgid "Autofill"
+msgid "&Auto-Filter"
+msgstr "தன்னியக்கமாக நிரப்பு"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr ""
+
+#: ui/actions/AutoFilter.cpp:52
+#, fuzzy
+#| msgid "Autofill"
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "தன்னியக்கமாக நிரப்பு"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "தேர்ந்தெடுத்த அறைகளை முன் வரையறுக்கப்பட்ட பாணியை குறிப்பிடு."
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "AutoFormat..."
+msgid "Auto-Format..."
+msgstr "தானே வடிவமை"
+
+#: ui/actions/AutoFormat.cpp:78
+#, fuzzy, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "அட்டவணை-பாணி XML கோப்பு '%1' கண்டுபிடிக்க முடியவில்லை"
+
+#: ui/actions/AutoFormat.cpp:91
+#, fuzzy, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "அட்டவணை-பாணி XML கோப்பு '%1'ல் அலகிடல் பிழை"
+
+#: ui/actions/AutoFormat.cpp:133
+#, fuzzy
+#| msgid "AutoFormat..."
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "தானே வடிவமை"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "தானியக்க கூட்டு"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "(sum) செயலுறுவை செருகு"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "தானியக்க கூட்டு"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "ஓரம் இடது "
+
+#: ui/actions/Border.cpp:24
+#, fuzzy, kde-format
+msgid "Set a left border to the selected area"
+msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள இடது ஓரங்களை அமை."
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "ஓரம் வலது"
+
+#: ui/actions/Border.cpp:56
+#, fuzzy, kde-format
+msgid "Set a right border to the selected area"
+msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள வலது ஓரங்களை அமை."
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "ஓரம் மேல்"
+
+#: ui/actions/Border.cpp:88
+#, fuzzy, kde-format
+msgid "Set a top border to the selected area"
+msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள மேல் ஓரங்களை அமை."
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "ஓரம் கீழ்"
+
+#: ui/actions/Border.cpp:117
+#, fuzzy, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள கீழ் ஓரங்களை அமை."
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "அனைத்து ஓரங்கள் "
+
+#: ui/actions/Border.cpp:146
+#, fuzzy, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள  அறையை சுற்றி உள்ள அனைத்து ஓரங்களை அமை."
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "அனைத்து"
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+#| msgid "All Borders"
+msgid "No Borders"
+msgstr "அனைத்து ஓரங்கள் "
+
+#: ui/actions/Border.cpp:180
+#, fuzzy, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள அனைத்து ஓரங்களை நீக்கு."
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "ஓரம் எல்லைக்கோடு"
+
+#: ui/actions/Border.cpp:215
+#, fuzzy, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள சுற்றுக்கோட்டு ஓரங்களை அமை."
+
+#: ui/actions/Border.cpp:224
+#, fuzzy, kde-format
+#| msgid "Border Outline"
+msgid "Outline"
+msgstr "ஓரம் எல்லைக்கோடு"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "ஓரம் நிறம்"
+
+#: ui/actions/Border.cpp:247
+#, fuzzy, kde-format
+msgid "Select a new border color"
+msgstr "புதிய ஓரத்தின் நிறத்தை தேர்வு செய்க:"
+
+#: ui/actions/Border.cpp:285
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "ஓரம் நிறம் மாற்றுக"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "அறைகளை செருகு..."
+
+#: ui/actions/Cells.cpp:20
+#, fuzzy, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "காலி அறையை விரித்தாளிற்குள் சொருகு"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "அறைகளை நீக்கு..."
+
+#: ui/actions/Cells.cpp:71
+#, fuzzy, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "விரித்தாளிலிருந்து தற்போதைய அறையை நீக்கு."
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+#| msgid "Clear &All"
+msgid "Clear All"
+msgstr "காலி செய் &எல்லாவற்றையும்"
+
+#: ui/actions/Clear.cpp:23
+#, fuzzy, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "தற்போதைய அறையின் வடிவம் மற்றும் அனைத்து உள்ளடக்கத்தையும் அழி."
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Clear Contents"
+msgstr "குறிப்புரை"
+
+#: ui/actions/Clear.cpp:38
+#, fuzzy, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "அறையின் தொகுப்புகளை வலப்படுத்தவும். "
+
+#: ui/actions/Clear.cpp:51
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "உரையை மாற்றுக"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "கிடக்கைகளை நீக்கு"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "Comment..."
+msgstr "குறிப்புரை"
+
+#: ui/actions/Comment.cpp:20
+#, fuzzy, kde-format
+msgid "Edit a comment for this cell"
+msgstr "இந்த அறைக்கு ஒரு குறிப்புரையை எழுதவும் "
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Clear Comment"
+msgstr "குறிப்புரை"
+
+#: ui/actions/Comment.cpp:51
+#, fuzzy, kde-format
+msgid "Remove this cell's comment"
+msgstr "இந்த அறையின் குறிப்புரையை நீக்கு"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "குறிப்புரையை நீக்கு "
+
+#: ui/actions/Comment.cpp:89
+#, fuzzy
+#| msgid "Remove Comment"
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "குறிப்புரையை நீக்கு "
+
+#: ui/actions/Comment.cpp:91
+#, fuzzy
+#| msgid "Add Comment"
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "குறிப்புரையை சேர்க்க "
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+#| msgid "Conditional Cell Attributes..."
+msgid "Conditional Styles..."
+msgstr "நிபந்தனை அறை பண்புகள் ..."
+
+#: ui/actions/Conditional.cpp:26
+#, fuzzy, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "சில விதிமுறைக்கு தகுந்தவாறு அறை வடிவத்தை அமை."
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, fuzzy, kde-format
+#| msgid "Conditional Cell Attributes"
+msgid "Conditional Styles"
+msgstr "நிபந்தனை அறை பண்புகள்"
+
+#: ui/actions/Conditional.cpp:88
+#, fuzzy, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "இந்த கட்டுப்பாடுள்ள அறையை நீக்கு"
+
+#: ui/actions/Conditional.cpp:97
+#, fuzzy, kde-format
+msgid "Remove Conditional Styles"
+msgstr "இந்த கட்டுப்பாடுள்ள அறையை நீக்கு"
+
+#: ui/actions/Conditional.cpp:126
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "இந்த கட்டுப்பாடுள்ள அறையை நீக்கு"
+
+#: ui/actions/Conditional.cpp:128
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "இந்த கட்டுப்பாடுள்ள அறையை நீக்கு"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&ஒன்றுசேர்"
+
+#: ui/actions/Consolidate.cpp:22
+#, fuzzy, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "குறிப்பு தரவு வட்டாரத்தை அதேமாதிரியான வட்டார குழுவிலிருந்து உருவாக்கு."
+
+#: ui/actions/Consolidate.cpp:68
+#, fuzzy
+#| msgid "Consolidate"
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "ஒன்றாக்கபட்ட"
+
+#: ui/actions/Copy.cpp:25
+#, fuzzy, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "அறை பொருளை இடைநிலைப் பலகைக்கு மாற்றுக."
+
+#: ui/actions/Copy.cpp:57
+#, fuzzy, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "அறை பொருளை இடைநிலைப் பலகைக்கு கொண்டு செல்."
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "உரைக்கோப்பிலிருந்து ..."
+
+#: ui/actions/CSVActions.cpp:40
+#, fuzzy, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "தற்போதைய "
+
+#: ui/actions/CSVActions.cpp:55
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Text File"
+msgstr "உரைக்கோப்பிலிருந்து ..."
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "உள்ளீடு கோப்பினை திறக்க இயலவில்லை"
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "உரை கோப்பினை செருகு"
+
+#: ui/actions/CSVActions.cpp:101
+#, fuzzy
+#| msgid "Inserting Text File"
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "உரை கோப்பினை செருகு"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "இடைநிலைப் பலகையிலிருந்து செருகுதல்"
+
+#: ui/actions/CSVActions.cpp:123
+#, fuzzy, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "இடைநிலைப் பலகையிலிருந்து csv தகவல் திரட்டு நடப்பு காட்டி இடம்/தெர்ந்தெடுத்தல்."
+
+#: ui/actions/CSVActions.cpp:138
+#, fuzzy, kde-format
+#| msgid "From &Clipboard..."
+msgid "Clipboard"
+msgstr "கிளிப்போர்டிலிருந்து படி"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "இடைநிலைப் பலகையில் எந்த தகவலுமில்லை "
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "இடைநிலைப் பலகையில் எந்த பயனுள்ள தகவலுமில்லை "
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "இடைநிலைப் பலகையிலிருந்து செருகுதல்"
+
+#: ui/actions/CSVActions.cpp:182
+#, fuzzy
+#| msgid "Inserting From Clipboard"
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "இடைநிலைப் பலகையிலிருந்து செருகுதல்"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "நெடுவரிசைகள் பெறுவது திரும்பச் செய்"
+
+#: ui/actions/CSVActions.cpp:201
+#, fuzzy, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "அறைகளின் உள்ளடக்கங்களை பல நெடுக்கைகளுக்கு விரிவாக்கு"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "நெடுவரிசைகளுக்கான உரை"
+
+#: ui/actions/CSVActions.cpp:267
+#, fuzzy
+#| msgid "Text to Columns"
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "நெடுவரிசைகளுக்கான உரை"
+
+#: ui/actions/CustomLists.cpp:26
+#, fuzzy, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "வரிசையாக்கம் அல்லது தானேநிரப்ப தனிப்பயன்பட்டியலை உருவாக்குக "
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "தனிப்பயன் பட்டியல்..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, fuzzy, kde-format
+#| msgid "Edit Area"
+msgid "Add Named Area"
+msgstr "பரப்பை தொகு "
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "பரப்பின் பெயரை நுழைக்கவும்:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "கோணம் மாற்று"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "கோணம்:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "AutoFormat..."
+msgid "Automatic Format"
+msgstr "தானே வடிவமை"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "தாள் பெருவதற்குப் பாணியை தேர்ந்தெடுக்கவும்"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Character"
+msgstr "சிறப்பு எழுத்துகள்..."
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, fuzzy, kde-format
+#| msgid "The text that will replace characters in old text"
+msgid "Insert the selected character in the text"
+msgstr "இந்த உரை பழைய உரையில் உள்ள எழுத்துக்களை மாற்றும்"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "அறையின் குறிப்புரை"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<எதுவுமில்லை>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "இதற்கு சமமான"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "அதிக"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "விடக்குறைவு "
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "சமம் அல்லது விடப்பெரிது"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "சமமான அல்லது விடக்குறைந்த"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "இடையே"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, fuzzy, kde-format
+msgid "outside range"
+msgstr "தொகை அளவு"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, fuzzy, kde-format
+msgid "different to"
+msgstr "இதற்கு மாறுபட்ட"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "முதல் நிபந்தனை"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "இரண்டாவது நிபந்தனை"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "மூன்றாவது நிபந்தனை"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "சிற்றறை என்பது"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "அறையின் பாணி"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "இதற்கு மாறுபட்ட"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "முதல் மதிப்பு எண்ணாக இருந்தால் அதற்கு அடுத்த மதிப்பும் எண்ணாகவே இருக்கும்."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr "முதல் மதிப்பு சரமாக இருந்தால் அதற்கு அடுத்த மதிப்பும் சரமாகவே இருக்கும்."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "ஒன்றாக்கபட்ட"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "உற்பத்தி"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "இயல்பான விலகல்"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "மாற்றம்"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, fuzzy, kde-format
+#| msgid "You have to select at least one column."
+msgid "You have to define at least one source range."
+msgstr "தாங்கள் குறைந்தது ஒரு நெடுவரிசையையாவது தேர்வு செய்ய வேண்டும்."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, fuzzy, kde-format
+#| msgid "This is not a valid date."
+msgid "%1 is not a valid cell range."
+msgstr "இது ஒரு சரியான தேதி இல்லை."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"வீச்சு\n"
+"%1\n"
+"மிக சிறியதாக உள்ளது"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"வீச்சு\n"
+"%1\n"
+"மிக பெரியதாக உள்ளது"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, fuzzy, kde-format
+#| msgid "The source tables intersect with the destination table"
+msgid "The source range intersects the destination range."
+msgstr "மூல அட்டவணைகள் இலக்கு அட்டவணையுடன் ஊடுகிறது"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"வீச்சு\n"
+"%1\n"
+"பிறழப்பட்டு உள்ளது"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "தகவல்தளத்திலிருந்து தகவலை செருகு"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "வகை:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "தகவல்தளத்தின் பெயர்"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "கணினி:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr "முனை:(தேவையிருந்தால்)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr "பயனர் பெயர்:(தேவையிருந்தால்)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr "நுழைசொல்:(தேவையிருந்தால்)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "தேர்வு செய்யப்பட்ட அட்டவணை "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, fuzzy, kde-format
+#| msgid "Values"
+msgid "Tables"
+msgstr "மதிப்புகள்"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "நெடுவரிசைகளை தேர்வுசெய்"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, fuzzy, kde-format
+#| msgid "Tala"
+msgid "Table"
+msgstr "டலா"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "நெடுவரிசைகள்"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "கீழ்காணும் எல்லாவற்றையும் பொருத்துக (AND)."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "கீழ்காணும் எதையாவது பொருத்துக (OR)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "சமமான"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "சமமற்ற"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "in"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "இதில் இல்லை"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "போல"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "அதிகமான"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "குறைந்த "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "அதிகமான அலல்து சமமான"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "குறைவு அல்லது சமமான"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "வரிசைபடி"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "ஏறுவரிசை"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "இறங்கு வரிசை"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "மதிப்புகள்"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "வினவல் தேர்வுகள் "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL query:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "வட்டாரத்தில் செருகு"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Starting in cell"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "விளைவு"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "தாங்கள் இங்கு ஒரு அட்டவணை தேர்வு செய்ய முடியாது."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "தாங்கள் ஒரு செல்லக்கூடிய வட்டாரத்தை தேர்வு செய்ய வேண்டும்."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "தாங்கள் ஒரு செல்லக்கூடிய அறையை குறிப்பிட வேண்டும்."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "கேள்வி நிறைவேற்று தோல்வியடைந்தது."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "இந்த கேள்வியின் மூலம் எந்த முடிவையும் தங்களால் பெறமுடியாது."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+#, fuzzy
+#| msgid "Insert Data From Database"
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "தகவல்தளத்திலிருந்து தகவலை செருகு"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "இந்த துறைக்கு ஒரு எண் இருக்க வேண்டும்"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "தகவல்தளத்துடன் இணைத்தல்"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "இணைக்கப்பட்டது. அட்டவணை தகவல்களை மீட்டல்"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "இந்த தகவல்தளத்தில் அட்டவணை எதுவும் இல்லை."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "இயக்கியினை ஏற்ற இயலவில்லை"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "அட்டவணைகளிலிருந்து மீ தகவல்களை மீட்டல் "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "தாங்கள் குறைந்தது ஒரு அட்டவணையையாவது தேர்வு செய்ய வேண்டும்."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "தாங்கள் குறைந்தது ஒரு நெடுவரிசையையாவது தேர்வு செய்ய வேண்டும்."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' அல்லது '?'  SQLயில் தவறான குழுக்குரியாகும் . '%' அல்லது '_' முறையான மாறுதல் "
+"ஆகும். மாற்ற விரும்புகிறீர்களா?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgid "Replacement"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "இடமாற்றம்"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, fuzzy, kde-format
+msgid "Document Settings"
+msgstr "வட்டார அளவுருக்கள்"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "கணிக்கிடல் வகை"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Case sensitive"
+msgstr "ஒட்டு &செருகு"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "துல்லியம்"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "தன்னியக்க"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "String to compare with"
+msgid "String comparison:"
+msgstr "சரத்தை ஒப்பிடு"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "math  தொடரை சொருகு."
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, fuzzy, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&உள்ளிருப்பு முறைமைக்கு இற்றைப்படுத்தல் "
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "மொழி: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, fuzzy, kde-format
+msgid "Default number format: %1"
+msgstr "தேதி வடிவமைப்பு "
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, fuzzy, kde-format
+msgid "Long date format: %1"
+msgstr "தேதி வடிவமைப்பு "
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, fuzzy, kde-format
+msgid "Short date format: %1"
+msgstr "சிறிய தேதி: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, fuzzy, kde-format
+msgid "Time format: %1"
+msgstr "நேர வடிவமைப்பு"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, fuzzy, kde-format
+msgid "Currency format: %1"
+msgstr "பணம்"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, fuzzy, kde-format
+msgid "More Options"
+msgstr "வினவல் தேர்வுகள் "
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Search entire sheet"
+msgstr "தேடப்பட்ட உரை"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Search in:"
+msgstr "தேடப்பட்ட உரை"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, fuzzy, kde-format
+msgid "Cell Values"
+msgstr "மதிப்புகள்"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, fuzzy, kde-format
+msgid "Comments"
+msgstr "குறிப்புரை"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, fuzzy, kde-format
+msgid "Search direction:"
+msgstr "உருவரை திசை:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr ""
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, fuzzy, kde-format
+msgid "Down then Across"
+msgstr "மறைந்த கிடக்கையை காட்டு"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, fuzzy, kde-format
+msgid "Fewer Options"
+msgstr "பொதுவான தேர்வுகள்"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "<h2>Related Functions</h2><ul>"
+msgid "Set Function"
+msgstr "<h2>தொடர்புடைய செயல்பாடுகள்</h2><ul"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "செயலை சொருகு"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr ""
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "இந்த செயல்கூற்றில் அளபுருக்கள் எதுவும் இல்லை."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, fuzzy, kde-format
+msgid "Description is not available."
+msgstr "நிரலில் விவரிப்பு"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "இலக்குத்தேடு"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "அறைக்கு செல்:"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "அறையை உள்ளீடு:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, fuzzy, kde-format
+msgid "Insert"
+msgstr "இணையம்"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "வலது பக்கமாக நகர்த்தவும்"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "கீழ்பக்கமாக நகர்த்தவும்"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "கிடக்கைகளை செருகு"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "நெடுவரிசைகளை செருகு"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "அறைகளை செருகு"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, fuzzy, kde-format
+msgid "Remove"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "இடது பக்கமாக நகர்த்தவும்"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "மேல்பக்கமாக நகர்த்து"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "கிடக்கைகளை நீக்கு"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "நெடுவரிசைகளை நீக்கு"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "அறைகளை நீக்கு"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "சொருகு இணைப்பு"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "இணையம்"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Internet Address"
+msgstr "இணையம் முகவரி"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr ""
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "இணையம் முகவரி"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Email"
+msgstr "மின்அஞ்சல்:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, fuzzy, kde-format
+#| msgid "Internet address:"
+msgid "Link to Email Address"
+msgstr "இணையம் முகவரி"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, fuzzy, kde-format
+msgid "Email address:"
+msgstr "இடம் உரை காலியாக உள்ளது!"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, fuzzy, kde-format
+msgid "Subject:"
+msgstr "பொருள்"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, fuzzy, kde-format
+msgid "File"
+msgstr "கோப்பு"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to File"
+msgstr "அறையின் அளவு"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "கோப்பு இடஅமைப்பு:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "சமீபத்திய கோப்பு"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "பதிவு இல்லை"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, fuzzy, kde-format
+#| msgid "Size of Cell"
+msgid "Link to Cell"
+msgstr "அறையின் அளவு"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, fuzzy, kde-format
+msgid "Cell or Named Area:"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "பட்டியலின் மாற்றம்"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+msgid "Save Changes"
+msgstr "கோணம் மாற்று"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "பட்டியல்:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "நுழைவு:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, fuzzy, kde-format
+#| msgid "&Add"
+msgid "Add"
+msgstr "சேர்"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "ரத்து செய்"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, fuzzy, kde-format
+#| msgid "&New"
+msgid "New"
+msgstr "புதிய"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, fuzzy, kde-format
+msgid "Modify"
+msgstr "குறிப்புரையை சேர்/மாற்று ..."
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, fuzzy, kde-format
+#| msgid "Co&py"
+msgid "Copy"
+msgstr "நகலெடு"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "இந்த பட்டியலை நிஜமாகவே நீக்க வேண்டுமா?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, fuzzy, kde-format
+msgid "Remove List"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"நுழைவு இடம் காலியாக இல்லை.\n"
+"தொடர வேண்டுமா?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, fuzzy, kde-format
+msgid "Named Areas"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "பரப்பு: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "செல்கள்"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "தாள்:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "பரப்பு பெயர்:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, fuzzy, kde-format
+msgid "&Remove"
+msgstr "&குறிப்புரையை எடு"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, kde-format
+msgid "Save"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, fuzzy, kde-format
+#| msgid "Do you really want to remove this area name?"
+msgid "Do you really want to remove this named area?"
+msgstr "இந்த பரப்பின் பெயரை நிஜமாகவே நீக்க வேண்டுமா?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, fuzzy, kde-format
+msgid "Remove Named Area"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "அறை குறிப்பி தவறானது!"
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "சொருகு அறைகளை ஒட்டு."
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "S&pecial Character..."
+msgid "Select Source"
+msgstr "சிறப்பு எழுத்துகள்..."
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+msgid "Add Filter"
+msgstr "கோப்பு"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Operation"
+msgid "Pivot Options"
+msgstr "இயக்கம்"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "கிடக்கைகளை மறுஅளவாக்கு"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "உயரம்:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "நெடுக்கையை மறுஅளவாக்கு"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "அகலம்:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "தொடர்கள்"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+msgid "Insert Series"
+msgstr "தொடரை செருகு"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "மதிப்புகளை சொருகு"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "செங்குத்தாக தொடர்களை செருகு, ஒன்றன் கீழ் ஒன்றாக"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "கிடைமட்டமாய் தொடர்களை செருகு, இடது புறத்தில் இருந்து வலபக்கம் வரை."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "நேரான (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"'தொடக்கம்' முதல் 'முடிவு' வரை உருவாக்கு மற்றும் ஒவ்வொரு படிக்கும் கொடுக்கப்பட்ட மதிப்பை "
+"கொடுக்கவும்.  "
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "வடிவங்கள் (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"தொடர்கள் 'ஆரம்பம்' முதல் 'முடிவு' வரை ஒவ்வொரு மடக்கு படி மதிப்பை உருவாக்கு. படி 5 யை "
+"பயன்படுத்தினால் 5, 25, 125, 625 முதல் 5 மடக்கு படி 5, 25 க்கு சமம் மற்றும் அதை 5 "
+"மடக்கு 125 க்கு சமம், அதே எண் 5 ஆல் மடக்கும் போது 625 ஆக ஆகிறது."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "மதிப்பின் தொடக்கம் "
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "முடிவும் மதிப்பு:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "அடி மதிப்பு:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "முடிவு மற்றும் துவக்க மதிப்பு நேர் மதிப்பாக வேண்டும்"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"முடிவின் மதிப்பு துவக்கத்தின் மதிப்பை விட அதிகமாக இருக்க வேண்டும் அல்லது படியின் மதிப்பு "
+"'1' ஐ விட அதிகமாக இருக்க வேண்டும்."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "துவக்கு, நிறுத்து அல்லது படி மதிப்புகள் பூஜ்ஜியமாக இருத்தல் கூடாது!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "படியின் மதிப்பு 1ல்லிருந்து வேறுபட்டிருக்க வேண்டும்"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "தவறான வழிமுறை."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"படி மதிப்பு 0க்கு அதிகமாக இருக்க வேண்டும்; இல்லாவிடில் வரிசை தொடர் முடிவில்லாமல் "
+"இருக்கும்."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"துவக்க மதிப்பு முடிவின் மதிப்பை விட அதிகமாக இருந்தால் படி சுழியாக இருக்க வேண்டும்!"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"படியின் மதிப்பு எதிராக இருந்தால், துவக்க மதிப்பு முடிவின் ம்திப்பை விட அதிகமாக இருக்க "
+"வேண்டும்"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "மறைந்திருக்கும் வரிசைகளைக் காட்டத் தேர்வு செய்யவும்:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "மறைந்திருக்கும் நெடுவரிசைகளைக் காட்டத் தேர்வுசெய்யவும்:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "நெடுக்குவரி %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "குறுக்குவரி %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, fuzzy, kde-format
+msgid "&First column contains row headers"
+msgstr "முதல் வரி தலைப்பைக் கொண்டுள்ளது"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, fuzzy, kde-format
+msgid "&First row contains column headers"
+msgstr "முதல் வரி தலைப்பைக் கொண்டுள்ளது"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "ஒழுங்குபடுத்து"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, fuzzy, kde-format
+#| msgid "Paste & Insert"
+msgid "Case Insensitive"
+msgstr "ஒட்டு &செருகு"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "சிறப்பு ஒட்டு"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, fuzzy, kde-format
+msgid "Paste"
+msgstr "பகுப்பான் "
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "பாணியின் மேலாளர் "
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "பாணி"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "எல்லா பாணிகள்"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "ஆயத்த பாணிகள்"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "படிமுறை"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&புதிய..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, fuzzy, kde-format
+msgid "&Modify..."
+msgstr "குறிப்புரையை சேர்/மாற்று ..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, fuzzy, kde-format
+msgid "&Delete..."
+msgstr "&இலக்குத்தேடு"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "பாணி%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "உப தொகை எண்கள்"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "நெடுவரிசை '%1'"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP "
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "உப தொகை எண்களை இணைக்க ஒரு நெடுவரிசையையாவது தேர்ந்தெடுக்க வேண்டும்"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "முறைமைத்தகுதி"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "காலி செய் &எல்லாவற்றையும்"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "அனுமதி:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "முழு எண்"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "உரை நீளம்"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, fuzzy, kde-format
+msgid "List"
+msgstr "பட்டியல்:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "காலியிடங்களை அனுமதி"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "தரவு:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "குறைந்தபட்சம்:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "அதிகபட்சம்: "
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "தேதி:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "குறைந்தபட்ச தேதி: "
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "அதிகபட்ச தேதி:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "நேரம்:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "குறைந்தபட்ச நேரம்:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "அதிகபட்ச நேரம்: "
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "எண்:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, fuzzy, kde-format
+msgid "Entries:"
+msgstr "பதிவு இல்லை"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "&பிழைக்கான எச்சரிக்கை"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "தவறான மதிப்பை நுழைக்கையில் பிழைச்செய்தியைக் காண்பி"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "செயல்:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr ""
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, fuzzy, kde-format
+msgid "Warning"
+msgstr "அச்சில்"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, fuzzy, kde-format
+#| msgid "Title:"
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "தலைப்பு:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "செய்தி:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "உள்ளீட்டு உதவி"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "அறைகள் தேர்ந்தெடுக்கப்பட்டப் பிறகு உள்ளீட்டு உதவியைக் காண்பி"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "இது ஒரு முறையான மதிப்பு இல்லை."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "இது ஒரு முறையான நேரம் இல்லை !"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "இது ஒரு சரியான தேதி இல்லை."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, fuzzy, kde-format
+msgid "Document Settings..."
+msgstr "வட்டார அளவுருக்கள்"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, fuzzy, kde-format
+msgid "Show document settings dialog"
+msgstr "விளக்க சுட்டியை காட்டு"
+
+#: ui/actions/Editing.cpp:20
+#, fuzzy, kde-format
+msgid "Edit the highlighted cell"
+msgstr "முனைப்புறுத்தப்பட்ட அறைகளை திருத்து "
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "சிற்றறையை மாற்று"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+#| msgid "Protection"
+msgid "Permute fixation"
+msgstr "பாதுகாவலர்"
+
+#: ui/actions/Editing.cpp:40
+#, fuzzy, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "இடைநிலையின் உள்ளடக்கத்தின் காட்டியில் ஒட்டுக. "
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "கீழ்"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&இடது"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "&வலது"
+
+#: ui/actions/Fill.cpp:79
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "வாய்பாடு தேர்வு"
+
+#: ui/actions/FindReplace.cpp:124
+#, fuzzy
+#| msgid "Replacement"
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "இடமாற்றம்"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "எழுத்துரு தேர்வு செய்"
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+msgid "Set the cell font"
+msgstr "அறைகளை தானாக வடிவமைத்தல்."
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "அமைப்பை மாற்று"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "எழுத்துவகை அளவை தேர்வு செய்"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+msgid "Set the cell font size"
+msgstr "அறைகளை தானாக வடிவமைத்தல்."
+
+#: ui/actions/Font.cpp:86
+#, fuzzy, kde-format
+#| msgid "Select Font Size"
+msgid "Font Size"
+msgstr "எழுத்துவகை அளவை தேர்வு செய்"
+
+#: ui/actions/Font.cpp:125
+#, fuzzy, kde-format
+msgid "Set the text color"
+msgstr "பின்னணி நிறத்தை அமை"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "உரை நிறம்"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "செயல்கூறு..."
+
+#: ui/actions/Formula.cpp:21
+#, fuzzy, kde-format
+msgid "Insert math expression"
+msgstr "math  தொடரை சொருகு."
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "வாய்பாடு தேர்வு"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, fuzzy, kde-format
+msgid "Insert a function"
+msgstr "செயல்கூற்றை செருகு"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "மற்றவைகள்..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&இலக்குத்தேடு"
+
+#: ui/actions/GoalSeek.cpp:27
+#, fuzzy, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "திரும்பத்திரும்ப கணக்கிடப்படுகிறது ஒரு குறித்த பொருளை தேட."
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "அறை குறிப்பி தவறானது!"
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "இலக்கு மதிப்பு தவறானது!"
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "மூல அறை எண்களின் மதிப்பை பெற்று இறுக்க வேண்டும்."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "இலக்கு அறை வாய்பாட்டை கொண்டு இருக்க வேண்டும்!"
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "எண்ணங்கள் அறையின் %1 வழியே விடை அறியலாம்."
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "எண்ணங்கள் அறையின் %1 வழியே விடை அறியப்படவில்லை"
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "சிற்றறைக்கு செல்..."
+
+#: ui/actions/Goto.cpp:25
+#, fuzzy, kde-format
+msgid "Move to a particular cell"
+msgstr "Move to a particular cell."
+
+#: ui/actions/Goto.cpp:34
+#, fuzzy, kde-format
+#| msgid "Goto Cell"
+msgid "Goto"
+msgstr "அறைக்கு செல்:"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "இது ஒரு முறையான நேரம் இல்லை !"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "உள்ளடக்க குறை "
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "உள்ளடக்க மிகு "
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Decrease the indentation"
+msgstr "உள்ளடக்கத்தை குறை"
+
+#: ui/actions/Indent.cpp:28
+#, fuzzy, kde-format
+msgid "Increase the indentation"
+msgstr "உள்ளடக்கத்தை அதிகரி"
+
+#: ui/actions/Indent.cpp:96
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "உள்ளடக்க மிகு "
+
+#: ui/actions/Indent.cpp:98
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "உள்ளடக்க குறை "
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "துவக்கம் &தரவுத்தளம் ..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, fuzzy, kde-format
+msgid "Insert data from a SQL database"
+msgstr "SQL தரவுத்தளத்திலிருந்து பொருளை செருகவும்"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"தகவல்தள இயக்கிகள் ஏதும் காணப்படவில்லை. தங்கள் Qt யை தேவையான இயக்கியுடன் தொகுக்க வேண்டும்."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "தொடர்கள்..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, fuzzy, kde-format
+msgid "Insert a series"
+msgstr "தொடரை செருகு"
+
+#: ui/actions/InsertSeries.cpp:60
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "தொடரை செருகு"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "சிறப்பு எழுத்துகள்..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, fuzzy, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr "விசைப்பலகையில் இல்லாத சின்னங்களையோ எழுதுக்களையே செருகவும்"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr ""
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "இணைப்பு..."
+
+#: ui/actions/Link.cpp:23
+#, fuzzy, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "இணைய தளத்தின் உயரிணைப்பை செருகு"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Link"
+msgstr "சொருகு இணைப்பு"
+
+#: ui/actions/Link.cpp:65
+#, fuzzy, kde-format
+msgid "Remove a link"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/Link.cpp:74
+#, fuzzy, kde-format
+msgid "Remove Link"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/Link.cpp:92
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "சொருகு இணைப்பு"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "தேர்ந்தெடுத்த பட்டியல்"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "செல்களை ஒன்றாகச் சேர்%1"
+
+#: ui/actions/Merge.cpp:19
+#, fuzzy, kde-format
+msgid "Merge Cells Vertically"
+msgstr "செல்களை ஒன்றாகச் சேர்%1"
+
+#: ui/actions/Merge.cpp:34
+#, fuzzy, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
+
+#: ui/actions/Merge.cpp:36
+#, fuzzy, kde-format
+msgid "Merge the selected region vertically"
+msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
+
+#: ui/actions/Merge.cpp:38
+#, fuzzy, kde-format
+msgid "Merge the selected region"
+msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "பிணைப்புகளை நீக்கு"
+
+#: ui/actions/Merge.cpp:66
+#, fuzzy, kde-format
+msgid "Unmerge the selected region"
+msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "பரப்பளவின் பெயர்"
+
+#: ui/actions/NamedAreas.cpp:28
+#, fuzzy, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "வட்டாரத்திற்காக விரிபட்டியலில் ஒரு பெயரை அமைக்க."
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+
+#: ui/actions/NamedAreas.cpp:56
+#, fuzzy, kde-format
+msgid "Replace Named Area"
+msgstr "பெயரிடப்பட்ட பரப்பை காட்சியளி"
+
+#: ui/actions/NamedAreas.cpp:65
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "பெயரிடப்பட்ட பரப்பை காட்சியளி"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+msgid "Edit or select named areas"
+msgstr "பெயரிடப்பட்ட பரப்பை காட்சியளி"
+
+#: ui/actions/NamedAreas.cpp:81
+#, fuzzy, kde-format
+#| msgid "Show Area..."
+msgid "Named Areas..."
+msgstr "பரப்பைக் காட்டு..."
+
+#: ui/actions/PageBreak.cpp:21
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Row"
+msgstr "நெடுக்கைகளை நீக்குக "
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:30
+#, fuzzy, kde-format
+#| msgid "Header"
+msgid "Row Break"
+msgstr "தலைப்பு"
+
+#: ui/actions/PageBreak.cpp:74
+#, fuzzy, kde-format
+#| msgid "Remove Columns"
+msgid "Break Before Column"
+msgstr "நெடுக்கைகளை நீக்குக "
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr ""
+
+#: ui/actions/PageBreak.cpp:83
+#, fuzzy, kde-format
+#| msgid "Column number"
+msgid "Column Break"
+msgstr "நெடுக்கை எண்"
+
+#: ui/actions/Paste.cpp:34
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "இடைநிலையின் உள்ளடக்கத்தின் காட்டியில் ஒட்டுக. "
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "சிறப்பு ஒட்டு..."
+
+#: ui/actions/Paste.cpp:96
+#, fuzzy, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "சிறப்பு விருப்பத்தேர்வுகளுடன் இடைநிலையின் உள்ளடக்கத்தை ஒட்டுக."
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "செருகளுடன் ஒட்டு..."
+
+#: ui/actions/Paste.cpp:155
+#, fuzzy, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "இடைநிலையில் இருந்து விரிதாளுக்கு அறையை சொருகு. "
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "&உப தொகை எண்கள்"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "&உப தொகை எண்கள்"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "நீங்கள் பல சிற்றறைகளை தேர்ந்தெடுக்க வேண்டும்."
+
+#: ui/actions/SelectAll.cpp:20
+#, fuzzy, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "தற்போதைய தாளில் உள்ள அனைத்து அறையின் மதிப்பையும் மறுகணக்கிடு."
+
+#: ui/actions/ShowTableView.cpp:23
+#, fuzzy, kde-format
+#| msgid "Show Sheet..."
+msgid "Show QTableView..."
+msgstr "தாளை காட்டு"
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&வரிசைப்படுத்து..."
+
+#: ui/actions/Sort.cpp:25
+#, fuzzy, kde-format
+msgid "Sort a group of cells"
+msgstr "அறை குழுக்களை வரிசையாக்குக. "
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "அடுக்குக்குறி உயர்வது"
+
+#: ui/actions/Sort.cpp:111
+#, fuzzy, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "அறை குழுகளை ஏறுமுகமாக அடுக்கவும்."
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "வரிசைப்படுத்த குறைக்க"
+
+#: ui/actions/Sort.cpp:145
+#, fuzzy, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "அறையின் குழுவை குறையும் ஒழுங்கில் வரிசையாக்குக."
+
+#: ui/actions/Sort.cpp:183
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "வரிசைப்படுத்தும் விதிகள்"
+
+#: ui/actions/SpellCheck.cpp:84
+#, fuzzy, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "நீங்கள் அடுத்த அட்டவணையில் சொல் திருத்த வேண்டுமா? "
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "அடுத்த காகிதத்திற்கு நகரவும் ."
+
+#: ui/actions/SpellCheck.cpp:237
+#, fuzzy, kde-format
+msgid "Check the spelling"
+msgstr "சொல் திருத்தம் "
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "அறை வடிவமைப்பு"
+
+#: ui/actions/Style.cpp:29
+#, fuzzy, kde-format
+msgid "Set the cell formatting"
+msgstr "அறைகளை தானாக வடிவமைத்தல்."
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "தடிப்பான"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, fuzzy, kde-format
+msgid "Italic"
+msgstr "இத்தாலி"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "அடிக்கோடிடு"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "அடித்தல்"
+
+#: ui/actions/Style.cpp:213
+#, fuzzy, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "அறை உரை மடிப்பை பல வரிகளாக உருவாக்கு."
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "உரை மடிப்பு"
+
+#: ui/actions/Style.cpp:222
+#, fuzzy, kde-format
+#| msgid "Wrap text"
+msgid "Wrap"
+msgstr "உரை மடிப்பு"
+
+#: ui/actions/Style.cpp:230
+#, fuzzy
+#| msgid "Wrap Text"
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "உரை மடிப்பு"
+
+#: ui/actions/Style.cpp:247
+#, fuzzy, kde-format
+msgid "Print cell contents vertically"
+msgstr "அறையின் உள்ளடக்கங்களை மேல்கீழாக அச்சிடு"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "செங்குத்தான உரை"
+
+#: ui/actions/Style.cpp:257
+#, fuzzy
+#| msgid "Vertical Text"
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "செங்குத்தான உரை"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Number Format"
+msgstr "வெள்ளோட்டத்தின் எண்ணிக்கை "
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a number"
+msgstr "அறைகளை தானாக வடிவமைத்தல்."
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "முதல் எண்"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Scientific Format"
+msgstr "ஆய்வறிவு சார்ந்த"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a scientific format"
+msgstr "அறை வடிவத்தை சதவீதம் மாதிரி தெரியும் வகையில் அமை."
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "ஆய்வறிவு சார்ந்த"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "ஆய்வறிவு சார்ந்த"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "விழுக்காடு வடிவமைப்பு "
+
+#: ui/actions/Style.cpp:344
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "அறை வடிவத்தை சதவீதம் மாதிரி தெரியும் வகையில் அமை."
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "சதவீதம்"
+
+#: ui/actions/Style.cpp:361
+#, fuzzy
+#| msgid "Format Percent"
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "வடிவ சதவிகிதம்"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "பண வடிவமைப்பு"
+
+#: ui/actions/Style.cpp:381
+#, fuzzy, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "அறை அமைப்புகளை உங்கள் பணத்திற்கு ஏற்ப அமைக்கவும்"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "பணம்"
+
+#: ui/actions/Style.cpp:398
+#, fuzzy
+#| msgid "Format Money"
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "பண வடிவம்"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Date Format"
+msgstr "தேதி வடிவமைப்பு "
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a date"
+msgstr "அறைகளை தானாக வடிவமைத்தல்."
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "வடிவம்"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Set the cell formatting to a time"
+msgstr "அறைகளை தானாக வடிவமைத்தல்."
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+msgid "Time Format"
+msgstr "நேர வடிவமைப்பு"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "வடிவம்"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "எழுத்துரு அளவை அதிகரி"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "எழுத்துரு அளவை குறை"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "துல்லியத்தை அதிகரிக்கவும்"
+
+#: ui/actions/Style.cpp:532
+#, fuzzy, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "திரையில் தோன்றும் பதின்ம துல்லியத்தை அதிகரிக்கவும் "
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "துல்லியத்தை குறை"
+
+#: ui/actions/Style.cpp:551
+#, fuzzy, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "திரையில் தோன்றும் பதின்ம துல்லியத்தை குறைக்கவும் "
+
+#: ui/actions/Style.cpp:597
+#, fuzzy
+#| msgid "Increase Precision"
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "துல்லியத்தை அதிகரிக்கவும்"
+
+#: ui/actions/Style.cpp:599
+#, fuzzy
+#| msgid "Decrease Precision"
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "துல்லியத்தை குறை"
+
+#: ui/actions/Style.cpp:603
+#, fuzzy, kde-format
+msgid "Resets to the default format"
+msgstr "Resets to the default format."
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "தாளின் பாணி"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "பின்னணி நிறம்"
+
+#: ui/actions/Style.cpp:622
+#, fuzzy, kde-format
+msgid "Set the background color"
+msgstr "பின்னணி நிறத்தை அமை"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "பாணியை அறையிலிருந்து உருவாக்கு..."
+
+#: ui/actions/Styles.cpp:31
+#, fuzzy, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "தற்போது தேர்ந்தெடுத்த அறையின் புலத்தில் புதிய பாணியை உருவாக்கு."
+
+#: ui/actions/Styles.cpp:40
+#, fuzzy, kde-format
+#| msgid "Style of Cell"
+msgid "Style From Cell"
+msgstr "அறையின் பாணி "
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "சிற்றறையின் பாந்தம் "
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "அட்டவணை பெயர் காலியாக இருக்க முடியாது. "
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "வார்ப்புரு பெயர் ஏற்கனவே உள்ளது"
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+msgid "Edit and organize cell styles"
+msgstr "அறையின் பாணிகளை மாற்றி அமைக்கவும் "
+
+#: ui/actions/Styles.cpp:86
+#, fuzzy, kde-format
+#| msgid "Style Manager"
+msgid "Style Manager..."
+msgstr "பாணியின் மேலாளர் "
+
+#: ui/actions/Styles.cpp:122
+#, fuzzy, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "தேர்ந்தெடுத்த அறைகளை முன் வரையறுக்கப்பட்ட பாணியை குறிப்பிடு."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&உப தொகை எண்கள்"
+
+#: ui/actions/Subtotals.cpp:21
+#, fuzzy, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "பட்டியல் அல்லது தரவுத்தளத்துக்கு வெவ்வேறு துணை கூட்டுதலை உருவாக்கு."
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "உப தொகை எண்கள்"
+
+#: ui/actions/TextCase.cpp:31
+#, fuzzy, kde-format
+#| msgid "Upper Case"
+msgid "Upper"
+msgstr "பெரிய எழுத்து"
+
+#: ui/actions/TextCase.cpp:34
+#, fuzzy, kde-format
+#| msgid "Power"
+msgid "Lower"
+msgstr "திறன்"
+
+#: ui/actions/TextCase.cpp:37
+#, fuzzy, kde-format
+msgid "First Letter Upper"
+msgstr "&முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
+
+#: ui/actions/TextCase.cpp:50
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "&முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
+
+#: ui/actions/TextCase.cpp:53
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "&முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
+
+#: ui/actions/TextCase.cpp:56
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "&முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "பெரிய எழுத்து"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "சிறிய எழுத்து "
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
+
+#: ui/actions/TextCase.cpp:108
+#, fuzzy, kde-format
+msgid "Convert all letters to upper case"
+msgstr "எல்லா எழுத்துகளையும் பெரிய எழுத்தாக மாற்று"
+
+#: ui/actions/TextCase.cpp:110
+#, fuzzy, kde-format
+msgid "Convert all letters to lower case"
+msgstr "எல்லா எழுத்துகளையும் சிறிய எழுத்தாக மாற்று"
+
+#: ui/actions/TextCase.cpp:112
+#, fuzzy, kde-format
+msgid "Capitalize the first letter"
+msgstr "முதல் எழுத்தை பெரிதாக்கு"
+
+#: ui/actions/TextCase.cpp:120
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "கோணம் மாற்று"
+
+#: ui/actions/Validity.cpp:21
+#, fuzzy, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "தேர்வுகள் செய்து அறையில் உள்ள தகவல் சரியா என்று உறுதிப்படுத்து"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "முறைமைத்தகுதி..."
+
+#: ui/actions/Validity.cpp:55
+#, fuzzy, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "இந்த அறையின் மதிப்பு தேர்வுகளை எடுக்கவும்"
+
+#: ui/actions/Validity.cpp:64
+#, fuzzy, kde-format
+msgid "Remove Validity"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/Validity.cpp:103
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "எல்லாவற்றையும் நீக்கு."
+
+#: ui/actions/Validity.cpp:105
+#, fuzzy
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "உரிய முறைகள் :"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14679,12 +17896,6 @@ msgstr "அறைகளை செருகு"
 msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "அறைகளை நீக்கு"
-
-#: ui/commands/DeleteCommand.cpp:22
-#, fuzzy
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "கிடக்கைகளை நீக்கு"
 
 #: ui/commands/MergeCommand.cpp:81
 #, fuzzy
@@ -14947,12 +18158,6 @@ msgstr ""
 msgid "Roman"
 msgstr "ருமேனியா"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, fuzzy, kde-format
-msgid "Italic"
-msgstr "இத்தாலி"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14970,12 +18175,6 @@ msgstr ""
 msgid "Normal"
 msgstr "இயல்பான"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "தடிப்பான"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14988,12 +18187,6 @@ msgstr "வண்ணம்"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "அடிக்கோடிடு"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15133,11 +18326,6 @@ msgid ""
 "Numbers tab. Numbers are right justified by default."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "சதவீதம்"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15150,11 +18338,6 @@ msgid ""
 "You can also use the Percent icon in the Format Toolbar."
 msgstr ""
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "பணம்"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15165,11 +18348,6 @@ msgid ""
 "You can also use the Currency icon in the Format Toolbar to set the cell "
 "formatting to look like your current currency."
 msgstr ""
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "ஆய்வறிவு சார்ந்த"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15375,11 +18553,6 @@ msgstr "மூன்று இலக்கங்கள் 153/652"
 msgid "Dolor Ipse"
 msgstr "யாதும் ஊரே"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "பாணி"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, fuzzy, kde-format
 #| msgid "Name:"
@@ -15391,11 +18564,6 @@ msgstr "பெயர்:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "மரபுவழி பாணி:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "வார்ப்புரு பெயர் ஏற்கனவே உள்ளது"
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, fuzzy, kde-format
@@ -15442,12 +18610,6 @@ msgstr ""
 msgid "Standard"
 msgstr "தரம்"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, fuzzy, kde-format
-msgid "Center"
-msgstr "மையமாக ஒருநிலைபடுத்து"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15479,24 +18641,6 @@ msgid ""
 "<b>Bottom</b> means the content of the cell will be displayed at the bottom "
 "of the cell.</qt>"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "நடுவில்"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, fuzzy, kde-format
-msgid "Bottom"
-msgstr "கீழ்ப்புறமாக ஒருநிலைபடுத்து"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15658,20 +18802,10 @@ msgstr "செயல்படுத்து"
 msgid "Apply changes"
 msgstr "மாற்றங்களை செயல்படுத்து"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "ரத்து செய்"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr ""
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "அனைத்து"
 
 #: ui/FilterPopup.cpp:57
 #, fuzzy, kde-format
@@ -15748,384 +18882,13 @@ msgstr ""
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[hh]::mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "செயல்கூறு..."
-
-#, fuzzy
-#~ msgid "Insert math expression"
-#~ msgstr "math  தொடரை சொருகு."
-
-#~ msgid "From &Database..."
-#~ msgstr "துவக்கம் &தரவுத்தளம் ..."
-
-#, fuzzy
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "SQL தரவுத்தளத்திலிருந்து பொருளை செருகவும்"
-
-#~ msgid "Formula Selection"
-#~ msgstr "வாய்பாடு தேர்வு"
-
-#, fuzzy
-#~ msgid "Insert a function"
-#~ msgstr "செயல்கூற்றை செருகு"
-
-#~ msgid "Others..."
-#~ msgstr "மற்றவைகள்..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "சிற்றறையை மாற்று"
-
-#, fuzzy
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "முனைப்புறுத்தப்பட்ட அறைகளை திருத்து "
-
-#, fuzzy
-#~| msgid "Show Sheet..."
-#~ msgid "Show QTableView..."
-#~ msgstr "தாளை காட்டு"
-
 #, fuzzy
 #~| msgid "Protection"
 #~ msgid "Permute reference fixation"
 #~ msgstr "பாதுகாவலர்"
 
-#, fuzzy
-#~| msgid "Protection"
-#~ msgid "Permute fixation"
-#~ msgstr "பாதுகாவலர்"
-
-#, fuzzy
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "இடைநிலையின் உள்ளடக்கத்தின் காட்டியில் ஒட்டுக. "
-
-#, fuzzy
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "தகவல்தள இயக்கிகள் ஏதும் காணப்படவில்லை. தங்கள் Qt யை தேவையான இயக்கியுடன் தொகுக்க "
-#~ "வேண்டும்."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "தகவல்தளத்திலிருந்து தகவலை செருகு"
-
-#~ msgid "Type:"
-#~ msgstr "வகை:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr "பயனர் பெயர்:(தேவையிருந்தால்)"
-
-#~ msgid "Host:"
-#~ msgstr "கணினி:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr "முனை:(தேவையிருந்தால்)"
-
-#~ msgid "Database name: "
-#~ msgstr "தகவல்தளத்தின் பெயர்"
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr "நுழைசொல்:(தேவையிருந்தால்)"
-
-#~ msgid "Select tables:"
-#~ msgstr "தேர்வு செய்யப்பட்ட அட்டவணை "
-
-#, fuzzy
-#~| msgid "Values"
-#~ msgid "Tables"
-#~ msgstr "மதிப்புகள்"
-
-#~ msgid "Select columns:"
-#~ msgstr "நெடுவரிசைகளை தேர்வுசெய்"
-
-#, fuzzy
-#~| msgid "Tala"
-#~ msgid "Table"
-#~ msgstr "டலா"
-
-#~ msgid "Columns"
-#~ msgstr "நெடுவரிசைகள்"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "கீழ்காணும் எல்லாவற்றையும் பொருத்துக (AND)."
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "கீழ்காணும் எதையாவது பொருத்துக (OR)"
-
-#~ msgid "equals"
-#~ msgstr "சமமான"
-
-#~ msgid "not equal"
-#~ msgstr "சமமற்ற"
-
-#~ msgid "in"
-#~ msgstr "in"
-
-#~ msgid "not in"
-#~ msgstr "இதில் இல்லை"
-
-#~ msgid "like"
-#~ msgstr "போல"
-
-#~ msgid "greater"
-#~ msgstr "அதிகமான"
-
-#~ msgid "lesser"
-#~ msgstr "குறைந்த "
-
-#~ msgid "greater or equal"
-#~ msgstr "அதிகமான அலல்து சமமான"
-
-#~ msgid "less or equal"
-#~ msgstr "குறைவு அல்லது சமமான"
-
-#~ msgid "Sorted by"
-#~ msgstr "வரிசைபடி"
-
-#~ msgid "Ascending"
-#~ msgstr "ஏறுவரிசை"
-
-#~ msgid "Descending"
-#~ msgstr "இறங்கு வரிசை"
-
-#~ msgid "Distinct"
-#~ msgstr "மதிப்புகள்"
-
-#~ msgid "Query Options"
-#~ msgstr "வினவல் தேர்வுகள் "
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL query:"
-
-#~ msgid "Insert in region"
-#~ msgstr "வட்டாரத்தில் செருகு"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Starting in cell"
-
-#~ msgid "Result"
-#~ msgstr "விளைவு"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "தாங்கள் இங்கு ஒரு அட்டவணை தேர்வு செய்ய முடியாது."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "தாங்கள் ஒரு செல்லக்கூடிய வட்டாரத்தை தேர்வு செய்ய வேண்டும்."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "தாங்கள் ஒரு செல்லக்கூடிய அறையை குறிப்பிட வேண்டும்."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "தகவல்தளத்திலிருக்கும் தகவலை மாற்ற தாங்கள் அனுமதிக்கப்படவில்லை."
-
-#~ msgid "Executing query failed."
-#~ msgstr "கேள்வி நிறைவேற்று தோல்வியடைந்தது."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "இந்த கேள்வியின் மூலம் எந்த முடிவையும் தங்களால் பெறமுடியாது."
-
-#, fuzzy
-#~| msgid "Insert Data From Database"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "தகவல்தளத்திலிருந்து தகவலை செருகு"
-
-#~ msgid "The port must be a number"
-#~ msgstr "இந்த துறைக்கு ஒரு எண் இருக்க வேண்டும்"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "தகவல்தளத்துடன் இணைத்தல்"
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "இணைக்கப்பட்டது. அட்டவணை தகவல்களை மீட்டல்"
-
-#~ msgid "This database contains no tables"
-#~ msgstr "இந்த தகவல்தளத்தில் அட்டவணை எதுவும் இல்லை."
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "இயக்கியினை ஏற்ற இயலவில்லை"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "அட்டவணைகளிலிருந்து மீ தகவல்களை மீட்டல் "
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "தாங்கள் குறைந்தது ஒரு அட்டவணையையாவது தேர்வு செய்ய வேண்டும்."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "தாங்கள் குறைந்தது ஒரு நெடுவரிசையையாவது தேர்வு செய்ய வேண்டும்."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' அல்லது '?'  SQLயில் தவறான குழுக்குரியாகும் . '%' அல்லது '_' முறையான மாறுதல் "
-#~ "ஆகும். மாற்ற விரும்புகிறீர்களா?"
-
-#~ msgid "Insert function"
-#~ msgstr "செயலை சொருகு"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "இந்த செயல்கூற்றில் அளபுருக்கள் எதுவும் இல்லை."
-
-#, fuzzy
-#~ msgid "Description is not available."
-#~ msgstr "நிரலில் விவரிப்பு"
-
-#, fuzzy
-#~ msgid "Document Settings..."
-#~ msgstr "வட்டார அளவுருக்கள்"
-
-#, fuzzy
-#~ msgid "Show document settings dialog"
-#~ msgstr "விளக்க சுட்டியை காட்டு"
-
-#, fuzzy
-#~ msgid "Document Settings"
-#~ msgstr "வட்டார அளவுருக்கள்"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "கணிக்கிடல் வகை"
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Case sensitive"
-#~ msgstr "ஒட்டு &செருகு"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "துல்லியம்"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "தன்னியக்க"
-
-#, fuzzy
-#~| msgid "String to compare with"
-#~ msgid "String comparison:"
-#~ msgstr "சரத்தை ஒப்பிடு"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "math  தொடரை சொருகு."
-
-#, fuzzy
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&உள்ளிருப்பு முறைமைக்கு இற்றைப்படுத்தல் "
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "மொழி: %1"
-
-#, fuzzy
-#~ msgid "Default number format: %1"
-#~ msgstr "தேதி வடிவமைப்பு "
-
-#, fuzzy
-#~ msgid "Long date format: %1"
-#~ msgstr "தேதி வடிவமைப்பு "
-
-#, fuzzy
-#~ msgid "Short date format: %1"
-#~ msgstr "சிறிய தேதி: %1"
-
-#, fuzzy
-#~ msgid "Time format: %1"
-#~ msgstr "நேர வடிவமைப்பு"
-
-#, fuzzy
-#~ msgid "Currency format: %1"
-#~ msgstr "பணம்"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "தனிப்பயன் பட்டியல்..."
-
-#, fuzzy
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "வரிசையாக்கம் அல்லது தானேநிரப்ப தனிப்பயன்பட்டியலை உருவாக்குக "
-
-#, fuzzy
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "தற்போதைய தாளில் உள்ள அனைத்து அறையின் மதிப்பையும் மறுகணக்கிடு."
-
-#~ msgid "Custom Lists"
-#~ msgstr "பட்டியலின் மாற்றம்"
-
-#~ msgid "List:"
-#~ msgstr "பட்டியல்:"
-
-#~ msgid "Entry:"
-#~ msgstr "நுழைவு:"
-
-#, fuzzy
-#~| msgid "&Add"
-#~ msgid "Add"
-#~ msgstr "சேர்"
-
-#, fuzzy
-#~| msgid "&New"
-#~ msgid "New"
-#~ msgstr "புதிய"
-
-#, fuzzy
-#~ msgid "Remove"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#, fuzzy
-#~ msgid "Modify"
-#~ msgstr "குறிப்புரையை சேர்/மாற்று ..."
-
-#, fuzzy
-#~| msgid "Co&py"
-#~ msgid "Copy"
-#~ msgstr "நகலெடு"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "இந்த பட்டியலை நிஜமாகவே நீக்க வேண்டுமா?"
-
-#, fuzzy
-#~ msgid "Remove List"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "நுழைவு இடம் காலியாக இல்லை.\n"
-#~ "தொடர வேண்டுமா?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&இலக்குத்தேடு"
-
-#, fuzzy
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "திரும்பத்திரும்ப கணக்கிடப்படுகிறது ஒரு குறித்த பொருளை தேட."
-
-#~ msgid "Goal Seek"
-#~ msgstr "இலக்குத்தேடு"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "அறை குறிப்பி தவறானது!"
-
-#~ msgid "Target value is invalid."
-#~ msgstr "இலக்கு மதிப்பு தவறானது!"
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "மூல அறை எண்களின் மதிப்பை பெற்று இறுக்க வேண்டும்."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "இலக்கு அறை வாய்பாட்டை கொண்டு இருக்க வேண்டும்!"
 
 #~ msgid "Starting..."
 #~ msgstr "தொடக்கம்:"
@@ -16135,12 +18898,6 @@ msgstr ""
 
 #~ msgid "New value:"
 #~ msgstr "புதிய மதிப்பு"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "எண்ணங்கள் அறையின் %1 வழியே விடை அறியலாம்."
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "எண்ணங்கள் அறையின் %1 வழியே விடை அறியப்படவில்லை"
 
 #~ msgid "Set cell:"
 #~ msgstr "அறையை அமை:"
@@ -16158,96 +18915,6 @@ msgstr ""
 
 #~ msgid "Current value:"
 #~ msgstr "தற்போதைய மதிப்பு:"
-
-#, fuzzy
-#~| msgid "Replacement"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "இடமாற்றம்"
-
-#~ msgid "Selection List..."
-#~ msgstr "தேர்ந்தெடுத்த பட்டியல்"
-
-#, fuzzy
-#~ msgid "More Options"
-#~ msgstr "வினவல் தேர்வுகள் "
-
-#, fuzzy
-#~ msgid "Search entire sheet"
-#~ msgstr "தேடப்பட்ட உரை"
-
-#, fuzzy
-#~ msgid "Search in:"
-#~ msgstr "தேடப்பட்ட உரை"
-
-#, fuzzy
-#~ msgid "Cell Values"
-#~ msgstr "மதிப்புகள்"
-
-#, fuzzy
-#~ msgid "Comments"
-#~ msgstr "குறிப்புரை"
-
-#, fuzzy
-#~ msgid "Search direction:"
-#~ msgstr "உருவரை திசை:"
-
-#, fuzzy
-#~ msgid "Down then Across"
-#~ msgstr "மறைந்த கிடக்கையை காட்டு"
-
-#, fuzzy
-#~ msgid "Fewer Options"
-#~ msgstr "பொதுவான தேர்வுகள்"
-
-#~ msgid "Cell Format..."
-#~ msgstr "அறை வடிவமைப்பு"
-
-#, fuzzy
-#~ msgid "Set the cell formatting"
-#~ msgstr "அறைகளை தானாக வடிவமைத்தல்."
-
-#, fuzzy
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "அறை பொருளை இடைநிலைப் பலகைக்கு கொண்டு செல்."
-
-#, fuzzy
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "அறை பொருளை இடைநிலைப் பலகைக்கு மாற்றுக."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "இடைநிலையின் உள்ளடக்கத்தின் காட்டியில் ஒட்டுக. "
-
-#~ msgid "Special Paste..."
-#~ msgstr "சிறப்பு ஒட்டு..."
-
-#, fuzzy
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "சிறப்பு விருப்பத்தேர்வுகளுடன் இடைநிலையின் உள்ளடக்கத்தை ஒட்டுக."
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "செருகளுடன் ஒட்டு..."
-
-#, fuzzy
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "இடைநிலையில் இருந்து விரிதாளுக்கு அறையை சொருகு. "
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "சொருகு அறைகளை ஒட்டு."
-
-#, fuzzy
-#~ msgid "Insert"
-#~ msgstr "இணையம்"
-
-#~ msgid "Move towards right"
-#~ msgstr "வலது பக்கமாக நகர்த்தவும்"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "கீழ்பக்கமாக நகர்த்தவும்"
-
-#~ msgid "Special Paste"
-#~ msgstr "சிறப்பு ஒட்டு"
 
 #, fuzzy
 #~ msgid "Content"
@@ -16282,39 +18949,14 @@ msgstr ""
 #~ msgstr "வகுத்தல்"
 
 #, fuzzy
-#~ msgid "Check the spelling"
-#~ msgstr "சொல் திருத்தம் "
-
-#, fuzzy
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "நீங்கள் அடுத்த அட்டவணையில் சொல் திருத்த வேண்டுமா? "
-
-#, fuzzy
 #~| msgid "Correct Misspelled Word"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "சரியாக தவறிழைக்கப்பட்ட வார்த்தை"
 
 #, fuzzy
-#~| msgid "AutoFormat..."
-#~ msgid "Auto-Format..."
-#~ msgstr "தானே வடிவமை"
-
-#, fuzzy
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "பணித்தாள் வடிவமை"
-
-#, fuzzy
-#~| msgid "AutoFormat..."
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "தானே வடிவமை"
-
-#~ msgid "Sheet Style"
-#~ msgstr "தாளின் பாணி"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "தாள் பெருவதற்குப் பாணியை தேர்ந்தெடுக்கவும்"
 
 #, fuzzy
 #~ msgid "Could not find image %1."
@@ -16325,113 +18967,8 @@ msgstr ""
 #~ msgstr "உருவம் %1 ஏற்ற முடியவில்லை"
 
 #, fuzzy
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "அட்டவணை-பாணி XML கோப்பு '%1' கண்டுபிடிக்க முடியவில்லை"
-
-#, fuzzy
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "அட்டவணை-பாணி XML கோப்பு '%1'ல் அலகிடல் பிழை"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgid "&Auto-Filter"
-#~ msgstr "தன்னியக்கமாக நிரப்பு"
-
-#, fuzzy
-#~| msgid "Autofill"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "தன்னியக்கமாக நிரப்பு"
-
-#, fuzzy
-#~| msgid "Clear &All"
-#~ msgid "Clear All"
-#~ msgstr "காலி செய் &எல்லாவற்றையும்"
-
-#, fuzzy
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "தற்போதைய அறையின் வடிவம் மற்றும் அனைத்து உள்ளடக்கத்தையும் அழி."
-
-#, fuzzy
 #~ msgid "Contents"
 #~ msgstr "குறிப்புரை"
-
-#, fuzzy
-#~ msgid "Clear Contents"
-#~ msgstr "குறிப்புரை"
-
-#, fuzzy
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "அறையின் தொகுப்புகளை வலப்படுத்தவும். "
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "உரையை மாற்றுக"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "இந்த கட்டுப்பாடுள்ள அறையை நீக்கு"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "இந்த கட்டுப்பாடுள்ள அறையை நீக்கு"
-
-#, fuzzy
-#~ msgid "Select a new border color"
-#~ msgstr "புதிய ஓரத்தின் நிறத்தை தேர்வு செய்க:"
-
-#~ msgid "Border Color"
-#~ msgstr "ஓரம் நிறம்"
-
-#, fuzzy
-#~ msgid "Set the background color"
-#~ msgstr "பின்னணி நிறத்தை அமை"
-
-#~ msgid "Background Color"
-#~ msgstr "பின்னணி நிறம்"
-
-#, fuzzy
-#~| msgid "Conditional Cell Attributes..."
-#~ msgid "Conditional Styles..."
-#~ msgstr "நிபந்தனை அறை பண்புகள் ..."
-
-#, fuzzy
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "சில விதிமுறைக்கு தகுந்தவாறு அறை வடிவத்தை அமை."
-
-#, fuzzy
-#~| msgid "Conditional Cell Attributes"
-#~ msgid "Conditional Styles"
-#~ msgstr "நிபந்தனை அறை பண்புகள்"
-
-#, fuzzy
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "இந்த கட்டுப்பாடுள்ள அறையை நீக்கு"
-
-#, fuzzy
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "இந்த கட்டுப்பாடுள்ள அறையை நீக்கு"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&உப தொகை எண்கள்"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "&உப தொகை எண்கள்"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "நீங்கள் பல சிற்றறைகளை தேர்ந்தெடுக்க வேண்டும்."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "வெள்ளோட்டத்தின் எண்ணிக்கை "
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"
@@ -16442,86 +18979,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "விழுக்காடு வடிவமைப்பு "
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "நேர வடிவமைப்பு"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "தேதி வடிவமைப்பு "
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "ஆய்வறிவு சார்ந்த"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "ஓரம் நிறம் மாற்றுக"
-
-#~ msgid "<none>"
-#~ msgstr "<எதுவுமில்லை>"
-
-#~ msgid "equal to"
-#~ msgstr "இதற்கு சமமான"
-
-#~ msgid "greater than"
-#~ msgstr "அதிக"
-
-#~ msgid "less than"
-#~ msgstr "விடக்குறைவு "
-
-#~ msgid "equal to or greater than"
-#~ msgstr "சமம் அல்லது விடப்பெரிது"
-
-#~ msgid "equal to or less than"
-#~ msgstr "சமமான அல்லது விடக்குறைந்த"
-
-#~ msgid "between"
-#~ msgstr "இடையே"
-
-#, fuzzy
-#~ msgid "outside range"
-#~ msgstr "தொகை அளவு"
-
-#, fuzzy
-#~ msgid "different to"
-#~ msgstr "இதற்கு மாறுபட்ட"
-
-#~ msgid "First Condition"
-#~ msgstr "முதல் நிபந்தனை"
-
-#~ msgid "Second Condition"
-#~ msgstr "இரண்டாவது நிபந்தனை"
-
-#~ msgid "Third Condition"
-#~ msgstr "மூன்றாவது நிபந்தனை"
-
-#~ msgid "Cell is"
-#~ msgstr "சிற்றறை என்பது"
-
-#~ msgid "Cell style"
-#~ msgstr "அறையின் பாணி"
-
-#~ msgid "different from"
-#~ msgstr "இதற்கு மாறுபட்ட"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr "முதல் மதிப்பு எண்ணாக இருந்தால் அதற்கு அடுத்த மதிப்பும் எண்ணாகவே இருக்கும்."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr "முதல் மதிப்பு சரமாக இருந்தால் அதற்கு அடுத்த மதிப்பும் சரமாகவே இருக்கும்."
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Source"
-#~ msgstr "சிறப்பு எழுத்துகள்..."
 
 #, fuzzy
 #~ msgid "Current Selection"
@@ -16546,10 +19003,6 @@ msgstr ""
 #~| msgid "Riel"
 #~ msgid "Field"
 #~ msgstr "ரைல்"
-
-#, fuzzy
-#~ msgid "Add Filter"
-#~ msgstr "கோப்பு"
 
 #, fuzzy
 #~ msgid "Labels"
@@ -16599,11 +19052,6 @@ msgstr ""
 #~ msgstr "குறுக்குவரிசை"
 
 #, fuzzy
-#~| msgid "Operation"
-#~ msgid "Pivot Options"
-#~ msgstr "இயக்கம்"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "மதிப்பு"
@@ -16622,173 +19070,21 @@ msgstr ""
 #~ msgid "Manual Selection"
 #~ msgstr "வாய்பாடு தேர்வு"
 
-#~ msgid "Product"
-#~ msgstr "உற்பத்தி"
-
 #~ msgid "Sort By"
 #~ msgstr "-ஆல் வரிசைப்படுத்து"
-
-#~ msgid "Select Font..."
-#~ msgstr "எழுத்துரு தேர்வு செய்"
-
-#~ msgid "Select Font Size"
-#~ msgstr "எழுத்துவகை அளவை தேர்வு செய்"
-
-#, fuzzy
-#~| msgid "Select Font Size"
-#~ msgid "Font Size"
-#~ msgstr "எழுத்துவகை அளவை தேர்வு செய்"
-
-#~ msgid "Text Color"
-#~ msgstr "உரை நிறம்"
-
-#, fuzzy
-#~ msgid "Set the text color"
-#~ msgstr "பின்னணி நிறத்தை அமை"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "அமைப்பை மாற்று"
-
-#, fuzzy
-#~| msgid "Style Manager"
-#~ msgid "Style Manager..."
-#~ msgstr "பாணியின் மேலாளர் "
-
-#, fuzzy
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "அறையின் பாணிகளை மாற்றி அமைக்கவும் "
-
-#, fuzzy
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "தேர்ந்தெடுத்த அறைகளை முன் வரையறுக்கப்பட்ட பாணியை குறிப்பிடு."
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "பாணியை அறையிலிருந்து உருவாக்கு..."
-
-#, fuzzy
-#~| msgid "Style of Cell"
-#~ msgid "Style From Cell"
-#~ msgstr "அறையின் பாணி "
-
-#, fuzzy
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "தற்போது தேர்ந்தெடுத்த அறையின் புலத்தில் புதிய பாணியை உருவாக்கு."
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "சிற்றறையின் பாந்தம் "
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "அட்டவணை பெயர் காலியாக இருக்க முடியாது. "
-
-#~ msgid "Style Manager"
-#~ msgstr "பாணியின் மேலாளர் "
-
-#~ msgid "All Styles"
-#~ msgstr "எல்லா பாணிகள்"
-
-#~ msgid "Custom Styles"
-#~ msgstr "ஆயத்த பாணிகள்"
-
-#~ msgid "Hierarchical"
-#~ msgstr "படிமுறை"
-
-#~ msgid "&New..."
-#~ msgstr "&புதிய..."
-
-#, fuzzy
-#~ msgid "&Modify..."
-#~ msgstr "குறிப்புரையை சேர்/மாற்று ..."
-
-#, fuzzy
-#~ msgid "&Delete..."
-#~ msgstr "&இலக்குத்தேடு"
-
-#~ msgid "style%1"
-#~ msgstr "பாணி%1"
 
 #, fuzzy
 #~| msgid "Cells:"
 #~ msgid "Cells..."
 #~ msgstr "செல்கள்"
 
-#~ msgid "Insert Cells..."
-#~ msgstr "அறைகளை செருகு..."
-
-#, fuzzy
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "காலி அறையை விரித்தாளிற்குள் சொருகு"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "அறைகளை நீக்கு..."
-
-#, fuzzy
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "விரித்தாளிலிருந்து தற்போதைய அறையை நீக்கு."
-
 #, fuzzy
 #~| msgid "Insert Cells..."
 #~ msgid "Delete Cells..."
 #~ msgstr "அறைகளை செருகு..."
 
-#~ msgid "Insert rows"
-#~ msgstr "கிடக்கைகளை செருகு"
-
-#~ msgid "Insert columns"
-#~ msgstr "நெடுவரிசைகளை செருகு"
-
-#~ msgid "Insert Cells"
-#~ msgstr "அறைகளை செருகு"
-
-#~ msgid "Move towards left"
-#~ msgstr "இடது பக்கமாக நகர்த்தவும்"
-
-#~ msgid "Move towards top"
-#~ msgstr "மேல்பக்கமாக நகர்த்து"
-
-#~ msgid "Remove rows"
-#~ msgstr "கிடக்கைகளை நீக்கு"
-
-#~ msgid "Remove columns"
-#~ msgstr "நெடுவரிசைகளை நீக்கு"
-
-#~ msgid "Remove Cells"
-#~ msgstr "அறைகளை நீக்கு"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&உப தொகை எண்கள்"
-
-#, fuzzy
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "பட்டியல் அல்லது தரவுத்தளத்துக்கு வெவ்வேறு துணை கூட்டுதலை உருவாக்கு."
-
-#~ msgid "Subtotals"
-#~ msgstr "உப தொகை எண்கள்"
-
-#~ msgid "Remove All"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "உப தொகை எண்களை இணைக்க ஒரு நெடுவரிசையையாவது தேர்ந்தெடுக்க வேண்டும்"
-
 #~ msgid "Grand Total"
 #~ msgstr "மொத்த எண்ணிக்கை"
-
-#~ msgid "Column '%1' "
-#~ msgstr "நெடுவரிசை '%1'"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP "
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "நடப்பு உப தொகையை மற்றியமை  "
@@ -16814,51 +19110,6 @@ msgstr ""
 #~ msgid "Add Subtotal to:"
 #~ msgstr "உப தொகையின் சேர்ப்பு"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "சிற்றறைக்கு செல்..."
-
-#, fuzzy
-#~| msgid "Goto Cell"
-#~ msgid "Goto"
-#~ msgstr "அறைக்கு செல்:"
-
-#, fuzzy
-#~ msgid "Move to a particular cell"
-#~ msgstr "Move to a particular cell."
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Column"
-#~ msgstr "நெடுக்கைகளை நீக்குக "
-
-#, fuzzy
-#~| msgid "Column number"
-#~ msgid "Column Break"
-#~ msgstr "நெடுக்கை எண்"
-
-#, fuzzy
-#~| msgid "Remove Columns"
-#~ msgid "Break Before Row"
-#~ msgstr "நெடுக்கைகளை நீக்குக "
-
-#, fuzzy
-#~| msgid "Header"
-#~ msgid "Row Break"
-#~ msgstr "தலைப்பு"
-
-#~ msgid "Goto Cell"
-#~ msgstr "அறைக்கு செல்:"
-
-#~ msgid "Enter cell:"
-#~ msgstr "அறையை உள்ளீடு:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&ஒன்றுசேர்"
-
-#, fuzzy
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "குறிப்பு தரவு வட்டாரத்தை அதேமாதிரியான வட்டார குழுவிலிருந்து உருவாக்கு."
-
 #, fuzzy
 #~| msgid "&Description in row"
 #~ msgid "Description in rows"
@@ -16874,43 +19125,6 @@ msgstr ""
 #~ msgid "Copy data"
 #~ msgstr "தகவலை நகலெடு"
 
-#~ msgid "Consolidate"
-#~ msgstr "ஒன்றாக்கபட்ட"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "இயல்பான விலகல்"
-
-#~ msgid "Variance"
-#~ msgstr "மாற்றம்"
-
-#, fuzzy
-#~| msgid "You have to select at least one column."
-#~ msgid "You have to define at least one source range."
-#~ msgstr "தாங்கள் குறைந்தது ஒரு நெடுவரிசையையாவது தேர்வு செய்ய வேண்டும்."
-
-#, fuzzy
-#~| msgid "This is not a valid date."
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "இது ஒரு சரியான தேதி இல்லை."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "வீச்சு\n"
-#~ "%1\n"
-#~ "மிக சிறியதாக உள்ளது"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "வீச்சு\n"
-#~ "%1\n"
-#~ "மிக பெரியதாக உள்ளது"
-
 #~ msgid ""
 #~ "The ranges\n"
 #~ "%1\n"
@@ -16923,26 +19137,6 @@ msgstr ""
 #~ "மற்றும்\n"
 #~ "%2\n"
 #~ "வெவ்வேறு அளவில் உள்ளன"
-
-#, fuzzy
-#~| msgid "Consolidate"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "ஒன்றாக்கபட்ட"
-
-#, fuzzy
-#~| msgid "The source tables intersect with the destination table"
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "மூல அட்டவணைகள் இலக்கு அட்டவணையுடன் ஊடுகிறது"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "வீச்சு\n"
-#~ "%1\n"
-#~ "பிறழப்பட்டு உள்ளது"
 
 #, fuzzy
 #~| msgid "&Function:"
@@ -16959,108 +19153,14 @@ msgstr ""
 #~ msgid "Entered references:"
 #~ msgstr "நுழைக்கப்பட்ட விவரிப்பு"
 
-#~ msgid "Change Angle..."
-#~ msgstr "கோணத்தை மாற்று..."
-
-#, fuzzy
-#~| msgid "Angle:"
-#~ msgid "Angle"
-#~ msgstr "கோணம்:"
-
-#, fuzzy
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "அறையின் உள்ளடக்கங்களின் கோணத்தை மாற்றி அச்சிடு."
-
-#~ msgid "Increase Precision"
-#~ msgstr "துல்லியத்தை அதிகரிக்கவும்"
-
-#, fuzzy
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "திரையில் தோன்றும் பதின்ம துல்லியத்தை அதிகரிக்கவும் "
-
-#~ msgid "Decrease Precision"
-#~ msgstr "துல்லியத்தை குறை"
-
-#, fuzzy
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "திரையில் தோன்றும் பதின்ம துல்லியத்தை குறைக்கவும் "
-
-#, fuzzy
-#~| msgid "Increase Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "துல்லியத்தை அதிகரிக்கவும்"
-
-#, fuzzy
-#~| msgid "Decrease Precision"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "துல்லியத்தை குறை"
-
-#~ msgid "Change Angle"
-#~ msgstr "கோணம் மாற்று"
-
-#~ msgid "Angle:"
-#~ msgstr "கோணம்:"
-
-#, fuzzy
-#~| msgid "Change Angle"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "கோணம் மாற்று"
-
-#~ msgid "Area Name..."
-#~ msgstr "பரப்பளவின் பெயர்"
-
-#, fuzzy
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "வட்டாரத்திற்காக விரிபட்டியலில் ஒரு பெயரை அமைக்க."
-
-#, fuzzy
-#~| msgid "Show Area..."
-#~ msgid "Named Areas..."
-#~ msgstr "பரப்பைக் காட்டு..."
-
-#, fuzzy
-#~ msgid "Named Areas"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#, fuzzy
-#~ msgid "Edit or select named areas"
-#~ msgstr "பெயரிடப்பட்ட பரப்பை காட்சியளி"
-
-#, fuzzy
-#~| msgid "Edit Area"
-#~ msgid "Add Named Area"
-#~ msgstr "பரப்பை தொகு "
-
-#~ msgid "Enter the area name:"
-#~ msgstr "பரப்பின் பெயரை நுழைக்கவும்:"
-
-#, fuzzy
-#~ msgid "Replace Named Area"
-#~ msgstr "பெயரிடப்பட்ட பரப்பை காட்சியளி"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "பெயரிடப்பட்ட பரப்பை காட்சியளி"
-
 #, fuzzy
 #~| msgid "&Sheet"
 #~ msgid "&Select"
 #~ msgstr "தாள்"
 
-#~ msgid "Area: %1"
-#~ msgstr "பரப்பு: %1"
-
 #, fuzzy
 #~ msgid "&Edit..."
 #~ msgstr "முறைமைத்தகுதி..."
-
-#, fuzzy
-#~ msgid "&Remove"
-#~ msgstr "&குறிப்புரையை எடு"
 
 #, fuzzy
 #~ msgid "New Named Area"
@@ -17070,132 +19170,6 @@ msgstr ""
 #~| msgid "Edit Area"
 #~ msgid "Edit Named Area"
 #~ msgstr "பரப்பை தொகு "
-
-#, fuzzy
-#~| msgid "Do you really want to remove this area name?"
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "இந்த பரப்பின் பெயரை நிஜமாகவே நீக்க வேண்டுமா?"
-
-#, fuzzy
-#~ msgid "Remove Named Area"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#~ msgid "Cells:"
-#~ msgstr "செல்கள்"
-
-#~ msgid "Sheet:"
-#~ msgstr "தாள்:"
-
-#~ msgid "Area name:"
-#~ msgstr "பரப்பு பெயர்:"
-
-#~ msgid "Align Left"
-#~ msgstr "இடதுப்பக்கமாக ஒருநிலைபடுத்து"
-
-#, fuzzy
-#~ msgid "Left justify the cell contents"
-#~ msgstr "அறையின் தொகுப்புகளை இடப்படுத்தவும். "
-
-#~ msgid "Align Center"
-#~ msgstr "மையமாக ஒருநிலைபடுத்து"
-
-#, fuzzy
-#~ msgid "Center the cell contents"
-#~ msgstr "அறையின் தொகுப்புகளை நடுப்படுத்தவும். "
-
-#~ msgid "Align Right"
-#~ msgstr "வலது பக்கமாக ஒருநிலைபடுத்து"
-
-#, fuzzy
-#~ msgid "Right justify the cell contents"
-#~ msgstr "அறையின் தொகுப்புகளை வலப்படுத்தவும். "
-
-#~ msgid "Align Top"
-#~ msgstr "மேல் புறமாக ஒருநிலைப்படுத்து"
-
-#, fuzzy
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "அறையின் உள்ளடக்கங்களை அறையின் மேல்வாரியாகப் பொருத்து."
-
-#~ msgid "Align Middle"
-#~ msgstr "நடுப்புறமாக ஒருநிலைப்படுத்து"
-
-#, fuzzy
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "அறையின் உள்ளடக்கங்களை அறையின் நடுவாரியாகப் பொருத்து."
-
-#~ msgid "Align Bottom"
-#~ msgstr "கீழ்ப்புறமாக ஒருநிலைபடுத்து"
-
-#, fuzzy
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "அறையின் உள்ளடக்கங்களை அறையின் கீழ்வாரியாகப் பொருத்து."
-
-#~ msgid "Border Left"
-#~ msgstr "ஓரம் இடது "
-
-#, fuzzy
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள இடது ஓரங்களை அமை."
-
-#~ msgid "Border Right"
-#~ msgstr "ஓரம் வலது"
-
-#, fuzzy
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள வலது ஓரங்களை அமை."
-
-#~ msgid "Border Top"
-#~ msgstr "ஓரம் மேல்"
-
-#, fuzzy
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள மேல் ஓரங்களை அமை."
-
-#~ msgid "Border Bottom"
-#~ msgstr "ஓரம் கீழ்"
-
-#, fuzzy
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள கீழ் ஓரங்களை அமை."
-
-#~ msgid "All Borders"
-#~ msgstr "அனைத்து ஓரங்கள் "
-
-#, fuzzy
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள  அறையை சுற்றி உள்ள அனைத்து ஓரங்களை அமை."
-
-#, fuzzy
-#~| msgid "All Borders"
-#~ msgid "No Borders"
-#~ msgstr "அனைத்து ஓரங்கள் "
-
-#, fuzzy
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள அனைத்து ஓரங்களை நீக்கு."
-
-#~ msgid "Border Outline"
-#~ msgstr "ஓரம் எல்லைக்கோடு"
-
-#, fuzzy
-#~| msgid "Border Outline"
-#~ msgid "Outline"
-#~ msgstr "ஓரம் எல்லைக்கோடு"
-
-#, fuzzy
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "தேர்வு செய்யப்பட்ட பகுதியில் உள்ள சுற்றுக்கோட்டு ஓரங்களை அமை."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "செல்களை ஒன்றாகச் சேர்%1"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "செல்களை ஒன்றாகச் சேர்%1"
 
 #~ msgid "Australia"
 #~ msgstr "ஆஸ்திரேலியா"
@@ -19025,76 +20999,6 @@ msgstr ""
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "ஜிம்பாப்வே டாலர்"
 
-#, fuzzy
-#~ msgid "Resets to the default format"
-#~ msgstr "Resets to the default format."
-
-#~ msgid "Strike Out"
-#~ msgstr "அடித்தல்"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "எழுத்துரு அளவை அதிகரி"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "எழுத்துரு அளவை குறை"
-
-#~ msgid "Wrap Text"
-#~ msgstr "உரை மடிப்பு"
-
-#, fuzzy
-#~| msgid "Wrap text"
-#~ msgid "Wrap"
-#~ msgstr "உரை மடிப்பு"
-
-#, fuzzy
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "அறை உரை மடிப்பை பல வரிகளாக உருவாக்கு."
-
-#~ msgid "Vertical Text"
-#~ msgstr "செங்குத்தான உரை"
-
-#, fuzzy
-#~ msgid "Print cell contents vertically"
-#~ msgstr "அறையின் உள்ளடக்கங்களை மேல்கீழாக அச்சிடு"
-
-#~ msgid "Percent Format"
-#~ msgstr "விழுக்காடு வடிவமைப்பு "
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "அறை வடிவத்தை சதவீதம் மாதிரி தெரியும் வகையில் அமை."
-
-#~ msgid "Money Format"
-#~ msgstr "பண வடிவமைப்பு"
-
-#, fuzzy
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "அறை அமைப்புகளை உங்கள் பணத்திற்கு ஏற்ப அமைக்கவும்"
-
-#, fuzzy
-#~| msgid "Wrap Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "உரை மடிப்பு"
-
-#, fuzzy
-#~| msgid "Vertical Text"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "செங்குத்தான உரை"
-
-#, fuzzy
-#~| msgid "Format Percent"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "வடிவ சதவிகிதம்"
-
-#, fuzzy
-#~| msgid "Format Money"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "பண வடிவம்"
-
 #~ msgid "&Data Format"
 #~ msgstr "தேதி வடிவமைப்பு "
 
@@ -19130,9 +21034,6 @@ msgstr ""
 #~ msgid "Default height (%1)"
 #~ msgstr "முன்னிருப்பு உயரம்  (%1 %2)"
 
-#~ msgid "Height:"
-#~ msgstr "உயரம்:"
-
 #, fuzzy
 #~ msgid "Set the height of the cell."
 #~ msgstr "அறையின் தொகுப்புகளை சுழற்றவும். "
@@ -19141,520 +21042,34 @@ msgstr ""
 #~ msgid "Default width (%1)"
 #~ msgstr "முன்னிருப்பு அகலம்(%1 %2)"
 
-#~ msgid "Width:"
-#~ msgstr "அகலம்:"
-
-#, fuzzy
-#~| msgid "Add Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "குறிப்புரையை சேர்க்க "
-
-#~ msgid "Increase Indent"
-#~ msgstr "உள்ளடக்க மிகு "
-
-#, fuzzy
-#~ msgid "Increase the indentation"
-#~ msgstr "உள்ளடக்கத்தை அதிகரி"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "உள்ளடக்க குறை "
-
-#, fuzzy
-#~ msgid "Decrease the indentation"
-#~ msgstr "உள்ளடக்கத்தை குறை"
-
-#~ msgid "Upper Case"
-#~ msgstr "பெரிய எழுத்து"
-
-#, fuzzy
-#~| msgid "Upper Case"
-#~ msgid "Upper"
-#~ msgstr "பெரிய எழுத்து"
-
-#, fuzzy
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "எல்லா எழுத்துகளையும் பெரிய எழுத்தாக மாற்று"
-
-#~ msgid "Lower Case"
-#~ msgstr "சிறிய எழுத்து "
-
-#, fuzzy
-#~| msgid "Power"
-#~ msgid "Lower"
-#~ msgstr "திறன்"
-
-#, fuzzy
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "எல்லா எழுத்துகளையும் சிறிய எழுத்தாக மாற்று"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
-
-#, fuzzy
-#~ msgid "First Letter Upper"
-#~ msgstr "&முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
-
-#, fuzzy
-#~ msgid "Capitalize the first letter"
-#~ msgstr "முதல் எழுத்தை பெரிதாக்கு"
-
-#, fuzzy
-#~| msgid "Comment"
-#~ msgid "Comment..."
-#~ msgstr "குறிப்புரை"
-
-#, fuzzy
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "இந்த அறைக்கு ஒரு குறிப்புரையை எழுதவும் "
-
-#~ msgid "Remove Comment"
-#~ msgstr "குறிப்புரையை நீக்கு "
-
-#, fuzzy
-#~ msgid "Remove this cell's comment"
-#~ msgstr "இந்த அறையின் குறிப்புரையை நீக்கு"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "&முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "&முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "&முதல் எழுத்தை பெரிய எழுத்தாக மாற்று"
-
-#, fuzzy
-#~| msgid "Remove Comment"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "குறிப்புரையை நீக்கு "
-
-#, fuzzy
-#~ msgid "Clear Comment"
-#~ msgstr "குறிப்புரை"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "கோணம் மாற்று"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "உள்ளடக்க மிகு "
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "உள்ளடக்க குறை "
-
-#~ msgid "Cell Comment"
-#~ msgstr "அறையின் குறிப்புரை"
-
-#~ msgid "&Left"
-#~ msgstr "&இடது"
-
-#~ msgid "&Right"
-#~ msgstr "&வலது"
-
 #~ msgid "&Up"
 #~ msgstr "மேல்"
-
-#~ msgid "&Down"
-#~ msgstr "கீழ்"
-
-#~ msgid "Autosum"
-#~ msgstr "தானியக்க கூட்டு"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "(sum) செயலுறுவை செருகு"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "வாய்பாடு தேர்வு"
-
-#~ msgid "From &Text File..."
-#~ msgstr "உரைக்கோப்பிலிருந்து ..."
-
-#, fuzzy
-#~| msgid "From &Text File..."
-#~ msgid "Text File"
-#~ msgstr "உரைக்கோப்பிலிருந்து ..."
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "தற்போதைய "
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "கிளிப்போர்டிலிருந்து படி"
 
 #, fuzzy
-#~| msgid "From &Clipboard..."
-#~ msgid "Clipboard"
-#~ msgstr "கிளிப்போர்டிலிருந்து படி"
-
-#, fuzzy
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "இடைநிலைப் பலகையிலிருந்து csv தகவல் திரட்டு நடப்பு காட்டி இடம்/தெர்ந்தெடுத்தல்."
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "நெடுவரிசைகள் பெறுவது திரும்பச் செய்"
-
-#, fuzzy
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "அறைகளின் உள்ளடக்கங்களை பல நெடுக்கைகளுக்கு விரிவாக்கு"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "இடைநிலைப் பலகையிலிருந்து செருகுதல்"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "இடைநிலைப் பலகையில் எந்த தகவலுமில்லை "
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "இடைநிலைப் பலகையில் எந்த பயனுள்ள தகவலுமில்லை "
-
-#~ msgid "Text to Columns"
-#~ msgstr "நெடுவரிசைகளுக்கான உரை"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "உள்ளீடு கோப்பினை திறக்க இயலவில்லை"
-
-#, fuzzy
-#~| msgid "Inserting From Clipboard"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "இடைநிலைப் பலகையிலிருந்து செருகுதல்"
-
-#, fuzzy
-#~| msgid "Inserting Text File"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "உரை கோப்பினை செருகு"
-
-#, fuzzy
-#~| msgid "Text to Columns"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "நெடுவரிசைகளுக்கான உரை"
-
-#, fuzzy
-#~ msgid "Merge the selected region"
-#~ msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
-
-#, fuzzy
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "செல்களை ஒன்றாகச் சேர்%1"
-
-#, fuzzy
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
-
-#, fuzzy
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "செல்களை ஒன்றாகச் சேர்%1"
-
-#, fuzzy
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "பிணைப்புகளை நீக்கு"
-
-#, fuzzy
-#~ msgid "Unmerge the selected region"
-#~ msgstr "தேர்ந்தெடுத்த வட்டாரத்தை ஒரு பெரிய அறையாக ஒன்றுசேர்."
-
-#~ msgid "Resize Column..."
-#~ msgstr "நெடுக்கை அளவை மாற்று..."
-
-#, fuzzy
-#~ msgid "Change the width of a column"
-#~ msgstr "நெடுவரிசை அகலத்தை சீரமை"
-
-#~ msgid "Insert Columns"
-#~ msgstr "நெடுக்கைகளை செருகு"
-
-#, fuzzy
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "விரிபட்டியலில் புதிய நெடுக்கையை செருகு"
-
-#~ msgid "Remove Columns"
-#~ msgstr "நெடுக்கைகளை நீக்குக "
-
-#, fuzzy
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "விரித்தாளிலிருந்து தற்போதைய அறையை நீக்கு."
-
-#~ msgid "Hide Columns"
-#~ msgstr "நெடுவரிசையை மறைக்க"
-
-#, fuzzy
 #~ msgid "Hide the column from this"
 #~ msgstr "தோற்றத்தில் நெடுக்கையை மறை. "
-
-#~ msgid "Show Columns..."
-#~ msgstr "நெடுக்கைகளை காட்டு"
-
-#, fuzzy
-#~ msgid "Show hidden columns"
-#~ msgstr "மறைந்த நெடுக்கைகளை காட்டு"
-
-#~ msgid "Equalize Column"
-#~ msgstr "நெடுக்கை சமப்படுத்து "
-
-#, fuzzy
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "அதே அளவில் உள்ள நெடுக்கையை மறு அளவாக்கு"
-
-#~ msgid "Show Columns"
-#~ msgstr "நெடுவரிசைகளைக் காட்டு"
-
-#, fuzzy
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "மறைந்த நெடுக்கையை தேர்வில் காட்டு "
-
-#~ msgid "Resize Row..."
-#~ msgstr "கிடக்கை அளவை மாற்று..."
-
-#, fuzzy
-#~ msgid "Change the height of a row"
-#~ msgstr "கிடக்கையின் உயரத்தை மாற்று"
-
-#~ msgid "Insert Rows"
-#~ msgstr "கிடக்கைகளை செருகு"
-
-#, fuzzy
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "விரிபட்டியலில் புதிய கிடக்கையை செருகு"
-
-#~ msgid "Remove Rows"
-#~ msgstr "கிடக்கைகளை நீக்குக"
-
-#, fuzzy
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "விரிபட்டியல் உள்ள கிடக்கையை நீக்கு. "
-
-#~ msgid "Hide Rows"
-#~ msgstr "கிடக்கைகளை மறைக்க"
 
 #, fuzzy
 #~ msgid "Hide a row from this"
 #~ msgstr "தோற்றத்தில் கிடக்கையை மறை"
 
-#~ msgid "Show Rows..."
-#~ msgstr "கிடக்கைகளை காட்டு"
-
-#, fuzzy
-#~ msgid "Show hidden rows"
-#~ msgstr "மறைந்த கிடக்கையை காட்டு"
-
-#~ msgid "Equalize Row"
-#~ msgstr "கிடக்கையை சமப்படுத்து"
-
-#, fuzzy
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "அதே அளவில் உள்ள கிடக்கையை மறு அளவாக்கு"
-
-#~ msgid "Show Rows"
-#~ msgstr "வரிசைகளைக் காட்டு"
-
-#, fuzzy
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "மறைந்த கிடக்கையை தேர்வில் காட்டு "
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "கிடக்கை && நெடுக்கை சரிப்படுத்து"
-
-#, fuzzy
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr ""
-#~ "நெடுக்கை/ கிடக்கையின் அளவை சரிப்படுத்து அதனுடைய தொகுப்பு பொருத்துதல் வேண்டும்."
-
-#~ msgid "Adjust Column"
-#~ msgstr "நெடுவரிசையை சரிப்படுத்தவும்"
-
 #~ msgid "Delete Columns"
 #~ msgstr "நெடுக்கைகளை நீக்கு"
 
-#~ msgid "Adjust Row"
-#~ msgstr "குறுக்குவரிசையை சரிப்படுத்தவும்"
-
 #~ msgid "Delete Rows"
 #~ msgstr "கிடக்கைகளை நீக்கு"
-
-#~ msgid "Resize Row"
-#~ msgstr "கிடக்கைகளை மறுஅளவாக்கு"
-
-#~ msgid "Resize Column"
-#~ msgstr "நெடுக்கையை மறுஅளவாக்கு"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "மறைந்திருக்கும் நெடுவரிசைகளைக் காட்டத் தேர்வுசெய்யவும்:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "மறைந்திருக்கும் வரிசைகளைக் காட்டத் தேர்வு செய்யவும்:"
-
-#~ msgid "Column: %1"
-#~ msgstr "நெடுவரிசை: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "குறுக்குவரி: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "இணைப்பு..."
-
-#, fuzzy
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "இணைய தளத்தின் உயரிணைப்பை செருகு"
-
-#, fuzzy
-#~ msgid "Link"
-#~ msgstr "சொருகு இணைப்பு"
-
-#, fuzzy
-#~ msgid "Remove Link"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#, fuzzy
-#~ msgid "Remove a link"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#~ msgid "Insert Link"
-#~ msgstr "சொருகு இணைப்பு"
 
 #, fuzzy
 #~ msgid "Edit Link"
 #~ msgstr "சொருகு இணைப்பு"
 
 #, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "சொருகு இணைப்பு"
-
-#~ msgid "Internet"
-#~ msgstr "இணையம்"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Internet Address"
-#~ msgstr "இணையம் முகவரி"
-
-#~ msgid "Internet address:"
-#~ msgstr "இணையம் முகவரி"
-
-#, fuzzy
-#~| msgid "Email:"
-#~ msgid "Email"
-#~ msgstr "மின்அஞ்சல்:"
-
-#, fuzzy
-#~| msgid "Internet address:"
-#~ msgid "Link to Email Address"
-#~ msgstr "இணையம் முகவரி"
-
-#, fuzzy
-#~ msgid "Email address:"
-#~ msgstr "இடம் உரை காலியாக உள்ளது!"
-
-#, fuzzy
-#~ msgid "Subject:"
-#~ msgstr "பொருள்"
-
-#, fuzzy
-#~ msgid "File"
-#~ msgstr "கோப்பு"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to File"
-#~ msgstr "அறையின் அளவு"
-
-#~ msgid "File location:"
-#~ msgstr "கோப்பு இடஅமைப்பு:"
-
-#~ msgid "Recent file:"
-#~ msgstr "சமீபத்திய கோப்பு"
-
-#~ msgid "No Entries"
-#~ msgstr "பதிவு இல்லை"
-
-#, fuzzy
-#~| msgid "Size of Cell"
-#~ msgid "Link to Cell"
-#~ msgstr "அறையின் அளவு"
-
-#, fuzzy
-#~ msgid "Cell or Named Area:"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#~ msgid "&Sort..."
-#~ msgstr "&வரிசைப்படுத்து..."
-
-#, fuzzy
-#~ msgid "Sort a group of cells"
-#~ msgstr "அறை குழுக்களை வரிசையாக்குக. "
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "வரிசைப்படுத்த குறைக்க"
-
-#, fuzzy
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "அறையின் குழுவை குறையும் ஒழுங்கில் வரிசையாக்குக."
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "அடுக்குக்குறி உயர்வது"
-
-#, fuzzy
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "அறை குழுகளை ஏறுமுகமாக அடுக்கவும்."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "வரிசைப்படுத்தும் விதிகள்"
-
-#, fuzzy
 #~| msgid "&Use custom list"
 #~ msgid "Use custom list"
 #~ msgstr "&ஆயத்தப் பட்டியலைப் பயன்படுத்து"
-
-#~ msgid "Column %1"
-#~ msgstr "நெடுக்குவரி %1"
-
-#~ msgid "Row %1"
-#~ msgstr "குறுக்குவரி %1"
-
-#, fuzzy
-#~ msgid "&First column contains row headers"
-#~ msgstr "முதல் வரி தலைப்பைக் கொண்டுள்ளது"
-
-#, fuzzy
-#~ msgid "&First row contains column headers"
-#~ msgstr "முதல் வரி தலைப்பைக் கொண்டுள்ளது"
-
-#~ msgid "Sort"
-#~ msgstr "ஒழுங்குபடுத்து"
-
-#, fuzzy
-#~| msgid "Paste & Insert"
-#~ msgid "Case Insensitive"
-#~ msgstr "ஒட்டு &செருகு"
 
 #, fuzzy
 #~ msgid "Move Up"
@@ -19696,242 +21111,10 @@ msgstr ""
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "அறை குழுக்களை வரிசையாக்குக. "
 
-#~ msgid "Validity..."
-#~ msgstr "முறைமைத்தகுதி..."
-
-#, fuzzy
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "தேர்வுகள் செய்து அறையில் உள்ள தகவல் சரியா என்று உறுதிப்படுத்து"
-
-#~ msgid "Validity"
-#~ msgstr "முறைமைத்தகுதி"
-
-#, fuzzy
-#~ msgid "Remove Validity"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#, fuzzy
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "இந்த அறையின் மதிப்பு தேர்வுகளை எடுக்கவும்"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "எல்லாவற்றையும் நீக்கு."
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "உரிய முறைகள் :"
-
-#~ msgid "Clear &All"
-#~ msgstr "காலி செய் &எல்லாவற்றையும்"
-
 #, fuzzy
 #~| msgid "Criteria"
 #~ msgid "&Criteria"
 #~ msgstr "நெறிமுறைகள்"
-
-#~ msgid "Allow:"
-#~ msgstr "அனுமதி:"
-
-#~ msgid "Integer"
-#~ msgstr "முழு எண்"
-
-#~ msgid "Text Length"
-#~ msgstr "உரை நீளம்"
-
-#, fuzzy
-#~ msgid "List"
-#~ msgstr "பட்டியல்:"
-
-#~ msgid "Allow blanks"
-#~ msgstr "காலியிடங்களை அனுமதி"
-
-#~ msgid "Data:"
-#~ msgstr "தரவு:"
-
-#~ msgid "Minimum:"
-#~ msgstr "குறைந்தபட்சம்:"
-
-#~ msgid "Maximum:"
-#~ msgstr "அதிகபட்சம்: "
-
-#~ msgid "Date:"
-#~ msgstr "தேதி:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "குறைந்தபட்ச தேதி: "
-
-#~ msgid "Date maximum:"
-#~ msgstr "அதிகபட்ச தேதி:"
-
-#~ msgid "Time:"
-#~ msgstr "நேரம்:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "குறைந்தபட்ச நேரம்:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "அதிகபட்ச நேரம்: "
-
-#~ msgid "Number:"
-#~ msgstr "எண்:"
-
-#, fuzzy
-#~ msgid "Entries:"
-#~ msgstr "பதிவு இல்லை"
-
-#~ msgid "&Error Alert"
-#~ msgstr "&பிழைக்கான எச்சரிக்கை"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "தவறான மதிப்பை நுழைக்கையில் பிழைச்செய்தியைக் காண்பி"
-
-#~ msgid "Action:"
-#~ msgstr "செயல்:"
-
-#, fuzzy
-#~ msgid "Warning"
-#~ msgstr "அச்சில்"
-
-#, fuzzy
-#~| msgid "Title:"
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "தலைப்பு:"
-
-#~ msgid "Message:"
-#~ msgstr "செய்தி:"
-
-#~ msgid "Input Help"
-#~ msgstr "உள்ளீட்டு உதவி"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "அறைகள் தேர்ந்தெடுக்கப்பட்டப் பிறகு உள்ளீட்டு உதவியைக் காண்பி"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "இது ஒரு முறையான மதிப்பு இல்லை."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "இது ஒரு முறையான நேரம் இல்லை !"
-
-#~ msgid "This is not a valid date."
-#~ msgstr "இது ஒரு சரியான தேதி இல்லை."
-
-#~ msgid "&Series..."
-#~ msgstr "தொடர்கள்..."
-
-#, fuzzy
-#~ msgid "Insert a series"
-#~ msgstr "தொடரை செருகு"
-
-#, fuzzy
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "தொடரை செருகு"
-
-#, fuzzy
-#~| msgid "S&pecial Character..."
-#~ msgid "Select Character"
-#~ msgstr "சிறப்பு எழுத்துகள்..."
-
-#, fuzzy
-#~| msgid "The text that will replace characters in old text"
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "இந்த உரை பழைய உரையில் உள்ள எழுத்துக்களை மாற்றும்"
-
-#~ msgid "Series"
-#~ msgstr "தொடர்கள்"
-
-#~ msgid "Insert Values"
-#~ msgstr "மதிப்புகளை சொருகு"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "செங்குத்தாக தொடர்களை செருகு, ஒன்றன் கீழ் ஒன்றாக"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "கிடைமட்டமாய் தொடர்களை செருகு, இடது புறத்தில் இருந்து வலபக்கம் வரை."
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "நேரான (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "'தொடக்கம்' முதல் 'முடிவு' வரை உருவாக்கு மற்றும் ஒவ்வொரு படிக்கும் கொடுக்கப்பட்ட "
-#~ "மதிப்பை கொடுக்கவும்.  "
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "வடிவங்கள் (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "தொடர்கள் 'ஆரம்பம்' முதல் 'முடிவு' வரை ஒவ்வொரு மடக்கு படி மதிப்பை உருவாக்கு. படி 5 "
-#~ "யை பயன்படுத்தினால் 5, 25, 125, 625 முதல் 5 மடக்கு படி 5, 25 க்கு சமம் மற்றும் அதை "
-#~ "5 மடக்கு 125 க்கு சமம், அதே எண் 5 ஆல் மடக்கும் போது 625 ஆக ஆகிறது."
-
-#~ msgid "Start value:"
-#~ msgstr "மதிப்பின் தொடக்கம் "
-
-#~ msgid "Stop value:"
-#~ msgstr "முடிவும் மதிப்பு:"
-
-#~ msgid "Step value:"
-#~ msgstr "அடி மதிப்பு:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "முடிவு மற்றும் துவக்க மதிப்பு நேர் மதிப்பாக வேண்டும்"
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "முடிவின் மதிப்பு துவக்கத்தின் மதிப்பை விட அதிகமாக இருக்க வேண்டும் அல்லது படியின் "
-#~ "மதிப்பு '1' ஐ விட அதிகமாக இருக்க வேண்டும்."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "துவக்கு, நிறுத்து அல்லது படி மதிப்புகள் பூஜ்ஜியமாக இருத்தல் கூடாது!"
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "படியின் மதிப்பு 1ல்லிருந்து வேறுபட்டிருக்க வேண்டும்"
-
-#~ msgid "Step is negative."
-#~ msgstr "தவறான வழிமுறை."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "படி மதிப்பு 0க்கு அதிகமாக இருக்க வேண்டும்; இல்லாவிடில் வரிசை தொடர் முடிவில்லாமல் "
-#~ "இருக்கும்."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "துவக்க மதிப்பு முடிவின் மதிப்பை விட அதிகமாக இருந்தால் படி சுழியாக இருக்க வேண்டும்!"
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "படியின் மதிப்பு எதிராக இருந்தால், துவக்க மதிப்பு முடிவின் ம்திப்பை விட அதிகமாக "
-#~ "இருக்க வேண்டும்"
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "சிறப்பு எழுத்துகள்..."
-
-#, fuzzy
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr "விசைப்பலகையில் இல்லாத சின்னங்களையோ எழுதுக்களையே செருகவும்"
 
 #, fuzzy
 #~ msgid "Internet address is empty"
@@ -26590,12 +27773,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "பாணி%1"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "உப தொகை எண்கள்"
 
 #, fuzzy
 #~| msgid "Remove All"
@@ -42104,9 +43281,6 @@ msgstr ""
 #~ msgid "Document's Locale Settings"
 #~ msgstr "வட்டார அளவுருக்கள்"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "உரை கோப்பினை செருகு"
-
 #, fuzzy
 #~| msgid "Value (array)"
 #~ msgid "y (array)"
@@ -42178,10 +43352,6 @@ msgstr ""
 
 #~ msgid "Remove Cell"
 #~ msgstr "அறையை நீக்கு"
-
-#, fuzzy
-#~ msgid "Paste"
-#~ msgstr "பகுப்பான் "
 
 #~ msgid "Paste & Insert"
 #~ msgstr "ஒட்டு &செருகு"
@@ -42281,11 +43451,6 @@ msgstr ""
 #~| msgid "Statistical"
 #~ msgid "Statistical Functions"
 #~ msgstr "Statistical"
-
-#, fuzzy
-#~| msgid "<h2>Related Functions</h2><ul>"
-#~ msgid "Text Functions"
-#~ msgstr "<h2>தொடர்புடைய செயல்பாடுகள்</h2><ul"
 
 #, fuzzy
 #~| msgid "Function"

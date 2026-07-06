@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sheets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2023-12-06 18:28+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -146,8 +146,13 @@ msgstr "Hlavička"
 msgid "Header1"
 msgstr "Hlavička1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "Predvolené"
@@ -179,7 +184,8 @@ msgstr "s"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Text"
@@ -251,7 +257,8 @@ msgstr "<p><b>Návratový typ:</b> %1</p>"
 msgid "Syntax"
 msgstr "Syntax"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Parametre"
@@ -885,14 +892,15 @@ msgstr "CARY(12;0) vracia 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Číslo"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Formát"
@@ -948,6 +956,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") vracia 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "Databáza"
@@ -1243,6 +1253,7 @@ msgstr "Dátum a čas"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1315,7 +1326,8 @@ msgstr "DAYS360(\"2/22/2002\"; \"4/21/2002\"; FALSE) vracia 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Čas"
@@ -4891,6 +4903,7 @@ msgid "Regular payments"
 msgstr "Pravidelné platby"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Typ"
@@ -5217,12 +5230,19 @@ msgstr "Ručné"
 msgid "Automatic"
 msgstr "Automatické"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Informácia"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Chyba"
@@ -6030,7 +6050,7 @@ msgstr ""
 msgid "Math"
 msgstr "Výpočet"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Funkcia"
@@ -6524,6 +6544,7 @@ msgid "Range"
 msgstr "Rozsah"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Kritérium"
@@ -8099,6 +8120,7 @@ msgid "Row"
 msgstr "Riadok"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Stĺpec"
@@ -12656,7 +12678,7 @@ msgid "&Go"
 msgstr "&Choď"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "&Vložiť"
@@ -12674,7 +12696,7 @@ msgid "F&ormat"
 msgstr "&Formát"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Spojiť bunky"
@@ -12753,8 +12775,8 @@ msgstr "Aktivovať"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Písmo"
@@ -13162,14 +13184,16 @@ msgstr "Medze stránky:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Horizontálne"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Vertikálne"
@@ -13196,13 +13220,15 @@ msgid "Up"
 msgstr "Hore"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Vpravo"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Vľavo"
@@ -13214,36 +13240,50 @@ msgstr "Dolu, prvý stĺpec"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Žiadne"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Suma"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Minimum"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Maximum"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Priemer"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Počet"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "PočetA"
@@ -13648,7 +13688,8 @@ msgstr "Vyčistiť výber"
 msgid "Move selected sheet to the bottom"
 msgstr "Presunúť zvolený list naspodok"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "Rozlišovať veľkosť písmen"
@@ -13849,6 +13890,7 @@ msgid "Anchor"
 msgstr "Zakotviť"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Bunka"
@@ -13868,7 +13910,7 @@ msgstr "Prepnúť ukotvovanie tvarov"
 msgid "Next Sheet"
 msgstr "Nasledujúci list"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Ďalší"
@@ -13883,7 +13925,7 @@ msgstr "Presunúť do nasledujúceho listu"
 msgid "Previous Sheet"
 msgstr "Predchádzajúci list"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Predchádzajúci"
@@ -14088,7 +14130,7 @@ msgstr ""
 "Chystáte sa odstrániť aktívny list.\n"
 "Chcete pokračovať?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Zadajte meno:"
@@ -14148,21 +14190,3120 @@ msgstr "PočetA: "
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "Zmeniť farbu textu"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "Zmeniť farbu pozadia"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "Zmeniť okraj"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Vložiť stĺpce"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Vložiť riadky"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Odstrániť stĺpce"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Odstrániť riadky"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Vloží nový riadok do tabuľky"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Odstráni riadok z tabuľky"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Vložiť nový stĺpec do tabuľky"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Odstráni vybrané stĺpce zo zošita"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Skryť stĺpce"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Skryť riadky"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Zobraziť stĺpce"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Zobraziť riadky"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Zobraziť skryté riadky v označenej časti"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "Zlúčiť označenú oblasť"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Zobraziť skryté stĺpce v označenej časti"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "Zlúčiť označenú oblasť"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Vyrovnať stĺpec"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Vyrovnať riadok"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Nastaviť rozmer označených riadkov na rovnaký"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Nastaviť rozmer označených stĺpcov na rovnaký"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Upraviť stĺpec"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Upraviť riadok"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Nastaviť riadok a stĺpec"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "Prispôsobiť rozmer riadku/stĺpca podľa obsahu"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "Prispôsobiť rozmer riadku/stĺpca podľa obsahu"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "Prispôsobiť rozmer riadku/stĺpca podľa obsahu"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Zobraziť stĺpce..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Zobraziť riadky..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Zobraziť skryté stĺpce"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Zobraziť skryté riadky"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Stĺpec: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Riadok: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Zmeniť veľkosť stĺpca..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Zmeniť veľkosť riadku..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Zmeniť výšku riadku"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Zmeniť šírku stĺpca"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "Zarovnať vľavo"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Obsah bunky zarovnať vľavo"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "Zmeniť horizontálne zarovnanie"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "Zarovnať vpravo"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Obsah bunky zarovnať vpravo"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "Zarovnať do stredu"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Obsah bunky zarovnať do stredu"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "Stred"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "Zarovnať hore"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Obsah bunky zarovnať hore"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Vrch"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "Zmeniť vertikálne zarovnanie"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "Zarovnať dole"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Obsah bunky zarovnať dole"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Spodok"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "Zarovnať na stred"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Zarovnať obsah bunky na stred"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "Do stredu"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Zmeniť uhol..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Zmeniť uhol vytlačenia obsahu bunky"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Uhol"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "Zmeniť uhol"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Automatický filter"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Pridať automatický filter k rozsahu buniek"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "Automatický filter"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Použiť preddefinovaný štýl na označené bunky"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Automatický formát..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Nedá sa nájsť XML súbor tabuľkového štýlu '%1'."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Chyba spracovania v XML súbore tabuľkového štýlu %1."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "Automatický formát"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Automatická suma"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Vložiť funkciu 'sum'"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Automatická suma"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Okraj vľavo"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Nastaviť ľavý okraj pre označenú oblasť"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Okraj vpravo"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Nastaviť pravý okraj pre označenú oblasť"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Okraj hore"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Nastaviť horný okraj pre označenú oblasť"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Okraj dole"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Nastaviť spodný okraj pre označenú oblasť"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Všetky okraje"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Nastaviť v označenej oblasti okraj okolo všetkých buniek"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Všetky"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Žiadne okraje"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Odstrániť všetky okraje v označenej oblasti"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Obrysy okraja"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Nastaviť okraj okolo označenej oblasti"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Obrys"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Farba okraja"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Vybrať novú farbu okraja"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "Zmeniť farbu okraja"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Vložiť bunky..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Vložiť prázdnu bunku do tabuľky"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Odstrániť bunky..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Odstrániť bunky z tabuľky"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Vyčistiť všetko"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Zmazať obsah a formát aktuálnej bunky"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Vymazať obsah"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Odstrániť obsah aktuálnej bunky"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "Vymazať text"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "Odstrániť"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Poznámka..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Upraviť komentár pre túto bunku"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Vyčistiť komentár"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Odstrániť komentár tejto bunky"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Odstrániť komentár"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "Odstrániť komentár"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "Pridať komentár"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Podmienené štýly..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Nastaviť formát bunky podľa určitých podmienok"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Podmienené štýly"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Odstrániť podmienené formátovanie bunky"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Odstrániť podmienené formátovanie bunky"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "Odstrániť podmienené formátovanie"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "Pridať podmienené formátovanie"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Konsolidovať..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Vytvoriť oblasť sumárnych dát zo skupiny podobných oblastí"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "Konsolidovať"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Kopírovať objekt bunky do schránky"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Presunúť objekt bunky do schránky"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "Z &textového súboru..."
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Vložiť dáta z textového súboru na aktuálnu pozíciu kurzora/označenú časť"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Textový súbor"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "Importovať dátový súbor CSV"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "Dátové súbory CSV (*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Nepodarilo sa otvoriť vstupný súbor."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Inserting Text File"
+msgid "Inserting Text File"
+msgstr "Vkladám textový súbor"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "Vkladám textový súbor"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Vkladám zo schránky"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "Vložiť CSV dáta zo schránky na aktuálnu pozíciu kurzora/označenú časť"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Schránka"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "Schránka neobsahuje žiadne dáta."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "Schránka obsahuje použiteľné dáta."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Vkladám zo schránky"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "Vkladám zo schránky"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "&Text do stĺpcov..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Roztiahnuť obsah buniek do viacerých stĺpcov"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Text do stĺpcov"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "Text do stĺpcov"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "Vytvoriť vlastné zoznamy pre triedenie alebo automatické vypĺňanie"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Vlastné zoznamy..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Pridať pomenovanú oblasť"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Zadajte meno oblasti:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Zmeniť uhol"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Uhol:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "Automatický formát"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Vyberte štýl, ktorý sa má použiť:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Vybrať znak"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Vložiť zvolený znak v texte"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Poznámka k bunke"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<nič>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "rovné"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "väčšie ako"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "menšie ako"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "rovné alebo väčšie ako"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "rovné alebo menšie ako"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "medzi"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "mimo rozsah"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "rozdielne od"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Prvá podmienka"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Druhá podmienka"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Tretia podmienka"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Bunka je"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Štýl bunky"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "rozdielne od"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "Ak je prvá hodnota číslo, druhá musí byť tiež číslo."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr "Ak je prvá hodnota reťazec, druhá musí byť tiež reťazec."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Konsolidovať"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Súčin"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Štandardná odchýlka"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Rozptyl"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Musíte definovať najmenej jeden zdrojový rozsah."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 nie je platný rozsh buniek."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Rozsah\n"
+"%1\n"
+"je príliš malý"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Rozsah\n"
+"%1\n"
+"je príliš veľký"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "Zdrojový obsah sa prekrýva s cieľovým obsahom."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Rozsah\n"
+"%1\n"
+"je zle formulovaný"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Vložiť dáta z databázy"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Typ:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Meno databázy:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Hostiteľ:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Port:\n"
+"(ak je potrebné)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Užívateľské meno:\n"
+"(ak je potrebné)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Heslo:\n"
+"(ak je potrebné)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Výber tabuľky:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Tabuľky"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Výber stĺpca:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Tabuľka"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Stĺpce"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Platné sú všetky údaje (AND)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Platný je niektorý z údajov (OR)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "rovná sa"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "nerovná sa"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "v"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "nie v"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "podobný"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "väčší"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "menší"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "väčší alebo rovný"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "menší alebo rovný"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Triediť podľa"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "Vzostupne"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "Zostupne"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Odlišný"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Voľby pre dotaz"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL výber:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Vložiť do oblasti"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Začať v bunke"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Výsledok"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Tu nie je možné špecifikovať tabuľku."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Je potrebné špecifikovať platnú oblasť."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Je potrebné špecifikovať platnú bunku."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Vykonávanie dotazu zlyhalo."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Týmto dotazom ste nezískali žiadne výsledky."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "Vložiť dáta z databázy"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Port musí byť číslo"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Pripájanie k databáze..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Pripojený. Získavanie informácií o tabuľkách..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "Táto databáza neobsahuje žiadne tabuľky"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Nepodarilo sa zaviesť ovládač"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Získavanie meta dát tabuliek..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Musíte označiť najmenej jednu tabuľku."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Musíte označiť najmenej jeden stĺpec."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' or '?' nie sú platné znaky v SQL. Správne náhrady sú '%' or '_'. Chcete "
+"ich nahradiť?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "Nahradiť"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Nastavenia dokumentu"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, kde-format
+msgid "Calculation"
+msgstr "Výpočet"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr "Lokalizácia"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr "Rozlišovať veľkosť písmen"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, kde-format
+msgid "Precision as shown"
+msgstr "Presnosť ako uvedená"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr "Kritériá hľadania musia platiť pre celú bunku"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, kde-format
+msgid "Automatic find labels"
+msgstr "Automaticky nájsť popisy"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr "Porovnanie reťazcov:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Regular Expressions"
+msgstr "Regulárne výrazy"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr "Divoké karty"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr "Nulový rok:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Použiť systémové regionálne nastavenia"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+msgid "Language: %1 (%2)"
+msgstr "Jazyk: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Štandardný formát čísla: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Dlhý formát dátumu: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Krátky formát dátumu: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Formát času: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Formát meny: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Viac možností"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Prehľadať celý list"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Prehľadať:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Hodnoty buniek"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Poznámky"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Smer hľadania:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Naprieč a potom dole"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Dole a potom naprieč"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Menej možností"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "Funkcia"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Vložiť funkciu"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Pomoc"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "Táto funkcia nemá parametre."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Popis nie je dostupný."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Hľadanie cieľa"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Choď na bunku"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Zadajte bunku:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Vložiť"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Presunúť doprava"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Presunúť dole"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Vložiť riadky"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Vložiť stĺpce"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Vložiť bunky"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Presunúť doľava"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Presunúť hore"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Odstrániť riadky"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Odstrániť stĺpce"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Odstrániť bunky"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Vložiť odkaz"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Internet"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Odkaz na internetovú adresu"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Text na zobrazenie:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Internetová adresa:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "E-mail"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "Odkaz na e-mailovú adresu"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "E-mailová adresa:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Predmet:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Súbor"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Odkza na súbor"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Umiestnenie súboru:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Nedávno použitý súbor:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Žiadné položky"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Odkaz na bunku"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Bunka alebo pomenovaná oblasť"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Vlastné zoznamy"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "Zmeniť veľkosť písmen"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Zoznam:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Položka:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Pridať"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Nový"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Zmeniť..."
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Kopírovať"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Naozaj chcete odstrániť tento zoznam?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Odstrániť zoznam"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Vstupná oblasť nie je prázdna.\n"
+"Chcete pokračovať?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Pomenované oblasti"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Oblasť: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Bunky:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "List:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Meno oblasti:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Odstrániť"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Otvoriť/Uložiť"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Naozaj chcete odstrániť túto pomenovanú oblasť?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Odstrániť pomenovanú oblasť"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Neplatný odkaz na bunku."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Vlepiť vložené bunky"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, kde-format
+msgid "Select Source"
+msgstr "Vyberte zdroj"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr "Okno nastavenia tabuľky ústredných bodov"
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, kde-format
+msgid "Add Filter"
+msgstr "Pridať filter"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, kde-format
+msgid "Pivot Options"
+msgstr "Voľby ústredného bodu"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Zmeniť veľkosť riadku"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Výška:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Zmeniť veľkosť stĺpca"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Šírka:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Série"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "Vložiť série"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Vložiť hodnoty"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Vložiť sériu vertikálne pod seba"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Vložiť sériu horizontálne vedľa seba zľava doprava"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Lineárne (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Generovať série od 'začiatku' do 'konca' a v každom kroku pridať zadanú "
+"hodnotu. Tým sa vytvorí séria, kde je každá hodnota o 'krok' väčšia ako "
+"predchádzajúca."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Geometrické (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Generovať série od 'začiatku' do 'konca' a v každom kroku vynásobiť hodnotu "
+"zadanou hodnotou. Ak použijete krok 5, vytvorí sa zoznam 5, 25, 125, 625, "
+"pretože 5 krát 5 (krok) je 25 a to krát 5 je 125, atď."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Počiatočná hodnota:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Koncová hodnotu:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Krok:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Počiatočná a koncová hodnota musia byť kladné čísla."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Počiatočná hodnota musí byť väčšia ako koncová, alebo krok musí byť menší "
+"ako '1'."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "Žiadna z Start, Stop alebo Step hodnôt nemôže byť nula."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "Hodnota kroku musí byť rôzna od 1"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "Krok je záporný."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr "Hodnota kroku musí byť väčšia ako 0. Inak sú lineárne série nekonečné."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Ak je počiatočná hodnota väčšia ako koncová, krok musí byť menší ako nula."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr "Ak je krok záporný, počiatočná hodnota musí byť väčšia ako koncová."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Vyberte skryté riadky, ktoré sa majú zobraziť:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Vyberte skryté stĺpce, ktoré sa majú zobraziť:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Stĺpec %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Riadok %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "&Prvý stĺpec obsahuje hlavičky riadkov"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "&Prvý riadok obsahuje hlavičky stĺpcov"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Triediť"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Nenozlišovať veľkosť písmen"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Vložiť špeciálne"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Správca štýlov"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Štýl"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Všetky štýly"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Vlastné štýly"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Hierarchické"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Nový..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "Z&meniť..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Vymazať..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "štýl%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Medzisúčty"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Odstrániť všetko"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Stĺpec '%1'"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Musíte označiť najmenej jeden stĺpec pre pridanie medzisúčtov."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Platnosť"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Vyčistiť &všetko"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Povolené:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Celé číslo"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Dĺžka textu"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Zoznam"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Povoliť prázdne položky"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Dáta:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Minimum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Maximum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Dátum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Minimálny dátum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Maximálny dátum:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Čas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Minimálny čas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Maximálny čas:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Číslo:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Položky:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "Upozornenie na &chybu"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "Zobraziť chybovú správu pri zadaní neplatnej hodnoty"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Akcia:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Zastaviť"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Upozornenie"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Titul:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Správa:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Pomocník vstupu"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "Zobraziť pomocníka vstupu ak je bunka označená"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Toto nie je platná hodnota."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Toto nie je platný čas."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Toto nie je platný dátum."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Nastavenia dokumentu"
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "Zobraziť dialóg vlastností dokumentu"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Upraviť zvýraznenú bunku"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Upraviť bunku"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "Zmeniť ochranu"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Zmeniť ochranu odkazu na textovom kurzore"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "&Dolu"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "&Vľavo"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "V&pravo"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "Výber výplne"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "Nahradiť"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Vybrať písmo..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Nastaviť formátovanie bunky"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "Zmeniť písmo"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Vybrať veľkosť písma"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Nastaviť formátovanie bunky"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Veľkosť písma"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Nastaviť farbu textu"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Farba textu"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Funkcia..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Vložiť matematický výraz"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Výber vzorca"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Vložiť funkciu"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Iné..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "Hľadanie &cieľa..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Opakovaný výpočet pre nájdenie špecifickej hodnoty"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Neplatný odkaz na bunku."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Neplatná cieľová hodnota."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Zdrojová bunka musí obsahovať numerickú hodnotu."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Cieľová bunka musí obsahovať vzorec."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Hľadanie cieľa s bunkou %1 nájdené riešenie:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Hľadanie cieľa s bunkou %1 nebolo nenájdené riešenie."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Prejsť na bunku..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Presunúť do konkrétnej bunky"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Choď na"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Toto nie je platný čas."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Znížiť odsadenie"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Zvýšiť odsadenie"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Znížiť odsadenie"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Zvýšiť odsadenie"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "Zvýšiť odsadenie"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "Znížiť odsadenie"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "Z &databázy..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Vložiť dáta z SQL databázy"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Nie je dostupný žiadny ovládač databázy. Potrebujete nainštalovať potrebné "
+"Qt databázové ovládače."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Série..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Vložiť série"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "Vložiť série"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "Š&peciálny znak..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+"Vložiť jeden alebo viac symbolov alebo písmen, ktoré nie sú na klávesnici"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Spustiť riešiteľa..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "&Odkaz..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Vložiť internetový odkaz"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Odkaz"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Odstrániť odkaz"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Odstrániť odkaz"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "Odstrániť odkaz"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Nastaviť odkaz"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Zoznam výberu..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Zlúčiť bunky horizontálne"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Zlúčiť bunky vertikálne"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Zlúčiť označenú oblasť horizontálne"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Zlúčiť označenú oblasť vertikálne"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "Zlúčiť označenú oblasť"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Odlúčiť bunky"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "Vrátiť späť zlúčenie označenej oblasti"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Meno oblasti..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Nastaviť meno pre oblasť tabuľky"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"Pomenovaná oblasť  '%1' už existuje.\n"
+"Chcete ju nahradiť?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "Nahradiť pomenovanú oblasť"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "Nahradiť pomenovanú oblasť"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Upraviť alebo vybrať pomenovanú oblasť"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Pomenované oblasti..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Zalomiť pred riadkom"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Nastaviť manuálne zalomenie strany pred riadkom"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Zalomenie riadku"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Zalomiť pred stĺpcom"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Nastaviť manuálne zalomenie strany pred stĺpcom"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Zalomenie stĺpca"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Vložiť obsah schránky na pozíciu kurzora"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Vložiť špeciálne..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Vložiť obsah schránky so špeciálnymi voľbami"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Vložiť do nových"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Vloží bunku zo schránky do tabuľky"
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "&Pivot Tables..."
+msgstr "Kontingenčné tabuľky..."
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "Create Pivot Tables"
+msgstr "Vytvoriť kontingenčné tabuľky"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Musíte označiť viacero buniek."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Vyberie všetky bunky v aktuálnom liste"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "Zobraziť QTableView..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Triediť..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Triediť skupinu buniek"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Triediť &vzostupne"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Triediť skupinu buniek vzostupne (od prvej k poslednej)"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "Triediť &zostupne"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "Triediť skupinu buniek zostupne (od poslednej k prvej)"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "Triediť dáta"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Chcete kontrolovať pravopis v nasledujúcom liste?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Presunúť do nasledujúceho listu"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Kontrola pravopisu"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Formát bunky..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Nastaviť formátovanie bunky"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Tučné"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Kurzíva"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Podčiarknuté"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Prečiarknuté"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Zalomiť text bunky do viacerých textových riadkov"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Zalomiť text"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Zalomiť text"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "Zalomiť text"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Vytlačiť obsah bunky vertikálne"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Vertikálny text"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "Vertikálny text"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "Formát čísel"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Nastaviť formátovanie bunky"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Prvé číslo"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "Vedecký formát"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "Nastaviť formátovanie bunky ako pri percentách"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Vedecký"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Vedecký"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Percentuálny formát"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Nastaviť formátovanie bunky ako pri percentách"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Percentá"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "Formát percentá"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Peňažný formát"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Nastaviť formátovanie bunky ako pri vašej lokálnej mene"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Peniaze"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "Peňažný formát"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "Formát dátumu"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Nastaviť formátovanie bunky"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Formát"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Nastaviť formátovanie bunky"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "Formát času"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Formát"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Zväčšiť veľkosť písma"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Zmenšiť veľkosť písma"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Zvýšiť presnosť"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Zvýšiť zobrazenú decimálnu presnosť"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Znížiť presnosť"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Znížiť zobrazenú decimálnu presnosť"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "Zvýšiť presnosť"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "Znížiť presnosť"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Vrátiť na štandardný formát"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Štýl tabuľky"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Farba pozadia"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Nastaviť farbu pozadia"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Vytvoriť štýl podľa bunky..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Vytvoriť nový štýl podľa aktuálne označenej bunky"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Štýl z bunky"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Vytvoriť štýl podľa bunky"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Meno štýlu nemôže byť prázdne."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Štýl s týmto menom už existuje."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Úprava a organizácia štýlov buniek"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Správca štýlov..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Použiť preddefinovaný štýl na označené bunky"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&Medzisúčty..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Vytvoriť rôzne typy podsúčtov do zoznamu alebo databázy."
+
+#: ui/actions/Subtotals.cpp:118
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Medzisúčty"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Veľké písmená"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "Malé písmená"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Zmeniť prvé písmeno na veľké"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "Zmeniť na veľké písmená"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "Prepnúť na malé písmená"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "Zmeniť prvé písmeno na veľké"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Veľké písmená"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Malé písmená"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Zmeniť prvé písmeno na veľké"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Zmeniť všetky písmená na veľké"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Zmeniť všetky písmená na malé"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "Zmeniť prvé písmeno na veľké"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "Zmeniť veľkosť písmen"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Nastavenie testov pre overenie platnosti dát bunky"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Platnosť..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Odstrániť testy platnosti použité na túto bunku"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Odstrániť platnosť"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "Odstrániť kontrolu platnosti"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "Pridať kontrolu platnosti"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14409,11 +17550,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "Odstrániť bunky"
 
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "Odstrániť"
-
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
 msgid "Merge Cells Horizontally"
@@ -14630,12 +17766,6 @@ msgstr "Rôzne (bez zmeny)"
 msgid "Roman"
 msgstr "Rímske"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Kurzíva"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14657,12 +17787,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Normálna"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Tučné"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14675,12 +17799,6 @@ msgstr "Farba:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "Ak je toto zaškrtnuté, text aktuálnej bunky bude podčiarknutý."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Podčiarknuté"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14827,11 +17945,6 @@ msgstr ""
 "nastaveniach -> Vzhľad a témy -> Miestne nastavenia -> Krajina/región a "
 "jazyk -> Čísla. Čísla sú predvolene zarovnané vpravo."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Percentá"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14849,11 +17962,6 @@ msgstr ""
 "%. Prepnutie naspäť na všeobecný formát vráti naspäť hodnotu 12.\n"
 "Môžete použiť ikonu percentá na lište Formát."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Peniaze"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14870,11 +17978,6 @@ msgstr ""
 "zobrazený a použije sa presnosť definovaná v Systémových nastaveniach.\n"
 "Môžete použiť aj ikonu meny v paneli Formát na nastavenie formátovania "
 "buniek aby vyzerali ako vaša súčasná mena."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Vedecký"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15123,11 +18226,6 @@ msgstr "Tri číslice 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Štýl"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15138,11 +18236,6 @@ msgstr "Názov:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Zdediť štýl:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Štýl s týmto menom už existuje."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15193,12 +18286,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Štandardne"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "Stred"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15237,24 +18324,6 @@ msgstr ""
 "<b>Hore</b> znamená, že obsah bude zobrazený navrchu bunky.\n"
 "<b>Stred</b> znamená, že obsah bude zobrazený vertikálne v strede bunky.\n"
 "<b>Dolu</b> znamená, že obsah bude zobrazený dolu v bunke.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Vrch"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "Do stredu"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Spodok"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15443,20 +18512,10 @@ msgstr "Použiť"
 msgid "Apply changes"
 msgstr "Použiť zmeny"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Zrušiť"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Zahodiť zmeny"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Všetky"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15555,355 +18614,11 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[hh]:mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Funkcia..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "Vložiť matematický výraz"
-
-#~ msgid "From &Database..."
-#~ msgstr "Z &databázy..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Vložiť dáta z SQL databázy"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Výber vzorca"
-
-#~ msgid "Insert a function"
-#~ msgstr "Vložiť funkciu"
-
-#~ msgid "Others..."
-#~ msgstr "Iné..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Upraviť bunku"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Upraviť zvýraznenú bunku"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Spustiť riešiteľa..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "Zobraziť QTableView..."
-
 #~ msgid "Permute reference fixation"
 #~ msgstr "Zmeniť ochranu odkazu"
 
-#~ msgid "Permute fixation"
-#~ msgstr "Zmeniť ochranu"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Zmeniť ochranu odkazu na textovom kurzore"
-
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Nie je dostupný žiadny ovládač databázy. Potrebujete nainštalovať "
-#~ "potrebné Qt databázové ovládače."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Vložiť dáta z databázy"
-
-#~ msgid "Type:"
-#~ msgstr "Typ:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Užívateľské meno:\n"
-#~ "(ak je potrebné)"
-
-#~ msgid "Host:"
-#~ msgstr "Hostiteľ:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Port:\n"
-#~ "(ak je potrebné)"
-
-#~ msgid "Database name: "
-#~ msgstr "Meno databázy:"
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Heslo:\n"
-#~ "(ak je potrebné)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Výber tabuľky:"
-
-#~ msgid "Tables"
-#~ msgstr "Tabuľky"
-
-#~ msgid "Select columns:"
-#~ msgstr "Výber stĺpca:"
-
-#~ msgid "Table"
-#~ msgstr "Tabuľka"
-
-#~ msgid "Columns"
-#~ msgstr "Stĺpce"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Platné sú všetky údaje (AND)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Platný je niektorý z údajov (OR)"
-
-#~ msgid "equals"
-#~ msgstr "rovná sa"
-
-#~ msgid "not equal"
-#~ msgstr "nerovná sa"
-
-#~ msgid "in"
-#~ msgstr "v"
-
-#~ msgid "not in"
-#~ msgstr "nie v"
-
-#~ msgid "like"
-#~ msgstr "podobný"
-
-#~ msgid "greater"
-#~ msgstr "väčší"
-
-#~ msgid "lesser"
-#~ msgstr "menší"
-
-#~ msgid "greater or equal"
-#~ msgstr "väčší alebo rovný"
-
-#~ msgid "less or equal"
-#~ msgstr "menší alebo rovný"
-
-#~ msgid "Sorted by"
-#~ msgstr "Triediť podľa"
-
-#~ msgid "Ascending"
-#~ msgstr "Vzostupne"
-
-#~ msgid "Descending"
-#~ msgstr "Zostupne"
-
-#~ msgid "Distinct"
-#~ msgstr "Odlišný"
-
-#~ msgid "Query Options"
-#~ msgstr "Voľby pre dotaz"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL výber:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Vložiť do oblasti"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Začať v bunke"
-
-#~ msgid "Result"
-#~ msgstr "Výsledok"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Tu nie je možné špecifikovať tabuľku."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Je potrebné špecifikovať platnú oblasť."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Je potrebné špecifikovať platnú bunku."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "Nemáte dovolené meniť dáta v databáze."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Vykonávanie dotazu zlyhalo."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Týmto dotazom ste nezískali žiadne výsledky."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "Vložiť dáta z databázy"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Port musí byť číslo"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Pripájanie k databáze..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Pripojený. Získavanie informácií o tabuľkách..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "Táto databáza neobsahuje žiadne tabuľky"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Nepodarilo sa zaviesť ovládač"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Získavanie meta dát tabuliek..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Musíte označiť najmenej jednu tabuľku."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Musíte označiť najmenej jeden stĺpec."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' or '?' nie sú platné znaky v SQL. Správne náhrady sú '%' or '_'. "
-#~ "Chcete ich nahradiť?"
-
-#~ msgid "Insert function"
-#~ msgstr "Vložiť funkciu"
-
-#~ msgid "Help"
-#~ msgstr "Pomoc"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "Táto funkcia nemá parametre."
-
-#~ msgid "Description is not available."
-#~ msgstr "Popis nie je dostupný."
-
-#~ msgid "Document Settings..."
-#~ msgstr "Nastavenia dokumentu"
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "Zobraziť dialóg vlastností dokumentu"
-
-#~ msgid "Document Settings"
-#~ msgstr "Nastavenia dokumentu"
-
-#~ msgid "Calculation"
-#~ msgstr "Výpočet"
-
-#~ msgid "Locale"
-#~ msgstr "Lokalizácia"
-
-#~ msgid "Case sensitive"
-#~ msgstr "Rozlišovať veľkosť písmen"
-
-#~ msgid "Precision as shown"
-#~ msgstr "Presnosť ako uvedená"
-
-#~ msgid "Search criteria must apply to whole cell"
-#~ msgstr "Kritériá hľadania musia platiť pre celú bunku"
-
-#~ msgid "Automatic find labels"
-#~ msgstr "Automaticky nájsť popisy"
-
-#~ msgid "String comparison:"
-#~ msgstr "Porovnanie reťazcov:"
-
-#~ msgid "Regular Expressions"
-#~ msgstr "Regulárne výrazy"
-
-#~ msgid "Wildcards"
-#~ msgstr "Divoké karty"
-
-#~ msgid "Null Year:"
-#~ msgstr "Nulový rok:"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Použiť systémové regionálne nastavenia"
-
-#, fuzzy
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Jazyk: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Štandardný formát čísla: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Dlhý formát dátumu: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Krátky formát dátumu: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Formát času: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Formát meny: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Vlastné zoznamy..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "Vytvoriť vlastné zoznamy pre triedenie alebo automatické vypĺňanie"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Vyberie všetky bunky v aktuálnom liste"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Vlastné zoznamy"
-
-#~ msgid "List:"
-#~ msgstr "Zoznam:"
-
-#~ msgid "Entry:"
-#~ msgstr "Položka:"
-
-#~ msgid "Add"
-#~ msgstr "Pridať"
-
-#~ msgid "New"
-#~ msgstr "Nový"
-
-#~ msgid "Remove"
-#~ msgstr "Odstrániť"
-
-#~ msgid "Modify"
-#~ msgstr "Zmeniť..."
-
-#~ msgid "Copy"
-#~ msgstr "Kopírovať"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Naozaj chcete odstrániť tento zoznam?"
-
-#~ msgid "Remove List"
-#~ msgstr "Odstrániť zoznam"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Vstupná oblasť nie je prázdna.\n"
-#~ "Chcete pokračovať?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "Hľadanie &cieľa..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Opakovaný výpočet pre nájdenie špecifickej hodnoty"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Hľadanie cieľa"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Neplatný odkaz na bunku."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Neplatná cieľová hodnota."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Zdrojová bunka musí obsahovať numerickú hodnotu."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Cieľová bunka musí obsahovať vzorec."
 
 #~ msgid "Starting..."
 #~ msgstr "Štartovanie..."
@@ -15913,12 +18628,6 @@ msgstr "Odkaz %1 aktivovaný"
 
 #~ msgid "New value:"
 #~ msgstr "Nová hodnota:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Hľadanie cieľa s bunkou %1 nájdené riešenie:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Hľadanie cieľa s bunkou %1 nebolo nenájdené riešenie."
 
 #~ msgid "Set cell:"
 #~ msgstr "Nastaviť bunku:"
@@ -15934,82 +18643,6 @@ msgstr "Odkaz %1 aktivovaný"
 
 #~ msgid "Current value:"
 #~ msgstr "Súčasná hodnota:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "Nahradiť"
-
-#~ msgid "Selection List..."
-#~ msgstr "Zoznam výberu..."
-
-#~ msgid "More Options"
-#~ msgstr "Viac možností"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Prehľadať celý list"
-
-#~ msgid "Search in:"
-#~ msgstr "Prehľadať:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Hodnoty buniek"
-
-#~ msgid "Comments"
-#~ msgstr "Poznámky"
-
-#~ msgid "Search direction:"
-#~ msgstr "Smer hľadania:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Naprieč a potom dole"
-
-#~ msgid "Down then Across"
-#~ msgstr "Dole a potom naprieč"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Menej možností"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Formát bunky..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Nastaviť formátovanie bunky"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Presunúť objekt bunky do schránky"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Kopírovať objekt bunky do schránky"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Vložiť obsah schránky na pozíciu kurzora"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Vložiť špeciálne..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Vložiť obsah schránky so špeciálnymi voľbami"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Vložiť do nových"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Vloží bunku zo schránky do tabuľky"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Vlepiť vložené bunky"
-
-#~ msgid "Insert"
-#~ msgstr "Vložiť"
-
-#~ msgid "Move towards right"
-#~ msgstr "Presunúť doprava"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Presunúť dole"
-
-#~ msgid "Special Paste"
-#~ msgstr "Vložiť špeciálne"
 
 #~ msgid "Content"
 #~ msgstr "Obsah"
@@ -16041,31 +18674,12 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Division"
 #~ msgstr "Podiel"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Kontrola pravopisu"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Chcete kontrolovať pravopis v nasledujúcom liste?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "Opraviť chybne napísané slová"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Automatický formát..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Nastaviť formátovanie listu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "Automatický formát"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Štýl tabuľky"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Vyberte štýl, ktorý sa má použiť:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Nedá sa nájsť obrázok %1."
@@ -16073,88 +18687,8 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Could not load image %1."
 #~ msgstr "Nedá sa načítať obrázok %1."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Nedá sa nájsť XML súbor tabuľkového štýlu '%1'."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Chyba spracovania v XML súbore tabuľkového štýlu %1."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Automatický filter"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Pridať automatický filter k rozsahu buniek"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "Automatický filter"
-
-#~ msgid "Clear All"
-#~ msgstr "Vyčistiť všetko"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Zmazať obsah a formát aktuálnej bunky"
-
 #~ msgid "Contents"
 #~ msgstr "Obsah"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Vymazať obsah"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Odstrániť obsah aktuálnej bunky"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "Vymazať text"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "Odstrániť podmienené formátovanie"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "Pridať podmienené formátovanie"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Vybrať novú farbu okraja"
-
-#~ msgid "Border Color"
-#~ msgstr "Farba okraja"
-
-#~ msgid "Set the background color"
-#~ msgstr "Nastaviť farbu pozadia"
-
-#~ msgid "Background Color"
-#~ msgstr "Farba pozadia"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Podmienené štýly..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Nastaviť formát bunky podľa určitých podmienok"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Podmienené štýly"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Odstrániť podmienené formátovanie bunky"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Odstrániť podmienené formátovanie bunky"
-
-#~ msgid "&Pivot Tables..."
-#~ msgstr "Kontingenčné tabuľky..."
-
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Vytvoriť kontingenčné tabuľky"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Musíte označiť viacero buniek."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "Formát čísel"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16163,78 +18697,6 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "Percentuálny formát"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "Formát času"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "Formát dátumu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "Vedecký formát"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "Zmeniť farbu okraja"
-
-#~ msgid "<none>"
-#~ msgstr "<nič>"
-
-#~ msgid "equal to"
-#~ msgstr "rovné"
-
-#~ msgid "greater than"
-#~ msgstr "väčšie ako"
-
-#~ msgid "less than"
-#~ msgstr "menšie ako"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "rovné alebo väčšie ako"
-
-#~ msgid "equal to or less than"
-#~ msgstr "rovné alebo menšie ako"
-
-#~ msgid "between"
-#~ msgstr "medzi"
-
-#~ msgid "outside range"
-#~ msgstr "mimo rozsah"
-
-#~ msgid "different to"
-#~ msgstr "rozdielne od"
-
-#~ msgid "First Condition"
-#~ msgstr "Prvá podmienka"
-
-#~ msgid "Second Condition"
-#~ msgstr "Druhá podmienka"
-
-#~ msgid "Third Condition"
-#~ msgstr "Tretia podmienka"
-
-#~ msgid "Cell is"
-#~ msgstr "Bunka je"
-
-#~ msgid "Cell style"
-#~ msgstr "Štýl bunky"
-
-#~ msgid "different from"
-#~ msgstr "rozdielne od"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr "Ak je prvá hodnota číslo, druhá musí byť tiež číslo."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr "Ak je prvá hodnota reťazec, druhá musí byť tiež reťazec."
-
-#~ msgid "Select Source"
-#~ msgstr "Vyberte zdroj"
 
 #~ msgid "Current Selection"
 #~ msgstr "Aktuálny výber"
@@ -16265,12 +18727,6 @@ msgstr "Odkaz %1 aktivovaný"
 
 #~ msgid "!="
 #~ msgstr "!="
-
-#~ msgid "Pivot Table Configuration Window"
-#~ msgstr "Okno nastavenia tabuľky ústredných bodov"
-
-#~ msgid "Add Filter"
-#~ msgstr "Pridať filter"
 
 #~ msgid "Drag from Labels and drop in the desired field"
 #~ msgstr "Pretiahnite zo štítkov a pustite v žiadanom poli"
@@ -16306,9 +18762,6 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Rows"
 #~ msgstr "Riadky"
 
-#~ msgid "Pivot Options"
-#~ msgstr "Voľby ústredného bodu"
-
 #~ msgid "Value Type"
 #~ msgstr "Typ hodnoty"
 
@@ -16321,153 +18774,17 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Manual Selection"
 #~ msgstr "Ručný výber"
 
-#~ msgid "Product"
-#~ msgstr "Súčin"
-
 #~ msgid "Sort By"
 #~ msgstr "Triediť podľa"
-
-#~ msgid "Select Font..."
-#~ msgstr "Vybrať písmo..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Vybrať veľkosť písma"
-
-#~ msgid "Font Size"
-#~ msgstr "Veľkosť písma"
-
-#~ msgid "Text Color"
-#~ msgstr "Farba textu"
-
-#~ msgid "Set the text color"
-#~ msgstr "Nastaviť farbu textu"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "Zmeniť písmo"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Správca štýlov..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Úprava a organizácia štýlov buniek"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Použiť preddefinovaný štýl na označené bunky"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Vytvoriť štýl podľa bunky..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "Štýl z bunky"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "Vytvoriť nový štýl podľa aktuálne označenej bunky"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Vytvoriť štýl podľa bunky"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Meno štýlu nemôže byť prázdne."
-
-#~ msgid "Style Manager"
-#~ msgstr "Správca štýlov"
-
-#~ msgid "All Styles"
-#~ msgstr "Všetky štýly"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Vlastné štýly"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Hierarchické"
-
-#~ msgid "&New..."
-#~ msgstr "&Nový..."
-
-#~ msgid "&Modify..."
-#~ msgstr "Z&meniť..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Vymazať..."
-
-#~ msgid "style%1"
-#~ msgstr "štýl%1"
 
 #~ msgid "Cells..."
 #~ msgstr "Bunky..."
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Vložiť bunky..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Vložiť prázdnu bunku do tabuľky"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Odstrániť bunky..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Odstrániť bunky z tabuľky"
-
 #~ msgid "Delete Cells..."
 #~ msgstr "Vymazať bunky..."
 
-#~ msgid "Insert rows"
-#~ msgstr "Vložiť riadky"
-
-#~ msgid "Insert columns"
-#~ msgstr "Vložiť stĺpce"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Vložiť bunky"
-
-#~ msgid "Move towards left"
-#~ msgstr "Presunúť doľava"
-
-#~ msgid "Move towards top"
-#~ msgstr "Presunúť hore"
-
-#~ msgid "Remove rows"
-#~ msgstr "Odstrániť riadky"
-
-#~ msgid "Remove columns"
-#~ msgstr "Odstrániť stĺpce"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Odstrániť bunky"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&Medzisúčty..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Vytvoriť rôzne typy podsúčtov do zoznamu alebo databázy."
-
-#~ msgid "Subtotals"
-#~ msgstr "Medzisúčty"
-
-#~ msgid "Remove All"
-#~ msgstr "Odstrániť všetko"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Musíte označiť najmenej jeden stĺpec pre pridanie medzisúčtov."
-
 #~ msgid "Grand Total"
 #~ msgstr "Celkový súčet"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Stĺpec '%1'"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "&Zameniť aktuálne medzisúčty"
@@ -16493,45 +18810,6 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Pridať medzisúčet k:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Prejsť na bunku..."
-
-#~ msgid "Goto"
-#~ msgstr "Choď na"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Presunúť do konkrétnej bunky"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Zalomiť pred stĺpcom"
-
-#~ msgid "Column Break"
-#~ msgstr "Zalomenie stĺpca"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Nastaviť manuálne zalomenie strany pred stĺpcom"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Zalomiť pred riadkom"
-
-#~ msgid "Row Break"
-#~ msgstr "Zalomenie riadku"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Nastaviť manuálne zalomenie strany pred riadkom"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Choď na bunku"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Zadajte bunku:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Konsolidovať..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "Vytvoriť oblasť sumárnych dát zo skupiny podobných oblastí"
-
 #~ msgid "Description in rows"
 #~ msgstr "Popis v riadku"
 
@@ -16540,39 +18818,6 @@ msgstr "Odkaz %1 aktivovaný"
 
 #~ msgid "Copy data"
 #~ msgstr "Kopírovať dáta"
-
-#~ msgid "Consolidate"
-#~ msgstr "Konsolidovať"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Štandardná odchýlka"
-
-#~ msgid "Variance"
-#~ msgstr "Rozptyl"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Musíte definovať najmenej jeden zdrojový rozsah."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 nie je platný rozsh buniek."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Rozsah\n"
-#~ "%1\n"
-#~ "je príliš malý"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Rozsah\n"
-#~ "%1\n"
-#~ "je príliš veľký"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16587,22 +18832,6 @@ msgstr "Odkaz %1 aktivovaný"
 #~ "%2\n"
 #~ "majú rozdielnu veľkosť"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "Konsolidovať"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Zdrojový obsah sa prekrýva s cieľovým obsahom."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Rozsah\n"
-#~ "%1\n"
-#~ "je zle formulovaný"
-
 #~ msgid "Function:"
 #~ msgstr "Funkcia:"
 
@@ -16612,201 +18841,17 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Entered references:"
 #~ msgstr "Vložené odkazy:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Zmeniť uhol..."
-
-#~ msgid "Angle"
-#~ msgstr "Uhol"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Zmeniť uhol vytlačenia obsahu bunky"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Zvýšiť presnosť"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Zvýšiť zobrazenú decimálnu presnosť"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Znížiť presnosť"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Znížiť zobrazenú decimálnu presnosť"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "Zvýšiť presnosť"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "Znížiť presnosť"
-
-#~ msgid "Change Angle"
-#~ msgstr "Zmeniť uhol"
-
-#~ msgid "Angle:"
-#~ msgstr "Uhol:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "Zmeniť uhol"
-
-#~ msgid "Area Name..."
-#~ msgstr "Meno oblasti..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Nastaviť meno pre oblasť tabuľky"
-
-#~ msgid "Named Areas..."
-#~ msgstr "Pomenované oblasti..."
-
-#~ msgid "Named Areas"
-#~ msgstr "Pomenované oblasti"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Upraviť alebo vybrať pomenovanú oblasť"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Pridať pomenovanú oblasť"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Zadajte meno oblasti:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "Pomenovaná oblasť  '%1' už existuje.\n"
-#~ "Chcete ju nahradiť?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "Nahradiť pomenovanú oblasť"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "Nahradiť pomenovanú oblasť"
-
 #~ msgid "&Select"
 #~ msgstr "&Vybrať"
 
-#~ msgid "Area: %1"
-#~ msgstr "Oblasť: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Upraviť..."
-
-#~ msgid "&Remove"
-#~ msgstr "&Odstrániť"
 
 #~ msgid "New Named Area"
 #~ msgstr "Nová pomenovaná oblasť"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Upraviť pomenovanú oblasť"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Naozaj chcete odstrániť túto pomenovanú oblasť?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Odstrániť pomenovanú oblasť"
-
-#~ msgid "Cells:"
-#~ msgstr "Bunky:"
-
-#~ msgid "Sheet:"
-#~ msgstr "List:"
-
-#~ msgid "Area name:"
-#~ msgstr "Meno oblasti:"
-
-#~ msgid "Align Left"
-#~ msgstr "Zarovnať vľavo"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Obsah bunky zarovnať vľavo"
-
-#~ msgid "Align Center"
-#~ msgstr "Zarovnať do stredu"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Obsah bunky zarovnať do stredu"
-
-#~ msgid "Align Right"
-#~ msgstr "Zarovnať vpravo"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Obsah bunky zarovnať vpravo"
-
-#~ msgid "Align Top"
-#~ msgstr "Zarovnať hore"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Obsah bunky zarovnať hore"
-
-#~ msgid "Align Middle"
-#~ msgstr "Zarovnať na stred"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Zarovnať obsah bunky na stred"
-
-#~ msgid "Align Bottom"
-#~ msgstr "Zarovnať dole"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Obsah bunky zarovnať dole"
-
-#~ msgid "Border Left"
-#~ msgstr "Okraj vľavo"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Nastaviť ľavý okraj pre označenú oblasť"
-
-#~ msgid "Border Right"
-#~ msgstr "Okraj vpravo"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Nastaviť pravý okraj pre označenú oblasť"
-
-#~ msgid "Border Top"
-#~ msgstr "Okraj hore"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Nastaviť horný okraj pre označenú oblasť"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Okraj dole"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Nastaviť spodný okraj pre označenú oblasť"
-
-#~ msgid "All Borders"
-#~ msgstr "Všetky okraje"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Nastaviť v označenej oblasti okraj okolo všetkých buniek"
-
-#~ msgid "No Borders"
-#~ msgstr "Žiadne okraje"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Odstrániť všetky okraje v označenej oblasti"
-
-#~ msgid "Border Outline"
-#~ msgstr "Obrysy okraja"
-
-#~ msgid "Outline"
-#~ msgstr "Obrys"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Nastaviť okraj okolo označenej oblasti"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "Zmeniť horizontálne zarovnanie"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "Zmeniť vertikálne zarovnanie"
 
 #~ msgid "Australia"
 #~ msgstr "Austrália"
@@ -18617,61 +20662,6 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Zimbabwiansky dolár"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Vrátiť na štandardný formát"
-
-#~ msgid "Strike Out"
-#~ msgstr "Prečiarknuté"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Zväčšiť veľkosť písma"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Zmenšiť veľkosť písma"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Zalomiť text"
-
-#~ msgid "Wrap"
-#~ msgstr "Zalomiť text"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Zalomiť text bunky do viacerých textových riadkov"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Vertikálny text"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Vytlačiť obsah bunky vertikálne"
-
-#~ msgid "Percent Format"
-#~ msgstr "Percentuálny formát"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Nastaviť formátovanie bunky ako pri percentách"
-
-#~ msgid "Money Format"
-#~ msgstr "Peňažný formát"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Nastaviť formátovanie bunky ako pri vašej lokálnej mene"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "Zalomiť text"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "Vertikálny text"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "Formát percentá"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "Peňažný formát"
-
 #~ msgid "&Data Format"
 #~ msgstr "&Dátový formát"
 
@@ -18730,9 +20720,6 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Default height (%1)"
 #~ msgstr "Štandardná výška (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Výška:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Nastaviť výšku bunky."
 
@@ -18746,442 +20733,32 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Default width (%1)"
 #~ msgstr "Štandardná šírka (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Šírka:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "Pridať komentár"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Zvýšiť odsadenie"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Zvýšiť odsadenie"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Znížiť odsadenie"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Znížiť odsadenie"
-
-#~ msgid "Upper Case"
-#~ msgstr "Veľké písmená"
-
-#~ msgid "Upper"
-#~ msgstr "Veľké písmená"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Zmeniť všetky písmená na veľké"
-
-#~ msgid "Lower Case"
-#~ msgstr "Malé písmená"
-
-#~ msgid "Lower"
-#~ msgstr "Malé písmená"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Zmeniť všetky písmená na malé"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Zmeniť prvé písmeno na veľké"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Zmeniť prvé písmeno na veľké"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Zmeniť prvé písmeno na veľké"
-
-#~ msgid "Comment..."
-#~ msgstr "Poznámka..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Upraviť komentár pre túto bunku"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Odstrániť komentár"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Odstrániť komentár tejto bunky"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "Zmeniť na veľké písmená"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "Prepnúť na malé písmená"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "Zmeniť prvé písmeno na veľké"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "Odstrániť komentár"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Vyčistiť komentár"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "Zmeniť veľkosť písmen"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "Zvýšiť odsadenie"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "Znížiť odsadenie"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Poznámka k bunke"
-
-#~ msgid "&Left"
-#~ msgstr "&Vľavo"
-
-#~ msgid "&Right"
-#~ msgstr "V&pravo"
-
 #~ msgid "&Up"
 #~ msgstr "&Hore"
-
-#~ msgid "&Down"
-#~ msgstr "&Dolu"
-
-#~ msgid "Autosum"
-#~ msgstr "Automatická suma"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Vložiť funkciu 'sum'"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "Výber výplne"
-
-#~ msgid "From &Text File..."
-#~ msgstr "Z &textového súboru..."
-
-#~ msgid "Text File"
-#~ msgstr "Textový súbor"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Vložiť dáta z textového súboru na aktuálnu pozíciu kurzora/označenú časť"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "Zo s&chránky..."
 
-#~ msgid "Clipboard"
-#~ msgstr "Schránka"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Vložiť CSV dáta zo schránky na aktuálnu pozíciu kurzora/označenú časť"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "&Text do stĺpcov..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Roztiahnuť obsah buniek do viacerých stĺpcov"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Vkladám zo schránky"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "Schránka neobsahuje žiadne dáta."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "Schránka obsahuje použiteľné dáta."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "Importovať dátový súbor CSV"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "Dátové súbory CSV (*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Text do stĺpcov"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Nepodarilo sa otvoriť vstupný súbor."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Vkladám zo schránky"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "Vkladám textový súbor"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "Text do stĺpcov"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "Zlúčiť označenú oblasť"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Zlúčiť bunky horizontálne"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Zlúčiť označenú oblasť horizontálne"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Zlúčiť bunky vertikálne"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Zlúčiť označenú oblasť vertikálne"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Odlúčiť bunky"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Vrátiť späť zlúčenie označenej oblasti"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Zmeniť veľkosť stĺpca..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Zmeniť šírku stĺpca"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Vložiť stĺpce"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Vložiť nový stĺpec do tabuľky"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Odstrániť stĺpce"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Odstráni vybrané stĺpce zo zošita"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Skryť stĺpce"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Skryť stĺpec z pohľadu"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Zobraziť stĺpce..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Zobraziť skryté stĺpce"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Vyrovnať stĺpec"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Nastaviť rozmer označených stĺpcov na rovnaký"
-
-#~ msgid "Show Columns"
-#~ msgstr "Zobraziť stĺpce"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Zobraziť skryté stĺpce v označenej časti"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Zmeniť veľkosť riadku..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Zmeniť výšku riadku"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Vložiť riadky"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Vloží nový riadok do tabuľky"
-
-#~ msgid "Remove Rows"
-#~ msgstr "Odstrániť riadky"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Odstráni riadok z tabuľky"
-
-#~ msgid "Hide Rows"
-#~ msgstr "Skryť riadky"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Skryť riadok z pohľadu"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Zobraziť riadky..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Zobraziť skryté riadky"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Vyrovnať riadok"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Nastaviť rozmer označených riadkov na rovnaký"
-
-#~ msgid "Show Rows"
-#~ msgstr "Zobraziť riadky"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Zobraziť skryté riadky v označenej časti"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Nastaviť riadok a stĺpec"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "Prispôsobiť rozmer riadku/stĺpca podľa obsahu"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Upraviť stĺpec"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Odstrániť stĺpce"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Upraviť riadok"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Odstrániť riadky"
 
-#~ msgid "Resize Row"
-#~ msgstr "Zmeniť veľkosť riadku"
-
-#~ msgid "Resize Column"
-#~ msgstr "Zmeniť veľkosť stĺpca"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Vyberte skryté stĺpce, ktoré sa majú zobraziť:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Vyberte skryté riadky, ktoré sa majú zobraziť:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Stĺpec: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Riadok: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "&Odkaz..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Vložiť internetový odkaz"
-
-#~ msgid "Link"
-#~ msgstr "Odkaz"
-
-#~ msgid "Remove Link"
-#~ msgstr "Odstrániť odkaz"
-
-#~ msgid "Remove a link"
-#~ msgstr "Odstrániť odkaz"
-
-#~ msgid "Insert Link"
-#~ msgstr "Vložiť odkaz"
-
 #~ msgid "Edit Link"
 #~ msgstr "Upraviť odkaz"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "Odstrániť odkaz"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Nastaviť odkaz"
-
-#~ msgid "Internet"
-#~ msgstr "Internet"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Odkaz na internetovú adresu"
-
-#~ msgid "Text to display:"
-#~ msgstr "Text na zobrazenie:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Internetová adresa:"
-
-#~ msgid "Email"
-#~ msgstr "E-mail"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "Odkaz na e-mailovú adresu"
-
-#~ msgid "Email address:"
-#~ msgstr "E-mailová adresa:"
-
-#~ msgid "Subject:"
-#~ msgstr "Predmet:"
-
-#~ msgid "File"
-#~ msgstr "Súbor"
-
-#~ msgid "Link to File"
-#~ msgstr "Odkza na súbor"
-
-#~ msgid "File location:"
-#~ msgstr "Umiestnenie súboru:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Nedávno použitý súbor:"
-
-#~ msgid "No Entries"
-#~ msgstr "Žiadné položky"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Odkaz na bunku"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Bunka alebo pomenovaná oblasť"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Triediť..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Triediť skupinu buniek"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Triediť &zostupne"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "Triediť skupinu buniek zostupne (od poslednej k prvej)"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Triediť &vzostupne"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "Triediť skupinu buniek vzostupne (od prvej k poslednej)"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "Triediť dáta"
 
 #~ msgid "Use custom list"
 #~ msgstr "Použiť vlastný zoznam"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Kopírovať formátovanie bunky (okraje, farby, štýl textu)"
-
-#~ msgid "Column %1"
-#~ msgstr "Stĺpec %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Riadok %1"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Prvý stĺpec obsahuje hlavičky riadkov"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Prvý riadok obsahuje hlavičky stĺpcov"
-
-#~ msgid "Sort"
-#~ msgstr "Triediť"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Nenozlišovať veľkosť písmen"
 
 #~ msgid "Move Up"
 #~ msgstr "Posun hore"
@@ -19246,225 +20823,8 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Triediť dáta zoskupené v riadkoch vertikálne"
 
-#~ msgid "Validity..."
-#~ msgstr "Platnosť..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Nastavenie testov pre overenie platnosti dát bunky"
-
-#~ msgid "Validity"
-#~ msgstr "Platnosť"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Odstrániť platnosť"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Odstrániť testy platnosti použité na túto bunku"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "Odstrániť kontrolu platnosti"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "Pridať kontrolu platnosti"
-
-#~ msgid "Clear &All"
-#~ msgstr "Vyčistiť &všetko"
-
 #~ msgid "&Criteria"
 #~ msgstr "&Kritérium"
-
-#~ msgid "Allow:"
-#~ msgstr "Povolené:"
-
-#~ msgid "Integer"
-#~ msgstr "Celé číslo"
-
-#~ msgid "Text Length"
-#~ msgstr "Dĺžka textu"
-
-#~ msgid "List"
-#~ msgstr "Zoznam"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Povoliť prázdne položky"
-
-#~ msgid "Data:"
-#~ msgstr "Dáta:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Minimum:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Maximum:"
-
-#~ msgid "Date:"
-#~ msgstr "Dátum:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Minimálny dátum:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Maximálny dátum:"
-
-#~ msgid "Time:"
-#~ msgstr "Čas:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Minimálny čas:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Maximálny čas:"
-
-#~ msgid "Number:"
-#~ msgstr "Číslo:"
-
-#~ msgid "Entries:"
-#~ msgstr "Položky:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "Upozornenie na &chybu"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "Zobraziť chybovú správu pri zadaní neplatnej hodnoty"
-
-#~ msgid "Action:"
-#~ msgstr "Akcia:"
-
-#~ msgid "Stop"
-#~ msgstr "Zastaviť"
-
-#~ msgid "Warning"
-#~ msgstr "Upozornenie"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Titul:"
-
-#~ msgid "Message:"
-#~ msgstr "Správa:"
-
-#~ msgid "Input Help"
-#~ msgstr "Pomocník vstupu"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "Zobraziť pomocníka vstupu ak je bunka označená"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Toto nie je platná hodnota."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Toto nie je platný čas."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Toto nie je platný dátum."
-
-#~ msgid "&Series..."
-#~ msgstr "&Série..."
-
-#~ msgid "Insert a series"
-#~ msgstr "Vložiť série"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "Vložiť série"
-
-#~ msgid "Select Character"
-#~ msgstr "Vybrať znak"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Vložiť zvolený znak v texte"
-
-#~ msgid "Series"
-#~ msgstr "Série"
-
-#~ msgid "Insert Values"
-#~ msgstr "Vložiť hodnoty"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Vložiť sériu vertikálne pod seba"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Vložiť sériu horizontálne vedľa seba zľava doprava"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Lineárne (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Generovať série od 'začiatku' do 'konca' a v každom kroku pridať zadanú "
-#~ "hodnotu. Tým sa vytvorí séria, kde je každá hodnota o 'krok' väčšia ako "
-#~ "predchádzajúca."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Geometrické (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Generovať série od 'začiatku' do 'konca' a v každom kroku vynásobiť "
-#~ "hodnotu zadanou hodnotou. Ak použijete krok 5, vytvorí sa zoznam 5, 25, "
-#~ "125, 625, pretože 5 krát 5 (krok) je 25 a to krát 5 je 125, atď."
-
-#~ msgid "Start value:"
-#~ msgstr "Počiatočná hodnota:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Koncová hodnotu:"
-
-#~ msgid "Step value:"
-#~ msgstr "Krok:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Počiatočná a koncová hodnota musia byť kladné čísla."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Počiatočná hodnota musí byť väčšia ako koncová, alebo krok musí byť menší "
-#~ "ako '1'."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "Žiadna z Start, Stop alebo Step hodnôt nemôže byť nula."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "Hodnota kroku musí byť rôzna od 1"
-
-#~ msgid "Step is negative."
-#~ msgstr "Krok je záporný."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Hodnota kroku musí byť väčšia ako 0. Inak sú lineárne série nekonečné."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Ak je počiatočná hodnota väčšia ako koncová, krok musí byť menší ako nula."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr "Ak je krok záporný, počiatočná hodnota musí byť väčšia ako koncová."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "Š&peciálny znak..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr ""
-#~ "Vložiť jeden alebo viac symbolov alebo písmen, ktoré nie sú na klávesnici"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Internetová adresa je prázdna"
@@ -25052,10 +26412,6 @@ msgstr "Odkaz %1 aktivovaný"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "Štýl"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Medzisúčty"
 
 #, fuzzy
 #~ msgctxt "(qtundo-format)"

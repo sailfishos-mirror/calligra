@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2022-05-15 22:14+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -136,8 +136,13 @@ msgstr "머리글"
 msgid "Header1"
 msgstr "머리글1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "기본값"
@@ -169,7 +174,8 @@ msgstr "초"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "텍스트"
@@ -240,7 +246,8 @@ msgstr "<p> <b>반환값 형식:</b> %1 </p>"
 msgid "Syntax"
 msgstr "문법"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "인자"
@@ -864,14 +871,15 @@ msgstr "CARY(12; 0)은 0을 반환함"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "숫자"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "서식"
@@ -927,6 +935,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\")는 99를 반환함"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "데이터베이스"
@@ -1215,6 +1225,7 @@ msgstr "날짜와 시간"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1287,7 +1298,8 @@ msgstr "DAYS360(\"2002/02/22\"; \"2002/04/21\"; FALSE)는 59를 반환함"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "시간"
@@ -4812,6 +4824,7 @@ msgid "Regular payments"
 msgstr "정기 지불"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "형식"
@@ -5132,12 +5145,19 @@ msgstr "설명서"
 msgid "Automatic"
 msgstr "자동"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "정보"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "오류"
@@ -5953,7 +5973,7 @@ msgstr ""
 msgid "Math"
 msgstr "수학"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "함수"
@@ -6435,6 +6455,7 @@ msgid "Range"
 msgstr "범위"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "조건"
@@ -7986,6 +8007,7 @@ msgid "Row"
 msgstr "줄"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "열"
@@ -12466,7 +12488,7 @@ msgid "&Go"
 msgstr "이동(&G)"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "삽입(&I)"
@@ -12484,7 +12506,7 @@ msgid "F&ormat"
 msgstr "서식(&O)"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "셀 병합"
@@ -12563,8 +12585,8 @@ msgstr "활성화"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "글꼴"
@@ -12972,14 +12994,16 @@ msgstr "쪽 제한:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "수평"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "수직"
@@ -13006,13 +13030,15 @@ msgid "Up"
 msgstr "위"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "오른쪽"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "왼쪽"
@@ -13024,36 +13050,50 @@ msgstr "아래, 첫 번째 열"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "없음"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "합계"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "최소"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "최대"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "평균"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "개수"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "CountA"
@@ -13451,7 +13491,8 @@ msgstr "선택 취소"
 msgid "Move selected sheet to the bottom"
 msgstr "선택한 시트를 맨 아래로 이동"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "대소문자 구분"
@@ -13652,6 +13693,7 @@ msgid "Anchor"
 msgstr "고정"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "셀"
@@ -13671,7 +13713,7 @@ msgstr "모양 고정 전환"
 msgid "Next Sheet"
 msgstr "다음 시트"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "다음"
@@ -13686,7 +13728,7 @@ msgstr "다음 시트로 이동"
 msgid "Previous Sheet"
 msgstr "이전 시트"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "이전"
@@ -13891,7 +13933,7 @@ msgstr ""
 "활성 시트를 삭제하려고 합니다.\n"
 "계속 진행하시겠습니까?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "이름 입력:"
@@ -13951,21 +13993,3118 @@ msgstr "CountA: "
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "글자색 변경"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "배경색 바꾸기"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "테두리 변경"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "열 삽입"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "행 삽입"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "열 삭제"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "행 삭제"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "스프레드시트에 새 행 삽입"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "스프레드시트에서 행 삭제"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "스프레드시트에 새 열 삽입"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "스프레드시트에서 선택한 열 삭제"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "열 숨기기"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "행 숨기기"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "열 표시"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "행 표시"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "선택에 숨겨진 행 표시"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "선택한 영역 병합"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "선택에 숨겨진 열 표시"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "선택한 영역 병합"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "열 크기 맞추기"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "행 크기 맞추기"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "선택한 행의 크기를 똑같이 맞춤"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "선택한 열의 크기를 똑같이 맞춤"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "열 조정"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "행 조정"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "행 및 열 조정"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "내용에 맞게 행/열 크기 조절"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "내용에 맞게 행/열 크기 조절"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "내용에 맞게 행/열 크기 조절"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "열 표시..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "행 표시..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "숨겨진 열 표시"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "숨겨진 행 표시"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "열: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "행: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "열 크기 조정..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "행 크기 조정..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "행 높이 변경"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "열 너비 변경"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "왼쪽 정렬"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "셀 내용을 왼쪽 정렬"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "가로 정렬 변경"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "오른쪽 정렬"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "셀 내용을 오른쪽 정렬"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "가운데 정렬"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "셀 내용을 가운데 정렬"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "가운데"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "위쪽 정렬"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "셀 내용을 위쪽으로 정렬"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "위쪽"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "세로 정렬 변경"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "아래쪽 정렬"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "셀 내용을 아래쪽으로 정렬"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "아래쪽"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "수직 가운데 정렬"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "셀 내용을 수직 가운데로 정렬"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "가운데"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "각도 변경..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "셀 내용을 표시할 각도 변경"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "각도"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "각도 변경"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "자동 필터(&A)"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "셀 범위에 자동 필터 추가"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "자동 필터"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "선택한 셀에 미리 정의된 스타일 적용"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "자동 서식..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "시트 스타일 XML 파일 '%1'을(를) 찾을 수 없습니다."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "시트 스타일 XML 파일 %1을(를) 처리하는 중 오류가 발생했습니다."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "자동 서식"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "자동 합계"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "'sum' 함수 삽입"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "자동 합계"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "왼쪽 테두리"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "선택한 영역의 왼쪽 테두리 설정"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "오른쪽 테두리"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "선택한 영역의 오른쪽 테두리 설정"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "위쪽 테두리"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "선택한 영역의 위쪽 테두리 설정"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "아래쪽 테두리"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "선택한 영역의 아래쪽 테두리 설정"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "모든 테두리"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "선택한 영역의 모든 셀의 테두리 설정"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "모두"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "테두리 없음"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "선택한 영역의 모든 테두리 삭제"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "테두리 외곽선"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "선택한 영역의 외곽선으로 테두리 설정"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "외곽선"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "테두리 색"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "새 테두리 색 선택"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "테두리 색상 변경"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "셀 삽입..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "스프레드시트에 빈 셀 삽입"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "셀 삭제..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "스프레드시트에서 셀 삭제"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "모두 지우기"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "현재 셀의 모든 내용 및 서식 지우기"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "내용 지우기"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "현재 셀의 내용 삭제"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "텍스트 지우기"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "삭제"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "주석..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "이 셀의 주석 편집"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "설명 지우기"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "이 셀의 주석 삭제"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "주석 삭제"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "주석 삭제"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "주석 추가"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "조건부 스타일..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "지정한 조건에 따라 셀 스타일 설정"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "조건부 스타일"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "조건부 셀 스타일 삭제"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "조건부 스타일 삭제"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "조건부 서식 삭제"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "조건부 서식 추가"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "통합(&S)..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "비슷한 영역 그룹에서 요약 데이터 영역 만들기"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "통합"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "셀 객체를 클립보드에 복사"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "셀 객체를 클립보드로 이동"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "텍스트 파일에서(&T)..."
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "현재 커서 위치/선택 영역에 텍스트 파일에서 데이터 삽입"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "텍스트 파일"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "CSV 데이터 파일 가져오기"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "CSV 데이터 파일(*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "입력 파일을 열 수 없습니다."
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Inserting Text File"
+msgid "Inserting Text File"
+msgstr "텍스트 파일 삽입"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "텍스트 파일 삽입"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "클립보드에서 삽입"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "현재 커서 위치/선택 영역에 클립보드에서 CSV 데이터 삽입"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "클립보드"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "클립보드에 데이터가 없습니다."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "클립보드에 사용 가능한 데이터가 없습니다."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "클립보드에서 삽입"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "클립보드에서 삽입"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "텍스트를 열로(&T)..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "셀 내용을 여러 열로 확장"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "텍스트를 열로"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "텍스트를 열로"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "정렬 또는 자동 완성에 사용할 사용자 목록 만들기"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "사용자 정의 목록..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "이름이 있는 영역 추가"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "영역 이름을 입력하십시오:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "각도 변경"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "각도:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "자동 서식"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "적용할 시트 스타일을 선택하십시오:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "문자 선택"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "선택한 문자를 텍스트에 삽입"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "셀 주석"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<없음>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "같음"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "초과"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "미만"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "이상"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "이하"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "다음 사이"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "범위 밖"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "다름"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "첫 번째 조건"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "두 번째 조건"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "세 번째 조건"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "셀이"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "셀 스타일"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "다름"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "첫 번째 값이 숫자이면 두 번째 값도 숫자여야 합니다."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr "첫 번째 값이 문자열이면 두 번째 값도 문자열이어야 합니다."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "통합"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "곱"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "표준 편차"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "분산"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "원본 범위를 하나 이상 정의해야 합니다."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1은(는) 올바른 셀 범위가 아닙니다."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"범위\n"
+"%1이(가)\n"
+"너무 작음"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"범위\n"
+"%1이(가)\n"
+"너무 큼"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "원본 범위가 대상 범위와 교차합니다."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"범위\n"
+"%1이(가)\n"
+"잘못됨"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "데이터베이스에서 데이터 삽입"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "서식:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "데이터베이스 이름:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "호스트:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"포트:\n"
+"(필요한 경우)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"사용자 이름:\n"
+"(필요한 경우)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"암호:\n"
+"(필요한 경우)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "테이블 선택:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "테이블"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "열 선택:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "테이블"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "열"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "다음과 모두 일치(AND)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "다음 중 하나와 일치(OR)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "같음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "같지 않음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "있음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "없음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "유사함"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "보다 큼"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "보다 작음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "크거나 같음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "작거나 같음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "정렬 순서"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "오름차순"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "내림차순"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "고유 값"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "쿼리 옵션"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL 쿼리:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "영역에 삽입"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "셀에서 시작"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "결과"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "여기에 테이블을 지정할 수 없습니다."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "올바른 영역을 지정해야 합니다."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "올바른 셀을 지정해야 합니다."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "쿼리 실행이 실패했습니다."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "쿼리 실행 결과가 없습니다."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "데이터베이스에서 데이터 삽입"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "포트는 숫자여야 함"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "데이터베이스에 연결하는 중..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "연결되었습니다. 테이블 정보 가져오는 중..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "이 데이터베이스에는 테이블이 없음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "드라이버를 불러올 수 없음"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "테이블의 메타데이터 가져오는 중..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "하나 이상의 테이블을 선택해야 합니다."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "하나 이상의 열을 선택해야 합니다."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' 및 '?' 문자는 올바른 SQL 와일드카드가 아닙니다. 대신 '%' 및 '_' 문자를 사"
+"용해야 합니다. 바꾸시겠습니까?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "바꾸기"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "문서 설정"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, kde-format
+msgid "Calculation"
+msgstr "계산"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr "로캘"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr "대소문자 구분"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, kde-format
+msgid "Precision as shown"
+msgstr "표시한 대로 소수점 아래 자릿수"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr "검색 기준을 전체 셀에 적용해야 함"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, kde-format
+msgid "Automatic find labels"
+msgstr "자동으로 이름표 찾기"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr "문자열 비교:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Regular Expressions"
+msgstr "정규 표현식"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr "와일드카드"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr "연도 0:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "시스템 로캘 설정 사용(&L)"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "언어: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "기본 숫자 서식: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "긴 날짜 서식: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "짧은 날짜 서식: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "시간 서식: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "통화 서식: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "더 많은 옵션"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "전체 시트 검색"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "다음에서 찾기:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "셀 값"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "주석"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "검색 방향:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "오른쪽 다음 아래"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "아래 다음 오른쪽"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "더 적은 옵션"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "함수"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "함수 입력"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "도움말"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "이 함수에는 인자가 없습니다."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "설명이 없습니다."
+
+# https://support.office.com/ko-kr/article/목표값-찾기를-통해-입력-값을-조정하여-원하는-결과-찾기-320cb99e-f4a4-417f-b1c3-4f369d6e66c7
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "목표값 찾기"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "셀로 이동"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "셀 입력:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "삽입"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "오른쪽으로 이동"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "아래쪽으로 이동"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "행 삽입"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "열 삽입"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "셀 삽입"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "삭제"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "왼쪽으로 이동"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "위쪽으로 이동"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "행 삭제"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "열 삭제"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "셀 삭제"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "링크 삽입"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "인터넷"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "인터넷 주소로 링크"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "표시할 텍스트:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "인터넷 주소:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "이메일"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "이메일 주소로 링크"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "이메일 주소:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "제목:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "파일"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "파일로 링크"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "파일 위치:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "최근 파일:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "항목 없음"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "셀로 링크"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "셀 또는 이름이 있는 영역:"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "사용자 정의 목록"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "대소문자 변경"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "목록:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "항목:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "추가"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "취소"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "새로 만들기"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "수정"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "복사"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "이 목록을 삭제하시겠습니까?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "목록 삭제"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"입력 영역이 비어 있지 않습니다.\n"
+"계속 진행하시겠습니까?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "이름이 있는 영역"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "영역: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "셀:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "시트:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "영역 이름:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "삭제(&R)"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "열기/저장"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "이 이름이 있는 영역을 삭제하시겠습니까?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "이름이 있는 영역 삭제"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "셀 참조가 잘못되었습니다."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "삽입하며 붙여넣기"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, kde-format
+msgid "Select Source"
+msgstr "원본 선택"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr "피벗 테이블 설정 창"
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, kde-format
+msgid "Add Filter"
+msgstr "필터 추가"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, kde-format
+msgid "Pivot Options"
+msgstr "피벗 옵션"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "행 크기 조정"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "높이:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "열 크기 조정"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "너비:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "계열"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "계열 삽입"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "값 삽입"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "계열을 수직으로 위에서 아래로 삽입합니다"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "계열을 수평으로 왼쪽에서 오른쪽으로 삽입합니다"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "선형(2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"'시작'에서 '종료' 값까지 '단계'를 더해 나가는 계열을 만듭니다. 각 값은 이전 "
+"값보다 '단계'만큼 큽니다."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "기하(2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"'시작'에서 '종료' 값까지 '단계'를 곱해 나가는 계열을 만듭니다. 단계를 5로 설"
+"정하면 5 곱하기 5는 25, 25 곱하기 5는 125, 125 곱하기 5는 625이므로 5, 25, "
+"125, 625와 같은 계열을 생성합니다."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "시작 값:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "종료 값:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "단계 값:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "종료 및 시작 값은 양수여야 합니다."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr "종료 값은 시작 값보다 크거나 단계가 '1'보다 작아야 합니다."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "시작, 종료, 단계 값은 0이 아니어야 합니다."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "단계 값은 1이 아니어야 함"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "단계가 음수입니다."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr "단계 값은 0보다 커야 합니다. 그렇지 않으면 선형 계열이 무한합니다."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr "시작 값이 종료 값보다 크다면 단계는 0보다 작아야 합니다."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr "단계 값이 음수이면 시작 값이 종료 값보다 커야 합니다."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "표시할 숨겨진 행 선택:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "표시할 숨겨진 열 선택:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "열 %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "행 %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "첫 번째 열에 행 머리글이 들어 있음(&F)"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "첫 번째 행에 열 머리글이 들어 있음(&F)"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "정렬"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "대소문자 구분 안 함"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "선택하여 붙여넣기"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "스타일 관리자"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "스타일"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "모든 스타일"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "사용자 정의 스타일"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "계층적"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "새로 만들기(&N)..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "수정(&M)..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "삭제(&D)..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "스타일%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "부분합"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "모두 삭제"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "열 '%1'"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "부분합을 추가하려면 하나 이상의 열을 선택해야 합니다."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "유효성"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "모두 지우기(&A)"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "허용:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "정수"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "텍스트 길이"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "목록"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "공백 허용"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "데이터:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "최솟값:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "최댓값:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "날짜:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "날짜 최솟값:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "날짜 최댓값:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "시간:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "시간 최솟값:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "시간 최댓값:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "숫자:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "항목:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "오류 알림(&E)"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "잘못된 값을 입력했을 때 오류 메시지 표시"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "동작:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "정지"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "경고"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "제목:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "메시지:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "입력 도움말"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "셀을 선택할 때 입력 도움말 표시"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "올바른 값이 아닙니다."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "잘못된 시간입니다."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "잘못된 날짜입니다."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "문서 설정..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "문서 설정 대화 상자 표시"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "강조 표시된 셀 편집"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "셀 수정"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "참조 형식 전환"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "텍스트 커서의 참조 형식(상대, 절대, 혼합) 전환"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "아래(&D)"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "왼쪽(&L)"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "오른쪽(&R)"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "선택 채우기"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "바꾸기"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "글꼴 선택..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "셀 서식 설정"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "글꼴 변경"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "글꼴 크기 선택"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "셀 서식 설정"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "글꼴 크기"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "글자색 설정"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "글자색"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "함수(&F)..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "수식 삽입"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "수식 선택"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "함수 삽입"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "기타..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "목표값 찾기(&G)..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "특정한 값을 찾으려고 계산 반복"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "셀 참조가 잘못되었습니다."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "목표 값이 잘못되었습니다."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "원본 셀에 숫자 값이 있어야 합니다."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "대상 셀에 수식이 있어야 합니다."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "셀 %1의 목표값 찾기에서 해를 반환함:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "셀 %1의 목표값 찾기에서 해를 찾지 못했습니다."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "셀로 이동..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "지정한 셀로 이동"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "이동"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "잘못된 시간입니다."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "들여쓰기 감소"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "들어쓰기 증가"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "들여쓰기 감소"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "들여쓰기 증가"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "들여쓰기 증가"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "들여쓰기 감소"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "데이터베이스에서(&D)..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "SQL 데이터베이스에서 데이터 삽입"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"사용 가능한 데이터베이스 드라이버가 없습니다. 이 기능을 사용하려면 필요한 Qt "
+"데이터베이스 드라이버를 설치해야 합니다."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "계열(&S)..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "계열 삽입"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "계열 삽입"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "특수 문자(&P)..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr "키보드에 없는 하나 이상의 기호 또는 문자 삽입"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "요소 검사 실행..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "링크(&L)..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "인터넷 하이퍼링크 삽입"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "링크"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "링크 삭제"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "링크 삭제"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "링크 삭제"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "링크 설정"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "선택 목록..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "가로로 셀 병합"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "세로로 셀 병합"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "선택한 영역을 가로로 병합"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "선택한 영역을 세로로 병합"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "선택한 영역 병합"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "셀 병합 해제"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "선택한 영역 병합 해제"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "영역 이름..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "스프레드시트 영역의 이름 설정"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"이름이 있는 영역 '%1'이(가) 이미 있습니다.\n"
+"덮어쓰시겠습니까?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "이름이 있는 영역 바꾸기"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "이름이 있는 영역 바꾸기"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "이름이 있는 영역 편집 또는 선택"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "이름이 있는 영역..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "행 앞에서 나누기"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "행 앞에 수동 쪽 나누기 설정"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "행 나누기"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "열 앞에서 나누기"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "열 앞에 수동 쪽 나누기 설정"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "열 나누기"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "클립보드의 내용을 커서 위치에 붙여넣기"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "선택하여 붙여넣기..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "클립보드의 내용을 선택하여 붙여넣기"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "삽입하며 붙여넣기"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "클립보드의 셀을 스프레드시트에 삽입"
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "&Pivot Tables..."
+msgstr "피벗 테이블(&P)..."
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "Create Pivot Tables"
+msgstr "피벗 테이블 만들기"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "여러 셀을 선택해야 합니다."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "현재 시트의 모든 셀 선택"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "QTableView 표시..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "정렬(&S)..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "셀 그룹 정렬"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "오름차순 정렬(&I)"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "셀 그룹을 오름차순(처음부터 마지막)으로 정렬"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "내림차순 정렬(&D)"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "셀 그룹을 내림차순(마지막부터 처음)으로 정렬"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "데이터 정렬"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "다음 시트에서 맞춤법을 검사하시겠습니까?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "다음 시트로 이동"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "맞춤법 검사"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "셀 서식..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "셀 서식 설정"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "굵게"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "이탤릭"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "밑줄"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "취소선"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "셀 텍스트를 여러 줄로 자동으로 바꿈"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "텍스트 자동 줄 바꿈"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "자동 줄 바꿈"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "텍스트 자동 줄 바꿈"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "셀 내용을 세로로 표시"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "세로 텍스트"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "세로 텍스트"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "숫자 서식"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "셀 서식 설정"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "첫 번째 숫자"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "과학적 서식"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "셀 서식을 백분율로 표시하도록 설정"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "과학"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "과학"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "백분율 형식"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "셀 서식을 백분율로 표시하도록 설정"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "백분율"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "백분율 서식 지정"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "통화 형식"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "셀 서식을 통화로 표시하도록 설정"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "돈"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "통화 서식 지정"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "날짜 서식"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "셀 서식 설정"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "서식"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "셀 서식 설정"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "시간 서식"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "서식"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "글꼴 크기 증가"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "글꼴 크기 감소"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "소수점 아래 자릿수 증가"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "화면에 표시된 소수점 아래 자릿수 증가"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "소수점 아래 자릿수 감소"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "화면에 표시된 소수점 아래 자릿수 감소"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "소수점 아래 자릿수 증가"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "소수점 아래 자릿수 감소"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "기본 서식으로 초기화"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "시트 스타일"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "배경색"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "배경색 설정"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "셀에서 스타일 만들기..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "현재 선택한 셀의 스타일에서 새 스타일 만들기"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "셀에서 스타일"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "셀에서 스타일 만들기"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "스타일 이름을 비워 둘 수 없습니다."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "같은 이름의 스타일이 이미 존재합니다."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "셀 스타일 편집 및 구성"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "스타일 관리자..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "선택한 셀에 미리 정의된 스타일 적용"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "부분합(&S)..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "목록 또는 데이터베이스에서 다른 종류의 부분합 계산"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "부분합"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "대문자로"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "소문자로"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "첫 글자 대문자로"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "대문자로 전환"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "소문자로 전환"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "첫 글자 대문자"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "대문자"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "소문자"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "첫 글자를 대문자로 변환"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "모든 글자를 대문자로 변환"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "모든 글자를 소문자로 변환"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "첫 글자를 대문자로 변환"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "대소문자 변경"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "셀 데이터 유효성 검사 설정"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "유효성..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "이 셀의 유효성 검사 삭제"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "유효성 검사 삭제"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "유효성 검사 삭제"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "유효성 검사 추가"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14212,11 +17351,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "셀 삭제"
 
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "삭제"
-
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
 msgid "Merge Cells Horizontally"
@@ -14433,12 +17567,6 @@ msgstr "다양함(변경하지 않음)"
 msgid "Roman"
 msgstr "로만"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "이탤릭"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14460,12 +17588,6 @@ msgstr ""
 msgid "Normal"
 msgstr "일반"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "굵게"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14478,12 +17600,6 @@ msgstr "색:"
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "이 옵션을 선택하면 현재 셀 텍스트에 밑줄을 표시합니다."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "밑줄"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14633,11 +17749,6 @@ msgstr ""
 "시스템 설정 -> 지역 설정 -> 서식 -> 숫자 탭에서 전역 설정한 숫자 표기법을 사"
 "용합니다. 숫자는 기본적으로 오른쪽 정렬합니다."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "백분율"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14655,11 +17766,6 @@ msgstr ""
 "일반 셀 서식으로 다시 전환하면 12로 되돌아갑니다.\n"
 "서식 도구 모음에서 백분율 아이콘을 사용할 수도 있습니다."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "돈"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14675,11 +17781,6 @@ msgstr ""
 "의 설정을 따릅니다.\n"
 "서식 도구 모음의 통화 아이콘을 사용하여 셀 서식을 현재 통화처럼 보이도록 설정"
 "할 수도 있습니다."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "과학"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14935,11 +18036,6 @@ msgstr "세 자리 153/652"
 msgid "Dolor Ipse"
 msgstr "다람쥐 헌 쳇바퀴에 타고파"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "스타일"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -14950,11 +18046,6 @@ msgstr "이름:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "상속 스타일:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "같은 이름의 스타일이 이미 존재합니다."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15005,12 +18096,6 @@ msgstr ""
 msgid "Standard"
 msgstr "표준"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "가운데"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15048,24 +18133,6 @@ msgstr ""
 "<b>위쪽</b>: 내용을 셀 위쪽에 표시합니다.\n"
 "<b>가운데</b>: 내용을 셀 세로 가운데에 표시합니다.\n"
 "<b>아래쪽</b>: 내용을 셀 아래쪽에 표시합니다.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "위쪽"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "가운데"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "아래쪽"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15254,20 +18321,10 @@ msgstr "적용"
 msgid "Apply changes"
 msgstr "변경 사항 적용"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "취소"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "변경 사항 취소"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "모두"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15363,358 +18420,12 @@ msgstr "링크 %1 활성화됨"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr "(=[hh]:mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "함수(&F)..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "수식 삽입"
-
-#~ msgid "From &Database..."
-#~ msgstr "데이터베이스에서(&D)..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "SQL 데이터베이스에서 데이터 삽입"
-
-#~ msgid "Formula Selection"
-#~ msgstr "수식 선택"
-
-#~ msgid "Insert a function"
-#~ msgstr "함수 삽입"
-
-#~ msgid "Others..."
-#~ msgstr "기타..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "셀 수정"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "강조 표시된 셀 편집"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "요소 검사 실행..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "QTableView 표시..."
-
 # https://support.office.com/ko-kr/article/%EC%83%81%EB%8C%80-%EC%B0%B8%EC%A1%B0-%EC%A0%88%EB%8C%80-%EC%B0%B8%EC%A1%B0-%EB%B0%8F-%ED%98%BC%ED%95%A9-%EC%B0%B8%EC%A1%B0-%EA%B0%84-%EC%A0%84%ED%99%98-dfec08cd-ae65-4f56-839e-5f0d8d0baca9
 #~ msgid "Permute reference fixation"
 #~ msgstr "참조 형식 전환"
 
-#~ msgid "Permute fixation"
-#~ msgstr "참조 형식 전환"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "텍스트 커서의 참조 형식(상대, 절대, 혼합) 전환"
-
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "사용 가능한 데이터베이스 드라이버가 없습니다. 이 기능을 사용하려면 필요한 "
-#~ "Qt 데이터베이스 드라이버를 설치해야 합니다."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "데이터베이스에서 데이터 삽입"
-
-#~ msgid "Type:"
-#~ msgstr "서식:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "사용자 이름:\n"
-#~ "(필요한 경우)"
-
-#~ msgid "Host:"
-#~ msgstr "호스트:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "포트:\n"
-#~ "(필요한 경우)"
-
-#~ msgid "Database name: "
-#~ msgstr "데이터베이스 이름:"
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "암호:\n"
-#~ "(필요한 경우)"
-
-#~ msgid "Select tables:"
-#~ msgstr "테이블 선택:"
-
-#~ msgid "Tables"
-#~ msgstr "테이블"
-
-#~ msgid "Select columns:"
-#~ msgstr "열 선택:"
-
-#~ msgid "Table"
-#~ msgstr "테이블"
-
-#~ msgid "Columns"
-#~ msgstr "열"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "다음과 모두 일치(AND)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "다음 중 하나와 일치(OR)"
-
-#~ msgid "equals"
-#~ msgstr "같음"
-
-#~ msgid "not equal"
-#~ msgstr "같지 않음"
-
-#~ msgid "in"
-#~ msgstr "있음"
-
-#~ msgid "not in"
-#~ msgstr "없음"
-
-#~ msgid "like"
-#~ msgstr "유사함"
-
-#~ msgid "greater"
-#~ msgstr "보다 큼"
-
-#~ msgid "lesser"
-#~ msgstr "보다 작음"
-
-#~ msgid "greater or equal"
-#~ msgstr "크거나 같음"
-
-#~ msgid "less or equal"
-#~ msgstr "작거나 같음"
-
-#~ msgid "Sorted by"
-#~ msgstr "정렬 순서"
-
-#~ msgid "Ascending"
-#~ msgstr "오름차순"
-
-#~ msgid "Descending"
-#~ msgstr "내림차순"
-
-#~ msgid "Distinct"
-#~ msgstr "고유 값"
-
-#~ msgid "Query Options"
-#~ msgstr "쿼리 옵션"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL 쿼리:"
-
-#~ msgid "Insert in region"
-#~ msgstr "영역에 삽입"
-
-#~ msgid "Starting in cell"
-#~ msgstr "셀에서 시작"
-
-#~ msgid "Result"
-#~ msgstr "결과"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "여기에 테이블을 지정할 수 없습니다."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "올바른 영역을 지정해야 합니다."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "올바른 셀을 지정해야 합니다."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "데이터베이스에서 데이터를 변경할 수 없습니다."
-
-#~ msgid "Executing query failed."
-#~ msgstr "쿼리 실행이 실패했습니다."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "쿼리 실행 결과가 없습니다."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "데이터베이스에서 데이터 삽입"
-
-#~ msgid "The port must be a number"
-#~ msgstr "포트는 숫자여야 함"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "데이터베이스에 연결하는 중..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "연결되었습니다. 테이블 정보 가져오는 중..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "이 데이터베이스에는 테이블이 없음"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "드라이버를 불러올 수 없음"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "테이블의 메타데이터 가져오는 중..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "하나 이상의 테이블을 선택해야 합니다."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "하나 이상의 열을 선택해야 합니다."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' 및 '?' 문자는 올바른 SQL 와일드카드가 아닙니다. 대신 '%' 및 '_' 문자"
-#~ "를 사용해야 합니다. 바꾸시겠습니까?"
-
-#~ msgid "Insert function"
-#~ msgstr "함수 입력"
-
-#~ msgid "Help"
-#~ msgstr "도움말"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "이 함수에는 인자가 없습니다."
-
-#~ msgid "Description is not available."
-#~ msgstr "설명이 없습니다."
-
-#~ msgid "Document Settings..."
-#~ msgstr "문서 설정..."
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "문서 설정 대화 상자 표시"
-
-#~ msgid "Document Settings"
-#~ msgstr "문서 설정"
-
-#~ msgid "Calculation"
-#~ msgstr "계산"
-
-#~ msgid "Locale"
-#~ msgstr "로캘"
-
-#~ msgid "Case sensitive"
-#~ msgstr "대소문자 구분"
-
-#~ msgid "Precision as shown"
-#~ msgstr "표시한 대로 소수점 아래 자릿수"
-
-#~ msgid "Search criteria must apply to whole cell"
-#~ msgstr "검색 기준을 전체 셀에 적용해야 함"
-
-#~ msgid "Automatic find labels"
-#~ msgstr "자동으로 이름표 찾기"
-
-#~ msgid "String comparison:"
-#~ msgstr "문자열 비교:"
-
-#~ msgid "Regular Expressions"
-#~ msgstr "정규 표현식"
-
-#~ msgid "Wildcards"
-#~ msgstr "와일드카드"
-
-#~ msgid "Null Year:"
-#~ msgstr "연도 0:"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "시스템 로캘 설정 사용(&L)"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "언어: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "기본 숫자 서식: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "긴 날짜 서식: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "짧은 날짜 서식: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "시간 서식: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "통화 서식: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "사용자 정의 목록..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "정렬 또는 자동 완성에 사용할 사용자 목록 만들기"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "현재 시트의 모든 셀 선택"
-
-#~ msgid "Custom Lists"
-#~ msgstr "사용자 정의 목록"
-
-#~ msgid "List:"
-#~ msgstr "목록:"
-
-#~ msgid "Entry:"
-#~ msgstr "항목:"
-
-#~ msgid "Add"
-#~ msgstr "추가"
-
-#~ msgid "New"
-#~ msgstr "새로 만들기"
-
-#~ msgid "Remove"
-#~ msgstr "삭제"
-
-#~ msgid "Modify"
-#~ msgstr "수정"
-
-#~ msgid "Copy"
-#~ msgstr "복사"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "이 목록을 삭제하시겠습니까?"
-
-#~ msgid "Remove List"
-#~ msgstr "목록 삭제"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "입력 영역이 비어 있지 않습니다.\n"
-#~ "계속 진행하시겠습니까?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "목표값 찾기(&G)..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "특정한 값을 찾으려고 계산 반복"
-
-# https://support.office.com/ko-kr/article/목표값-찾기를-통해-입력-값을-조정하여-원하는-결과-찾기-320cb99e-f4a4-417f-b1c3-4f369d6e66c7
-#~ msgid "Goal Seek"
-#~ msgstr "목표값 찾기"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "셀 참조가 잘못되었습니다."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "목표 값이 잘못되었습니다."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "원본 셀에 숫자 값이 있어야 합니다."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "대상 셀에 수식이 있어야 합니다."
 
 #~ msgid "Starting..."
 #~ msgstr "시작하는 중..."
@@ -15724,12 +18435,6 @@ msgstr "링크 %1 활성화됨"
 
 #~ msgid "New value:"
 #~ msgstr "새 값:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "셀 %1의 목표값 찾기에서 해를 반환함:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "셀 %1의 목표값 찾기에서 해를 찾지 못했습니다."
 
 #~ msgid "Set cell:"
 #~ msgstr "셀 설정:"
@@ -15745,82 +18450,6 @@ msgstr "링크 %1 활성화됨"
 
 #~ msgid "Current value:"
 #~ msgstr "현재 값:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "바꾸기"
-
-#~ msgid "Selection List..."
-#~ msgstr "선택 목록..."
-
-#~ msgid "More Options"
-#~ msgstr "더 많은 옵션"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "전체 시트 검색"
-
-#~ msgid "Search in:"
-#~ msgstr "다음에서 찾기:"
-
-#~ msgid "Cell Values"
-#~ msgstr "셀 값"
-
-#~ msgid "Comments"
-#~ msgstr "주석"
-
-#~ msgid "Search direction:"
-#~ msgstr "검색 방향:"
-
-#~ msgid "Across then Down"
-#~ msgstr "오른쪽 다음 아래"
-
-#~ msgid "Down then Across"
-#~ msgstr "아래 다음 오른쪽"
-
-#~ msgid "Fewer Options"
-#~ msgstr "더 적은 옵션"
-
-#~ msgid "Cell Format..."
-#~ msgstr "셀 서식..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "셀 서식 설정"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "셀 객체를 클립보드로 이동"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "셀 객체를 클립보드에 복사"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "클립보드의 내용을 커서 위치에 붙여넣기"
-
-#~ msgid "Special Paste..."
-#~ msgstr "선택하여 붙여넣기..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "클립보드의 내용을 선택하여 붙여넣기"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "삽입하며 붙여넣기"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "클립보드의 셀을 스프레드시트에 삽입"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "삽입하며 붙여넣기"
-
-#~ msgid "Insert"
-#~ msgstr "삽입"
-
-#~ msgid "Move towards right"
-#~ msgstr "오른쪽으로 이동"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "아래쪽으로 이동"
-
-#~ msgid "Special Paste"
-#~ msgstr "선택하여 붙여넣기"
 
 #~ msgid "Content"
 #~ msgstr "내용"
@@ -15852,31 +18481,12 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Division"
 #~ msgstr "나누기"
 
-#~ msgid "Check the spelling"
-#~ msgstr "맞춤법 검사"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "다음 시트에서 맞춤법을 검사하시겠습니까?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "맞춤법이 잘못된 단어 수정"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "자동 서식..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "워크시트 서식 설정"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "자동 서식"
-
-#~ msgid "Sheet Style"
-#~ msgstr "시트 스타일"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "적용할 시트 스타일을 선택하십시오:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "그림 %1을(를) 찾을 수 없습니다."
@@ -15884,88 +18494,8 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Could not load image %1."
 #~ msgstr "그림 %1을(를) 불러올 수 없습니다."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "시트 스타일 XML 파일 '%1'을(를) 찾을 수 없습니다."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "시트 스타일 XML 파일 %1을(를) 처리하는 중 오류가 발생했습니다."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "자동 필터(&A)"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "셀 범위에 자동 필터 추가"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "자동 필터"
-
-#~ msgid "Clear All"
-#~ msgstr "모두 지우기"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "현재 셀의 모든 내용 및 서식 지우기"
-
 #~ msgid "Contents"
 #~ msgstr "내용"
-
-#~ msgid "Clear Contents"
-#~ msgstr "내용 지우기"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "현재 셀의 내용 삭제"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "텍스트 지우기"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "조건부 서식 삭제"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "조건부 서식 추가"
-
-#~ msgid "Select a new border color"
-#~ msgstr "새 테두리 색 선택"
-
-#~ msgid "Border Color"
-#~ msgstr "테두리 색"
-
-#~ msgid "Set the background color"
-#~ msgstr "배경색 설정"
-
-#~ msgid "Background Color"
-#~ msgstr "배경색"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "조건부 스타일..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "지정한 조건에 따라 셀 스타일 설정"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "조건부 스타일"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "조건부 스타일 삭제"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "조건부 셀 스타일 삭제"
-
-#~ msgid "&Pivot Tables..."
-#~ msgstr "피벗 테이블(&P)..."
-
-#~ msgid "Create Pivot Tables"
-#~ msgstr "피벗 테이블 만들기"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "여러 셀을 선택해야 합니다."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "숫자 서식"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -15974,78 +18504,6 @@ msgstr "링크 %1 활성화됨"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "백분율 서식"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "시간 서식"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "날짜 서식"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "과학적 서식"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "테두리 색상 변경"
-
-#~ msgid "<none>"
-#~ msgstr "<없음>"
-
-#~ msgid "equal to"
-#~ msgstr "같음"
-
-#~ msgid "greater than"
-#~ msgstr "초과"
-
-#~ msgid "less than"
-#~ msgstr "미만"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "이상"
-
-#~ msgid "equal to or less than"
-#~ msgstr "이하"
-
-#~ msgid "between"
-#~ msgstr "다음 사이"
-
-#~ msgid "outside range"
-#~ msgstr "범위 밖"
-
-#~ msgid "different to"
-#~ msgstr "다름"
-
-#~ msgid "First Condition"
-#~ msgstr "첫 번째 조건"
-
-#~ msgid "Second Condition"
-#~ msgstr "두 번째 조건"
-
-#~ msgid "Third Condition"
-#~ msgstr "세 번째 조건"
-
-#~ msgid "Cell is"
-#~ msgstr "셀이"
-
-#~ msgid "Cell style"
-#~ msgstr "셀 스타일"
-
-#~ msgid "different from"
-#~ msgstr "다름"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr "첫 번째 값이 숫자이면 두 번째 값도 숫자여야 합니다."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr "첫 번째 값이 문자열이면 두 번째 값도 문자열이어야 합니다."
-
-#~ msgid "Select Source"
-#~ msgstr "원본 선택"
 
 #~ msgid "Current Selection"
 #~ msgstr "현재 선택"
@@ -16076,12 +18534,6 @@ msgstr "링크 %1 활성화됨"
 
 #~ msgid "!="
 #~ msgstr "!="
-
-#~ msgid "Pivot Table Configuration Window"
-#~ msgstr "피벗 테이블 설정 창"
-
-#~ msgid "Add Filter"
-#~ msgstr "필터 추가"
 
 #~ msgid "Drag from Labels and drop in the desired field"
 #~ msgstr "레이블에서 끌어다 필요한 필드에 놓으십시오"
@@ -16117,9 +18569,6 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Rows"
 #~ msgstr "행"
 
-#~ msgid "Pivot Options"
-#~ msgstr "피벗 옵션"
-
 #~ msgid "Value Type"
 #~ msgstr "값 서식"
 
@@ -16132,153 +18581,17 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Manual Selection"
 #~ msgstr "수동 선택"
 
-#~ msgid "Product"
-#~ msgstr "곱"
-
 #~ msgid "Sort By"
 #~ msgstr "정렬 순서"
-
-#~ msgid "Select Font..."
-#~ msgstr "글꼴 선택..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "글꼴 크기 선택"
-
-#~ msgid "Font Size"
-#~ msgstr "글꼴 크기"
-
-#~ msgid "Text Color"
-#~ msgstr "글자색"
-
-#~ msgid "Set the text color"
-#~ msgstr "글자색 설정"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "글꼴 변경"
-
-#~ msgid "Style Manager..."
-#~ msgstr "스타일 관리자..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "셀 스타일 편집 및 구성"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "선택한 셀에 미리 정의된 스타일 적용"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "셀에서 스타일 만들기..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "셀에서 스타일"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "현재 선택한 셀의 스타일에서 새 스타일 만들기"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "셀에서 스타일 만들기"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "스타일 이름을 비워 둘 수 없습니다."
-
-#~ msgid "Style Manager"
-#~ msgstr "스타일 관리자"
-
-#~ msgid "All Styles"
-#~ msgstr "모든 스타일"
-
-#~ msgid "Custom Styles"
-#~ msgstr "사용자 정의 스타일"
-
-#~ msgid "Hierarchical"
-#~ msgstr "계층적"
-
-#~ msgid "&New..."
-#~ msgstr "새로 만들기(&N)..."
-
-#~ msgid "&Modify..."
-#~ msgstr "수정(&M)..."
-
-#~ msgid "&Delete..."
-#~ msgstr "삭제(&D)..."
-
-#~ msgid "style%1"
-#~ msgstr "스타일%1"
 
 #~ msgid "Cells..."
 #~ msgstr "셀..."
 
-#~ msgid "Insert Cells..."
-#~ msgstr "셀 삽입..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "스프레드시트에 빈 셀 삽입"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "셀 삭제..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "스프레드시트에서 셀 삭제"
-
 #~ msgid "Delete Cells..."
 #~ msgstr "셀 삭제..."
 
-#~ msgid "Insert rows"
-#~ msgstr "행 삽입"
-
-#~ msgid "Insert columns"
-#~ msgstr "열 삽입"
-
-#~ msgid "Insert Cells"
-#~ msgstr "셀 삽입"
-
-#~ msgid "Move towards left"
-#~ msgstr "왼쪽으로 이동"
-
-#~ msgid "Move towards top"
-#~ msgstr "위쪽으로 이동"
-
-#~ msgid "Remove rows"
-#~ msgstr "행 삭제"
-
-#~ msgid "Remove columns"
-#~ msgstr "열 삭제"
-
-#~ msgid "Remove Cells"
-#~ msgstr "셀 삭제"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "부분합(&S)..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "목록 또는 데이터베이스에서 다른 종류의 부분합 계산"
-
-#~ msgid "Subtotals"
-#~ msgstr "부분합"
-
-#~ msgid "Remove All"
-#~ msgstr "모두 삭제"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "부분합을 추가하려면 하나 이상의 열을 선택해야 합니다."
-
 #~ msgid "Grand Total"
 #~ msgstr "총 합계"
-
-#~ msgid "Column '%1' "
-#~ msgstr "열 '%1'"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "현재 부분합 교체(&C)"
@@ -16304,45 +18617,6 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "부분합을 다음에 더함:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "셀로 이동..."
-
-#~ msgid "Goto"
-#~ msgstr "이동"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "지정한 셀로 이동"
-
-#~ msgid "Break Before Column"
-#~ msgstr "열 앞에서 나누기"
-
-#~ msgid "Column Break"
-#~ msgstr "열 나누기"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "열 앞에 수동 쪽 나누기 설정"
-
-#~ msgid "Break Before Row"
-#~ msgstr "행 앞에서 나누기"
-
-#~ msgid "Row Break"
-#~ msgstr "행 나누기"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "행 앞에 수동 쪽 나누기 설정"
-
-#~ msgid "Goto Cell"
-#~ msgstr "셀로 이동"
-
-#~ msgid "Enter cell:"
-#~ msgstr "셀 입력:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "통합(&S)..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "비슷한 영역 그룹에서 요약 데이터 영역 만들기"
-
 #~ msgid "Description in rows"
 #~ msgstr "행의 설명"
 
@@ -16351,39 +18625,6 @@ msgstr "링크 %1 활성화됨"
 
 #~ msgid "Copy data"
 #~ msgstr "데이터 복사"
-
-#~ msgid "Consolidate"
-#~ msgstr "통합"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "표준 편차"
-
-#~ msgid "Variance"
-#~ msgstr "분산"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "원본 범위를 하나 이상 정의해야 합니다."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1은(는) 올바른 셀 범위가 아닙니다."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "범위\n"
-#~ "%1이(가)\n"
-#~ "너무 작음"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "범위\n"
-#~ "%1이(가)\n"
-#~ "너무 큼"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16398,22 +18639,6 @@ msgstr "링크 %1 활성화됨"
 #~ "크기가\n"
 #~ "다름"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "통합"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "원본 범위가 대상 범위와 교차합니다."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "범위\n"
-#~ "%1이(가)\n"
-#~ "잘못됨"
-
 #~ msgid "Function:"
 #~ msgstr "함수:"
 
@@ -16423,201 +18648,17 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Entered references:"
 #~ msgstr "입력한 참조:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "각도 변경..."
-
-#~ msgid "Angle"
-#~ msgstr "각도"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "셀 내용을 표시할 각도 변경"
-
-#~ msgid "Increase Precision"
-#~ msgstr "소수점 아래 자릿수 증가"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "화면에 표시된 소수점 아래 자릿수 증가"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "소수점 아래 자릿수 감소"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "화면에 표시된 소수점 아래 자릿수 감소"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "소수점 아래 자릿수 증가"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "소수점 아래 자릿수 감소"
-
-#~ msgid "Change Angle"
-#~ msgstr "각도 변경"
-
-#~ msgid "Angle:"
-#~ msgstr "각도:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "각도 변경"
-
-#~ msgid "Area Name..."
-#~ msgstr "영역 이름..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "스프레드시트 영역의 이름 설정"
-
-#~ msgid "Named Areas..."
-#~ msgstr "이름이 있는 영역..."
-
-#~ msgid "Named Areas"
-#~ msgstr "이름이 있는 영역"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "이름이 있는 영역 편집 또는 선택"
-
-#~ msgid "Add Named Area"
-#~ msgstr "이름이 있는 영역 추가"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "영역 이름을 입력하십시오:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "이름이 있는 영역 '%1'이(가) 이미 있습니다.\n"
-#~ "덮어쓰시겠습니까?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "이름이 있는 영역 바꾸기"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "이름이 있는 영역 바꾸기"
-
 #~ msgid "&Select"
 #~ msgstr "선택(&S)"
 
-#~ msgid "Area: %1"
-#~ msgstr "영역: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "편집(&E)..."
-
-#~ msgid "&Remove"
-#~ msgstr "삭제(&R)"
 
 #~ msgid "New Named Area"
 #~ msgstr "새로운 이름이 있는 영역"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "이름이 있는 영역 편집"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "이 이름이 있는 영역을 삭제하시겠습니까?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "이름이 있는 영역 삭제"
-
-#~ msgid "Cells:"
-#~ msgstr "셀:"
-
-#~ msgid "Sheet:"
-#~ msgstr "시트:"
-
-#~ msgid "Area name:"
-#~ msgstr "영역 이름:"
-
-#~ msgid "Align Left"
-#~ msgstr "왼쪽 정렬"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "셀 내용을 왼쪽 정렬"
-
-#~ msgid "Align Center"
-#~ msgstr "가운데 정렬"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "셀 내용을 가운데 정렬"
-
-#~ msgid "Align Right"
-#~ msgstr "오른쪽 정렬"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "셀 내용을 오른쪽 정렬"
-
-#~ msgid "Align Top"
-#~ msgstr "위쪽 정렬"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "셀 내용을 위쪽으로 정렬"
-
-#~ msgid "Align Middle"
-#~ msgstr "수직 가운데 정렬"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "셀 내용을 수직 가운데로 정렬"
-
-#~ msgid "Align Bottom"
-#~ msgstr "아래쪽 정렬"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "셀 내용을 아래쪽으로 정렬"
-
-#~ msgid "Border Left"
-#~ msgstr "왼쪽 테두리"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "선택한 영역의 왼쪽 테두리 설정"
-
-#~ msgid "Border Right"
-#~ msgstr "오른쪽 테두리"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "선택한 영역의 오른쪽 테두리 설정"
-
-#~ msgid "Border Top"
-#~ msgstr "위쪽 테두리"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "선택한 영역의 위쪽 테두리 설정"
-
-#~ msgid "Border Bottom"
-#~ msgstr "아래쪽 테두리"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "선택한 영역의 아래쪽 테두리 설정"
-
-#~ msgid "All Borders"
-#~ msgstr "모든 테두리"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "선택한 영역의 모든 셀의 테두리 설정"
-
-#~ msgid "No Borders"
-#~ msgstr "테두리 없음"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "선택한 영역의 모든 테두리 삭제"
-
-#~ msgid "Border Outline"
-#~ msgstr "테두리 외곽선"
-
-#~ msgid "Outline"
-#~ msgstr "외곽선"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "선택한 영역의 외곽선으로 테두리 설정"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "가로 정렬 변경"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "세로 정렬 변경"
 
 #~ msgid "Australia"
 #~ msgstr "오스트레일리아"
@@ -18428,61 +20469,6 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "짐바브웨 달러"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "기본 서식으로 초기화"
-
-#~ msgid "Strike Out"
-#~ msgstr "취소선"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "글꼴 크기 증가"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "글꼴 크기 감소"
-
-#~ msgid "Wrap Text"
-#~ msgstr "텍스트 자동 줄 바꿈"
-
-#~ msgid "Wrap"
-#~ msgstr "자동 줄 바꿈"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "셀 텍스트를 여러 줄로 자동으로 바꿈"
-
-#~ msgid "Vertical Text"
-#~ msgstr "세로 텍스트"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "셀 내용을 세로로 표시"
-
-#~ msgid "Percent Format"
-#~ msgstr "백분율 형식"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "셀 서식을 백분율로 표시하도록 설정"
-
-#~ msgid "Money Format"
-#~ msgstr "통화 형식"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "셀 서식을 통화로 표시하도록 설정"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "텍스트 자동 줄 바꿈"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "세로 텍스트"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "백분율 서식 지정"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "통화 서식 지정"
-
 #~ msgid "&Data Format"
 #~ msgstr "데이터 서식(&D)"
 
@@ -18537,9 +20523,6 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Default height (%1)"
 #~ msgstr "기본 높이(%1)"
 
-#~ msgid "Height:"
-#~ msgstr "높이:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "셀의 높이를 설정하십시오."
 
@@ -18551,440 +20534,32 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Default width (%1)"
 #~ msgstr "기본 너비(%1)"
 
-#~ msgid "Width:"
-#~ msgstr "너비:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "주석 추가"
-
-#~ msgid "Increase Indent"
-#~ msgstr "들어쓰기 증가"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "들여쓰기 증가"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "들여쓰기 감소"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "들여쓰기 감소"
-
-#~ msgid "Upper Case"
-#~ msgstr "대문자"
-
-#~ msgid "Upper"
-#~ msgstr "대문자로"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "모든 글자를 대문자로 변환"
-
-#~ msgid "Lower Case"
-#~ msgstr "소문자"
-
-#~ msgid "Lower"
-#~ msgstr "소문자로"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "모든 글자를 소문자로 변환"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "첫 글자를 대문자로 변환"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "첫 글자 대문자로"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "첫 글자를 대문자로 변환"
-
-#~ msgid "Comment..."
-#~ msgstr "주석..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "이 셀의 주석 편집"
-
-#~ msgid "Remove Comment"
-#~ msgstr "주석 삭제"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "이 셀의 주석 삭제"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "대문자로 전환"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "소문자로 전환"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "첫 글자 대문자"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "주석 삭제"
-
-#~ msgid "Clear Comment"
-#~ msgstr "설명 지우기"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "대소문자 변경"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "들여쓰기 증가"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "들여쓰기 감소"
-
-#~ msgid "Cell Comment"
-#~ msgstr "셀 주석"
-
-#~ msgid "&Left"
-#~ msgstr "왼쪽(&L)"
-
-#~ msgid "&Right"
-#~ msgstr "오른쪽(&R)"
-
 #~ msgid "&Up"
 #~ msgstr "위(&U)"
-
-#~ msgid "&Down"
-#~ msgstr "아래(&D)"
-
-#~ msgid "Autosum"
-#~ msgstr "자동 합계"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "'sum' 함수 삽입"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "선택 채우기"
-
-#~ msgid "From &Text File..."
-#~ msgstr "텍스트 파일에서(&T)..."
-
-#~ msgid "Text File"
-#~ msgstr "텍스트 파일"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "현재 커서 위치/선택 영역에 텍스트 파일에서 데이터 삽입"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "클립보드에서(&C)..."
 
-#~ msgid "Clipboard"
-#~ msgstr "클립보드"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "현재 커서 위치/선택 영역에 클립보드에서 CSV 데이터 삽입"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "텍스트를 열로(&T)..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "셀 내용을 여러 열로 확장"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "클립보드에서 삽입"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "클립보드에 데이터가 없습니다."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "클립보드에 사용 가능한 데이터가 없습니다."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "CSV 데이터 파일 가져오기"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "CSV 데이터 파일(*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "텍스트를 열로"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "입력 파일을 열 수 없습니다."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "클립보드에서 삽입"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "텍스트 파일 삽입"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "텍스트를 열로"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "선택한 영역 병합"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "가로로 셀 병합"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "선택한 영역을 가로로 병합"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "세로로 셀 병합"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "선택한 영역을 세로로 병합"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "셀 병합 해제"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "선택한 영역 병합 해제"
-
-#~ msgid "Resize Column..."
-#~ msgstr "열 크기 조정..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "열 너비 변경"
-
-#~ msgid "Insert Columns"
-#~ msgstr "열 삽입"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "스프레드시트에 새 열 삽입"
-
-#~ msgid "Remove Columns"
-#~ msgstr "열 삭제"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "스프레드시트에서 선택한 열 삭제"
-
-#~ msgid "Hide Columns"
-#~ msgstr "열 숨기기"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "이 열 숨기기"
-
-#~ msgid "Show Columns..."
-#~ msgstr "열 표시..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "숨겨진 열 표시"
-
-#~ msgid "Equalize Column"
-#~ msgstr "열 크기 맞추기"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "선택한 열의 크기를 똑같이 맞춤"
-
-#~ msgid "Show Columns"
-#~ msgstr "열 표시"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "선택에 숨겨진 열 표시"
-
-#~ msgid "Resize Row..."
-#~ msgstr "행 크기 조정..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "행 높이 변경"
-
-#~ msgid "Insert Rows"
-#~ msgstr "행 삽입"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "스프레드시트에 새 행 삽입"
-
-#~ msgid "Remove Rows"
-#~ msgstr "행 삭제"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "스프레드시트에서 행 삭제"
-
-#~ msgid "Hide Rows"
-#~ msgstr "행 숨기기"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "이 행 숨기기"
 
-#~ msgid "Show Rows..."
-#~ msgstr "행 표시..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "숨겨진 행 표시"
-
-#~ msgid "Equalize Row"
-#~ msgstr "행 크기 맞추기"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "선택한 행의 크기를 똑같이 맞춤"
-
-#~ msgid "Show Rows"
-#~ msgstr "행 표시"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "선택에 숨겨진 행 표시"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "행 및 열 조정"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "내용에 맞게 행/열 크기 조절"
-
-#~ msgid "Adjust Column"
-#~ msgstr "열 조정"
-
 #~ msgid "Delete Columns"
 #~ msgstr "열 삭제"
-
-#~ msgid "Adjust Row"
-#~ msgstr "행 조정"
 
 #~ msgid "Delete Rows"
 #~ msgstr "행 삭제"
 
-#~ msgid "Resize Row"
-#~ msgstr "행 크기 조정"
-
-#~ msgid "Resize Column"
-#~ msgstr "열 크기 조정"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "표시할 숨겨진 열 선택:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "표시할 숨겨진 행 선택:"
-
-#~ msgid "Column: %1"
-#~ msgstr "열: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "행: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "링크(&L)..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "인터넷 하이퍼링크 삽입"
-
-#~ msgid "Link"
-#~ msgstr "링크"
-
-#~ msgid "Remove Link"
-#~ msgstr "링크 삭제"
-
-#~ msgid "Remove a link"
-#~ msgstr "링크 삭제"
-
-#~ msgid "Insert Link"
-#~ msgstr "링크 삽입"
-
 #~ msgid "Edit Link"
 #~ msgstr "링크 편집"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "링크 삭제"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "링크 설정"
-
-#~ msgid "Internet"
-#~ msgstr "인터넷"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "인터넷 주소로 링크"
-
-#~ msgid "Text to display:"
-#~ msgstr "표시할 텍스트:"
-
-#~ msgid "Internet address:"
-#~ msgstr "인터넷 주소:"
-
-#~ msgid "Email"
-#~ msgstr "이메일"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "이메일 주소로 링크"
-
-#~ msgid "Email address:"
-#~ msgstr "이메일 주소:"
-
-#~ msgid "Subject:"
-#~ msgstr "제목:"
-
-#~ msgid "File"
-#~ msgstr "파일"
-
-#~ msgid "Link to File"
-#~ msgstr "파일로 링크"
-
-#~ msgid "File location:"
-#~ msgstr "파일 위치:"
-
-#~ msgid "Recent file:"
-#~ msgstr "최근 파일:"
-
-#~ msgid "No Entries"
-#~ msgstr "항목 없음"
-
-#~ msgid "Link to Cell"
-#~ msgstr "셀로 링크"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "셀 또는 이름이 있는 영역:"
-
-#~ msgid "&Sort..."
-#~ msgstr "정렬(&S)..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "셀 그룹 정렬"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "내림차순 정렬(&D)"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "셀 그룹을 내림차순(마지막부터 처음)으로 정렬"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "오름차순 정렬(&I)"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "셀 그룹을 오름차순(처음부터 마지막)으로 정렬"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "데이터 정렬"
 
 #~ msgid "Use custom list"
 #~ msgstr "사용자 정의 목록 사용"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "셀 서식 복사(테두리, 색상, 텍스트 스타일)"
-
-#~ msgid "Column %1"
-#~ msgstr "열 %1"
-
-#~ msgid "Row %1"
-#~ msgstr "행 %1"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "첫 번째 열에 행 머리글이 들어 있음(&F)"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "첫 번째 행에 열 머리글이 들어 있음(&F)"
-
-#~ msgid "Sort"
-#~ msgstr "정렬"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "대소문자 구분 안 함"
 
 #~ msgid "Move Up"
 #~ msgstr "위로 이동"
@@ -19046,219 +20621,8 @@ msgstr "링크 %1 활성화됨"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "행으로 그룹화된 데이터 세로로 정렬"
 
-#~ msgid "Validity..."
-#~ msgstr "유효성..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "셀 데이터 유효성 검사 설정"
-
-#~ msgid "Validity"
-#~ msgstr "유효성"
-
-#~ msgid "Remove Validity"
-#~ msgstr "유효성 검사 삭제"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "이 셀의 유효성 검사 삭제"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "유효성 검사 삭제"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "유효성 검사 추가"
-
-#~ msgid "Clear &All"
-#~ msgstr "모두 지우기(&A)"
-
 #~ msgid "&Criteria"
 #~ msgstr "조건(&C)"
-
-#~ msgid "Allow:"
-#~ msgstr "허용:"
-
-#~ msgid "Integer"
-#~ msgstr "정수"
-
-#~ msgid "Text Length"
-#~ msgstr "텍스트 길이"
-
-#~ msgid "List"
-#~ msgstr "목록"
-
-#~ msgid "Allow blanks"
-#~ msgstr "공백 허용"
-
-#~ msgid "Data:"
-#~ msgstr "데이터:"
-
-#~ msgid "Minimum:"
-#~ msgstr "최솟값:"
-
-#~ msgid "Maximum:"
-#~ msgstr "최댓값:"
-
-#~ msgid "Date:"
-#~ msgstr "날짜:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "날짜 최솟값:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "날짜 최댓값:"
-
-#~ msgid "Time:"
-#~ msgstr "시간:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "시간 최솟값:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "시간 최댓값:"
-
-#~ msgid "Number:"
-#~ msgstr "숫자:"
-
-#~ msgid "Entries:"
-#~ msgstr "항목:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "오류 알림(&E)"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "잘못된 값을 입력했을 때 오류 메시지 표시"
-
-#~ msgid "Action:"
-#~ msgstr "동작:"
-
-#~ msgid "Stop"
-#~ msgstr "정지"
-
-#~ msgid "Warning"
-#~ msgstr "경고"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "제목:"
-
-#~ msgid "Message:"
-#~ msgstr "메시지:"
-
-#~ msgid "Input Help"
-#~ msgstr "입력 도움말"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "셀을 선택할 때 입력 도움말 표시"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "올바른 값이 아닙니다."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "잘못된 시간입니다."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "잘못된 날짜입니다."
-
-#~ msgid "&Series..."
-#~ msgstr "계열(&S)..."
-
-#~ msgid "Insert a series"
-#~ msgstr "계열 삽입"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "계열 삽입"
-
-#~ msgid "Select Character"
-#~ msgstr "문자 선택"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "선택한 문자를 텍스트에 삽입"
-
-#~ msgid "Series"
-#~ msgstr "계열"
-
-#~ msgid "Insert Values"
-#~ msgstr "값 삽입"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "계열을 수직으로 위에서 아래로 삽입합니다"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "계열을 수평으로 왼쪽에서 오른쪽으로 삽입합니다"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "선형(2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "'시작'에서 '종료' 값까지 '단계'를 더해 나가는 계열을 만듭니다. 각 값은 이"
-#~ "전 값보다 '단계'만큼 큽니다."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "기하(2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "'시작'에서 '종료' 값까지 '단계'를 곱해 나가는 계열을 만듭니다. 단계를 5로 "
-#~ "설정하면 5 곱하기 5는 25, 25 곱하기 5는 125, 125 곱하기 5는 625이므로 5, "
-#~ "25, 125, 625와 같은 계열을 생성합니다."
-
-#~ msgid "Start value:"
-#~ msgstr "시작 값:"
-
-#~ msgid "Stop value:"
-#~ msgstr "종료 값:"
-
-#~ msgid "Step value:"
-#~ msgstr "단계 값:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "종료 및 시작 값은 양수여야 합니다."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr "종료 값은 시작 값보다 크거나 단계가 '1'보다 작아야 합니다."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "시작, 종료, 단계 값은 0이 아니어야 합니다."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "단계 값은 1이 아니어야 함"
-
-#~ msgid "Step is negative."
-#~ msgstr "단계가 음수입니다."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr "단계 값은 0보다 커야 합니다. 그렇지 않으면 선형 계열이 무한합니다."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr "시작 값이 종료 값보다 크다면 단계는 0보다 작아야 합니다."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr "단계 값이 음수이면 시작 값이 종료 값보다 커야 합니다."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "특수 문자(&P)..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr "키보드에 없는 하나 이상의 기호 또는 문자 삽입"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "인터넷 주소가 비어 있음"

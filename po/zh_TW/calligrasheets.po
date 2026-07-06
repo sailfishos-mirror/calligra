@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2025-11-24 20:51+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -145,8 +145,13 @@ msgstr "標頭"
 msgid "Header1"
 msgstr "標頭1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "預設"
@@ -178,7 +183,8 @@ msgstr "秒"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "文字"
@@ -249,7 +255,8 @@ msgstr "<p><b>傳回類型：</b>%1</p>"
 msgid "Syntax"
 msgstr "語法"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "參數"
@@ -861,14 +868,15 @@ msgstr "CARY(12;0) 傳回 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "數字"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "格式"
@@ -924,6 +932,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") 傳回 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "資料庫"
@@ -1201,6 +1211,7 @@ msgstr "日期與時間"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1272,7 +1283,8 @@ msgstr "DAYS360(\"2/22/2002\"; \"4/21/2002\"; FALSE) 傳回 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "時間"
@@ -4753,6 +4765,7 @@ msgid "Regular payments"
 msgstr "正規付款"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "類型"
@@ -5065,12 +5078,19 @@ msgstr "手動"
 msgid "Automatic"
 msgstr "自動"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "資訊"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "錯誤"
@@ -5851,7 +5871,7 @@ msgstr ""
 msgid "Math"
 msgstr "數學"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "函數"
@@ -6326,6 +6346,7 @@ msgid "Range"
 msgstr "範圍"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "標準"
@@ -7846,6 +7867,7 @@ msgid "Row"
 msgstr "列"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "欄"
@@ -12221,7 +12243,7 @@ msgid "&Go"
 msgstr "跳到(&G)"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "插入(&I)"
@@ -12239,7 +12261,7 @@ msgid "F&ormat"
 msgstr "格式(&O)"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "合併儲存格"
@@ -12318,8 +12340,8 @@ msgstr "啟用"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "字型"
@@ -12718,14 +12740,16 @@ msgstr "頁面限制："
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "水平"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "垂直"
@@ -12752,13 +12776,15 @@ msgid "Up"
 msgstr "上"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "置右"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "置左"
@@ -12770,36 +12796,50 @@ msgstr "下，第一欄"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "無"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "總計"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "最小值"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "最大值"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "平均"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "計數"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "計數A"
@@ -13183,7 +13223,8 @@ msgstr "清除選擇"
 msgid "Move selected sheet to the bottom"
 msgstr "將所選的工作表移到底端"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "區分大小寫"
@@ -13384,6 +13425,7 @@ msgid "Anchor"
 msgstr "定錨點"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "儲存格"
@@ -13403,7 +13445,7 @@ msgstr "切換元件定錨點"
 msgid "Next Sheet"
 msgstr "下一個工作表"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "下一個"
@@ -13418,7 +13460,7 @@ msgstr "移至下一個工作表"
 msgid "Previous Sheet"
 msgstr "上一個工作表"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "上一個"
@@ -13623,7 +13665,7 @@ msgstr ""
 "您即將移除作用中的工作表。\n"
 "您要繼續嗎？"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "輸入名稱："
@@ -13683,21 +13725,3129 @@ msgstr "計數A："
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr "變更文字顏色"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr "變更背景顏色"
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr "變更框線"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "插入欄"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "插入列"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "移除欄"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "移除列"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "插入新的一列至工作表中"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "從工作表中移除一列"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "插入新的一欄至工作表中"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "將選取的欄位從工作表中移除"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "隱藏欄"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "隱藏列"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "顯示欄"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "顯示列"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "顯示選擇區中隱藏的列"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "合併所選取的區域"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "顯示選擇區中隱藏的欄"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "合併所選取的區域"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "平均分配欄寬"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "平均分配列高"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "改變選擇的列為相同大小"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "改變選擇的欄為相同大小"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "調整欄"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "調整列"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "調整列與欄"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr "調整列/欄的大小以符合內容"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr "調整列/欄的大小以符合內容"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr "調整列/欄的大小以符合內容"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "顯示欄..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "顯示列..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "顯示隱藏的欄"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "顯示隱藏的列"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "欄： %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "列： %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "改變欄的大小..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "改變列的大小..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "改變列的高度"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "改變欄的寬度"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "靠左對齊"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "靠左對齊儲存格內容"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr "變更水平排列"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "靠右對齊"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "靠右對齊儲存格內容"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "置中對齊"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "置中對齊儲存格內容"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "置中"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "向上對齊"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "儲存格內容對齊儲存格頂端"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "置頂"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr "變更垂直排列"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "向下對齊"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "儲存格內容對齊儲存格底部"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "置底"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "向中央對齊"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "儲存格內容對齊儲存格中央"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "置中"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "改變角度..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "改變儲存格內容列印時的角度"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "角度"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr "改變角度"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "自動過濾(&A)"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "將自動過濾器新增到指定範圍內的儲存格"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr "自動過濾"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "對所選取的儲存格套用預先定義的樣式"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "自動格式化..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "無法找到工作表樣式的 XML 檔案 %1。"
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "工作表樣式 XML 檔案 %1 剖析錯誤。"
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr "自動格式化"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "自動加總"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "插入“sum”函數"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "自動加總"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "左邊框"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "設定選擇區域的左邊框"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "右邊框"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "設定選擇區域的右邊框"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "上邊框"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "設定選擇區域的上邊框"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "下邊框"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "設定選擇區域的下邊框"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "所有邊框"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "設定選擇區域四周的邊框"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "全部"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "沒有邊框"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "移除選擇區域的所有邊框"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "邊框輪廓"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "設定選擇區域輪廓的框線"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "輪廓"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "框線顏色"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "選擇新的框線顏色"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr "改變框線顏色"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "插入儲存格..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "插入空白儲存格至工作表中"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "移除儲存格..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "將儲存格從工作表中移除"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "全部清除"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "刪除目前儲存格中的所有內容與格式"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "清除內容"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "移除目前儲存格的內容"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr "清除文字"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr "刪除"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "註解..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "編輯此儲存格的註解"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "清除註解"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "移除此儲存格的註解"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "移除註解"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr "移除註解"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr "新增註解"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "有條件的儲存格樣式..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "基於某種條件設定儲存格樣式"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "有條件樣式"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "移除有條件的儲存格樣式"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "移除有條件的儲存格樣式"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr "移除條件格式"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr "新增條件格式"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "聯合(&C)..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "從類似範圍的群組中建立摘要資料的範圍"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr "聯合"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "複製儲存格物件至剪貼簿"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "將儲存格物件移動到剪貼簿"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "從文字檔案(&T)..."
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr "插入文字檔案的資料到目前游標位置/選擇區"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "文字檔案"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr ""
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "不能開啟輸入的檔案。"
+
+#: ui/actions/CSVActions.cpp:77
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Inserting Text File"
+msgid "Inserting Text File"
+msgstr "插入文字檔案"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr "插入文字檔案"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "從剪貼簿插入"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr "插入剪貼簿的 csv 資料到目前游標位置/選擇區"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "剪貼簿"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "剪貼簿中沒有資料。"
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "剪貼簿中沒有可用的資料。"
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "從剪貼簿插入"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr "從剪貼簿插入"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "轉換文字為欄(&T)..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "擴充儲存格的內容為多欄"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "轉換文字為欄"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr "轉換文字為欄"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr "建立用於排序或自動填滿的自訂清單"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "自訂清單..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "新增命名區域"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "輸入區域名稱："
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "改變角度"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "角度："
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr "自動格式化"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "選擇要套用的工作表樣式："
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "選擇字元"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "舊文字中會被替換的文字"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "儲存格註解"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<無>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "等於"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "大於"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "小於"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "大於等於"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "小於等於"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "於中間"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "外部範圍"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "相異於"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "第一個條件"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "第二個條件"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "第三個條件"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "儲存格是"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "儲存格樣式"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "相異於"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr "第一個值是數字的話，第二個值也必須是數字。"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr "第一個值是字串的話，第二個值也必須是字串。"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "聯合"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "乘積"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "標準差"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "變異數"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "您必須定義至少一個來源範圍。"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 不是一個合法的儲存格範圍。"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"範圍\n"
+"%1\n"
+"太小"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"範圍\n"
+"%1\n"
+"太大"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "來源範圍與目的範圍相交錯。"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"範圍\n"
+"%1\n"
+"是不正確的"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "從資料庫插入資料"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "類型："
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "資料庫名稱："
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "主機："
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"埠號：\n"
+"（如果需要）"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"使用者名稱：\n"
+"（如果需要）"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"密碼：\n"
+"（如果需要）"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "選擇表格："
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "表格"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "選擇欄："
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "表格"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "欄"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "符合下列所有條件(AND)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "符合下列任一條件(OR)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "等於"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "不等於"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "包含於"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "不包含於"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "類似"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "大於"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "小於"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "大於或等於"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "小於或等於"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "排序依"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "遞增"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "遞減"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "不同"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "查詢選項"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "SQL 查詢："
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "在範圍中插入"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "開始於儲存格"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "結果"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "您不能在這裡指定表格。"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "您必須指定一個合法的範圍。"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "您必須指定合法的儲存格。"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "執行查詢失敗。"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "這次查詢沒有查到任何結果。"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr "從資料庫插入資料"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "埠號必須是數字"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "連接資料庫..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "已連線。取回表格資訊..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "這個資料庫中沒有表格"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "無法載入驅動程式"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "取回表格的共同資料(meta data)..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "您必須選擇至少一個表格。"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "您必須選擇至少一欄。"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"'*' 或 '?' 在 SQL 中不是合法的萬用字元。正確的替代品是 '%' 和 '_'。 您是否要"
+"更換它們？"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr "取代"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "文件設定"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Calculation mode"
+msgid "Calculation"
+msgstr "計算模式"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, fuzzy, kde-format
+#| msgid "Case Insensitive"
+msgid "Case sensitive"
+msgstr "區分大小寫"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Precision"
+msgid "Precision as shown"
+msgstr "精確度"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, fuzzy, kde-format
+#| msgid "Automatic"
+msgid "Automatic find labels"
+msgstr "自動"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "String to compare with"
+msgid "String comparison:"
+msgstr "要比較的字串"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, fuzzy, kde-format
+#| msgid "Regular expression"
+msgid "Regular Expressions"
+msgstr "正規表示式"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr ""
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "使用系統區域化設定(&U)"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "語言：%1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "預設數字格式：%1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "長日期格式：%1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "短日期格式：%1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "時間格式：%1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "貨幣格式：%1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "更多選項"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "搜尋整個工作表"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "搜尋於："
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "儲存格數值"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "註解"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "搜尋方向："
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "先橫向再往下"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "先往下再橫向"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "較少選項"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Function"
+msgid "Set Function"
+msgstr "函數"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "插入函數"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "說明"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "這個函數沒有參數。"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "沒有可用的描述。"
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "目標搜索"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "移至儲存格"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "輸入儲存格："
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "插入"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "移向右邊"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "移向底部"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "插入列"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "插入欄"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "插入儲存格"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "移除"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "移向左邊"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "移向頂部"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "移除列"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "移除欄"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "移除儲存格"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "插入連結"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "網際網路"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "連結到網際網路位址"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "顯示的文字："
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "網路位址："
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "電子郵件"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "連結到電子郵件地址"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "電子郵件地址："
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "主旨："
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "檔案"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "連結到檔案"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "檔案位置："
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "最近使用的檔案："
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "沒有項目"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "連結到儲存格"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "儲存格或命名區域："
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "自訂清單"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr "變更大小寫"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "清單："
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "項目："
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "加入"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "取消"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "新增"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "變更"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "複製"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "您真的要移除這個清單嗎？"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "移除清單"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"項目區域不是空的。\n"
+"您要繼續嗎？"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "命名區域"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "區域： %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "儲存格："
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "工作表："
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "區域名稱："
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "移除(&R)"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "開啟/儲存"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "您真的要移除這個命名區域嗎？"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "移除命名區域"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "儲存格參照是不合法的。"
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "貼上插入儲存格"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, fuzzy, kde-format
+#| msgid "Select Character"
+msgid "Select Source"
+msgstr "選擇字元"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr ""
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, fuzzy, kde-format
+#| msgid "Filter"
+msgid "Add Filter"
+msgstr "過濾器"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, fuzzy, kde-format
+#| msgid "Bit Operations"
+msgid "Pivot Options"
+msgstr "位元操作"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "重設列的大小"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "高度："
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "重設欄的大小"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "寬度："
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "級數"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr "插入級數"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "插入數值"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "垂直地插入級數，從上到下"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "水平地插入級數，從左到右"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "等差級數 (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"產生一個從“開始”到“結束”的級數，而每一階段都會加上在級距中提供的數值。這樣建"
+"立的級數裡每個值都比前一個多出一個級距。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "等比級數 (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"產生一個從“開始”到“結束”的級數，而每一階段都會乘上在級距中提供的數值。使用 5 "
+"為級距所產生的數列為： 5,25, 125, 625 因為 5 乘 5(級距)等於 25 ，之後再乘以 "
+"5 等於 125 ，再乘上同樣的級距則等於 625 。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "開始值："
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "結束值："
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "級距值："
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "結束與開始值必須為正數。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr "結束值必須大於開始值，或者級距必須小於 1。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr "開始值、結束值與級距都不能等於 0。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "級距值必須不為 1。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "級距值是負數。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr "級距值必須大於 0 。否則等差級數會無止盡。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr "如果開始值大於結束值則級距必須小於 0。"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr "如果級距為負數，則開始值必須大於結束值。"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "選擇要顯示的隱藏列："
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "選擇要顯示的隱藏欄："
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "欄 %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "列 %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "第一欄包含列標頭(&F)"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "第一列包含欄標頭(&F)"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "排序"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "區分大小寫"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "特定貼上"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr ""
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "樣式管理員"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "樣式"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "所有樣式"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "自訂的樣式"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "階層"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "新增(&N)"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "變更(&M)..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "刪除(&D)..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "樣式 %1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "小計"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "全部移除"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "欄“%1”"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "您必須選擇至少一個要加入小計的欄。"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "有效性"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "全部清除(&A)"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "允許："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "整數"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "文字長度"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "清單"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "允許空白"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "資料："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "最小值："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "最大值："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "日期："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "日期最小值："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "日期最大值："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "時間："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "時間最小值："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "時間最大值："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "數字："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "項目："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "錯誤警告(&E)"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr "當輸入不合法的值時顯示錯誤訊息"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "動作："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "停止"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "警告"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "標題："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "訊息："
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "輸入說明"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr "選擇儲存格式顯示輸入說明"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "這不是一個合法的數值。"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "這不是一個合法的時間。"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "這不是一個合法的日期。"
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "文件設定..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "顯示文件設定對話框"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "編輯突顯的儲存格"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "修改儲存格"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "排列定位"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "在游標處排列參考定位"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "下(&D)"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "左(&L)"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "右(&R)"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr "填滿選擇區"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr "取代"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "選擇字型..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "設定儲存格格式"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr "改變字型"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "選擇字型大小"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "設定儲存格格式"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "字型大小"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "設定文字顏色"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "文字顏色"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "函數(&F)..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "插入數學表示式"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "公式選擇區"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "插入函數"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "其它..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "目標搜索(&G)..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "重複計算以找尋指定的數值"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "儲存格參照是不合法的。"
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "目標值是不合法的。"
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "來源儲存格必須包含數字值。"
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "目標儲存格必須包含公式。"
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "以儲存格 %1 進行目標搜索找到一個解："
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "以儲存格 %1 進行目標搜索找不到解。"
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "移至儲存格..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "移動到特定的儲存格"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "移至"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "這不是一個合法的時間。"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "遞減縮排"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "遞增縮排"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "遞減縮排"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "遞增縮排"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr "遞增縮排"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr "遞減縮排"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "從資料庫(&D)..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "插入 SQL 資料庫的資料"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, fuzzy, kde-format
+#| msgid ""
+#| "No database drivers available.  To use this feature you need to install "
+#| "the necessary Qt 3 database drivers."
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr "沒有可用的資料庫驅動程式。您必須以必要的驅動程式編譯 Qt。"
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "級數(&S)..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "插入級數"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr "插入級數"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "特殊字元(&P)..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr "插入一個或多個在鍵盤上找不到的符號或字母"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "執行檢查員..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "連結(&L)..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "插入網際網路的超連結"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "連結"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "移除連結"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "移除連結"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr "移除連結"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "設定連結"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "選擇清單..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "水平合併儲存格"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "垂直合併儲存格"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "水平合併所選取的區域"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "垂直合併所選取的區域"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "合併所選取的區域"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "分離儲存格"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "將所選取的區域回復到合併前狀態"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "區域名稱..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "設定工作表中的區域的名稱"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"命名區域 %1 已存在。\n"
+"您要取代它嗎？"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "取代命名區域。"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr "取代命名區域。"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "編輯或選擇命名區域"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "命名區域..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "在列之前中斷"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "在列之前設定手動頁面中斷"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "列中斷"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "在欄之前中斷"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "在欄之前設定手動頁面中斷"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "欄中斷"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "在游標處貼上剪貼簿內容"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "特別貼上..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "以特定選項貼上剪貼簿的內容"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "貼上插入項目"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "將儲存格自剪貼簿插入工作表中"
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "&Pivot Tables..."
+msgstr "小計(&S)..."
+
+#: ui/actions/Pivot.cpp:18
+#, fuzzy, kde-format
+#| msgid "&Subtotals..."
+msgid "Create Pivot Tables"
+msgstr "小計(&S)..."
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "您必須選擇多個儲存格。"
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "選取目前工表中所有的儲存格"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "顯示 QTableView..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "排序(&S)..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "排序一組儲存格。"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "遞增排序(&I)"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "以遞增（最前到最後）的順序來排序一組儲存格。"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "遞減排序(&D)"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "以遞減（最後到最前）的順序來排序一組儲存格"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr "排序資料"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "您是否要檢查下個表格的拼字？"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "移至下一個工作表"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "檢查拼字"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "儲存格格式..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "設定儲存格格式"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "粗體"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "斜體字"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "底線"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "刪除線"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "讓儲存格文字能折成多行"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "文字折行"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "折行"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr "文字折行"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "垂直列印儲存格內容"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "垂直文字"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr "垂直文字"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr "數字格式"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "設定儲存格格式"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "第一數字"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr "科學格式"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "設定儲存格格式以便看起來像百分比"
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "科學的"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "科學的"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "百分比格式"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "設定儲存格格式以便看起來像百分比"
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "百分比"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr "格式化百分比"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "金錢格式"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "設定儲存格格式以便看起來像您的當地貨幣"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "金錢"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr "格式化金錢"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr "日期格式"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "設定儲存格格式"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "格式"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "設定儲存格格式"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr "時間格式"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "格式"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "遞增字型大小"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "遞減字型大小"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "增加精準度"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "增加顯示於螢幕的小數精準度"
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "減少精準度"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "減少顯示於螢幕的小數精準度"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr "增加精準度"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr "減少精準度"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "重置為預設格式。"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "工作表樣式"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "背景顏色"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "設定背景顏色"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "從儲存格建立樣式..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "根據目前選取的儲存格建立新樣式"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "從儲存格建立樣式"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "從儲存格建立樣式"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "樣式名稱不能是空的。"
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "此名稱的樣式已經存在。"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "編輯並組織儲存格樣式"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "樣式管理員..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "對所選取的儲存格套用預先定義的樣式"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "小計(&S)..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "建立不同種類的小計到清單或資料庫中"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "小計"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "大寫"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "小寫"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "轉換第一個字母為大寫"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr "轉換為大寫"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr "轉換為小寫"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr "轉換第一個字母為大寫"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "大寫"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "小寫"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "轉換第一個字母為大寫"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "轉換所有的字母為大寫"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "轉換所有的字母為小寫"
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "字首大寫"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr "變更大小寫"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "設定測試以確認儲存格資料是合法的"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "有效性..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "移除此儲存格上的有效性測試"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "移除有效性"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr "移除有效性檢查"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr "新增有效性檢查"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -13944,11 +17094,6 @@ msgctxt "(qtundo-format)"
 msgid "Remove Cells"
 msgstr "移除儲存格"
 
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr "刪除"
-
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
 msgid "Merge Cells Horizontally"
@@ -14163,12 +17308,6 @@ msgstr "保持不同的設定（不改變）"
 msgid "Roman"
 msgstr "羅馬字"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "斜體字"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14189,12 +17328,6 @@ msgstr ""
 msgid "Normal"
 msgstr "一般"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "粗體"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14207,12 +17340,6 @@ msgstr "顏色："
 #, kde-format
 msgid "If this is checked, the current cell text will be underlined."
 msgstr "勾選此選項的話，目前的儲存格文字將加底線。"
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "底線"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -14354,11 +17481,6 @@ msgstr ""
 "數字表示法會使用 KDE 系統設定裡的「通用外觀與行為」中的「地域」─「國家/地區與"
 "語言」─「數字」分頁裡定義的方式，並且預設會置右。"
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "百分比"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -14376,11 +17498,6 @@ msgstr ""
 "一般格式則數值會變回 12。\n"
 "您也可以用格式工具列中的百分比圖示。"
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "金錢"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -14395,11 +17512,6 @@ msgstr ""
 "家/地區與語言」─「金錢」分頁裡定義的方式。前面會顯示貨幣符號，並且設定精確"
 "度。\n"
 "您也可以用格式工具列中的貨幣圖示來設定。"
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "科學的"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -14625,11 +17737,6 @@ msgstr "三位數 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "樣式"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -14640,11 +17747,6 @@ msgstr "名稱："
 #, kde-format
 msgid "Inherit style:"
 msgstr "繼承樣式："
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "此名稱的樣式已經存在。"
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -14693,12 +17795,6 @@ msgstr ""
 msgid "Standard"
 msgstr "標準"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "置中"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -14733,24 +17829,6 @@ msgstr ""
 "<qt>設定此儲存格中內容的垂直位置。<b>頂端</b>表示內容會被顯示在儲存格上方。"
 "<b>置中</b>表示內容會被顯示在儲存格（垂直）中央。<b>底端</b>表示內容會被顯示"
 "在儲存格下方。</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "置頂"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "置中"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "置底"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -14932,20 +18010,10 @@ msgstr "套用"
 msgid "Apply changes"
 msgstr "套用變更"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "取消"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "丟棄變更"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "全部"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15040,358 +18108,11 @@ msgstr "連結 %1 已啟動"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[hh]::mm)"
 
-#~ msgid "&Function..."
-#~ msgstr "函數(&F)..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "插入數學表示式"
-
-#~ msgid "From &Database..."
-#~ msgstr "從資料庫(&D)..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "插入 SQL 資料庫的資料"
-
-#~ msgid "Formula Selection"
-#~ msgstr "公式選擇區"
-
-#~ msgid "Insert a function"
-#~ msgstr "插入函數"
-
-#~ msgid "Others..."
-#~ msgstr "其它..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "修改儲存格"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "編輯突顯的儲存格"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "執行檢查員..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "顯示 QTableView..."
-
 #~ msgid "Permute reference fixation"
 #~ msgstr "排列參考定位"
 
-#~ msgid "Permute fixation"
-#~ msgstr "排列定位"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "在游標處排列參考定位"
-
-#, fuzzy
-#~| msgid ""
-#~| "No database drivers available.  To use this feature you need to install "
-#~| "the necessary Qt 3 database drivers."
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr "沒有可用的資料庫驅動程式。您必須以必要的驅動程式編譯 Qt。"
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "從資料庫插入資料"
-
-#~ msgid "Type:"
-#~ msgstr "類型："
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "使用者名稱：\n"
-#~ "（如果需要）"
-
-#~ msgid "Host:"
-#~ msgstr "主機："
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "埠號：\n"
-#~ "（如果需要）"
-
-#~ msgid "Database name: "
-#~ msgstr "資料庫名稱："
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "密碼：\n"
-#~ "（如果需要）"
-
-#~ msgid "Select tables:"
-#~ msgstr "選擇表格："
-
-#~ msgid "Tables"
-#~ msgstr "表格"
-
-#~ msgid "Select columns:"
-#~ msgstr "選擇欄："
-
-#~ msgid "Table"
-#~ msgstr "表格"
-
-#~ msgid "Columns"
-#~ msgstr "欄"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "符合下列所有條件(AND)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "符合下列任一條件(OR)"
-
-#~ msgid "equals"
-#~ msgstr "等於"
-
-#~ msgid "not equal"
-#~ msgstr "不等於"
-
-#~ msgid "in"
-#~ msgstr "包含於"
-
-#~ msgid "not in"
-#~ msgstr "不包含於"
-
-#~ msgid "like"
-#~ msgstr "類似"
-
-#~ msgid "greater"
-#~ msgstr "大於"
-
-#~ msgid "lesser"
-#~ msgstr "小於"
-
-#~ msgid "greater or equal"
-#~ msgstr "大於或等於"
-
-#~ msgid "less or equal"
-#~ msgstr "小於或等於"
-
-#~ msgid "Sorted by"
-#~ msgstr "排序依"
-
-#~ msgid "Ascending"
-#~ msgstr "遞增"
-
-#~ msgid "Descending"
-#~ msgstr "遞減"
-
-#~ msgid "Distinct"
-#~ msgstr "不同"
-
-#~ msgid "Query Options"
-#~ msgstr "查詢選項"
-
-#~ msgid "SQL query:"
-#~ msgstr "SQL 查詢："
-
-#~ msgid "Insert in region"
-#~ msgstr "在範圍中插入"
-
-#~ msgid "Starting in cell"
-#~ msgstr "開始於儲存格"
-
-#~ msgid "Result"
-#~ msgstr "結果"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "您不能在這裡指定表格。"
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "您必須指定一個合法的範圍。"
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "您必須指定合法的儲存格。"
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "您並不被允許改變資料庫中的資料。"
-
-#~ msgid "Executing query failed."
-#~ msgstr "執行查詢失敗。"
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "這次查詢沒有查到任何結果。"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr "從資料庫插入資料"
-
-#~ msgid "The port must be a number"
-#~ msgstr "埠號必須是數字"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "連接資料庫..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "已連線。取回表格資訊..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "這個資料庫中沒有表格"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "無法載入驅動程式"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "取回表格的共同資料(meta data)..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "您必須選擇至少一個表格。"
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "您必須選擇至少一欄。"
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "'*' 或 '?' 在 SQL 中不是合法的萬用字元。正確的替代品是 '%' 和 '_'。 您是否"
-#~ "要更換它們？"
-
-#~ msgid "Insert function"
-#~ msgstr "插入函數"
-
-#~ msgid "Help"
-#~ msgstr "說明"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "這個函數沒有參數。"
-
-#~ msgid "Description is not available."
-#~ msgstr "沒有可用的描述。"
-
-#~ msgid "Document Settings..."
-#~ msgstr "文件設定..."
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "顯示文件設定對話框"
-
-#~ msgid "Document Settings"
-#~ msgstr "文件設定"
-
-#, fuzzy
-#~| msgid "Calculation mode"
-#~ msgid "Calculation"
-#~ msgstr "計算模式"
-
-#, fuzzy
-#~| msgid "Case Insensitive"
-#~ msgid "Case sensitive"
-#~ msgstr "區分大小寫"
-
-#, fuzzy
-#~| msgid "Precision"
-#~ msgid "Precision as shown"
-#~ msgstr "精確度"
-
-#, fuzzy
-#~| msgid "Automatic"
-#~ msgid "Automatic find labels"
-#~ msgstr "自動"
-
-#, fuzzy
-#~| msgid "String to compare with"
-#~ msgid "String comparison:"
-#~ msgstr "要比較的字串"
-
-#, fuzzy
-#~| msgid "Regular expression"
-#~ msgid "Regular Expressions"
-#~ msgstr "正規表示式"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "使用系統區域化設定(&U)"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "語言：%1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "預設數字格式：%1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "長日期格式：%1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "短日期格式：%1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "時間格式：%1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "貨幣格式：%1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "自訂清單..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr "建立用於排序或自動填滿的自訂清單"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "選取目前工表中所有的儲存格"
-
-#~ msgid "Custom Lists"
-#~ msgstr "自訂清單"
-
-#~ msgid "List:"
-#~ msgstr "清單："
-
-#~ msgid "Entry:"
-#~ msgstr "項目："
-
-#~ msgid "Add"
-#~ msgstr "加入"
-
-#~ msgid "New"
-#~ msgstr "新增"
-
-#~ msgid "Remove"
-#~ msgstr "移除"
-
-#~ msgid "Modify"
-#~ msgstr "變更"
-
-#~ msgid "Copy"
-#~ msgstr "複製"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "您真的要移除這個清單嗎？"
-
-#~ msgid "Remove List"
-#~ msgstr "移除清單"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "項目區域不是空的。\n"
-#~ "您要繼續嗎？"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "目標搜索(&G)..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "重複計算以找尋指定的數值"
-
-#~ msgid "Goal Seek"
-#~ msgstr "目標搜索"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "儲存格參照是不合法的。"
-
-#~ msgid "Target value is invalid."
-#~ msgstr "目標值是不合法的。"
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "來源儲存格必須包含數字值。"
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "目標儲存格必須包含公式。"
 
 #~ msgid "Starting..."
 #~ msgstr "開啟..."
@@ -15401,12 +18122,6 @@ msgstr "連結 %1 已啟動"
 
 #~ msgid "New value:"
 #~ msgstr "新值："
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "以儲存格 %1 進行目標搜索找到一個解："
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "以儲存格 %1 進行目標搜索找不到解。"
 
 #~ msgid "Set cell:"
 #~ msgstr "設定儲存格："
@@ -15422,82 +18137,6 @@ msgstr "連結 %1 已啟動"
 
 #~ msgid "Current value:"
 #~ msgstr "目前值："
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr "取代"
-
-#~ msgid "Selection List..."
-#~ msgstr "選擇清單..."
-
-#~ msgid "More Options"
-#~ msgstr "更多選項"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "搜尋整個工作表"
-
-#~ msgid "Search in:"
-#~ msgstr "搜尋於："
-
-#~ msgid "Cell Values"
-#~ msgstr "儲存格數值"
-
-#~ msgid "Comments"
-#~ msgstr "註解"
-
-#~ msgid "Search direction:"
-#~ msgstr "搜尋方向："
-
-#~ msgid "Across then Down"
-#~ msgstr "先橫向再往下"
-
-#~ msgid "Down then Across"
-#~ msgstr "先往下再橫向"
-
-#~ msgid "Fewer Options"
-#~ msgstr "較少選項"
-
-#~ msgid "Cell Format..."
-#~ msgstr "儲存格格式..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "設定儲存格格式"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "將儲存格物件移動到剪貼簿"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "複製儲存格物件至剪貼簿"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "在游標處貼上剪貼簿內容"
-
-#~ msgid "Special Paste..."
-#~ msgstr "特別貼上..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "以特定選項貼上剪貼簿的內容"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "貼上插入項目"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "將儲存格自剪貼簿插入工作表中"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "貼上插入儲存格"
-
-#~ msgid "Insert"
-#~ msgstr "插入"
-
-#~ msgid "Move towards right"
-#~ msgstr "移向右邊"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "移向底部"
-
-#~ msgid "Special Paste"
-#~ msgstr "特定貼上"
 
 #~ msgid "Content"
 #~ msgstr "內容"
@@ -15529,31 +18168,12 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Division"
 #~ msgstr "除法"
 
-#~ msgid "Check the spelling"
-#~ msgstr "檢查拼字"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "您是否要檢查下個表格的拼字？"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr "校正拼錯的字"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "自動格式化..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "設定工作表的格式"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr "自動格式化"
-
-#~ msgid "Sheet Style"
-#~ msgstr "工作表樣式"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "選擇要套用的工作表樣式："
 
 #~ msgid "Could not find image %1."
 #~ msgstr "無法找到影像 %1。"
@@ -15561,92 +18181,8 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Could not load image %1."
 #~ msgstr "無法載入影像 %1。"
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "無法找到工作表樣式的 XML 檔案 %1。"
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "工作表樣式 XML 檔案 %1 剖析錯誤。"
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "自動過濾(&A)"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "將自動過濾器新增到指定範圍內的儲存格"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr "自動過濾"
-
-#~ msgid "Clear All"
-#~ msgstr "全部清除"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "刪除目前儲存格中的所有內容與格式"
-
 #~ msgid "Contents"
 #~ msgstr "內容"
-
-#~ msgid "Clear Contents"
-#~ msgstr "清除內容"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "移除目前儲存格的內容"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr "清除文字"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr "移除條件格式"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr "新增條件格式"
-
-#~ msgid "Select a new border color"
-#~ msgstr "選擇新的框線顏色"
-
-#~ msgid "Border Color"
-#~ msgstr "框線顏色"
-
-#~ msgid "Set the background color"
-#~ msgstr "設定背景顏色"
-
-#~ msgid "Background Color"
-#~ msgstr "背景顏色"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "有條件的儲存格樣式..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "基於某種條件設定儲存格樣式"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "有條件樣式"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "移除有條件的儲存格樣式"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "移除有條件的儲存格樣式"
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "&Pivot Tables..."
-#~ msgstr "小計(&S)..."
-
-#, fuzzy
-#~| msgid "&Subtotals..."
-#~ msgid "Create Pivot Tables"
-#~ msgstr "小計(&S)..."
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "您必須選擇多個儲存格。"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr "數字格式"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -15655,80 +18191,6 @@ msgstr "連結 %1 已啟動"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Percentage Format"
 #~ msgstr "百分比格式"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr "時間格式"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr "日期格式"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr "科學格式"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr "改變框線顏色"
-
-#~ msgid "<none>"
-#~ msgstr "<無>"
-
-#~ msgid "equal to"
-#~ msgstr "等於"
-
-#~ msgid "greater than"
-#~ msgstr "大於"
-
-#~ msgid "less than"
-#~ msgstr "小於"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "大於等於"
-
-#~ msgid "equal to or less than"
-#~ msgstr "小於等於"
-
-#~ msgid "between"
-#~ msgstr "於中間"
-
-#~ msgid "outside range"
-#~ msgstr "外部範圍"
-
-#~ msgid "different to"
-#~ msgstr "相異於"
-
-#~ msgid "First Condition"
-#~ msgstr "第一個條件"
-
-#~ msgid "Second Condition"
-#~ msgstr "第二個條件"
-
-#~ msgid "Third Condition"
-#~ msgstr "第三個條件"
-
-#~ msgid "Cell is"
-#~ msgstr "儲存格是"
-
-#~ msgid "Cell style"
-#~ msgstr "儲存格樣式"
-
-#~ msgid "different from"
-#~ msgstr "相異於"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr "第一個值是數字的話，第二個值也必須是數字。"
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr "第一個值是字串的話，第二個值也必須是字串。"
-
-#, fuzzy
-#~| msgid "Select Character"
-#~ msgid "Select Source"
-#~ msgstr "選擇字元"
 
 #, fuzzy
 #~| msgid "Clear Selection"
@@ -15754,11 +18216,6 @@ msgstr "連結 %1 已啟動"
 #~| msgid "Yield"
 #~ msgid "Field"
 #~ msgstr "生產量"
-
-#, fuzzy
-#~| msgid "Filter"
-#~ msgid "Add Filter"
-#~ msgstr "過濾器"
 
 #, fuzzy
 #~| msgid "TextLabel"
@@ -15808,11 +18265,6 @@ msgstr "連結 %1 已啟動"
 #~ msgstr "列"
 
 #, fuzzy
-#~| msgid "Bit Operations"
-#~ msgid "Pivot Options"
-#~ msgstr "位元操作"
-
-#, fuzzy
 #~| msgid "Value"
 #~ msgid "Value Type"
 #~ msgstr "值"
@@ -15833,153 +18285,17 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Manual Selection"
 #~ msgstr "填滿選擇區"
 
-#~ msgid "Product"
-#~ msgstr "乘積"
-
 #~ msgid "Sort By"
 #~ msgstr "排序依"
-
-#~ msgid "Select Font..."
-#~ msgstr "選擇字型..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "選擇字型大小"
-
-#~ msgid "Font Size"
-#~ msgstr "字型大小"
-
-#~ msgid "Text Color"
-#~ msgstr "文字顏色"
-
-#~ msgid "Set the text color"
-#~ msgstr "設定文字顏色"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr "改變字型"
-
-#~ msgid "Style Manager..."
-#~ msgstr "樣式管理員..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "編輯並組織儲存格樣式"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "對所選取的儲存格套用預先定義的樣式"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "從儲存格建立樣式..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "從儲存格建立樣式"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr "根據目前選取的儲存格建立新樣式"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "從儲存格建立樣式"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "樣式名稱不能是空的。"
-
-#~ msgid "Style Manager"
-#~ msgstr "樣式管理員"
-
-#~ msgid "All Styles"
-#~ msgstr "所有樣式"
-
-#~ msgid "Custom Styles"
-#~ msgstr "自訂的樣式"
-
-#~ msgid "Hierarchical"
-#~ msgstr "階層"
-
-#~ msgid "&New..."
-#~ msgstr "新增(&N)"
-
-#~ msgid "&Modify..."
-#~ msgstr "變更(&M)..."
-
-#~ msgid "&Delete..."
-#~ msgstr "刪除(&D)..."
-
-#~ msgid "style%1"
-#~ msgstr "樣式 %1"
 
 #~ msgid "Cells..."
 #~ msgstr "儲存格..."
 
-#~ msgid "Insert Cells..."
-#~ msgstr "插入儲存格..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "插入空白儲存格至工作表中"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "移除儲存格..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "將儲存格從工作表中移除"
-
 #~ msgid "Delete Cells..."
 #~ msgstr "刪除儲存格..."
 
-#~ msgid "Insert rows"
-#~ msgstr "插入列"
-
-#~ msgid "Insert columns"
-#~ msgstr "插入欄"
-
-#~ msgid "Insert Cells"
-#~ msgstr "插入儲存格"
-
-#~ msgid "Move towards left"
-#~ msgstr "移向左邊"
-
-#~ msgid "Move towards top"
-#~ msgstr "移向頂部"
-
-#~ msgid "Remove rows"
-#~ msgstr "移除列"
-
-#~ msgid "Remove columns"
-#~ msgstr "移除欄"
-
-#~ msgid "Remove Cells"
-#~ msgstr "移除儲存格"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "小計(&S)..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "建立不同種類的小計到清單或資料庫中"
-
-#~ msgid "Subtotals"
-#~ msgstr "小計"
-
-#~ msgid "Remove All"
-#~ msgstr "全部移除"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "您必須選擇至少一個要加入小計的欄。"
-
 #~ msgid "Grand Total"
 #~ msgstr "總和"
-
-#~ msgid "Column '%1' "
-#~ msgstr "欄“%1”"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "取代目前的小計(&R)"
@@ -16005,45 +18321,6 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "加入小計到："
 
-#~ msgid "Goto Cell..."
-#~ msgstr "移至儲存格..."
-
-#~ msgid "Goto"
-#~ msgstr "移至"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "移動到特定的儲存格"
-
-#~ msgid "Break Before Column"
-#~ msgstr "在欄之前中斷"
-
-#~ msgid "Column Break"
-#~ msgstr "欄中斷"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "在欄之前設定手動頁面中斷"
-
-#~ msgid "Break Before Row"
-#~ msgstr "在列之前中斷"
-
-#~ msgid "Row Break"
-#~ msgstr "列中斷"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "在列之前設定手動頁面中斷"
-
-#~ msgid "Goto Cell"
-#~ msgstr "移至儲存格"
-
-#~ msgid "Enter cell:"
-#~ msgstr "輸入儲存格："
-
-#~ msgid "&Consolidate..."
-#~ msgstr "聯合(&C)..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "從類似範圍的群組中建立摘要資料的範圍"
-
 #~ msgid "Description in rows"
 #~ msgstr "在列中描述"
 
@@ -16052,39 +18329,6 @@ msgstr "連結 %1 已啟動"
 
 #~ msgid "Copy data"
 #~ msgstr "複製資料"
-
-#~ msgid "Consolidate"
-#~ msgstr "聯合"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "標準差"
-
-#~ msgid "Variance"
-#~ msgstr "變異數"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "您必須定義至少一個來源範圍。"
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 不是一個合法的儲存格範圍。"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "範圍\n"
-#~ "%1\n"
-#~ "太小"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "範圍\n"
-#~ "%1\n"
-#~ "太大"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16099,22 +18343,6 @@ msgstr "連結 %1 已啟動"
 #~ "%2\n"
 #~ "的大小不一樣"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr "聯合"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "來源範圍與目的範圍相交錯。"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "範圍\n"
-#~ "%1\n"
-#~ "是不正確的"
-
 #~ msgid "Function:"
 #~ msgstr "函數："
 
@@ -16124,201 +18352,17 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Entered references:"
 #~ msgstr "已輸入參照："
 
-#~ msgid "Change Angle..."
-#~ msgstr "改變角度..."
-
-#~ msgid "Angle"
-#~ msgstr "角度"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "改變儲存格內容列印時的角度"
-
-#~ msgid "Increase Precision"
-#~ msgstr "增加精準度"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "增加顯示於螢幕的小數精準度"
-
-#~ msgid "Decrease Precision"
-#~ msgstr "減少精準度"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "減少顯示於螢幕的小數精準度"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr "增加精準度"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr "減少精準度"
-
-#~ msgid "Change Angle"
-#~ msgstr "改變角度"
-
-#~ msgid "Angle:"
-#~ msgstr "角度："
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr "改變角度"
-
-#~ msgid "Area Name..."
-#~ msgstr "區域名稱..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "設定工作表中的區域的名稱"
-
-#~ msgid "Named Areas..."
-#~ msgstr "命名區域..."
-
-#~ msgid "Named Areas"
-#~ msgstr "命名區域"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "編輯或選擇命名區域"
-
-#~ msgid "Add Named Area"
-#~ msgstr "新增命名區域"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "輸入區域名稱："
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "命名區域 %1 已存在。\n"
-#~ "您要取代它嗎？"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "取代命名區域。"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr "取代命名區域。"
-
 #~ msgid "&Select"
 #~ msgstr "選取(&S)"
 
-#~ msgid "Area: %1"
-#~ msgstr "區域： %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "編輯(&E)..."
-
-#~ msgid "&Remove"
-#~ msgstr "移除(&R)"
 
 #~ msgid "New Named Area"
 #~ msgstr "新增命名區域"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "編輯命名區域"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "您真的要移除這個命名區域嗎？"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "移除命名區域"
-
-#~ msgid "Cells:"
-#~ msgstr "儲存格："
-
-#~ msgid "Sheet:"
-#~ msgstr "工作表："
-
-#~ msgid "Area name:"
-#~ msgstr "區域名稱："
-
-#~ msgid "Align Left"
-#~ msgstr "靠左對齊"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "靠左對齊儲存格內容"
-
-#~ msgid "Align Center"
-#~ msgstr "置中對齊"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "置中對齊儲存格內容"
-
-#~ msgid "Align Right"
-#~ msgstr "靠右對齊"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "靠右對齊儲存格內容"
-
-#~ msgid "Align Top"
-#~ msgstr "向上對齊"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "儲存格內容對齊儲存格頂端"
-
-#~ msgid "Align Middle"
-#~ msgstr "向中央對齊"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "儲存格內容對齊儲存格中央"
-
-#~ msgid "Align Bottom"
-#~ msgstr "向下對齊"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "儲存格內容對齊儲存格底部"
-
-#~ msgid "Border Left"
-#~ msgstr "左邊框"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "設定選擇區域的左邊框"
-
-#~ msgid "Border Right"
-#~ msgstr "右邊框"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "設定選擇區域的右邊框"
-
-#~ msgid "Border Top"
-#~ msgstr "上邊框"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "設定選擇區域的上邊框"
-
-#~ msgid "Border Bottom"
-#~ msgstr "下邊框"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "設定選擇區域的下邊框"
-
-#~ msgid "All Borders"
-#~ msgstr "所有邊框"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "設定選擇區域四周的邊框"
-
-#~ msgid "No Borders"
-#~ msgstr "沒有邊框"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "移除選擇區域的所有邊框"
-
-#~ msgid "Border Outline"
-#~ msgstr "邊框輪廓"
-
-#~ msgid "Outline"
-#~ msgstr "輪廓"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "設定選擇區域輪廓的框線"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr "變更水平排列"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr "變更垂直排列"
 
 #~ msgid "Australia"
 #~ msgstr "澳大利亞"
@@ -18133,61 +20177,6 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "辛巴威元"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "重置為預設格式。"
-
-#~ msgid "Strike Out"
-#~ msgstr "刪除線"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "遞增字型大小"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "遞減字型大小"
-
-#~ msgid "Wrap Text"
-#~ msgstr "文字折行"
-
-#~ msgid "Wrap"
-#~ msgstr "折行"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "讓儲存格文字能折成多行"
-
-#~ msgid "Vertical Text"
-#~ msgstr "垂直文字"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "垂直列印儲存格內容"
-
-#~ msgid "Percent Format"
-#~ msgstr "百分比格式"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "設定儲存格格式以便看起來像百分比"
-
-#~ msgid "Money Format"
-#~ msgstr "金錢格式"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "設定儲存格格式以便看起來像您的當地貨幣"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr "文字折行"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr "垂直文字"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr "格式化百分比"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr "格式化金錢"
-
 #~ msgid "&Data Format"
 #~ msgstr "資料格式(&D)"
 
@@ -18240,9 +20229,6 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Default height (%1)"
 #~ msgstr "預設高度（%1）"
 
-#~ msgid "Height:"
-#~ msgstr "高度："
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "設定儲存格的高度。"
 
@@ -18254,434 +20240,32 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Default width (%1)"
 #~ msgstr "預設寬度（%1）"
 
-#~ msgid "Width:"
-#~ msgstr "寬度："
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr "新增註解"
-
-#~ msgid "Increase Indent"
-#~ msgstr "遞增縮排"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "遞增縮排"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "遞減縮排"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "遞減縮排"
-
-#~ msgid "Upper Case"
-#~ msgstr "大寫"
-
-#~ msgid "Upper"
-#~ msgstr "大寫"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "轉換所有的字母為大寫"
-
-#~ msgid "Lower Case"
-#~ msgstr "小寫"
-
-#~ msgid "Lower"
-#~ msgstr "小寫"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "轉換所有的字母為小寫"
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "轉換第一個字母為大寫"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "轉換第一個字母為大寫"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "字首大寫"
-
-#~ msgid "Comment..."
-#~ msgstr "註解..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "編輯此儲存格的註解"
-
-#~ msgid "Remove Comment"
-#~ msgstr "移除註解"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "移除此儲存格的註解"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr "轉換為大寫"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr "轉換為小寫"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr "轉換第一個字母為大寫"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr "移除註解"
-
-#~ msgid "Clear Comment"
-#~ msgstr "清除註解"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr "變更大小寫"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr "遞增縮排"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr "遞減縮排"
-
-#~ msgid "Cell Comment"
-#~ msgstr "儲存格註解"
-
-#~ msgid "&Left"
-#~ msgstr "左(&L)"
-
-#~ msgid "&Right"
-#~ msgstr "右(&R)"
-
 #~ msgid "&Up"
 #~ msgstr "上(&U)"
-
-#~ msgid "&Down"
-#~ msgstr "下(&D)"
-
-#~ msgid "Autosum"
-#~ msgstr "自動加總"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "插入“sum”函數"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr "填滿選擇區"
-
-#~ msgid "From &Text File..."
-#~ msgstr "從文字檔案(&T)..."
-
-#~ msgid "Text File"
-#~ msgstr "文字檔案"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr "插入文字檔案的資料到目前游標位置/選擇區"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "從剪貼簿(&C)..."
 
-#~ msgid "Clipboard"
-#~ msgstr "剪貼簿"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr "插入剪貼簿的 csv 資料到目前游標位置/選擇區"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "轉換文字為欄(&T)..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "擴充儲存格的內容為多欄"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "從剪貼簿插入"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "剪貼簿中沒有資料。"
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "剪貼簿中沒有可用的資料。"
-
-#~ msgid "Text to Columns"
-#~ msgstr "轉換文字為欄"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "不能開啟輸入的檔案。"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "從剪貼簿插入"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr "插入文字檔案"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr "轉換文字為欄"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "合併所選取的區域"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "水平合併儲存格"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "水平合併所選取的區域"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "垂直合併儲存格"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "垂直合併所選取的區域"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "分離儲存格"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "將所選取的區域回復到合併前狀態"
-
-#~ msgid "Resize Column..."
-#~ msgstr "改變欄的大小..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "改變欄的寬度"
-
-#~ msgid "Insert Columns"
-#~ msgstr "插入欄"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "插入新的一欄至工作表中"
-
-#~ msgid "Remove Columns"
-#~ msgstr "移除欄"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "將選取的欄位從工作表中移除"
-
-#~ msgid "Hide Columns"
-#~ msgstr "隱藏欄"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "從此檢視中隱藏欄"
-
-#~ msgid "Show Columns..."
-#~ msgstr "顯示欄..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "顯示隱藏的欄"
-
-#~ msgid "Equalize Column"
-#~ msgstr "平均分配欄寬"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "改變選擇的欄為相同大小"
-
-#~ msgid "Show Columns"
-#~ msgstr "顯示欄"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "顯示選擇區中隱藏的欄"
-
-#~ msgid "Resize Row..."
-#~ msgstr "改變列的大小..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "改變列的高度"
-
-#~ msgid "Insert Rows"
-#~ msgstr "插入列"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "插入新的一列至工作表中"
-
-#~ msgid "Remove Rows"
-#~ msgstr "移除列"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "從工作表中移除一列"
-
-#~ msgid "Hide Rows"
-#~ msgstr "隱藏列"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "從此檢視中隱藏列"
 
-#~ msgid "Show Rows..."
-#~ msgstr "顯示列..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "顯示隱藏的列"
-
-#~ msgid "Equalize Row"
-#~ msgstr "平均分配列高"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "改變選擇的列為相同大小"
-
-#~ msgid "Show Rows"
-#~ msgstr "顯示列"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "顯示選擇區中隱藏的列"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "調整列與欄"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr "調整列/欄的大小以符合內容"
-
-#~ msgid "Adjust Column"
-#~ msgstr "調整欄"
-
 #~ msgid "Delete Columns"
 #~ msgstr "刪除欄"
-
-#~ msgid "Adjust Row"
-#~ msgstr "調整列"
 
 #~ msgid "Delete Rows"
 #~ msgstr "刪除列"
 
-#~ msgid "Resize Row"
-#~ msgstr "重設列的大小"
-
-#~ msgid "Resize Column"
-#~ msgstr "重設欄的大小"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "選擇要顯示的隱藏欄："
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "選擇要顯示的隱藏列："
-
-#~ msgid "Column: %1"
-#~ msgstr "欄： %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "列： %1"
-
-#~ msgid "&Link..."
-#~ msgstr "連結(&L)..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "插入網際網路的超連結"
-
-#~ msgid "Link"
-#~ msgstr "連結"
-
-#~ msgid "Remove Link"
-#~ msgstr "移除連結"
-
-#~ msgid "Remove a link"
-#~ msgstr "移除連結"
-
-#~ msgid "Insert Link"
-#~ msgstr "插入連結"
-
 #~ msgid "Edit Link"
 #~ msgstr "編輯連結"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr "移除連結"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "設定連結"
-
-#~ msgid "Internet"
-#~ msgstr "網際網路"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "連結到網際網路位址"
-
-#~ msgid "Text to display:"
-#~ msgstr "顯示的文字："
-
-#~ msgid "Internet address:"
-#~ msgstr "網路位址："
-
-#~ msgid "Email"
-#~ msgstr "電子郵件"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "連結到電子郵件地址"
-
-#~ msgid "Email address:"
-#~ msgstr "電子郵件地址："
-
-#~ msgid "Subject:"
-#~ msgstr "主旨："
-
-#~ msgid "File"
-#~ msgstr "檔案"
-
-#~ msgid "Link to File"
-#~ msgstr "連結到檔案"
-
-#~ msgid "File location:"
-#~ msgstr "檔案位置："
-
-#~ msgid "Recent file:"
-#~ msgstr "最近使用的檔案："
-
-#~ msgid "No Entries"
-#~ msgstr "沒有項目"
-
-#~ msgid "Link to Cell"
-#~ msgstr "連結到儲存格"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "儲存格或命名區域："
-
-#~ msgid "&Sort..."
-#~ msgstr "排序(&S)..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "排序一組儲存格。"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "遞減排序(&D)"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "以遞減（最後到最前）的順序來排序一組儲存格"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "遞增排序(&I)"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "以遞增（最前到最後）的順序來排序一組儲存格。"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr "排序資料"
 
 #~ msgid "Use custom list"
 #~ msgstr "使用自訂清單"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "複製儲存格格式（邊框、顏色、文字樣式）"
-
-#~ msgid "Column %1"
-#~ msgstr "欄 %1"
-
-#~ msgid "Row %1"
-#~ msgstr "列 %1"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "第一欄包含列標頭(&F)"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "第一列包含欄標頭(&F)"
-
-#~ msgid "Sort"
-#~ msgstr "排序"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "區分大小寫"
 
 #~ msgid "Move Up"
 #~ msgstr "上移"
@@ -18738,219 +20322,8 @@ msgstr "連結 %1 已啟動"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "以列分組垂直排序資料"
 
-#~ msgid "Validity..."
-#~ msgstr "有效性..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "設定測試以確認儲存格資料是合法的"
-
-#~ msgid "Validity"
-#~ msgstr "有效性"
-
-#~ msgid "Remove Validity"
-#~ msgstr "移除有效性"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "移除此儲存格上的有效性測試"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr "移除有效性檢查"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr "新增有效性檢查"
-
-#~ msgid "Clear &All"
-#~ msgstr "全部清除(&A)"
-
 #~ msgid "&Criteria"
 #~ msgstr "標準(&C)"
-
-#~ msgid "Allow:"
-#~ msgstr "允許："
-
-#~ msgid "Integer"
-#~ msgstr "整數"
-
-#~ msgid "Text Length"
-#~ msgstr "文字長度"
-
-#~ msgid "List"
-#~ msgstr "清單"
-
-#~ msgid "Allow blanks"
-#~ msgstr "允許空白"
-
-#~ msgid "Data:"
-#~ msgstr "資料："
-
-#~ msgid "Minimum:"
-#~ msgstr "最小值："
-
-#~ msgid "Maximum:"
-#~ msgstr "最大值："
-
-#~ msgid "Date:"
-#~ msgstr "日期："
-
-#~ msgid "Date minimum:"
-#~ msgstr "日期最小值："
-
-#~ msgid "Date maximum:"
-#~ msgstr "日期最大值："
-
-#~ msgid "Time:"
-#~ msgstr "時間："
-
-#~ msgid "Time minimum:"
-#~ msgstr "時間最小值："
-
-#~ msgid "Time maximum:"
-#~ msgstr "時間最大值："
-
-#~ msgid "Number:"
-#~ msgstr "數字："
-
-#~ msgid "Entries:"
-#~ msgstr "項目："
-
-#~ msgid "&Error Alert"
-#~ msgstr "錯誤警告(&E)"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr "當輸入不合法的值時顯示錯誤訊息"
-
-#~ msgid "Action:"
-#~ msgstr "動作："
-
-#~ msgid "Stop"
-#~ msgstr "停止"
-
-#~ msgid "Warning"
-#~ msgstr "警告"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "標題："
-
-#~ msgid "Message:"
-#~ msgstr "訊息："
-
-#~ msgid "Input Help"
-#~ msgstr "輸入說明"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr "選擇儲存格式顯示輸入說明"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "這不是一個合法的數值。"
-
-#~ msgid "This is not a valid time."
-#~ msgstr "這不是一個合法的時間。"
-
-#~ msgid "This is not a valid date."
-#~ msgstr "這不是一個合法的日期。"
-
-#~ msgid "&Series..."
-#~ msgstr "級數(&S)..."
-
-#~ msgid "Insert a series"
-#~ msgstr "插入級數"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr "插入級數"
-
-#~ msgid "Select Character"
-#~ msgstr "選擇字元"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "舊文字中會被替換的文字"
-
-#~ msgid "Series"
-#~ msgstr "級數"
-
-#~ msgid "Insert Values"
-#~ msgstr "插入數值"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "垂直地插入級數，從上到下"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "水平地插入級數，從左到右"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "等差級數 (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "產生一個從“開始”到“結束”的級數，而每一階段都會加上在級距中提供的數值。這樣"
-#~ "建立的級數裡每個值都比前一個多出一個級距。"
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "等比級數 (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "產生一個從“開始”到“結束”的級數，而每一階段都會乘上在級距中提供的數值。使"
-#~ "用 5 為級距所產生的數列為： 5,25, 125, 625 因為 5 乘 5(級距)等於 25 ，之後"
-#~ "再乘以 5 等於 125 ，再乘上同樣的級距則等於 625 。"
-
-#~ msgid "Start value:"
-#~ msgstr "開始值："
-
-#~ msgid "Stop value:"
-#~ msgstr "結束值："
-
-#~ msgid "Step value:"
-#~ msgstr "級距值："
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "結束與開始值必須為正數。"
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr "結束值必須大於開始值，或者級距必須小於 1。"
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr "開始值、結束值與級距都不能等於 0。"
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "級距值必須不為 1。"
-
-#~ msgid "Step is negative."
-#~ msgstr "級距值是負數。"
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr "級距值必須大於 0 。否則等差級數會無止盡。"
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr "如果開始值大於結束值則級距必須小於 0。"
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr "如果級距為負數，則開始值必須大於結束值。"
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "特殊字元(&P)..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr "插入一個或多個在鍵盤上找不到的符號或字母"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "網路位址是空的"

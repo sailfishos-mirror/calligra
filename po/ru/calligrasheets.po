@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kspread\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2026-07-06 00:45+0000\n"
 "PO-Revision-Date: 2022-05-11 21:25+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -150,8 +150,13 @@ msgstr "Заголовок"
 msgid "Header1"
 msgstr "Заголовок1"
 
-#: core/StyleManager.cpp:179 ui/dialogs/LayoutPage_General.cpp:122
-#: ui/dialogs/LayoutPage_General.cpp:141
+#: core/StyleManager.cpp:179 ui/actions/dialogs/StyleManagerDialog.cpp:87
+#: ui/actions/dialogs/StyleManagerDialog.cpp:131
+#: ui/actions/dialogs/StyleManagerDialog.cpp:160
+#: ui/actions/dialogs/StyleManagerDialog.cpp:198
+#: ui/actions/dialogs/StyleManagerDialog.cpp:226
+#: ui/actions/dialogs/StyleManagerDialog.cpp:247 ui/actions/Style.cpp:603
+#: ui/dialogs/LayoutPage_General.cpp:122 ui/dialogs/LayoutPage_General.cpp:141
 #, kde-format
 msgid "Default"
 msgstr "По умолчанию"
@@ -183,7 +188,8 @@ msgstr "c"
 
 #: engine/FunctionDescription.cpp:37 functions/text.xml:5
 #: functions/text.xml:586 functions/text.xml:698 functions/text.xml:713
-#: functions/text.xml:778 ui/dialogs/LayoutPage_Float.cpp:120
+#: functions/text.xml:778 ui/actions/dialogs/ValidityDialog.cpp:62
+#: ui/dialogs/LayoutPage_Float.cpp:120
 #, kde-format
 msgid "Text"
 msgstr "Текст"
@@ -255,7 +261,8 @@ msgstr "<p><b>Тип возвращаемого значения:</b> %1</p>"
 msgid "Syntax"
 msgstr "Синтаксис"
 
-#: engine/FunctionDescription.cpp:177
+#: engine/FunctionDescription.cpp:177 ui/actions/dialogs/FormulaDialog.cpp:169
+#: ui/actions/dialogs/SeriesDialog.cpp:67
 #, kde-format
 msgid "Parameters"
 msgstr "Параметры"
@@ -897,14 +904,15 @@ msgstr "CARY(12;0) возвратит 0"
 #: functions/statistical.xml:899 functions/statistical.xml:1003
 #: functions/statistical.xml:1392 functions/statistical.xml:1675
 #: functions/statistical.xml:1823 functions/text.xml:11 functions/text.xml:30
-#: functions/text.xml:838 ui/dialogs/LayoutPage_Float.cpp:63
+#: functions/text.xml:838 ui/actions/dialogs/ValidityDialog.cpp:60
+#: ui/actions/Style.cpp:283 ui/dialogs/LayoutPage_Float.cpp:63
 #, kde-format
 msgid "Number"
 msgstr "Число"
 
 #. i18n: ectx: ToolBar (formatToolBar)
 #: functions/conversion.xml:251 part/calligrasheets.rc:233
-#: ui/dialogs/LayoutPage_Float.cpp:51
+#: ui/actions/Style.cpp:70 ui/dialogs/LayoutPage_Float.cpp:51
 #, kde-format
 msgid "Format"
 msgstr "Формат"
@@ -962,6 +970,8 @@ msgid "ARABIC(\"XCIX\") returns 99"
 msgstr "ARABIC(\"XCIX\") возвратит 99"
 
 #: functions/database.xml:5 part/chart/ChartDatabaseSelectorFactory.cpp:26
+#: ui/actions/dialogs/DatabaseDialog.cpp:136
+#: ui/actions/InsertFromDatabase.cpp:30
 #, kde-format
 msgid "Database"
 msgstr "База данных"
@@ -1259,6 +1269,7 @@ msgstr "Дата и время"
 #: functions/datetime.xml:129 functions/datetime.xml:146
 #: functions/datetime.xml:163 functions/datetime.xml:588
 #: functions/datetime.xml:603 functions/datetime.xml:716
+#: ui/actions/dialogs/ValidityDialog.cpp:63 ui/actions/Style.cpp:423
 #: ui/dialogs/LayoutPage_Float.cpp:98
 #, kde-format
 msgid "Date"
@@ -1332,7 +1343,8 @@ msgstr "DAYS360(\"2/22/2002\"; \"4/21/2002\"; FALSE) возвратит 59"
 #: functions/datetime.xml:56 functions/datetime.xml:180
 #: functions/datetime.xml:197 functions/datetime.xml:214
 #: functions/datetime.xml:387 functions/datetime.xml:461
-#: functions/datetime.xml:475 ui/dialogs/LayoutPage_Float.cpp:105
+#: functions/datetime.xml:475 ui/actions/dialogs/ValidityDialog.cpp:64
+#: ui/actions/Style.cpp:456 ui/dialogs/LayoutPage_Float.cpp:105
 #, kde-format
 msgid "Time"
 msgstr "Время"
@@ -4980,6 +4992,7 @@ msgid "Regular payments"
 msgstr "Регулярные платежи"
 
 #: functions/financial.xml:1166 functions/reference.xml:63
+#: ui/actions/dialogs/SeriesDialog.cpp:49
 #, kde-format
 msgid "Type"
 msgstr "Тип ряда"
@@ -5321,12 +5334,19 @@ msgstr "Вручную"
 msgid "Automatic"
 msgstr "Автоматически"
 
-#: functions/information.xml:5
+#: functions/information.xml:5 ui/actions/dialogs/ValidityDialog.cpp:152
 #, kde-format
 msgid "Information"
 msgstr "Информация"
 
-#: functions/information.xml:11
+#: functions/information.xml:11 ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
 #, kde-format
 msgid "Error"
 msgstr "Ошибка"
@@ -6156,7 +6176,7 @@ msgstr ""
 msgid "Math"
 msgstr "Математические"
 
-#: functions/math.xml:11
+#: functions/math.xml:11 ui/actions/dialogs/FormulaDialog.cpp:51
 #, kde-format
 msgid "Function"
 msgstr "Функция"
@@ -6650,6 +6670,7 @@ msgid "Range"
 msgstr "Диапазон"
 
 #: functions/math.xml:348 functions/math.xml:433
+#: ui/actions/dialogs/ValidityDialog.cpp:49
 #, kde-format
 msgid "Criteria"
 msgstr "Критерий"
@@ -8245,6 +8266,7 @@ msgid "Row"
 msgstr "Строка"
 
 #: functions/reference.xml:141 functions/reference.xml:292
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
 #, kde-format
 msgid "Column"
 msgstr "Столбец"
@@ -12859,7 +12881,7 @@ msgid "&Go"
 msgstr "Пере&ход"
 
 #. i18n: ectx: Menu (Insert)
-#: part/calligrasheets.rc:76
+#: part/calligrasheets.rc:76 ui/actions/dialogs/CharacterSelectDialog.cpp:55
 #, kde-format
 msgid "&Insert"
 msgstr "Вст&авка"
@@ -12877,7 +12899,7 @@ msgid "F&ormat"
 msgstr "&Формат"
 
 #. i18n: ectx: Menu (MergeCellMenu)
-#: part/calligrasheets.rc:106
+#: part/calligrasheets.rc:106 ui/actions/Merge.cpp:19
 #, kde-format
 msgid "Merge Cells"
 msgstr "Объединить ячейки"
@@ -12956,8 +12978,8 @@ msgstr "Активировать"
 
 #. i18n: tag optionWidget attribute name
 #. i18n: ectx: ToolBar (fontPropertyToolBar)
-#: part/calligrasheets.rc:229 ui/CellToolOptionWidgets.xml:3
-#: ui/dialogs/LayoutDialog.cpp:139
+#: part/calligrasheets.rc:229 ui/actions/Font.cpp:40
+#: ui/CellToolOptionWidgets.xml:3 ui/dialogs/LayoutDialog.cpp:139
 #, kde-format
 msgid "Font"
 msgstr "Шрифт"
@@ -13372,14 +13394,16 @@ msgstr "Ограничения по страницам:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #. i18n: ectx: property (title), widget (QGroupBox, horizontalGroup)
-#: part/dialogs/PageLayoutSheetPage.ui:315 ui/dialogs/PositionWidget.ui:48
+#: part/dialogs/PageLayoutSheetPage.ui:315
+#: ui/actions/dialogs/SeriesDialog.cpp:42 ui/dialogs/PositionWidget.ui:48
 #, kde-format
 msgid "Horizontal"
 msgstr "Горизонтально"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #. i18n: ectx: property (title), widget (QGroupBox, buttonGroup2)
-#: part/dialogs/PageLayoutSheetPage.ui:335 ui/dialogs/PositionWidget.ui:135
+#: part/dialogs/PageLayoutSheetPage.ui:335
+#: ui/actions/dialogs/SeriesDialog.cpp:40 ui/dialogs/PositionWidget.ui:135
 #, kde-format
 msgid "Vertical"
 msgstr "Вертикально"
@@ -13406,13 +13430,15 @@ msgid "Up"
 msgstr "Вверх"
 
 #. i18n: ectx: property (text), widget (QRadioButton, right)
-#: part/dialogs/PreferenceDialog.cpp:296 ui/dialogs/PositionWidget.ui:75
+#: part/dialogs/PreferenceDialog.cpp:296 ui/actions/Align.cpp:60
+#: ui/actions/Border.cpp:65 ui/dialogs/PositionWidget.ui:75
 #, kde-format
 msgid "Right"
 msgstr "Справа"
 
 #. i18n: ectx: property (text), widget (QRadioButton, left)
-#: part/dialogs/PreferenceDialog.cpp:297 ui/dialogs/PositionWidget.ui:61
+#: part/dialogs/PreferenceDialog.cpp:297 ui/actions/Align.cpp:28
+#: ui/actions/Border.cpp:33 ui/dialogs/PositionWidget.ui:61
 #, kde-format
 msgid "Left"
 msgstr "Слева"
@@ -13424,36 +13450,50 @@ msgstr "Вниз, первый столбец"
 
 #: part/dialogs/PreferenceDialog.cpp:299 part/dialogs/PreferenceDialog.cpp:307
 #: part/dialogs/PreferenceDialog.cpp:432 part/View.cpp:389
+#: ui/actions/Border.cpp:189 ui/actions/dialogs/DatabaseDialog.cpp:741
+#: ui/actions/dialogs/DatabaseDialog.cpp:742
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
 #, kde-format
 msgid "None"
 msgstr "Нет"
 
 #: part/dialogs/PreferenceDialog.cpp:301 part/View.cpp:395
+#: ui/actions/dialogs/ConsolidateDialog.cpp:65
+#: ui/actions/dialogs/SubtotalDialog.cpp:91
 #, kde-format
 msgid "Sum"
 msgstr "Сумма"
 
 #: part/dialogs/PreferenceDialog.cpp:302 part/View.cpp:401
+#: ui/actions/dialogs/ConsolidateDialog.cpp:69
+#: ui/actions/dialogs/SubtotalDialog.cpp:87
 #, kde-format
 msgid "Min"
 msgstr "Минимум"
 
 #: part/dialogs/PreferenceDialog.cpp:303 part/View.cpp:407
+#: ui/actions/dialogs/ConsolidateDialog.cpp:68
+#: ui/actions/dialogs/SubtotalDialog.cpp:86
 #, kde-format
 msgid "Max"
 msgstr "Максимум"
 
 #: part/dialogs/PreferenceDialog.cpp:304 part/View.cpp:413
+#: ui/actions/dialogs/ConsolidateDialog.cpp:66
+#: ui/actions/dialogs/SubtotalDialog.cpp:83
 #, kde-format
 msgid "Average"
 msgstr "Среднее"
 
 #: part/dialogs/PreferenceDialog.cpp:305 part/View.cpp:419
+#: ui/actions/dialogs/ConsolidateDialog.cpp:67
+#: ui/actions/dialogs/SubtotalDialog.cpp:84
 #, kde-format
 msgid "Count"
 msgstr "Количество чисел"
 
 #: part/dialogs/PreferenceDialog.cpp:306 part/View.cpp:425
+#: ui/actions/dialogs/SubtotalDialog.cpp:85
 #, kde-format
 msgid "CountA"
 msgstr "Количество"
@@ -13853,7 +13893,8 @@ msgstr "Отмена выбора листов"
 msgid "Move selected sheet to the bottom"
 msgstr "Переместить лист в конец списка"
 
-#: part/Find.cpp:40
+#: part/Find.cpp:40 ui/actions/dialogs/SortDialog.cpp:500
+#: ui/actions/dialogs/SortDialog.cpp:569
 #, kde-format
 msgid "Case Sensitive"
 msgstr "С учётом регистра"
@@ -14054,6 +14095,7 @@ msgid "Anchor"
 msgstr "Якорь"
 
 #: part/View.cpp:312 part/View.cpp:1052 part/View.cpp:1517
+#: ui/actions/dialogs/LinkDialog.cpp:138
 #, kde-format
 msgid "Cell"
 msgstr "Ячейка"
@@ -14073,7 +14115,7 @@ msgstr "Переключить форму якоря"
 msgid "Next Sheet"
 msgstr "Следующий лист"
 
-#: part/View.cpp:322
+#: part/View.cpp:322 ui/actions/dialogs/DatabaseDialog.cpp:60
 #, kde-format
 msgid "Next"
 msgstr "Следующий"
@@ -14088,7 +14130,7 @@ msgstr "Перейти на следующий лист"
 msgid "Previous Sheet"
 msgstr "Предыдущий лист"
 
-#: part/View.cpp:329
+#: part/View.cpp:329 ui/actions/dialogs/DatabaseDialog.cpp:61
 #, kde-format
 msgid "Previous"
 msgstr "Предыдущий"
@@ -14293,7 +14335,7 @@ msgid ""
 "Do you want to continue?"
 msgstr "Удалить текущий лист?"
 
-#: part/View.cpp:1856
+#: part/View.cpp:1856 ui/actions/Styles.cpp:53
 #, kde-format
 msgid "Enter name:"
 msgstr "Введите имя:"
@@ -14353,14 +14395,14 @@ msgstr "Количество: "
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: part/ViewAdaptor.cpp:125
+#: part/ViewAdaptor.cpp:125 ui/actions/Font.cpp:150
 msgctxt "(qtundo-format)"
 msgid "Change Text Color"
 msgstr ""
 "Изменить цвет текста\n"
 "изменение цвета текста"
 
-#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149
+#: part/ViewAdaptor.cpp:137 part/ViewAdaptor.cpp:149 ui/actions/Style.cpp:646
 msgctxt "(qtundo-format)"
 msgid "Change Background Color"
 msgstr ""
@@ -14369,11 +14411,3225 @@ msgstr ""
 
 #: part/ViewAdaptor.cpp:161 part/ViewAdaptor.cpp:176 part/ViewAdaptor.cpp:188
 #: part/ViewAdaptor.cpp:203 part/ViewAdaptor.cpp:215 part/ViewAdaptor.cpp:232
+#: ui/actions/Border.cpp:44 ui/actions/Border.cpp:76 ui/actions/Border.cpp:108
+#: ui/actions/Border.cpp:137 ui/actions/Border.cpp:166
+#: ui/actions/Border.cpp:197 ui/actions/Border.cpp:235
 msgctxt "(qtundo-format)"
 msgid "Change Border"
 msgstr ""
 "Изменить границы\n"
 "изменение границ"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Columns"
+msgstr "Вставить столбцы"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Insert Rows"
+msgstr "Вставить строки"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Columns"
+msgstr "Удалить столбцы"
+
+#: ui/actions/AdjustRowCol.cpp:31
+#, kde-format
+msgid "Remove Rows"
+msgstr "Удалить строки"
+
+#: ui/actions/AdjustRowCol.cpp:48
+#, kde-format
+msgid "Inserts a new row into the spreadsheet"
+msgstr "Вставить новую строку на лист"
+
+#: ui/actions/AdjustRowCol.cpp:50
+#, kde-format
+msgid "Removes a row from the spreadsheet"
+msgstr "Удалить строку с листа"
+
+#: ui/actions/AdjustRowCol.cpp:53
+#, kde-format
+msgid "Inserts a new column into the spreadsheet"
+msgstr "Вставить новый столбец на лист"
+
+#: ui/actions/AdjustRowCol.cpp:55
+#, kde-format
+msgid "Removes the selected columns from the spreadsheet"
+msgstr "Удаляет выделенные столбцы с листа"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Columns"
+msgstr "Скрыть столбцы"
+
+#: ui/actions/AdjustRowCol.cpp:93
+#, kde-format
+msgid "Hide Rows"
+msgstr "Скрыть строки"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:39
+#, kde-format
+msgid "Show Columns"
+msgstr "Показать столбцы"
+
+#: ui/actions/AdjustRowCol.cpp:93 ui/actions/dialogs/ShowColRowDialog.cpp:36
+#, kde-format
+msgid "Show Rows"
+msgstr "Показать строки"
+
+#: ui/actions/AdjustRowCol.cpp:109
+#, kde-format
+msgid "Show hidden rows in the selection"
+msgstr "Показать скрытые строки в выделенном диапазоне"
+
+#: ui/actions/AdjustRowCol.cpp:111
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected rows"
+msgstr "Объединить ячейки выделенного диапазона в одну большую ячейку"
+
+#: ui/actions/AdjustRowCol.cpp:114
+#, kde-format
+msgid "Show hidden columns in the selection"
+msgstr "Показать скрытые столбцы в выделенном диапазоне"
+
+#: ui/actions/AdjustRowCol.cpp:116
+#, fuzzy, kde-format
+#| msgid "Merge the selected region"
+msgid "Hide the selected columns"
+msgstr "Объединить ячейки выделенного диапазона в одну большую ячейку"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Column"
+msgstr "Подогнать ширину столбца"
+
+#: ui/actions/AdjustRowCol.cpp:182
+#, kde-format
+msgid "Equalize Row"
+msgstr "Подогнать высоту строки"
+
+#: ui/actions/AdjustRowCol.cpp:196
+#, kde-format
+msgid "Resizes selected rows to be the same size"
+msgstr "Установить для строк одинаковую высоту"
+
+#: ui/actions/AdjustRowCol.cpp:198
+#, kde-format
+msgid "Resizes selected columns to be the same size"
+msgstr "Установить для столбцов одинаковую ширину"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Column"
+msgstr "Выровнять столбец"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row"
+msgstr "Выровнять строку"
+
+#: ui/actions/AdjustRowCol.cpp:252
+#, kde-format
+msgid "Adjust Row && Column"
+msgstr "Подогнать размер ячеек"
+
+#: ui/actions/AdjustRowCol.cpp:268
+#, kde-format
+msgid "Adjusts row/column size so that the contents will fit"
+msgstr ""
+"Подогнать размеры строк и столбцов для отображения полностью содержимого "
+"ячеек"
+
+#: ui/actions/AdjustRowCol.cpp:270
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts row size so that the contents will fit"
+msgstr ""
+"Подогнать размеры строк и столбцов для отображения полностью содержимого "
+"ячеек"
+
+#: ui/actions/AdjustRowCol.cpp:272
+#, fuzzy, kde-format
+#| msgid "Adjusts row/column size so that the contents will fit"
+msgid "Adjusts column size so that the contents will fit"
+msgstr ""
+"Подогнать размеры строк и столбцов для отображения полностью содержимого "
+"ячеек"
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Columns..."
+msgstr "Показать столбцы..."
+
+#: ui/actions/AdjustRowCol.cpp:292
+#, kde-format
+msgid "Show Rows..."
+msgstr "Показать строки..."
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden columns"
+msgstr "Показать скрытые столбцы на листе"
+
+#: ui/actions/AdjustRowCol.cpp:294
+#, kde-format
+msgid "Show hidden rows"
+msgstr "Показать скрытые строки"
+
+#: ui/actions/AdjustRowCol.cpp:327 ui/actions/AdjustRowCol.cpp:329
+#, kde-format
+msgid "Column: %1"
+msgstr "Столбец: %1"
+
+#: ui/actions/AdjustRowCol.cpp:341
+#, kde-format
+msgid "Row: %1"
+msgstr "Строка: %1"
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Column..."
+msgstr "Изменить ширину столбца..."
+
+#: ui/actions/AdjustRowCol.cpp:374
+#, kde-format
+msgid "Resize Row..."
+msgstr "Изменить высоту строки..."
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the height of a row"
+msgstr "Изменить высоту строки"
+
+#: ui/actions/AdjustRowCol.cpp:376
+#, kde-format
+msgid "Change the width of a column"
+msgstr "Изменить ширину столбца"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Align Left"
+msgstr "По левому краю"
+
+#: ui/actions/Align.cpp:19
+#, kde-format
+msgid "Left justify the cell contents"
+msgstr "Выравнивание содержимого ячейки по левому краю"
+
+#: ui/actions/Align.cpp:36 ui/actions/Align.cpp:68 ui/actions/Align.cpp:100
+msgctxt "(qtundo-format)"
+msgid "Change Horizontal Alignment"
+msgstr ""
+"Изменить выравнивание по горизонтали\n"
+"изменение выравнивания по горизонтали"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Align Right"
+msgstr "По правому краю"
+
+#: ui/actions/Align.cpp:51
+#, kde-format
+msgid "Right justify the cell contents"
+msgstr "Выравнивание содержимого ячейки по правому краю"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Align Center"
+msgstr "По центру"
+
+#: ui/actions/Align.cpp:83
+#, kde-format
+msgid "Center the cell contents"
+msgstr "Выравнивание содержимого ячейки по центру ячейки"
+
+#. i18n: ectx: property (text), widget (QRadioButton, center)
+#: ui/actions/Align.cpp:92 ui/dialogs/PositionWidget.ui:68
+#, kde-format
+msgid "Center"
+msgstr "По центру"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align Top"
+msgstr "По верхнему краю"
+
+#: ui/actions/Align.cpp:115
+#, kde-format
+msgid "Align cell contents along the top of the cell"
+msgstr "Выравнивание содержимого ячейки по верхнему краю"
+
+#. i18n: ectx: property (text), widget (QRadioButton, top)
+#: ui/actions/Align.cpp:124 ui/actions/Border.cpp:97
+#: ui/dialogs/PositionWidget.ui:141
+#, kde-format
+msgid "Top"
+msgstr "Сверху"
+
+#: ui/actions/Align.cpp:132 ui/actions/Align.cpp:168 ui/actions/Align.cpp:204
+msgctxt "(qtundo-format)"
+msgid "Change Vertical Alignment"
+msgstr ""
+"Изменить выравнивание по вертикали\n"
+"изменение выравнивания по вертикали"
+
+#: ui/actions/Align.cpp:149
+#, kde-format
+msgid "Align Bottom"
+msgstr "По нижнему краю"
+
+#: ui/actions/Align.cpp:151
+#, kde-format
+msgid "Align cell contents along the bottom of the cell"
+msgstr "Выравнивание содержимого ячейки по нижнему краю"
+
+#. i18n: ectx: property (text), widget (QRadioButton, bottom)
+#: ui/actions/Align.cpp:160 ui/actions/Border.cpp:126
+#: ui/dialogs/PositionWidget.ui:155
+#, kde-format
+msgid "Bottom"
+msgstr "Снизу"
+
+#: ui/actions/Align.cpp:185
+#, kde-format
+msgid "Align Middle"
+msgstr "По середине"
+
+#: ui/actions/Align.cpp:187
+#, kde-format
+msgid "Align cell contents centered in the cell"
+msgstr "Выравнивание содержимого ячейки по середине ячейки"
+
+#. i18n: ectx: property (text), widget (QRadioButton, middle)
+#: ui/actions/Align.cpp:196 ui/dialogs/PositionWidget.ui:148
+#, kde-format
+msgid "Middle"
+msgstr "По середине"
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change Angle..."
+msgstr "Изменить угол..."
+
+#: ui/actions/Angle.cpp:25
+#, kde-format
+msgid "Change the angle that cell contents are printed"
+msgstr "Изменить угол показа текста ячейки"
+
+#: ui/actions/Angle.cpp:34
+#, kde-format
+msgid "Angle"
+msgstr "Угол"
+
+#: ui/actions/Angle.cpp:56
+msgctxt "(qtundo-format)"
+msgid "Change Angle"
+msgstr ""
+"Изменить угол\n"
+"изменение угла"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "&Auto-Filter"
+msgstr "&Автофильтр"
+
+#: ui/actions/AutoFilter.cpp:21
+#, kde-format
+msgid "Add an automatic filter to a cell range"
+msgstr "Добавить автоматический фильтр для диапазона ячеек"
+
+#: ui/actions/AutoFilter.cpp:52
+msgctxt "(qtundo-format)"
+msgid "Auto-Filter"
+msgstr ""
+"Автофильтр\n"
+"автофильтр"
+
+#: ui/actions/AutoFormat.cpp:31
+#, fuzzy, kde-format
+#| msgid "Apply a predefined style to the selected cells"
+msgid "Apply pre-defined formatting to a range of cells."
+msgstr "Применить к выделенным ячейкам предопределённый стиль"
+
+#: ui/actions/AutoFormat.cpp:31
+#, kde-format
+msgid "Auto-Format..."
+msgstr "Автоформат..."
+
+#: ui/actions/AutoFormat.cpp:78
+#, kde-format
+msgid "Could not find sheet-style XML file '%1'."
+msgstr "Невозможно найти файл стиля XML «%1»."
+
+#: ui/actions/AutoFormat.cpp:91
+#, kde-format
+msgid "Parsing error in sheet-style XML file %1."
+msgstr "Неверный формат файла стиля XML «%1»."
+
+#: ui/actions/AutoFormat.cpp:133
+msgctxt "(qtundo-format)"
+msgid "Auto-Format"
+msgstr ""
+"Автоформат\n"
+"автоформат"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Autosum"
+msgstr "Автосуммирование"
+
+#: ui/actions/AutoSum.cpp:22
+#, kde-format
+msgid "Insert the 'sum' function"
+msgstr "Вставить функцию «sum»"
+
+#: ui/actions/AutoSum.cpp:62
+#, fuzzy
+#| msgid "Autosum"
+msgctxt "(qtundo-format)"
+msgid "Auto Sum"
+msgstr "Автосуммирование"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Border Left"
+msgstr "Граница слева"
+
+#: ui/actions/Border.cpp:24
+#, kde-format
+msgid "Set a left border to the selected area"
+msgstr "Граница выделенных ячеек слева"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Border Right"
+msgstr "Граница справа"
+
+#: ui/actions/Border.cpp:56
+#, kde-format
+msgid "Set a right border to the selected area"
+msgstr "Граница выделенных ячеек справа"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Border Top"
+msgstr "Граница сверху"
+
+#: ui/actions/Border.cpp:88
+#, kde-format
+msgid "Set a top border to the selected area"
+msgstr "Граница выделенных ячеек сверху"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Border Bottom"
+msgstr "Граница снизу"
+
+#: ui/actions/Border.cpp:117
+#, kde-format
+msgid "Set a bottom border to the selected area"
+msgstr "Граница выделенных ячеек снизу"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "All Borders"
+msgstr "Все границы"
+
+#: ui/actions/Border.cpp:146
+#, kde-format
+msgid "Set a border around all cells in the selected area"
+msgstr "Показать границы у всех выделенных ячеек"
+
+#: ui/actions/Border.cpp:155 ui/actions/dialogs/FormulaDialog.cpp:82
+#: ui/actions/dialogs/FormulaDialog.cpp:185
+#: ui/actions/dialogs/FormulaDialog.cpp:704
+#: ui/actions/dialogs/ValidityDialog.cpp:59 ui/FilterPopup.cpp:54
+#, kde-format
+msgid "All"
+msgstr "Все"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "No Borders"
+msgstr "Без границ"
+
+#: ui/actions/Border.cpp:180
+#, kde-format
+msgid "Remove all borders in the selected area"
+msgstr "Удалить все границы у выделенных ячеек"
+
+#: ui/actions/Border.cpp:213
+#, kde-format
+msgid "Border Outline"
+msgstr "Границы вокруг диапазона"
+
+#: ui/actions/Border.cpp:215
+#, kde-format
+msgid "Set a border to the outline of the selected area"
+msgstr "Рисование границы вокруг выделенного диапазона"
+
+#: ui/actions/Border.cpp:224
+#, kde-format
+msgid "Outline"
+msgstr "Граница"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Border Color"
+msgstr "Цвет границы"
+
+#: ui/actions/Border.cpp:247
+#, kde-format
+msgid "Select a new border color"
+msgstr "Изменить цвет границы"
+
+#: ui/actions/Border.cpp:285
+msgctxt "(qtundo-format)"
+msgid "Change Border Color"
+msgstr ""
+"Изменить цвет границ\n"
+"изменение цвета границ"
+
+#: ui/actions/Cells.cpp:20 ui/actions/Cells.cpp:34
+#, kde-format
+msgid "Insert Cells..."
+msgstr "Вставить ячейки..."
+
+#: ui/actions/Cells.cpp:20
+#, kde-format
+msgid "Insert a blank cell into the spreadsheet"
+msgstr "Вставить на лист пустые ячейки"
+
+#: ui/actions/Cells.cpp:71 ui/actions/Cells.cpp:85
+#, kde-format
+msgid "Remove Cells..."
+msgstr "Удалить ячейки..."
+
+#: ui/actions/Cells.cpp:71
+#, kde-format
+msgid "Removes the cells from the spreadsheet"
+msgstr "Удалить ячейки с листа"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear All"
+msgstr "Очистить всё"
+
+#: ui/actions/Clear.cpp:23
+#, kde-format
+msgid "Clear all contents and formatting of the current cell"
+msgstr "Очистить всё содержимое и форматирование текущей ячейки"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Clear Contents"
+msgstr "Очистить содержимое"
+
+#: ui/actions/Clear.cpp:38
+#, kde-format
+msgid "Remove the contents of the current cell"
+msgstr "Удалить всё содержимое текущей ячейки"
+
+#: ui/actions/Clear.cpp:51
+msgctxt "(qtundo-format)"
+msgid "Clear Text"
+msgstr ""
+"Удалить текст\n"
+"удаление текста"
+
+#: ui/actions/Clear.cpp:64 ui/commands/DeleteCommand.cpp:22
+msgctxt "(qtundo-format)"
+msgid "Delete"
+msgstr ""
+"Удалить\n"
+"удаление"
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Comment..."
+msgstr "Комментарий..."
+
+#: ui/actions/Comment.cpp:20
+#, kde-format
+msgid "Edit a comment for this cell"
+msgstr "Изменить комментарий для ячейки"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Clear Comment"
+msgstr "Удалить комментарий"
+
+#: ui/actions/Comment.cpp:51
+#, kde-format
+msgid "Remove this cell's comment"
+msgstr "Удалить комментарий для ячейки"
+
+#: ui/actions/Comment.cpp:60
+#, kde-format
+msgid "Remove Comment"
+msgstr "Удалить комментарий"
+
+#: ui/actions/Comment.cpp:89
+msgctxt "(qtundo-format)"
+msgid "Remove Comment"
+msgstr ""
+"Удалить комментарий\n"
+"удаление комментария"
+
+#: ui/actions/Comment.cpp:91
+msgctxt "(qtundo-format)"
+msgid "Add Comment"
+msgstr ""
+"Добавить комментарий\n"
+"добавление комментария"
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Conditional Styles..."
+msgstr "Стиль по условию..."
+
+#: ui/actions/Conditional.cpp:26
+#, kde-format
+msgid "Set cell style based on certain conditions"
+msgstr "Установить стиль в зависимости от определённых условий"
+
+#: ui/actions/Conditional.cpp:88 ui/actions/dialogs/ConditionalDialog.cpp:227
+#, kde-format
+msgid "Conditional Styles"
+msgstr "Стиль по условию"
+
+#: ui/actions/Conditional.cpp:88
+#, kde-format
+msgid "Remove the conditional cell styles"
+msgstr "Убрать стиль ячейки по условию"
+
+#: ui/actions/Conditional.cpp:97
+#, kde-format
+msgid "Remove Conditional Styles"
+msgstr "Убрать стиль по условию"
+
+#: ui/actions/Conditional.cpp:126
+msgctxt "(qtundo-format)"
+msgid "Remove Conditional Formatting"
+msgstr ""
+"Убрать форматирование по условию\n"
+"удаление форматирования по условию"
+
+#: ui/actions/Conditional.cpp:128
+msgctxt "(qtundo-format)"
+msgid "Add Conditional Formatting"
+msgstr ""
+"Добавить форматирование по условию\n"
+"добавление форматирования по условию"
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "&Consolidate..."
+msgstr "&Консолидировать..."
+
+#: ui/actions/Consolidate.cpp:22
+#, kde-format
+msgid "Create a region of summary data from a group of similar regions"
+msgstr "Создание диапазона суммированных данных группы подобных диапазонов"
+
+#: ui/actions/Consolidate.cpp:68
+msgctxt "(qtundo-format)"
+msgid "Consolidate"
+msgstr ""
+"Консолидировать\n"
+"консолидацию"
+
+#: ui/actions/Copy.cpp:25
+#, kde-format
+msgid "Copy the cell object to the clipboard"
+msgstr "Скопировать объект таблицы в буфер обмена"
+
+#: ui/actions/Copy.cpp:57
+#, kde-format
+msgid "Move the cell object to the clipboard"
+msgstr "Вырезать объект ячейки в буфер обмена"
+
+#: ui/actions/CSVActions.cpp:38
+#, fuzzy, kde-format
+#| msgid "From &Text File..."
+msgid "Insert From &Text File..."
+msgstr "Из &текстового файла"
+
+#: ui/actions/CSVActions.cpp:40
+#, kde-format
+msgid "Insert data from a text file to the current cursor position/selection"
+msgstr ""
+"Вставить данные из текстового файла в текущую ячейку или выделенный диапазон"
+
+#: ui/actions/CSVActions.cpp:55
+#, kde-format
+msgid "Text File"
+msgstr "Текстовый файл"
+
+#: ui/actions/CSVActions.cpp:62
+#, kde-format
+msgid "Import CSV Data File"
+msgstr "Импорт файла данных CSV"
+
+#: ui/actions/CSVActions.cpp:63
+#, kde-format
+msgid "CSV data files (*.csv)"
+msgstr "Файлы данных CSV (*.csv)"
+
+#: ui/actions/CSVActions.cpp:69
+#, kde-format
+msgid "Cannot open input file."
+msgstr "Невозможно открыть файл."
+
+#: ui/actions/CSVActions.cpp:77
+#, kde-format
+msgid "Inserting Text File"
+msgstr "Вставка текстового файла"
+
+#: ui/actions/CSVActions.cpp:101
+msgctxt "(qtundo-format)"
+msgid "Inserting Text File"
+msgstr ""
+"Вставка текстового файла\n"
+"вставку текстового файла"
+
+#: ui/actions/CSVActions.cpp:121
+#, fuzzy, kde-format
+#| msgid "Inserting From Clipboard"
+msgid "Insert From &Clipboard..."
+msgstr "Вставка из буфера обмена"
+
+#: ui/actions/CSVActions.cpp:123
+#, kde-format
+msgid ""
+"Insert CSV data from the clipboard to the current cursor position/selection"
+msgstr ""
+"Вставить данные в формате CSV из буфера обмена в текущую ячейку или "
+"выделенный диапазон"
+
+#: ui/actions/CSVActions.cpp:138
+#, kde-format
+msgid "Clipboard"
+msgstr "Буфер обмена"
+
+#: ui/actions/CSVActions.cpp:146
+#, kde-format
+msgid "There is no data in the clipboard."
+msgstr "В буфере обмена нет данных."
+
+#: ui/actions/CSVActions.cpp:150
+#, kde-format
+msgid "There is no usable data in the clipboard."
+msgstr "В буфере обмена нет пригодных для использования данных."
+
+#: ui/actions/CSVActions.cpp:155
+#, kde-format
+msgid "Inserting From Clipboard"
+msgstr "Вставка из буфера обмена"
+
+#: ui/actions/CSVActions.cpp:182
+msgctxt "(qtundo-format)"
+msgid "Inserting From Clipboard"
+msgstr ""
+"Вставка из буфера обмена\n"
+"вставку из буфера обмена"
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "&Text to Columns..."
+msgstr "Текст по &столбцам..."
+
+#: ui/actions/CSVActions.cpp:201
+#, kde-format
+msgid "Expand the content of cells to multiple columns"
+msgstr "Распределить содержимое ячеек по нескольким столбцам"
+
+#: ui/actions/CSVActions.cpp:241
+#, kde-format
+msgid "Text to Columns"
+msgstr "Текст по столбцам"
+
+#: ui/actions/CSVActions.cpp:267
+msgctxt "(qtundo-format)"
+msgid "Text to Columns"
+msgstr ""
+"Текст по столбцам\n"
+"расположение текста по столбца"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Create custom lists for sorting or autofill"
+msgstr ""
+"Управление пользовательскими списками для сортировки или автозаполнения"
+
+#: ui/actions/CustomLists.cpp:26
+#, kde-format
+msgid "Custom Lists..."
+msgstr "Списки пользователя..."
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:25
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:26
+#, kde-format
+msgid "Add Named Area"
+msgstr "Добавить именованный диапазон"
+
+#: ui/actions/dialogs/AddNamedAreaDialog.cpp:34
+#, kde-format
+msgid "Enter the area name:"
+msgstr "Имя диапазона:"
+
+#: ui/actions/dialogs/AngleDialog.cpp:25 ui/actions/dialogs/AngleDialog.cpp:26
+#, kde-format
+msgid "Change Angle"
+msgstr "Изменить угол"
+
+#: ui/actions/dialogs/AngleDialog.cpp:33
+#, kde-format
+msgid "Angle:"
+msgstr "Угол:"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:39
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Auto-Format"
+msgid "Automatic Format"
+msgstr ""
+"Автоформат\n"
+"автоформат"
+
+#: ui/actions/dialogs/AutoFormatDialog.cpp:46
+#, kde-format
+msgid "Select the sheet style to apply:"
+msgstr "Применить стиль таблицы:"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:35
+#, kde-format
+msgid "Select Character"
+msgstr "Выберите символ"
+
+#: ui/actions/dialogs/CharacterSelectDialog.cpp:56
+#, kde-format
+msgid "Insert the selected character in the text"
+msgstr "Вставить выбранный символ в текст"
+
+#: ui/actions/dialogs/CommentDialog.cpp:23
+#, kde-format
+msgid "Cell Comment"
+msgstr "Комментарий"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:129
+#: ui/actions/dialogs/ConditionalDialog.cpp:165
+#: ui/actions/dialogs/ConditionalDialog.cpp:184
+#: ui/actions/dialogs/ConditionalDialog.cpp:203
+#, kde-format
+msgid "<none>"
+msgstr "<нет>"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/ConditionalDialog.cpp:130
+#: ui/actions/dialogs/ValidityDialog.cpp:78
+#, kde-format
+msgid "equal to"
+msgstr "равно"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:131
+#: ui/actions/dialogs/ValidityDialog.cpp:79
+#, kde-format
+msgid "greater than"
+msgstr "больше чем"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:132
+#: ui/actions/dialogs/ValidityDialog.cpp:80
+#, kde-format
+msgid "less than"
+msgstr "меньше чем"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:133
+#: ui/actions/dialogs/ValidityDialog.cpp:81
+#, kde-format
+msgid "equal to or greater than"
+msgstr "равно или больше чем"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:134
+#: ui/actions/dialogs/ValidityDialog.cpp:82
+#, kde-format
+msgid "equal to or less than"
+msgstr "равно или меньше чем"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:135
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:83
+#, kde-format
+msgid "between"
+msgstr "между"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:136
+#, kde-format
+msgid "outside range"
+msgstr "другой диапазон"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:137
+#: ui/actions/dialogs/ValidityDialog.cpp:85
+#, kde-format
+msgid "different to"
+msgstr "до"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:146
+#, kde-format
+msgid "First Condition"
+msgstr "Первое условие"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:147
+#, kde-format
+msgid "Second Condition"
+msgstr "Второе условие"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:148
+#, kde-format
+msgid "Third Condition"
+msgstr "Третье условие"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:149
+#: ui/actions/dialogs/ConditionalDialog.cpp:150
+#: ui/actions/dialogs/ConditionalDialog.cpp:151
+#, kde-format
+msgid "Cell is"
+msgstr "Ячейка"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:152
+#: ui/actions/dialogs/ConditionalDialog.cpp:153
+#: ui/actions/dialogs/ConditionalDialog.cpp:154
+#, kde-format
+msgid "Cell style"
+msgstr "Стиль ячейки"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:172
+#: ui/actions/dialogs/ConditionalDialog.cpp:191
+#: ui/actions/dialogs/ConditionalDialog.cpp:209
+#: ui/actions/dialogs/ValidityDialog.cpp:84
+#, kde-format
+msgid "different from"
+msgstr "от"
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:390
+#, kde-format
+msgid ""
+"If the first value is a number, the second value also has to be a number."
+msgstr ""
+"Если первое значение является числом, второе значение также должно быть "
+"числом."
+
+#: ui/actions/dialogs/ConditionalDialog.cpp:392
+#, kde-format
+msgid ""
+"If the first value is a string, the second value also has to be a string."
+msgstr ""
+"Если первое значение является строкой, второе значение также должно быть "
+"строкой."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:48
+#, kde-format
+msgid "Consolidate"
+msgstr "Консолидация данных"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:70
+#: ui/actions/dialogs/SubtotalDialog.cpp:88
+#, kde-format
+msgid "Product"
+msgstr "Произведение"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:71
+#, kde-format
+msgid "Standard Deviation"
+msgstr "Стандартное отклонение"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:72
+#, kde-format
+msgid "Variance"
+msgstr "Дисперсия"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:126
+#, kde-format
+msgid "You have to define at least one source range."
+msgstr "Необходимо определить хотя бы один диапазон исходных данных."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:141
+#, kde-format
+msgid "%1 is not a valid cell range."
+msgstr "%1 не является допустимым диапазоном ячеек."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:146
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too small"
+msgstr ""
+"Диапазон\n"
+"%1\n"
+"слишком мал"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:150
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+"is too large"
+msgstr ""
+"Диапазон\n"
+"%1\n"
+"слишком велик"
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:155
+#, kde-format
+msgid "The source range intersects the destination range."
+msgstr "Исходный диапазон пересекается с конечным диапазоном."
+
+#: ui/actions/dialogs/ConsolidateDialog.cpp:199
+#, kde-format
+msgid ""
+"The range\n"
+"%1\n"
+" is malformed"
+msgstr ""
+"Диапазон\n"
+"%1\n"
+" не определён"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:58
+#, kde-format
+msgid "Insert Data From Database"
+msgstr "Вставить данные из базы данных"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:59
+#, kde-format
+msgid "Finish"
+msgstr ""
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:74
+#, kde-format
+msgid "Type:"
+msgstr "Тип:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:82
+#, kde-format
+msgid "Database name: "
+msgstr "Имя базы данных: "
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:90
+#, kde-format
+msgid "Host:"
+msgstr "Узел:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:99
+#, kde-format
+msgid ""
+"Port:\n"
+"(if necessary)"
+msgstr ""
+"Порт:\n"
+"(если необходимо)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:109
+#, kde-format
+msgid ""
+"User name:\n"
+"(if necessary)"
+msgstr ""
+"Имя пользователя:\n"
+"(если необходимо)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:119
+#, kde-format
+msgid ""
+"Password:\n"
+"(if necessary)"
+msgstr ""
+"Пароль:\n"
+"(если необходимо)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:162
+#, kde-format
+msgid "Select tables:"
+msgstr "Выберите таблицы:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:174
+#, kde-format
+msgid "Tables"
+msgstr "Таблицы"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:183
+#, kde-format
+msgid "Select columns:"
+msgstr "Выберите столбцы:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:188
+#, kde-format
+msgid "Table"
+msgstr "Таблица"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:198
+#, kde-format
+msgid "Columns"
+msgstr "Столбцы"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:207
+#, kde-format
+msgid "Match all of the following (AND)"
+msgstr "Удовлетворяет всем условиям (И)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:212
+#, kde-format
+msgid "Match any of the following (OR)"
+msgstr "Удовлетворяет хотя бы одному условию (ИЛИ)"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:219
+#: ui/actions/dialogs/DatabaseDialog.cpp:238
+#: ui/actions/dialogs/DatabaseDialog.cpp:254
+#, kde-format
+msgid "equals"
+msgstr "равно"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:220
+#: ui/actions/dialogs/DatabaseDialog.cpp:239
+#: ui/actions/dialogs/DatabaseDialog.cpp:255
+#, kde-format
+msgid "not equal"
+msgstr "не равно"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:221
+#: ui/actions/dialogs/DatabaseDialog.cpp:240
+#: ui/actions/dialogs/DatabaseDialog.cpp:256
+#, kde-format
+msgid "in"
+msgstr "содержит"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:222
+#: ui/actions/dialogs/DatabaseDialog.cpp:241
+#: ui/actions/dialogs/DatabaseDialog.cpp:257
+#, kde-format
+msgid "not in"
+msgstr "не содержит"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:223
+#: ui/actions/dialogs/DatabaseDialog.cpp:242
+#: ui/actions/dialogs/DatabaseDialog.cpp:258
+#, kde-format
+msgid "like"
+msgstr "совпадает"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:224
+#: ui/actions/dialogs/DatabaseDialog.cpp:243
+#: ui/actions/dialogs/DatabaseDialog.cpp:259
+#, kde-format
+msgid "greater"
+msgstr "больше"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:225
+#: ui/actions/dialogs/DatabaseDialog.cpp:244
+#: ui/actions/dialogs/DatabaseDialog.cpp:260
+#, kde-format
+msgid "lesser"
+msgstr "меньше"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:226
+#, kde-format
+msgid "greater or equal"
+msgstr "больше или равно"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:227
+#, kde-format
+msgid "less or equal"
+msgstr "меньше или равно"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:267
+#: ui/actions/dialogs/DatabaseDialog.cpp:279
+#, kde-format
+msgid "Sorted by"
+msgstr "Сортировать"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:274
+#: ui/actions/dialogs/DatabaseDialog.cpp:286
+#: ui/actions/dialogs/SortDialog.cpp:490 ui/actions/dialogs/SortDialog.cpp:565
+#, kde-format
+msgid "Ascending"
+msgstr "по возрастанию"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:275
+#: ui/actions/dialogs/DatabaseDialog.cpp:287
+#: ui/actions/dialogs/SortDialog.cpp:486
+#, kde-format
+msgid "Descending"
+msgstr "по убыванию"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:296
+#, kde-format
+msgid "Distinct"
+msgstr "Обособленный"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:301
+#, kde-format
+msgid "Query Options"
+msgstr "Параметры запроса"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:310
+#, kde-format
+msgid "SQL query:"
+msgstr "Запрос SQL:"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:323
+#, kde-format
+msgid "Insert in region"
+msgstr "Вставить в диапазон"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:330
+#, kde-format
+msgid "Starting in cell"
+msgstr "Начиная с ячейки"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:341
+#, kde-format
+msgid "Result"
+msgstr "Результат"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:498
+#: ui/actions/dialogs/DatabaseDialog.cpp:518
+#, kde-format
+msgid "You cannot specify a table here."
+msgstr "Здесь нельзя указать таблицу."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:505
+#, kde-format
+msgid "You have to specify a valid region."
+msgstr "Необходимо указать допустимый регион."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:525
+#, kde-format
+msgid "You have to specify a valid cell."
+msgstr "Необходимо указать допустимую ячейку."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:537
+#, kde-format
+msgid "Executing query failed."
+msgstr "Ошибка выполнения запроса."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:542
+#, kde-format
+msgid "You did not get any results with this query."
+msgstr "Запрос не вернул ни одного значения."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:591
+msgctxt "(qtundo-format)"
+msgid "Insert Data From Database"
+msgstr ""
+"Вставить данные из базы данных\n"
+"вставку данных из базы данных"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:622
+#, kde-format
+msgid "The port must be a number"
+msgstr "Порт должен быть числом"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:628
+#, kde-format
+msgid "Connecting to database..."
+msgstr "Подключение к базе данных..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:630
+#, kde-format
+msgid "Connected. Retrieving table information..."
+msgstr "Подключено. Получение информации о таблицах..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:634
+#, kde-format
+msgid "This database contains no tables"
+msgstr "База данных не содержит таблиц"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:670
+#, kde-format
+msgid "Driver could not be loaded"
+msgstr "Драйвер не может быть загружен"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:680
+#, kde-format
+msgid "Retrieving meta data of tables..."
+msgstr "Получение метаданных таблиц..."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:693
+#, kde-format
+msgid "You have to select at least one table."
+msgstr "Необходимо выбрать хотя бы одну таблицу."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:729
+#, kde-format
+msgid "You have to select at least one column."
+msgstr "Необходимо выбрать хотя бы один столбец."
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:836
+#: ui/actions/dialogs/DatabaseDialog.cpp:851
+#: ui/actions/dialogs/DatabaseDialog.cpp:866
+#, kde-format
+msgid ""
+"'*' or '?' are not valid wildcards in SQL. The proper replacements are '%' "
+"or '_'. Do you want to replace them?"
+msgstr ""
+"«*» или «?» не являются допустимыми шаблонами SQL. Вместо них используются "
+"«%» or «_». Заменить?"
+
+#: ui/actions/dialogs/DatabaseDialog.cpp:839
+#: ui/actions/dialogs/DatabaseDialog.cpp:854
+#: ui/actions/dialogs/DatabaseDialog.cpp:869
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Replace"
+msgctxt "@action:button"
+msgid "Replace"
+msgstr ""
+"Заменить\n"
+"замену"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:56
+#, kde-format
+msgid "Document Settings"
+msgstr "Настройка документа"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:63
+#, kde-format
+msgid "Calculation"
+msgstr "Режим подсчёта"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:69
+#, kde-format
+msgid "Locale"
+msgstr "Локаль"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:91
+#, kde-format
+msgid "Case sensitive"
+msgstr "Сортировка с учётом регистра"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:94
+#, kde-format
+msgid "Precision as shown"
+msgstr "Точность, как показано"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:97
+#, kde-format
+msgid "Search criteria must apply to whole cell"
+msgstr "Условия поиска должны применяться для всей ячейки"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:100
+#, kde-format
+msgid "Automatic find labels"
+msgstr "Автоматически находить метки"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:106
+#, kde-format
+msgid "String comparison:"
+msgstr "Сравнение строк:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Regular Expressions"
+msgstr "Регулярные выражения"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:112
+#, kde-format
+msgid "Wildcards"
+msgstr "Шаблоны"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:118
+#, kde-format
+msgid "Null Year:"
+msgstr "Нулевой год:"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:157
+#, kde-format
+msgid "&Use System's Locale Settings"
+msgstr "&Использовать системную локаль"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:185
+#, fuzzy, kde-format
+#| msgid "Language: %1"
+msgid "Language: %1 (%2)"
+msgstr "Язык: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:186
+#, kde-format
+msgid "Default number format: %1"
+msgstr "Формат чисел по умолчанию: %1"
+
+#. i18ncheckarg
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:187
+#, kde-format
+msgid "Long date format: %1"
+msgstr "Полный формат даты: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:188
+#, kde-format
+msgid "Short date format: %1"
+msgstr "Краткий формат даты: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:189
+#, kde-format
+msgid "Time format: %1"
+msgstr "Формат времени: %1"
+
+#: ui/actions/dialogs/DocumentSettingsDialog.cpp:190
+#, kde-format
+msgid "Currency format: %1"
+msgstr "Формат денежной суммы: %1"
+
+#: ui/actions/dialogs/FindDialog.cpp:23 ui/actions/dialogs/FindDialog.cpp:93
+#, kde-format
+msgid "More Options"
+msgstr "Показать параметры"
+
+#: ui/actions/dialogs/FindDialog.cpp:31
+#, kde-format
+msgid "Search entire sheet"
+msgstr "Поиск по всему листу"
+
+#: ui/actions/dialogs/FindDialog.cpp:35
+#, kde-format
+msgid "Search in:"
+msgstr "Искать в:"
+
+#: ui/actions/dialogs/FindDialog.cpp:43
+#, kde-format
+msgid "Cell Values"
+msgstr "Значениях"
+
+#: ui/actions/dialogs/FindDialog.cpp:44
+#, kde-format
+msgid "Comments"
+msgstr "Комментариях"
+
+#: ui/actions/dialogs/FindDialog.cpp:48
+#, kde-format
+msgid "Search direction:"
+msgstr "Направление:"
+
+#: ui/actions/dialogs/FindDialog.cpp:56
+#, kde-format
+msgid "Across then Down"
+msgstr "Влево, потом вниз"
+
+#: ui/actions/dialogs/FindDialog.cpp:57
+#, kde-format
+msgid "Down then Across"
+msgstr "Вниз. потом влево"
+
+#: ui/actions/dialogs/FindDialog.cpp:90
+#, kde-format
+msgid "Fewer Options"
+msgstr "Скрыть параметры"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Text Functions"
+msgid "Set Function"
+msgstr "Текстовые функции"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:114
+#, kde-format
+msgid "Insert function"
+msgstr "Вставить функцию"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:129
+#, kde-format
+msgid "Help"
+msgstr "Помощь"
+
+#: ui/actions/dialogs/FormulaDialog.cpp:614
+#, kde-format
+msgid "This function has no parameters."
+msgstr "У этой функции нет параметров."
+
+#: ui/actions/dialogs/FormulaDialog.cpp:641
+#, kde-format
+msgid "Description is not available."
+msgstr "Описание не доступно."
+
+#: ui/actions/dialogs/GoalSeekDialog.cpp:37
+#: ui/actions/dialogs/GoalSeekDialog.cpp:43
+#, kde-format
+msgid "Goal Seek"
+msgstr "Поиск решения"
+
+#: ui/actions/dialogs/GotoDialog.cpp:27 ui/actions/dialogs/GotoDialog.cpp:29
+#, kde-format
+msgid "Goto Cell"
+msgstr "Перейти к ячейке"
+
+#: ui/actions/dialogs/GotoDialog.cpp:35
+#, kde-format
+msgid "Enter cell:"
+msgstr "Введите имя:"
+
+#: ui/actions/dialogs/InsertDialog.cpp:38
+#: ui/actions/dialogs/PasteInsertDialog.cpp:35
+#, kde-format
+msgid "Insert"
+msgstr "Вставить"
+
+#: ui/actions/dialogs/InsertDialog.cpp:41
+#: ui/actions/dialogs/PasteInsertDialog.cpp:37
+#, kde-format
+msgid "Move towards right"
+msgstr "Сдвинуть вправо"
+
+#: ui/actions/dialogs/InsertDialog.cpp:42
+#: ui/actions/dialogs/PasteInsertDialog.cpp:38
+#, kde-format
+msgid "Move towards bottom"
+msgstr "Сдвинуть вниз"
+
+#: ui/actions/dialogs/InsertDialog.cpp:43
+#, kde-format
+msgid "Insert rows"
+msgstr "Вставить строки"
+
+#: ui/actions/dialogs/InsertDialog.cpp:44
+#, kde-format
+msgid "Insert columns"
+msgstr "Вставить столбцы"
+
+#: ui/actions/dialogs/InsertDialog.cpp:45
+#, kde-format
+msgid "Insert Cells"
+msgstr "Вставить ячейки"
+
+#: ui/actions/dialogs/InsertDialog.cpp:47 ui/actions/dialogs/ListDialog.cpp:78
+#, kde-format
+msgid "Remove"
+msgstr "Удалить"
+
+#: ui/actions/dialogs/InsertDialog.cpp:48
+#, kde-format
+msgid "Move towards left"
+msgstr "Сдвинуть влево"
+
+#: ui/actions/dialogs/InsertDialog.cpp:49
+#, kde-format
+msgid "Move towards top"
+msgstr "Сдвинуть вверх"
+
+#: ui/actions/dialogs/InsertDialog.cpp:50
+#, kde-format
+msgid "Remove rows"
+msgstr "Удалить строки"
+
+#: ui/actions/dialogs/InsertDialog.cpp:51
+#, kde-format
+msgid "Remove columns"
+msgstr "Удалить столбцы"
+
+#: ui/actions/dialogs/InsertDialog.cpp:52
+#, kde-format
+msgid "Remove Cells"
+msgstr "Удалить ячейки"
+
+#: ui/actions/dialogs/LinkDialog.cpp:58 ui/actions/dialogs/LinkDialog.cpp:59
+#, kde-format
+msgid "Insert Link"
+msgstr "Вставить ссылку"
+
+#: ui/actions/dialogs/LinkDialog.cpp:67
+#, kde-format
+msgid "Internet"
+msgstr "Интернет"
+
+#: ui/actions/dialogs/LinkDialog.cpp:68
+#, kde-format
+msgid "Link to Internet Address"
+msgstr "Ссылка на адрес в Интернете"
+
+#: ui/actions/dialogs/LinkDialog.cpp:71 ui/actions/dialogs/LinkDialog.cpp:86
+#: ui/actions/dialogs/LinkDialog.cpp:104 ui/actions/dialogs/LinkDialog.cpp:142
+#, kde-format
+msgid "Text to display:"
+msgstr "Текст ссылки:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:74
+#, kde-format
+msgid "Internet address:"
+msgstr "Адрес в Интернете:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:82
+#, kde-format
+msgid "Email"
+msgstr "Электронная почта"
+
+#: ui/actions/dialogs/LinkDialog.cpp:83
+#, kde-format
+msgid "Link to Email Address"
+msgstr "Ссылка на адрес электронной почты"
+
+#: ui/actions/dialogs/LinkDialog.cpp:89
+#, kde-format
+msgid "Email address:"
+msgstr "Адрес электронной почты:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:93
+#, kde-format
+msgid "Subject:"
+msgstr "Тема:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:100
+#, kde-format
+msgid "File"
+msgstr "Файл"
+
+#: ui/actions/dialogs/LinkDialog.cpp:101
+#, kde-format
+msgid "Link to File"
+msgstr "Ссылка на файл"
+
+#: ui/actions/dialogs/LinkDialog.cpp:107
+#, kde-format
+msgid "File location:"
+msgstr "Расположение файла:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:112
+#, kde-format
+msgid "Recent file:"
+msgstr "Последний файл:"
+
+#: ui/actions/dialogs/LinkDialog.cpp:132
+#, kde-format
+msgid "No Entries"
+msgstr "Нет записей"
+
+#: ui/actions/dialogs/LinkDialog.cpp:139
+#, kde-format
+msgid "Link to Cell"
+msgstr "Ссылка на ячейку"
+
+#: ui/actions/dialogs/LinkDialog.cpp:145
+#, kde-format
+msgid "Cell or Named Area:"
+msgstr "Ячейка или именованный диапазон:"
+
+#: ui/actions/dialogs/ListDialog.cpp:45
+#, kde-format
+msgid "Custom Lists"
+msgstr "Списки пользователя"
+
+#: ui/actions/dialogs/ListDialog.cpp:46
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Change Case"
+msgid "Save Changes"
+msgstr ""
+"Изменить регистр\n"
+"изменение регистра"
+
+#: ui/actions/dialogs/ListDialog.cpp:54
+#, kde-format
+msgid "List:"
+msgstr "Список:"
+
+#: ui/actions/dialogs/ListDialog.cpp:61
+#, kde-format
+msgid "Entry:"
+msgstr "Элемент:"
+
+#: ui/actions/dialogs/ListDialog.cpp:67
+#, kde-format
+msgid "Add"
+msgstr "Добавить"
+
+#: ui/actions/dialogs/ListDialog.cpp:71 ui/ExternalEditor.cpp:60
+#, kde-format
+msgid "Cancel"
+msgstr "Отменить"
+
+#: ui/actions/dialogs/ListDialog.cpp:75
+#, kde-format
+msgid "New"
+msgstr "Создать"
+
+#: ui/actions/dialogs/ListDialog.cpp:81
+#, kde-format
+msgid "Modify"
+msgstr "Изменить"
+
+#: ui/actions/dialogs/ListDialog.cpp:84
+#, kde-format
+msgid "Copy"
+msgstr "Скопировать"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Do you really want to remove this list?"
+msgstr "Вы действительно хотите удалить этот список?"
+
+#: ui/actions/dialogs/ListDialog.cpp:240
+#, kde-format
+msgid "Remove List"
+msgstr "Удалить список"
+
+#: ui/actions/dialogs/ListDialog.cpp:262
+#, kde-format
+msgid ""
+"Entry area is not empty.\n"
+"Do you want to continue?"
+msgstr ""
+"Диапазон содержит данные.\n"
+"Хотите продолжить?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:50 ui/actions/NamedAreas.cpp:91
+#, kde-format
+msgid "Named Areas"
+msgstr "Именованные диапазоны"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:71
+#: ui/actions/dialogs/NamedAreaDialog.cpp:175
+#, kde-format
+msgid "Area: %1"
+msgstr "Диапазон: %1"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:84
+#, kde-format
+msgid "Cells:"
+msgstr "Ячейки:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:91
+#, kde-format
+msgid "Sheet:"
+msgstr "Лист:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:98
+#, kde-format
+msgid "Area name:"
+msgstr "Имя диапазона:"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:104
+#, kde-format
+msgid "&Remove"
+msgstr "&Удалить"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Open/Save"
+msgid "Save"
+msgstr "Открытие и сохранение"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:131
+#, kde-format
+msgid "(new area)"
+msgstr ""
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:192
+#, kde-format
+msgid "Do you really want to remove this named area?"
+msgstr "Вы действительно хотите удалить этот именованный диапазон?"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:193
+#, kde-format
+msgid "Remove Named Area"
+msgstr "Удалить именованный диапазон"
+
+#: ui/actions/dialogs/NamedAreaDialog.cpp:219
+#, fuzzy, kde-format
+#| msgid "Cell reference is invalid."
+msgid "The provided region is not valid."
+msgstr "Ссылка на ячейку неверна."
+
+#: ui/actions/dialogs/PasteInsertDialog.cpp:26
+#, kde-format
+msgid "Paste Inserting Cells"
+msgstr "Вставить ячейки со сдвигом"
+
+#: ui/actions/dialogs/pivot.cpp:29
+#, kde-format
+msgid "Select Source"
+msgstr "Выберите источник"
+
+#: ui/actions/dialogs/pivotmain.cpp:47
+#, kde-format
+msgid "Pivot Table Configuration Window"
+msgstr "Окно настройки сводной таблицы"
+
+#: ui/actions/dialogs/pivotmain.cpp:51
+#, kde-format
+msgid "Add Filter"
+msgstr "Добавить фильтр"
+
+#: ui/actions/dialogs/pivotoptions.cpp:28
+#, kde-format
+msgid "Pivot Options"
+msgstr "Параметры сводной таблицы"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:31
+#, kde-format
+msgid "Resize Row"
+msgstr "Изменить размер строки"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:42
+#, kde-format
+msgid "Height:"
+msgstr "Высота:"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:78
+#, kde-format
+msgid "Resize Column"
+msgstr "Изменить размер столбца"
+
+#: ui/actions/dialogs/Resize2Dialog.cpp:89
+#, kde-format
+msgid "Width:"
+msgstr "Ширина:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:29
+#, kde-format
+msgid "Series"
+msgstr "Настройки ряда"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:31
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Insert Series"
+msgid "Insert Series"
+msgstr ""
+"Вставить ряд\n"
+"вставку ряда"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:38
+#, kde-format
+msgid "Insert Values"
+msgstr "Вставить значения"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:41
+#, kde-format
+msgid "Insert the series vertically, one below the other"
+msgstr "Вставить ряды вертикально, друг под другом"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:43
+#, kde-format
+msgid "Insert the series horizontally, from left to right"
+msgstr "Вставить ряды горизонтально, друг за другом"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:51
+#, kde-format
+msgid "Linear (2,4,6,...)"
+msgstr "Линейный (2,4,6,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:53
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step add the value "
+"provided in step. This creates a series where each value is 'step' larger "
+"than the value before it."
+msgstr ""
+"Создаёт ряд с указанным начальным, конечным элементом и приращением. Каждое "
+"последующее значение в этом ряде получается путём прибавления числа, "
+"указанного в шаге к предыдущему элементу."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:56
+#, kde-format
+msgid "Geometric (2,4,8,...)"
+msgstr "Геометрический (2,4,8,...)"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:58
+#, kde-format
+msgid ""
+"Generate a series from 'start' to 'end' and for each step multiply the value "
+"with the value provided in step. Using a step of 5 produces a list like: 5, "
+"25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that multiplied "
+"by 5 equals 125, which multiplied by the same step-value of 5 equals 625."
+msgstr ""
+"Создаёт ряд с указанным начальным, конечным элементом и приращением(шагом) "
+"умножения элементов. Каждое последующее значение в этом ряде получается "
+"путём умножения числа, указанного в шаге на предыдущей элемент. Например, "
+"при шаге 5 и начальном значении ряда 5 получаем ряд 5, 25, 125, 625..."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:70
+#, kde-format
+msgid "Start value:"
+msgstr "Начальное значение:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:79
+#, kde-format
+msgid "Stop value:"
+msgstr "Конечное значение:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:88
+#, kde-format
+msgid "Step value:"
+msgstr "Приращение:"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:114
+#, kde-format
+msgid "End and start value must be positive."
+msgstr "Начальное и конечное значение должны быть положительными."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:119
+#, kde-format
+msgid ""
+"End value must be greater than the start value or the step must be less than "
+"'1'."
+msgstr ""
+"Конечное значение должно быть больше начального или приращение должно быть "
+"меньше «1»."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:125
+#, kde-format
+msgid "None of the Start, Stop or Step values may be equal to zero."
+msgstr ""
+"Опущенные начальное, конечное значение и значение приращения могут быть "
+"равны 0."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:130
+#, kde-format
+msgid "Step value must be different from 1"
+msgstr "Значение приращения не должно быть равным 1"
+
+#: ui/actions/dialogs/SeriesDialog.cpp:134
+#, kde-format
+msgid "Step is negative."
+msgstr "Приращение отрицательное."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:142
+#, kde-format
+msgid ""
+"The step value must be greater than zero; otherwise, the linear series is "
+"infinite."
+msgstr ""
+"Значение приращения должно быть больше, чем 0. В противном случае линейный "
+"ряд будет бесконечным."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:148
+#, kde-format
+msgid ""
+"If the start value is greater than the end value the step must be less than "
+"zero."
+msgstr ""
+"Если начальное значение больше, чем конечное, приращение должно быть меньше "
+"0."
+
+#: ui/actions/dialogs/SeriesDialog.cpp:154
+#, kde-format
+msgid ""
+"If the step is negative, the start value must be greater then the end value."
+msgstr ""
+"Если приращение отрицательное, начальное значение должно быть больше "
+"конечного."
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:37
+#, kde-format
+msgid "Select hidden rows to show:"
+msgstr "Показать скрытые строки:"
+
+#: ui/actions/dialogs/ShowColRowDialog.cpp:40
+#, kde-format
+msgid "Select hidden columns to show:"
+msgstr "Показать скрытые столбцы:"
+
+#: ui/actions/dialogs/SortDialog.cpp:76 ui/actions/dialogs/SortDialog.cpp:220
+#, kde-format
+msgid "Column %1"
+msgstr "Столбец %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:99 ui/actions/dialogs/SortDialog.cpp:210
+#, kde-format
+msgid "Row %1"
+msgstr "Строка %1"
+
+#: ui/actions/dialogs/SortDialog.cpp:260
+#, kde-format
+msgid "&First column contains row headers"
+msgstr "&Первый столбец содержит заголовки столбца"
+
+#: ui/actions/dialogs/SortDialog.cpp:263
+#, kde-format
+msgid "&First row contains column headers"
+msgstr "&Первая строка содержит заголовки столбцов"
+
+#: ui/actions/dialogs/SortDialog.cpp:275
+#, kde-format
+msgid "Sort"
+msgstr "Сортировка"
+
+#: ui/actions/dialogs/SortDialog.cpp:496
+#, kde-format
+msgid "Case Insensitive"
+msgstr "Без учёта регистра"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:19
+#, kde-format
+msgid "Special Paste"
+msgstr "Специальная вставка"
+
+#: ui/actions/dialogs/SpecialPasteDialog.cpp:20
+#, kde-format
+msgid "Paste"
+msgstr "Вставить"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:32
+#, kde-format
+msgid "Style Manager"
+msgstr "Управление стилями"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:43 ui/actions/Styles.cpp:122
+#: ui/dialogs/LayoutPage_General.cpp:42
+#, kde-format
+msgid "Style"
+msgstr "Стиль"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:47
+#, kde-format
+msgid "All Styles"
+msgstr "Все стили"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:48
+#, kde-format
+msgid "Custom Styles"
+msgstr "Стили пользователя"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:49
+#, kde-format
+msgid "Hierarchical"
+msgstr "Иерархический"
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:57
+#, kde-format
+msgid "&New..."
+msgstr "&Создать..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:59
+#, kde-format
+msgid "&Modify..."
+msgstr "&Изменить..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:61
+#, kde-format
+msgid "&Delete..."
+msgstr "&Удалить..."
+
+#: ui/actions/dialogs/StyleManagerDialog.cpp:168
+#: ui/actions/dialogs/StyleManagerDialog.cpp:171
+#, kde-format
+msgid "style%1"
+msgstr "стиль%1"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:40
+#, kde-format
+msgid "Subtotals"
+msgstr "Подитоги"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:42
+#, kde-format
+msgid "Remove All"
+msgstr "Удалить всё"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:69
+#, kde-format
+msgid "Column '%1' "
+msgstr "Столбец «%1»"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:89
+#, kde-format
+msgid "StDev"
+msgstr "StDev"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:90
+#, kde-format
+msgid "StDevP"
+msgstr "StDevP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:92
+#, kde-format
+msgid "Var"
+msgstr "Var"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:93
+#, kde-format
+msgid "VarP"
+msgstr "VarP"
+
+#: ui/actions/dialogs/SubtotalDialog.cpp:144
+#, kde-format
+msgid "You need to select at least one column for adding subtotals."
+msgstr "Необходимо выбрать хотя бы один столбец для добавления подитогов."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:41 ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Validity"
+msgstr "Проверка на корректность"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:42
+#, kde-format
+msgid "Clear &All"
+msgstr "Очистить &все"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:54
+#, kde-format
+msgid "Allow:"
+msgstr "Разрешить:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:61
+#, kde-format
+msgid "Integer"
+msgstr "Целое число"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:65
+#, kde-format
+msgid "Text Length"
+msgstr "Длина текста"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:66
+#, kde-format
+msgid "List"
+msgstr "Список"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:69
+#, kde-format
+msgid "Allow blanks"
+msgstr "Проверять пустые ячейки"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:73
+#, kde-format
+msgid "Data:"
+msgstr "Данные:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:89
+#: ui/actions/dialogs/ValidityDialog.cpp:119
+#: ui/actions/dialogs/ValidityDialog.cpp:259
+#: ui/actions/dialogs/ValidityDialog.cpp:275
+#: ui/actions/dialogs/ValidityDialog.cpp:349
+#, kde-format
+msgid "Minimum:"
+msgstr "Минимум:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:97
+#: ui/actions/dialogs/ValidityDialog.cpp:121
+#: ui/actions/dialogs/ValidityDialog.cpp:260
+#: ui/actions/dialogs/ValidityDialog.cpp:276
+#: ui/actions/dialogs/ValidityDialog.cpp:350
+#, kde-format
+msgid "Maximum:"
+msgstr "Максимум:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:107
+#: ui/actions/dialogs/ValidityDialog.cpp:289
+#: ui/actions/dialogs/ValidityDialog.cpp:297
+#: ui/actions/dialogs/ValidityDialog.cpp:340
+#, kde-format
+msgid "Date:"
+msgstr "Дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:109
+#: ui/actions/dialogs/ValidityDialog.cpp:301
+#: ui/actions/dialogs/ValidityDialog.cpp:355
+#, kde-format
+msgid "Date minimum:"
+msgstr "Минимальная дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:111
+#: ui/actions/dialogs/ValidityDialog.cpp:302
+#: ui/actions/dialogs/ValidityDialog.cpp:356
+#, kde-format
+msgid "Date maximum:"
+msgstr "Максимальная дата:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:113
+#: ui/actions/dialogs/ValidityDialog.cpp:312
+#: ui/actions/dialogs/ValidityDialog.cpp:342
+#, kde-format
+msgid "Time:"
+msgstr "Время:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:115
+#: ui/actions/dialogs/ValidityDialog.cpp:316
+#: ui/actions/dialogs/ValidityDialog.cpp:358
+#, kde-format
+msgid "Time minimum:"
+msgstr "Минимальное время:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:117
+#: ui/actions/dialogs/ValidityDialog.cpp:317
+#: ui/actions/dialogs/ValidityDialog.cpp:359
+#, kde-format
+msgid "Time maximum:"
+msgstr "Максимальное время:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:123
+#: ui/actions/dialogs/ValidityDialog.cpp:255
+#: ui/actions/dialogs/ValidityDialog.cpp:271
+#: ui/actions/dialogs/ValidityDialog.cpp:336
+#, kde-format
+msgid "Number:"
+msgstr "Число:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:130
+#, kde-format
+msgid "Entries:"
+msgstr "Значения:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:136
+#, fuzzy, kde-format
+#| msgid "&Error Alert"
+msgid "Error Alert"
+msgstr "&Оповещение об ошибке"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:140
+#, kde-format
+msgid "Show error message when invalid values are entered"
+msgstr ""
+"Показывать сообщение об ошибке, если в ячейку введены неправильные данные"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:145
+#, kde-format
+msgid "Action:"
+msgstr "Действие:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:150
+#, kde-format
+msgid "Stop"
+msgstr "Остановить"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:151
+#, kde-format
+msgid "Warning"
+msgstr "Предупреждение"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:156
+#: ui/actions/dialogs/ValidityDialog.cpp:179
+#, kde-format
+msgctxt "Title of message"
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:163
+#: ui/actions/dialogs/ValidityDialog.cpp:186
+#, kde-format
+msgid "Message:"
+msgstr "Сообщение:"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:170
+#, kde-format
+msgid "Input Help"
+msgstr "Помощь по вводу"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:174
+#, kde-format
+msgid "Show input help when cell is selected"
+msgstr ""
+"Показывать справку по значениям, разрешённым для ввода в выбранную ячейку"
+
+#: ui/actions/dialogs/ValidityDialog.cpp:461
+#: ui/actions/dialogs/ValidityDialog.cpp:466
+#: ui/actions/dialogs/ValidityDialog.cpp:472
+#: ui/actions/dialogs/ValidityDialog.cpp:477
+#, kde-format
+msgid "This is not a valid value."
+msgstr "Это значение неверно."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:483
+#: ui/actions/dialogs/ValidityDialog.cpp:488
+#, kde-format
+msgid "This is not a valid time."
+msgstr "Это значение времени неверно."
+
+#: ui/actions/dialogs/ValidityDialog.cpp:494
+#: ui/actions/dialogs/ValidityDialog.cpp:499
+#, kde-format
+msgid "This is not a valid date."
+msgstr "Недопустимая дата."
+
+#: ui/actions/DocumentSettings.cpp:22
+#, kde-format
+msgid "Document Settings..."
+msgstr "Настройка документа..."
+
+#: ui/actions/DocumentSettings.cpp:24
+#, kde-format
+msgid "Show document settings dialog"
+msgstr "Показывать диалог настройки документа"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Edit the highlighted cell"
+msgstr "Изменить текущую ячейку"
+
+#: ui/actions/Editing.cpp:20
+#, kde-format
+msgid "Modify Cell"
+msgstr "Изменить ячейку"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute fixation"
+msgstr "Разрешить фиксацию"
+
+#: ui/actions/Editing.cpp:40
+#, kde-format
+msgid "Permute the fixation of the reference at the text cursor"
+msgstr "Разрешить фиксацию ссылки на текстовом курсоре"
+
+#: ui/actions/Fill.cpp:64
+#, kde-format
+msgid "Fill &Up"
+msgstr ""
+
+#: ui/actions/Fill.cpp:66
+#, fuzzy, kde-format
+#| msgid "&Down"
+msgid "Fill &Down"
+msgstr "В&низ"
+
+#: ui/actions/Fill.cpp:68
+#, fuzzy, kde-format
+#| msgid "&Left"
+msgid "Fill &Left"
+msgstr "В&лево"
+
+#: ui/actions/Fill.cpp:70
+#, fuzzy, kde-format
+#| msgid "&Right"
+msgid "Fill &Right"
+msgstr "В&право"
+
+#: ui/actions/Fill.cpp:79
+msgctxt "(qtundo-format)"
+msgid "Fill Selection"
+msgstr ""
+"Заполнить выделенное\n"
+"заполнение выделенного"
+
+#: ui/actions/FindReplace.cpp:124
+msgctxt "(qtundo-format)"
+msgid "Replace"
+msgstr ""
+"Заменить\n"
+"замену"
+
+#: ui/actions/Font.cpp:30
+#, kde-format
+msgid "Select Font..."
+msgstr "Выберите шрифт..."
+
+#: ui/actions/Font.cpp:30
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font"
+msgstr "Установить параметры форматирования ячейки"
+
+#: ui/actions/Font.cpp:59 ui/actions/Font.cpp:106 ui/actions/Style.cpp:93
+#: ui/actions/Style.cpp:129 ui/actions/Style.cpp:165 ui/actions/Style.cpp:194
+#: ui/actions/Style.cpp:495 ui/actions/Style.cpp:519
+msgctxt "(qtundo-format)"
+msgid "Change Font"
+msgstr ""
+"Изменить шрифт\n"
+"изменение шрифта"
+
+#: ui/actions/Font.cpp:77
+#, kde-format
+msgid "Select Font Size"
+msgstr "Выберите размер шрифта"
+
+#: ui/actions/Font.cpp:77
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell font size"
+msgstr "Установить параметры форматирования ячейки"
+
+#: ui/actions/Font.cpp:86
+#, kde-format
+msgid "Font Size"
+msgstr "Размер шрифта"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Set the text color"
+msgstr "Установить цвет текста"
+
+#: ui/actions/Font.cpp:125
+#, kde-format
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "&Function..."
+msgstr "&Функция..."
+
+#: ui/actions/Formula.cpp:21
+#, kde-format
+msgid "Insert math expression"
+msgstr "Вставить математическое выражение"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:59
+#, kde-format
+msgid "Formula Selection"
+msgstr "Выбор формулы"
+
+#: ui/actions/Formula.cpp:51 ui/actions/Formula.cpp:60
+#, kde-format
+msgid "Insert a function"
+msgstr "Вставить функцию"
+
+#: ui/actions/Formula.cpp:61 ui/actions/Formula.cpp:76
+#, kde-format
+msgid "Others..."
+msgstr "Другие..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "&Goal Seek..."
+msgstr "&Поиск решения..."
+
+#: ui/actions/GoalSeek.cpp:27
+#, kde-format
+msgid "Repeating calculation to find a specific value"
+msgstr "Повторение вычисления для поиска нужного значения"
+
+#: ui/actions/GoalSeek.cpp:59 ui/actions/GoalSeek.cpp:66
+#, kde-format
+msgid "Cell reference is invalid."
+msgstr "Ссылка на ячейку неверна."
+
+#: ui/actions/GoalSeek.cpp:75
+#, kde-format
+msgid "Target value is invalid."
+msgstr "Целевое значение неверно."
+
+#: ui/actions/GoalSeek.cpp:84
+#, kde-format
+msgid "Source cell must contain a numeric value."
+msgstr "Исходные ячейки должны содержать числовые значения."
+
+#: ui/actions/GoalSeek.cpp:90
+#, kde-format
+msgid "Target cell must contain a formula."
+msgstr "Целевая ячейка должна быть формулой."
+
+#: ui/actions/GoalSeek.cpp:95
+#, kde-format
+msgid "Solving ..."
+msgstr ""
+
+#: ui/actions/GoalSeek.cpp:169
+#, fuzzy, kde-format
+#| msgid "Goal seeking with cell %1 found a solution:"
+msgid "Goal seeking with cell %1 found a solution."
+msgstr "Во время поиска решения в ячейке %1 найдено решение:"
+
+#: ui/actions/GoalSeek.cpp:179
+#, kde-format
+msgid "Goal seeking with cell %1 has found NO solution."
+msgstr "Во время поиска решения в ячейке %1 НЕ найдено решение."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Goto Cell..."
+msgstr "Перейти на ячейку..."
+
+#: ui/actions/Goto.cpp:25
+#, kde-format
+msgid "Move to a particular cell"
+msgstr "Перейти на указанную ячейку"
+
+#: ui/actions/Goto.cpp:34
+#, kde-format
+msgid "Goto"
+msgstr "Перейти"
+
+#: ui/actions/Goto.cpp:44
+#, fuzzy, kde-format
+#| msgid "This is not a valid time."
+msgid "That is not a valid cell."
+msgstr "Это значение времени неверно."
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Decrease Indent"
+msgstr "Уменьшить отступ"
+
+#: ui/actions/Indent.cpp:26
+#, kde-format
+msgid "Increase Indent"
+msgstr "Увеличить отступ"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Decrease the indentation"
+msgstr "Уменьшить отступ"
+
+#: ui/actions/Indent.cpp:28
+#, kde-format
+msgid "Increase the indentation"
+msgstr "Увеличить отступ"
+
+#: ui/actions/Indent.cpp:96
+msgctxt "(qtundo-format)"
+msgid "Increase Indentation"
+msgstr ""
+"Увеличить отступ\n"
+"увеличение отступа"
+
+#: ui/actions/Indent.cpp:98
+msgctxt "(qtundo-format)"
+msgid "Decrease Indentation"
+msgstr ""
+"Уменьшить отступ\n"
+"уменьшение отступа"
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "From &Database..."
+msgstr "Из базы &данных..."
+
+#: ui/actions/InsertFromDatabase.cpp:20
+#, kde-format
+msgid "Insert data from a SQL database"
+msgstr "Вставить данные из базы данных SQL"
+
+#: ui/actions/InsertFromDatabase.cpp:45
+#, kde-format
+msgid ""
+"No database drivers available. To use this feature you need to install the "
+"necessary Qt database drivers."
+msgstr ""
+"Драйверы баз данных недоступны. Пересоберите Qt с необходимыми драйверами."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "&Series..."
+msgstr "&Ряд..."
+
+#: ui/actions/InsertSeries.cpp:27
+#, kde-format
+msgid "Insert a series"
+msgstr "Вставить ряд"
+
+#: ui/actions/InsertSeries.cpp:60
+msgctxt "(qtundo-format)"
+msgid "Insert Series"
+msgstr ""
+"Вставить ряд\n"
+"вставку ряда"
+
+#: ui/actions/InsertSpecialChar.cpp:30
+#, kde-format
+msgid "S&pecial Character..."
+msgstr "Сп&ециальный символ..."
+
+#: ui/actions/InsertSpecialChar.cpp:32
+#, kde-format
+msgid "Insert one or more symbols or letters not found on the keyboard"
+msgstr ""
+"Вставить один или несколько символов или букв, отсутствующих на клавиатуре"
+
+#: ui/actions/Inspector.cpp:34
+#, kde-format
+msgid "Run Inspector..."
+msgstr "Запуск инспектора..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "&Link..."
+msgstr "Сс&ылка..."
+
+#: ui/actions/Link.cpp:23
+#, kde-format
+msgid "Insert an Internet hyperlink"
+msgstr "Вставить ссылку на ресурс Интернета"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Link"
+msgstr "Ссылка"
+
+#: ui/actions/Link.cpp:65
+#, kde-format
+msgid "Remove a link"
+msgstr "Удалить ссылку"
+
+#: ui/actions/Link.cpp:74
+#, kde-format
+msgid "Remove Link"
+msgstr "Удалить ссылку"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Remove Link"
+msgstr ""
+"Удалить ссылку\n"
+"удаление ссылок"
+
+#: ui/actions/Link.cpp:92
+msgctxt "(qtundo-format)"
+msgid "Set Link"
+msgstr "Ссылка"
+
+#: ui/actions/ListChoose.cpp:28
+#, kde-format
+msgid "Selection List..."
+msgstr "Повторить..."
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Horizontally"
+msgstr "Объединить ячейки горизонтально"
+
+#: ui/actions/Merge.cpp:19
+#, kde-format
+msgid "Merge Cells Vertically"
+msgstr "Объединить ячейки вертикально"
+
+#: ui/actions/Merge.cpp:34
+#, kde-format
+msgid "Merge the selected region horizontally"
+msgstr "Объединить ячейки выделенного диапазона по строкам"
+
+#: ui/actions/Merge.cpp:36
+#, kde-format
+msgid "Merge the selected region vertically"
+msgstr "Объединить ячейки выделенного диапазона по столбцам"
+
+#: ui/actions/Merge.cpp:38
+#, kde-format
+msgid "Merge the selected region"
+msgstr "Объединить ячейки выделенного диапазона в одну большую ячейку"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Dissociate Cells"
+msgstr "Разбить ячейки"
+
+#: ui/actions/Merge.cpp:66
+#, kde-format
+msgid "Unmerge the selected region"
+msgstr "Разбить ячейки выделенного диапазона"
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Area Name..."
+msgstr "Имя диапазона..."
+
+#: ui/actions/NamedAreas.cpp:28
+#, kde-format
+msgid "Set a name for a region of the spreadsheet"
+msgstr "Присвоить имя диапазону листа"
+
+#: ui/actions/NamedAreas.cpp:53
+#, kde-format
+msgid ""
+"The named area '%1' already exists.\n"
+"Do you want to replace it?"
+msgstr ""
+"Именованный диапазон «%1» уже существует.\n"
+"Заменить его?"
+
+#: ui/actions/NamedAreas.cpp:56
+#, kde-format
+msgid "Replace Named Area"
+msgstr "Заменить именованный диапазон"
+
+#: ui/actions/NamedAreas.cpp:65
+msgctxt "(qtundo-format)"
+msgid "Replace Named Area"
+msgstr ""
+"Заменить именованный диапазон\n"
+"замену именованного диапазона"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Edit or select named areas"
+msgstr "Изменить или выделить именованные диапазоны"
+
+#: ui/actions/NamedAreas.cpp:81
+#, kde-format
+msgid "Named Areas..."
+msgstr "Именованные диапазоны..."
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Break Before Row"
+msgstr "Разрыв перед строкой"
+
+#: ui/actions/PageBreak.cpp:21
+#, kde-format
+msgid "Set a manual page break before the row"
+msgstr "Установить ручной разрыв страницы перед строкой"
+
+#: ui/actions/PageBreak.cpp:30
+#, kde-format
+msgid "Row Break"
+msgstr "Разрыв строки"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Break Before Column"
+msgstr "Разрыв перед столбцом"
+
+#: ui/actions/PageBreak.cpp:74
+#, kde-format
+msgid "Set a manual page break before the column"
+msgstr "Установить ручной разрыв страницы перед столбцом"
+
+#: ui/actions/PageBreak.cpp:83
+#, kde-format
+msgid "Column Break"
+msgstr "Разрыв столбца"
+
+#: ui/actions/Paste.cpp:34
+#, kde-format
+msgid "Paste the contents of the clipboard at the cursor"
+msgstr "Вставить содержимое буфера обмена в текущую позицию курсора"
+
+#: ui/actions/Paste.cpp:94
+#, kde-format
+msgid "Special Paste..."
+msgstr "Специальная вставка..."
+
+#: ui/actions/Paste.cpp:96
+#, kde-format
+msgid "Paste the contents of the clipboard with special options"
+msgstr "Вставить содержимое буфера обмена по специальным условиям"
+
+#: ui/actions/Paste.cpp:153
+#, kde-format
+msgid "Paste with Insertion"
+msgstr "Вставить со сдвигом"
+
+#: ui/actions/Paste.cpp:155
+#, kde-format
+msgid "Inserts a cell from the clipboard into the spreadsheet"
+msgstr "Вставить ячейки из буфера обмена"
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "&Pivot Tables..."
+msgstr "&Сводные таблицы..."
+
+#: ui/actions/Pivot.cpp:18
+#, kde-format
+msgid "Create Pivot Tables"
+msgstr "Создание сводных таблиц"
+
+#: ui/actions/Pivot.cpp:29
+#, kde-format
+msgid "You must select multiple cells."
+msgstr "Вы должны выбрать несколько ячеек."
+
+#: ui/actions/SelectAll.cpp:20
+#, kde-format
+msgid "Selects all cells in the current sheet"
+msgstr "Выбрать все ячейки в текущей таблице"
+
+#: ui/actions/ShowTableView.cpp:23
+#, kde-format
+msgid "Show QTableView..."
+msgstr "Показать QTableView..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "&Sort..."
+msgstr "&Сортировка..."
+
+#: ui/actions/Sort.cpp:25
+#, kde-format
+msgid "Sort a group of cells"
+msgstr "Сортировать группу ячеек"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort &Increasing"
+msgstr "Сортировать по &возрастанию"
+
+#: ui/actions/Sort.cpp:111
+#, kde-format
+msgid "Sort a group of cells in ascending(first to last) order"
+msgstr "Сортировать группу ячеек по возрастанию"
+
+#: ui/actions/Sort.cpp:143
+#, kde-format
+msgid "Sort &Decreasing"
+msgstr "Сортировать по &убыванию"
+
+#: ui/actions/Sort.cpp:145
+#, kde-format
+msgid "Sort a group of cells in decreasing(last to first) order"
+msgstr "Сортировать группу ячеек по убыванию"
+
+#: ui/actions/Sort.cpp:183
+msgctxt "(qtundo-format)"
+msgid "Sort Data"
+msgstr ""
+"Сортировка данных\n"
+"сортировку данных"
+
+#: ui/actions/SpellCheck.cpp:84
+#, kde-format
+msgid "Do you want to check the spelling in the next sheet?"
+msgstr "Проверить орфографию на других листах?"
+
+#: ui/actions/SpellCheck.cpp:88
+#, fuzzy, kde-format
+#| msgid "Move to the next sheet"
+msgctxt "@action:button"
+msgid "Check next sheet"
+msgstr "Перейти на следующий лист"
+
+#: ui/actions/SpellCheck.cpp:237
+#, kde-format
+msgid "Check the spelling"
+msgstr "Проверка орфографии"
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Cell Format..."
+msgstr "Формат ячеек..."
+
+#: ui/actions/Style.cpp:29
+#, kde-format
+msgid "Set the cell formatting"
+msgstr "Установить параметры форматирования ячейки"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
+#: ui/actions/Style.cpp:76 ui/dialogs/FontWidget.ui:83
+#, kde-format
+msgid "Bold"
+msgstr "Полужирный"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
+#: ui/actions/Style.cpp:112 ui/dialogs/FontWidget.ui:58
+#, kde-format
+msgid "Italic"
+msgstr "Курсив"
+
+#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
+#: ui/actions/Style.cpp:148 ui/dialogs/FontWidget.ui:101
+#, kde-format
+msgid "Underline"
+msgstr "Подчёркнутый"
+
+#: ui/actions/Style.cpp:184
+#, kde-format
+msgid "Strike Out"
+msgstr "Зачёркнутый"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Make the cell text wrap onto multiple lines"
+msgstr "Переносить текст в ячейке на несколько строк"
+
+#: ui/actions/Style.cpp:213
+#, kde-format
+msgid "Wrap Text"
+msgstr "Переносить по словам"
+
+#: ui/actions/Style.cpp:222
+#, kde-format
+msgid "Wrap"
+msgstr "Перенос"
+
+#: ui/actions/Style.cpp:230
+msgctxt "(qtundo-format)"
+msgid "Wrap Text"
+msgstr ""
+"Переносить по словам\n"
+"перенос по словам"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Print cell contents vertically"
+msgstr "Печатать текст в ячейке вертикально"
+
+#: ui/actions/Style.cpp:247
+#, kde-format
+msgid "Vertical Text"
+msgstr "Текст по вертикали"
+
+#: ui/actions/Style.cpp:257
+msgctxt "(qtundo-format)"
+msgid "Vertical Text"
+msgstr ""
+"Текст по вертикали\n"
+"текст по вертикали"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Number Format"
+msgid "Number Format"
+msgstr ""
+"Численный формат\n"
+"численный формат"
+
+#: ui/actions/Style.cpp:274
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a number"
+msgstr "Установить параметры форматирования ячейки"
+
+#: ui/actions/Style.cpp:291
+#, fuzzy
+#| msgid "First number"
+msgctxt "(qtundo-format)"
+msgid "Format Number"
+msgstr "Первое число"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Scientific Format"
+msgid "Scientific Format"
+msgstr ""
+"Научный формат\n"
+"научный формат"
+
+#: ui/actions/Style.cpp:307
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting to look like a percentage"
+msgid "Set the cell formatting to a scientific format"
+msgstr "Установка процентного форматирования."
+
+#: ui/actions/Style.cpp:316 ui/dialogs/LayoutPage_Float.cpp:83
+#, kde-format
+msgid "Scientific"
+msgstr "Научный"
+
+#: ui/actions/Style.cpp:324
+#, fuzzy
+#| msgid "Scientific"
+msgctxt "(qtundo-format)"
+msgid "Format Scientific"
+msgstr "Научный"
+
+#: ui/actions/Style.cpp:342
+#, kde-format
+msgid "Percent Format"
+msgstr "Процентный формат"
+
+#: ui/actions/Style.cpp:344
+#, kde-format
+msgid "Set the cell formatting to look like a percentage"
+msgstr "Установка процентного форматирования."
+
+#: ui/actions/Style.cpp:353 ui/dialogs/LayoutPage_Float.cpp:69
+#, kde-format
+msgid "Percent"
+msgstr "Процентный"
+
+#: ui/actions/Style.cpp:361
+msgctxt "(qtundo-format)"
+msgid "Format Percent"
+msgstr ""
+"Процентный формат\n"
+"процентный формат"
+
+#: ui/actions/Style.cpp:379
+#, kde-format
+msgid "Money Format"
+msgstr "Денежный формат"
+
+#: ui/actions/Style.cpp:381
+#, kde-format
+msgid "Set the cell formatting to look like your local currency"
+msgstr "Форматирование валютной суммы в соответствии с установками локали"
+
+#: ui/actions/Style.cpp:390 ui/dialogs/LayoutPage_Float.cpp:76
+#, kde-format
+msgid "Money"
+msgstr "Денежный"
+
+#: ui/actions/Style.cpp:398
+msgctxt "(qtundo-format)"
+msgid "Format Money"
+msgstr ""
+"Денежный формат\n"
+"денежный формат"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Date Format"
+msgid "Date Format"
+msgstr ""
+"Формат даты\n"
+"формат даты"
+
+#: ui/actions/Style.cpp:414
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a date"
+msgstr "Установить параметры форматирования ячейки"
+
+#: ui/actions/Style.cpp:431
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Date"
+msgstr "Формат"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgid "Set the cell formatting"
+msgid "Set the cell formatting to a time"
+msgstr "Установить параметры форматирования ячейки"
+
+#: ui/actions/Style.cpp:447
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Time Format"
+msgid "Time Format"
+msgstr ""
+"Формат времени\n"
+"формат времени"
+
+#: ui/actions/Style.cpp:464
+#, fuzzy
+#| msgid "Format"
+msgctxt "(qtundo-format)"
+msgid "Format Time"
+msgstr "Формат"
+
+#: ui/actions/Style.cpp:480
+#, kde-format
+msgid "Increase Font Size"
+msgstr "Увеличить размер шрифта"
+
+#: ui/actions/Style.cpp:504
+#, kde-format
+msgid "Decrease Font Size"
+msgstr "Уменьшить размер шрифта"
+
+#: ui/actions/Style.cpp:530
+#, kde-format
+msgid "Increase Precision"
+msgstr "Увеличить точность"
+
+#: ui/actions/Style.cpp:532
+#, kde-format
+msgid "Increase the decimal precision shown onscreen"
+msgstr "Увеличить количество показываемых знаков после запятой."
+
+#: ui/actions/Style.cpp:549
+#, kde-format
+msgid "Decrease Precision"
+msgstr "Уменьшить точность"
+
+#: ui/actions/Style.cpp:551
+#, kde-format
+msgid "Decrease the decimal precision shown onscreen"
+msgstr "Уменьшить количество показываемых знаков после запятой"
+
+#: ui/actions/Style.cpp:597
+msgctxt "(qtundo-format)"
+msgid "Increase Precision"
+msgstr ""
+"Увеличить точность\n"
+"увеличение точности"
+
+#: ui/actions/Style.cpp:599
+msgctxt "(qtundo-format)"
+msgid "Decrease Precision"
+msgstr ""
+"Уменьшить точность\n"
+"уменьшение точности"
+
+#: ui/actions/Style.cpp:603
+#, kde-format
+msgid "Resets to the default format"
+msgstr "Применить формат по умолчанию"
+
+#: ui/actions/Style.cpp:613
+#, fuzzy
+#| msgid "Sheet Style"
+msgctxt "(qtundo-format)"
+msgid "Set Default Style"
+msgstr "Стиль листа"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: ui/actions/Style.cpp:622
+#, kde-format
+msgid "Set the background color"
+msgstr "Установить цвет фона"
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create Style From Cell..."
+msgstr "Создать стиль из ячейки..."
+
+#: ui/actions/Styles.cpp:31
+#, kde-format
+msgid "Create a new style based on the currently selected cell"
+msgstr "Создать новый стиль на основе форматирования текущей выбранной ячейки"
+
+#: ui/actions/Styles.cpp:40
+#, kde-format
+msgid "Style From Cell"
+msgstr "Стиль из ячейки"
+
+#: ui/actions/Styles.cpp:53
+#, kde-format
+msgid "Create Style From Cell"
+msgstr "Создать стиль из ячейки"
+
+#: ui/actions/Styles.cpp:61
+#, kde-format
+msgid "The style name cannot be empty."
+msgstr "Имя стиля не может быть пустым."
+
+#: ui/actions/Styles.cpp:66 ui/dialogs/LayoutPage_General.cpp:86
+#, kde-format
+msgid "A style with this name already exists."
+msgstr "Стиль с таким именем уже существует."
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Edit and organize cell styles"
+msgstr "Управление стилями ячеек"
+
+#: ui/actions/Styles.cpp:86
+#, kde-format
+msgid "Style Manager..."
+msgstr "Управление стилями..."
+
+#: ui/actions/Styles.cpp:122
+#, kde-format
+msgid "Apply a predefined style to the selected cells"
+msgstr "Применить к выделенным ячейкам предопределённый стиль"
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "&Subtotals..."
+msgstr "&Подитоги..."
+
+#: ui/actions/Subtotals.cpp:21
+#, kde-format
+msgid "Create different kind of subtotals to a list or database"
+msgstr "Создание различных видов подитогов для списка или базы данных"
+
+#: ui/actions/Subtotals.cpp:118
+#, fuzzy
+#| msgid "Subtotals"
+msgctxt "(qtundo-format)"
+msgid "Subtotals"
+msgstr "Подитоги"
+
+#: ui/actions/TextCase.cpp:31
+#, kde-format
+msgid "Upper"
+msgstr "Верхний"
+
+#: ui/actions/TextCase.cpp:34
+#, kde-format
+msgid "Lower"
+msgstr "Нижний"
+
+#: ui/actions/TextCase.cpp:37
+#, kde-format
+msgid "First Letter Upper"
+msgstr "Преобразовать первую букву в верхний регистр"
+
+#: ui/actions/TextCase.cpp:50
+msgctxt "(qtundo-format)"
+msgid "Switch to uppercase"
+msgstr ""
+"Переключить в верхний регистр\n"
+"переключение в верхний регистр"
+
+#: ui/actions/TextCase.cpp:53
+msgctxt "(qtundo-format)"
+msgid "Switch to lowercase"
+msgstr ""
+"Переключить в нижний регистр\n"
+"переключение в нижний регистр"
+
+#: ui/actions/TextCase.cpp:56
+msgctxt "(qtundo-format)"
+msgid "First letter uppercase"
+msgstr ""
+"Первая буква — прописная\n"
+"прописную первую букву"
+
+#: ui/actions/TextCase.cpp:95
+#, kde-format
+msgid "Upper Case"
+msgstr "Верхний регистр"
+
+#: ui/actions/TextCase.cpp:97
+#, kde-format
+msgid "Lower Case"
+msgstr "Нижний регистр"
+
+#: ui/actions/TextCase.cpp:99
+#, kde-format
+msgid "Convert First Letter to Upper Case"
+msgstr "Преобразовывать первую букву в верхний регистр"
+
+#: ui/actions/TextCase.cpp:108
+#, kde-format
+msgid "Convert all letters to upper case"
+msgstr "Преобразовывать все буквы в верхний регистр"
+
+#: ui/actions/TextCase.cpp:110
+#, kde-format
+msgid "Convert all letters to lower case"
+msgstr "Преобразовывать все буквы в нижний регистр."
+
+#: ui/actions/TextCase.cpp:112
+#, kde-format
+msgid "Capitalize the first letter"
+msgstr "Сделать первую букву прописной"
+
+#: ui/actions/TextCase.cpp:120
+msgctxt "(qtundo-format)"
+msgid "Change Case"
+msgstr ""
+"Изменить регистр\n"
+"изменение регистра"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Set tests to confirm cell data is valid"
+msgstr "Установка проверки значения в ячейке определённым условиям"
+
+#: ui/actions/Validity.cpp:21
+#, kde-format
+msgid "Validity..."
+msgstr "Проверка..."
+
+#: ui/actions/Validity.cpp:55
+#, kde-format
+msgid "Remove the validity tests on this cell"
+msgstr "Убрать проверку значения ячейки"
+
+#: ui/actions/Validity.cpp:64
+#, kde-format
+msgid "Remove Validity"
+msgstr "Убрать проверку"
+
+#: ui/actions/Validity.cpp:103
+msgctxt "(qtundo-format)"
+msgid "Remove Validity Check"
+msgstr ""
+"Убрать проверку правильности\n"
+"удаление проверки правильности"
+
+#: ui/actions/Validity.cpp:105
+msgctxt "(qtundo-format)"
+msgid "Add Validity Check"
+msgstr ""
+"Добавить проверку правильности\n"
+"добавление проверки правильности"
 
 #: ui/CellToolBase.cpp:813
 #, kde-format
@@ -14627,13 +17883,6 @@ msgid "Remove Cells"
 msgstr ""
 "Удалить ячейки\n"
 "удаление ячеек"
-
-#: ui/commands/DeleteCommand.cpp:22
-msgctxt "(qtundo-format)"
-msgid "Delete"
-msgstr ""
-"Удалить\n"
-"удаление"
 
 #: ui/commands/MergeCommand.cpp:81
 msgctxt "(qtundo-format)"
@@ -14903,12 +18152,6 @@ msgstr "Оставить"
 msgid "Roman"
 msgstr "Прямой"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, style_combo)
-#: ui/dialogs/FontWidget.ui:58
-#, kde-format
-msgid "Italic"
-msgstr "Курсив"
-
 #. i18n: ectx: property (whatsThis), widget (QComboBox, weight_combo)
 #: ui/dialogs/FontWidget.ui:66
 #, kde-format
@@ -14930,12 +18173,6 @@ msgstr ""
 msgid "Normal"
 msgstr "Обычный"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, weight_combo)
-#: ui/dialogs/FontWidget.ui:83
-#, kde-format
-msgid "Bold"
-msgstr "Полужирный"
-
 #. i18n: ectx: property (text), widget (QLabel, textLabel4)
 #: ui/dialogs/FontWidget.ui:91 ui/dialogs/LayoutPage_Border.cpp:308
 #: ui/dialogs/LayoutPage_Pattern.cpp:116
@@ -14950,12 +18187,6 @@ msgid "If this is checked, the current cell text will be underlined."
 msgstr ""
 "При включении этой опции текст в выделенных ячейках будет показан "
 "подчёркнутым."
-
-#. i18n: ectx: property (text), widget (Calligra::Sheets::LayoutCheckbox, underline)
-#: ui/dialogs/FontWidget.ui:101
-#, kde-format
-msgid "Underline"
-msgstr "Подчёркнутый"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: ui/dialogs/FontWidget.ui:108
@@ -15107,11 +18338,6 @@ msgstr ""
 "Региональные и специальные возможности -> Страна/область и язык -> Числа. По "
 "умолчанию для чисел используется выравнивание по правому краю."
 
-#: ui/dialogs/LayoutPage_Float.cpp:69
-#, kde-format
-msgid "Percent"
-msgstr "Процентный"
-
 #: ui/dialogs/LayoutPage_Float.cpp:71
 #, kde-format
 msgid ""
@@ -15129,11 +18355,6 @@ msgstr ""
 "Применить процентный формат вы можете, нажав кнопку со знаком % на панели "
 "инструментов."
 
-#: ui/dialogs/LayoutPage_Float.cpp:76
-#, kde-format
-msgid "Money"
-msgstr "Денежный"
-
 #: ui/dialogs/LayoutPage_Float.cpp:78
 #, kde-format
 msgid ""
@@ -15149,11 +18370,6 @@ msgstr ""
 "суммы.\n"
 "Чтобы применить денежный формат, нажмите кнопку с изображением денег на "
 "панели инструментов."
-
-#: ui/dialogs/LayoutPage_Float.cpp:83
-#, kde-format
-msgid "Scientific"
-msgstr "Научный"
 
 #: ui/dialogs/LayoutPage_Float.cpp:85
 #, kde-format
@@ -15402,11 +18618,6 @@ msgstr "Три цифры 153/652"
 msgid "Dolor Ipse"
 msgstr "Dolor Ipse"
 
-#: ui/dialogs/LayoutPage_General.cpp:42
-#, kde-format
-msgid "Style"
-msgstr "Стиль"
-
 #: ui/dialogs/LayoutPage_General.cpp:48
 #, kde-format
 msgctxt "Name of the style"
@@ -15417,11 +18628,6 @@ msgstr "Название:"
 #, kde-format
 msgid "Inherit style:"
 msgstr "Наследовать стиль:"
-
-#: ui/dialogs/LayoutPage_General.cpp:86
-#, kde-format
-msgid "A style with this name already exists."
-msgstr "Стиль с таким именем уже существует."
 
 #: ui/dialogs/LayoutPage_General.cpp:90
 #, kde-format
@@ -15474,12 +18680,6 @@ msgstr ""
 msgid "Standard"
 msgstr "Обычно"
 
-#. i18n: ectx: property (text), widget (QRadioButton, center)
-#: ui/dialogs/PositionWidget.ui:68
-#, kde-format
-msgid "Center"
-msgstr "По центру"
-
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, groupBox4)
 #: ui/dialogs/PositionWidget.ui:85
 #, kde-format
@@ -15517,24 +18717,6 @@ msgstr ""
 "<b>Сверху</b> - выравнивание по верхнему краю.\n"
 "<b>По середине</b> - вертикальное выравнивание по центру ячейки.\n"
 "<b>Снизу</b>- выравнивание по нижнему краю.</qt>"
-
-#. i18n: ectx: property (text), widget (QRadioButton, top)
-#: ui/dialogs/PositionWidget.ui:141
-#, kde-format
-msgid "Top"
-msgstr "Сверху"
-
-#. i18n: ectx: property (text), widget (QRadioButton, middle)
-#: ui/dialogs/PositionWidget.ui:148
-#, kde-format
-msgid "Middle"
-msgstr "По середине"
-
-#. i18n: ectx: property (text), widget (QRadioButton, bottom)
-#: ui/dialogs/PositionWidget.ui:155
-#, kde-format
-msgid "Bottom"
-msgstr "Снизу"
 
 #. i18n: ectx: property (whatsThis), widget (QGroupBox, indentGroup)
 #: ui/dialogs/PositionWidget.ui:165
@@ -15723,20 +18905,10 @@ msgstr "Применить"
 msgid "Apply changes"
 msgstr "Применить изменения"
 
-#: ui/ExternalEditor.cpp:60
-#, kde-format
-msgid "Cancel"
-msgstr "Отменить"
-
 #: ui/ExternalEditor.cpp:61
 #, kde-format
 msgid "Discard changes"
 msgstr "Отклонить изменения"
-
-#: ui/FilterPopup.cpp:54
-#, kde-format
-msgid "All"
-msgstr "Все"
 
 #: ui/FilterPopup.cpp:57
 #, kde-format
@@ -15832,358 +19004,11 @@ msgstr "Ссылка %1 активирована"
 #~ msgid " (=[hh]:mm)"
 #~ msgstr " (=[чч]:мм)"
 
-#~ msgid "&Function..."
-#~ msgstr "&Функция..."
-
-#~ msgid "Insert math expression"
-#~ msgstr "Вставить математическое выражение"
-
-#~ msgid "From &Database..."
-#~ msgstr "Из базы &данных..."
-
-#~ msgid "Insert data from a SQL database"
-#~ msgstr "Вставить данные из базы данных SQL"
-
-#~ msgid "Formula Selection"
-#~ msgstr "Выбор формулы"
-
-#~ msgid "Insert a function"
-#~ msgstr "Вставить функцию"
-
-#~ msgid "Others..."
-#~ msgstr "Другие..."
-
-#~ msgid "Modify Cell"
-#~ msgstr "Изменить ячейку"
-
-#~ msgid "Edit the highlighted cell"
-#~ msgstr "Изменить текущую ячейку"
-
-#~ msgid "Run Inspector..."
-#~ msgstr "Запуск инспектора..."
-
-#~ msgid "Show QTableView..."
-#~ msgstr "Показать QTableView..."
-
 #~ msgid "Permute reference fixation"
 #~ msgstr "Разрешить фиксацию ссылки"
 
-#~ msgid "Permute fixation"
-#~ msgstr "Разрешить фиксацию"
-
-#~ msgid "Permute the fixation of the reference at the text cursor"
-#~ msgstr "Разрешить фиксацию ссылки на текстовом курсоре"
-
-#~ msgid ""
-#~ "No database drivers available. To use this feature you need to install "
-#~ "the necessary Qt database drivers."
-#~ msgstr ""
-#~ "Драйверы баз данных недоступны. Пересоберите Qt с необходимыми драйверами."
-
-#~ msgid "Insert Data From Database"
-#~ msgstr "Вставить данные из базы данных"
-
-#~ msgid "Type:"
-#~ msgstr "Тип:"
-
-#~ msgid ""
-#~ "User name:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Имя пользователя:\n"
-#~ "(если необходимо)"
-
-#~ msgid "Host:"
-#~ msgstr "Узел:"
-
-#~ msgid ""
-#~ "Port:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Порт:\n"
-#~ "(если необходимо)"
-
-#~ msgid "Database name: "
-#~ msgstr "Имя базы данных: "
-
-#~ msgid ""
-#~ "Password:\n"
-#~ "(if necessary)"
-#~ msgstr ""
-#~ "Пароль:\n"
-#~ "(если необходимо)"
-
-#~ msgid "Select tables:"
-#~ msgstr "Выберите таблицы:"
-
-#~ msgid "Tables"
-#~ msgstr "Таблицы"
-
-#~ msgid "Select columns:"
-#~ msgstr "Выберите столбцы:"
-
-#~ msgid "Table"
-#~ msgstr "Таблица"
-
-#~ msgid "Columns"
-#~ msgstr "Столбцы"
-
-#~ msgid "Match all of the following (AND)"
-#~ msgstr "Удовлетворяет всем условиям (И)"
-
-#~ msgid "Match any of the following (OR)"
-#~ msgstr "Удовлетворяет хотя бы одному условию (ИЛИ)"
-
-#~ msgid "equals"
-#~ msgstr "равно"
-
-#~ msgid "not equal"
-#~ msgstr "не равно"
-
-#~ msgid "in"
-#~ msgstr "содержит"
-
-#~ msgid "not in"
-#~ msgstr "не содержит"
-
-#~ msgid "like"
-#~ msgstr "совпадает"
-
-#~ msgid "greater"
-#~ msgstr "больше"
-
-#~ msgid "lesser"
-#~ msgstr "меньше"
-
-#~ msgid "greater or equal"
-#~ msgstr "больше или равно"
-
-#~ msgid "less or equal"
-#~ msgstr "меньше или равно"
-
-#~ msgid "Sorted by"
-#~ msgstr "Сортировать"
-
-#~ msgid "Ascending"
-#~ msgstr "по возрастанию"
-
-#~ msgid "Descending"
-#~ msgstr "по убыванию"
-
-#~ msgid "Distinct"
-#~ msgstr "Обособленный"
-
-#~ msgid "Query Options"
-#~ msgstr "Параметры запроса"
-
-#~ msgid "SQL query:"
-#~ msgstr "Запрос SQL:"
-
-#~ msgid "Insert in region"
-#~ msgstr "Вставить в диапазон"
-
-#~ msgid "Starting in cell"
-#~ msgstr "Начиная с ячейки"
-
-#~ msgid "Result"
-#~ msgstr "Результат"
-
-#~ msgid "You cannot specify a table here."
-#~ msgstr "Здесь нельзя указать таблицу."
-
-#~ msgid "You have to specify a valid region."
-#~ msgstr "Необходимо указать допустимый регион."
-
-#~ msgid "You have to specify a valid cell."
-#~ msgstr "Необходимо указать допустимую ячейку."
-
 #~ msgid "You are not allowed to change data in the database."
 #~ msgstr "У вас недостаточно прав для изменения данных в этой базе."
-
-#~ msgid "Executing query failed."
-#~ msgstr "Ошибка выполнения запроса."
-
-#~ msgid "You did not get any results with this query."
-#~ msgstr "Запрос не вернул ни одного значения."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Data From Database"
-#~ msgstr ""
-#~ "Вставить данные из базы данных\n"
-#~ "вставку данных из базы данных"
-
-#~ msgid "The port must be a number"
-#~ msgstr "Порт должен быть числом"
-
-#~ msgid "Connecting to database..."
-#~ msgstr "Подключение к базе данных..."
-
-#~ msgid "Connected. Retrieving table information..."
-#~ msgstr "Подключено. Получение информации о таблицах..."
-
-#~ msgid "This database contains no tables"
-#~ msgstr "База данных не содержит таблиц"
-
-#~ msgid "Driver could not be loaded"
-#~ msgstr "Драйвер не может быть загружен"
-
-#~ msgid "Retrieving meta data of tables..."
-#~ msgstr "Получение метаданных таблиц..."
-
-#~ msgid "You have to select at least one table."
-#~ msgstr "Необходимо выбрать хотя бы одну таблицу."
-
-#~ msgid "You have to select at least one column."
-#~ msgstr "Необходимо выбрать хотя бы один столбец."
-
-#~ msgid ""
-#~ "'*' or '?' are not valid wildcards in SQL. The proper replacements are "
-#~ "'%' or '_'. Do you want to replace them?"
-#~ msgstr ""
-#~ "«*» или «?» не являются допустимыми шаблонами SQL. Вместо них "
-#~ "используются «%» or «_». Заменить?"
-
-#~ msgid "Insert function"
-#~ msgstr "Вставить функцию"
-
-#~ msgid "Help"
-#~ msgstr "Помощь"
-
-#~ msgid "This function has no parameters."
-#~ msgstr "У этой функции нет параметров."
-
-#~ msgid "Description is not available."
-#~ msgstr "Описание не доступно."
-
-#~ msgid "Document Settings..."
-#~ msgstr "Настройка документа..."
-
-#~ msgid "Show document settings dialog"
-#~ msgstr "Показывать диалог настройки документа"
-
-#~ msgid "Document Settings"
-#~ msgstr "Настройка документа"
-
-#~ msgid "Calculation"
-#~ msgstr "Режим подсчёта"
-
-#~ msgid "Locale"
-#~ msgstr "Локаль"
-
-#~ msgid "Case sensitive"
-#~ msgstr "Сортировка с учётом регистра"
-
-#~ msgid "Precision as shown"
-#~ msgstr "Точность, как показано"
-
-#~ msgid "Search criteria must apply to whole cell"
-#~ msgstr "Условия поиска должны применяться для всей ячейки"
-
-#~ msgid "Automatic find labels"
-#~ msgstr "Автоматически находить метки"
-
-#~ msgid "String comparison:"
-#~ msgstr "Сравнение строк:"
-
-#~ msgid "Regular Expressions"
-#~ msgstr "Регулярные выражения"
-
-#~ msgid "Wildcards"
-#~ msgstr "Шаблоны"
-
-#~ msgid "Null Year:"
-#~ msgstr "Нулевой год:"
-
-#~ msgid "&Use System's Locale Settings"
-#~ msgstr "&Использовать системную локаль"
-
-#, fuzzy
-#~| msgid "Language: %1"
-#~ msgid "Language: %1 (%2)"
-#~ msgstr "Язык: %1"
-
-#~ msgid "Default number format: %1"
-#~ msgstr "Формат чисел по умолчанию: %1"
-
-#~ msgid "Long date format: %1"
-#~ msgstr "Полный формат даты: %1"
-
-#~ msgid "Short date format: %1"
-#~ msgstr "Краткий формат даты: %1"
-
-#~ msgid "Time format: %1"
-#~ msgstr "Формат времени: %1"
-
-#~ msgid "Currency format: %1"
-#~ msgstr "Формат денежной суммы: %1"
-
-#~ msgid "Custom Lists..."
-#~ msgstr "Списки пользователя..."
-
-#~ msgid "Create custom lists for sorting or autofill"
-#~ msgstr ""
-#~ "Управление пользовательскими списками для сортировки или автозаполнения"
-
-#~ msgid "Selects all cells in the current sheet"
-#~ msgstr "Выбрать все ячейки в текущей таблице"
-
-#~ msgid "Custom Lists"
-#~ msgstr "Списки пользователя"
-
-#~ msgid "List:"
-#~ msgstr "Список:"
-
-#~ msgid "Entry:"
-#~ msgstr "Элемент:"
-
-#~ msgid "Add"
-#~ msgstr "Добавить"
-
-#~ msgid "New"
-#~ msgstr "Создать"
-
-#~ msgid "Remove"
-#~ msgstr "Удалить"
-
-#~ msgid "Modify"
-#~ msgstr "Изменить"
-
-#~ msgid "Copy"
-#~ msgstr "Скопировать"
-
-#~ msgid "Do you really want to remove this list?"
-#~ msgstr "Вы действительно хотите удалить этот список?"
-
-#~ msgid "Remove List"
-#~ msgstr "Удалить список"
-
-#~ msgid ""
-#~ "Entry area is not empty.\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Диапазон содержит данные.\n"
-#~ "Хотите продолжить?"
-
-#~ msgid "&Goal Seek..."
-#~ msgstr "&Поиск решения..."
-
-#~ msgid "Repeating calculation to find a specific value"
-#~ msgstr "Повторение вычисления для поиска нужного значения"
-
-#~ msgid "Goal Seek"
-#~ msgstr "Поиск решения"
-
-#~ msgid "Cell reference is invalid."
-#~ msgstr "Ссылка на ячейку неверна."
-
-#~ msgid "Target value is invalid."
-#~ msgstr "Целевое значение неверно."
-
-#~ msgid "Source cell must contain a numeric value."
-#~ msgstr "Исходные ячейки должны содержать числовые значения."
-
-#~ msgid "Target cell must contain a formula."
-#~ msgstr "Целевая ячейка должна быть формулой."
 
 #~ msgid "Starting..."
 #~ msgstr "Запуск..."
@@ -16193,12 +19018,6 @@ msgstr "Ссылка %1 активирована"
 
 #~ msgid "New value:"
 #~ msgstr "Новое значение:"
-
-#~ msgid "Goal seeking with cell %1 found a solution:"
-#~ msgstr "Во время поиска решения в ячейке %1 найдено решение:"
-
-#~ msgid "Goal seeking with cell %1 has found NO solution."
-#~ msgstr "Во время поиска решения в ячейке %1 НЕ найдено решение."
 
 #~ msgid "Set cell:"
 #~ msgstr "Ячейка с формулой:"
@@ -16215,84 +19034,6 @@ msgstr "Ссылка %1 активирована"
 
 #~ msgid "Current value:"
 #~ msgstr "Текущее значение:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace"
-#~ msgstr ""
-#~ "Заменить\n"
-#~ "замену"
-
-#~ msgid "Selection List..."
-#~ msgstr "Повторить..."
-
-#~ msgid "More Options"
-#~ msgstr "Показать параметры"
-
-#~ msgid "Search entire sheet"
-#~ msgstr "Поиск по всему листу"
-
-#~ msgid "Search in:"
-#~ msgstr "Искать в:"
-
-#~ msgid "Cell Values"
-#~ msgstr "Значениях"
-
-#~ msgid "Comments"
-#~ msgstr "Комментариях"
-
-#~ msgid "Search direction:"
-#~ msgstr "Направление:"
-
-#~ msgid "Across then Down"
-#~ msgstr "Влево, потом вниз"
-
-#~ msgid "Down then Across"
-#~ msgstr "Вниз. потом влево"
-
-#~ msgid "Fewer Options"
-#~ msgstr "Скрыть параметры"
-
-#~ msgid "Cell Format..."
-#~ msgstr "Формат ячеек..."
-
-#~ msgid "Set the cell formatting"
-#~ msgstr "Установить параметры форматирования ячейки"
-
-#~ msgid "Move the cell object to the clipboard"
-#~ msgstr "Вырезать объект ячейки в буфер обмена"
-
-#~ msgid "Copy the cell object to the clipboard"
-#~ msgstr "Скопировать объект таблицы в буфер обмена"
-
-#~ msgid "Paste the contents of the clipboard at the cursor"
-#~ msgstr "Вставить содержимое буфера обмена в текущую позицию курсора"
-
-#~ msgid "Special Paste..."
-#~ msgstr "Специальная вставка..."
-
-#~ msgid "Paste the contents of the clipboard with special options"
-#~ msgstr "Вставить содержимое буфера обмена по специальным условиям"
-
-#~ msgid "Paste with Insertion"
-#~ msgstr "Вставить со сдвигом"
-
-#~ msgid "Inserts a cell from the clipboard into the spreadsheet"
-#~ msgstr "Вставить ячейки из буфера обмена"
-
-#~ msgid "Paste Inserting Cells"
-#~ msgstr "Вставить ячейки со сдвигом"
-
-#~ msgid "Insert"
-#~ msgstr "Вставить"
-
-#~ msgid "Move towards right"
-#~ msgstr "Сдвинуть вправо"
-
-#~ msgid "Move towards bottom"
-#~ msgstr "Сдвинуть вниз"
-
-#~ msgid "Special Paste"
-#~ msgstr "Специальная вставка"
 
 #~ msgid "Content"
 #~ msgstr "Содержимое"
@@ -16324,35 +19065,14 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Division"
 #~ msgstr "Деление"
 
-#~ msgid "Check the spelling"
-#~ msgstr "Проверка орфографии"
-
-#~ msgid "Do you want to check the spelling in the next sheet?"
-#~ msgstr "Проверить орфографию на других листах?"
-
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Correct Misspelled Words"
 #~ msgstr ""
 #~ "Исправить слова с ошибками\n"
 #~ "исправление слов с ошибками"
 
-#~ msgid "Auto-Format..."
-#~ msgstr "Автоформат..."
-
 #~ msgid "Set the worksheet formatting"
 #~ msgstr "Настройка форматирования листа"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Format"
-#~ msgstr ""
-#~ "Автоформат\n"
-#~ "автоформат"
-
-#~ msgid "Sheet Style"
-#~ msgstr "Стиль листа"
-
-#~ msgid "Select the sheet style to apply:"
-#~ msgstr "Применить стиль таблицы:"
 
 #~ msgid "Could not find image %1."
 #~ msgstr "Невозможно найти рисунок %1."
@@ -16360,98 +19080,8 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Could not load image %1."
 #~ msgstr "Невозможно загрузить рисунок %1."
 
-#~ msgid "Could not find sheet-style XML file '%1'."
-#~ msgstr "Невозможно найти файл стиля XML «%1»."
-
-#~ msgid "Parsing error in sheet-style XML file %1."
-#~ msgstr "Неверный формат файла стиля XML «%1»."
-
-#~ msgid "&Auto-Filter"
-#~ msgstr "&Автофильтр"
-
-#~ msgid "Add an automatic filter to a cell range"
-#~ msgstr "Добавить автоматический фильтр для диапазона ячеек"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Auto-Filter"
-#~ msgstr ""
-#~ "Автофильтр\n"
-#~ "автофильтр"
-
-#~ msgid "Clear All"
-#~ msgstr "Очистить всё"
-
-#~ msgid "Clear all contents and formatting of the current cell"
-#~ msgstr "Очистить всё содержимое и форматирование текущей ячейки"
-
 #~ msgid "Contents"
 #~ msgstr "Содержимое"
-
-#~ msgid "Clear Contents"
-#~ msgstr "Очистить содержимое"
-
-#~ msgid "Remove the contents of the current cell"
-#~ msgstr "Удалить всё содержимое текущей ячейки"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Clear Text"
-#~ msgstr ""
-#~ "Удалить текст\n"
-#~ "удаление текста"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Conditional Formatting"
-#~ msgstr ""
-#~ "Убрать форматирование по условию\n"
-#~ "удаление форматирования по условию"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Conditional Formatting"
-#~ msgstr ""
-#~ "Добавить форматирование по условию\n"
-#~ "добавление форматирования по условию"
-
-#~ msgid "Select a new border color"
-#~ msgstr "Изменить цвет границы"
-
-#~ msgid "Border Color"
-#~ msgstr "Цвет границы"
-
-#~ msgid "Set the background color"
-#~ msgstr "Установить цвет фона"
-
-#~ msgid "Background Color"
-#~ msgstr "Цвет фона"
-
-#~ msgid "Conditional Styles..."
-#~ msgstr "Стиль по условию..."
-
-#~ msgid "Set cell style based on certain conditions"
-#~ msgstr "Установить стиль в зависимости от определённых условий"
-
-#~ msgid "Conditional Styles"
-#~ msgstr "Стиль по условию"
-
-#~ msgid "Remove Conditional Styles"
-#~ msgstr "Убрать стиль по условию"
-
-#~ msgid "Remove the conditional cell styles"
-#~ msgstr "Убрать стиль ячейки по условию"
-
-#~ msgid "&Pivot Tables..."
-#~ msgstr "&Сводные таблицы..."
-
-#~ msgid "Create Pivot Tables"
-#~ msgstr "Создание сводных таблиц"
-
-#~ msgid "You must select multiple cells."
-#~ msgstr "Вы должны выбрать несколько ячеек."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Number Format"
-#~ msgstr ""
-#~ "Численный формат\n"
-#~ "численный формат"
 
 #~ msgctxt "(qtundo-format)"
 #~ msgid "Currency Format"
@@ -16464,90 +19094,6 @@ msgstr "Ссылка %1 активирована"
 #~ msgstr ""
 #~ "Процентный формат\n"
 #~ "процентный формат"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Time Format"
-#~ msgstr ""
-#~ "Формат времени\n"
-#~ "формат времени"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Date Format"
-#~ msgstr ""
-#~ "Формат даты\n"
-#~ "формат даты"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Scientific Format"
-#~ msgstr ""
-#~ "Научный формат\n"
-#~ "научный формат"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Border Color"
-#~ msgstr ""
-#~ "Изменить цвет границ\n"
-#~ "изменение цвета границ"
-
-#~ msgid "<none>"
-#~ msgstr "<нет>"
-
-#~ msgid "equal to"
-#~ msgstr "равно"
-
-#~ msgid "greater than"
-#~ msgstr "больше чем"
-
-#~ msgid "less than"
-#~ msgstr "меньше чем"
-
-#~ msgid "equal to or greater than"
-#~ msgstr "равно или больше чем"
-
-#~ msgid "equal to or less than"
-#~ msgstr "равно или меньше чем"
-
-#~ msgid "between"
-#~ msgstr "между"
-
-#~ msgid "outside range"
-#~ msgstr "другой диапазон"
-
-#~ msgid "different to"
-#~ msgstr "до"
-
-#~ msgid "First Condition"
-#~ msgstr "Первое условие"
-
-#~ msgid "Second Condition"
-#~ msgstr "Второе условие"
-
-#~ msgid "Third Condition"
-#~ msgstr "Третье условие"
-
-#~ msgid "Cell is"
-#~ msgstr "Ячейка"
-
-#~ msgid "Cell style"
-#~ msgstr "Стиль ячейки"
-
-#~ msgid "different from"
-#~ msgstr "от"
-
-#~ msgid ""
-#~ "If the first value is a number, the second value also has to be a number."
-#~ msgstr ""
-#~ "Если первое значение является числом, второе значение также должно быть "
-#~ "числом."
-
-#~ msgid ""
-#~ "If the first value is a string, the second value also has to be a string."
-#~ msgstr ""
-#~ "Если первое значение является строкой, второе значение также должно быть "
-#~ "строкой."
-
-#~ msgid "Select Source"
-#~ msgstr "Выберите источник"
 
 #~ msgid "Current Selection"
 #~ msgstr "Текущее выделение"
@@ -16578,12 +19124,6 @@ msgstr "Ссылка %1 активирована"
 
 #~ msgid "!="
 #~ msgstr "!="
-
-#~ msgid "Pivot Table Configuration Window"
-#~ msgstr "Окно настройки сводной таблицы"
-
-#~ msgid "Add Filter"
-#~ msgstr "Добавить фильтр"
 
 #~ msgid "Drag from Labels and drop in the desired field"
 #~ msgstr "Перетащите с области меток в нужное поле"
@@ -16619,9 +19159,6 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Rows"
 #~ msgstr "Строки"
 
-#~ msgid "Pivot Options"
-#~ msgstr "Параметры сводной таблицы"
-
 #~ msgid "Value Type"
 #~ msgstr "Тип данных"
 
@@ -16634,156 +19171,17 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Manual Selection"
 #~ msgstr "Выбрать вручную"
 
-#~ msgid "Product"
-#~ msgstr "Произведение"
-
 #~ msgid "Sort By"
 #~ msgstr "Сортировать по"
-
-#~ msgid "Select Font..."
-#~ msgstr "Выберите шрифт..."
-
-#~ msgid "Select Font Size"
-#~ msgstr "Выберите размер шрифта"
-
-#~ msgid "Font Size"
-#~ msgstr "Размер шрифта"
-
-#~ msgid "Text Color"
-#~ msgstr "Цвет текста"
-
-#~ msgid "Set the text color"
-#~ msgstr "Установить цвет текста"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Font"
-#~ msgstr ""
-#~ "Изменить шрифт\n"
-#~ "изменение шрифта"
-
-#~ msgid "Style Manager..."
-#~ msgstr "Управление стилями..."
-
-#~ msgid "Edit and organize cell styles"
-#~ msgstr "Управление стилями ячеек"
-
-#~ msgid "Apply a predefined style to the selected cells"
-#~ msgstr "Применить к выделенным ячейкам предопределённый стиль"
-
-#~ msgid "Create Style From Cell..."
-#~ msgstr "Создать стиль из ячейки..."
-
-#~ msgid "Style From Cell"
-#~ msgstr "Стиль из ячейки"
-
-#~ msgid "Create a new style based on the currently selected cell"
-#~ msgstr ""
-#~ "Создать новый стиль на основе форматирования текущей выбранной ячейки"
-
-#~ msgid "Create Style From Cell"
-#~ msgstr "Создать стиль из ячейки"
-
-#~ msgid "The style name cannot be empty."
-#~ msgstr "Имя стиля не может быть пустым."
-
-#~ msgid "Style Manager"
-#~ msgstr "Управление стилями"
-
-#~ msgid "All Styles"
-#~ msgstr "Все стили"
-
-#~ msgid "Custom Styles"
-#~ msgstr "Стили пользователя"
-
-#~ msgid "Hierarchical"
-#~ msgstr "Иерархический"
-
-#~ msgid "&New..."
-#~ msgstr "&Создать..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Изменить..."
-
-#~ msgid "&Delete..."
-#~ msgstr "&Удалить..."
-
-#~ msgid "style%1"
-#~ msgstr "стиль%1"
 
 #~ msgid "Cells..."
 #~ msgstr "Ячейки..."
 
-#~ msgid "Insert Cells..."
-#~ msgstr "Вставить ячейки..."
-
-#~ msgid "Insert a blank cell into the spreadsheet"
-#~ msgstr "Вставить на лист пустые ячейки"
-
-#~ msgid "Remove Cells..."
-#~ msgstr "Удалить ячейки..."
-
-#~ msgid "Removes the cells from the spreadsheet"
-#~ msgstr "Удалить ячейки с листа"
-
 #~ msgid "Delete Cells..."
 #~ msgstr "Удалить ячейки..."
 
-#~ msgid "Insert rows"
-#~ msgstr "Вставить строки"
-
-#~ msgid "Insert columns"
-#~ msgstr "Вставить столбцы"
-
-#~ msgid "Insert Cells"
-#~ msgstr "Вставить ячейки"
-
-#~ msgid "Move towards left"
-#~ msgstr "Сдвинуть влево"
-
-#~ msgid "Move towards top"
-#~ msgstr "Сдвинуть вверх"
-
-#~ msgid "Remove rows"
-#~ msgstr "Удалить строки"
-
-#~ msgid "Remove columns"
-#~ msgstr "Удалить столбцы"
-
-#~ msgid "Remove Cells"
-#~ msgstr "Удалить ячейки"
-
-#~ msgid "&Subtotals..."
-#~ msgstr "&Подитоги..."
-
-#~ msgid "Create different kind of subtotals to a list or database"
-#~ msgstr "Создание различных видов подитогов для списка или базы данных"
-
-#~ msgid "Subtotals"
-#~ msgstr "Подитоги"
-
-#~ msgid "Remove All"
-#~ msgstr "Удалить всё"
-
-#~ msgid "You need to select at least one column for adding subtotals."
-#~ msgstr "Необходимо выбрать хотя бы один столбец для добавления подитогов."
-
 #~ msgid "Grand Total"
 #~ msgstr "Общий итог"
-
-#~ msgid "Column '%1' "
-#~ msgstr "Столбец «%1»"
-
-#~ msgid "StDev"
-#~ msgstr "StDev"
-
-#~ msgid "StDevP"
-#~ msgstr "StDevP"
-
-#~ msgid "Var"
-#~ msgstr "Var"
-
-#~ msgid "VarP"
-#~ msgstr "VarP"
 
 #~ msgid "&Replace current Subtotals"
 #~ msgstr "&Заменить текущие подитоги"
@@ -16809,45 +19207,6 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Add Subtotal to:"
 #~ msgstr "Добавить подитоги к:"
 
-#~ msgid "Goto Cell..."
-#~ msgstr "Перейти на ячейку..."
-
-#~ msgid "Goto"
-#~ msgstr "Перейти"
-
-#~ msgid "Move to a particular cell"
-#~ msgstr "Перейти на указанную ячейку"
-
-#~ msgid "Break Before Column"
-#~ msgstr "Разрыв перед столбцом"
-
-#~ msgid "Column Break"
-#~ msgstr "Разрыв столбца"
-
-#~ msgid "Set a manual page break before the column"
-#~ msgstr "Установить ручной разрыв страницы перед столбцом"
-
-#~ msgid "Break Before Row"
-#~ msgstr "Разрыв перед строкой"
-
-#~ msgid "Row Break"
-#~ msgstr "Разрыв строки"
-
-#~ msgid "Set a manual page break before the row"
-#~ msgstr "Установить ручной разрыв страницы перед строкой"
-
-#~ msgid "Goto Cell"
-#~ msgstr "Перейти к ячейке"
-
-#~ msgid "Enter cell:"
-#~ msgstr "Введите имя:"
-
-#~ msgid "&Consolidate..."
-#~ msgstr "&Консолидировать..."
-
-#~ msgid "Create a region of summary data from a group of similar regions"
-#~ msgstr "Создание диапазона суммированных данных группы подобных диапазонов"
-
 #~ msgid "Description in rows"
 #~ msgstr "Описание в строках"
 
@@ -16856,39 +19215,6 @@ msgstr "Ссылка %1 активирована"
 
 #~ msgid "Copy data"
 #~ msgstr "Копировать данные"
-
-#~ msgid "Consolidate"
-#~ msgstr "Консолидация данных"
-
-#~ msgid "Standard Deviation"
-#~ msgstr "Стандартное отклонение"
-
-#~ msgid "Variance"
-#~ msgstr "Дисперсия"
-
-#~ msgid "You have to define at least one source range."
-#~ msgstr "Необходимо определить хотя бы один диапазон исходных данных."
-
-#~ msgid "%1 is not a valid cell range."
-#~ msgstr "%1 не является допустимым диапазоном ячеек."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too small"
-#~ msgstr ""
-#~ "Диапазон\n"
-#~ "%1\n"
-#~ "слишком мал"
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ "is too large"
-#~ msgstr ""
-#~ "Диапазон\n"
-#~ "%1\n"
-#~ "слишком велик"
 
 #~ msgid ""
 #~ "The ranges\n"
@@ -16903,24 +19229,6 @@ msgstr "Ссылка %1 активирована"
 #~ "%2\n"
 #~ "имеют различный размер"
 
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Consolidate"
-#~ msgstr ""
-#~ "Консолидировать\n"
-#~ "консолидацию"
-
-#~ msgid "The source range intersects the destination range."
-#~ msgstr "Исходный диапазон пересекается с конечным диапазоном."
-
-#~ msgid ""
-#~ "The range\n"
-#~ "%1\n"
-#~ " is malformed"
-#~ msgstr ""
-#~ "Диапазон\n"
-#~ "%1\n"
-#~ " не определён"
-
 #~ msgid "Function:"
 #~ msgstr "Функция:"
 
@@ -16930,213 +19238,17 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Entered references:"
 #~ msgstr "Введённые ссылки:"
 
-#~ msgid "Change Angle..."
-#~ msgstr "Изменить угол..."
-
-#~ msgid "Angle"
-#~ msgstr "Угол"
-
-#~ msgid "Change the angle that cell contents are printed"
-#~ msgstr "Изменить угол показа текста ячейки"
-
-#~ msgid "Increase Precision"
-#~ msgstr "Увеличить точность"
-
-#~ msgid "Increase the decimal precision shown onscreen"
-#~ msgstr "Увеличить количество показываемых знаков после запятой."
-
-#~ msgid "Decrease Precision"
-#~ msgstr "Уменьшить точность"
-
-#~ msgid "Decrease the decimal precision shown onscreen"
-#~ msgstr "Уменьшить количество показываемых знаков после запятой"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Precision"
-#~ msgstr ""
-#~ "Увеличить точность\n"
-#~ "увеличение точности"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Precision"
-#~ msgstr ""
-#~ "Уменьшить точность\n"
-#~ "уменьшение точности"
-
-#~ msgid "Change Angle"
-#~ msgstr "Изменить угол"
-
-#~ msgid "Angle:"
-#~ msgstr "Угол:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Angle"
-#~ msgstr ""
-#~ "Изменить угол\n"
-#~ "изменение угла"
-
-#~ msgid "Area Name..."
-#~ msgstr "Имя диапазона..."
-
-#~ msgid "Set a name for a region of the spreadsheet"
-#~ msgstr "Присвоить имя диапазону листа"
-
-#~ msgid "Named Areas..."
-#~ msgstr "Именованные диапазоны..."
-
-#~ msgid "Named Areas"
-#~ msgstr "Именованные диапазоны"
-
-#~ msgid "Edit or select named areas"
-#~ msgstr "Изменить или выделить именованные диапазоны"
-
-#~ msgid "Add Named Area"
-#~ msgstr "Добавить именованный диапазон"
-
-#~ msgid "Enter the area name:"
-#~ msgstr "Имя диапазона:"
-
-#~ msgid ""
-#~ "The named area '%1' already exists.\n"
-#~ "Do you want to replace it?"
-#~ msgstr ""
-#~ "Именованный диапазон «%1» уже существует.\n"
-#~ "Заменить его?"
-
-#~ msgid "Replace Named Area"
-#~ msgstr "Заменить именованный диапазон"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Replace Named Area"
-#~ msgstr ""
-#~ "Заменить именованный диапазон\n"
-#~ "замену именованного диапазона"
-
 #~ msgid "&Select"
 #~ msgstr "&Выбрать"
 
-#~ msgid "Area: %1"
-#~ msgstr "Диапазон: %1"
-
 #~ msgid "&Edit..."
 #~ msgstr "&Изменить..."
-
-#~ msgid "&Remove"
-#~ msgstr "&Удалить"
 
 #~ msgid "New Named Area"
 #~ msgstr "Создать именованный диапазон"
 
 #~ msgid "Edit Named Area"
 #~ msgstr "Изменить именованный диапазон"
-
-#~ msgid "Do you really want to remove this named area?"
-#~ msgstr "Вы действительно хотите удалить этот именованный диапазон?"
-
-#~ msgid "Remove Named Area"
-#~ msgstr "Удалить именованный диапазон"
-
-#~ msgid "Cells:"
-#~ msgstr "Ячейки:"
-
-#~ msgid "Sheet:"
-#~ msgstr "Лист:"
-
-#~ msgid "Area name:"
-#~ msgstr "Имя диапазона:"
-
-#~ msgid "Align Left"
-#~ msgstr "По левому краю"
-
-#~ msgid "Left justify the cell contents"
-#~ msgstr "Выравнивание содержимого ячейки по левому краю"
-
-#~ msgid "Align Center"
-#~ msgstr "По центру"
-
-#~ msgid "Center the cell contents"
-#~ msgstr "Выравнивание содержимого ячейки по центру ячейки"
-
-#~ msgid "Align Right"
-#~ msgstr "По правому краю"
-
-#~ msgid "Right justify the cell contents"
-#~ msgstr "Выравнивание содержимого ячейки по правому краю"
-
-#~ msgid "Align Top"
-#~ msgstr "По верхнему краю"
-
-#~ msgid "Align cell contents along the top of the cell"
-#~ msgstr "Выравнивание содержимого ячейки по верхнему краю"
-
-#~ msgid "Align Middle"
-#~ msgstr "По середине"
-
-#~ msgid "Align cell contents centered in the cell"
-#~ msgstr "Выравнивание содержимого ячейки по середине ячейки"
-
-#~ msgid "Align Bottom"
-#~ msgstr "По нижнему краю"
-
-#~ msgid "Align cell contents along the bottom of the cell"
-#~ msgstr "Выравнивание содержимого ячейки по нижнему краю"
-
-#~ msgid "Border Left"
-#~ msgstr "Граница слева"
-
-#~ msgid "Set a left border to the selected area"
-#~ msgstr "Граница выделенных ячеек слева"
-
-#~ msgid "Border Right"
-#~ msgstr "Граница справа"
-
-#~ msgid "Set a right border to the selected area"
-#~ msgstr "Граница выделенных ячеек справа"
-
-#~ msgid "Border Top"
-#~ msgstr "Граница сверху"
-
-#~ msgid "Set a top border to the selected area"
-#~ msgstr "Граница выделенных ячеек сверху"
-
-#~ msgid "Border Bottom"
-#~ msgstr "Граница снизу"
-
-#~ msgid "Set a bottom border to the selected area"
-#~ msgstr "Граница выделенных ячеек снизу"
-
-#~ msgid "All Borders"
-#~ msgstr "Все границы"
-
-#~ msgid "Set a border around all cells in the selected area"
-#~ msgstr "Показать границы у всех выделенных ячеек"
-
-#~ msgid "No Borders"
-#~ msgstr "Без границ"
-
-#~ msgid "Remove all borders in the selected area"
-#~ msgstr "Удалить все границы у выделенных ячеек"
-
-#~ msgid "Border Outline"
-#~ msgstr "Границы вокруг диапазона"
-
-#~ msgid "Outline"
-#~ msgstr "Граница"
-
-#~ msgid "Set a border to the outline of the selected area"
-#~ msgstr "Рисование границы вокруг выделенного диапазона"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Horizontal Alignment"
-#~ msgstr ""
-#~ "Изменить выравнивание по горизонтали\n"
-#~ "изменение выравнивания по горизонтали"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Vertical Alignment"
-#~ msgstr ""
-#~ "Изменить выравнивание по вертикали\n"
-#~ "изменение выравнивания по вертикали"
 
 #~ msgid "Australia"
 #~ msgstr "Австралия"
@@ -18947,69 +21059,6 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Zimbabwe Dollar"
 #~ msgstr "Доллар Зимбабве"
 
-#~ msgid "Resets to the default format"
-#~ msgstr "Применить формат по умолчанию"
-
-#~ msgid "Strike Out"
-#~ msgstr "Зачёркнутый"
-
-#~ msgid "Increase Font Size"
-#~ msgstr "Увеличить размер шрифта"
-
-#~ msgid "Decrease Font Size"
-#~ msgstr "Уменьшить размер шрифта"
-
-#~ msgid "Wrap Text"
-#~ msgstr "Переносить по словам"
-
-#~ msgid "Wrap"
-#~ msgstr "Перенос"
-
-#~ msgid "Make the cell text wrap onto multiple lines"
-#~ msgstr "Переносить текст в ячейке на несколько строк"
-
-#~ msgid "Vertical Text"
-#~ msgstr "Текст по вертикали"
-
-#~ msgid "Print cell contents vertically"
-#~ msgstr "Печатать текст в ячейке вертикально"
-
-#~ msgid "Percent Format"
-#~ msgstr "Процентный формат"
-
-#~ msgid "Set the cell formatting to look like a percentage"
-#~ msgstr "Установка процентного форматирования."
-
-#~ msgid "Money Format"
-#~ msgstr "Денежный формат"
-
-#~ msgid "Set the cell formatting to look like your local currency"
-#~ msgstr "Форматирование валютной суммы в соответствии с установками локали"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Wrap Text"
-#~ msgstr ""
-#~ "Переносить по словам\n"
-#~ "перенос по словам"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Vertical Text"
-#~ msgstr ""
-#~ "Текст по вертикали\n"
-#~ "текст по вертикали"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Percent"
-#~ msgstr ""
-#~ "Процентный формат\n"
-#~ "процентный формат"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Format Money"
-#~ msgstr ""
-#~ "Денежный формат\n"
-#~ "денежный формат"
-
 #~ msgid "&Data Format"
 #~ msgstr "&Формат данных"
 
@@ -19068,9 +21117,6 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Default height (%1)"
 #~ msgstr "Высота по умолчанию (%1)"
 
-#~ msgid "Height:"
-#~ msgstr "Высота:"
-
 #~ msgid "Set the height of the cell."
 #~ msgstr "Высота ячейки."
 
@@ -19082,474 +21128,32 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Default width (%1)"
 #~ msgstr "Ширина по умолчанию (%1)"
 
-#~ msgid "Width:"
-#~ msgstr "Ширина:"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Comment"
-#~ msgstr ""
-#~ "Добавить комментарий\n"
-#~ "добавление комментария"
-
-#~ msgid "Increase Indent"
-#~ msgstr "Увеличить отступ"
-
-#~ msgid "Increase the indentation"
-#~ msgstr "Увеличить отступ"
-
-#~ msgid "Decrease Indent"
-#~ msgstr "Уменьшить отступ"
-
-#~ msgid "Decrease the indentation"
-#~ msgstr "Уменьшить отступ"
-
-#~ msgid "Upper Case"
-#~ msgstr "Верхний регистр"
-
-#~ msgid "Upper"
-#~ msgstr "Верхний"
-
-#~ msgid "Convert all letters to upper case"
-#~ msgstr "Преобразовывать все буквы в верхний регистр"
-
-#~ msgid "Lower Case"
-#~ msgstr "Нижний регистр"
-
-#~ msgid "Lower"
-#~ msgstr "Нижний"
-
-#~ msgid "Convert all letters to lower case"
-#~ msgstr "Преобразовывать все буквы в нижний регистр."
-
-#~ msgid "Convert First Letter to Upper Case"
-#~ msgstr "Преобразовывать первую букву в верхний регистр"
-
-#~ msgid "First Letter Upper"
-#~ msgstr "Преобразовать первую букву в верхний регистр"
-
-#~ msgid "Capitalize the first letter"
-#~ msgstr "Сделать первую букву прописной"
-
-#~ msgid "Comment..."
-#~ msgstr "Комментарий..."
-
-#~ msgid "Edit a comment for this cell"
-#~ msgstr "Изменить комментарий для ячейки"
-
-#~ msgid "Remove Comment"
-#~ msgstr "Удалить комментарий"
-
-#~ msgid "Remove this cell's comment"
-#~ msgstr "Удалить комментарий для ячейки"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to uppercase"
-#~ msgstr ""
-#~ "Переключить в верхний регистр\n"
-#~ "переключение в верхний регистр"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Switch to lowercase"
-#~ msgstr ""
-#~ "Переключить в нижний регистр\n"
-#~ "переключение в нижний регистр"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "First letter uppercase"
-#~ msgstr ""
-#~ "Первая буква — прописная\n"
-#~ "прописную первую букву"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Comment"
-#~ msgstr ""
-#~ "Удалить комментарий\n"
-#~ "удаление комментария"
-
-#~ msgid "Clear Comment"
-#~ msgstr "Удалить комментарий"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Change Case"
-#~ msgstr ""
-#~ "Изменить регистр\n"
-#~ "изменение регистра"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Increase Indentation"
-#~ msgstr ""
-#~ "Увеличить отступ\n"
-#~ "увеличение отступа"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Decrease Indentation"
-#~ msgstr ""
-#~ "Уменьшить отступ\n"
-#~ "уменьшение отступа"
-
-#~ msgid "Cell Comment"
-#~ msgstr "Комментарий"
-
-#~ msgid "&Left"
-#~ msgstr "В&лево"
-
-#~ msgid "&Right"
-#~ msgstr "В&право"
-
 #~ msgid "&Up"
 #~ msgstr "&Вверх"
-
-#~ msgid "&Down"
-#~ msgstr "В&низ"
-
-#~ msgid "Autosum"
-#~ msgstr "Автосуммирование"
-
-#~ msgid "Insert the 'sum' function"
-#~ msgstr "Вставить функцию «sum»"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Fill Selection"
-#~ msgstr ""
-#~ "Заполнить выделенное\n"
-#~ "заполнение выделенного"
-
-#~ msgid "From &Text File..."
-#~ msgstr "Из &текстового файла"
-
-#~ msgid "Text File"
-#~ msgstr "Текстовый файл"
-
-#~ msgid ""
-#~ "Insert data from a text file to the current cursor position/selection"
-#~ msgstr ""
-#~ "Вставить данные из текстового файла в текущую ячейку или выделенный "
-#~ "диапазон"
 
 #~ msgid "From &Clipboard..."
 #~ msgstr "Из &буфера обмена..."
 
-#~ msgid "Clipboard"
-#~ msgstr "Буфер обмена"
-
-#~ msgid ""
-#~ "Insert CSV data from the clipboard to the current cursor position/"
-#~ "selection"
-#~ msgstr ""
-#~ "Вставить данные в формате CSV из буфера обмена в текущую ячейку или "
-#~ "выделенный диапазон"
-
-#~ msgid "&Text to Columns..."
-#~ msgstr "Текст по &столбцам..."
-
-#~ msgid "Expand the content of cells to multiple columns"
-#~ msgstr "Распределить содержимое ячеек по нескольким столбцам"
-
-#~ msgid "Inserting From Clipboard"
-#~ msgstr "Вставка из буфера обмена"
-
-#~ msgid "There is no data in the clipboard."
-#~ msgstr "В буфере обмена нет данных."
-
-#~ msgid "There is no usable data in the clipboard."
-#~ msgstr "В буфере обмена нет пригодных для использования данных."
-
-#~ msgid "Import CSV Data File"
-#~ msgstr "Импорт файла данных CSV"
-
-#~ msgid "CSV data files (*.csv)"
-#~ msgstr "Файлы данных CSV (*.csv)"
-
-#~ msgid "Text to Columns"
-#~ msgstr "Текст по столбцам"
-
-#~ msgid "Cannot open input file."
-#~ msgstr "Невозможно открыть файл."
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting From Clipboard"
-#~ msgstr ""
-#~ "Вставка из буфера обмена\n"
-#~ "вставку из буфера обмена"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Inserting Text File"
-#~ msgstr ""
-#~ "Вставка текстового файла\n"
-#~ "вставку текстового файла"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Text to Columns"
-#~ msgstr ""
-#~ "Текст по столбцам\n"
-#~ "расположение текста по столбца"
-
-#~ msgid "Merge the selected region"
-#~ msgstr "Объединить ячейки выделенного диапазона в одну большую ячейку"
-
-#~ msgid "Merge Cells Horizontally"
-#~ msgstr "Объединить ячейки горизонтально"
-
-#~ msgid "Merge the selected region horizontally"
-#~ msgstr "Объединить ячейки выделенного диапазона по строкам"
-
-#~ msgid "Merge Cells Vertically"
-#~ msgstr "Объединить ячейки вертикально"
-
-#~ msgid "Merge the selected region vertically"
-#~ msgstr "Объединить ячейки выделенного диапазона по столбцам"
-
-#~ msgid "Dissociate Cells"
-#~ msgstr "Разбить ячейки"
-
-#~ msgid "Unmerge the selected region"
-#~ msgstr "Разбить ячейки выделенного диапазона"
-
-#~ msgid "Resize Column..."
-#~ msgstr "Изменить ширину столбца..."
-
-#~ msgid "Change the width of a column"
-#~ msgstr "Изменить ширину столбца"
-
-#~ msgid "Insert Columns"
-#~ msgstr "Вставить столбцы"
-
-#~ msgid "Inserts a new column into the spreadsheet"
-#~ msgstr "Вставить новый столбец на лист"
-
-#~ msgid "Remove Columns"
-#~ msgstr "Удалить столбцы"
-
-#~ msgid "Removes the selected columns from the spreadsheet"
-#~ msgstr "Удаляет выделенные столбцы с листа"
-
-#~ msgid "Hide Columns"
-#~ msgstr "Скрыть столбцы"
-
 #~ msgid "Hide the column from this"
 #~ msgstr "Скрыть выбранные столбцы на листе"
-
-#~ msgid "Show Columns..."
-#~ msgstr "Показать столбцы..."
-
-#~ msgid "Show hidden columns"
-#~ msgstr "Показать скрытые столбцы на листе"
-
-#~ msgid "Equalize Column"
-#~ msgstr "Подогнать ширину столбца"
-
-#~ msgid "Resizes selected columns to be the same size"
-#~ msgstr "Установить для столбцов одинаковую ширину"
-
-#~ msgid "Show Columns"
-#~ msgstr "Показать столбцы"
-
-#~ msgid "Show hidden columns in the selection"
-#~ msgstr "Показать скрытые столбцы в выделенном диапазоне"
-
-#~ msgid "Resize Row..."
-#~ msgstr "Изменить высоту строки..."
-
-#~ msgid "Change the height of a row"
-#~ msgstr "Изменить высоту строки"
-
-#~ msgid "Insert Rows"
-#~ msgstr "Вставить строки"
-
-#~ msgid "Inserts a new row into the spreadsheet"
-#~ msgstr "Вставить новую строку на лист"
-
-#~ msgid "Remove Rows"
-#~ msgstr "Удалить строки"
-
-#~ msgid "Removes a row from the spreadsheet"
-#~ msgstr "Удалить строку с листа"
-
-#~ msgid "Hide Rows"
-#~ msgstr "Скрыть строки"
 
 #~ msgid "Hide a row from this"
 #~ msgstr "Скрыть выбранные строки на листе"
 
-#~ msgid "Show Rows..."
-#~ msgstr "Показать строки..."
-
-#~ msgid "Show hidden rows"
-#~ msgstr "Показать скрытые строки"
-
-#~ msgid "Equalize Row"
-#~ msgstr "Подогнать высоту строки"
-
-#~ msgid "Resizes selected rows to be the same size"
-#~ msgstr "Установить для строк одинаковую высоту"
-
-#~ msgid "Show Rows"
-#~ msgstr "Показать строки"
-
-#~ msgid "Show hidden rows in the selection"
-#~ msgstr "Показать скрытые строки в выделенном диапазоне"
-
-#~ msgid "Adjust Row && Column"
-#~ msgstr "Подогнать размер ячеек"
-
-#~ msgid "Adjusts row/column size so that the contents will fit"
-#~ msgstr ""
-#~ "Подогнать размеры строк и столбцов для отображения полностью содержимого "
-#~ "ячеек"
-
-#~ msgid "Adjust Column"
-#~ msgstr "Выровнять столбец"
-
 #~ msgid "Delete Columns"
 #~ msgstr "Удалить столбцы"
-
-#~ msgid "Adjust Row"
-#~ msgstr "Выровнять строку"
 
 #~ msgid "Delete Rows"
 #~ msgstr "Удалить строки"
 
-#~ msgid "Resize Row"
-#~ msgstr "Изменить размер строки"
-
-#~ msgid "Resize Column"
-#~ msgstr "Изменить размер столбца"
-
-#~ msgid "Select hidden columns to show:"
-#~ msgstr "Показать скрытые столбцы:"
-
-#~ msgid "Select hidden rows to show:"
-#~ msgstr "Показать скрытые строки:"
-
-#~ msgid "Column: %1"
-#~ msgstr "Столбец: %1"
-
-#~ msgid "Row: %1"
-#~ msgstr "Строка: %1"
-
-#~ msgid "&Link..."
-#~ msgstr "Сс&ылка..."
-
-#~ msgid "Insert an Internet hyperlink"
-#~ msgstr "Вставить ссылку на ресурс Интернета"
-
-#~ msgid "Link"
-#~ msgstr "Ссылка"
-
-#~ msgid "Remove Link"
-#~ msgstr "Удалить ссылку"
-
-#~ msgid "Remove a link"
-#~ msgstr "Удалить ссылку"
-
-#~ msgid "Insert Link"
-#~ msgstr "Вставить ссылку"
-
 #~ msgid "Edit Link"
 #~ msgstr "Свойства ссылки"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Link"
-#~ msgstr ""
-#~ "Удалить ссылку\n"
-#~ "удаление ссылок"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Set Link"
-#~ msgstr "Ссылка"
-
-#~ msgid "Internet"
-#~ msgstr "Интернет"
-
-#~ msgid "Link to Internet Address"
-#~ msgstr "Ссылка на адрес в Интернете"
-
-#~ msgid "Text to display:"
-#~ msgstr "Текст ссылки:"
-
-#~ msgid "Internet address:"
-#~ msgstr "Адрес в Интернете:"
-
-#~ msgid "Email"
-#~ msgstr "Электронная почта"
-
-#~ msgid "Link to Email Address"
-#~ msgstr "Ссылка на адрес электронной почты"
-
-#~ msgid "Email address:"
-#~ msgstr "Адрес электронной почты:"
-
-#~ msgid "Subject:"
-#~ msgstr "Тема:"
-
-#~ msgid "File"
-#~ msgstr "Файл"
-
-#~ msgid "Link to File"
-#~ msgstr "Ссылка на файл"
-
-#~ msgid "File location:"
-#~ msgstr "Расположение файла:"
-
-#~ msgid "Recent file:"
-#~ msgstr "Последний файл:"
-
-#~ msgid "No Entries"
-#~ msgstr "Нет записей"
-
-#~ msgid "Link to Cell"
-#~ msgstr "Ссылка на ячейку"
-
-#~ msgid "Cell or Named Area:"
-#~ msgstr "Ячейка или именованный диапазон:"
-
-#~ msgid "&Sort..."
-#~ msgstr "&Сортировка..."
-
-#~ msgid "Sort a group of cells"
-#~ msgstr "Сортировать группу ячеек"
-
-#~ msgid "Sort &Decreasing"
-#~ msgstr "Сортировать по &убыванию"
-
-#~ msgid "Sort a group of cells in decreasing(last to first) order"
-#~ msgstr "Сортировать группу ячеек по убыванию"
-
-#~ msgid "Sort &Increasing"
-#~ msgstr "Сортировать по &возрастанию"
-
-#~ msgid "Sort a group of cells in ascending(first to last) order"
-#~ msgstr "Сортировать группу ячеек по возрастанию"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Sort Data"
-#~ msgstr ""
-#~ "Сортировка данных\n"
-#~ "сортировку данных"
 
 #~ msgid "Use custom list"
 #~ msgstr "Использовать список пользователя"
 
 #~ msgid "Copy cell formatting (Borders, Colors, Text Style)"
 #~ msgstr "Копировать форматирование ячейки (рамки, цвета, стили)"
-
-#~ msgid "Column %1"
-#~ msgstr "Столбец %1"
-
-#~ msgid "Row %1"
-#~ msgstr "Строка %1"
-
-#~ msgid "&First column contains row headers"
-#~ msgstr "&Первый столбец содержит заголовки столбца"
-
-#~ msgid "&First row contains column headers"
-#~ msgstr "&Первая строка содержит заголовки столбцов"
-
-#~ msgid "Sort"
-#~ msgstr "Сортировка"
-
-#~ msgid "Case Insensitive"
-#~ msgstr "Без учёта регистра"
 
 #~ msgid "Move Up"
 #~ msgstr "Вверх"
@@ -19616,241 +21220,8 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Sort data grouped in rows vertically"
 #~ msgstr "Сортировать сгруппированные по строкам данные вертикально"
 
-#~ msgid "Validity..."
-#~ msgstr "Проверка..."
-
-#~ msgid "Set tests to confirm cell data is valid"
-#~ msgstr "Установка проверки значения в ячейке определённым условиям"
-
-#~ msgid "Validity"
-#~ msgstr "Проверка на корректность"
-
-#~ msgid "Remove Validity"
-#~ msgstr "Убрать проверку"
-
-#~ msgid "Remove the validity tests on this cell"
-#~ msgstr "Убрать проверку значения ячейки"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Remove Validity Check"
-#~ msgstr ""
-#~ "Убрать проверку правильности\n"
-#~ "удаление проверки правильности"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Add Validity Check"
-#~ msgstr ""
-#~ "Добавить проверку правильности\n"
-#~ "добавление проверки правильности"
-
-#~ msgid "Clear &All"
-#~ msgstr "Очистить &все"
-
 #~ msgid "&Criteria"
 #~ msgstr "У&словие"
-
-#~ msgid "Allow:"
-#~ msgstr "Разрешить:"
-
-#~ msgid "Integer"
-#~ msgstr "Целое число"
-
-#~ msgid "Text Length"
-#~ msgstr "Длина текста"
-
-#~ msgid "List"
-#~ msgstr "Список"
-
-#~ msgid "Allow blanks"
-#~ msgstr "Проверять пустые ячейки"
-
-#~ msgid "Data:"
-#~ msgstr "Данные:"
-
-#~ msgid "Minimum:"
-#~ msgstr "Минимум:"
-
-#~ msgid "Maximum:"
-#~ msgstr "Максимум:"
-
-#~ msgid "Date:"
-#~ msgstr "Дата:"
-
-#~ msgid "Date minimum:"
-#~ msgstr "Минимальная дата:"
-
-#~ msgid "Date maximum:"
-#~ msgstr "Максимальная дата:"
-
-#~ msgid "Time:"
-#~ msgstr "Время:"
-
-#~ msgid "Time minimum:"
-#~ msgstr "Минимальное время:"
-
-#~ msgid "Time maximum:"
-#~ msgstr "Максимальное время:"
-
-#~ msgid "Number:"
-#~ msgstr "Число:"
-
-#~ msgid "Entries:"
-#~ msgstr "Значения:"
-
-#~ msgid "&Error Alert"
-#~ msgstr "&Оповещение об ошибке"
-
-#~ msgid "Show error message when invalid values are entered"
-#~ msgstr ""
-#~ "Показывать сообщение об ошибке, если в ячейку введены неправильные данные"
-
-#~ msgid "Action:"
-#~ msgstr "Действие:"
-
-#~ msgid "Stop"
-#~ msgstr "Остановить"
-
-#~ msgid "Warning"
-#~ msgstr "Предупреждение"
-
-#~ msgctxt "Title of message"
-#~ msgid "Title:"
-#~ msgstr "Заголовок:"
-
-#~ msgid "Message:"
-#~ msgstr "Сообщение:"
-
-#~ msgid "Input Help"
-#~ msgstr "Помощь по вводу"
-
-#~ msgid "Show input help when cell is selected"
-#~ msgstr ""
-#~ "Показывать справку по значениям, разрешённым для ввода в выбранную ячейку"
-
-#~ msgid "This is not a valid value."
-#~ msgstr "Это значение неверно."
-
-#~ msgid "This is not a valid time."
-#~ msgstr "Это значение времени неверно."
-
-#~ msgid "This is not a valid date."
-#~ msgstr "Недопустимая дата."
-
-#~ msgid "&Series..."
-#~ msgstr "&Ряд..."
-
-#~ msgid "Insert a series"
-#~ msgstr "Вставить ряд"
-
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Insert Series"
-#~ msgstr ""
-#~ "Вставить ряд\n"
-#~ "вставку ряда"
-
-#~ msgid "Select Character"
-#~ msgstr "Выберите символ"
-
-#~ msgid "Insert the selected character in the text"
-#~ msgstr "Вставить выбранный символ в текст"
-
-#~ msgid "Series"
-#~ msgstr "Настройки ряда"
-
-#~ msgid "Insert Values"
-#~ msgstr "Вставить значения"
-
-#~ msgid "Insert the series vertically, one below the other"
-#~ msgstr "Вставить ряды вертикально, друг под другом"
-
-#~ msgid "Insert the series horizontally, from left to right"
-#~ msgstr "Вставить ряды горизонтально, друг за другом"
-
-#~ msgid "Linear (2,4,6,...)"
-#~ msgstr "Линейный (2,4,6,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step add the value "
-#~ "provided in step. This creates a series where each value is 'step' larger "
-#~ "than the value before it."
-#~ msgstr ""
-#~ "Создаёт ряд с указанным начальным, конечным элементом и приращением. "
-#~ "Каждое последующее значение в этом ряде получается путём прибавления "
-#~ "числа, указанного в шаге к предыдущему элементу."
-
-#~ msgid "Geometric (2,4,8,...)"
-#~ msgstr "Геометрический (2,4,8,...)"
-
-#~ msgid ""
-#~ "Generate a series from 'start' to 'end' and for each step multiply the "
-#~ "value with the value provided in step. Using a step of 5 produces a list "
-#~ "like: 5, 25, 125, 625 since 5 multiplied by 5 (step) equals 25, and that "
-#~ "multiplied by 5 equals 125, which multiplied by the same step-value of 5 "
-#~ "equals 625."
-#~ msgstr ""
-#~ "Создаёт ряд с указанным начальным, конечным элементом и "
-#~ "приращением(шагом) умножения элементов. Каждое последующее значение в "
-#~ "этом ряде получается путём умножения числа, указанного в шаге на "
-#~ "предыдущей элемент. Например, при шаге 5 и начальном значении ряда 5 "
-#~ "получаем ряд 5, 25, 125, 625..."
-
-#~ msgid "Start value:"
-#~ msgstr "Начальное значение:"
-
-#~ msgid "Stop value:"
-#~ msgstr "Конечное значение:"
-
-#~ msgid "Step value:"
-#~ msgstr "Приращение:"
-
-#~ msgid "End and start value must be positive."
-#~ msgstr "Начальное и конечное значение должны быть положительными."
-
-#~ msgid ""
-#~ "End value must be greater than the start value or the step must be less "
-#~ "than '1'."
-#~ msgstr ""
-#~ "Конечное значение должно быть больше начального или приращение должно "
-#~ "быть меньше «1»."
-
-#~ msgid "None of the Start, Stop or Step values may be equal to zero."
-#~ msgstr ""
-#~ "Опущенные начальное, конечное значение и значение приращения могут быть "
-#~ "равны 0."
-
-#~ msgid "Step value must be different from 1"
-#~ msgstr "Значение приращения не должно быть равным 1"
-
-#~ msgid "Step is negative."
-#~ msgstr "Приращение отрицательное."
-
-#~ msgid ""
-#~ "The step value must be greater than zero; otherwise, the linear series is "
-#~ "infinite."
-#~ msgstr ""
-#~ "Значение приращения должно быть больше, чем 0. В противном случае "
-#~ "линейный ряд будет бесконечным."
-
-#~ msgid ""
-#~ "If the start value is greater than the end value the step must be less "
-#~ "than zero."
-#~ msgstr ""
-#~ "Если начальное значение больше, чем конечное, приращение должно быть "
-#~ "меньше 0."
-
-#~ msgid ""
-#~ "If the step is negative, the start value must be greater then the end "
-#~ "value."
-#~ msgstr ""
-#~ "Если приращение отрицательное, начальное значение должно быть больше "
-#~ "конечного."
-
-#~ msgid "S&pecial Character..."
-#~ msgstr "Сп&ециальный символ..."
-
-#~ msgid "Insert one or more symbols or letters not found on the keyboard"
-#~ msgstr ""
-#~ "Вставить один или несколько символов или букв, отсутствующих на клавиатуре"
 
 #~ msgid "Internet address is empty"
 #~ msgstr "Адрес Интернет не указан"
@@ -27739,12 +29110,6 @@ msgstr "Ссылка %1 активирована"
 #~ msgctxt "(qtundo-format)"
 #~ msgid "style%1"
 #~ msgstr "стиль%1"
-
-#, fuzzy
-#~| msgid "Subtotals"
-#~ msgctxt "(qtundo-format)"
-#~ msgid "Subtotals"
-#~ msgstr "Подитоги"
 
 #, fuzzy
 #~| msgid "Remove All"
@@ -44457,9 +45822,6 @@ msgstr "Ссылка %1 активирована"
 #~ msgid "Document's Locale Settings"
 #~ msgstr "Настройка локали для документов"
 
-#~ msgid "Inserting Text File"
-#~ msgstr "Вставка текстового файла"
-
 #, fuzzy
 #~| msgid "Value (array)"
 #~ msgid "y (array)"
@@ -44536,9 +45898,6 @@ msgstr "Ссылка %1 активирована"
 
 #~ msgid "Remove Cell"
 #~ msgstr "Удалить ячейку"
-
-#~ msgid "Paste"
-#~ msgstr "Вставить"
 
 #~ msgid "Paste & Insert"
 #~ msgstr "Вставить со сдвигом"
@@ -44619,9 +45978,6 @@ msgstr "Ссылка %1 активирована"
 
 #~ msgid "Statistical Functions"
 #~ msgstr "Статистические функции"
-
-#~ msgid "Text Functions"
-#~ msgstr "Текстовые функции"
 
 #, fuzzy
 #~| msgid "Function"
